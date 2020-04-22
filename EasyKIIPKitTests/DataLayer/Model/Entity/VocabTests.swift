@@ -38,13 +38,18 @@ class VocabTests: XCTestCase {
   }
   
   func test_init_vocab_setPractiveHistoryLearnedValueEqualFalse() {
-    let id: UInt = 1
-    let word = "Word"
-    let translations: Set<Translation> = []
-    
-    let sut = Vocab(id: id, word: word, translations: translations)
+    let sut = Vocab(id: 1, word: "", translations: [])
     
     XCTAssertFalse(sut.practiceHistory.isLearned)
   }
   
+  func testMarkAsIsMastered_setPracticeHistoryToMastered() {
+    var sut = Vocab(id: 1, word: "", translations: [])
+    
+    // when
+    sut.markAsIsMastered()
+    
+    // then
+    XCTAssertEqual(sut.practiceHistory.isMastered, true)
+  }
 }

@@ -38,6 +38,22 @@ class PracticeHistoryTests: XCTestCase {
     XCTAssertTrue(Date() >= sut.lastTimeTest)
   }
   
+  func testIncreaseNumberOfCorrectAnswer_SetIsLearnedToTrue() {
+    var sut = PracticeHistory()
+    
+    // when
+    sut.increaseNumberOfCorrectAnswerByOne()
+    
+    // then
+    XCTAssertTrue(sut.isLearned)
+  }
+  
+  func testIncreaseNumberOfWrongAnswer_SetIsLearnedToTrue() {
+    var sut = PracticeHistory()
+    sut.increaseNumberOfWrongAnswerByOne()
+    XCTAssertTrue(sut.isLearned)
+  }
+  
   func test_increaseNumberCorrectAnswer2Times_SetNumberOfCorrectAnswerTo2() {
     var sut = PracticeHistory()
     
@@ -97,18 +113,54 @@ class PracticeHistoryTests: XCTestCase {
     XCTAssertTrue(sut.lastTimeTest >= timeBeforeTest && sut.lastTimeTest <= Date())
   }
   
-  func test_setNumberOfTest_Correct_WrongAnswers_setValuesCorrectly() throws {
-    
-    let numberOfTestTaken = UInt.random(in: 0...10)
-    let numberOfCorrectAnswer = UInt.random(in: 0...numberOfTestTaken)
-    
+  func testSetTestTakenData_NumberOfTestTaken_SmallerThanNumberOfCorrectAnswer_ThrowError() {
     var sut = PracticeHistory()
-    try sut.setTestData(numberOfTestTaken: numberOfTestTaken,
-                    numberOfCorrectAnswer: numberOfCorrectAnswer)
+    let numberOfTestTaken: UInt = 3
+    let numberOfCorrectAnswer: UInt = 5
     
-    XCTAssertEqual(sut.numberOfTestTaken, numberOfTestTaken)
-    XCTAssertEqual(sut.numberOfCorrectAnswer, numberOfCorrectAnswer)
-    XCTAssertEqual(sut.numberOfWrongAnswer, numberOfTestTaken - numberOfCorrectAnswer)
+    XCTAssertThrowsError(try sut.setTestTakenData(numberOfTestTaken: numberOfTestTaken,
+                                                  numberOfCorrectAnswer: numberOfCorrectAnswer, lastTimeTest: Date()))
+  }
+  
+  func testSetTestTakenData_NumberOfTest_SmallerThanCurrentNumberOfTest_DontSetNewData() throws {
+    var sut = PracticeHistory()
+    sut.increaseNumberOfCorrectAnswerByOne()
+    sut.increaseNumberOfWrongAnswerByOne()
+    
+    let numberOfTestTaken: UInt = 1
+    let numberOfCorrectAnswer: UInt = 1
+    try sut.setTestTakenData(numberOfTestTaken: numberOfTestTaken,
+                             numberOfCorrectAnswer: numberOfCorrectAnswer,
+                             lastTimeTest: Date())
+    
+    XCTAssertEqual(sut.numberOfTestTaken, 2)
+    XCTAssertEqual(sut.numberOfCorrectAnswer, 1)
+    XCTAssertEqual(sut.numberOfWrongAnswer, 1)
+    XCTAssertEqual(sut.isLearned, true)
+  }
+  
+  func testSetTestTakenData_NumberOfTest_GreaterThanCurrentNumberOfTest_SetNewData() throws {
+    var sut = PracticeHistory()
+    
+    let numberOfTestTaken: UInt = 1
+    let numberOfCorrectAnswer: UInt = 1
+    try sut.setTestTakenData(numberOfTestTaken: numberOfTestTaken,
+                             numberOfCorrectAnswer: numberOfCorrectAnswer,
+                             lastTimeTest: Date())
+    
+    XCTAssertEqual(sut.numberOfTestTaken, 1)
+    XCTAssertEqual(sut.numberOfCorrectAnswer, 1)
+    XCTAssertEqual(sut.numberOfWrongAnswer, 0)
+    XCTAssertEqual(sut.isLearned, true)
+  }
+  
+  // Test First Learn Date
+  func testSetIsLearn_SetFirstLearnDate() {
+    var sut = PracticeHistory()
+    
+    sut.increaseNumberOfWrongAnswerByOne()
+    
+    XCTAssertNotNil(sut.firstLearnDate)
   }
   
   // Test Proficiency Calculation

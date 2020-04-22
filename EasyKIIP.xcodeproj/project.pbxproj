@@ -36,6 +36,9 @@
 		17B70B03244DC7F800C67334 /* Vocab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B02244DC7F800C67334 /* Vocab.swift */; };
 		17B70B04244DC7F800C67334 /* Vocab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B02244DC7F800C67334 /* Vocab.swift */; };
 		17B70B07244DC80300C67334 /* VocabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B05244DC80300C67334 /* VocabTests.swift */; };
+		17B70B0A244F105E00C67334 /* ProficiencyCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B09244F105E00C67334 /* ProficiencyCalculatorTests.swift */; };
+		17B70B0D244F132F00C67334 /* ProficiencyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B0C244F132F00C67334 /* ProficiencyCalculator.swift */; };
+		17B70B0E244F132F00C67334 /* ProficiencyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B0C244F132F00C67334 /* ProficiencyCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,8 @@
 		17B70B00244DC66F00C67334 /* TranslationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationTests.swift; sourceTree = "<group>"; };
 		17B70B02244DC7F800C67334 /* Vocab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocab.swift; sourceTree = "<group>"; };
 		17B70B05244DC80300C67334 /* VocabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabTests.swift; sourceTree = "<group>"; };
+		17B70B09244F105E00C67334 /* ProficiencyCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProficiencyCalculatorTests.swift; sourceTree = "<group>"; };
+		17B70B0C244F132F00C67334 /* ProficiencyCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProficiencyCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +305,7 @@
 		17B70AED244CF53600C67334 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				17B70B0B244F131A00C67334 /* Helper */,
 				17B70AEE244CF55C00C67334 /* Entity */,
 			);
 			path = Model;
@@ -328,6 +334,7 @@
 		17B70AF6244DBE6C00C67334 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				17B70B08244F101200C67334 /* Helper */,
 				17B70AF7244DBE9400C67334 /* Entity */,
 			);
 			path = Model;
@@ -341,6 +348,22 @@
 				17B70B05244DC80300C67334 /* VocabTests.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		17B70B08244F101200C67334 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				17B70B09244F105E00C67334 /* ProficiencyCalculatorTests.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		17B70B0B244F131A00C67334 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				17B70B0C244F132F00C67334 /* ProficiencyCalculator.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -575,6 +598,7 @@
 				17B70AE5244CF40600C67334 /* BookListingViewModel.swift in Sources */,
 				17B70AF3244DBDCC00C67334 /* PraticeHistory.swift in Sources */,
 				17B70AEA244CF4E300C67334 /* VocabRepository.swift in Sources */,
+				17B70B0D244F132F00C67334 /* ProficiencyCalculator.swift in Sources */,
 				17B70B03244DC7F800C67334 /* Vocab.swift in Sources */,
 				17B70AF0244CF57100C67334 /* Book.swift in Sources */,
 				17B70AFE244DC60500C67334 /* LanguageCode.swift in Sources */,
@@ -591,11 +615,13 @@
 				17B70B07244DC80300C67334 /* VocabTests.swift in Sources */,
 				17B70AE6244CF40600C67334 /* BookListingViewModel.swift in Sources */,
 				17B70AF4244DBDCC00C67334 /* PraticeHistory.swift in Sources */,
+				17B70B0E244F132F00C67334 /* ProficiencyCalculator.swift in Sources */,
 				17B70AEB244CF4E300C67334 /* VocabRepository.swift in Sources */,
 				17B70B01244DC66F00C67334 /* TranslationTests.swift in Sources */,
 				17B70AFF244DC60500C67334 /* LanguageCode.swift in Sources */,
 				17B70AFC244DC53E00C67334 /* Translation.swift in Sources */,
 				17B70AE2244CF37000C67334 /* BookListingViewModelTests.swift in Sources */,
+				17B70B0A244F105E00C67334 /* ProficiencyCalculatorTests.swift in Sources */,
 				17B70AF9244DBEEB00C67334 /* PracticeHistoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

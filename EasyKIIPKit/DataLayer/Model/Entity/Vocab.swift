@@ -20,4 +20,8 @@ struct Vocab {
     self.translations = translations
     self.practiceHistory = PracticeHistory()
   }
+  
+  mutating func markAsIsMastered() {
+    self.practiceHistory.markAsIsMastered()
+  }
 }
