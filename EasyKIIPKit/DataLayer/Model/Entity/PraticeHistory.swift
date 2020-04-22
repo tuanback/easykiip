@@ -23,7 +23,7 @@ public struct PracticeHistory {
   private(set) var numberOfTestTaken: UInt
   private(set) var numberOfCorrectAnswer: UInt
   private(set) var numberOfWrongAnswer: UInt
-  private(set) var lastTimeTest: Date
+  private(set) var lastTimeTest: Date?
   private(set) var proficiency: UInt8
   private(set) var isMastered: Bool
   private(set) var firstLearnDate: Date?
@@ -33,7 +33,6 @@ public struct PracticeHistory {
     self.numberOfTestTaken = 0
     self.numberOfCorrectAnswer = 0
     self.numberOfWrongAnswer = 0
-    self.lastTimeTest = Date()
     self.proficiency = 0
     self.isMastered = false
   }
@@ -43,6 +42,7 @@ public struct PracticeHistory {
     self.isMastered = true
     self.isLearned = true
     self.proficiency = 100
+    self.lastTimeTest = Date()
   }
   
   mutating func increaseNumberOfCorrectAnswerByOne() {

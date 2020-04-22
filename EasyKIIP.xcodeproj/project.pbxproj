@@ -39,6 +39,11 @@
 		17B70B0A244F105E00C67334 /* ProficiencyCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B09244F105E00C67334 /* ProficiencyCalculatorTests.swift */; };
 		17B70B0D244F132F00C67334 /* ProficiencyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B0C244F132F00C67334 /* ProficiencyCalculator.swift */; };
 		17B70B0E244F132F00C67334 /* ProficiencyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B0C244F132F00C67334 /* ProficiencyCalculator.swift */; };
+		1A35051ADF5C1C7F0B2197C2 /* Pods_EasyKIIPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */; };
+		627E22CE056419F471187535 /* Pods_EasyKIIPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16BC5199528F6E34ED995F6 /* Pods_EasyKIIPUITests.framework */; };
+		78F5A67A5A3AA31A192C291F /* Pods_EasyKIIPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */; };
+		805274668FD7FD7D0F7E3428 /* Pods_EasyKIIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C39FF132AEDBD39407410F /* Pods_EasyKIIP.framework */; };
+		BDA34D15CB31CE560A84D43B /* Pods_EasyKIIPKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FF93F3774D0D60E2F75D58 /* Pods_EasyKIIPKitTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +92,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B2DB75E44E47E7DA5329E24 /* Pods-EasyKIIPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPUITests.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIPUITests/Pods-EasyKIIPUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14FF93F3774D0D60E2F75D58 /* Pods_EasyKIIPKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70A82244C180200C67334 /* Easy KIIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy KIIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70A85244C180200C67334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17B70A89244C180200C67334 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +126,18 @@
 		17B70B05244DC80300C67334 /* VocabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabTests.swift; sourceTree = "<group>"; };
 		17B70B09244F105E00C67334 /* ProficiencyCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProficiencyCalculatorTests.swift; sourceTree = "<group>"; };
 		17B70B0C244F132F00C67334 /* ProficiencyCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProficiencyCalculator.swift; sourceTree = "<group>"; };
+		3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42E6E88AF24D647A8C69161A /* Pods-EasyKIIP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIP.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP.release.xcconfig"; sourceTree = "<group>"; };
+		4726EEB7EABFB083A639695E /* Pods-EasyKIIP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIP.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP.debug.xcconfig"; sourceTree = "<group>"; };
+		6530E58CC9AA56FDCFB6C908 /* Pods-EasyKIIPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPTests.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIPTests/Pods-EasyKIIPTests.release.xcconfig"; sourceTree = "<group>"; };
+		6F73BA1E4D4132370ECCB1E1 /* Pods-EasyKIIPKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPKit.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIPKit/Pods-EasyKIIPKit.debug.xcconfig"; sourceTree = "<group>"; };
+		77FD3C673292AFC03F137330 /* Pods-EasyKIIPKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPKitTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIPKitTests/Pods-EasyKIIPKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		842E82F1C307539A97A3F698 /* Pods-EasyKIIPKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPKit.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIPKit/Pods-EasyKIIPKit.release.xcconfig"; sourceTree = "<group>"; };
+		95C39FF132AEDBD39407410F /* Pods_EasyKIIP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79F95E235D51F984A33C1A9 /* Pods-EasyKIIPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIPTests/Pods-EasyKIIPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CAE9533D0FD4E72C514287BF /* Pods-EasyKIIPKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPKitTests.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIPKitTests/Pods-EasyKIIPKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		D12E32CC789865A764EF8F5C /* Pods-EasyKIIPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPUITests.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIPUITests/Pods-EasyKIIPUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F16BC5199528F6E34ED995F6 /* Pods_EasyKIIPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B70AD2244CF1E500C67334 /* EasyKIIPKit.framework in Frameworks */,
+				805274668FD7FD7D0F7E3428 /* Pods_EasyKIIP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +154,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F5A67A5A3AA31A192C291F /* Pods_EasyKIIPTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				627E22CE056419F471187535 /* Pods_EasyKIIPUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A35051ADF5C1C7F0B2197C2 /* Pods_EasyKIIPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B70AC3244CF1CE00C67334 /* EasyKIIPKit.framework in Frameworks */,
+				BDA34D15CB31CE560A84D43B /* Pods_EasyKIIPKitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +196,7 @@
 				17B70AC6244CF1CE00C67334 /* EasyKIIPKitTests */,
 				17B70A83244C180200C67334 /* Products */,
 				17B70AD1244CF1E500C67334 /* Frameworks */,
+				D2D949889511FC23CD039687 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -241,6 +267,11 @@
 		17B70AD1244CF1E500C67334 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95C39FF132AEDBD39407410F /* Pods_EasyKIIP.framework */,
+				3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */,
+				14FF93F3774D0D60E2F75D58 /* Pods_EasyKIIPKitTests.framework */,
+				12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */,
+				F16BC5199528F6E34ED995F6 /* Pods_EasyKIIPUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -366,6 +397,24 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		D2D949889511FC23CD039687 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4726EEB7EABFB083A639695E /* Pods-EasyKIIP.debug.xcconfig */,
+				42E6E88AF24D647A8C69161A /* Pods-EasyKIIP.release.xcconfig */,
+				6F73BA1E4D4132370ECCB1E1 /* Pods-EasyKIIPKit.debug.xcconfig */,
+				842E82F1C307539A97A3F698 /* Pods-EasyKIIPKit.release.xcconfig */,
+				77FD3C673292AFC03F137330 /* Pods-EasyKIIPKitTests.debug.xcconfig */,
+				CAE9533D0FD4E72C514287BF /* Pods-EasyKIIPKitTests.release.xcconfig */,
+				A79F95E235D51F984A33C1A9 /* Pods-EasyKIIPTests.debug.xcconfig */,
+				6530E58CC9AA56FDCFB6C908 /* Pods-EasyKIIPTests.release.xcconfig */,
+				0B2DB75E44E47E7DA5329E24 /* Pods-EasyKIIPUITests.debug.xcconfig */,
+				D12E32CC789865A764EF8F5C /* Pods-EasyKIIPUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -384,10 +433,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17B70AAC244C180600C67334 /* Build configuration list for PBXNativeTarget "EasyKIIP" */;
 			buildPhases = (
+				9C8EC45F972ECFA53F88FA83 /* [CP] Check Pods Manifest.lock */,
 				17B70A7E244C180200C67334 /* Sources */,
 				17B70A7F244C180200C67334 /* Frameworks */,
 				17B70A80244C180200C67334 /* Resources */,
 				17B70AD6244CF1E500C67334 /* Embed Frameworks */,
+				DC158DF6EF5D937E577E1FF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -403,6 +454,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17B70AAF244C180600C67334 /* Build configuration list for PBXNativeTarget "EasyKIIPTests" */;
 			buildPhases = (
+				55D205C516A4934359FD03D0 /* [CP] Check Pods Manifest.lock */,
 				17B70A94244C180600C67334 /* Sources */,
 				17B70A95244C180600C67334 /* Frameworks */,
 				17B70A96244C180600C67334 /* Resources */,
@@ -421,6 +473,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17B70AB2244C180600C67334 /* Build configuration list for PBXNativeTarget "EasyKIIPUITests" */;
 			buildPhases = (
+				6350C96CFD46EE336A99D727 /* [CP] Check Pods Manifest.lock */,
 				17B70A9F244C180600C67334 /* Sources */,
 				17B70AA0244C180600C67334 /* Frameworks */,
 				17B70AA1244C180600C67334 /* Resources */,
@@ -439,6 +492,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17B70ACB244CF1CE00C67334 /* Build configuration list for PBXNativeTarget "EasyKIIPKit" */;
 			buildPhases = (
+				2A40199626F6AB751765BEF8 /* [CP] Check Pods Manifest.lock */,
 				17B70AB5244CF1CD00C67334 /* Headers */,
 				17B70AB6244CF1CD00C67334 /* Sources */,
 				17B70AB7244CF1CD00C67334 /* Frameworks */,
@@ -457,9 +511,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17B70ACE244CF1CE00C67334 /* Build configuration list for PBXNativeTarget "EasyKIIPKitTests" */;
 			buildPhases = (
+				14AABF6C0892ADC61F7F3D98 /* [CP] Check Pods Manifest.lock */,
 				17B70ABE244CF1CE00C67334 /* Sources */,
 				17B70ABF244CF1CE00C67334 /* Frameworks */,
 				17B70AC0244CF1CE00C67334 /* Resources */,
+				4DA33030F579719280C12E49 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -564,6 +620,153 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14AABF6C0892ADC61F7F3D98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyKIIPKitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A40199626F6AB751765BEF8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyKIIPKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DA33030F579719280C12E49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIPKitTests/Pods-EasyKIIPKitTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIPKitTests/Pods-EasyKIIPKitTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyKIIPKitTests/Pods-EasyKIIPKitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55D205C516A4934359FD03D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyKIIPTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6350C96CFD46EE336A99D727 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyKIIPUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C8EC45F972ECFA53F88FA83 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EasyKIIP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC158DF6EF5D937E577E1FF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		17B70A7E244C180200C67334 /* Sources */ = {
@@ -787,6 +990,7 @@
 		};
 		17B70AAD244C180600C67334 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4726EEB7EABFB083A639695E /* Pods-EasyKIIP.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -807,6 +1011,7 @@
 		};
 		17B70AAE244C180600C67334 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42E6E88AF24D647A8C69161A /* Pods-EasyKIIP.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -827,6 +1032,7 @@
 		};
 		17B70AB0244C180600C67334 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A79F95E235D51F984A33C1A9 /* Pods-EasyKIIPTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -849,6 +1055,7 @@
 		};
 		17B70AB1244C180600C67334 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6530E58CC9AA56FDCFB6C908 /* Pods-EasyKIIPTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -871,6 +1078,7 @@
 		};
 		17B70AB3244C180600C67334 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B2DB75E44E47E7DA5329E24 /* Pods-EasyKIIPUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -891,6 +1099,7 @@
 		};
 		17B70AB4244C180600C67334 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D12E32CC789865A764EF8F5C /* Pods-EasyKIIPUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -911,6 +1120,7 @@
 		};
 		17B70ACC244CF1CE00C67334 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F73BA1E4D4132370ECCB1E1 /* Pods-EasyKIIPKit.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -942,6 +1152,7 @@
 		};
 		17B70ACD244CF1CE00C67334 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 842E82F1C307539A97A3F698 /* Pods-EasyKIIPKit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -972,6 +1183,7 @@
 		};
 		17B70ACF244CF1CE00C67334 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77FD3C673292AFC03F137330 /* Pods-EasyKIIPKitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -995,6 +1207,7 @@
 		};
 		17B70AD0244CF1CE00C67334 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAE9533D0FD4E72C514287BF /* Pods-EasyKIIPKitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;

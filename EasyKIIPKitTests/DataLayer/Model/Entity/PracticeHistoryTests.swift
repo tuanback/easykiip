@@ -31,11 +31,9 @@ class PracticeHistoryTests: XCTestCase {
     XCTAssertEqual(sut.numberOfWrongAnswer, 0)
   }
   
-  func test_init_setLastTimeTest() {
-    let dateBeforeTest = Date()
+  func test_init_doesntSetLastTimeTest() {
     let sut = PracticeHistory()
-    XCTAssertTrue(sut.lastTimeTest >= dateBeforeTest)
-    XCTAssertTrue(Date() >= sut.lastTimeTest)
+    XCTAssertNil(sut.lastTimeTest)
   }
   
   func testIncreaseNumberOfCorrectAnswer_SetIsLearnedToTrue() {
@@ -110,7 +108,8 @@ class PracticeHistoryTests: XCTestCase {
     sut.increaseNumberOfWrongAnswerByOne()
     sut.increaseNumberOfCorrectAnswerByOne()
     
-    XCTAssertTrue(sut.lastTimeTest >= timeBeforeTest && sut.lastTimeTest <= Date())
+    XCTAssertNotNil(sut.lastTimeTest)
+    XCTAssertTrue(sut.lastTimeTest! >= timeBeforeTest && sut.lastTimeTest! <= Date())
   }
   
   func testSetTestTakenData_NumberOfTestTaken_SmallerThanNumberOfCorrectAnswer_ThrowError() {
