@@ -448,6 +448,6 @@ class ProficiencyCalculatorTests: XCTestCase {
   
   // MARK: Helper functions
   private func makeVocab() -> Vocab {
-    return Vocab(id: 0, word: "", translations: [])
+    return Vocab(id: 0, word: "", translations: [:])
   }
 }

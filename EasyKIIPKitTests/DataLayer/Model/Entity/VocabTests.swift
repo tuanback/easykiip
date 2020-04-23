@@ -15,32 +15,18 @@ class VocabTests: XCTestCase {
   func test_init_vocab_withID_Word_OneTranslation_SetCorrectly() {
     let id: UInt = 1
     let word = "Word"
-    let translation = Translation(languageCode: .en, translation: "Hello")
-    let translations: Set<Translation> = [translation]
-    let sut = Vocab(id: id, word: word, translations: translations)
-    
-    XCTAssertEqual(sut.id, id)
-    XCTAssertEqual(sut.word, word)
-    XCTAssertEqual(sut.translations.count, translations.count)
-  }
-  
-  func test_init_vocab_withID_Word_TwoDuplicateTranslation_TranslationsCountEqualOne() {
-    let id: UInt = 1
-    let word = "Word"
-    let translation = Translation(languageCode: .en, translation: "Hello")
-    let translation2 = Translation(languageCode: .en, translation: "Hello")
-    let translations: Set<Translation> = [translation, translation2]
-    
-    let sut = Vocab(id: id, word: word, translations: translations)
+    let sut = Vocab(id: id, word: word, translations: [.en: "Hello"])
     
     XCTAssertEqual(sut.id, id)
     XCTAssertEqual(sut.word, word)
     XCTAssertEqual(sut.translations.count, 1)
+    XCTAssertEqual(sut.translations[.en], "Hello")
+    XCTAssertNil(sut.translations[.vi])
   }
   
   func testInitVocab_setIDCorrectly() {
     let id: UInt = 1
-    let sut = Vocab(id: id, word: "", translations: [])
+    let sut = Vocab(id: id, word: "", translations: [:])
     XCTAssertEqual(sut.id, id)
   }
   
@@ -80,7 +66,7 @@ class VocabTests: XCTestCase {
   }
   
   func testMarkAsIsMastered_setPracticeHistoryToMastered() {
-    var sut = Vocab(id: 1, word: "", translations: [])
+    var sut = Vocab(id: 1, word: "", translations: [:])
     
     // when
     sut.markAsIsMastered()
@@ -91,7 +77,7 @@ class VocabTests: XCTestCase {
   
   // Helper funcs
   private func makeSimpleSut() -> Vocab {
-    return Vocab(id: 1, word: "", translations: [])
+    return Vocab(id: 1, word: "", translations: [:])
   }
 }
 
@@ -496,6 +482,6 @@ extension VocabTests {
   
   // MARK: Helper functions
   private func makeVocab() -> Vocab {
-    return Vocab(id: 0, word: "", translations: [])
+    return Vocab(id: 0, word: "", translations: [:])
   }
 }

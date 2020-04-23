@@ -11,13 +11,13 @@ import Foundation
 struct Vocab {
   private(set) var id: UInt
   private(set) var word: String
-  private(set) var translations: Set<Translation>
+  private(set) var translations: [LanguageCode: String]
   private(set) var practiceHistory: PracticeHistory
   var proficiency: UInt8 {
     return ProficiencyCalculator.calculate(vocab: self)
   }
   
-  init(id: UInt, word: String, translations: Set<Translation>) {
+  init(id: UInt, word: String, translations: [LanguageCode: String]) {
     self.id = id
     self.word = word
     self.translations = translations
