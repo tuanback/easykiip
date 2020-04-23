@@ -161,21 +161,4 @@ class PracticeHistoryTests: XCTestCase {
     
     XCTAssertNotNil(sut.firstLearnDate)
   }
-  
-  // Test Proficiency Calculation
-  func test_init_setProficiencyTo0() {
-    let sut = PracticeHistory()
-    XCTAssertEqual(sut.proficiency, 0)
-  }
-  
-  func test_markAsIsMastered_setIsLearnedAndProficiencyTo100() {
-    var sut = PracticeHistory()
-    
-    sut.markAsIsMastered()
-    
-    XCTAssertEqual(sut.isMastered, true)
-    XCTAssertEqual(sut.isLearned, true)
-    XCTAssertEqual(sut.proficiency, 100)
-  }
-  
 }

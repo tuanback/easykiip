@@ -14,7 +14,6 @@ class ProficiencyCalculatorTests: XCTestCase {
   
   func testCalulate_JustInitVocab_ProficiencyIsZero() {
     let vocab = makeVocab()
-    
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 0)
   }
@@ -28,7 +27,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   
   func testCalculate_IsLearnedVocab_OneTimeTestTaken_CorrectAnswer_LastTimeTakenToday_ProficiencyIs100() {
     var vocab = makeVocab()
-    vocab.practiceHistory.increaseNumberOfCorrectAnswerByOne()
+    vocab.increaseNumberOfCorrectAnswerByOne()
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 100)
   }
@@ -38,8 +37,8 @@ class ProficiencyCalculatorTests: XCTestCase {
     var vocab = makeVocab()
     
     // when
-    vocab.practiceHistory.increaseNumberOfCorrectAnswerByOne()
-    vocab.practiceHistory.increaseNumberOfWrongAnswerByOne()
+    vocab.increaseNumberOfCorrectAnswerByOne()
+    vocab.increaseNumberOfWrongAnswerByOne()
     
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     
@@ -49,7 +48,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   
   func testCalculate_1TimeTestTaken_WrongAnswer_LastTimeTakenToday_ProficiencyIs0() {
     var vocab = makeVocab()
-    vocab.practiceHistory.increaseNumberOfWrongAnswerByOne()
+    vocab.increaseNumberOfWrongAnswerByOne()
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 0)
   }
@@ -60,7 +59,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 1
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -72,7 +71,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 1
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -84,7 +83,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 6
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -96,7 +95,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 6
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -110,7 +109,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 7
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -122,7 +121,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 7
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -134,7 +133,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 12
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -146,7 +145,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 12
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -159,7 +158,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 13
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -171,7 +170,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 13
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -183,7 +182,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 18
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -195,7 +194,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 18
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -208,7 +207,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 19
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -220,7 +219,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 19
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -232,7 +231,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 24
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -244,7 +243,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 24
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -257,7 +256,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 25
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -269,7 +268,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 25
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -281,7 +280,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 30
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -293,7 +292,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 30
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -306,7 +305,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 31
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -318,7 +317,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 31
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -330,7 +329,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 36
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -342,7 +341,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 36
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -355,7 +354,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 37
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -367,7 +366,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 37
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -379,7 +378,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 42
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -391,7 +390,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 42
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -404,7 +403,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 43
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -416,7 +415,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 43
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -428,7 +427,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 99
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
@@ -440,7 +439,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 99
     let numberOfCorrectAnswer = numberOfTakenTest
-    try? vocab.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
+    try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
