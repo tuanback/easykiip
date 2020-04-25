@@ -1,0 +1,6 @@
+framework module Pods_EasyKIIP {
+  umbrella header "Pods-EasyKIIP-umbrella.h"
+
+  export *
+  module * { export * }
+}
