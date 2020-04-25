@@ -70,6 +70,14 @@ class VocabDataStoreInMemory: VocabDataStore {
     }
   }
   
+  func getVocab(by id: UInt) -> Vocab? {
+    let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
+    if let v = vocabs.first(where: { $0.id == id }) {
+      return v
+    }
+    return nil
+  }
+  
   func syncPracticeHistory(vocabID: UInt, testTaken: UInt, correctAnswer: UInt, firstLearnDate: Date, lastTimeTest: Date) {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
     if var v = vocabs.first(where: { $0.id == vocabID }) {

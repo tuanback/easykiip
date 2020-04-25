@@ -10,8 +10,8 @@ import Foundation
 
 public class KIIPVocabRepository: VocabRepository {
   
-  let remoteAPI: VocabRemoteAPI
-  let dataStore: VocabDataStore
+  private let remoteAPI: VocabRemoteAPI
+  private let dataStore: VocabDataStore
   
   init(remoteAPI: VocabRemoteAPI, dataStore: VocabDataStore) {
     self.remoteAPI = remoteAPI
