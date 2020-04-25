@@ -19,9 +19,9 @@ public protocol NeedMorePracticeVocabGetter {
 
 public protocol NeedReviewVocabsGetter {
   /// Get list of vocabs in all the books if the users didn't review the learned vocab after 1 days 1 week or one months
-  func getNeedReviewVocabs(upto numberOfVocabs: Int)
+  func getNeedReviewVocabs(upto numberOfVocabs: Int) -> [Vocab]
   /// Get list of vocabs in a specific book if the users didn't review the learned vocab after 1 days 1 week or one months
-  func getNeedReviewVocabs(in book: Book, upto numberOfVocabs: Int)
+  func getNeedReviewVocabs(in book: Book, upto numberOfVocabs: Int) -> [Vocab]
 }
 
 public protocol VocabRepository: SearchEngine, NeedMorePracticeVocabGetter, NeedReviewVocabsGetter {
@@ -29,5 +29,5 @@ public protocol VocabRepository: SearchEngine, NeedMorePracticeVocabGetter, Need
   func getListOfLesson(in book: Book) -> [Lesson]
   func getListOfVocabs(in lesson: Lesson) -> [Vocab]
   func markVocabAsMastered(_ vocab: Vocab)
-  func recordVocabPracticed(isCorrectAnswer: Bool)
+  func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool)
 }
