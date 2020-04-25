@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct ReadingPart {
+public struct ReadingPart {
   
-  let id: UInt
-  let script: String
-  let translations: [LanguageCode: String]
+  public let id: UInt
+  public let script: String
+  public let translations: [LanguageCode: String]
   
   init(id: UInt, script: String, translations: [LanguageCode: String]) {
     self.id = id

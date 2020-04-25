@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum LanguageCode: String {
+public enum LanguageCode: String {
   case vi = "vi"
   case en = "en"
 }

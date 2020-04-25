@@ -8,13 +8,16 @@
 
 import Foundation
 
-struct Vocab {
-  private(set) var id: UInt
-  private(set) var word: String
-  private(set) var translations: [LanguageCode: String]
+public struct Vocab {
+  public private(set) var id: UInt
+  public private(set) var word: String
+  public private(set) var translations: [LanguageCode: String]
   private(set) var practiceHistory: PracticeHistory
-  var proficiency: UInt8 {
+  public var proficiency: UInt8 {
     return ProficiencyCalculator.calculate(vocab: self)
+  }
+  public var lastTimeTest: Date? {
+    return practiceHistory.lastTimeTest
   }
   
   init(id: UInt, word: String, translations: [LanguageCode: String]) {
@@ -24,15 +27,15 @@ struct Vocab {
     self.practiceHistory = PracticeHistory()
   }
   
-  mutating func markAsIsMastered() {
+  public mutating func markAsIsMastered() {
     self.practiceHistory.markAsIsMastered()
   }
   
-  mutating func increaseNumberOfCorrectAnswerByOne() {
+  public mutating func increaseNumberOfCorrectAnswerByOne() {
     self.practiceHistory.increaseNumberOfCorrectAnswerByOne()
   }
   
-  mutating func increaseNumberOfWrongAnswerByOne() {
+  public mutating func increaseNumberOfWrongAnswerByOne() {
     self.practiceHistory.increaseNumberOfWrongAnswerByOne()
   }
   
@@ -40,9 +43,9 @@ struct Vocab {
   /// - Parameters:
   ///   - numberOfTakenTest: number of test has been taken
   ///   - numberOfCorrectAnswer: number of correct answer
-  mutating func setTestTakenData(numberOfTestTaken: UInt,
-                                 numberOfCorrectAnswer: UInt,
-                                 lastTimeTest: Date) throws {
+  public mutating func setTestTakenData(numberOfTestTaken: UInt,
+                                        numberOfCorrectAnswer: UInt,
+                                        lastTimeTest: Date) throws {
     try self.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTestTaken,
                                               numberOfCorrectAnswer: numberOfCorrectAnswer,
                                               lastTimeTest: lastTimeTest)

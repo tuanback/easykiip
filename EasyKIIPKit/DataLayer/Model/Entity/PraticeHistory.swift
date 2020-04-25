@@ -23,9 +23,9 @@ public struct PracticeHistory {
   private(set) var numberOfTestTaken: UInt
   private(set) var numberOfCorrectAnswer: UInt
   private(set) var numberOfWrongAnswer: UInt
+  private(set) var firstLearnDate: Date?
   private(set) var lastTimeTest: Date?
   private(set) var isMastered: Bool
-  private(set) var firstLearnDate: Date?
   
   init() {
     self.isLearned = false
