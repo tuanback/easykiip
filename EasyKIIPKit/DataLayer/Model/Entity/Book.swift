@@ -12,14 +12,14 @@ public struct Book {
   public private(set) var id: UInt
   public private(set) var name: String
   public private(set) var thumbName: String?
-  public private(set) var lessions: [Lesson]
+  public private(set) var lessons: [Lesson]
   
   public var proficiency: UInt8 {
-    guard lessions.count > 0 else { return 100 }
-    let total = lessions.reduce(0) { (result, Lesson) -> UInt in
+    guard lessons.count > 0 else { return 100 }
+    let total = lessons.reduce(0) { (result, Lesson) -> UInt in
       result + UInt(Lesson.proficiency)
     }
-    let count = UInt(lessions.count)
+    let count = UInt(lessons.count)
     return UInt8(total / count)
   }
 }

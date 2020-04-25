@@ -27,15 +27,15 @@ public struct Vocab {
     self.practiceHistory = PracticeHistory()
   }
   
-  public mutating func markAsIsMastered() {
+  mutating func markAsIsMastered() {
     self.practiceHistory.markAsIsMastered()
   }
   
-  public mutating func increaseNumberOfCorrectAnswerByOne() {
+  mutating func increaseNumberOfCorrectAnswerByOne() {
     self.practiceHistory.increaseNumberOfCorrectAnswerByOne()
   }
   
-  public mutating func increaseNumberOfWrongAnswerByOne() {
+  mutating func increaseNumberOfWrongAnswerByOne() {
     self.practiceHistory.increaseNumberOfWrongAnswerByOne()
   }
   
@@ -43,11 +43,12 @@ public struct Vocab {
   /// - Parameters:
   ///   - numberOfTakenTest: number of test has been taken
   ///   - numberOfCorrectAnswer: number of correct answer
-  public mutating func setTestTakenData(numberOfTestTaken: UInt,
-                                        numberOfCorrectAnswer: UInt,
-                                        lastTimeTest: Date) throws {
+  mutating func setTestTakenData(numberOfTestTaken: UInt,
+                                 numberOfCorrectAnswer: UInt,
+                                 firstLearnDate: Date,
+                                 lastTimeTest: Date) throws {
     try self.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTestTaken,
-                                              numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                              numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: firstLearnDate,
                                               lastTimeTest: lastTimeTest)
   }
 }

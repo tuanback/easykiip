@@ -43,6 +43,12 @@
 		17B70B1E245308EC00C67334 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B1C245308EC00C67334 /* Lesson.swift */; };
 		17B70B2024530ADE00C67334 /* LessonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B1F24530ADE00C67334 /* LessonTests.swift */; };
 		17B70B222453BCB100C67334 /* BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B212453BCB100C67334 /* BookTests.swift */; };
+		17B70B272453CA1100C67334 /* VocabRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B262453CA1100C67334 /* VocabRemoteAPI.swift */; };
+		17B70B282453CA1100C67334 /* VocabRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B262453CA1100C67334 /* VocabRemoteAPI.swift */; };
+		17B70B2A2453CB0200C67334 /* VocabDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B292453CB0200C67334 /* VocabDataStore.swift */; };
+		17B70B2B2453CB0200C67334 /* VocabDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B292453CB0200C67334 /* VocabDataStore.swift */; };
+		17B70B2F2453D28C00C67334 /* VocabDataStoreInMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B2E2453D28C00C67334 /* VocabDataStoreInMemory.swift */; };
+		17B70B302453D28C00C67334 /* VocabDataStoreInMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B2E2453D28C00C67334 /* VocabDataStoreInMemory.swift */; };
 		1A35051ADF5C1C7F0B2197C2 /* Pods_EasyKIIPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */; };
 		627E22CE056419F471187535 /* Pods_EasyKIIPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16BC5199528F6E34ED995F6 /* Pods_EasyKIIPUITests.framework */; };
 		78F5A67A5A3AA31A192C291F /* Pods_EasyKIIPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */; };
@@ -133,6 +139,9 @@
 		17B70B1C245308EC00C67334 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		17B70B1F24530ADE00C67334 /* LessonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTests.swift; sourceTree = "<group>"; };
 		17B70B212453BCB100C67334 /* BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTests.swift; sourceTree = "<group>"; };
+		17B70B262453CA1100C67334 /* VocabRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabRemoteAPI.swift; sourceTree = "<group>"; };
+		17B70B292453CB0200C67334 /* VocabDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabDataStore.swift; sourceTree = "<group>"; };
+		17B70B2E2453D28C00C67334 /* VocabDataStoreInMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabDataStoreInMemory.swift; sourceTree = "<group>"; };
 		3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42E6E88AF24D647A8C69161A /* Pods-EasyKIIP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIP.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP.release.xcconfig"; sourceTree = "<group>"; };
 		4726EEB7EABFB083A639695E /* Pods-EasyKIIP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIP.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -328,6 +337,8 @@
 			isa = PBXGroup;
 			children = (
 				17B70AE9244CF4E300C67334 /* VocabRepository.swift */,
+				17B70B2C2453D24400C67334 /* Persistence */,
+				17B70B2D2453D25A00C67334 /* Remote */,
 			);
 			path = BookListing;
 			sourceTree = "<group>";
@@ -405,6 +416,23 @@
 				17B70B0C244F132F00C67334 /* ProficiencyCalculator.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		17B70B2C2453D24400C67334 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				17B70B292453CB0200C67334 /* VocabDataStore.swift */,
+				17B70B2E2453D28C00C67334 /* VocabDataStoreInMemory.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		17B70B2D2453D25A00C67334 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				17B70B262453CA1100C67334 /* VocabRemoteAPI.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 		D2D949889511FC23CD039687 /* Pods */ = {
@@ -812,8 +840,11 @@
 				17B70AEA244CF4E300C67334 /* VocabRepository.swift in Sources */,
 				17B70B0D244F132F00C67334 /* ProficiencyCalculator.swift in Sources */,
 				17B70B03244DC7F800C67334 /* Vocab.swift in Sources */,
+				17B70B2F2453D28C00C67334 /* VocabDataStoreInMemory.swift in Sources */,
 				17B70B152451C0F900C67334 /* ReadingPart.swift in Sources */,
+				17B70B272453CA1100C67334 /* VocabRemoteAPI.swift in Sources */,
 				17B70AF0244CF57100C67334 /* Book.swift in Sources */,
+				17B70B2A2453CB0200C67334 /* VocabDataStore.swift in Sources */,
 				17B70B1D245308EC00C67334 /* Lesson.swift in Sources */,
 				17B70AFE244DC60500C67334 /* LanguageCode.swift in Sources */,
 			);
@@ -829,14 +860,17 @@
 				17B70B07244DC80300C67334 /* VocabTests.swift in Sources */,
 				17B70AE6244CF40600C67334 /* BookListingViewModel.swift in Sources */,
 				17B70AF4244DBDCC00C67334 /* PraticeHistory.swift in Sources */,
+				17B70B282453CA1100C67334 /* VocabRemoteAPI.swift in Sources */,
 				17B70B162451C0F900C67334 /* ReadingPart.swift in Sources */,
 				17B70B182451C11200C67334 /* ReadingPartTests.swift in Sources */,
+				17B70B2B2453CB0200C67334 /* VocabDataStore.swift in Sources */,
 				17B70B222453BCB100C67334 /* BookTests.swift in Sources */,
 				17B70B0E244F132F00C67334 /* ProficiencyCalculator.swift in Sources */,
 				17B70AEB244CF4E300C67334 /* VocabRepository.swift in Sources */,
 				17B70AFF244DC60500C67334 /* LanguageCode.swift in Sources */,
 				17B70AE2244CF37000C67334 /* BookListingViewModelTests.swift in Sources */,
 				17B70B0A244F105E00C67334 /* ProficiencyCalculatorTests.swift in Sources */,
+				17B70B302453D28C00C67334 /* VocabDataStoreInMemory.swift in Sources */,
 				17B70B2024530ADE00C67334 /* LessonTests.swift in Sources */,
 				17B70AF9244DBEEB00C67334 /* PracticeHistoryTests.swift in Sources */,
 			);

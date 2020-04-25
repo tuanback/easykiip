@@ -126,7 +126,7 @@ extension VocabTests {
     let numberOfTakenTest: UInt = 1
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
-                                                numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 51)
   }
@@ -138,6 +138,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 26)
   }
@@ -149,6 +150,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 51)
   }
@@ -160,6 +162,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 26)
   }
@@ -173,6 +176,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 64)
   }
@@ -184,6 +188,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 40)
   }
@@ -195,6 +200,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 64)
   }
@@ -206,6 +212,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 40)
   }
@@ -218,6 +225,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 75)
   }
@@ -229,6 +237,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 56)
   }
@@ -240,6 +249,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 75)
   }
@@ -251,6 +261,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 56)
   }
@@ -263,6 +274,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 84)
   }
@@ -274,6 +286,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 70)
   }
@@ -285,6 +298,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 84)
   }
@@ -296,6 +310,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 70)
   }
@@ -308,6 +323,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 91)
   }
@@ -319,6 +335,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 82)
   }
@@ -330,6 +347,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 91)
   }
@@ -341,6 +359,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 82)
   }
@@ -353,6 +372,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 96)
   }
@@ -364,6 +384,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 92)
   }
@@ -375,6 +396,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 96)
   }
@@ -386,6 +408,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 92)
   }
@@ -398,6 +421,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 99)
   }
@@ -409,6 +433,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 98)
   }
@@ -420,6 +445,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 99)
   }
@@ -431,6 +457,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 98)
   }
@@ -443,6 +470,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 100)
   }
@@ -454,6 +482,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 100)
   }
@@ -465,6 +494,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 100)
   }
@@ -476,6 +506,7 @@ extension VocabTests {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     XCTAssertEqual(vocab.proficiency, 100)
   }

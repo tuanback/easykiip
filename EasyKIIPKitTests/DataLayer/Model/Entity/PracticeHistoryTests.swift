@@ -118,7 +118,7 @@ class PracticeHistoryTests: XCTestCase {
     let numberOfCorrectAnswer: UInt = 5
     
     XCTAssertThrowsError(try sut.setTestTakenData(numberOfTestTaken: numberOfTestTaken,
-                                                  numberOfCorrectAnswer: numberOfCorrectAnswer, lastTimeTest: Date()))
+                                                  numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: Date(), lastTimeTest: Date()))
   }
   
   func testSetTestTakenData_NumberOfTest_SmallerThanCurrentNumberOfTest_DontSetNewData() throws {
@@ -129,7 +129,7 @@ class PracticeHistoryTests: XCTestCase {
     let numberOfTestTaken: UInt = 1
     let numberOfCorrectAnswer: UInt = 1
     try sut.setTestTakenData(numberOfTestTaken: numberOfTestTaken,
-                             numberOfCorrectAnswer: numberOfCorrectAnswer,
+                             numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: Date(),
                              lastTimeTest: Date())
     
     XCTAssertEqual(sut.numberOfTestTaken, 2)
@@ -144,7 +144,7 @@ class PracticeHistoryTests: XCTestCase {
     let numberOfTestTaken: UInt = 1
     let numberOfCorrectAnswer: UInt = 1
     try sut.setTestTakenData(numberOfTestTaken: numberOfTestTaken,
-                             numberOfCorrectAnswer: numberOfCorrectAnswer,
+                             numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: Date(),
                              lastTimeTest: Date())
     
     XCTAssertEqual(sut.numberOfTestTaken, 1)

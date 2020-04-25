@@ -60,7 +60,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfTakenTest: UInt = 1
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
-                                                numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 51)
@@ -73,6 +73,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 26)
@@ -85,6 +86,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 51)
@@ -97,6 +99,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 26)
@@ -111,6 +114,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 64)
@@ -123,6 +127,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 40)
@@ -135,6 +140,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 64)
@@ -147,6 +153,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 40)
@@ -160,6 +167,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 75)
@@ -172,6 +180,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 56)
@@ -184,6 +193,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 75)
@@ -196,6 +206,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 56)
@@ -209,6 +220,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 84)
@@ -221,6 +233,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 70)
@@ -233,6 +246,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 84)
@@ -245,6 +259,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 70)
@@ -258,6 +273,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 91)
@@ -270,6 +286,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 82)
@@ -282,6 +299,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 91)
@@ -294,6 +312,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 82)
@@ -307,6 +326,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 96)
@@ -319,6 +339,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 92)
@@ -331,6 +352,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 96)
@@ -343,6 +365,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 92)
@@ -356,6 +379,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 99)
@@ -368,6 +392,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 98)
@@ -380,6 +405,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 99)
@@ -392,6 +418,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 98)
@@ -405,6 +432,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 100)
@@ -417,6 +445,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 100)
@@ -429,6 +458,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 100)
@@ -441,6 +471,7 @@ class ProficiencyCalculatorTests: XCTestCase {
     let numberOfCorrectAnswer = numberOfTakenTest
     try? vocab.setTestTakenData(numberOfTestTaken: numberOfTakenTest,
                                                 numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                                firstLearnDate: lastTimeTest,
                                                 lastTimeTest: lastTimeTest)
     let proficiency = ProficiencyCalculator.calculate(vocab: vocab)
     XCTAssertEqual(proficiency, 100)

@@ -62,6 +62,7 @@ public struct PracticeHistory {
   ///   - numberOfCorrectAnswer: number of correct answer
   mutating func setTestTakenData(numberOfTestTaken: UInt,
                             numberOfCorrectAnswer: UInt,
+                            firstLearnDate: Date,
                             lastTimeTest: Date) throws {
     // If number of current test taken > input data => Synced
     guard self.numberOfTestTaken < numberOfTestTaken else { return }
@@ -75,6 +76,7 @@ public struct PracticeHistory {
     self.numberOfTestTaken = numberOfTestTaken
     self.numberOfCorrectAnswer = numberOfCorrectAnswer
     self.numberOfWrongAnswer = numberOfTestTaken - numberOfCorrectAnswer
+    self.firstLearnDate = firstLearnDate > lastTimeTest ? lastTimeTest : firstLearnDate
     self.lastTimeTest = lastTimeTest
     self.isLearned = true
   }
