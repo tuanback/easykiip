@@ -7,11 +7,11 @@
 //
 
 import Foundation
+import RxSwift
 
 public protocol UserSessionRepository {
-  
   func readUserSession() -> UserSession?
-  func signUp(newAccount: NewAccount) -> UserSession
-  func signIn(email: String, password: String) -> UserSession
+  func signUp(newAccount: NewAccount) -> Observable<UserSession>
+  func signIn(email: String, password: String) -> Observable<UserSession>
   func signOut(userSession: UserSession)
 }

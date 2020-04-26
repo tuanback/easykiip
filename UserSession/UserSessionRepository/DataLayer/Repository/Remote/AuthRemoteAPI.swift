@@ -7,9 +7,9 @@
 //
 
 import Foundation
+import RxSwift
 
 public protocol AuthRemoteAPI {
-  
-  func signIn(username: String, password: String) -> UserSession
-  func signUp(account: NewAccount) -> UserSession
+  func signIn(email: String, password: String) -> Observable<UserSession>
+  func signUp(account: NewAccount) -> Observable<UserSession>
 }

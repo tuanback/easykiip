@@ -1,5 +1,5 @@
 //
-//  NewAccount.swift
+//  UserProfile.swift
 //  EasyKIIP
 //
 //  Created by Real Life Swift on 2020/04/26.
@@ -8,16 +8,17 @@
 
 import Foundation
 
-public struct NewAccount: Codable {
+public struct UserProfile: Equatable, Codable {
 
   // MARK: - Properties
+  public let name: String
   public let email: String
-  public let password: String
+  public let avatar: URL
 
   // MARK: - Methods
-  public init(email: String,
-              password: String) {
+  public init(name: String, email: String, avatar: URL) {
+    self.name = name
     self.email = email
-    self.password = password
+    self.avatar = avatar
   }
 }

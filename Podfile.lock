@@ -1,15 +1,15 @@
 PODS:
-  - RxBlocking (5.0.0):
+  - RxBlocking (5.1.1):
     - RxSwift (~> 5)
-  - RxCocoa (5.0.0):
+  - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
-  - RxRelay (5.0.0):
+  - RxRelay (5.1.1):
     - RxSwift (~> 5)
-  - RxSwift (5.0.0)
-  - RxTest (5.0.0):
+  - RxSwift (5.1.1)
+  - RxTest (5.1.1):
     - RxSwift (~> 5)
-  - SwiftDate (6.0.3)
+  - SwiftDate (6.1.0)
 
 DEPENDENCIES:
   - RxBlocking
@@ -28,13 +28,13 @@ SPEC REPOS:
     - SwiftDate
 
 SPEC CHECKSUMS:
-  RxBlocking: c67185d26498ea3cbe3e121917c3c16739e43123
-  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
-  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
-  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
-  RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
-  SwiftDate: 8d4f14bf1ef68e95094511504856547bf9e3e1a6
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
+  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
 
-PODFILE CHECKSUM: c06ec3d717932ee59cc1c607aed5f6a19b6e739f
+PODFILE CHECKSUM: 4a34a05bb53a4ff3707d1337c91ee93aa27fda88
 
 COCOAPODS: 1.7.4

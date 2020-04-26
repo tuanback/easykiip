@@ -49,29 +49,52 @@
 		17B70B2B2453CB0200C67334 /* VocabDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B292453CB0200C67334 /* VocabDataStore.swift */; };
 		17B70B2F2453D28C00C67334 /* VocabDataStoreInMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B2E2453D28C00C67334 /* VocabDataStoreInMemory.swift */; };
 		17B70B302453D28C00C67334 /* VocabDataStoreInMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B2E2453D28C00C67334 /* VocabDataStoreInMemory.swift */; };
-		17B70B382455732900C67334 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B372455732900C67334 /* UserSession.swift */; };
-		17B70B392455732900C67334 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B372455732900C67334 /* UserSession.swift */; };
-		17B70B3B2455734500C67334 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B3A2455734500C67334 /* UserProfile.swift */; };
-		17B70B3C2455734500C67334 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B3A2455734500C67334 /* UserProfile.swift */; };
-		17B70B3E2455736A00C67334 /* RemoteUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B3D2455736A00C67334 /* RemoteUserSession.swift */; };
-		17B70B3F2455736A00C67334 /* RemoteUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B3D2455736A00C67334 /* RemoteUserSession.swift */; };
-		17B70B452455740F00C67334 /* UserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B442455740F00C67334 /* UserSessionDataStore.swift */; };
-		17B70B462455740F00C67334 /* UserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B442455740F00C67334 /* UserSessionDataStore.swift */; };
-		17B70B482455743E00C67334 /* UserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B472455743E00C67334 /* UserSessionRepository.swift */; };
-		17B70B492455743E00C67334 /* UserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B472455743E00C67334 /* UserSessionRepository.swift */; };
-		17B70B4B2455749700C67334 /* NewAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B4A2455749600C67334 /* NewAccount.swift */; };
-		17B70B4C2455749700C67334 /* NewAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B4A2455749600C67334 /* NewAccount.swift */; };
-		17B70B4E245574F700C67334 /* KIIPUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B4D245574F700C67334 /* KIIPUserSessionRepository.swift */; };
-		17B70B4F245574F700C67334 /* KIIPUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B4D245574F700C67334 /* KIIPUserSessionRepository.swift */; };
-		17B70B512455752700C67334 /* AuthRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B502455752700C67334 /* AuthRemoteAPI.swift */; };
-		17B70B522455752700C67334 /* AuthRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B502455752700C67334 /* AuthRemoteAPI.swift */; };
+		17B70B61245580B700C67334 /* UserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70B58245580B600C67334 /* UserSession.framework */; };
+		17B70B68245580B700C67334 /* UserSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B67245580B700C67334 /* UserSessionTests.swift */; };
+		17B70B6A245580B700C67334 /* UserSession.h in Headers */ = {isa = PBXBuildFile; fileRef = 17B70B5A245580B700C67334 /* UserSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17B70B6D245580B700C67334 /* UserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70B58245580B600C67334 /* UserSession.framework */; };
+		17B70B6E245580B700C67334 /* UserSession.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70B58245580B600C67334 /* UserSession.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17B70B75245580D700C67334 /* AuthRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B502455752700C67334 /* AuthRemoteAPI.swift */; };
+		17B70B76245580D700C67334 /* AuthRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B502455752700C67334 /* AuthRemoteAPI.swift */; };
+		17B70B77245580DC00C67334 /* UserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B442455740F00C67334 /* UserSessionDataStore.swift */; };
+		17B70B78245580DC00C67334 /* UserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B442455740F00C67334 /* UserSessionDataStore.swift */; };
+		17B70B79245580E000C67334 /* UserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B472455743E00C67334 /* UserSessionRepository.swift */; };
+		17B70B7A245580E000C67334 /* UserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B472455743E00C67334 /* UserSessionRepository.swift */; };
+		17B70B7B245580E400C67334 /* KIIPUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B4D245574F700C67334 /* KIIPUserSessionRepository.swift */; };
+		17B70B7C245580E500C67334 /* KIIPUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B4D245574F700C67334 /* KIIPUserSessionRepository.swift */; };
+		17B70B7D245580E900C67334 /* RemoteUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B3D2455736A00C67334 /* RemoteUserSession.swift */; };
+		17B70B7E245580E900C67334 /* RemoteUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B3D2455736A00C67334 /* RemoteUserSession.swift */; };
+		17B70B7F245580ED00C67334 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B372455732900C67334 /* UserSession.swift */; };
+		17B70B80245580ED00C67334 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B372455732900C67334 /* UserSession.swift */; };
+		17B70B81245580F100C67334 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B3A2455734500C67334 /* UserProfile.swift */; };
+		17B70B82245580F100C67334 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B3A2455734500C67334 /* UserProfile.swift */; };
+		17B70B83245580F400C67334 /* NewAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B4A2455749600C67334 /* NewAccount.swift */; };
+		17B70B84245580F500C67334 /* NewAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70B4A2455749600C67334 /* NewAccount.swift */; };
+		17BDAEA6245583DD002584AA /* FakeUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEA0245583DC002584AA /* FakeUserSessionDataStore.swift */; };
+		17BDAEA7245583DD002584AA /* FakeUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEA0245583DC002584AA /* FakeUserSessionDataStore.swift */; };
+		17BDAEA8245583DD002584AA /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEA2245583DC002584AA /* KeychainItem.swift */; };
+		17BDAEA9245583DD002584AA /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEA2245583DC002584AA /* KeychainItem.swift */; };
+		17BDAEAA245583DD002584AA /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEA3245583DC002584AA /* Keychain.swift */; };
+		17BDAEAB245583DD002584AA /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEA3245583DC002584AA /* Keychain.swift */; };
+		17BDAEAC245583DD002584AA /* KeychainUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEA4245583DC002584AA /* KeychainUserSessionDataStore.swift */; };
+		17BDAEAD245583DD002584AA /* KeychainUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEA4245583DC002584AA /* KeychainUserSessionDataStore.swift */; };
+		17BDAEAE245583DD002584AA /* FileUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEA5245583DC002584AA /* FileUserSessionDataStore.swift */; };
+		17BDAEAF245583DD002584AA /* FileUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEA5245583DC002584AA /* FileUserSessionDataStore.swift */; };
+		17BDAEB5245587BC002584AA /* UserSessionCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEB2245587BC002584AA /* UserSessionCoding.swift */; };
+		17BDAEB6245587BC002584AA /* UserSessionCoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEB2245587BC002584AA /* UserSessionCoding.swift */; };
+		17BDAEB7245587BC002584AA /* UserSessionPropertyListCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEB4245587BC002584AA /* UserSessionPropertyListCoder.swift */; };
+		17BDAEB8245587BC002584AA /* UserSessionPropertyListCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEB4245587BC002584AA /* UserSessionPropertyListCoder.swift */; };
+		17BDAEBA245588A3002584AA /* FakeAuthRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEB9245588A3002584AA /* FakeAuthRemoteAPI.swift */; };
+		17BDAEBB245588A3002584AA /* FakeAuthRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEB9245588A3002584AA /* FakeAuthRemoteAPI.swift */; };
 		17EB44FD2454239600C9C312 /* KIIPVocabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB44FC2454239600C9C312 /* KIIPVocabRepository.swift */; };
 		17EB44FE2454239600C9C312 /* KIIPVocabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB44FC2454239600C9C312 /* KIIPVocabRepository.swift */; };
 		17EB45012454263D00C9C312 /* KIIPVocabRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB45002454263D00C9C312 /* KIIPVocabRepositoryTests.swift */; };
 		1A35051ADF5C1C7F0B2197C2 /* Pods_EasyKIIPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */; };
+		57E4904DB391E7E2D7E543B3 /* Pods_UserSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117EC49A333FE8EC5FF52C3D /* Pods_UserSessionTests.framework */; };
 		627E22CE056419F471187535 /* Pods_EasyKIIPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16BC5199528F6E34ED995F6 /* Pods_EasyKIIPUITests.framework */; };
 		78F5A67A5A3AA31A192C291F /* Pods_EasyKIIPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */; };
 		805274668FD7FD7D0F7E3428 /* Pods_EasyKIIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C39FF132AEDBD39407410F /* Pods_EasyKIIP.framework */; };
+		BB50221261F05D9B6C755D4D /* Pods_UserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5C6E18E22AC4E5114C659 /* Pods_UserSession.framework */; };
 		BDA34D15CB31CE560A84D43B /* Pods_EasyKIIPKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FF93F3774D0D60E2F75D58 /* Pods_EasyKIIPKitTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +127,27 @@
 			remoteGlobalIDString = 17B70AB9244CF1CD00C67334;
 			remoteInfo = EasyKIIPKit;
 		};
+		17B70B62245580B700C67334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17B70B57245580B600C67334;
+			remoteInfo = UserSession;
+		};
+		17B70B64245580B700C67334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17B70A81244C180200C67334;
+			remoteInfo = EasyKIIP;
+		};
+		17B70B6B245580B700C67334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17B70B57245580B600C67334;
+			remoteInfo = UserSession;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -113,6 +157,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				17B70B6E245580B700C67334 /* UserSession.framework in Embed Frameworks */,
 				17B70AD3244CF1E500C67334 /* EasyKIIPKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -122,6 +167,8 @@
 
 /* Begin PBXFileReference section */
 		0B2DB75E44E47E7DA5329E24 /* Pods-EasyKIIPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPUITests.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIPUITests/Pods-EasyKIIPUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0DF5FC3C60A9BB6B51A6EF38 /* Pods-UserSessionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSessionTests.release.xcconfig"; path = "Target Support Files/Pods-UserSessionTests/Pods-UserSessionTests.release.xcconfig"; sourceTree = "<group>"; };
+		117EC49A333FE8EC5FF52C3D /* Pods_UserSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FF93F3774D0D60E2F75D58 /* Pods_EasyKIIPKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70A82244C180200C67334 /* Easy KIIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy KIIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +216,20 @@
 		17B70B4A2455749600C67334 /* NewAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccount.swift; sourceTree = "<group>"; };
 		17B70B4D245574F700C67334 /* KIIPUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIIPUserSessionRepository.swift; sourceTree = "<group>"; };
 		17B70B502455752700C67334 /* AuthRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRemoteAPI.swift; sourceTree = "<group>"; };
+		17B70B58245580B600C67334 /* UserSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UserSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17B70B5A245580B700C67334 /* UserSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserSession.h; sourceTree = "<group>"; };
+		17B70B5B245580B700C67334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B70B60245580B700C67334 /* UserSessionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserSessionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17B70B67245580B700C67334 /* UserSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSessionTests.swift; sourceTree = "<group>"; };
+		17B70B69245580B700C67334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17BDAEA0245583DC002584AA /* FakeUserSessionDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUserSessionDataStore.swift; sourceTree = "<group>"; };
+		17BDAEA2245583DC002584AA /* KeychainItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
+		17BDAEA3245583DC002584AA /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		17BDAEA4245583DC002584AA /* KeychainUserSessionDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainUserSessionDataStore.swift; sourceTree = "<group>"; };
+		17BDAEA5245583DC002584AA /* FileUserSessionDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileUserSessionDataStore.swift; sourceTree = "<group>"; };
+		17BDAEB2245587BC002584AA /* UserSessionCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionCoding.swift; sourceTree = "<group>"; };
+		17BDAEB4245587BC002584AA /* UserSessionPropertyListCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionPropertyListCoder.swift; sourceTree = "<group>"; };
+		17BDAEB9245588A3002584AA /* FakeAuthRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthRemoteAPI.swift; sourceTree = "<group>"; };
 		17EB44FC2454239600C9C312 /* KIIPVocabRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIIPVocabRepository.swift; sourceTree = "<group>"; };
 		17EB45002454263D00C9C312 /* KIIPVocabRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIIPVocabRepositoryTests.swift; sourceTree = "<group>"; };
 		3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,12 +238,16 @@
 		6530E58CC9AA56FDCFB6C908 /* Pods-EasyKIIPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPTests.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIPTests/Pods-EasyKIIPTests.release.xcconfig"; sourceTree = "<group>"; };
 		6F73BA1E4D4132370ECCB1E1 /* Pods-EasyKIIPKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPKit.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIPKit/Pods-EasyKIIPKit.debug.xcconfig"; sourceTree = "<group>"; };
 		77FD3C673292AFC03F137330 /* Pods-EasyKIIPKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPKitTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIPKitTests/Pods-EasyKIIPKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7FB2DFC072EB502D0B70E132 /* Pods-UserSession.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSession.debug.xcconfig"; path = "Target Support Files/Pods-UserSession/Pods-UserSession.debug.xcconfig"; sourceTree = "<group>"; };
 		842E82F1C307539A97A3F698 /* Pods-EasyKIIPKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPKit.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIPKit/Pods-EasyKIIPKit.release.xcconfig"; sourceTree = "<group>"; };
 		95C39FF132AEDBD39407410F /* Pods_EasyKIIP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79F95E235D51F984A33C1A9 /* Pods-EasyKIIPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIPTests/Pods-EasyKIIPTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CAE9533D0FD4E72C514287BF /* Pods-EasyKIIPKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPKitTests.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIPKitTests/Pods-EasyKIIPKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		D12E32CC789865A764EF8F5C /* Pods-EasyKIIPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPUITests.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIPUITests/Pods-EasyKIIPUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E9BA4AEA3CBD18D79290F64D /* Pods-UserSessionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSessionTests.debug.xcconfig"; path = "Target Support Files/Pods-UserSessionTests/Pods-UserSessionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB08ED5E803A6EECE64DF37D /* Pods-UserSession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSession.release.xcconfig"; path = "Target Support Files/Pods-UserSession/Pods-UserSession.release.xcconfig"; sourceTree = "<group>"; };
 		F16BC5199528F6E34ED995F6 /* Pods_EasyKIIPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6B5C6E18E22AC4E5114C659 /* Pods_UserSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B70AD2244CF1E500C67334 /* EasyKIIPKit.framework in Frameworks */,
+				17B70B6D245580B700C67334 /* UserSession.framework in Frameworks */,
 				805274668FD7FD7D0F7E3428 /* Pods_EasyKIIP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +294,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17B70B55245580B600C67334 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB50221261F05D9B6C755D4D /* Pods_UserSession.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17B70B5D245580B700C67334 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B70B61245580B700C67334 /* UserSession.framework in Frameworks */,
+				57E4904DB391E7E2D7E543B3 /* Pods_UserSessionTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -239,6 +322,8 @@
 				17B70AA6244C180600C67334 /* EasyKIIPUITests */,
 				17B70ABB244CF1CD00C67334 /* EasyKIIPKit */,
 				17B70AC6244CF1CE00C67334 /* EasyKIIPKitTests */,
+				17B70B59245580B700C67334 /* UserSession */,
+				17B70B66245580B700C67334 /* UserSessionTests */,
 				17B70A83244C180200C67334 /* Products */,
 				17B70AD1244CF1E500C67334 /* Frameworks */,
 				D2D949889511FC23CD039687 /* Pods */,
@@ -253,6 +338,8 @@
 				17B70AA3244C180600C67334 /* EasyKIIPUITests.xctest */,
 				17B70ABA244CF1CD00C67334 /* EasyKIIPKit.framework */,
 				17B70AC2244CF1CE00C67334 /* EasyKIIPKitTests.xctest */,
+				17B70B58245580B600C67334 /* UserSession.framework */,
+				17B70B60245580B700C67334 /* UserSessionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,7 +378,6 @@
 		17B70ABB244CF1CD00C67334 /* EasyKIIPKit */ = {
 			isa = PBXGroup;
 			children = (
-				17B70B35245572D600C67334 /* UserSessionRepository */,
 				17B70B34245572C100C67334 /* VocabRepository */,
 				17B70ABC244CF1CD00C67334 /* EasyKIIPKit.h */,
 				17B70ABD244CF1CD00C67334 /* Info.plist */,
@@ -317,6 +403,8 @@
 				14FF93F3774D0D60E2F75D58 /* Pods_EasyKIIPKitTests.framework */,
 				12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */,
 				F16BC5199528F6E34ED995F6 /* Pods_EasyKIIPUITests.framework */,
+				F6B5C6E18E22AC4E5114C659 /* Pods_UserSession.framework */,
+				117EC49A333FE8EC5FF52C3D /* Pods_UserSessionTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -517,6 +605,8 @@
 		17B70B42245573E000C67334 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				17BDAEB0245587BC002584AA /* Coding */,
+				17BDAE9F245583DC002584AA /* Implementations */,
 				17B70B442455740F00C67334 /* UserSessionDataStore.swift */,
 			);
 			path = Persistence;
@@ -526,8 +616,73 @@
 			isa = PBXGroup;
 			children = (
 				17B70B502455752700C67334 /* AuthRemoteAPI.swift */,
+				17BDAEB9245588A3002584AA /* FakeAuthRemoteAPI.swift */,
 			);
 			path = Remote;
+			sourceTree = "<group>";
+		};
+		17B70B59245580B700C67334 /* UserSession */ = {
+			isa = PBXGroup;
+			children = (
+				17B70B35245572D600C67334 /* UserSessionRepository */,
+				17B70B5A245580B700C67334 /* UserSession.h */,
+				17B70B5B245580B700C67334 /* Info.plist */,
+			);
+			path = UserSession;
+			sourceTree = "<group>";
+		};
+		17B70B66245580B700C67334 /* UserSessionTests */ = {
+			isa = PBXGroup;
+			children = (
+				17B70B67245580B700C67334 /* UserSessionTests.swift */,
+				17B70B69245580B700C67334 /* Info.plist */,
+			);
+			path = UserSessionTests;
+			sourceTree = "<group>";
+		};
+		17BDAE9F245583DC002584AA /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				17BDAEA0245583DC002584AA /* FakeUserSessionDataStore.swift */,
+				17BDAEA1245583DC002584AA /* Keychain */,
+				17BDAEA5245583DC002584AA /* FileUserSessionDataStore.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		17BDAEA1245583DC002584AA /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				17BDAEA2245583DC002584AA /* KeychainItem.swift */,
+				17BDAEA3245583DC002584AA /* Keychain.swift */,
+				17BDAEA4245583DC002584AA /* KeychainUserSessionDataStore.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		17BDAEB0245587BC002584AA /* Coding */ = {
+			isa = PBXGroup;
+			children = (
+				17BDAEB1245587BC002584AA /* UserSession */,
+			);
+			path = Coding;
+			sourceTree = "<group>";
+		};
+		17BDAEB1245587BC002584AA /* UserSession */ = {
+			isa = PBXGroup;
+			children = (
+				17BDAEB2245587BC002584AA /* UserSessionCoding.swift */,
+				17BDAEB3245587BC002584AA /* Implementations */,
+			);
+			path = UserSession;
+			sourceTree = "<group>";
+		};
+		17BDAEB3245587BC002584AA /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				17BDAEB4245587BC002584AA /* UserSessionPropertyListCoder.swift */,
+			);
+			path = Implementations;
 			sourceTree = "<group>";
 		};
 		17EB44FF2454262800C9C312 /* Repository */ = {
@@ -551,6 +706,10 @@
 				6530E58CC9AA56FDCFB6C908 /* Pods-EasyKIIPTests.release.xcconfig */,
 				0B2DB75E44E47E7DA5329E24 /* Pods-EasyKIIPUITests.debug.xcconfig */,
 				D12E32CC789865A764EF8F5C /* Pods-EasyKIIPUITests.release.xcconfig */,
+				7FB2DFC072EB502D0B70E132 /* Pods-UserSession.debug.xcconfig */,
+				EB08ED5E803A6EECE64DF37D /* Pods-UserSession.release.xcconfig */,
+				E9BA4AEA3CBD18D79290F64D /* Pods-UserSessionTests.debug.xcconfig */,
+				0DF5FC3C60A9BB6B51A6EF38 /* Pods-UserSessionTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -563,6 +722,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B70ACA244CF1CE00C67334 /* EasyKIIPKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17B70B53245580B600C67334 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B70B6A245580B700C67334 /* UserSession.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +751,7 @@
 			);
 			dependencies = (
 				17B70AD5244CF1E500C67334 /* PBXTargetDependency */,
+				17B70B6C245580B700C67334 /* PBXTargetDependency */,
 			);
 			name = EasyKIIP;
 			productName = EasyKIIP;
@@ -667,6 +835,46 @@
 			productReference = 17B70AC2244CF1CE00C67334 /* EasyKIIPKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		17B70B57245580B600C67334 /* UserSession */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17B70B73245580B700C67334 /* Build configuration list for PBXNativeTarget "UserSession" */;
+			buildPhases = (
+				59B1EBCC3A41129EBF112FEC /* [CP] Check Pods Manifest.lock */,
+				17B70B53245580B600C67334 /* Headers */,
+				17B70B54245580B600C67334 /* Sources */,
+				17B70B55245580B600C67334 /* Frameworks */,
+				17B70B56245580B600C67334 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UserSession;
+			productName = UserSession;
+			productReference = 17B70B58245580B600C67334 /* UserSession.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		17B70B5F245580B700C67334 /* UserSessionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17B70B74245580B700C67334 /* Build configuration list for PBXNativeTarget "UserSessionTests" */;
+			buildPhases = (
+				782D29552020DE572D380733 /* [CP] Check Pods Manifest.lock */,
+				17B70B5C245580B700C67334 /* Sources */,
+				17B70B5D245580B700C67334 /* Frameworks */,
+				17B70B5E245580B700C67334 /* Resources */,
+				15BC69679B6D678DD997B19F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17B70B63245580B700C67334 /* PBXTargetDependency */,
+				17B70B65245580B700C67334 /* PBXTargetDependency */,
+			);
+			name = UserSessionTests;
+			productName = UserSessionTests;
+			productReference = 17B70B60245580B700C67334 /* UserSessionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -696,6 +904,13 @@
 						CreatedOnToolsVersion = 11.4.1;
 						LastSwiftMigration = 1140;
 					};
+					17B70B57245580B600C67334 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					17B70B5F245580B700C67334 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 17B70A81244C180200C67334;
+					};
 				};
 			};
 			buildConfigurationList = 17B70A7D244C180200C67334 /* Build configuration list for PBXProject "EasyKIIP" */;
@@ -716,6 +931,8 @@
 				17B70AA2244C180600C67334 /* EasyKIIPUITests */,
 				17B70AB9244CF1CD00C67334 /* EasyKIIPKit */,
 				17B70AC1244CF1CE00C67334 /* EasyKIIPKitTests */,
+				17B70B57245580B600C67334 /* UserSession */,
+				17B70B5F245580B700C67334 /* UserSessionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -759,6 +976,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17B70B56245580B600C67334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17B70B5E245580B700C67334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -782,6 +1013,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15BC69679B6D678DD997B19F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UserSessionTests/Pods-UserSessionTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UserSessionTests/Pods-UserSessionTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UserSessionTests/Pods-UserSessionTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2A40199626F6AB751765BEF8 /* [CP] Check Pods Manifest.lock */ = {
@@ -845,6 +1093,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		59B1EBCC3A41129EBF112FEC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UserSession-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6350C96CFD46EE336A99D727 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -861,6 +1131,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-EasyKIIPUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		782D29552020DE572D380733 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UserSessionTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -939,21 +1231,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B70AE5244CF40600C67334 /* BookListingViewModel.swift in Sources */,
-				17B70B3E2455736A00C67334 /* RemoteUserSession.swift in Sources */,
 				17B70AF3244DBDCC00C67334 /* PraticeHistory.swift in Sources */,
-				17B70B3B2455734500C67334 /* UserProfile.swift in Sources */,
 				17B70AEA244CF4E300C67334 /* VocabRepository.swift in Sources */,
-				17B70B382455732900C67334 /* UserSession.swift in Sources */,
 				17B70B0D244F132F00C67334 /* ProficiencyCalculator.swift in Sources */,
-				17B70B482455743E00C67334 /* UserSessionRepository.swift in Sources */,
-				17B70B512455752700C67334 /* AuthRemoteAPI.swift in Sources */,
 				17B70B03244DC7F800C67334 /* Vocab.swift in Sources */,
 				17B70B2F2453D28C00C67334 /* VocabDataStoreInMemory.swift in Sources */,
-				17B70B4E245574F700C67334 /* KIIPUserSessionRepository.swift in Sources */,
-				17B70B4B2455749700C67334 /* NewAccount.swift in Sources */,
 				17EB44FD2454239600C9C312 /* KIIPVocabRepository.swift in Sources */,
 				17B70B152451C0F900C67334 /* ReadingPart.swift in Sources */,
-				17B70B452455740F00C67334 /* UserSessionDataStore.swift in Sources */,
 				17B70B272453CA1100C67334 /* VocabRemoteAPI.swift in Sources */,
 				17B70AF0244CF57100C67334 /* Book.swift in Sources */,
 				17B70B2A2453CB0200C67334 /* VocabDataStore.swift in Sources */,
@@ -967,34 +1251,73 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B70AF1244CF57100C67334 /* Book.swift in Sources */,
-				17B70B3F2455736A00C67334 /* RemoteUserSession.swift in Sources */,
 				17B70B1E245308EC00C67334 /* Lesson.swift in Sources */,
-				17B70B492455743E00C67334 /* UserSessionRepository.swift in Sources */,
 				17B70B04244DC7F800C67334 /* Vocab.swift in Sources */,
-				17B70B4C2455749700C67334 /* NewAccount.swift in Sources */,
-				17B70B4F245574F700C67334 /* KIIPUserSessionRepository.swift in Sources */,
 				17B70B07244DC80300C67334 /* VocabTests.swift in Sources */,
 				17B70AE6244CF40600C67334 /* BookListingViewModel.swift in Sources */,
 				17B70AF4244DBDCC00C67334 /* PraticeHistory.swift in Sources */,
-				17B70B3C2455734500C67334 /* UserProfile.swift in Sources */,
 				17B70B282453CA1100C67334 /* VocabRemoteAPI.swift in Sources */,
 				17B70B162451C0F900C67334 /* ReadingPart.swift in Sources */,
 				17B70B182451C11200C67334 /* ReadingPartTests.swift in Sources */,
 				17EB45012454263D00C9C312 /* KIIPVocabRepositoryTests.swift in Sources */,
 				17B70B2B2453CB0200C67334 /* VocabDataStore.swift in Sources */,
-				17B70B522455752700C67334 /* AuthRemoteAPI.swift in Sources */,
 				17B70B222453BCB100C67334 /* BookTests.swift in Sources */,
 				17B70B0E244F132F00C67334 /* ProficiencyCalculator.swift in Sources */,
 				17B70AEB244CF4E300C67334 /* VocabRepository.swift in Sources */,
 				17B70AFF244DC60500C67334 /* LanguageCode.swift in Sources */,
 				17B70AE2244CF37000C67334 /* BookListingViewModelTests.swift in Sources */,
 				17B70B0A244F105E00C67334 /* ProficiencyCalculatorTests.swift in Sources */,
-				17B70B392455732900C67334 /* UserSession.swift in Sources */,
 				17EB44FE2454239600C9C312 /* KIIPVocabRepository.swift in Sources */,
 				17B70B302453D28C00C67334 /* VocabDataStoreInMemory.swift in Sources */,
 				17B70B2024530ADE00C67334 /* LessonTests.swift in Sources */,
-				17B70B462455740F00C67334 /* UserSessionDataStore.swift in Sources */,
 				17B70AF9244DBEEB00C67334 /* PracticeHistoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17B70B54245580B600C67334 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B70B75245580D700C67334 /* AuthRemoteAPI.swift in Sources */,
+				17BDAEBA245588A3002584AA /* FakeAuthRemoteAPI.swift in Sources */,
+				17B70B79245580E000C67334 /* UserSessionRepository.swift in Sources */,
+				17BDAEA8245583DD002584AA /* KeychainItem.swift in Sources */,
+				17B70B83245580F400C67334 /* NewAccount.swift in Sources */,
+				17B70B81245580F100C67334 /* UserProfile.swift in Sources */,
+				17BDAEAA245583DD002584AA /* Keychain.swift in Sources */,
+				17B70B7B245580E400C67334 /* KIIPUserSessionRepository.swift in Sources */,
+				17B70B7F245580ED00C67334 /* UserSession.swift in Sources */,
+				17BDAEA6245583DD002584AA /* FakeUserSessionDataStore.swift in Sources */,
+				17B70B77245580DC00C67334 /* UserSessionDataStore.swift in Sources */,
+				17B70B7D245580E900C67334 /* RemoteUserSession.swift in Sources */,
+				17BDAEB5245587BC002584AA /* UserSessionCoding.swift in Sources */,
+				17BDAEB7245587BC002584AA /* UserSessionPropertyListCoder.swift in Sources */,
+				17BDAEAE245583DD002584AA /* FileUserSessionDataStore.swift in Sources */,
+				17BDAEAC245583DD002584AA /* KeychainUserSessionDataStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17B70B5C245580B700C67334 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17BDAEA7245583DD002584AA /* FakeUserSessionDataStore.swift in Sources */,
+				17B70B7C245580E500C67334 /* KIIPUserSessionRepository.swift in Sources */,
+				17B70B7E245580E900C67334 /* RemoteUserSession.swift in Sources */,
+				17BDAEAF245583DD002584AA /* FileUserSessionDataStore.swift in Sources */,
+				17B70B76245580D700C67334 /* AuthRemoteAPI.swift in Sources */,
+				17B70B80245580ED00C67334 /* UserSession.swift in Sources */,
+				17BDAEB8245587BC002584AA /* UserSessionPropertyListCoder.swift in Sources */,
+				17BDAEAB245583DD002584AA /* Keychain.swift in Sources */,
+				17BDAEB6245587BC002584AA /* UserSessionCoding.swift in Sources */,
+				17BDAEA9245583DD002584AA /* KeychainItem.swift in Sources */,
+				17B70B82245580F100C67334 /* UserProfile.swift in Sources */,
+				17B70B84245580F500C67334 /* NewAccount.swift in Sources */,
+				17B70B7A245580E000C67334 /* UserSessionRepository.swift in Sources */,
+				17BDAEAD245583DD002584AA /* KeychainUserSessionDataStore.swift in Sources */,
+				17B70B78245580DC00C67334 /* UserSessionDataStore.swift in Sources */,
+				17B70B68245580B700C67334 /* UserSessionTests.swift in Sources */,
+				17BDAEBB245588A3002584AA /* FakeAuthRemoteAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1020,6 +1343,21 @@
 			isa = PBXTargetDependency;
 			target = 17B70AB9244CF1CD00C67334 /* EasyKIIPKit */;
 			targetProxy = 17B70AD4244CF1E500C67334 /* PBXContainerItemProxy */;
+		};
+		17B70B63245580B700C67334 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17B70B57245580B600C67334 /* UserSession */;
+			targetProxy = 17B70B62245580B700C67334 /* PBXContainerItemProxy */;
+		};
+		17B70B65245580B700C67334 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17B70A81244C180200C67334 /* EasyKIIP */;
+			targetProxy = 17B70B64245580B700C67334 /* PBXContainerItemProxy */;
+		};
+		17B70B6C245580B700C67334 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17B70B57245580B600C67334 /* UserSession */;
+			targetProxy = 17B70B6B245580B700C67334 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1302,6 +1640,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EasyKIIPKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1314,6 +1653,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1334,6 +1674,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EasyKIIPKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1345,6 +1686,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1394,6 +1736,106 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		17B70B6F245580B700C67334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FB2DFC072EB502D0B70E132 /* Pods-UserSession.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CW3DR8XJT7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UserSession/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.UserSession;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		17B70B70245580B700C67334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB08ED5E803A6EECE64DF37D /* Pods-UserSession.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CW3DR8XJT7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = UserSession/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.UserSession;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		17B70B71245580B700C67334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9BA4AEA3CBD18D79290F64D /* Pods-UserSessionTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CW3DR8XJT7;
+				INFOPLIST_FILE = UserSessionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.UserSessionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy KIIP.app/Easy KIIP";
+			};
+			name = Debug;
+		};
+		17B70B72245580B700C67334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DF5FC3C60A9BB6B51A6EF38 /* Pods-UserSessionTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CW3DR8XJT7;
+				INFOPLIST_FILE = UserSessionTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.UserSessionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy KIIP.app/Easy KIIP";
 			};
 			name = Release;
 		};
@@ -1450,6 +1892,24 @@
 			buildConfigurations = (
 				17B70ACF244CF1CE00C67334 /* Debug */,
 				17B70AD0244CF1CE00C67334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17B70B73245580B700C67334 /* Build configuration list for PBXNativeTarget "UserSession" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17B70B6F245580B700C67334 /* Debug */,
+				17B70B70245580B700C67334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17B70B74245580B700C67334 /* Build configuration list for PBXNativeTarget "UserSessionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17B70B71245580B700C67334 /* Debug */,
+				17B70B72245580B700C67334 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
