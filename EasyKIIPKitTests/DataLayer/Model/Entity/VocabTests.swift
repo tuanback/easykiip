@@ -66,7 +66,7 @@ class VocabTests: XCTestCase {
   }
   
   func testMarkAsIsMastered_setPracticeHistoryToMastered() {
-    var sut = Vocab(id: 1, word: "", translations: [:])
+    let sut = Vocab(id: 1, word: "", translations: [:])
     
     // when
     sut.markAsIsMastered()
@@ -89,20 +89,20 @@ extension VocabTests {
   }
   
   func testCalculate_IsMasteredVocab_ProficiecncyIs100() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     vocab.markAsIsMastered()
     XCTAssertEqual(vocab.proficiency, 100)
   }
   
   func testCalculate_IsLearnedVocab_OneTimeTestTaken_CorrectAnswer_LastTimeTakenToday_ProficiencyIs100() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     vocab.increaseNumberOfCorrectAnswerByOne()
     XCTAssertEqual(vocab.proficiency, 100)
   }
   
   func testCalculate_2TimeTestTaken_OneCorrect_OneWrong_LastTimeTakenToday_ProficiencyIs100() {
     // given
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     
     // when
     vocab.increaseNumberOfCorrectAnswerByOne()
@@ -114,14 +114,14 @@ extension VocabTests {
   }
   
   func testCalculate_1TimeTestTaken_WrongAnswer_LastTimeTakenToday_ProficiencyIs0() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     vocab.increaseNumberOfWrongAnswerByOne()
     XCTAssertEqual(vocab.proficiency, 0)
   }
   
   // 1...6
   func testCalculate_1TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs51() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 1
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -132,7 +132,7 @@ extension VocabTests {
   }
   
   func testCalculate_1TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs26() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 1
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -144,7 +144,7 @@ extension VocabTests {
   }
   
   func testCalculate_6TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs51() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 6
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -156,7 +156,7 @@ extension VocabTests {
   }
   
   func testCalculate_6TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs26() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 6
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -170,7 +170,7 @@ extension VocabTests {
   
   // 7...12
   func testCalculate_7TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs64() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 7
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -182,7 +182,7 @@ extension VocabTests {
   }
   
   func testCalculate_7TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs40() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 7
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -194,7 +194,7 @@ extension VocabTests {
   }
   
   func testCalculate_12TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs64() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 12
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -206,7 +206,7 @@ extension VocabTests {
   }
   
   func testCalculate_12TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs40() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 12
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -219,7 +219,7 @@ extension VocabTests {
   
   // 13...18
   func testCalculate_13TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs75() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 13
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -231,7 +231,7 @@ extension VocabTests {
   }
   
   func testCalculate_13TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs56() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 13
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -243,7 +243,7 @@ extension VocabTests {
   }
   
   func testCalculate_18TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs75() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 18
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -255,7 +255,7 @@ extension VocabTests {
   }
   
   func testCalculate_18TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs56() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 18
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -268,7 +268,7 @@ extension VocabTests {
   
   // 19...24
   func testCalculate_19TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs84() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 19
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -280,7 +280,7 @@ extension VocabTests {
   }
   
   func testCalculate_19TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs70() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 19
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -292,7 +292,7 @@ extension VocabTests {
   }
   
   func testCalculate_24TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs84() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 24
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -304,7 +304,7 @@ extension VocabTests {
   }
   
   func testCalculate_24TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs70() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 24
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -317,7 +317,7 @@ extension VocabTests {
   
   // 25...30
   func testCalculate_25TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs91() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 25
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -329,7 +329,7 @@ extension VocabTests {
   }
   
   func testCalculate_25TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs82() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 25
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -341,7 +341,7 @@ extension VocabTests {
   }
   
   func testCalculate_30TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs91() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 30
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -353,7 +353,7 @@ extension VocabTests {
   }
   
   func testCalculate_30TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs82() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 30
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -366,7 +366,7 @@ extension VocabTests {
   
   // 31...36
   func testCalculate_31TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs96() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 31
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -378,7 +378,7 @@ extension VocabTests {
   }
   
   func testCalculate_31TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs92() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 31
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -390,7 +390,7 @@ extension VocabTests {
   }
   
   func testCalculate_36TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs96() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 36
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -402,7 +402,7 @@ extension VocabTests {
   }
   
   func testCalculate_36TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs96() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 36
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -415,7 +415,7 @@ extension VocabTests {
   
   // 37...42
   func testCalculate_37TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs99() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 37
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -427,7 +427,7 @@ extension VocabTests {
   }
   
   func testCalculate_37TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs98() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 37
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -439,7 +439,7 @@ extension VocabTests {
   }
   
   func testCalculate_42TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs99() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 42
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -451,7 +451,7 @@ extension VocabTests {
   }
   
   func testCalculate_42TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs98() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 42
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -464,7 +464,7 @@ extension VocabTests {
   
   // 43 and 99
   func testCalculate_43TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs100() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 43
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -476,7 +476,7 @@ extension VocabTests {
   }
   
   func testCalculate_43TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs100() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 43
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -488,7 +488,7 @@ extension VocabTests {
   }
   
   func testCalculate_99TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs100() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
     let numberOfTakenTest: UInt = 99
     let numberOfCorrectAnswer = numberOfTakenTest
@@ -500,7 +500,7 @@ extension VocabTests {
   }
   
   func testCalculate_99TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs100() {
-    var vocab = makeVocab()
+    let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
     let numberOfTakenTest: UInt = 99
     let numberOfCorrectAnswer = numberOfTakenTest

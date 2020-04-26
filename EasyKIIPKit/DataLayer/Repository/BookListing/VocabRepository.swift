@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol SearchEngine {
-  func searchVocab(keywork: String) -> [Vocab]
+  func searchVocab(keyword: String) -> [Vocab]
 }
 
 public protocol NeedMorePracticeVocabGetter {
@@ -25,6 +25,7 @@ public protocol NeedReviewVocabsGetter {
 }
 
 public protocol VocabRepository: SearchEngine, NeedMorePracticeVocabGetter, NeedReviewVocabsGetter {
+  func syncUserData()
   func getListOfBook() -> [Book]
   func getListOfLesson(in book: Book) -> [Lesson]
   func getListOfVocabs(in lesson: Lesson) -> [Vocab]

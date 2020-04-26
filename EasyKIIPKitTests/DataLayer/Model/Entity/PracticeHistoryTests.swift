@@ -12,32 +12,32 @@ import XCTest
 class PracticeHistoryTests: XCTestCase {
   
   func test_init_setIsLearnedFalse() {
-    let sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     XCTAssertFalse(sut.isLearned)
   }
   
   func test_init_setNumberOfTestTakenToZero() {
-    let sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     XCTAssertEqual(sut.numberOfTestTaken, 0)
   }
   
   func test_init_setNumberOfCorrectAnswerToZero() {
-    let sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     XCTAssertEqual(sut.numberOfCorrectAnswer, 0)
   }
   
   func test_init_setNumberOfWrongAnswerToZero() {
-    let sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     XCTAssertEqual(sut.numberOfWrongAnswer, 0)
   }
   
   func test_init_doesntSetLastTimeTest() {
-    let sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     XCTAssertNil(sut.lastTimeTest)
   }
   
   func testIncreaseNumberOfCorrectAnswer_SetIsLearnedToTrue() {
-    var sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     
     // when
     sut.increaseNumberOfCorrectAnswerByOne()
@@ -47,13 +47,13 @@ class PracticeHistoryTests: XCTestCase {
   }
   
   func testIncreaseNumberOfWrongAnswer_SetIsLearnedToTrue() {
-    var sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     sut.increaseNumberOfWrongAnswerByOne()
     XCTAssertTrue(sut.isLearned)
   }
   
   func test_increaseNumberCorrectAnswer2Times_SetNumberOfCorrectAnswerTo2() {
-    var sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     
     sut.increaseNumberOfCorrectAnswerByOne()
     sut.increaseNumberOfCorrectAnswerByOne()
@@ -62,7 +62,7 @@ class PracticeHistoryTests: XCTestCase {
   }
   
   func test_increaseNumberWrongAnswer2Times_SetNumberOfWrongAnswerTo2() {
-    var sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     
     sut.increaseNumberOfWrongAnswerByOne()
     sut.increaseNumberOfWrongAnswerByOne()
@@ -71,7 +71,7 @@ class PracticeHistoryTests: XCTestCase {
   }
   
   func test_increaseNumberOfCorrectAnswer1Time_numberOfWrongAnswer1Time_IncreaseNumberOfTestTakenTo2() {
-    var sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     
     sut.increaseNumberOfCorrectAnswerByOne()
     sut.increaseNumberOfWrongAnswerByOne()
@@ -80,7 +80,7 @@ class PracticeHistoryTests: XCTestCase {
   }
   
   func test_increaseNumberOfCorrectAnswer2Times_numberOfWrongAnswer1Time_IncreaseNumberOfTestTakenTo3() {
-    var sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     
     sut.increaseNumberOfCorrectAnswerByOne()
     sut.increaseNumberOfCorrectAnswerByOne()
@@ -90,7 +90,7 @@ class PracticeHistoryTests: XCTestCase {
   }
   
   func test_increaseNumberOfCorrectAnswer2Times_numberOfWrongAnswer2Times_IncreaseNumberOfTestTakenTo4() {
-    var sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     
     sut.increaseNumberOfCorrectAnswerByOne()
     sut.increaseNumberOfWrongAnswerByOne()
@@ -104,7 +104,7 @@ class PracticeHistoryTests: XCTestCase {
     
     let timeBeforeTest = Date()
     
-    var sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     sut.increaseNumberOfWrongAnswerByOne()
     sut.increaseNumberOfCorrectAnswerByOne()
     
@@ -113,7 +113,7 @@ class PracticeHistoryTests: XCTestCase {
   }
   
   func testSetTestTakenData_NumberOfTestTaken_SmallerThanNumberOfCorrectAnswer_ThrowError() {
-    var sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     let numberOfTestTaken: UInt = 3
     let numberOfCorrectAnswer: UInt = 5
     
@@ -122,7 +122,7 @@ class PracticeHistoryTests: XCTestCase {
   }
   
   func testSetTestTakenData_NumberOfTest_SmallerThanCurrentNumberOfTest_DontSetNewData() throws {
-    var sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     sut.increaseNumberOfCorrectAnswerByOne()
     sut.increaseNumberOfWrongAnswerByOne()
     
@@ -139,7 +139,7 @@ class PracticeHistoryTests: XCTestCase {
   }
   
   func testSetTestTakenData_NumberOfTest_GreaterThanCurrentNumberOfTest_SetNewData() throws {
-    var sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     
     let numberOfTestTaken: UInt = 1
     let numberOfCorrectAnswer: UInt = 1
@@ -155,7 +155,7 @@ class PracticeHistoryTests: XCTestCase {
   
   // Test First Learn Date
   func testSetIsLearn_SetFirstLearnDate() {
-    var sut = PracticeHistory()
+    let sut = PracticeHistory(id: 0)
     
     sut.increaseNumberOfWrongAnswerByOne()
     

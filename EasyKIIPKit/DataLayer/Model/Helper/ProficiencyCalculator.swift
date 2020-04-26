@@ -48,7 +48,7 @@ struct ProficiencyCalculator {
      - 43 - ..: Decay rate 0% per day
     */
     guard let lastTimeTest = vocab.practiceHistory.lastTimeTest,
-      let day = (Date() - lastTimeTest).day else {
+      let day = (Date() - lastTimeTest).in(.day) else {
         return 0
     }
     

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Vocab {
+public class Vocab {
   public private(set) var id: UInt
   public private(set) var word: String
   public private(set) var translations: [LanguageCode: String]
@@ -24,18 +24,19 @@ public struct Vocab {
     self.id = id
     self.word = word
     self.translations = translations
-    self.practiceHistory = PracticeHistory()
+    // Practice history id should be same as vocab id
+    self.practiceHistory = PracticeHistory(id: id)
   }
   
-  mutating func markAsIsMastered() {
+  func markAsIsMastered() {
     self.practiceHistory.markAsIsMastered()
   }
   
-  mutating func increaseNumberOfCorrectAnswerByOne() {
+  func increaseNumberOfCorrectAnswerByOne() {
     self.practiceHistory.increaseNumberOfCorrectAnswerByOne()
   }
   
-  mutating func increaseNumberOfWrongAnswerByOne() {
+  func increaseNumberOfWrongAnswerByOne() {
     self.practiceHistory.increaseNumberOfWrongAnswerByOne()
   }
   
@@ -43,10 +44,10 @@ public struct Vocab {
   /// - Parameters:
   ///   - numberOfTakenTest: number of test has been taken
   ///   - numberOfCorrectAnswer: number of correct answer
-  mutating func setTestTakenData(numberOfTestTaken: UInt,
-                                 numberOfCorrectAnswer: UInt,
-                                 firstLearnDate: Date,
-                                 lastTimeTest: Date) throws {
+  func setTestTakenData(numberOfTestTaken: UInt,
+                        numberOfCorrectAnswer: UInt,
+                        firstLearnDate: Date,
+                        lastTimeTest: Date) throws {
     try self.practiceHistory.setTestTakenData(numberOfTestTaken: numberOfTestTaken,
                                               numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: firstLearnDate,
                                               lastTimeTest: lastTimeTest)

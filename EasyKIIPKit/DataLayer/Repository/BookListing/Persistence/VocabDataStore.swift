@@ -15,5 +15,6 @@ protocol VocabDataStore {
   func markVocabAsMastered(_ vocab: Vocab)
   func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool)
   func getVocab(by id: UInt) -> Vocab?
+  func searchVocab(keyword: String) -> [Vocab] 
   func syncPracticeHistory(vocabID: UInt, testTaken: UInt, correctAnswer: UInt, firstLearnDate: Date, lastTimeTest: Date)
 }

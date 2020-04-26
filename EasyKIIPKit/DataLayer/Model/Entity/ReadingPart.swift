@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct ReadingPart {
+public class ReadingPart {
   
   public let id: UInt
   public let script: String

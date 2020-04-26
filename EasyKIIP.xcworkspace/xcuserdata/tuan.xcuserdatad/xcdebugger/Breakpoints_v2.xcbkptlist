@@ -7,233 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F4965BD9-E360-4FF8-A6CC-14C5BC25EA4E"
+            uuid = "BB8BDB35-2F5B-4FD1-BA9B-0B56AABC635C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
+            filePath = "EasyKIIPKit/DataLayer/Repository/BookListing/KIIPVocabRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "markVocabAsMastered(_:)"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "getNeedReviewVocabs(from:upto:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "F4965BD9-E360-4FF8-A6CC-14C5BC25EA4E - 2112fbc6aa170c2"
+                  uuid = "BB8BDB35-2F5B-4FD1-BA9B-0B56AABC635C - 40dd7d657b23de99"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "EasyKIIPKitTests.VocabDataStoreInMemory.markVocabAsMastered(EasyKIIPKitTests.Vocab) -&gt; ()"
+                  symbolName = "closure #1 (EasyKIIPKitTests.Vocab) -&gt; Swift.Bool in EasyKIIPKitTests.KIIPVocabRepository.(getNeedReviewVocabs in _9FD8D1CC75AF57D8BBFDAD20B429E178)(from: Swift.Array&lt;EasyKIIPKitTests.Vocab&gt;, upto: Swift.Int) -&gt; Swift.Array&lt;EasyKIIPKitTests.Vocab&gt;"
                   moduleName = "EasyKIIPKitTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
+                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/KIIPVocabRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "791">
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "1606">
                </Location>
                <Location
-                  uuid = "F4965BD9-E360-4FF8-A6CC-14C5BC25EA4E - 2e4d34de5d5e1c0a"
+                  uuid = "BB8BDB35-2F5B-4FD1-BA9B-0B56AABC635C - 1b79c2bd4197a70a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "EasyKIIPKit.VocabDataStoreInMemory.markVocabAsMastered(EasyKIIPKit.Vocab) -&gt; ()"
+                  symbolName = "closure #1 (EasyKIIPKit.Vocab) -&gt; Swift.Bool in EasyKIIPKit.KIIPVocabRepository.(getNeedReviewVocabs in _B59DDF2E0664E20CF88502D5656E283A)(from: Swift.Array&lt;EasyKIIPKit.Vocab&gt;, upto: Swift.Int) -&gt; Swift.Array&lt;EasyKIIPKit.Vocab&gt;"
                   moduleName = "EasyKIIPKit"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
+                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/KIIPVocabRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "791">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6028C132-ACD3-4BB8-8996-F54B9EB7C302"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "getVocab(by:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6028C132-ACD3-4BB8-8996-F54B9EB7C302 - 5cf8a37bc5712951"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EasyKIIPKitTests.VocabDataStoreInMemory.getVocab(by: Swift.UInt) -&gt; Swift.Optional&lt;EasyKIIPKitTests.Vocab&gt;"
-                  moduleName = "EasyKIIPKitTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "247">
-               </Location>
-               <Location
-                  uuid = "6028C132-ACD3-4BB8-8996-F54B9EB7C302 - 96d2de27c2048abc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (EasyKIIPKitTests.Book) -&gt; Swift.Array&lt;EasyKIIPKitTests.Vocab&gt; in EasyKIIPKitTests.VocabDataStoreInMemory.getVocab(by: Swift.UInt) -&gt; Swift.Optional&lt;EasyKIIPKitTests.Vocab&gt;"
-                  moduleName = "EasyKIIPKitTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "6028C132-ACD3-4BB8-8996-F54B9EB7C302 - ff49ad24285430c2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (EasyKIIPKitTests.Lesson) -&gt; Swift.Array&lt;EasyKIIPKitTests.Vocab&gt; in closure #1 (EasyKIIPKitTests.Book) -&gt; Swift.Array&lt;EasyKIIPKitTests.Vocab&gt; in EasyKIIPKitTests.VocabDataStoreInMemory.getVocab(by: Swift.UInt) -&gt; Swift.Optional&lt;EasyKIIPKitTests.Vocab&gt;"
-                  moduleName = "EasyKIIPKitTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  uuid = "6028C132-ACD3-4BB8-8996-F54B9EB7C302 - d49598fc8ce83da4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EasyKIIPKit.VocabDataStoreInMemory.getVocab(by: Swift.UInt) -&gt; Swift.Optional&lt;EasyKIIPKit.Vocab&gt;"
-                  moduleName = "EasyKIIPKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "247">
-               </Location>
-               <Location
-                  uuid = "6028C132-ACD3-4BB8-8996-F54B9EB7C302 - 58050ae33e34f68c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (EasyKIIPKit.Book) -&gt; Swift.Array&lt;EasyKIIPKit.Vocab&gt; in EasyKIIPKit.VocabDataStoreInMemory.getVocab(by: Swift.UInt) -&gt; Swift.Optional&lt;EasyKIIPKit.Vocab&gt;"
-                  moduleName = "EasyKIIPKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "32">
-               </Location>
-               <Location
-                  uuid = "6028C132-ACD3-4BB8-8996-F54B9EB7C302 - 782e214d99f9bd27"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (EasyKIIPKit.Lesson) -&gt; Swift.Array&lt;EasyKIIPKit.Vocab&gt; in closure #1 (EasyKIIPKit.Book) -&gt; Swift.Array&lt;EasyKIIPKit.Vocab&gt; in EasyKIIPKit.VocabDataStoreInMemory.getVocab(by: Swift.UInt) -&gt; Swift.Optional&lt;EasyKIIPKit.Vocab&gt;"
-                  moduleName = "EasyKIIPKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "594C524E-8E0D-4FC8-A3C5-EA83DFD397AF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "markVocabAsMastered(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "594C524E-8E0D-4FC8-A3C5-EA83DFD397AF - 2112fbc6aa170c2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EasyKIIPKitTests.VocabDataStoreInMemory.markVocabAsMastered(EasyKIIPKitTests.Vocab) -&gt; ()"
-                  moduleName = "EasyKIIPKitTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "572">
-               </Location>
-               <Location
-                  uuid = "594C524E-8E0D-4FC8-A3C5-EA83DFD397AF - 615d74f074acb84b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (EasyKIIPKitTests.Vocab) -&gt; Swift.Bool in EasyKIIPKitTests.VocabDataStoreInMemory.markVocabAsMastered(EasyKIIPKitTests.Vocab) -&gt; ()"
-                  moduleName = "EasyKIIPKitTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "28">
-               </Location>
-               <Location
-                  uuid = "594C524E-8E0D-4FC8-A3C5-EA83DFD397AF - 2e4d34de5d5e1c0a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EasyKIIPKit.VocabDataStoreInMemory.markVocabAsMastered(EasyKIIPKit.Vocab) -&gt; ()"
-                  moduleName = "EasyKIIPKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "572">
-               </Location>
-               <Location
-                  uuid = "594C524E-8E0D-4FC8-A3C5-EA83DFD397AF - 9fd4e88b0f29416b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (EasyKIIPKit.Vocab) -&gt; Swift.Bool in EasyKIIPKit.VocabDataStoreInMemory.markVocabAsMastered(EasyKIIPKit.Vocab) -&gt; ()"
-                  moduleName = "EasyKIIPKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/Persistence/VocabDataStoreInMemory.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "28">
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "1606">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -117,7 +117,7 @@
 		0C94738961A4DD2F9C12C53EFB9E173A /* Pods-EasyKIIPKitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EasyKIIPKitTests-Info.plist"; sourceTree = "<group>"; };
 		119955EF347B13EFB4D907F65A830165 /* Date+Compare.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Compare.swift"; path = "Sources/SwiftDate/Date/Date+Compare.swift"; sourceTree = "<group>"; };
 		145E9A625B5652D6952EA40744A8CAEA /* TimeStructures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeStructures.swift; path = Sources/SwiftDate/Supports/TimeStructures.swift; sourceTree = "<group>"; };
-		17846A80477CBBD73FEFC64B8D8CB986 /* langs */ = {isa = PBXFileReference; includeInIndex = 1; name = langs; path = Sources/SwiftDate/Formatters/RelativeFormatter/langs; sourceTree = "<group>"; };
+		17846A80477CBBD73FEFC64B8D8CB986 /* langs */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = langs; path = Sources/SwiftDate/Formatters/RelativeFormatter/langs; sourceTree = "<group>"; };
 		1AC4584066B137ACCAAE9F80880D3B01 /* Pods-EasyKIIPUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EasyKIIPUITests.modulemap"; sourceTree = "<group>"; };
 		20AF1B47B4BFDD561B03E1E064D13B2C /* SwiftDate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftDate.modulemap; sourceTree = "<group>"; };
 		2274378D5CB9FD3D7480A3FAD3363C60 /* TimePeriodGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimePeriodGroup.swift; path = Sources/SwiftDate/TimePeriod/Groups/TimePeriodGroup.swift; sourceTree = "<group>"; };
@@ -142,14 +142,14 @@
 		4ED4AF6CF510B6FD6A24A899B3F4D4C3 /* Pods-EasyKIIPKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EasyKIIPKit-umbrella.h"; sourceTree = "<group>"; };
 		51A7D84AB9DCD5E2ADE0654D9A061B0F /* DateInRegion+Create.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateInRegion+Create.swift"; path = "Sources/SwiftDate/DateInRegion/DateInRegion+Create.swift"; sourceTree = "<group>"; };
 		56925DC323242F5321C7561BFAA851E1 /* Pods-EasyKIIPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyKIIPUITests.release.xcconfig"; sourceTree = "<group>"; };
-		58AE0544E0C381DDBD09356C357EC82B /* SwiftDate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftDate.framework; path = SwiftDate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58AE0544E0C381DDBD09356C357EC82B /* SwiftDate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftDate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACD6B4BB1BFB83283B83A14AD5C4051 /* Pods-EasyKIIPUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EasyKIIPUITests-dummy.m"; sourceTree = "<group>"; };
 		5B50666269D710E2EA21A288C6C6B4C3 /* Pods-EasyKIIPUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EasyKIIPUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5EDE974B1FB8894ECA58D3E18933C5B7 /* Pods-EasyKIIPKitTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EasyKIIPKitTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		60135F0F7F81AE5E9CB8980146C3A088 /* Zones.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Zones.swift; path = Sources/SwiftDate/Supports/Zones.swift; sourceTree = "<group>"; };
 		60255351477D3EAC47997EB3DC75954E /* TimePeriodChain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimePeriodChain.swift; path = Sources/SwiftDate/TimePeriod/Groups/TimePeriodChain.swift; sourceTree = "<group>"; };
 		6038EC1A591E1E8CCEBE3A119BF277C6 /* RelativeFormatter+Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "RelativeFormatter+Style.swift"; path = "Sources/SwiftDate/Formatters/RelativeFormatter/RelativeFormatter+Style.swift"; sourceTree = "<group>"; };
-		632F5E8CE842438A24431F322DC19DF9 /* Pods_EasyKIIPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EasyKIIPUITests.framework; path = "Pods-EasyKIIPUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		632F5E8CE842438A24431F322DC19DF9 /* Pods_EasyKIIPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BD474EBF42C662F0061B131F51177D5 /* Region.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Region.swift; path = Sources/SwiftDate/DateInRegion/Region.swift; sourceTree = "<group>"; };
 		6E85BE112DDE919E075E834EC9145F67 /* Pods-EasyKIIPKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EasyKIIPKit.modulemap"; sourceTree = "<group>"; };
 		6FA7F29207AC6955A02AE90DE5CB04B3 /* Pods-EasyKIIPKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyKIIPKit.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,19 +167,19 @@
 		8BBDECD5C2D623AA1899C21FAA682249 /* Locales.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locales.swift; path = Sources/SwiftDate/Supports/Locales.swift; sourceTree = "<group>"; };
 		8BF308321B1B77A8D0CBC92DB6CA5930 /* Pods-EasyKIIP-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EasyKIIP-acknowledgements.plist"; sourceTree = "<group>"; };
 		90973F34CD7CC139D95FE2038D89FE28 /* Pods-EasyKIIPKitTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EasyKIIPKitTests-frameworks.sh"; sourceTree = "<group>"; };
-		90E0ADBA7AA835E5719B141F9CFA6345 /* Pods_EasyKIIP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EasyKIIP.framework; path = "Pods-EasyKIIP.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90E0ADBA7AA835E5719B141F9CFA6345 /* Pods_EasyKIIP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91EAE0E7406387724AE3DFC9491CD6E6 /* DateInRegion+Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateInRegion+Components.swift"; path = "Sources/SwiftDate/DateInRegion/DateInRegion+Components.swift"; sourceTree = "<group>"; };
 		968EBEABDC6DE4AC31EAC4213CEA6AA5 /* ISOParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISOParser.swift; path = Sources/SwiftDate/Formatters/ISOParser.swift; sourceTree = "<group>"; };
 		9BF67BC2C436F1EC3982F00959BA5DC3 /* Pods-EasyKIIP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyKIIP.release.xcconfig"; sourceTree = "<group>"; };
 		9CEDC2E040677770E8FEE48514C8E977 /* TimeInterval+Formatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TimeInterval+Formatter.swift"; path = "Sources/SwiftDate/Foundation+Extras/TimeInterval+Formatter.swift"; sourceTree = "<group>"; };
 		9CFEAE0BF62E8A32928253A21ECBCFFC /* Pods-EasyKIIP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EasyKIIP-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9EBF2B5ED1C357CC697134B9AFFC5A92 /* Date+Components.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Components.swift"; path = "Sources/SwiftDate/Date/Date+Components.swift"; sourceTree = "<group>"; };
 		A10CBAD8CC3C6A6DBDC28467C08508C3 /* Pods-EasyKIIPTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EasyKIIPTests-dummy.m"; sourceTree = "<group>"; };
 		A6114A9D62D602307A212DF9BD483394 /* String+Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Parser.swift"; path = "Sources/SwiftDate/Foundation+Extras/String+Parser.swift"; sourceTree = "<group>"; };
 		A73A43C038AC906424EC1024045DBA19 /* RelativeFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RelativeFormatter.swift; path = Sources/SwiftDate/Formatters/RelativeFormatter/RelativeFormatter.swift; sourceTree = "<group>"; };
-		A8B187672191068967464DD26F019CD1 /* Pods_EasyKIIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EasyKIIPTests.framework; path = "Pods-EasyKIIPTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B02614ED6C9C9689A7905582DB8288D3 /* Pods_EasyKIIPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EasyKIIPKit.framework; path = "Pods-EasyKIIPKit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B187672191068967464DD26F019CD1 /* Pods_EasyKIIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B02614ED6C9C9689A7905582DB8288D3 /* Pods_EasyKIIPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B21334AF9F254B4B990501BEC0A3E42E /* Date.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Sources/SwiftDate/Date/Date.swift; sourceTree = "<group>"; };
 		B7DE6F9185357D88E7B65C62186D1B85 /* Pods-EasyKIIPKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EasyKIIPKit-acknowledgements.plist"; sourceTree = "<group>"; };
 		C071E191045A39F6746ADAEA06775938 /* SwiftDate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftDate.xcconfig; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 		ECC1283A677EA7854B3DF27FD0512E91 /* Pods-EasyKIIPKitTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EasyKIIPKitTests-umbrella.h"; sourceTree = "<group>"; };
 		F126F932909E3F1BA6D65EFB82D4EA77 /* Pods-EasyKIIPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EasyKIIPTests.release.xcconfig"; sourceTree = "<group>"; };
 		F1A56A72CB42C62560549564F0DB83F5 /* Date+Create.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Create.swift"; path = "Sources/SwiftDate/Date/Date+Create.swift"; sourceTree = "<group>"; };
-		F271349756CF7F7BFF89B8067F8B8DE1 /* Pods_EasyKIIPKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EasyKIIPKitTests.framework; path = "Pods-EasyKIIPKitTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F271349756CF7F7BFF89B8067F8B8DE1 /* Pods_EasyKIIPKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7A32FB46204EA5285E399790A75270 /* Pods-EasyKIIP-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EasyKIIP-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -463,7 +463,6 @@
 				2F480E93B9261BAB0F95283E075C5795 /* Resources */,
 				DD3BBC141715E5415DBA4266BC1E2E61 /* Support Files */,
 			);
-			name = SwiftDate;
 			path = SwiftDate;
 			sourceTree = "<group>";
 		};
@@ -650,6 +649,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 505FF991CC4526001BC8617FF6E40344 /* Products */;

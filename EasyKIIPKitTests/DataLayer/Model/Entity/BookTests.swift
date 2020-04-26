@@ -30,7 +30,7 @@ class BookTests: XCTestCase {
   }
   
   func testProficiency_OneLesson_OneVocab_Mastered_Proficiency100() {
-    var vocab = Vocab(id: 0, word: "", translations: [:])
+    let vocab = Vocab(id: 0, word: "", translations: [:])
     vocab.markAsIsMastered()
     let lession = Lesson(id: 0, name: "", translations: [:], vocabs: [vocab], readingParts: [])
     let sut = Book(id: 0, name: "", thumbName: nil, lessons: [lession])
@@ -38,7 +38,7 @@ class BookTests: XCTestCase {
   }
   
   func testProficiency_TwoLesson_One0_One100_Proficiency50() {
-    var vocab1 = Vocab(id: 0, word: "", translations: [:])
+    let vocab1 = Vocab(id: 0, word: "", translations: [:])
     vocab1.markAsIsMastered()
     let lession1 = Lesson(id: 0, name: "", translations: [:], vocabs: [vocab1], readingParts: [])
     
@@ -50,7 +50,7 @@ class BookTests: XCTestCase {
   }
   
   func testProficiency_ThreeLesson_Two0_One100_Proficiency33() {
-    var vocab1 = Vocab(id: 0, word: "", translations: [:])
+    let vocab1 = Vocab(id: 0, word: "", translations: [:])
     vocab1.markAsIsMastered()
     let lession1 = Lesson(id: 0, name: "", translations: [:], vocabs: [vocab1], readingParts: [])
     

@@ -58,14 +58,14 @@ class VocabDataStoreInMemory: VocabDataStore {
   
   func markVocabAsMastered(_ vocab: Vocab) {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
-    if var v = vocabs.first(where: { $0.id == vocab.id }) {
+    if let v = vocabs.first(where: { $0.id == vocab.id }) {
       v.markAsIsMastered()
     }
   }
   
   func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool) {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
-    if var v = vocabs.first(where: { $0.id == vocab.id }) {
+    if let v = vocabs.first(where: { $0.id == vocab.id }) {
       isCorrectAnswer ? v.increaseNumberOfCorrectAnswerByOne() : v.increaseNumberOfWrongAnswerByOne()
     }
   }
@@ -78,9 +78,27 @@ class VocabDataStoreInMemory: VocabDataStore {
     return nil
   }
   
+  func searchVocab(keyword: String) -> [Vocab]  {
+    let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
+    
+    let result = vocabs.filter { (vocab) -> Bool in
+      if vocab.word.lowercased().contains(keyword.lowercased()) {
+        return true
+      }
+      
+      for (_, value) in vocab.translations {
+        if value.lowercased().contains(keyword.lowercased()) {
+          return true
+        }
+      }
+      return false
+    }
+    return result
+  }
+  
   func syncPracticeHistory(vocabID: UInt, testTaken: UInt, correctAnswer: UInt, firstLearnDate: Date, lastTimeTest: Date) {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
-    if var v = vocabs.first(where: { $0.id == vocabID }) {
+    if let v = vocabs.first(where: { $0.id == vocabID }) {
       try? v.setTestTakenData(numberOfTestTaken: testTaken, numberOfCorrectAnswer: correctAnswer, firstLearnDate: firstLearnDate, lastTimeTest: lastTimeTest)
     }
   }

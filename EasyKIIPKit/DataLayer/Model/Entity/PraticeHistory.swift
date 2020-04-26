@@ -12,7 +12,7 @@ enum AppError: Error {
   case invalidData
 }
 
-public struct PracticeHistory {
+public class PracticeHistory {
   private(set) var isLearned: Bool {
     didSet {
       if firstLearnDate == nil {
@@ -20,6 +20,7 @@ public struct PracticeHistory {
       }
     }
   }
+  private(set) var id: UInt
   private(set) var numberOfTestTaken: UInt
   private(set) var numberOfCorrectAnswer: UInt
   private(set) var numberOfWrongAnswer: UInt
@@ -27,7 +28,8 @@ public struct PracticeHistory {
   private(set) var lastTimeTest: Date?
   private(set) var isMastered: Bool
   
-  init() {
+  init(id: UInt) {
+    self.id = id
     self.isLearned = false
     self.numberOfTestTaken = 0
     self.numberOfCorrectAnswer = 0
@@ -36,20 +38,20 @@ public struct PracticeHistory {
   }
   
   /// Mark a vocab as mastered, it means, user doesn't want the app to show the vocab for practice
-  mutating func markAsIsMastered() {
+  func markAsIsMastered() {
     self.isMastered = true
     self.isLearned = true
     self.lastTimeTest = Date()
   }
   
-  mutating func increaseNumberOfCorrectAnswerByOne() {
+  func increaseNumberOfCorrectAnswerByOne() {
     self.isLearned = true
     self.numberOfCorrectAnswer += 1
     self.numberOfTestTaken += 1
     self.lastTimeTest = Date()
   }
   
-  mutating func increaseNumberOfWrongAnswerByOne() {
+  func increaseNumberOfWrongAnswerByOne() {
     self.isLearned = true
     self.numberOfWrongAnswer += 1
     self.numberOfTestTaken += 1
@@ -60,10 +62,10 @@ public struct PracticeHistory {
   /// - Parameters:
   ///   - numberOfTakenTest: number of test has been taken
   ///   - numberOfCorrectAnswer: number of correct answer
-  mutating func setTestTakenData(numberOfTestTaken: UInt,
-                            numberOfCorrectAnswer: UInt,
-                            firstLearnDate: Date,
-                            lastTimeTest: Date) throws {
+  func setTestTakenData(numberOfTestTaken: UInt,
+                        numberOfCorrectAnswer: UInt,
+                        firstLearnDate: Date,
+                        lastTimeTest: Date) throws {
     // If number of current test taken > input data => Synced
     guard self.numberOfTestTaken < numberOfTestTaken else { return }
     

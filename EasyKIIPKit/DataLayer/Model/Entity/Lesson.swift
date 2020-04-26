@@ -8,12 +8,12 @@
 
 import Foundation
 
-public struct Lesson {
+public class Lesson {
   public private(set) var id: UInt
   public private(set) var name: String
   public private(set) var translations: [LanguageCode: String]
-  public private(set) var vocabs: [Vocab]
   public private(set) var readingParts: [ReadingPart]
+  private(set) var vocabs: [Vocab]
   
   public var proficiency: UInt8 {
     guard vocabs.count > 0 else { return 100 }
