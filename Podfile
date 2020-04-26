@@ -25,11 +25,15 @@ target 'EasyKIIPKit' do
 
   # Pods for EasyKIIPKit
   pod 'SwiftDate'
-
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  
   target 'EasyKIIPKitTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'SwiftDate'
+    pod 'RxBlocking'
+    pod 'RxTest'
   end
 
 end
