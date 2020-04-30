@@ -25,8 +25,27 @@ target 'UserSession' do
   # Pods for EasyKIIPKit
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxAlamofire'
   
   target 'UserSessionTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'RxBlocking'
+    pod 'RxTest'
+  end
+
+end
+
+target 'EasyKIIP_iOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for EasyKIIPKit
+  pod 'SnapKit'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  
+  target 'EasyKIIP_iOSTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'RxBlocking'

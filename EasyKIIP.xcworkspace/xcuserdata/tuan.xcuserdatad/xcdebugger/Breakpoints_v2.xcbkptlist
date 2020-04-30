@@ -18,38 +18,6 @@
             endingLineNumber = "109"
             landmarkName = "getNeedReviewVocabs(from:upto:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BB8BDB35-2F5B-4FD1-BA9B-0B56AABC635C - 40dd7d657b23de99"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (EasyKIIPKitTests.Vocab) -&gt; Swift.Bool in EasyKIIPKitTests.KIIPVocabRepository.(getNeedReviewVocabs in _9FD8D1CC75AF57D8BBFDAD20B429E178)(from: Swift.Array&lt;EasyKIIPKitTests.Vocab&gt;, upto: Swift.Int) -&gt; Swift.Array&lt;EasyKIIPKitTests.Vocab&gt;"
-                  moduleName = "EasyKIIPKitTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/KIIPVocabRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
-                  offsetFromSymbolStart = "1606">
-               </Location>
-               <Location
-                  uuid = "BB8BDB35-2F5B-4FD1-BA9B-0B56AABC635C - 1b79c2bd4197a70a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (EasyKIIPKit.Vocab) -&gt; Swift.Bool in EasyKIIPKit.KIIPVocabRepository.(getNeedReviewVocabs in _B59DDF2E0664E20CF88502D5656E283A)(from: Swift.Array&lt;EasyKIIPKit.Vocab&gt;, upto: Swift.Int) -&gt; Swift.Array&lt;EasyKIIPKit.Vocab&gt;"
-                  moduleName = "EasyKIIPKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIPKit/DataLayer/Repository/BookListing/KIIPVocabRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
-                  offsetFromSymbolStart = "1606">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

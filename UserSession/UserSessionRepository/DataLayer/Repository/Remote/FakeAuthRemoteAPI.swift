@@ -19,32 +19,30 @@ public struct FakeAuthRemoteAPI: AuthRemoteAPI {
   public init() {}
 
   public func signIn(email: String, password: String) -> Observable<UserSession> {
-    guard email == "tuan@gmail.com" && password == "password" else {
-      return Observable.create { (observer) -> Disposable in
-        observer.onError(NetworkError.loginFailed)
-        return Disposables.create()
-      }
+    guard email == "tuan@gmail.com" && password == "123456" else {
+      return Observable.error(NetworkError.loginFailed)
     }
-    return Observable.create { (observer) -> Disposable in
-      sleep(2)
-      let profile = UserProfile(name: "Johnny Appleseed",
-                                email: "johnny@gmail.com",
-                                avatar: makeURL())
-      let remoteUserSession = RemoteUserSession(token: "64652626")
-      let userSession = UserSession(profile: profile, remoteSession: remoteUserSession)
-      
-      observer.onNext(userSession)
-      observer.onCompleted()
-      return Disposables.create()
-    }
+    
+    let userSession = createFakeUserSession()
+    return Observable.just(userSession)
+  }
+  
+  public func signIn(provider: Provider, token: String, clientId: String) -> Observable<UserSession> {
+    let userSession = createFakeUserSession()
+    return Observable.just(userSession)
   }
 
   public func signUp(account: NewAccount) -> Observable<UserSession> {
-    let profile = UserProfile(name: account.name,
-                              email: account.email,
-                              avatar: makeURL())
-    let remoteUserSession = RemoteUserSession(token: "984270985")
-    let userSession = UserSession(profile: profile, remoteSession: remoteUserSession)
+    let userSession = createFakeUserSession()
     return Observable.just(userSession)
+  }
+  
+  private func createFakeUserSession() -> UserSession {
+    let profile = UserProfile(name: "Tuan Do",
+                              email: "tuan@gmail.com",
+                              avatar: makeURL())
+    let remoteUserSession = RemoteUserSession(token: "64652626")
+    let userSession = UserSession(profile: profile, remoteSession: remoteUserSession)
+    return userSession
   }
 }

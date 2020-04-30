@@ -35,7 +35,7 @@ public class FakeUserSessionDataStore: UserSessionDataStore {
   let hasToken: Bool
 
   // MARK: - Methods
-  init(hasToken: Bool) {
+  public init(hasToken: Bool) {
     self.hasToken = hasToken
   }
 

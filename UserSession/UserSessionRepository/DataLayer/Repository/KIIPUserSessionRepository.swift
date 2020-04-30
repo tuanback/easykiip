@@ -49,6 +49,16 @@ public class KIIPUserSessionRepository: UserSessionRepository {
     return observable
   }
   
+  public func signIn(provider: Provider, token: String, clientId: String) -> Observable<UserSession> {
+    let observable = remoteAPI.signIn(provider: provider, token: token, clientId: clientId)
+    observable
+      .subscribe(onNext: { [weak self] userSession in
+        self?.dataStore.save(userSession: userSession)
+      })
+      .disposed(by: disposeBag)
+    return observable
+  }
+  
   public func signOut(userSession: UserSession) {
     return dataStore.delete(userSession: userSession)
   }
