@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EasyKIIPKit
 import EasyKIIP_iOS
 
 @UIApplicationMain
@@ -17,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    
+    AppSetting.languageCode = .en
     
     let launchVC = injectionContainer.makeLaunchVC()
     window = UIWindow(frame: UIScreen.main.bounds)

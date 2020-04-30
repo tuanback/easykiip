@@ -35,6 +35,11 @@
 		1766FFC0245A68F6008B263D /* AppDenpendencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFBF245A68F6008B263D /* AppDenpendencyContainer.swift */; };
 		1766FFC1245A6A52008B263D /* UserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70B58245580B600C67334 /* UserSession.framework */; };
 		1766FFC8245A72CC008B263D /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFC7245A72CC008B263D /* UIColor_Extension.swift */; };
+		1766FFCB245AA51C008B263D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFCA245AA51C008B263D /* Strings.swift */; };
+		1766FFCE245AAF4C008B263D /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFCA245AA51C008B263D /* Strings.swift */; };
+		1766FFD1245AB037008B263D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFCF245AB037008B263D /* Localizable.strings */; };
+		1766FFD3245AB466008B263D /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD2245AB466008B263D /* AppSetting.swift */; };
+		1766FFD4245AB49E008B263D /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD2245AB466008B263D /* AppSetting.swift */; };
 		17B70A86244C180200C67334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70A85244C180200C67334 /* AppDelegate.swift */; };
 		17B70A8F244C180500C67334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A8E244C180500C67334 /* Assets.xcassets */; };
 		17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A90244C180500C67334 /* LaunchScreen.storyboard */; };
@@ -247,6 +252,10 @@
 		1766FFBD245A6893008B263D /* LaunchRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRootView.swift; sourceTree = "<group>"; };
 		1766FFBF245A68F6008B263D /* AppDenpendencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDenpendencyContainer.swift; sourceTree = "<group>"; };
 		1766FFC7245A72CC008B263D /* UIColor_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
+		1766FFCA245AA51C008B263D /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		1766FFCC245AA6D2008B263D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		1766FFD0245AB037008B263D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1766FFD2245AB466008B263D /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
 		17B70A82244C180200C67334 /* Easy KIIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy KIIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70A85244C180200C67334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17B70A8E244C180500C67334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -422,6 +431,7 @@
 				1766FF98245A5CAE008B263D /* DependencyContainer */,
 				1766FF73245A589F008B263D /* EasyKIIP_iOS.h */,
 				1766FF74245A589F008B263D /* Info.plist */,
+				1766FFCF245AB037008B263D /* Localizable.strings */,
 			);
 			path = EasyKIIP_iOS;
 			sourceTree = "<group>";
@@ -528,6 +538,8 @@
 		1766FFC9245A9FF6008B263D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				1766FFCA245AA51C008B263D /* Strings.swift */,
+				1766FFD2245AB466008B263D /* AppSetting.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -1204,6 +1216,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = 17B70A79244C180200C67334;
 			productRefGroup = 17B70A83244C180200C67334 /* Products */;
@@ -1228,6 +1241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1766FFD1245AB037008B263D /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1570,7 +1584,9 @@
 				1766FFAC245A5E0A008B263D /* OnboardingVC.swift in Sources */,
 				1766FFBC245A682F008B263D /* LaunchVC.swift in Sources */,
 				1766FFB9245A66E4008B263D /* OnboardingRootView.swift in Sources */,
+				1766FFD3245AB466008B263D /* AppSetting.swift in Sources */,
 				1766FFC0245A68F6008B263D /* AppDenpendencyContainer.swift in Sources */,
+				1766FFCB245AA51C008B263D /* Strings.swift in Sources */,
 				1766FFC8245A72CC008B263D /* UIColor_Extension.swift in Sources */,
 				1766FFB6245A5FF5008B263D /* Navigation.swift in Sources */,
 				1766FFB3245A5F57008B263D /* AppView.swift in Sources */,
@@ -1586,6 +1602,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1766FFA7245A5DAE008B263D /* NiblessNavigationController.swift in Sources */,
+				1766FFCE245AAF4C008B263D /* Strings.swift in Sources */,
+				1766FFD4245AB49E008B263D /* AppSetting.swift in Sources */,
 				1766FFAD245A5E0A008B263D /* OnboardingVC.swift in Sources */,
 				1766FFA5245A5DAE008B263D /* NiblessView.swift in Sources */,
 				1766FFBA245A66E4008B263D /* OnboardingRootView.swift in Sources */,
@@ -1778,10 +1796,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1766FFCF245AB037008B263D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1766FFD0245AB037008B263D /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		17B70A90244C180500C67334 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				17B70A91244C180500C67334 /* Base */,
+				1766FFCC245AA6D2008B263D /* vi */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1896,6 +1923,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1956,6 +1984,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
