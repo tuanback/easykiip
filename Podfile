@@ -6,7 +6,11 @@ target 'EasyKIIP' do
   use_frameworks!
 
   # Pods for EasyKIIP
-
+  pod 'Action'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
+  
   target 'EasyKIIPTests' do
     inherit! :search_paths
     # Pods for testing
@@ -42,9 +46,6 @@ target 'EasyKIIP_iOS' do
 
   # Pods for EasyKIIPKit
   pod 'Action'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
-  pod 'GoogleSignIn'
   pod 'SnapKit'
   pod 'RxSwift'
   pod 'RxCocoa'

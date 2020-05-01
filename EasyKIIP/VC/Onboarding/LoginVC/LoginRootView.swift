@@ -11,10 +11,14 @@ import UIKit
 import SnapKit
 import RxSwift
 import RxCocoa
+import Firebase
+import GoogleSignIn
 
 class LoginRootView: NiblessView {
   
   private let viewModel: LoginViewModel
+  
+  private var googleSignInButton: GIDSignInButton!
   
   init(frame: CGRect = .zero,
        viewModel: LoginViewModel) {
@@ -25,6 +29,19 @@ class LoginRootView: NiblessView {
   
   private func setupViews() {
     backgroundColor = UIColor.appBackground
+    
+    googleSignInButton = GIDSignInButton()
+    
+    addSubview(googleSignInButton)
+    
+    googleSignInButton.snp.makeConstraints { (make) in
+      make.centerX.equalTo(self)
+      make.bottom.equalTo(self).offset(-80)
+      make.height.equalTo(60)
+      make.width.equalTo(self).multipliedBy(0.8)
+    }
   }
+  
+  
   
 }
