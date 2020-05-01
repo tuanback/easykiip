@@ -51,6 +51,7 @@
 		1766FFEB245B9A7E008B263D /* FakeVocabRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFEA245B9A7E008B263D /* FakeVocabRemoteAPI.swift */; };
 		1766FFEE245BADA2008B263D /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFED245BADA2008B263D /* WelcomeViewModel.swift */; };
 		1766FFF0245BB0CB008B263D /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFEF245BB0CB008B263D /* WelcomeVC.swift */; };
+		1766FFF2245BD993008B263D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFF1245BD993008B263D /* GoogleService-Info.plist */; };
 		17B70A86244C180200C67334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70A85244C180200C67334 /* AppDelegate.swift */; };
 		17B70A8F244C180500C67334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A8E244C180500C67334 /* Assets.xcassets */; };
 		17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A90244C180500C67334 /* LaunchScreen.storyboard */; };
@@ -277,6 +278,7 @@
 		1766FFEA245B9A7E008B263D /* FakeVocabRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeVocabRemoteAPI.swift; sourceTree = "<group>"; };
 		1766FFED245BADA2008B263D /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		1766FFEF245BB0CB008B263D /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		1766FFF1245BD993008B263D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		17B70A82244C180200C67334 /* Easy KIIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy KIIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70A85244C180200C67334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17B70A8E244C180500C67334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -628,6 +630,7 @@
 		17B70A84244C180200C67334 /* EasyKIIP */ = {
 			isa = PBXGroup;
 			children = (
+				1766FFF1245BD993008B263D /* GoogleService-Info.plist */,
 				17B70A85244C180200C67334 /* AppDelegate.swift */,
 				17B70A8E244C180500C67334 /* Assets.xcassets */,
 				17B70A90244C180500C67334 /* LaunchScreen.storyboard */,
@@ -1022,6 +1025,7 @@
 				1766FF6D245A589F008B263D /* Sources */,
 				1766FF6E245A589F008B263D /* Frameworks */,
 				1766FF6F245A589F008B263D /* Resources */,
+				9ED3C558F0DDFE793053A9A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1064,6 +1068,7 @@
 				17B70A80244C180200C67334 /* Resources */,
 				17B70AD6244CF1E500C67334 /* Embed Frameworks */,
 				DC158DF6EF5D937E577E1FF6 /* [CP] Embed Pods Frameworks */,
+				7B6AB4781B08D53E8DA0CBF8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1289,6 +1294,7 @@
 			files = (
 				17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */,
 				17B70A8F244C180500C67334 /* Assets.xcassets in Resources */,
+				1766FFF2245BD993008B263D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1520,6 +1526,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7B6AB4781B08D53E8DA0CBF8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9C8EC45F972ECFA53F88FA83 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1540,6 +1563,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ED3C558F0DDFE793053A9A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP_iOS/Pods-EasyKIIP_iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP_iOS/Pods-EasyKIIP_iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP_iOS/Pods-EasyKIIP_iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AB3007EF64A94644A5DACC20 /* [CP] Check Pods Manifest.lock */ = {
@@ -2089,7 +2129,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.kiip;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.ios.easykiip;
 				PRODUCT_NAME = "Easy KIIP";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2110,7 +2151,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.kiip;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.ios.easykiip;
 				PRODUCT_NAME = "Easy KIIP";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

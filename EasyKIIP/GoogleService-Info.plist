@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>176091551427-5358nn0ddl109ojqnf817fa5q31bs3um.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.176091551427-5358nn0ddl109ojqnf817fa5q31bs3um</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAtiIn6SmCLgxE3M2U6Qm80qsVGwp0wXM4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>176091551427</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.tuando.ios.easykiip</string>
+	<key>PROJECT_ID</key>
+	<string>easykiip</string>
+	<key>STORAGE_BUCKET</key>
+	<string>easykiip.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:176091551427:ios:fcce74ec2aba11e7ec3476</string>
+	<key>DATABASE_URL</key>
+	<string>https://easykiip.firebaseio.com</string>
+</dict>
+</plist>

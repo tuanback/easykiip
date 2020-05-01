@@ -9,6 +9,7 @@
 import UIKit
 import EasyKIIPKit
 import EasyKIIP_iOS
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     
-    AppSetting.languageCode = .en
+    FirebaseApp.configure()
+    // Use to change app language
+    //AppSetting.languageCode = .en
     
     let launchVC = injectionContainer.makeLaunchVC()
     window = UIWindow(frame: UIScreen.main.bounds)
