@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UserSession
 import RxSwift
 import GoogleSignIn
 import Firebase
@@ -50,7 +51,7 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
   }
   
   public func readUserSession() -> UserSession? {
-    return nil
+    return dataStore.readUserSession()
   }
   
   public func signUp(newAccount: NewAccount) -> Observable<UserSession> {

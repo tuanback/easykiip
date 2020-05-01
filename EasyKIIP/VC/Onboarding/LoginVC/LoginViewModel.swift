@@ -31,6 +31,9 @@ public class LoginViewModel {
   }
   
   func googleLogin(with credential: AuthCredential) {
+    guard let userSessionRepository = self.userSessionRepository as? FirebaseUserSessionRepository else {
+      return
+    }
     let observerble = userSessionRepository.signIn(with: credential, provider: .google)
     
     observerble
@@ -55,6 +58,9 @@ public class LoginViewModel {
   }
   
   func handleUserTextInputResult(isOK: Bool, text: String) {
+    guard let userSessionRepository = self.userSessionRepository as? FirebaseUserSessionRepository else {
+      return
+    }
     guard let authState = self.authState else { return }
     
     switch authState {

@@ -9,6 +9,8 @@ target 'EasyKIIP' do
   pod 'Action'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
   pod 'GoogleSignIn'
   pod 'SnapKit'
   
@@ -28,8 +30,6 @@ target 'UserSession' do
   use_frameworks!
 
   # Pods for EasyKIIPKit
-  pod 'Firebase/Auth'
-  pod 'GoogleSignIn'
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxAlamofire'
@@ -48,8 +48,6 @@ target 'EasyKIIPKit' do
   use_frameworks!
 
   # Pods for EasyKIIPKit
-  pod 'Firebase/Firestore'
-  pod 'FirebaseFirestoreSwift'
   pod 'SwiftDate'
   
   target 'EasyKIIPKitTests' do

@@ -8,14 +8,13 @@
 
 import UIKit
 import EasyKIIPKit
-import EasyKIIP_iOS
 import Firebase
 import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-  var injectionContainer: AppDependencyContainer!
+  lazy var injectionContainer = AppDependencyContainer()
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -40,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private func configFirebaseAndGoogleSignIn() {
     FirebaseApp.configure()
     GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-    try? Auth.auth().signOut()
   }
 }
 

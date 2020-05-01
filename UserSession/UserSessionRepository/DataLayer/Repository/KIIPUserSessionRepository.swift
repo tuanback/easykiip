@@ -8,8 +8,6 @@
 
 import Foundation
 import RxSwift
-import Firebase
-import GoogleSignIn
 
 public class KIIPUserSessionRepository: UserSessionRepository {
   
@@ -50,14 +48,6 @@ public class KIIPUserSessionRepository: UserSessionRepository {
       .disposed(by: disposeBag)
     return observable
   }
-  
-  public func signIn(with credential: AuthCredential, provider: Provider) -> Observable<AuthState> {
-    return Observable.error(AuthError.notSupported)
-  }
-  
-  public func handleUserSelectFactorToLogIn(name: String) {}
-  
-  public func handleUserSelectedVerificationCode(_ code: String) {}
   
   public func signOut() {
     return dataStore.delete()

@@ -167,12 +167,14 @@
 		17FBF726245BEC3400A65233 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFCF245AB037008B263D /* Localizable.strings */; };
 		17FBF727245BEC3400A65233 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFCF245AB037008B263D /* Localizable.strings */; };
 		17FBF728245BEC3500A65233 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFCF245AB037008B263D /* Localizable.strings */; };
-		17FBF72A245C18FF00A65233 /* FirebaseUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */; };
-		17FBF72B245C18FF00A65233 /* FirebaseUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */; };
 		17FBF72E245C392E00A65233 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF72D245C392E00A65233 /* AuthError.swift */; };
 		17FBF72F245C392E00A65233 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF72D245C392E00A65233 /* AuthError.swift */; };
-		17FBF731245C411C00A65233 /* FirebaseUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */; };
-		17FBF732245C411C00A65233 /* FirebaseUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */; };
+		17FBF735245CE6D900A65233 /* FirebaseUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */; };
+		17FBF736245CE6DC00A65233 /* FirebaseUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */; };
+		17FBF737245CE6DD00A65233 /* FirebaseUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */; };
+		17FBF738245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */; };
+		17FBF739245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */; };
+		17FBF73A245CE6E200A65233 /* FirebaseUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */; };
 		1A35051ADF5C1C7F0B2197C2 /* Pods_EasyKIIPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */; };
 		57E4904DB391E7E2D7E543B3 /* Pods_UserSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117EC49A333FE8EC5FF52C3D /* Pods_UserSessionTests.framework */; };
 		627E22CE056419F471187535 /* Pods_EasyKIIPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16BC5199528F6E34ED995F6 /* Pods_EasyKIIPUITests.framework */; };
@@ -593,6 +595,7 @@
 		17B70A84244C180200C67334 /* EasyKIIP */ = {
 			isa = PBXGroup;
 			children = (
+				17FBF733245CE6B900A65233 /* UserSessionRepository */,
 				1766FFC9245A9FF6008B263D /* Assets */,
 				1766FF9F245A5D9A008B263D /* Reuseable */,
 				1766FF9E245A5D8F008B263D /* VC */,
@@ -835,7 +838,6 @@
 				17B70B42245573E000C67334 /* Persistence */,
 				17B70B472455743E00C67334 /* UserSessionRepository.swift */,
 				17B70B4D245574F700C67334 /* KIIPUserSessionRepository.swift */,
-				17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -884,7 +886,6 @@
 				17BDAEA0245583DC002584AA /* FakeUserSessionDataStore.swift */,
 				17BDAEA1245583DC002584AA /* Keychain */,
 				17BDAEA5245583DC002584AA /* FileUserSessionDataStore.swift */,
-				17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -938,6 +939,23 @@
 				17FBF72D245C392E00A65233 /* AuthError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		17FBF733245CE6B900A65233 /* UserSessionRepository */ = {
+			isa = PBXGroup;
+			children = (
+				17FBF734245CE6C400A65233 /* Firebase */,
+			);
+			path = UserSessionRepository;
+			sourceTree = "<group>";
+		};
+		17FBF734245CE6C400A65233 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */,
+				17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		D2D949889511FC23CD039687 /* Pods */ = {
@@ -997,7 +1015,7 @@
 				17B70A80244C180200C67334 /* Resources */,
 				17B70AD6244CF1E500C67334 /* Embed Frameworks */,
 				DC158DF6EF5D937E577E1FF6 /* [CP] Embed Pods Frameworks */,
-				E712D94233E93DBE505C8E37 /* [CP] Copy Pods Resources */,
+				B9EA17C2BCDBADD3AD20ADAA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1096,7 +1114,6 @@
 				17B70B54245580B600C67334 /* Sources */,
 				17B70B55245580B600C67334 /* Frameworks */,
 				17B70B56245580B600C67334 /* Resources */,
-				13642278F84889B81F88CA4E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1250,23 +1267,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		13642278F84889B81F88CA4E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UserSession/Pods-UserSession-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UserSession/Pods-UserSession-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UserSession/Pods-UserSession-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		14AABF6C0892ADC61F7F3D98 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1455,6 +1455,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B9EA17C2BCDBADD3AD20ADAA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DC158DF6EF5D937E577E1FF6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1470,23 +1487,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E712D94233E93DBE505C8E37 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1508,8 +1508,10 @@
 				17FBF714245BEC1300A65233 /* LaunchViewModel.swift in Sources */,
 				17FBF709245BEBFF00A65233 /* LoginRootView.swift in Sources */,
 				17FBF6E3245BEBBB00A65233 /* AppView.swift in Sources */,
+				17FBF735245CE6D900A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
 				17FBF720245BEC2800A65233 /* OnboardingDependencyContainer.swift in Sources */,
 				17FBF6DA245BEBA200A65233 /* AppSetting.swift in Sources */,
+				17FBF738245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */,
 				17FBF6E0245BEBB600A65233 /* UIFront_Extension.swift in Sources */,
 				17FBF6EF245BEBCF00A65233 /* NiblessViewController.swift in Sources */,
 				17FBF717245BEC1800A65233 /* LaunchRootView.swift in Sources */,
@@ -1542,8 +1544,10 @@
 				17FBF715245BEC1300A65233 /* LaunchViewModel.swift in Sources */,
 				17FBF708245BEBFE00A65233 /* LoginRootView.swift in Sources */,
 				17FBF6E4245BEBBB00A65233 /* AppView.swift in Sources */,
+				17FBF736245CE6DC00A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
 				17FBF721245BEC2800A65233 /* OnboardingDependencyContainer.swift in Sources */,
 				17FBF6DB245BEBA200A65233 /* AppSetting.swift in Sources */,
+				17FBF739245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */,
 				17FBF6E1245BEBB600A65233 /* UIFront_Extension.swift in Sources */,
 				17FBF6F0245BEBD000A65233 /* NiblessViewController.swift in Sources */,
 				17FBF718245BEC1800A65233 /* LaunchRootView.swift in Sources */,
@@ -1566,6 +1570,7 @@
 			files = (
 				17FBF6F7245BEBDD00A65233 /* MainRootView.swift in Sources */,
 				17FBF6FB245BEBE300A65233 /* MainVC.swift in Sources */,
+				17FBF73A245CE6E200A65233 /* FirebaseUserSessionRepository.swift in Sources */,
 				17FBF716245BEC1400A65233 /* LaunchViewModel.swift in Sources */,
 				17FBF6FE245BEBEB00A65233 /* WelcomeViewModel.swift in Sources */,
 				17FBF701245BEBEF00A65233 /* WelcomeRootView.swift in Sources */,
@@ -1589,6 +1594,7 @@
 				17FBF70D245BEC0400A65233 /* LoginVC.swift in Sources */,
 				17FBF6E5245BEBBC00A65233 /* AppView.swift in Sources */,
 				17FBF6EB245BEBC600A65233 /* NiblessView.swift in Sources */,
+				17FBF737245CE6DD00A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
 				17B70AA8244C180600C67334 /* EasyKIIPUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1648,7 +1654,6 @@
 				17BDAEBA245588A3002584AA /* FakeAuthRemoteAPI.swift in Sources */,
 				17B70B79245580E000C67334 /* UserSessionRepository.swift in Sources */,
 				17BDAEA8245583DD002584AA /* KeychainItem.swift in Sources */,
-				17FBF72A245C18FF00A65233 /* FirebaseUserSessionRepository.swift in Sources */,
 				17B70B83245580F400C67334 /* NewAccount.swift in Sources */,
 				17FBF72E245C392E00A65233 /* AuthError.swift in Sources */,
 				17B70B81245580F100C67334 /* UserProfile.swift in Sources */,
@@ -1659,7 +1664,6 @@
 				17B70B77245580DC00C67334 /* UserSessionDataStore.swift in Sources */,
 				17B70B7D245580E900C67334 /* RemoteUserSession.swift in Sources */,
 				17BDAEB5245587BC002584AA /* UserSessionCoding.swift in Sources */,
-				17FBF731245C411C00A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
 				17BDAEB7245587BC002584AA /* UserSessionPropertyListCoder.swift in Sources */,
 				17BDAEAE245583DD002584AA /* FileUserSessionDataStore.swift in Sources */,
 				17BDAEAC245583DD002584AA /* KeychainUserSessionDataStore.swift in Sources */,
@@ -1674,14 +1678,12 @@
 				17B70B7C245580E500C67334 /* KIIPUserSessionRepository.swift in Sources */,
 				17B70B7E245580E900C67334 /* RemoteUserSession.swift in Sources */,
 				17BDAEAF245583DD002584AA /* FileUserSessionDataStore.swift in Sources */,
-				17FBF732245C411C00A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
 				17B70B76245580D700C67334 /* AuthRemoteAPI.swift in Sources */,
 				17B70B80245580ED00C67334 /* UserSession.swift in Sources */,
 				17BDAEB8245587BC002584AA /* UserSessionPropertyListCoder.swift in Sources */,
 				17BDAEAB245583DD002584AA /* Keychain.swift in Sources */,
 				17BDAEB6245587BC002584AA /* UserSessionCoding.swift in Sources */,
 				17BDAEA9245583DD002584AA /* KeychainItem.swift in Sources */,
-				17FBF72B245C18FF00A65233 /* FirebaseUserSessionRepository.swift in Sources */,
 				17B70B82245580F100C67334 /* UserProfile.swift in Sources */,
 				17B70B84245580F500C67334 /* NewAccount.swift in Sources */,
 				17B70B7A245580E000C67334 /* UserSessionRepository.swift in Sources */,
@@ -2028,6 +2030,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2062,6 +2065,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2138,6 +2142,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.UserSession;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2167,6 +2172,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.UserSession;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

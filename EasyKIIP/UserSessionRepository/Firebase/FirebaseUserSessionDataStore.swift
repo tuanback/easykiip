@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UserSession
 import Firebase
 import GoogleSignIn
 
