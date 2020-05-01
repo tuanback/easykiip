@@ -11,12 +11,14 @@ import Foundation
 public struct UserProfile: Equatable, Codable {
 
   // MARK: - Properties
+  public let id: String
   public let name: String
   public let email: String
   public let avatar: URL
 
   // MARK: - Methods
-  public init(name: String, email: String, avatar: URL) {
+  public init(id: String, name: String, email: String, avatar: URL) {
+    self.id = id
     self.name = name
     self.email = email
     self.avatar = avatar

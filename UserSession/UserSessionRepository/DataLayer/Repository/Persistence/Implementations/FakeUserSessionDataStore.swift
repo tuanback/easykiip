@@ -60,7 +60,7 @@ public class FakeUserSessionDataStore: UserSessionDataStore {
     print("Try to read user session from fake disk...")
     print("  simulating having user session with token 4321...")
     print("  returning user session with token 4321...")
-    let profile = UserProfile(name: "", email: "", avatar: makeURL())
+    let profile = UserProfile(id: "1", name: "", email: "", avatar: makeURL())
     let remoteSession = RemoteUserSession(token: "1234")
     return UserSession(profile: profile, remoteSession: remoteSession)
   }

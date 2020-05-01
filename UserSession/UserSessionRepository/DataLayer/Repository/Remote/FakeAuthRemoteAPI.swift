@@ -38,7 +38,7 @@ public struct FakeAuthRemoteAPI: AuthRemoteAPI {
   }
   
   private func createFakeUserSession() -> UserSession {
-    let profile = UserProfile(name: "Tuan Do",
+    let profile = UserProfile(id: "1", name: "Tuan Do",
                               email: "tuan@gmail.com",
                               avatar: makeURL())
     let remoteUserSession = RemoteUserSession(token: "64652626")
