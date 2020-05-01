@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1766FF7A245A589F008B263D /* EasyKIIP_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1766FF71245A589F008B263D /* EasyKIIP_iOS.framework */; };
-		1766FF83245A589F008B263D /* EasyKIIP_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 1766FF73245A589F008B263D /* EasyKIIP_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1766FF86245A589F008B263D /* EasyKIIP_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1766FF71245A589F008B263D /* EasyKIIP_iOS.framework */; };
-		1766FF87245A589F008B263D /* EasyKIIP_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1766FF71245A589F008B263D /* EasyKIIP_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		1766FFC1245A6A52008B263D /* UserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70B58245580B600C67334 /* UserSession.framework */; };
-		1766FFDA245B9158008B263D /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD9245B9158008B263D /* MainViewModelTests.swift */; };
 		1766FFEB245B9A7E008B263D /* FakeVocabRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFEA245B9A7E008B263D /* FakeVocabRemoteAPI.swift */; };
 		1766FFF2245BD993008B263D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFF1245BD993008B263D /* GoogleService-Info.plist */; };
 		17B70A86244C180200C67334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70A85244C180200C67334 /* AppDelegate.swift */; };
@@ -93,8 +87,6 @@
 		17EB44FD2454239600C9C312 /* KIIPVocabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB44FC2454239600C9C312 /* KIIPVocabRepository.swift */; };
 		17EB44FE2454239600C9C312 /* KIIPVocabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB44FC2454239600C9C312 /* KIIPVocabRepository.swift */; };
 		17EB45012454263D00C9C312 /* KIIPVocabRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB45002454263D00C9C312 /* KIIPVocabRepositoryTests.swift */; };
-		17FBF6D3245BE7FA00A65233 /* EasyKIIPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70ABA244CF1CD00C67334 /* EasyKIIPKit.framework */; };
-		17FBF6D4245BE7FA00A65233 /* EasyKIIPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70ABA244CF1CD00C67334 /* EasyKIIPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		17FBF6D8245BEB9C00A65233 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFCA245AA51C008B263D /* Strings.swift */; };
 		17FBF6D9245BEB9F00A65233 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFCA245AA51C008B263D /* Strings.swift */; };
 		17FBF6DA245BEBA200A65233 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD2245AB466008B263D /* AppSetting.swift */; };
@@ -180,41 +172,11 @@
 		627E22CE056419F471187535 /* Pods_EasyKIIPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16BC5199528F6E34ED995F6 /* Pods_EasyKIIPUITests.framework */; };
 		78F5A67A5A3AA31A192C291F /* Pods_EasyKIIPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */; };
 		805274668FD7FD7D0F7E3428 /* Pods_EasyKIIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C39FF132AEDBD39407410F /* Pods_EasyKIIP.framework */; };
-		8F2324B58B555C2D6E6CC78E /* Pods_EasyKIIP_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F167FF918FE580D7167655F /* Pods_EasyKIIP_iOS.framework */; };
 		BB50221261F05D9B6C755D4D /* Pods_UserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5C6E18E22AC4E5114C659 /* Pods_UserSession.framework */; };
 		BDA34D15CB31CE560A84D43B /* Pods_EasyKIIPKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FF93F3774D0D60E2F75D58 /* Pods_EasyKIIPKitTests.framework */; };
-		E1ACE027194536C935F8599E /* Pods_EasyKIIP_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30F3EFD1CF8ECF9E61614281 /* Pods_EasyKIIP_iOSTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1766FF7B245A589F008B263D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1766FF70245A589F008B263D;
-			remoteInfo = EasyKIIP_iOS;
-		};
-		1766FF7D245A589F008B263D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 17B70A81244C180200C67334;
-			remoteInfo = EasyKIIP;
-		};
-		1766FF84245A589F008B263D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1766FF70245A589F008B263D;
-			remoteInfo = EasyKIIP_iOS;
-		};
-		1766FFC3245A6A52008B263D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 17B70B57245580B600C67334;
-			remoteInfo = UserSession;
-		};
 		17B70A99244C180600C67334 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
@@ -264,13 +226,6 @@
 			remoteGlobalIDString = 17B70B57245580B600C67334;
 			remoteInfo = UserSession;
 		};
-		17FBF6D5245BE7FA00A65233 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 17B70AB9244CF1CD00C67334;
-			remoteInfo = EasyKIIPKit;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -280,20 +235,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				1766FF87245A589F008B263D /* EasyKIIP_iOS.framework in Embed Frameworks */,
 				17B70B6E245580B700C67334 /* UserSession.framework in Embed Frameworks */,
 				17B70AD3244CF1E500C67334 /* EasyKIIPKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		17FBF6D7245BE7FA00A65233 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				17FBF6D4245BE7FA00A65233 /* EasyKIIPKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,11 +249,6 @@
 		117EC49A333FE8EC5FF52C3D /* Pods_UserSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FF93F3774D0D60E2F75D58 /* Pods_EasyKIIPKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1766FF71245A589F008B263D /* EasyKIIP_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyKIIP_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1766FF73245A589F008B263D /* EasyKIIP_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyKIIP_iOS.h; sourceTree = "<group>"; };
-		1766FF74245A589F008B263D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1766FF79245A589F008B263D /* EasyKIIP_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyKIIP_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1766FF82245A589F008B263D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1766FF92245A5A93008B263D /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		1766FFA1245A5DAE008B263D /* NiblessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
 		1766FFA2245A5DAE008B263D /* NiblessNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessNavigationController.swift; sourceTree = "<group>"; };
@@ -330,7 +268,6 @@
 		1766FFD2245AB466008B263D /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
 		1766FFD5245ABCF6008B263D /* UIFront_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFront_Extension.swift; sourceTree = "<group>"; };
 		1766FFD7245B9131008B263D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		1766FFD9245B9158008B263D /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		1766FFDB245B9322008B263D /* MainRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRootView.swift; sourceTree = "<group>"; };
 		1766FFDD245B93FE008B263D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		1766FFE0245B9490008B263D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -425,25 +362,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1766FF6E245A589F008B263D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1766FFC1245A6A52008B263D /* UserSession.framework in Frameworks */,
-				17FBF6D3245BE7FA00A65233 /* EasyKIIPKit.framework in Frameworks */,
-				8F2324B58B555C2D6E6CC78E /* Pods_EasyKIIP_iOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1766FF76245A589F008B263D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1766FF7A245A589F008B263D /* EasyKIIP_iOS.framework in Frameworks */,
-				E1ACE027194536C935F8599E /* Pods_EasyKIIP_iOSTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		17B70A7F244C180200C67334 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -451,7 +369,6 @@
 				17B70AD2244CF1E500C67334 /* EasyKIIPKit.framework in Frameworks */,
 				17B70B6D245580B700C67334 /* UserSession.framework in Frameworks */,
 				805274668FD7FD7D0F7E3428 /* Pods_EasyKIIP.framework in Frameworks */,
-				1766FF86245A589F008B263D /* EasyKIIP_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,24 +425,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1766FF72245A589F008B263D /* EasyKIIP_iOS */ = {
-			isa = PBXGroup;
-			children = (
-				1766FF73245A589F008B263D /* EasyKIIP_iOS.h */,
-				1766FF74245A589F008B263D /* Info.plist */,
-			);
-			path = EasyKIIP_iOS;
-			sourceTree = "<group>";
-		};
-		1766FF7F245A589F008B263D /* EasyKIIP_iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				1766FF82245A589F008B263D /* Info.plist */,
-				1766FFD9245B9158008B263D /* MainViewModelTests.swift */,
-			);
-			path = EasyKIIP_iOSTests;
-			sourceTree = "<group>";
-		};
 		1766FF91245A5A75008B263D /* LaunchVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,8 +561,6 @@
 				17B70AC6244CF1CE00C67334 /* EasyKIIPKitTests */,
 				17B70B59245580B700C67334 /* UserSession */,
 				17B70B66245580B700C67334 /* UserSessionTests */,
-				1766FF72245A589F008B263D /* EasyKIIP_iOS */,
-				1766FF7F245A589F008B263D /* EasyKIIP_iOSTests */,
 				17B70A83244C180200C67334 /* Products */,
 				17B70AD1244CF1E500C67334 /* Frameworks */,
 				D2D949889511FC23CD039687 /* Pods */,
@@ -680,8 +577,6 @@
 				17B70AC2244CF1CE00C67334 /* EasyKIIPKitTests.xctest */,
 				17B70B58245580B600C67334 /* UserSession.framework */,
 				17B70B60245580B700C67334 /* UserSessionTests.xctest */,
-				1766FF71245A589F008B263D /* EasyKIIP_iOS.framework */,
-				1766FF79245A589F008B263D /* EasyKIIP_iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1053,14 +948,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1766FF6C245A589F008B263D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1766FF83245A589F008B263D /* EasyKIIP_iOS.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		17B70AB5244CF1CD00C67334 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1080,49 +967,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1766FF70245A589F008B263D /* EasyKIIP_iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1766FF8C245A589F008B263D /* Build configuration list for PBXNativeTarget "EasyKIIP_iOS" */;
-			buildPhases = (
-				AB3007EF64A94644A5DACC20 /* [CP] Check Pods Manifest.lock */,
-				1766FF6C245A589F008B263D /* Headers */,
-				1766FF6D245A589F008B263D /* Sources */,
-				1766FF6E245A589F008B263D /* Frameworks */,
-				1766FF6F245A589F008B263D /* Resources */,
-				17FBF6D7245BE7FA00A65233 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1766FFC4245A6A52008B263D /* PBXTargetDependency */,
-				17FBF6D6245BE7FA00A65233 /* PBXTargetDependency */,
-			);
-			name = EasyKIIP_iOS;
-			productName = EasyKIIP_iOS;
-			productReference = 1766FF71245A589F008B263D /* EasyKIIP_iOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		1766FF78245A589F008B263D /* EasyKIIP_iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1766FF8D245A589F008B263D /* Build configuration list for PBXNativeTarget "EasyKIIP_iOSTests" */;
-			buildPhases = (
-				F84D8C8025B8F52FEC15339E /* [CP] Check Pods Manifest.lock */,
-				1766FF75245A589F008B263D /* Sources */,
-				1766FF76245A589F008B263D /* Frameworks */,
-				1766FF77245A589F008B263D /* Resources */,
-				03740D7E24415A20657CB0BF /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1766FF7C245A589F008B263D /* PBXTargetDependency */,
-				1766FF7E245A589F008B263D /* PBXTargetDependency */,
-			);
-			name = EasyKIIP_iOSTests;
-			productName = EasyKIIP_iOSTests;
-			productReference = 1766FF79245A589F008B263D /* EasyKIIP_iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		17B70A81244C180200C67334 /* EasyKIIP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17B70AAC244C180600C67334 /* Build configuration list for PBXNativeTarget "EasyKIIP" */;
@@ -1140,7 +984,6 @@
 			dependencies = (
 				17B70AD5244CF1E500C67334 /* PBXTargetDependency */,
 				17B70B6C245580B700C67334 /* PBXTargetDependency */,
-				1766FF85245A589F008B263D /* PBXTargetDependency */,
 			);
 			name = EasyKIIP;
 			productName = EasyKIIP;
@@ -1274,14 +1117,6 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Real Life Swift";
 				TargetAttributes = {
-					1766FF70245A589F008B263D = {
-						CreatedOnToolsVersion = 11.4.1;
-						LastSwiftMigration = 1140;
-					};
-					1766FF78245A589F008B263D = {
-						CreatedOnToolsVersion = 11.4.1;
-						TestTargetID = 17B70A81244C180200C67334;
-					};
 					17B70A81244C180200C67334 = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -1331,27 +1166,11 @@
 				17B70AC1244CF1CE00C67334 /* EasyKIIPKitTests */,
 				17B70B57245580B600C67334 /* UserSession */,
 				17B70B5F245580B700C67334 /* UserSessionTests */,
-				1766FF70245A589F008B263D /* EasyKIIP_iOS */,
-				1766FF78245A589F008B263D /* EasyKIIP_iOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1766FF6F245A589F008B263D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1766FF77245A589F008B263D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		17B70A80244C180200C67334 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1410,23 +1229,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03740D7E24415A20657CB0BF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP_iOSTests/Pods-EasyKIIP_iOSTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP_iOSTests/Pods-EasyKIIP_iOSTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP_iOSTests/Pods-EasyKIIP_iOSTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		14AABF6C0892ADC61F7F3D98 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1615,28 +1417,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AB3007EF64A94644A5DACC20 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EasyKIIP_iOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		DC158DF6EF5D937E577E1FF6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1671,46 +1451,9 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyKIIP/Pods-EasyKIIP-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F84D8C8025B8F52FEC15339E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EasyKIIP_iOSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1766FF6D245A589F008B263D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1766FF75245A589F008B263D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1766FFDA245B9158008B263D /* MainViewModelTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		17B70A7E244C180200C67334 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1909,26 +1652,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1766FF7C245A589F008B263D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1766FF70245A589F008B263D /* EasyKIIP_iOS */;
-			targetProxy = 1766FF7B245A589F008B263D /* PBXContainerItemProxy */;
-		};
-		1766FF7E245A589F008B263D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 17B70A81244C180200C67334 /* EasyKIIP */;
-			targetProxy = 1766FF7D245A589F008B263D /* PBXContainerItemProxy */;
-		};
-		1766FF85245A589F008B263D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1766FF70245A589F008B263D /* EasyKIIP_iOS */;
-			targetProxy = 1766FF84245A589F008B263D /* PBXContainerItemProxy */;
-		};
-		1766FFC4245A6A52008B263D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 17B70B57245580B600C67334 /* UserSession */;
-			targetProxy = 1766FFC3245A6A52008B263D /* PBXContainerItemProxy */;
-		};
 		17B70A9A244C180600C67334 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 17B70A81244C180200C67334 /* EasyKIIP */;
@@ -1964,11 +1687,6 @@
 			target = 17B70B57245580B600C67334 /* UserSession */;
 			targetProxy = 17B70B6B245580B700C67334 /* PBXContainerItemProxy */;
 		};
-		17FBF6D6245BE7FA00A65233 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 17B70AB9244CF1CD00C67334 /* EasyKIIPKit */;
-			targetProxy = 17FBF6D5245BE7FA00A65233 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1992,107 +1710,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1766FF88245A589F008B263D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7F54F7E7F01C9D994810F21 /* Pods-EasyKIIP_iOS.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = CW3DR8XJT7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = EasyKIIP_iOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.kiip.ios;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		1766FF89245A589F008B263D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F73EEDCDEA8E5784229A606 /* Pods-EasyKIIP_iOS.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = CW3DR8XJT7;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = EasyKIIP_iOS/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.kiip.ios;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1766FF8A245A589F008B263D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98B1027361CFA56309F7D4EE /* Pods-EasyKIIP_iOSTests.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4JQH63J424;
-				INFOPLIST_FILE = EasyKIIP_iOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tuando.kiip.EasyKIIP-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy KIIP.app/Easy KIIP";
-			};
-			name = Debug;
-		};
-		1766FF8B245A589F008B263D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8D359D2E39FA82ECCBE0866 /* Pods-EasyKIIP_iOSTests.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4JQH63J424;
-				INFOPLIST_FILE = EasyKIIP_iOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tuando.kiip.EasyKIIP-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy KIIP.app/Easy KIIP";
-			};
-			name = Release;
-		};
 		17B70AAA244C180600C67334 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2558,24 +2175,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1766FF8C245A589F008B263D /* Build configuration list for PBXNativeTarget "EasyKIIP_iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1766FF88245A589F008B263D /* Debug */,
-				1766FF89245A589F008B263D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1766FF8D245A589F008B263D /* Build configuration list for PBXNativeTarget "EasyKIIP_iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1766FF8A245A589F008B263D /* Debug */,
-				1766FF8B245A589F008B263D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		17B70A7D244C180200C67334 /* Build configuration list for PBXProject "EasyKIIP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

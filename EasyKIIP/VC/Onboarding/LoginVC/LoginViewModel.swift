@@ -33,6 +33,7 @@ public class LoginViewModel {
         return
       }
       print(user)
+      signedInResponder.singedIn()
     }
   }
 }

@@ -23,8 +23,7 @@ private struct LanguageBundleManager {
     }
     
     let languageCode = AppSetting.languageCode
-    guard let frameworkBundle = Bundle(identifier: "com.tuando.kiip.ios"),
-      let path = frameworkBundle.path(forResource: languageCode.rawValue, ofType: "lproj"),
+    guard let path = Bundle.main.path(forResource: languageCode.rawValue, ofType: "lproj"),
       let bundle = Bundle(path: path) else {
         return Bundle.main
     }

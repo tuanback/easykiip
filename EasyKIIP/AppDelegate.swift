@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     configFirebaseAndGoogleSignIn()
     // Use to change app language
-    //AppSetting.languageCode = .en
+    AppSetting.languageCode = .vi
     
     let launchVC = injectionContainer.makeLaunchVC()
     window = UIWindow(frame: UIScreen.main.bounds)
