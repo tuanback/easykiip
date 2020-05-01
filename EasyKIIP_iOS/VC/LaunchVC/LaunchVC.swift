@@ -14,12 +14,16 @@ public class LaunchVC: NiblessViewController {
   
   private let viewModel: LaunchViewModel
   private let makeOnboardingVC: () -> (OnboardingVC)
+  private let makeMainVC: ()->(MainVC)
   
   private let disposeBag = DisposeBag()
   
-  public init(viewModel: LaunchViewModel, makeOnboardingVC: @escaping () -> (OnboardingVC)) {
+  public init(viewModel: LaunchViewModel,
+              makeOnboardingVC: @escaping () -> (OnboardingVC),
+              makeMainVC: @escaping () -> (MainVC)) {
     self.viewModel = viewModel
     self.makeOnboardingVC = makeOnboardingVC
+    self.makeMainVC = makeMainVC
     super.init()
   }
   
@@ -44,14 +48,15 @@ public class LaunchVC: NiblessViewController {
         guard let strongSelf = self else { return }
         switch event {
         case .present(let view):
-          guard let view = view as? StartUpView else { return }
           switch view {
           case .onboarding:
             let onboardingVC = strongSelf.makeOnboardingVC()
             onboardingVC.modalPresentationStyle = .fullScreen
             strongSelf.present(onboardingVC, animated: true, completion: nil)
           case .main:
-            break
+            let mainVC = strongSelf.makeMainVC()
+            mainVC.modalPresentationStyle = .fullScreen
+            strongSelf.present(mainVC, animated: true, completion: nil)
           }
         default:
           break

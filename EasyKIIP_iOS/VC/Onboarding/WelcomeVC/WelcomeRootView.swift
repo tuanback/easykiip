@@ -9,15 +9,19 @@
 import Foundation
 import UIKit
 import SnapKit
+import Action
 
-class OnboardingRootView: NiblessView {
+class WelcomeRootView: NiblessView {
+  
+  private var viewModel: WelcomeViewModel
   
   private var labelLogo: UILabel!
   private var labelTitle: UILabel!
   private var labelMessage: UILabel!
   private var buttonLogin: UIButton!
   
-  override init(frame: CGRect) {
+  init(frame: CGRect = .zero, viewModel: WelcomeViewModel) {
+    self.viewModel = viewModel
     super.init(frame: frame)
     styleView()
     setupViews()
@@ -31,18 +35,29 @@ class OnboardingRootView: NiblessView {
     
     labelLogo = UILabel()
     labelLogo.text = Strings.logo
+    labelLogo.font = UIFont.appFontDemiBold(ofSize: 50)
+    labelLogo.textColor = UIColor.white
     
     labelTitle = UILabel()
     labelTitle.text = Strings.onboardingTitle
     labelTitle.textAlignment = .center
+    labelTitle.font = UIFont.appFontDemiBold(ofSize: 25)
+    labelTitle.textColor = UIColor.white
     
     labelMessage = UILabel()
     labelMessage.text = Strings.onboardingMessage
     labelMessage.numberOfLines = 0
     labelMessage.textAlignment = .center
+    labelMessage.font = UIFont.appFontMedium(ofSize: 18)
+    labelMessage.textColor = UIColor.white
     
     buttonLogin = UIButton()
+    buttonLogin.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 25)
     buttonLogin.setTitle(Strings.login, for: .normal)
+    buttonLogin.backgroundColor = UIColor.white
+    buttonLogin.setTitleColor(UIColor.black, for: .normal)
+    
+    buttonLogin.rx.action = viewModel.loginAction
     
     addSubview(labelLogo)
     addSubview(labelTitle)

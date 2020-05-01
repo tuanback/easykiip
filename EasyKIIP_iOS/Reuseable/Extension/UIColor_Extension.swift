@@ -33,4 +33,12 @@ extension UIColor {
     UIColor(hexString: "EB5757")
   }
   
+  class var appBackground: UIColor {
+    if #available(iOS 13.0, *) {
+      return UIColor.systemBackground
+    } else {
+      return UIColor.white
+    }
+  }
+  
 }

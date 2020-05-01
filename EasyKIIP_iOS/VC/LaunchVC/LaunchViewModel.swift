@@ -15,7 +15,7 @@ public class LaunchViewModel {
   
   private let userSessionRepository: UserSessionRepository
   
-  let oNavigation = PublishRelay<NavigationEvent>()
+  let oNavigation = PublishRelay<NavigationEvent<StartUpView>>()
   
   init(userSessionRepository: UserSessionRepository) {
     self.userSessionRepository = userSessionRepository

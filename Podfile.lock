@@ -1,4 +1,7 @@
 PODS:
+  - Action (4.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - Alamofire (5.1.0)
   - RxAlamofire (5.2.0):
     - RxAlamofire/Core (= 5.2.0)
@@ -19,6 +22,7 @@ PODS:
   - SwiftDate (6.1.0)
 
 DEPENDENCIES:
+  - Action
   - RxAlamofire
   - RxBlocking
   - RxCocoa
@@ -36,11 +40,13 @@ SPEC REPOS:
     - RxTest
     - SwiftDate
   trunk:
+    - Action
     - Alamofire
     - RxAlamofire
     - SnapKit
 
 SPEC CHECKSUMS:
+  Action: 0d14986aad0f1330aa27ce65d0cdeaacbb63d91c
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   RxAlamofire: 878eb06baefd76df6062889be11592434e6c4a95
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
@@ -51,6 +57,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
 
-PODFILE CHECKSUM: 9c541884ebaab87ebef493fdbc3c510af4c61349
+PODFILE CHECKSUM: f735357bf478069e51b24103b47ee5598b6f3de7
 
 COCOAPODS: 1.9.1

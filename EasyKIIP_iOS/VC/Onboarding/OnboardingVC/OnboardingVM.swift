@@ -10,21 +10,36 @@ import Foundation
 import UserSession
 import RxSwift
 import RxCocoa
+import Action
 
 protocol SignedInResponder {
   func singedIn()
 }
 
-enum OnboardingView: AppView {
-  case login
+public protocol GoToLogInNavigator {
+  func navigateToLogIn()
 }
 
-public class OnboardingVM: SignedInResponder {
+enum OnboardingView: AppView {
+  case welcome
+  case login
   
-  var oNavigation = PublishRelay<NavigationEvent>()
+  public func hidesNavigationBar() -> Bool {
+    switch self {
+    case .welcome:
+      return true
+    case .login:
+      return false
+    }
+  }
+}
+
+public class OnboardingVM: SignedInResponder, GoToLogInNavigator {
   
-  func logInButtonClicked() {
-    oNavigation.accept(.push(view: OnboardingView.login))
+  var oNavigation = BehaviorRelay<NavigationEvent<OnboardingView>>(value: .push(view: .welcome))
+  
+  public func navigateToLogIn() {
+    oNavigation.accept(.push(view: .login))
   }
   
   func singedIn() {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol VocabDataStore {
+public protocol VocabDataStore {
   func getListOfBook() -> [Book]
   func getListOfLesson(in book: Book) -> [Lesson]
   func getListOfVocabs(in lesson: Lesson) -> [Vocab]

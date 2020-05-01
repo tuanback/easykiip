@@ -14,7 +14,7 @@ public class KIIPVocabRepository: VocabRepository {
   private let remoteAPI: VocabRemoteAPI
   private let dataStore: VocabDataStore
   
-  init(remoteAPI: VocabRemoteAPI, dataStore: VocabDataStore) {
+  public init(remoteAPI: VocabRemoteAPI, dataStore: VocabDataStore) {
     self.remoteAPI = remoteAPI
     self.dataStore = dataStore
   }

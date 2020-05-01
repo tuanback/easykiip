@@ -8,11 +8,11 @@
 
 import Foundation
 
-class VocabDataStoreInMemory: VocabDataStore {
+public class VocabDataStoreInMemory: VocabDataStore {
   
   private var books: [Book] = []
 
-  init() {
+  public init() {
     books = initInMemoryDataStore()
   }
   
@@ -44,33 +44,33 @@ class VocabDataStoreInMemory: VocabDataStore {
     return [book1, book2, book3]
   }
   
-  func getListOfBook() -> [Book] {
+  public func getListOfBook() -> [Book] {
     return books
   }
   
-  func getListOfLesson(in book: Book) -> [Lesson] {
+  public func getListOfLesson(in book: Book) -> [Lesson] {
     return book.lessons
   }
   
-  func getListOfVocabs(in lesson: Lesson) -> [Vocab] {
+  public func getListOfVocabs(in lesson: Lesson) -> [Vocab] {
     return lesson.vocabs
   }
   
-  func markVocabAsMastered(_ vocab: Vocab) {
+  public func markVocabAsMastered(_ vocab: Vocab) {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
     if let v = vocabs.first(where: { $0.id == vocab.id }) {
       v.markAsIsMastered()
     }
   }
   
-  func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool) {
+  public func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool) {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
     if let v = vocabs.first(where: { $0.id == vocab.id }) {
       isCorrectAnswer ? v.increaseNumberOfCorrectAnswerByOne() : v.increaseNumberOfWrongAnswerByOne()
     }
   }
   
-  func getVocab(by id: UInt) -> Vocab? {
+  public func getVocab(by id: UInt) -> Vocab? {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
     if let v = vocabs.first(where: { $0.id == id }) {
       return v
@@ -78,7 +78,7 @@ class VocabDataStoreInMemory: VocabDataStore {
     return nil
   }
   
-  func searchVocab(keyword: String) -> [Vocab]  {
+  public func searchVocab(keyword: String) -> [Vocab]  {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
     
     let result = vocabs.filter { (vocab) -> Bool in
@@ -96,7 +96,7 @@ class VocabDataStoreInMemory: VocabDataStore {
     return result
   }
   
-  func syncPracticeHistory(vocabID: UInt, testTaken: UInt, correctAnswer: UInt, firstLearnDate: Date, lastTimeTest: Date) {
+  public func syncPracticeHistory(vocabID: UInt, testTaken: UInt, correctAnswer: UInt, firstLearnDate: Date, lastTimeTest: Date) {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
     if let v = vocabs.first(where: { $0.id == vocabID }) {
       try? v.setTestTakenData(numberOfTestTaken: testTaken, numberOfCorrectAnswer: correctAnswer, firstLearnDate: firstLearnDate, lastTimeTest: lastTimeTest)

@@ -44,6 +44,7 @@ target 'EasyKIIP_iOS' do
   pod 'SnapKit'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'Action'
   
   target 'EasyKIIP_iOSTests' do
     inherit! :search_paths

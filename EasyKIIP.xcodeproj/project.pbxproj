@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1766FF7A245A589F008B263D /* EasyKIIP_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1766FF71245A589F008B263D /* EasyKIIP_iOS.framework */; };
-		1766FF81245A589F008B263D /* EasyKIIP_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FF80245A589F008B263D /* EasyKIIP_iOSTests.swift */; };
 		1766FF83245A589F008B263D /* EasyKIIP_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 1766FF73245A589F008B263D /* EasyKIIP_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1766FF86245A589F008B263D /* EasyKIIP_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1766FF71245A589F008B263D /* EasyKIIP_iOS.framework */; };
 		1766FF87245A589F008B263D /* EasyKIIP_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1766FF71245A589F008B263D /* EasyKIIP_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -28,8 +27,7 @@
 		1766FFB4245A5F57008B263D /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB2245A5F57008B263D /* AppView.swift */; };
 		1766FFB6245A5FF5008B263D /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB5245A5FF5008B263D /* Navigation.swift */; };
 		1766FFB7245A5FF5008B263D /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB5245A5FF5008B263D /* Navigation.swift */; };
-		1766FFB9245A66E4008B263D /* OnboardingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB8245A66E4008B263D /* OnboardingRootView.swift */; };
-		1766FFBA245A66E4008B263D /* OnboardingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB8245A66E4008B263D /* OnboardingRootView.swift */; };
+		1766FFB9245A66E4008B263D /* WelcomeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB8245A66E4008B263D /* WelcomeRootView.swift */; };
 		1766FFBC245A682F008B263D /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFBB245A682F008B263D /* LaunchVC.swift */; };
 		1766FFBE245A6893008B263D /* LaunchRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFBD245A6893008B263D /* LaunchRootView.swift */; };
 		1766FFC0245A68F6008B263D /* AppDenpendencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFBF245A68F6008B263D /* AppDenpendencyContainer.swift */; };
@@ -40,6 +38,19 @@
 		1766FFD1245AB037008B263D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFCF245AB037008B263D /* Localizable.strings */; };
 		1766FFD3245AB466008B263D /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD2245AB466008B263D /* AppSetting.swift */; };
 		1766FFD4245AB49E008B263D /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD2245AB466008B263D /* AppSetting.swift */; };
+		1766FFD6245ABCF6008B263D /* UIFront_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD5245ABCF6008B263D /* UIFront_Extension.swift */; };
+		1766FFD8245B9131008B263D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD7245B9131008B263D /* MainViewModel.swift */; };
+		1766FFDA245B9158008B263D /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD9245B9158008B263D /* MainViewModelTests.swift */; };
+		1766FFDC245B9322008B263D /* MainRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFDB245B9322008B263D /* MainRootView.swift */; };
+		1766FFDE245B93FE008B263D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFDD245B93FE008B263D /* MainVC.swift */; };
+		1766FFE1245B9490008B263D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE0245B9490008B263D /* LoginViewModel.swift */; };
+		1766FFE3245B9572008B263D /* LoginRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE2245B9572008B263D /* LoginRootView.swift */; };
+		1766FFE5245B95E1008B263D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE4245B95E1008B263D /* LoginVC.swift */; };
+		1766FFE7245B9649008B263D /* OnboardingDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE6245B9649008B263D /* OnboardingDependencyContainer.swift */; };
+		1766FFE9245B993F008B263D /* SignedInDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE8245B993F008B263D /* SignedInDependencyContainer.swift */; };
+		1766FFEB245B9A7E008B263D /* FakeVocabRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFEA245B9A7E008B263D /* FakeVocabRemoteAPI.swift */; };
+		1766FFEE245BADA2008B263D /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFED245BADA2008B263D /* WelcomeViewModel.swift */; };
+		1766FFF0245BB0CB008B263D /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFEF245BB0CB008B263D /* WelcomeVC.swift */; };
 		17B70A86244C180200C67334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70A85244C180200C67334 /* AppDelegate.swift */; };
 		17B70A8F244C180500C67334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A8E244C180500C67334 /* Assets.xcassets */; };
 		17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A90244C180500C67334 /* LaunchScreen.storyboard */; };
@@ -50,8 +61,6 @@
 		17B70AD2244CF1E500C67334 /* EasyKIIPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70ABA244CF1CD00C67334 /* EasyKIIPKit.framework */; };
 		17B70AD3244CF1E500C67334 /* EasyKIIPKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70ABA244CF1CD00C67334 /* EasyKIIPKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		17B70AE2244CF37000C67334 /* BookListingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70AE1244CF37000C67334 /* BookListingViewModelTests.swift */; };
-		17B70AE5244CF40600C67334 /* BookListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70AE4244CF40600C67334 /* BookListingViewModel.swift */; };
-		17B70AE6244CF40600C67334 /* BookListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70AE4244CF40600C67334 /* BookListingViewModel.swift */; };
 		17B70AEA244CF4E300C67334 /* VocabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70AE9244CF4E300C67334 /* VocabRepository.swift */; };
 		17B70AEB244CF4E300C67334 /* VocabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70AE9244CF4E300C67334 /* VocabRepository.swift */; };
 		17B70AF0244CF57100C67334 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70AEF244CF57100C67334 /* Book.swift */; };
@@ -237,7 +246,6 @@
 		1766FF73245A589F008B263D /* EasyKIIP_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyKIIP_iOS.h; sourceTree = "<group>"; };
 		1766FF74245A589F008B263D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1766FF79245A589F008B263D /* EasyKIIP_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyKIIP_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1766FF80245A589F008B263D /* EasyKIIP_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyKIIP_iOSTests.swift; sourceTree = "<group>"; };
 		1766FF82245A589F008B263D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1766FF92245A5A93008B263D /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		1766FFA1245A5DAE008B263D /* NiblessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
@@ -247,7 +255,7 @@
 		1766FFAE245A5E40008B263D /* OnboardingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVM.swift; sourceTree = "<group>"; };
 		1766FFB2245A5F57008B263D /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		1766FFB5245A5FF5008B263D /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
-		1766FFB8245A66E4008B263D /* OnboardingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRootView.swift; sourceTree = "<group>"; };
+		1766FFB8245A66E4008B263D /* WelcomeRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRootView.swift; sourceTree = "<group>"; };
 		1766FFBB245A682F008B263D /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 		1766FFBD245A6893008B263D /* LaunchRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchRootView.swift; sourceTree = "<group>"; };
 		1766FFBF245A68F6008B263D /* AppDenpendencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDenpendencyContainer.swift; sourceTree = "<group>"; };
@@ -256,6 +264,19 @@
 		1766FFCC245AA6D2008B263D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1766FFD0245AB037008B263D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1766FFD2245AB466008B263D /* AppSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetting.swift; sourceTree = "<group>"; };
+		1766FFD5245ABCF6008B263D /* UIFront_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFront_Extension.swift; sourceTree = "<group>"; };
+		1766FFD7245B9131008B263D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		1766FFD9245B9158008B263D /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		1766FFDB245B9322008B263D /* MainRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRootView.swift; sourceTree = "<group>"; };
+		1766FFDD245B93FE008B263D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		1766FFE0245B9490008B263D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1766FFE2245B9572008B263D /* LoginRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRootView.swift; sourceTree = "<group>"; };
+		1766FFE4245B95E1008B263D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		1766FFE6245B9649008B263D /* OnboardingDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDependencyContainer.swift; sourceTree = "<group>"; };
+		1766FFE8245B993F008B263D /* SignedInDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignedInDependencyContainer.swift; sourceTree = "<group>"; };
+		1766FFEA245B9A7E008B263D /* FakeVocabRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeVocabRemoteAPI.swift; sourceTree = "<group>"; };
+		1766FFED245BADA2008B263D /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
+		1766FFEF245BB0CB008B263D /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		17B70A82244C180200C67334 /* Easy KIIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy KIIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70A85244C180200C67334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17B70A8E244C180500C67334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -273,7 +294,6 @@
 		17B70AC2244CF1CE00C67334 /* EasyKIIPKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyKIIPKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70AC9244CF1CE00C67334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17B70AE1244CF37000C67334 /* BookListingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListingViewModelTests.swift; sourceTree = "<group>"; };
-		17B70AE4244CF40600C67334 /* BookListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListingViewModel.swift; sourceTree = "<group>"; };
 		17B70AE9244CF4E300C67334 /* VocabRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabRepository.swift; sourceTree = "<group>"; };
 		17B70AEF244CF57100C67334 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		17B70AF2244DBDCC00C67334 /* PraticeHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraticeHistory.swift; sourceTree = "<group>"; };
@@ -439,8 +459,8 @@
 		1766FF7F245A589F008B263D /* EasyKIIP_iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				1766FF80245A589F008B263D /* EasyKIIP_iOSTests.swift */,
 				1766FF82245A589F008B263D /* Info.plist */,
+				1766FFD9245B9158008B263D /* MainViewModelTests.swift */,
 			);
 			path = EasyKIIP_iOSTests;
 			sourceTree = "<group>";
@@ -459,6 +479,8 @@
 			isa = PBXGroup;
 			children = (
 				1766FFBF245A68F6008B263D /* AppDenpendencyContainer.swift */,
+				1766FFE6245B9649008B263D /* OnboardingDependencyContainer.swift */,
+				1766FFE8245B993F008B263D /* SignedInDependencyContainer.swift */,
 			);
 			path = DependencyContainer;
 			sourceTree = "<group>";
@@ -466,6 +488,8 @@
 		1766FF99245A5CD0008B263D /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				1766FFEC245BAD89008B263D /* WelcomeVC */,
+				1766FFDF245B947E008B263D /* LoginVC */,
 				1766FFAA245A5DC9008B263D /* OnboardingVC */,
 			);
 			path = Onboarding;
@@ -474,6 +498,9 @@
 		1766FF9A245A5CDC008B263D /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
+				1766FFD7245B9131008B263D /* MainViewModel.swift */,
+				1766FFDB245B9322008B263D /* MainRootView.swift */,
+				1766FFDD245B93FE008B263D /* MainVC.swift */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -513,7 +540,6 @@
 			children = (
 				1766FFAB245A5E0A008B263D /* OnboardingVC.swift */,
 				1766FFAE245A5E40008B263D /* OnboardingVM.swift */,
-				1766FFB8245A66E4008B263D /* OnboardingRootView.swift */,
 			);
 			path = OnboardingVC;
 			sourceTree = "<group>";
@@ -531,6 +557,7 @@
 			isa = PBXGroup;
 			children = (
 				1766FFC7245A72CC008B263D /* UIColor_Extension.swift */,
+				1766FFD5245ABCF6008B263D /* UIFront_Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -542,6 +569,26 @@
 				1766FFD2245AB466008B263D /* AppSetting.swift */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		1766FFDF245B947E008B263D /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				1766FFE0245B9490008B263D /* LoginViewModel.swift */,
+				1766FFE2245B9572008B263D /* LoginRootView.swift */,
+				1766FFE4245B95E1008B263D /* LoginVC.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		1766FFEC245BAD89008B263D /* WelcomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				1766FFED245BADA2008B263D /* WelcomeViewModel.swift */,
+				1766FFB8245A66E4008B263D /* WelcomeRootView.swift */,
+				1766FFEF245BB0CB008B263D /* WelcomeVC.swift */,
+			);
+			path = WelcomeVC;
 			sourceTree = "<group>";
 		};
 		17B70A79244C180200C67334 = {
@@ -643,14 +690,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		17B70ADA244CF22200C67334 /* UILayer */ = {
-			isa = PBXGroup;
-			children = (
-				17B70AE3244CF3D800C67334 /* BookListing */,
-			);
-			path = UILayer;
-			sourceTree = "<group>";
-		};
 		17B70ADB244CF23A00C67334 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,14 +702,6 @@
 			isa = PBXGroup;
 			children = (
 				17B70AE1244CF37000C67334 /* BookListingViewModelTests.swift */,
-			);
-			path = BookListing;
-			sourceTree = "<group>";
-		};
-		17B70AE3244CF3D800C67334 /* BookListing */ = {
-			isa = PBXGroup;
-			children = (
-				17B70AE4244CF40600C67334 /* BookListingViewModel.swift */,
 			);
 			path = BookListing;
 			sourceTree = "<group>";
@@ -784,6 +815,7 @@
 			isa = PBXGroup;
 			children = (
 				17B70B262453CA1100C67334 /* VocabRemoteAPI.swift */,
+				1766FFEA245B9A7E008B263D /* FakeVocabRemoteAPI.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -792,7 +824,6 @@
 			isa = PBXGroup;
 			children = (
 				17B70AE7244CF4B400C67334 /* DataLayer */,
-				17B70ADA244CF22200C67334 /* UILayer */,
 			);
 			path = VocabRepository;
 			sourceTree = "<group>";
@@ -1579,19 +1610,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1766FFE5245B95E1008B263D /* LoginVC.swift in Sources */,
+				1766FFEE245BADA2008B263D /* WelcomeViewModel.swift in Sources */,
+				1766FFE3245B9572008B263D /* LoginRootView.swift in Sources */,
 				1766FFA6245A5DAE008B263D /* NiblessNavigationController.swift in Sources */,
 				1766FFA8245A5DAE008B263D /* NiblessViewController.swift in Sources */,
 				1766FFAC245A5E0A008B263D /* OnboardingVC.swift in Sources */,
+				1766FFDC245B9322008B263D /* MainRootView.swift in Sources */,
 				1766FFBC245A682F008B263D /* LaunchVC.swift in Sources */,
-				1766FFB9245A66E4008B263D /* OnboardingRootView.swift in Sources */,
+				1766FFB9245A66E4008B263D /* WelcomeRootView.swift in Sources */,
+				1766FFD6245ABCF6008B263D /* UIFront_Extension.swift in Sources */,
+				1766FFE7245B9649008B263D /* OnboardingDependencyContainer.swift in Sources */,
 				1766FFD3245AB466008B263D /* AppSetting.swift in Sources */,
+				1766FFE1245B9490008B263D /* LoginViewModel.swift in Sources */,
 				1766FFC0245A68F6008B263D /* AppDenpendencyContainer.swift in Sources */,
+				1766FFD8245B9131008B263D /* MainViewModel.swift in Sources */,
 				1766FFCB245AA51C008B263D /* Strings.swift in Sources */,
 				1766FFC8245A72CC008B263D /* UIColor_Extension.swift in Sources */,
+				1766FFF0245BB0CB008B263D /* WelcomeVC.swift in Sources */,
+				1766FFDE245B93FE008B263D /* MainVC.swift in Sources */,
 				1766FFB6245A5FF5008B263D /* Navigation.swift in Sources */,
 				1766FFB3245A5F57008B263D /* AppView.swift in Sources */,
 				1766FFBE245A6893008B263D /* LaunchRootView.swift in Sources */,
 				1766FFAF245A5E40008B263D /* OnboardingVM.swift in Sources */,
+				1766FFE9245B993F008B263D /* SignedInDependencyContainer.swift in Sources */,
 				1766FF93245A5A93008B263D /* LaunchViewModel.swift in Sources */,
 				1766FFA4245A5DAE008B263D /* NiblessView.swift in Sources */,
 			);
@@ -1604,12 +1646,11 @@
 				1766FFA7245A5DAE008B263D /* NiblessNavigationController.swift in Sources */,
 				1766FFCE245AAF4C008B263D /* Strings.swift in Sources */,
 				1766FFD4245AB49E008B263D /* AppSetting.swift in Sources */,
+				1766FFDA245B9158008B263D /* MainViewModelTests.swift in Sources */,
 				1766FFAD245A5E0A008B263D /* OnboardingVC.swift in Sources */,
 				1766FFA5245A5DAE008B263D /* NiblessView.swift in Sources */,
-				1766FFBA245A66E4008B263D /* OnboardingRootView.swift in Sources */,
 				1766FFA9245A5DAE008B263D /* NiblessViewController.swift in Sources */,
 				1766FFB4245A5F57008B263D /* AppView.swift in Sources */,
-				1766FF81245A589F008B263D /* EasyKIIP_iOSTests.swift in Sources */,
 				1766FFB7245A5FF5008B263D /* Navigation.swift in Sources */,
 				1766FFB0245A5E40008B263D /* OnboardingVM.swift in Sources */,
 				1766FF94245A5A93008B263D /* LaunchViewModel.swift in Sources */,
@@ -1644,8 +1685,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17B70AE5244CF40600C67334 /* BookListingViewModel.swift in Sources */,
 				17B70AF3244DBDCC00C67334 /* PraticeHistory.swift in Sources */,
+				1766FFEB245B9A7E008B263D /* FakeVocabRemoteAPI.swift in Sources */,
 				17B70AEA244CF4E300C67334 /* VocabRepository.swift in Sources */,
 				17B70B0D244F132F00C67334 /* ProficiencyCalculator.swift in Sources */,
 				17B70B03244DC7F800C67334 /* Vocab.swift in Sources */,
@@ -1668,7 +1709,6 @@
 				17B70B1E245308EC00C67334 /* Lesson.swift in Sources */,
 				17B70B04244DC7F800C67334 /* Vocab.swift in Sources */,
 				17B70B07244DC80300C67334 /* VocabTests.swift in Sources */,
-				17B70AE6244CF40600C67334 /* BookListingViewModel.swift in Sources */,
 				17B70AF4244DBDCC00C67334 /* PraticeHistory.swift in Sources */,
 				17B70B282453CA1100C67334 /* VocabRemoteAPI.swift in Sources */,
 				17B70B162451C0F900C67334 /* ReadingPart.swift in Sources */,

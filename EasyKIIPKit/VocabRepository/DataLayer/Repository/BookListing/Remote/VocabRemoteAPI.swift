@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol VocabRemoteAPI {
+public protocol VocabRemoteAPI {
   func loadPracticeHistory(completion: @escaping ([PracticeHistory])->(Void))
 }
