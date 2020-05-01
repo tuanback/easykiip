@@ -14,10 +14,10 @@ public struct UserProfile: Equatable, Codable {
   public let id: String
   public let name: String
   public let email: String
-  public let avatar: URL
+  public let avatar: String?
 
   // MARK: - Methods
-  public init(id: String, name: String, email: String, avatar: URL) {
+  public init(id: String, name: String, email: String, avatar: String?) {
     self.id = id
     self.name = name
     self.email = email

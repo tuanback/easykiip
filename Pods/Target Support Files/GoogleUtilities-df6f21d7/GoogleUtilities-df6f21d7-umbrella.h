@@ -10,7 +10,9 @@
 #endif
 #endif
 
+#import "GULLoggerLevel.h"
+#import "GULNSData+zlib.h"
 
-FOUNDATION_EXPORT double Pods_EasyKIIP_iOSVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_EasyKIIP_iOSVersionString[];
+FOUNDATION_EXPORT double GoogleUtilitiesVersionNumber;
+FOUNDATION_EXPORT const unsigned char GoogleUtilitiesVersionString[];
 

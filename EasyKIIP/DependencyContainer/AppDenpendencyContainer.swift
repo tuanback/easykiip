@@ -15,16 +15,12 @@ public class AppDependencyContainer {
   
   public init() {
     func makeUserSessionDataStore() -> UserSessionDataStore {
-      return FakeUserSessionDataStore(hasToken: false)
-    }
-    
-    func makeRemoteAPI() -> AuthRemoteAPI {
-      return FakeAuthRemoteAPI()
+      return FirebaseUserSessionDataStore()
     }
     
     let dataStore = makeUserSessionDataStore()
-    let remoteAPI = makeRemoteAPI()
-    self.userSessionRepository = KIIPUserSessionRepository(dataStore: dataStore, remoteAPI: remoteAPI)
+    
+    self.userSessionRepository = FirebaseUserSessionRepository(dataStore: dataStore)
   }
   
   public func makeLaunchVC() -> LaunchVC {

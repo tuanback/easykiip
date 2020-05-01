@@ -10,6 +10,7 @@ target 'EasyKIIP' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
+  pod 'SnapKit'
   
   target 'EasyKIIPTests' do
     inherit! :search_paths
@@ -27,6 +28,8 @@ target 'UserSession' do
   use_frameworks!
 
   # Pods for EasyKIIPKit
+  pod 'Firebase/Auth'
+  pod 'GoogleSignIn'
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxAlamofire'
@@ -39,26 +42,6 @@ target 'UserSession' do
   end
 
 end
-
-target 'EasyKIIP_iOS' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for EasyKIIPKit
-  pod 'Action'
-  pod 'SnapKit'
-  pod 'RxSwift'
-  pod 'RxCocoa'
-  
-  target 'EasyKIIP_iOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-    pod 'RxBlocking'
-    pod 'RxTest'
-  end
-
-end
-
 
 target 'EasyKIIPKit' do
   # Comment the next line if you don't want to use dynamic frameworks

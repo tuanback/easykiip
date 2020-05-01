@@ -8,6 +8,8 @@
 
 import Foundation
 import RxSwift
+import Firebase
+import GoogleSignIn
 
 public class KIIPUserSessionRepository: UserSessionRepository {
   
@@ -49,17 +51,15 @@ public class KIIPUserSessionRepository: UserSessionRepository {
     return observable
   }
   
-  public func signIn(provider: Provider, token: String, clientId: String) -> Observable<UserSession> {
-    let observable = remoteAPI.signIn(provider: provider, token: token, clientId: clientId)
-    observable
-      .subscribe(onNext: { [weak self] userSession in
-        self?.dataStore.save(userSession: userSession)
-      })
-      .disposed(by: disposeBag)
-    return observable
+  public func signIn(with credential: AuthCredential, provider: Provider) -> Observable<AuthState> {
+    return Observable.error(AuthError.notSupported)
   }
   
-  public func signOut(userSession: UserSession) {
-    return dataStore.delete(userSession: userSession)
+  public func handleUserSelectFactorToLogIn(name: String) {}
+  
+  public func handleUserSelectedVerificationCode(_ code: String) {}
+  
+  public func signOut() {
+    return dataStore.delete()
   }
 }

@@ -13,7 +13,7 @@ import RxCocoa
 import Action
 
 protocol SignedInResponder {
-  func singedIn()
+  func signedIn()
 }
 
 public protocol GoToLogInNavigator {
@@ -42,7 +42,7 @@ public class OnboardingVM: SignedInResponder, GoToLogInNavigator {
     oNavigation.accept(.push(view: .login))
   }
   
-  func singedIn() {
+  func signedIn() {
     oNavigation.accept(.dismiss)
   }
   

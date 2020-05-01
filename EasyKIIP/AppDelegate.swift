@@ -15,7 +15,7 @@ import GoogleSignIn
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-  lazy var injectionContainer = AppDependencyContainer()
+  var injectionContainer: AppDependencyContainer!
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Use to change app language
     AppSetting.languageCode = .vi
     
+    injectionContainer = AppDependencyContainer()
     let launchVC = injectionContainer.makeLaunchVC()
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
@@ -39,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private func configFirebaseAndGoogleSignIn() {
     FirebaseApp.configure()
     GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+    try? Auth.auth().signOut()
   }
 }
 

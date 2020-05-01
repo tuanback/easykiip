@@ -63,9 +63,9 @@ public class KeychainUserSessionDataStore: UserSessionDataStore {
     }
   }
 
-  public func delete(userSession: UserSession){
+  public func delete(){
     DispatchQueue.global().async {
-      self.deleteSync(userSession: userSession)
+      self.deleteSync()
     }
   }
 }
@@ -86,7 +86,7 @@ extension KeychainUserSessionDataStore {
     }
   }
 
-  func deleteSync(userSession: UserSession) {
+  func deleteSync() {
     do {
       let item = KeychainItem()
       try Keychain.delete(item: item)

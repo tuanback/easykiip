@@ -64,7 +64,7 @@ public class FileUserSessionDataStore: UserSessionDataStore {
     try? jsonData.write(to: docsURL.appendingPathComponent("user_session.json"))
   }
 
-  public func delete(userSession: UserSession) {
+  public func delete() {
     guard let docsURL = docsURL else {
       return
     }

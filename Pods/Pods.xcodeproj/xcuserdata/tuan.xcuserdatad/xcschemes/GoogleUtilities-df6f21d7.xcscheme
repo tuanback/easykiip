@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "207B51912C08846029258E7EF2CCDFF6"
-               BuildableName = "Pods_EasyKIIP_iOSTests.framework"
-               BlueprintName = "Pods-EasyKIIP_iOSTests"
+               BlueprintIdentifier = "DFDCB05D6D01F343A73129A789B3189A"
+               BuildableName = "GoogleUtilities.framework"
+               BlueprintName = "GoogleUtilities-df6f21d7"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

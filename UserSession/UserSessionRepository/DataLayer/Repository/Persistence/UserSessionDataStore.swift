@@ -13,5 +13,5 @@ public typealias AuthToken = String
 public protocol UserSessionDataStore {
   func readUserSession() -> UserSession?
   func save(userSession: UserSession)
-  func delete(userSession: UserSession)
+  func delete()
 }
