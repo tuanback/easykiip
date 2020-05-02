@@ -28,7 +28,7 @@ class WelcomeRootView: NiblessView {
   }
   
   private func styleView() {
-    backgroundColor = UIColor.primaryColor
+    backgroundColor = UIColor.appPrimaryColor
   }
   
   private func setupViews() {
@@ -43,6 +43,8 @@ class WelcomeRootView: NiblessView {
     labelTitle.textAlignment = .center
     labelTitle.font = UIFont.appFontDemiBold(ofSize: 25)
     labelTitle.textColor = UIColor.white
+    labelTitle.minimumScaleFactor = 0.5
+    labelTitle.adjustsFontSizeToFitWidth = true
     
     labelMessage = UILabel()
     labelMessage.text = Strings.onboardingMessage
@@ -50,6 +52,8 @@ class WelcomeRootView: NiblessView {
     labelMessage.textAlignment = .center
     labelMessage.font = UIFont.appFontMedium(ofSize: 18)
     labelMessage.textColor = UIColor.white
+    labelMessage.minimumScaleFactor = 0.5
+    labelMessage.adjustsFontSizeToFitWidth = true
     
     buttonLogin = UIButton()
     buttonLogin.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 25)

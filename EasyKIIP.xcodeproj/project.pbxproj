@@ -21,6 +21,7 @@
 		17954AAA245D052B00C8CC95 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */; };
 		17954AAB245D06E100C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
 		17954AAD245D06E400C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
+		17954AB2245D3F6000C8CC95 /* MainBookItemCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */; };
 		17B70A86244C180200C67334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70A85244C180200C67334 /* AppDelegate.swift */; };
 		17B70A8F244C180500C67334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A8E244C180500C67334 /* Assets.xcassets */; };
 		17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A90244C180500C67334 /* LaunchScreen.storyboard */; };
@@ -271,6 +272,7 @@
 		17954A98245D025400C8CC95 /* book_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_2.jpg; sourceTree = "<group>"; };
 		17954A99245D025400C8CC95 /* book_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_0.jpg; sourceTree = "<group>"; };
 		17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
+		17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBookItemCVC.swift; sourceTree = "<group>"; };
 		17B70A82244C180200C67334 /* Easy KIIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy KIIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70A85244C180200C67334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17B70A8E244C180500C67334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -536,6 +538,7 @@
 		17954A87245CFC2B00C8CC95 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
+				17954AB0245D3F3200C8CC95 /* BookCell */,
 				1766FFD7245B9131008B263D /* MainViewModel.swift */,
 				1766FFDB245B9322008B263D /* MainRootView.swift */,
 				1766FFDD245B93FE008B263D /* MainVC.swift */,
@@ -588,6 +591,14 @@
 				17954A90245D01A600C8CC95 /* Database */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		17954AB0245D3F3200C8CC95 /* BookCell */ = {
+			isa = PBXGroup;
+			children = (
+				17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */,
+			);
+			path = BookCell;
 			sourceTree = "<group>";
 		};
 		17B70A79244C180200C67334 = {
@@ -1496,6 +1507,7 @@
 				17FBF6EC245BEBCA00A65233 /* NiblessNavigationController.swift in Sources */,
 				17FBF714245BEC1300A65233 /* LaunchViewModel.swift in Sources */,
 				17FBF709245BEBFF00A65233 /* LoginRootView.swift in Sources */,
+				17954AB2245D3F6000C8CC95 /* MainBookItemCVC.swift in Sources */,
 				17FBF6E3245BEBBB00A65233 /* AppView.swift in Sources */,
 				17FBF735245CE6D900A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
 				17FBF720245BEC2800A65233 /* OnboardingDependencyContainer.swift in Sources */,

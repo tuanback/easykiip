@@ -29,7 +29,7 @@ extension UIColor {
     self.init(red:red, green:green, blue:blue, alpha:alpha)
   }
   
-  class var primaryColor: UIColor {
+  class var appPrimaryColor: UIColor {
     UIColor(hexString: "EB5757")
   }
   
@@ -41,4 +41,19 @@ extension UIColor {
     }
   }
   
+  class var appLabelColor: UIColor {
+    if #available(iOS 13.0, *) {
+      return UIColor.label
+    } else {
+      return UIColor.black
+    }
+  }
+  
+  class var appShadowColor: UIColor {
+    if #available(iOS 13.0, *) {
+      return UIColor.systemGray
+    } else {
+      return UIColor.black
+    }
+  }
 }
