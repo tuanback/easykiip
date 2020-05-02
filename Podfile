@@ -17,12 +17,10 @@ target 'EasyKIIP' do
   target 'EasyKIIPTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxBlocking'
+    pod 'RxTest'
   end
 
-  target 'EasyKIIPUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 end
 
 target 'UserSession' do

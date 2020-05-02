@@ -11,11 +11,19 @@
 		1766FFF2245BD993008B263D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFF1245BD993008B263D /* GoogleService-Info.plist */; };
 		17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
 		17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
+		17954AA2245D028200C8CC95 /* book_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A99245D025400C8CC95 /* book_0.jpg */; };
+		17954AA3245D029400C8CC95 /* book_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A97245D025400C8CC95 /* book_1.jpg */; };
+		17954AA4245D029700C8CC95 /* book_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A98245D025400C8CC95 /* book_2.jpg */; };
+		17954AA5245D029B00C8CC95 /* book_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A94245D025300C8CC95 /* book_3.jpg */; };
+		17954AA6245D029E00C8CC95 /* book_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A95245D025300C8CC95 /* book_4.jpg */; };
+		17954AA7245D02A200C8CC95 /* book_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A96245D025300C8CC95 /* book_5.jpg */; };
+		17954AA8245D02A600C8CC95 /* book_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A93245D025300C8CC95 /* book_6.jpg */; };
+		17954AAA245D052B00C8CC95 /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */; };
+		17954AAB245D06E100C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
+		17954AAD245D06E400C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
 		17B70A86244C180200C67334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70A85244C180200C67334 /* AppDelegate.swift */; };
 		17B70A8F244C180500C67334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A8E244C180500C67334 /* Assets.xcassets */; };
 		17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A90244C180500C67334 /* LaunchScreen.storyboard */; };
-		17B70A9D244C180600C67334 /* EasyKIIPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70A9C244C180600C67334 /* EasyKIIPTests.swift */; };
-		17B70AA8244C180600C67334 /* EasyKIIPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70AA7244C180600C67334 /* EasyKIIPUITests.swift */; };
 		17B70AC3244CF1CE00C67334 /* EasyKIIPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70ABA244CF1CD00C67334 /* EasyKIIPKit.framework */; };
 		17B70ACA244CF1CE00C67334 /* EasyKIIPKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 17B70ABC244CF1CD00C67334 /* EasyKIIPKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17B70AD2244CF1E500C67334 /* EasyKIIPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70ABA244CF1CD00C67334 /* EasyKIIPKit.framework */; };
@@ -93,93 +101,64 @@
 		17FBF6D9245BEB9F00A65233 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFCA245AA51C008B263D /* Strings.swift */; };
 		17FBF6DA245BEBA200A65233 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD2245AB466008B263D /* AppSetting.swift */; };
 		17FBF6DB245BEBA200A65233 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD2245AB466008B263D /* AppSetting.swift */; };
-		17FBF6DC245BEBA600A65233 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD2245AB466008B263D /* AppSetting.swift */; };
-		17FBF6DD245BEBA800A65233 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFCA245AA51C008B263D /* Strings.swift */; };
 		17FBF6DE245BEBB000A65233 /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFC7245A72CC008B263D /* UIColor_Extension.swift */; };
 		17FBF6DF245BEBB000A65233 /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFC7245A72CC008B263D /* UIColor_Extension.swift */; };
 		17FBF6E0245BEBB600A65233 /* UIFront_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD5245ABCF6008B263D /* UIFront_Extension.swift */; };
 		17FBF6E1245BEBB600A65233 /* UIFront_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD5245ABCF6008B263D /* UIFront_Extension.swift */; };
-		17FBF6E2245BEBB700A65233 /* UIFront_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD5245ABCF6008B263D /* UIFront_Extension.swift */; };
 		17FBF6E3245BEBBB00A65233 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB2245A5F57008B263D /* AppView.swift */; };
 		17FBF6E4245BEBBB00A65233 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB2245A5F57008B263D /* AppView.swift */; };
-		17FBF6E5245BEBBC00A65233 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB2245A5F57008B263D /* AppView.swift */; };
 		17FBF6E6245BEBC000A65233 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB5245A5FF5008B263D /* Navigation.swift */; };
 		17FBF6E7245BEBC000A65233 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB5245A5FF5008B263D /* Navigation.swift */; };
-		17FBF6E8245BEBC000A65233 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB5245A5FF5008B263D /* Navigation.swift */; };
 		17FBF6E9245BEBC500A65233 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFA1245A5DAE008B263D /* NiblessView.swift */; };
 		17FBF6EA245BEBC600A65233 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFA1245A5DAE008B263D /* NiblessView.swift */; };
-		17FBF6EB245BEBC600A65233 /* NiblessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFA1245A5DAE008B263D /* NiblessView.swift */; };
 		17FBF6EC245BEBCA00A65233 /* NiblessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFA2245A5DAE008B263D /* NiblessNavigationController.swift */; };
 		17FBF6ED245BEBCB00A65233 /* NiblessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFA2245A5DAE008B263D /* NiblessNavigationController.swift */; };
-		17FBF6EE245BEBCC00A65233 /* NiblessNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFA2245A5DAE008B263D /* NiblessNavigationController.swift */; };
 		17FBF6EF245BEBCF00A65233 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFA3245A5DAE008B263D /* NiblessViewController.swift */; };
 		17FBF6F0245BEBD000A65233 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFA3245A5DAE008B263D /* NiblessViewController.swift */; };
-		17FBF6F1245BEBD000A65233 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFA3245A5DAE008B263D /* NiblessViewController.swift */; };
 		17FBF6F2245BEBD700A65233 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD7245B9131008B263D /* MainViewModel.swift */; };
 		17FBF6F3245BEBD800A65233 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD7245B9131008B263D /* MainViewModel.swift */; };
-		17FBF6F4245BEBD800A65233 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD7245B9131008B263D /* MainViewModel.swift */; };
 		17FBF6F5245BEBDC00A65233 /* MainRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFDB245B9322008B263D /* MainRootView.swift */; };
 		17FBF6F6245BEBDD00A65233 /* MainRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFDB245B9322008B263D /* MainRootView.swift */; };
-		17FBF6F7245BEBDD00A65233 /* MainRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFDB245B9322008B263D /* MainRootView.swift */; };
 		17FBF6F8245BEBE100A65233 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFDD245B93FE008B263D /* MainVC.swift */; };
 		17FBF6F9245BEBE200A65233 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFDD245B93FE008B263D /* MainVC.swift */; };
-		17FBF6FB245BEBE300A65233 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFDD245B93FE008B263D /* MainVC.swift */; };
 		17FBF6FC245BEBEA00A65233 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFED245BADA2008B263D /* WelcomeViewModel.swift */; };
 		17FBF6FD245BEBEA00A65233 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFED245BADA2008B263D /* WelcomeViewModel.swift */; };
-		17FBF6FE245BEBEB00A65233 /* WelcomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFED245BADA2008B263D /* WelcomeViewModel.swift */; };
 		17FBF6FF245BEBEE00A65233 /* WelcomeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB8245A66E4008B263D /* WelcomeRootView.swift */; };
 		17FBF700245BEBEF00A65233 /* WelcomeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB8245A66E4008B263D /* WelcomeRootView.swift */; };
-		17FBF701245BEBEF00A65233 /* WelcomeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFB8245A66E4008B263D /* WelcomeRootView.swift */; };
 		17FBF702245BEBF200A65233 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFEF245BB0CB008B263D /* WelcomeVC.swift */; };
 		17FBF703245BEBF300A65233 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFEF245BB0CB008B263D /* WelcomeVC.swift */; };
-		17FBF704245BEBF300A65233 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFEF245BB0CB008B263D /* WelcomeVC.swift */; };
 		17FBF705245BEBF800A65233 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE0245B9490008B263D /* LoginViewModel.swift */; };
 		17FBF706245BEBF900A65233 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE0245B9490008B263D /* LoginViewModel.swift */; };
-		17FBF707245BEBF900A65233 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE0245B9490008B263D /* LoginViewModel.swift */; };
 		17FBF708245BEBFE00A65233 /* LoginRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE2245B9572008B263D /* LoginRootView.swift */; };
 		17FBF709245BEBFF00A65233 /* LoginRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE2245B9572008B263D /* LoginRootView.swift */; };
-		17FBF70A245BEC0000A65233 /* LoginRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE2245B9572008B263D /* LoginRootView.swift */; };
 		17FBF70B245BEC0300A65233 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE4245B95E1008B263D /* LoginVC.swift */; };
 		17FBF70C245BEC0300A65233 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE4245B95E1008B263D /* LoginVC.swift */; };
-		17FBF70D245BEC0400A65233 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE4245B95E1008B263D /* LoginVC.swift */; };
 		17FBF70E245BEC0800A65233 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFAB245A5E0A008B263D /* OnboardingVC.swift */; };
 		17FBF70F245BEC0900A65233 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFAB245A5E0A008B263D /* OnboardingVC.swift */; };
-		17FBF710245BEC0900A65233 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFAB245A5E0A008B263D /* OnboardingVC.swift */; };
 		17FBF711245BEC0E00A65233 /* OnboardingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFAE245A5E40008B263D /* OnboardingVM.swift */; };
 		17FBF712245BEC0E00A65233 /* OnboardingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFAE245A5E40008B263D /* OnboardingVM.swift */; };
-		17FBF713245BEC0F00A65233 /* OnboardingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFAE245A5E40008B263D /* OnboardingVM.swift */; };
 		17FBF714245BEC1300A65233 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FF92245A5A93008B263D /* LaunchViewModel.swift */; };
 		17FBF715245BEC1300A65233 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FF92245A5A93008B263D /* LaunchViewModel.swift */; };
-		17FBF716245BEC1400A65233 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FF92245A5A93008B263D /* LaunchViewModel.swift */; };
 		17FBF717245BEC1800A65233 /* LaunchRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFBD245A6893008B263D /* LaunchRootView.swift */; };
 		17FBF718245BEC1800A65233 /* LaunchRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFBD245A6893008B263D /* LaunchRootView.swift */; };
-		17FBF719245BEC1900A65233 /* LaunchRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFBD245A6893008B263D /* LaunchRootView.swift */; };
 		17FBF71A245BEC1C00A65233 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFBB245A682F008B263D /* LaunchVC.swift */; };
 		17FBF71B245BEC1C00A65233 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFBB245A682F008B263D /* LaunchVC.swift */; };
-		17FBF71C245BEC1D00A65233 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFBB245A682F008B263D /* LaunchVC.swift */; };
 		17FBF71D245BEC2300A65233 /* AppDenpendencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFBF245A68F6008B263D /* AppDenpendencyContainer.swift */; };
 		17FBF71E245BEC2400A65233 /* AppDenpendencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFBF245A68F6008B263D /* AppDenpendencyContainer.swift */; };
-		17FBF71F245BEC2500A65233 /* AppDenpendencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFBF245A68F6008B263D /* AppDenpendencyContainer.swift */; };
 		17FBF720245BEC2800A65233 /* OnboardingDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE6245B9649008B263D /* OnboardingDependencyContainer.swift */; };
 		17FBF721245BEC2800A65233 /* OnboardingDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE6245B9649008B263D /* OnboardingDependencyContainer.swift */; };
-		17FBF722245BEC2900A65233 /* OnboardingDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE6245B9649008B263D /* OnboardingDependencyContainer.swift */; };
 		17FBF723245BEC2D00A65233 /* SignedInDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE8245B993F008B263D /* SignedInDependencyContainer.swift */; };
 		17FBF724245BEC2D00A65233 /* SignedInDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE8245B993F008B263D /* SignedInDependencyContainer.swift */; };
-		17FBF725245BEC2E00A65233 /* SignedInDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFE8245B993F008B263D /* SignedInDependencyContainer.swift */; };
 		17FBF726245BEC3400A65233 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFCF245AB037008B263D /* Localizable.strings */; };
 		17FBF727245BEC3400A65233 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFCF245AB037008B263D /* Localizable.strings */; };
-		17FBF728245BEC3500A65233 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFCF245AB037008B263D /* Localizable.strings */; };
 		17FBF72E245C392E00A65233 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF72D245C392E00A65233 /* AuthError.swift */; };
 		17FBF72F245C392E00A65233 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF72D245C392E00A65233 /* AuthError.swift */; };
 		17FBF735245CE6D900A65233 /* FirebaseUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */; };
 		17FBF736245CE6DC00A65233 /* FirebaseUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */; };
-		17FBF737245CE6DD00A65233 /* FirebaseUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */; };
 		17FBF738245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */; };
 		17FBF739245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */; };
-		17FBF73A245CE6E200A65233 /* FirebaseUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */; };
 		1A35051ADF5C1C7F0B2197C2 /* Pods_EasyKIIPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */; };
 		57E4904DB391E7E2D7E543B3 /* Pods_UserSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117EC49A333FE8EC5FF52C3D /* Pods_UserSessionTests.framework */; };
-		627E22CE056419F471187535 /* Pods_EasyKIIPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16BC5199528F6E34ED995F6 /* Pods_EasyKIIPUITests.framework */; };
 		78F5A67A5A3AA31A192C291F /* Pods_EasyKIIPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */; };
 		805274668FD7FD7D0F7E3428 /* Pods_EasyKIIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C39FF132AEDBD39407410F /* Pods_EasyKIIP.framework */; };
 		BB50221261F05D9B6C755D4D /* Pods_UserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5C6E18E22AC4E5114C659 /* Pods_UserSession.framework */; };
@@ -188,13 +167,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		17B70A99244C180600C67334 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 17B70A81244C180200C67334;
-			remoteInfo = EasyKIIP;
-		};
-		17B70AA4244C180600C67334 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
 			proxyType = 1;
@@ -291,17 +263,21 @@
 		1766FFF1245BD993008B263D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		17954A89245CFC9D00C8CC95 /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
 		17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavViewModel.swift; sourceTree = "<group>"; };
+		17954A93245D025300C8CC95 /* book_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_6.jpg; sourceTree = "<group>"; };
+		17954A94245D025300C8CC95 /* book_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_3.jpg; sourceTree = "<group>"; };
+		17954A95245D025300C8CC95 /* book_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_4.jpg; sourceTree = "<group>"; };
+		17954A96245D025300C8CC95 /* book_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_5.jpg; sourceTree = "<group>"; };
+		17954A97245D025400C8CC95 /* book_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_1.jpg; sourceTree = "<group>"; };
+		17954A98245D025400C8CC95 /* book_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_2.jpg; sourceTree = "<group>"; };
+		17954A99245D025400C8CC95 /* book_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_0.jpg; sourceTree = "<group>"; };
+		17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		17B70A82244C180200C67334 /* Easy KIIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy KIIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70A85244C180200C67334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17B70A8E244C180500C67334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17B70A91244C180500C67334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17B70A93244C180500C67334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17B70A98244C180600C67334 /* EasyKIIPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyKIIPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		17B70A9C244C180600C67334 /* EasyKIIPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyKIIPTests.swift; sourceTree = "<group>"; };
 		17B70A9E244C180600C67334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		17B70AA3244C180600C67334 /* EasyKIIPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyKIIPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		17B70AA7244C180600C67334 /* EasyKIIPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyKIIPUITests.swift; sourceTree = "<group>"; };
-		17B70AA9244C180600C67334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17B70ABA244CF1CD00C67334 /* EasyKIIPKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EasyKIIPKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70ABC244CF1CD00C67334 /* EasyKIIPKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EasyKIIPKit.h; sourceTree = "<group>"; };
 		17B70ABD244CF1CD00C67334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -392,14 +368,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				78F5A67A5A3AA31A192C291F /* Pods_EasyKIIPTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		17B70AA0244C180600C67334 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				627E22CE056419F471187535 /* Pods_EasyKIIPUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,12 +552,49 @@
 			path = MainNavVC;
 			sourceTree = "<group>";
 		};
+		17954A90245D01A600C8CC95 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				17954A91245D01B000C8CC95 /* Images */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		17954A91245D01B000C8CC95 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				17954A92245D01B800C8CC95 /* Books */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		17954A92245D01B800C8CC95 /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				17954A99245D025400C8CC95 /* book_0.jpg */,
+				17954A97245D025400C8CC95 /* book_1.jpg */,
+				17954A98245D025400C8CC95 /* book_2.jpg */,
+				17954A94245D025300C8CC95 /* book_3.jpg */,
+				17954A95245D025300C8CC95 /* book_4.jpg */,
+				17954A96245D025300C8CC95 /* book_5.jpg */,
+				17954A93245D025300C8CC95 /* book_6.jpg */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
+		17954AA1245D026A00C8CC95 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				17954A90245D01A600C8CC95 /* Database */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		17B70A79244C180200C67334 = {
 			isa = PBXGroup;
 			children = (
 				17B70A84244C180200C67334 /* EasyKIIP */,
 				17B70A9B244C180600C67334 /* EasyKIIPTests */,
-				17B70AA6244C180600C67334 /* EasyKIIPUITests */,
 				17B70ABB244CF1CD00C67334 /* EasyKIIPKit */,
 				17B70AC6244CF1CE00C67334 /* EasyKIIPKitTests */,
 				17B70B59245580B700C67334 /* UserSession */,
@@ -605,7 +610,6 @@
 			children = (
 				17B70A82244C180200C67334 /* Easy KIIP.app */,
 				17B70A98244C180600C67334 /* EasyKIIPTests.xctest */,
-				17B70AA3244C180600C67334 /* EasyKIIPUITests.xctest */,
 				17B70ABA244CF1CD00C67334 /* EasyKIIPKit.framework */,
 				17B70AC2244CF1CE00C67334 /* EasyKIIPKitTests.xctest */,
 				17B70B58245580B600C67334 /* UserSession.framework */,
@@ -635,24 +639,16 @@
 		17B70A9B244C180600C67334 /* EasyKIIPTests */ = {
 			isa = PBXGroup;
 			children = (
-				17B70A9C244C180600C67334 /* EasyKIIPTests.swift */,
 				17B70A9E244C180600C67334 /* Info.plist */,
+				17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */,
 			);
 			path = EasyKIIPTests;
-			sourceTree = "<group>";
-		};
-		17B70AA6244C180600C67334 /* EasyKIIPUITests */ = {
-			isa = PBXGroup;
-			children = (
-				17B70AA7244C180600C67334 /* EasyKIIPUITests.swift */,
-				17B70AA9244C180600C67334 /* Info.plist */,
-			);
-			path = EasyKIIPUITests;
 			sourceTree = "<group>";
 		};
 		17B70ABB244CF1CD00C67334 /* EasyKIIPKit */ = {
 			isa = PBXGroup;
 			children = (
+				17954AA1245D026A00C8CC95 /* Assets */,
 				17B70B34245572C100C67334 /* VocabRepository */,
 				17B70ABC244CF1CD00C67334 /* EasyKIIPKit.h */,
 				17B70ABD244CF1CD00C67334 /* Info.plist */,
@@ -1058,6 +1054,7 @@
 				17B70A94244C180600C67334 /* Sources */,
 				17B70A95244C180600C67334 /* Frameworks */,
 				17B70A96244C180600C67334 /* Resources */,
+				AD2A5B09DE17F01D8D233451 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1068,25 +1065,6 @@
 			productName = EasyKIIPTests;
 			productReference = 17B70A98244C180600C67334 /* EasyKIIPTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		17B70AA2244C180600C67334 /* EasyKIIPUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 17B70AB2244C180600C67334 /* Build configuration list for PBXNativeTarget "EasyKIIPUITests" */;
-			buildPhases = (
-				6350C96CFD46EE336A99D727 /* [CP] Check Pods Manifest.lock */,
-				17B70A9F244C180600C67334 /* Sources */,
-				17B70AA0244C180600C67334 /* Frameworks */,
-				17B70AA1244C180600C67334 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				17B70AA5244C180600C67334 /* PBXTargetDependency */,
-			);
-			name = EasyKIIPUITests;
-			productName = EasyKIIPUITests;
-			productReference = 17B70AA3244C180600C67334 /* EasyKIIPUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		17B70AB9244CF1CD00C67334 /* EasyKIIPKit */ = {
 			isa = PBXNativeTarget;
@@ -1184,10 +1162,6 @@
 						CreatedOnToolsVersion = 11.4.1;
 						TestTargetID = 17B70A81244C180200C67334;
 					};
-					17B70AA2244C180600C67334 = {
-						CreatedOnToolsVersion = 11.4.1;
-						TestTargetID = 17B70A81244C180200C67334;
-					};
 					17B70AB9244CF1CD00C67334 = {
 						CreatedOnToolsVersion = 11.4.1;
 						LastSwiftMigration = 1140;
@@ -1221,7 +1195,6 @@
 			targets = (
 				17B70A81244C180200C67334 /* EasyKIIP */,
 				17B70A97244C180600C67334 /* EasyKIIPTests */,
-				17B70AA2244C180600C67334 /* EasyKIIPUITests */,
 				17B70AB9244CF1CD00C67334 /* EasyKIIPKit */,
 				17B70AC1244CF1CE00C67334 /* EasyKIIPKitTests */,
 				17B70B57245580B600C67334 /* UserSession */,
@@ -1250,18 +1223,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		17B70AA1244C180600C67334 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				17FBF728245BEC3500A65233 /* Localizable.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		17B70AB8244CF1CD00C67334 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17954AA4245D029700C8CC95 /* book_2.jpg in Resources */,
+				17954AA2245D028200C8CC95 /* book_0.jpg in Resources */,
+				17954AA3245D029400C8CC95 /* book_1.jpg in Resources */,
+				17954AA7245D02A200C8CC95 /* book_5.jpg in Resources */,
+				17954AA8245D02A600C8CC95 /* book_6.jpg in Resources */,
+				17954AA6245D029E00C8CC95 /* book_4.jpg in Resources */,
+				17954AA5245D029B00C8CC95 /* book_3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1411,28 +1383,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6350C96CFD46EE336A99D727 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EasyKIIPUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		782D29552020DE572D380733 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1475,6 +1425,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD2A5B09DE17F01D8D233451 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIPTests/Pods-EasyKIIPTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIPTests/Pods-EasyKIIPTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyKIIPTests/Pods-EasyKIIPTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B9EA17C2BCDBADD3AD20ADAA /* [CP] Copy Pods Resources */ = {
@@ -1557,7 +1524,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				17FBF6D9245BEB9F00A65233 /* Strings.swift in Sources */,
-				17B70A9D244C180600C67334 /* EasyKIIPTests.swift in Sources */,
 				17FBF6E7245BEBC000A65233 /* Navigation.swift in Sources */,
 				17FBF70C245BEC0300A65233 /* LoginVC.swift in Sources */,
 				17FBF6FD245BEBEA00A65233 /* WelcomeViewModel.swift in Sources */,
@@ -1573,7 +1539,9 @@
 				17FBF6DB245BEBA200A65233 /* AppSetting.swift in Sources */,
 				17FBF739245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */,
 				17FBF6E1245BEBB600A65233 /* UIFront_Extension.swift in Sources */,
+				17954AAD245D06E400C8CC95 /* MainNavViewModel.swift in Sources */,
 				17FBF6F0245BEBD000A65233 /* NiblessViewController.swift in Sources */,
+				17954AAB245D06E100C8CC95 /* MainNavVC.swift in Sources */,
 				17FBF718245BEC1800A65233 /* LaunchRootView.swift in Sources */,
 				17FBF712245BEC0E00A65233 /* OnboardingVM.swift in Sources */,
 				17FBF705245BEBF800A65233 /* LoginViewModel.swift in Sources */,
@@ -1584,42 +1552,8 @@
 				17FBF6F3245BEBD800A65233 /* MainViewModel.swift in Sources */,
 				17FBF70F245BEC0900A65233 /* OnboardingVC.swift in Sources */,
 				17FBF6F9245BEBE200A65233 /* MainVC.swift in Sources */,
+				17954AAA245D052B00C8CC95 /* MainViewModelTests.swift in Sources */,
 				17FBF703245BEBF300A65233 /* WelcomeVC.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		17B70A9F244C180600C67334 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				17FBF6F7245BEBDD00A65233 /* MainRootView.swift in Sources */,
-				17FBF6FB245BEBE300A65233 /* MainVC.swift in Sources */,
-				17FBF73A245CE6E200A65233 /* FirebaseUserSessionRepository.swift in Sources */,
-				17FBF716245BEC1400A65233 /* LaunchViewModel.swift in Sources */,
-				17FBF6FE245BEBEB00A65233 /* WelcomeViewModel.swift in Sources */,
-				17FBF701245BEBEF00A65233 /* WelcomeRootView.swift in Sources */,
-				17FBF707245BEBF900A65233 /* LoginViewModel.swift in Sources */,
-				17FBF6EE245BEBCC00A65233 /* NiblessNavigationController.swift in Sources */,
-				17FBF719245BEC1900A65233 /* LaunchRootView.swift in Sources */,
-				17FBF6F1245BEBD000A65233 /* NiblessViewController.swift in Sources */,
-				17FBF710245BEC0900A65233 /* OnboardingVC.swift in Sources */,
-				17FBF704245BEBF300A65233 /* WelcomeVC.swift in Sources */,
-				17FBF725245BEC2E00A65233 /* SignedInDependencyContainer.swift in Sources */,
-				17FBF71C245BEC1D00A65233 /* LaunchVC.swift in Sources */,
-				17FBF722245BEC2900A65233 /* OnboardingDependencyContainer.swift in Sources */,
-				17FBF6DC245BEBA600A65233 /* AppSetting.swift in Sources */,
-				17FBF6E2245BEBB700A65233 /* UIFront_Extension.swift in Sources */,
-				17FBF713245BEC0F00A65233 /* OnboardingVM.swift in Sources */,
-				17FBF6DD245BEBA800A65233 /* Strings.swift in Sources */,
-				17FBF70A245BEC0000A65233 /* LoginRootView.swift in Sources */,
-				17FBF71F245BEC2500A65233 /* AppDenpendencyContainer.swift in Sources */,
-				17FBF6F4245BEBD800A65233 /* MainViewModel.swift in Sources */,
-				17FBF6E8245BEBC000A65233 /* Navigation.swift in Sources */,
-				17FBF70D245BEC0400A65233 /* LoginVC.swift in Sources */,
-				17FBF6E5245BEBBC00A65233 /* AppView.swift in Sources */,
-				17FBF6EB245BEBC600A65233 /* NiblessView.swift in Sources */,
-				17FBF737245CE6DD00A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
-				17B70AA8244C180600C67334 /* EasyKIIPUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1726,11 +1660,6 @@
 			isa = PBXTargetDependency;
 			target = 17B70A81244C180200C67334 /* EasyKIIP */;
 			targetProxy = 17B70A99244C180600C67334 /* PBXContainerItemProxy */;
-		};
-		17B70AA5244C180600C67334 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 17B70A81244C180200C67334 /* EasyKIIP */;
-			targetProxy = 17B70AA4244C180600C67334 /* PBXContainerItemProxy */;
 		};
 		17B70AC5244CF1CE00C67334 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1949,7 +1878,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CW3DR8XJT7;
 				INFOPLIST_FILE = EasyKIIPTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1959,7 +1888,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyKIIP.app/EasyKIIP";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy KIIP.app/Easy KIIP";
 			};
 			name = Debug;
 		};
@@ -1972,7 +1901,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CW3DR8XJT7;
 				INFOPLIST_FILE = EasyKIIPTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1982,49 +1911,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyKIIP.app/EasyKIIP";
-			};
-			name = Release;
-		};
-		17B70AB3244C180600C67334 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B2DB75E44E47E7DA5329E24 /* Pods-EasyKIIPUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CW3DR8XJT7;
-				INFOPLIST_FILE = EasyKIIPUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.EasyKIIPUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EasyKIIP;
-			};
-			name = Debug;
-		};
-		17B70AB4244C180600C67334 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D12E32CC789865A764EF8F5C /* Pods-EasyKIIPUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CW3DR8XJT7;
-				INFOPLIST_FILE = EasyKIIPUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.EasyKIIPUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EasyKIIP;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy KIIP.app/Easy KIIP";
 			};
 			name = Release;
 		};
@@ -2272,15 +2159,6 @@
 			buildConfigurations = (
 				17B70AB0244C180600C67334 /* Debug */,
 				17B70AB1244C180600C67334 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		17B70AB2244C180600C67334 /* Build configuration list for PBXNativeTarget "EasyKIIPUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				17B70AB3244C180600C67334 /* Debug */,
-				17B70AB4244C180600C67334 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

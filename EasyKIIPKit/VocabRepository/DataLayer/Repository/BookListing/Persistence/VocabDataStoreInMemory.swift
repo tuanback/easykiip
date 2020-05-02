@@ -37,11 +37,23 @@ public class VocabDataStoreInMemory: VocabDataStore {
     let lesson4 = Lesson(id: 4, name: "제1과 4", translations: [.en: "Lesson 4", .vi: "Bải 4"], vocabs: [], readingParts: [])
     let lesson5 = Lesson(id: 5, name: "제1과 5", translations: [.en: "Lesson 5", .vi: "Bải 5"], vocabs: [], readingParts: [])
     
-    let book1 = Book(id: 0, name: "조급 1", thumbName: nil, lessons: [lesson1, lesson2, lesson3, lesson4, lesson5])
-    let book2 = Book(id: 0, name: "조급 2", thumbName: nil, lessons: [])
-    let book3 = Book(id: 0, name: "조급 3", thumbName: nil, lessons: [])
+    let thumb1 = Bundle.init(for: type(of: self)).url(forResource: "book_0", withExtension: ".jpg")
+    let thumb2 = Bundle.init(for: type(of: self)).url(forResource: "book_1", withExtension: ".jpg")
+    let thumb3 = Bundle.init(for: type(of: self)).url(forResource: "book_2", withExtension: ".jpg")
+    let thumb4 = Bundle.init(for: type(of: self)).url(forResource: "book_3", withExtension: ".jpg")
+    let thumb5 = Bundle.init(for: type(of: self)).url(forResource: "book_4", withExtension: ".jpg")
+    let thumb6 = Bundle.init(for: type(of: self)).url(forResource: "book_5", withExtension: ".jpg")
+    let thumb7 = Bundle.init(for: type(of: self)).url(forResource: "book_6", withExtension: ".jpg")
     
-    return [book1, book2, book3]
+    let book1 = Book(id: 1, name: "한국어와 한국문화\n 기조", thumbURL: thumb1, lessons: [lesson1, lesson2, lesson3, lesson4, lesson5])
+    let book2 = Book(id: 2, name: "한국어와 한국문화\n조급 1", thumbURL: thumb2, lessons: [])
+    let book3 = Book(id: 3, name: "한국어와 한국문화\n조급 2", thumbURL: thumb3, lessons: [])
+    let book4 = Book(id: 4, name: "한국어와 한국문화\n중급 1", thumbURL: thumb4, lessons: [])
+    let book5 = Book(id: 5, name: "한국어와 한국문화\n중급 2", thumbURL: thumb5, lessons: [])
+    let book6 = Book(id: 6, name: "한국사회 이해\n기본", thumbURL: thumb6, lessons: [])
+    let book7 = Book(id: 7, name: "한국사회 이해\n심화", thumbURL: thumb7, lessons: [])
+    
+    return [book1, book2, book3, book4, book5, book6, book7]
   }
   
   public func getListOfBook() -> [Book] {

@@ -11,7 +11,7 @@ import Foundation
 public class Book {
   public private(set) var id: UInt
   public private(set) var name: String
-  public private(set) var thumbName: String?
+  public private(set) var thumbURL: URL?
   private(set) var lessons: [Lesson]
   
   public var proficiency: UInt8 {
@@ -23,10 +23,10 @@ public class Book {
     return UInt8(total / count)
   }
   
-  init(id: UInt, name: String, thumbName: String?, lessons: [Lesson]) {
+  init(id: UInt, name: String, thumbURL: URL?, lessons: [Lesson]) {
     self.id = id
     self.name = name
-    self.thumbName = thumbName
+    self.thumbURL = thumbURL
     self.lessons = lessons
   }
 }
