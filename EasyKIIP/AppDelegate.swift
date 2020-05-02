@@ -39,6 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private func configFirebaseAndGoogleSignIn() {
     FirebaseApp.configure()
     GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+    
+    // Sign out for testing
+    /*
+    GIDSignIn.sharedInstance()?.signOut()
+    try? Auth.auth().signOut()
+    */
   }
 }
 

@@ -31,6 +31,7 @@ class LoginRootView: NiblessView {
     backgroundColor = UIColor.appBackground
     
     googleSignInButton = GIDSignInButton()
+    googleSignInButton.style = .wide
     
     addSubview(googleSignInButton)
     

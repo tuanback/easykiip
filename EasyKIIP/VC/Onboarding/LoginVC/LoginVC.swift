@@ -37,8 +37,8 @@ public class LoginVC: NiblessViewController {
 
   private func setupGoogleSignIn() {
     GIDSignIn.sharedInstance()?.presentingViewController = self
-    GIDSignIn.sharedInstance()?.restorePreviousSignIn()
     GIDSignIn.sharedInstance().delegate = self
+    GIDSignIn.sharedInstance()?.restorePreviousSignIn()
   }
   
   private func observeViewModel() {

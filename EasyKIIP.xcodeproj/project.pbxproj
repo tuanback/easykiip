@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1766FFEB245B9A7E008B263D /* FakeVocabRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFEA245B9A7E008B263D /* FakeVocabRemoteAPI.swift */; };
 		1766FFF2245BD993008B263D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFF1245BD993008B263D /* GoogleService-Info.plist */; };
+		17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
+		17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
 		17B70A86244C180200C67334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70A85244C180200C67334 /* AppDelegate.swift */; };
 		17B70A8F244C180500C67334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A8E244C180500C67334 /* Assets.xcassets */; };
 		17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A90244C180500C67334 /* LaunchScreen.storyboard */; };
@@ -287,6 +289,8 @@
 		1766FFED245BADA2008B263D /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		1766FFEF245BB0CB008B263D /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		1766FFF1245BD993008B263D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		17954A89245CFC9D00C8CC95 /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
+		17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavViewModel.swift; sourceTree = "<group>"; };
 		17B70A82244C180200C67334 /* Easy KIIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy KIIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70A85244C180200C67334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17B70A8E244C180500C67334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -469,9 +473,8 @@
 		1766FF9A245A5CDC008B263D /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
-				1766FFD7245B9131008B263D /* MainViewModel.swift */,
-				1766FFDB245B9322008B263D /* MainRootView.swift */,
-				1766FFDD245B93FE008B263D /* MainVC.swift */,
+				17954A88245CFC8700C8CC95 /* MainNavVC */,
+				17954A87245CFC2B00C8CC95 /* MainVC */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -560,6 +563,25 @@
 				1766FFEF245BB0CB008B263D /* WelcomeVC.swift */,
 			);
 			path = WelcomeVC;
+			sourceTree = "<group>";
+		};
+		17954A87245CFC2B00C8CC95 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				1766FFD7245B9131008B263D /* MainViewModel.swift */,
+				1766FFDB245B9322008B263D /* MainRootView.swift */,
+				1766FFDD245B93FE008B263D /* MainVC.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
+		17954A88245CFC8700C8CC95 /* MainNavVC */ = {
+			isa = PBXGroup;
+			children = (
+				17954A89245CFC9D00C8CC95 /* MainNavVC.swift */,
+				17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */,
+			);
+			path = MainNavVC;
 			sourceTree = "<group>";
 		};
 		17B70A79244C180200C67334 = {
@@ -1512,7 +1534,9 @@
 				17FBF720245BEC2800A65233 /* OnboardingDependencyContainer.swift in Sources */,
 				17FBF6DA245BEBA200A65233 /* AppSetting.swift in Sources */,
 				17FBF738245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */,
+				17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */,
 				17FBF6E0245BEBB600A65233 /* UIFront_Extension.swift in Sources */,
+				17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */,
 				17FBF6EF245BEBCF00A65233 /* NiblessViewController.swift in Sources */,
 				17FBF717245BEC1800A65233 /* LaunchRootView.swift in Sources */,
 				17FBF711245BEC0E00A65233 /* OnboardingVM.swift in Sources */,

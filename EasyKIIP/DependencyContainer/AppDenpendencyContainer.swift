@@ -28,12 +28,12 @@ public class AppDependencyContainer {
       return self.makeOnboardingVC()
     }
     
-    let makeMainVC = {
-      return self.makeMainVC()
+    let makeMainNavVC = {
+      return self.makeMainNavVC()
     }
     
     let viewModel = makeLaunchViewModel()
-    return LaunchVC(viewModel: viewModel, makeOnboardingVC: makeOnboardingVC, makeMainVC: makeMainVC)
+    return LaunchVC(viewModel: viewModel, makeOnboardingVC: makeOnboardingVC, makeMainNavVC: makeMainNavVC)
   }
   
   private func makeLaunchViewModel() -> LaunchViewModel {
@@ -45,8 +45,8 @@ public class AppDependencyContainer {
     return dependencyContainer.makeOnboardingVC()
   }
   
-  private func makeMainVC() -> MainVC {
+  private func makeMainNavVC() -> MainNavVC {
     let dependencyContainer = SignedInDependencyContainer(appDenpendencyContainer: self)
-    return dependencyContainer.makeMainVC()
+    return dependencyContainer.makeMainNavVC()
   }
 }

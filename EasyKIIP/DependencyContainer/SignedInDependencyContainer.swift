@@ -34,6 +34,16 @@ public class SignedInDependencyContainer {
     self.vocabRepository = makeVocabRepository()
   }
   
+  func makeMainNavVC() -> MainNavVC {
+    let makeMainVC = {
+      self.makeMainVC()
+    }
+    
+    let viewModel = MainNavViewModel()
+    let mainNavVC = MainNavVC(viewModel: viewModel, makeMainVC: makeMainVC)
+    return mainNavVC
+  }
+  
   func makeMainVC() -> MainVC {
     let viewModel = makeMainViewModel()
     let mainVC = MainVC(viewModel: viewModel)

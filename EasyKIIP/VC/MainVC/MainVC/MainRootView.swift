@@ -24,7 +24,7 @@ class MainRootView: NiblessView {
   }
   
   private func setupViews() {
-    backgroundColor = UIColor.appBackground
+    backgroundColor = UIColor.systemTeal
   }
   
 }
