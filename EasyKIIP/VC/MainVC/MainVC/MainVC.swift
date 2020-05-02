@@ -22,7 +22,27 @@ public class MainVC: NiblessViewController {
   public override func loadView() {
     view = MainRootView(viewModel: viewModel)
   }
-    
   
+  public override func viewDidLoad() {
+    super.viewDidLoad()
+    setupNavBar()
+  }
+    
+  func setupNavBar() {
+    navigationItem.title = "KIIP"
+    
+    let searchController = UISearchController(searchResultsController: nil)
+    navigationItem.searchController = searchController
+    
+    //navigationController?.navigationBar.prefersLargeTitles = true
+    
+    /*
+    let frame = CGRect(x: 0, y: 0, width: 300, height: 30)
+    let titleView = UILabel(frame: frame)
+    titleView.text = "Test"
+    titleView.textColor = UIColor.appLabelColor
+    navigationItem.titleView = titleView
+    */
+  }
 
 }
