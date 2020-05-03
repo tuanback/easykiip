@@ -117,7 +117,8 @@ class PracticeHistoryTests: XCTestCase {
     let numberOfTestTaken: UInt = 3
     let numberOfCorrectAnswer: UInt = 5
     
-    XCTAssertThrowsError(try sut.setTestTakenData(numberOfTestTaken: numberOfTestTaken,
+    XCTAssertThrowsError(try sut.setTestTakenData(isMastered: false,
+                                                  numberOfTestTaken: numberOfTestTaken,
                                                   numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: Date(), lastTimeTest: Date()))
   }
   
@@ -128,7 +129,8 @@ class PracticeHistoryTests: XCTestCase {
     
     let numberOfTestTaken: UInt = 1
     let numberOfCorrectAnswer: UInt = 1
-    try sut.setTestTakenData(numberOfTestTaken: numberOfTestTaken,
+    try sut.setTestTakenData(isMastered: false,
+                             numberOfTestTaken: numberOfTestTaken,
                              numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: Date(),
                              lastTimeTest: Date())
     
@@ -143,7 +145,8 @@ class PracticeHistoryTests: XCTestCase {
     
     let numberOfTestTaken: UInt = 1
     let numberOfCorrectAnswer: UInt = 1
-    try sut.setTestTakenData(numberOfTestTaken: numberOfTestTaken,
+    try sut.setTestTakenData(isMastered: false,
+                             numberOfTestTaken: numberOfTestTaken,
                              numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: Date(),
                              lastTimeTest: Date())
     

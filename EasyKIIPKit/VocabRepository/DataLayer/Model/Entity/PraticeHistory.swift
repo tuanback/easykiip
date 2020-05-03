@@ -62,10 +62,16 @@ public class PracticeHistory {
   /// - Parameters:
   ///   - numberOfTakenTest: number of test has been taken
   ///   - numberOfCorrectAnswer: number of correct answer
-  func setTestTakenData(numberOfTestTaken: UInt,
+  func setTestTakenData(isMastered: Bool,
+                        numberOfTestTaken: UInt,
                         numberOfCorrectAnswer: UInt,
                         firstLearnDate: Date,
                         lastTimeTest: Date) throws {
+    // Only set if the is mastered equal to true
+    if isMastered {
+      self.isMastered = true
+    }
+    
     // If number of current test taken > input data => Synced
     guard self.numberOfTestTaken < numberOfTestTaken else { return }
     

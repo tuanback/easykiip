@@ -9,8 +9,14 @@
 import Foundation
 
 public class FakeVocabRemoteAPI: VocabRemoteAPI {
+
   public init() { }
-  public func loadPracticeHistory(completion: @escaping ([PracticeHistory]) -> (Void)) {
-    completion([])
+  
+  public func loadBookData(userID: String, bookdID: UInt, completion: ([FirebaseBook]) -> ()) {
+    
+  }
+  
+  public func loadVocabData(userID: String, lessonID: UInt, completion: ([FirebaseVocab]) -> ()) {
+    
   }
 }

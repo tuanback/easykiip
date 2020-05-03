@@ -23,7 +23,7 @@ public class Book {
     return UInt8(total / count)
   }
   
-  init(id: UInt, name: String, thumbURL: URL?, lessons: [Lesson]) {
+  public init(id: UInt, name: String, thumbURL: URL?, lessons: [Lesson]) {
     self.id = id
     self.name = name
     self.thumbURL = thumbURL

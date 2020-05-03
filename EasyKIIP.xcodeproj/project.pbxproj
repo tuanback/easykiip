@@ -22,6 +22,8 @@
 		17954AAB245D06E100C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
 		17954AAD245D06E400C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
 		17954AB2245D3F6000C8CC95 /* MainBookItemCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */; };
+		17954ABD245EA9CE00C8CC95 /* BookDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */; };
+		17954ABE245EB4DB00C8CC95 /* UserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70B58245580B600C67334 /* UserSession.framework */; };
 		17B70A86244C180200C67334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70A85244C180200C67334 /* AppDelegate.swift */; };
 		17B70A8F244C180500C67334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A8E244C180500C67334 /* Assets.xcassets */; };
 		17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A90244C180500C67334 /* LaunchScreen.storyboard */; };
@@ -167,6 +169,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		17954AC0245EB4DB00C8CC95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17B70B57245580B600C67334;
+			remoteInfo = UserSession;
+		};
 		17B70A99244C180600C67334 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
@@ -273,6 +282,7 @@
 		17954A99245D025400C8CC95 /* book_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_0.jpg; sourceTree = "<group>"; };
 		17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBookItemCVC.swift; sourceTree = "<group>"; };
+		17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModelTests.swift; sourceTree = "<group>"; };
 		17B70A82244C180200C67334 /* Easy KIIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy KIIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70A85244C180200C67334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17B70A8E244C180500C67334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -377,6 +387,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17954ABE245EB4DB00C8CC95 /* UserSession.framework in Frameworks */,
 				1A35051ADF5C1C7F0B2197C2 /* Pods_EasyKIIPKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -652,6 +663,7 @@
 			children = (
 				17B70A9E244C180600C67334 /* Info.plist */,
 				17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */,
+				17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */,
 			);
 			path = EasyKIIPTests;
 			sourceTree = "<group>";
@@ -1090,6 +1102,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				17954AC1245EB4DB00C8CC95 /* PBXTargetDependency */,
 			);
 			name = EasyKIIPKit;
 			productName = EasyKIIPKit;
@@ -1557,6 +1570,7 @@
 				17FBF718245BEC1800A65233 /* LaunchRootView.swift in Sources */,
 				17FBF712245BEC0E00A65233 /* OnboardingVM.swift in Sources */,
 				17FBF705245BEBF800A65233 /* LoginViewModel.swift in Sources */,
+				17954ABD245EA9CE00C8CC95 /* BookDetailViewModelTests.swift in Sources */,
 				17FBF71E245BEC2400A65233 /* AppDenpendencyContainer.swift in Sources */,
 				17FBF6DF245BEBB000A65233 /* UIColor_Extension.swift in Sources */,
 				17FBF6F6245BEBDD00A65233 /* MainRootView.swift in Sources */,
@@ -1668,6 +1682,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		17954AC1245EB4DB00C8CC95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17B70B57245580B600C67334 /* UserSession */;
+			targetProxy = 17954AC0245EB4DB00C8CC95 /* PBXContainerItemProxy */;
+		};
 		17B70A9A244C180600C67334 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 17B70A81244C180200C67334 /* EasyKIIP */;
@@ -2065,7 +2084,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.UserSession;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2095,7 +2114,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.UserSession;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

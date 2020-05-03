@@ -108,10 +108,19 @@ public class VocabDataStoreInMemory: VocabDataStore {
     return result
   }
   
-  public func syncPracticeHistory(vocabID: UInt, testTaken: UInt, correctAnswer: UInt, firstLearnDate: Date, lastTimeTest: Date) {
+  public func syncPracticeHistory(vocabID: UInt,
+                                  isMastered: Bool,
+                                  testTaken: UInt,
+                                  correctAnswer: UInt,
+                                  firstLearnDate: Date,
+                                  lastTimeTest: Date) {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
     if let v = vocabs.first(where: { $0.id == vocabID }) {
-      try? v.setTestTakenData(numberOfTestTaken: testTaken, numberOfCorrectAnswer: correctAnswer, firstLearnDate: firstLearnDate, lastTimeTest: lastTimeTest)
+      try? v.setTestTakenData(isMastered: isMastered,
+                              numberOfTestTaken: testTaken,
+                              numberOfCorrectAnswer: correctAnswer,
+                              firstLearnDate: firstLearnDate,
+                              lastTimeTest: lastTimeTest)
     }
   }
   

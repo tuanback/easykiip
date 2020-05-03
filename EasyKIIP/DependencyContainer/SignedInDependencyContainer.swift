@@ -23,15 +23,15 @@ public class SignedInDependencyContainer {
     func makeVocabDataStore() -> VocabDataStore {
       return VocabDataStoreInMemory()
     }
-    func makeVocabRepository() -> VocabRepository {
+    func makeVocabRepository(userSession: UserSession?) -> VocabRepository {
       let remoteAPI = makeRemoteAPI()
       let dataStore = makeVocabDataStore()
-      let vocabRepository = KIIPVocabRepository(remoteAPI: remoteAPI, dataStore: dataStore)
+      let vocabRepository = KIIPVocabRepository(userSession: userSession, remoteAPI: remoteAPI, dataStore: dataStore)
       return vocabRepository
       
     }
     self.userSessionRepository = appDenpendencyContainer.userSessionRepository
-    self.vocabRepository = makeVocabRepository()
+    self.vocabRepository = makeVocabRepository(userSession: self.userSessionRepository.readUserSession())
   }
   
   func makeMainNavVC() -> MainNavVC {

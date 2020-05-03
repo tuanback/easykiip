@@ -7,50 +7,76 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 import SwiftDate
+import UserSession
 
 public class KIIPVocabRepository: VocabRepository {
   
+  private var userSession: UserSession?
   private let remoteAPI: VocabRemoteAPI
   private let dataStore: VocabDataStore
   
-  public init(remoteAPI: VocabRemoteAPI, dataStore: VocabDataStore) {
+  public init(userSession: UserSession?, remoteAPI: VocabRemoteAPI, dataStore: VocabDataStore) {
+    self.userSession = userSession
     self.remoteAPI = remoteAPI
     self.dataStore = dataStore
-  }
-  
-  public func syncUserData() {
-    // TODO: There should have a condition to init the load practice history
-    // Condition can be
-    // + Just install the app in the current device
-    // + User log out then just log in again
-    // +
-    initSyncPracticeHistory()
-  }
-  
-  private func initSyncPracticeHistory() {
-    remoteAPI.loadPracticeHistory { [weak self] (practiceHistories) -> (Void) in
-      guard let strongSelf = self else { return }
-      // TODO: Handle practice history
-      for history in practiceHistories {
-        guard let firstLearnDate = history.firstLearnDate,
-          let lastTimeTest = history.lastTimeTest else { continue }
-        
-        strongSelf.dataStore.syncPracticeHistory(vocabID: history.id, testTaken: history.numberOfTestTaken, correctAnswer: history.numberOfCorrectAnswer, firstLearnDate: firstLearnDate, lastTimeTest: lastTimeTest)
-      }
-    }
   }
   
   public func getListOfBook() -> [Book] {
     dataStore.getListOfBook()
   }
   
-  public func getListOfLesson(in book: Book) -> [Lesson] {
-    dataStore.getListOfLesson(in: book)
+  public func getListOfLesson(in book: Book) -> Observable<[Lesson]> {
+    // Need to queries from auth remote then merge together
+    let observable = PublishSubject<[Lesson]>()
+    let dataStoreLessons = dataStore.getListOfLesson(in: book)
+    
+    if let userSession = self.userSession {
+      remoteAPI.loadBookData(userID: userSession.profile.id, bookdID: book.id) { (books) in
+        // Algorithm to merge history from Back end with local datastore
+        observable.onCompleted()
+      }
+    }
+    
+    // Send data that stores in the DataStore first
+    defer {
+      observable.onNext(dataStoreLessons)
+    }
+    
+    return observable
   }
   
-  public func getListOfVocabs(in lesson: Lesson) -> [Vocab] {
-    dataStore.getListOfVocabs(in: lesson)
+  public func getListOfVocabs(in lesson: Lesson) -> Observable<[Vocab]> {
+    // Need to queries from auth remote then merge together
+    let observable = PublishSubject<[Vocab]>()
+    let dataStoreVocabs = dataStore.getListOfVocabs(in: lesson)
+    
+    if let userSession = self.userSession {
+      remoteAPI.loadVocabData(userID: userSession.profile.id, lessonID: lesson.id) { [weak self] (vocabs) in
+        // Algorithm to merge history from Back end with local datastore
+        for vocab in vocabs {
+          let firstTimeLearned = Date(timeIntervalSince1970: vocab.firstTimeLearned)
+          let lastTimeTest = Date(timeIntervalSince1970: vocab.lastTimeLearned)
+          
+          self?.dataStore.syncPracticeHistory(
+            vocabID: vocab.id,
+            isMastered: vocab.isMastered,
+            testTaken: vocab.testTaken,
+            correctAnswer: vocab.correctAnswer,
+            firstLearnDate: firstTimeLearned,
+            lastTimeTest: lastTimeTest)
+        }
+        observable.onCompleted()
+      }
+    }
+    
+    defer {
+      observable.onNext(dataStoreVocabs)
+    }
+    
+    return observable
   }
   
   public func markVocabAsMastered(_ vocab: Vocab) {
@@ -66,7 +92,8 @@ public class KIIPVocabRepository: VocabRepository {
   }
   
   public func getListOfLowProficiencyVocab(in book: Book, upto numberOfVocabs: Int) -> [Vocab] {
-    var vocabs = getListOfLesson(in: book).flatMap { getListOfVocabs(in: $0) }
+    var vocabs = dataStore.getListOfLesson(in: book)
+      .flatMap { dataStore.getListOfVocabs(in: $0) }
     vocabs = vocabs.filter { $0.practiceHistory.isLearned }
     vocabs.sort { $0.proficiency < $1.proficiency }
     let numberOfElement = min(numberOfVocabs, vocabs.count)
@@ -74,7 +101,7 @@ public class KIIPVocabRepository: VocabRepository {
   }
   
   public func getListOfLowProficiencyVocab(in lession: Lesson, upto numberOfVocabs: Int) -> [Vocab] {
-    var vocabs = getListOfVocabs(in: lession)
+    var vocabs = dataStore.getListOfVocabs(in: lession)
     vocabs = vocabs.filter { $0.practiceHistory.isLearned }
     vocabs.sort { $0.proficiency < $1.proficiency }
     let numberOfElement = min(numberOfVocabs, vocabs.count)
@@ -82,12 +109,15 @@ public class KIIPVocabRepository: VocabRepository {
   }
   
   public func getNeedReviewVocabs(upto numberOfVocabs: Int) -> [Vocab] {
-    let vocabs = getListOfBook().flatMap { getListOfLesson(in: $0).flatMap { getListOfVocabs(in: $0) }}
+    let vocabs = getListOfBook()
+      .flatMap { dataStore.getListOfLesson(in: $0)
+        .flatMap { dataStore.getListOfVocabs(in: $0) }}
     return getNeedReviewVocabs(from: vocabs, upto: numberOfVocabs)
   }
   
   public func getNeedReviewVocabs(in book: Book, upto numberOfVocabs: Int) -> [Vocab] {
-    let vocabs = getListOfLesson(in: book).flatMap { getListOfVocabs(in: $0) }
+    let vocabs = dataStore.getListOfLesson(in: book)
+      .flatMap { dataStore.getListOfVocabs(in: $0) }
     return getNeedReviewVocabs(from: vocabs, upto: numberOfVocabs)
   }
   
@@ -96,7 +126,7 @@ public class KIIPVocabRepository: VocabRepository {
       guard vocab.practiceHistory.isLearned,
         let firstDate = vocab.practiceHistory.firstLearnDate,
         let lastDate = vocab.practiceHistory.lastTimeTest else {
-        return false
+          return false
       }
       
       // What should be algorithm here

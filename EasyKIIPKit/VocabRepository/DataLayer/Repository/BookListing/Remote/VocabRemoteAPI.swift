@@ -8,6 +8,31 @@
 
 import Foundation
 
+public struct FirebaseVocab {
+  let id: UInt
+  let isLearned: Bool
+  let isMastered: Bool
+  let testTaken: UInt
+  let correctAnswer: UInt
+  /// Time since 1970
+  let firstTimeLearned: Double
+  /// Time since 1970
+  let lastTimeLearned: Double
+}
+
+public struct FirebaseLesson {
+  let id: UInt
+  let proficiency: UInt8
+  /// Time since 1970
+  let lastTimeSynced: Double
+}
+
+public struct FirebaseBook {
+  let id: UInt
+  var lessons: [FirebaseLesson]
+}
+
 public protocol VocabRemoteAPI {
-  func loadPracticeHistory(completion: @escaping ([PracticeHistory])->(Void))
+  func loadBookData(userID: String, bookdID: UInt, completion: ([FirebaseBook])->())
+  func loadVocabData(userID: String, lessonID: UInt, completion: ([FirebaseVocab])->())
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 public protocol SearchEngine {
   func searchVocab(keyword: String) -> [Vocab]
@@ -25,10 +26,9 @@ public protocol NeedReviewVocabsGetter {
 }
 
 public protocol VocabRepository: SearchEngine, NeedMorePracticeVocabGetter, NeedReviewVocabsGetter {
-  func syncUserData()
   func getListOfBook() -> [Book]
-  func getListOfLesson(in book: Book) -> [Lesson]
-  func getListOfVocabs(in lesson: Lesson) -> [Vocab]
+  func getListOfLesson(in book: Book) -> Observable<[Lesson]>
+  func getListOfVocabs(in lesson: Lesson) -> Observable<[Vocab]>
   func markVocabAsMastered(_ vocab: Vocab)
   func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool)
 }
