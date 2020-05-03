@@ -80,7 +80,7 @@ class LessonTests: XCTestCase {
     let vocab2 = Vocab(id: 1, word: "", translations: [:])
     try vocab2.setTestTakenData(numberOfTestTaken: 1, numberOfCorrectAnswer: 1, firstLearnDate: time2, lastTimeTest: time2)
     let sut = makeSut(with: [vocab1, vocab2])
-    XCTAssertEqual(sut.lastTimeLeaned, time2)
+    XCTAssertEqual(sut.lastTimeLearned, time2)
   }
   
   // Helper methods

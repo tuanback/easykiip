@@ -23,7 +23,7 @@ public class Lesson {
     let count = UInt(vocabs.count)
     return UInt8(total / count)
   }
-  public var lastTimeLeaned: Date? {
+  public var lastTimeLearned: Date? {
     let learnedVocabs = vocabs.filter { $0.lastTimeTest != nil }
     guard learnedVocabs.count > 0 else { return nil }
     return learnedVocabs.sorted { $0.lastTimeTest! > $1.lastTimeTest! }[0].lastTimeTest
