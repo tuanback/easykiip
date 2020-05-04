@@ -90,11 +90,26 @@
             filePath = "EasyKIIPKit/VocabRepository/DataLayer/Repository/BookListing/KIIPVocabRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "getListOfLesson(in:)"
             landmarkType = "7">
             <Locations>
+               <Location
+                  uuid = "7BB67B36-1B8A-461E-9D80-3EA961B6234E - cd05e7079bdd3d58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EasyKIIPKitTests.KIIPVocabRepository.getListOfLesson(in: EasyKIIPKitTests.Book) -&gt; RxSwift.Observable&lt;Swift.Array&lt;EasyKIIPKitTests.Lesson&gt;&gt;"
+                  moduleName = "EasyKIIPKitTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tuan/0.Projects/easykiip/EasyKIIPKit/VocabRepository/DataLayer/Repository/BookListing/KIIPVocabRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "305">
+               </Location>
                <Location
                   uuid = "7BB67B36-1B8A-461E-9D80-3EA961B6234E - b49fce94ecc09c2a"
                   shouldBeEnabled = "Yes"
@@ -106,24 +121,9 @@
                   urlString = "file:///Users/tuan/0.Projects/easykiip/EasyKIIPKit/VocabRepository/DataLayer/Repository/BookListing/KIIPVocabRepository.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "457">
-               </Location>
-               <Location
-                  uuid = "7BB67B36-1B8A-461E-9D80-3EA961B6234E - b69b7393a0601231"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;EasyKIIPKit.FirebaseLesson&gt;) -&gt; () in EasyKIIPKit.KIIPVocabRepository.getListOfLesson(in: EasyKIIPKit.Book) -&gt; RxSwift.Observable&lt;Swift.Array&lt;EasyKIIPKit.Lesson&gt;&gt;"
-                  moduleName = "EasyKIIPKit"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Projects/easykiip/EasyKIIPKit/VocabRepository/DataLayer/Repository/BookListing/KIIPVocabRepository.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "268">
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "305">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -64,7 +64,7 @@ class MainViewModelTests: XCTestCase {
   private func makeSut() -> (MainViewModel, VocabDataStore) {
     let vocabDataStore = VocabDataStoreInMemory()
     let userSessionRepository = KIIPUserSessionRepository(dataStore: FakeUserSessionDataStore(hasToken: true), remoteAPI: FakeAuthRemoteAPI())
-    let vocabRepository = KIIPVocabRepository(remoteAPI: FakeVocabRemoteAPI(), dataStore: vocabDataStore)
+    let vocabRepository = KIIPVocabRepository(userSession: userSessionRepository.readUserSession(), remoteAPI: FakeVocabRemoteAPI(), dataStore: vocabDataStore)
     
     let sut = MainViewModel(userSessionRepository: userSessionRepository, vocabRepository: vocabRepository)
     return (sut, vocabDataStore)

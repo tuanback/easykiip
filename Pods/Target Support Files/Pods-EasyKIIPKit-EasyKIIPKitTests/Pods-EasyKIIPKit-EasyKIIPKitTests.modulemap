@@ -1,0 +1,6 @@
+framework module Pods_EasyKIIPKit_EasyKIIPKitTests {
+  umbrella header "Pods-EasyKIIPKit-EasyKIIPKitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,7 +7,7 @@
 		<key>EasyKIIP.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>42</integer>
+			<integer>0</integer>
 		</dict>
 		<key>EasyKIIPKit.xcscheme_^#shared#^_</key>
 		<dict>
@@ -22,7 +22,30 @@
 		<key>UserSession.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>43</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>17B70A81244C180200C67334</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>17B70A97244C180600C67334</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>17B70B57245580B600C67334</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>17B70B5F245580B700C67334</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

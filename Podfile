@@ -33,7 +33,6 @@ target 'UserSession' do
   pod 'RxAlamofire'
   
   target 'UserSessionTests' do
-    inherit! :search_paths
     # Pods for testing
     pod 'RxBlocking'
     pod 'RxTest'
@@ -51,8 +50,8 @@ target 'EasyKIIPKit' do
   pod 'SwiftDate'
   
   target 'EasyKIIPKitTests' do
-    inherit! :search_paths
     # Pods for testing
+    pod 'RxAlamofire'
     pod 'SwiftDate'
   end
 

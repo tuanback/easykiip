@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1766FFEB245B9A7E008B263D /* FakeVocabRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFEA245B9A7E008B263D /* FakeVocabRemoteAPI.swift */; };
 		1766FFF2245BD993008B263D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFF1245BD993008B263D /* GoogleService-Info.plist */; };
+		176ADE042460471F006C5D3C /* MainBookItemCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */; };
 		17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
 		17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
 		17954AA2245D028200C8CC95 /* book_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A99245D025400C8CC95 /* book_0.jpg */; };
@@ -161,11 +162,11 @@
 		17FBF738245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */; };
 		17FBF739245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */; };
 		1A35051ADF5C1C7F0B2197C2 /* Pods_EasyKIIPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */; };
-		57E4904DB391E7E2D7E543B3 /* Pods_UserSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117EC49A333FE8EC5FF52C3D /* Pods_UserSessionTests.framework */; };
 		78F5A67A5A3AA31A192C291F /* Pods_EasyKIIPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */; };
+		7C79AB75996A3895FF7DA653 /* Pods_UserSession_UserSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10354E400E6A62457F3A3874 /* Pods_UserSession_UserSessionTests.framework */; };
 		805274668FD7FD7D0F7E3428 /* Pods_EasyKIIP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C39FF132AEDBD39407410F /* Pods_EasyKIIP.framework */; };
 		BB50221261F05D9B6C755D4D /* Pods_UserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6B5C6E18E22AC4E5114C659 /* Pods_UserSession.framework */; };
-		BDA34D15CB31CE560A84D43B /* Pods_EasyKIIPKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FF93F3774D0D60E2F75D58 /* Pods_EasyKIIPKitTests.framework */; };
+		D8E157838C225C3EEF16A382 /* Pods_EasyKIIPKit_EasyKIIPKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDDA0B3770660C59FC5B9AE0 /* Pods_EasyKIIPKit_EasyKIIPKitTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,13 +205,6 @@
 			remoteGlobalIDString = 17B70B57245580B600C67334;
 			remoteInfo = UserSession;
 		};
-		17B70B64245580B700C67334 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 17B70A81244C180200C67334;
-			remoteInfo = EasyKIIP;
-		};
 		17B70B6B245580B700C67334 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 17B70A7A244C180200C67334 /* Project object */;
@@ -238,9 +232,8 @@
 /* Begin PBXFileReference section */
 		0B2DB75E44E47E7DA5329E24 /* Pods-EasyKIIPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPUITests.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIPUITests/Pods-EasyKIIPUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0DF5FC3C60A9BB6B51A6EF38 /* Pods-UserSessionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSessionTests.release.xcconfig"; path = "Target Support Files/Pods-UserSessionTests/Pods-UserSessionTests.release.xcconfig"; sourceTree = "<group>"; };
-		117EC49A333FE8EC5FF52C3D /* Pods_UserSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10354E400E6A62457F3A3874 /* Pods_UserSession_UserSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSession_UserSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		14FF93F3774D0D60E2F75D58 /* Pods_EasyKIIPKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1766FF92245A5A93008B263D /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		1766FFA1245A5DAE008B263D /* NiblessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
 		1766FFA2245A5DAE008B263D /* NiblessNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessNavigationController.swift; sourceTree = "<group>"; };
@@ -354,12 +347,17 @@
 		95C39FF132AEDBD39407410F /* Pods_EasyKIIP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98B1027361CFA56309F7D4EE /* Pods-EasyKIIP_iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIP_iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIP_iOSTests/Pods-EasyKIIP_iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A79F95E235D51F984A33C1A9 /* Pods-EasyKIIPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIPTests/Pods-EasyKIIPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AFAED07A5824029DE3B9D2E5 /* Pods-EasyKIIPKit-EasyKIIPKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPKit-EasyKIIPKitTests.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIPKit-EasyKIIPKitTests/Pods-EasyKIIPKit-EasyKIIPKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC3DC2EBEB610AA243E74E59 /* Pods-UserSession-UserSessionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSession-UserSessionTests.release.xcconfig"; path = "Target Support Files/Pods-UserSession-UserSessionTests/Pods-UserSession-UserSessionTests.release.xcconfig"; sourceTree = "<group>"; };
+		C15DC600C16F9E986A042AAE /* Pods-UserSession-UserSessionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSession-UserSessionTests.debug.xcconfig"; path = "Target Support Files/Pods-UserSession-UserSessionTests/Pods-UserSession-UserSessionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8D359D2E39FA82ECCBE0866 /* Pods-EasyKIIP_iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIP_iOSTests.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIP_iOSTests/Pods-EasyKIIP_iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CAE9533D0FD4E72C514287BF /* Pods-EasyKIIPKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPKitTests.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIPKitTests/Pods-EasyKIIPKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		CDA0D40DE08433E3B0DB4C04 /* Pods-EasyKIIPKit-EasyKIIPKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPKit-EasyKIIPKitTests.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIPKit-EasyKIIPKitTests/Pods-EasyKIIPKit-EasyKIIPKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		D12E32CC789865A764EF8F5C /* Pods-EasyKIIPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIPUITests.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIPUITests/Pods-EasyKIIPUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D7F54F7E7F01C9D994810F21 /* Pods-EasyKIIP_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIP_iOS.debug.xcconfig"; path = "Target Support Files/Pods-EasyKIIP_iOS/Pods-EasyKIIP_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		E9BA4AEA3CBD18D79290F64D /* Pods-UserSessionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSessionTests.debug.xcconfig"; path = "Target Support Files/Pods-UserSessionTests/Pods-UserSessionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB08ED5E803A6EECE64DF37D /* Pods-UserSession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSession.release.xcconfig"; path = "Target Support Files/Pods-UserSession/Pods-UserSession.release.xcconfig"; sourceTree = "<group>"; };
+		EDDA0B3770660C59FC5B9AE0 /* Pods_EasyKIIPKit_EasyKIIPKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPKit_EasyKIIPKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F16BC5199528F6E34ED995F6 /* Pods_EasyKIIPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6B5C6E18E22AC4E5114C659 /* Pods_UserSession.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSession.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -397,7 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B70AC3244CF1CE00C67334 /* EasyKIIPKit.framework in Frameworks */,
-				BDA34D15CB31CE560A84D43B /* Pods_EasyKIIPKitTests.framework in Frameworks */,
+				D8E157838C225C3EEF16A382 /* Pods_EasyKIIPKit_EasyKIIPKitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B70B61245580B700C67334 /* UserSession.framework in Frameworks */,
-				57E4904DB391E7E2D7E543B3 /* Pods_UserSessionTests.framework in Frameworks */,
+				7C79AB75996A3895FF7DA653 /* Pods_UserSession_UserSessionTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,13 +692,13 @@
 			children = (
 				95C39FF132AEDBD39407410F /* Pods_EasyKIIP.framework */,
 				3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */,
-				14FF93F3774D0D60E2F75D58 /* Pods_EasyKIIPKitTests.framework */,
 				12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */,
 				F16BC5199528F6E34ED995F6 /* Pods_EasyKIIPUITests.framework */,
 				F6B5C6E18E22AC4E5114C659 /* Pods_UserSession.framework */,
-				117EC49A333FE8EC5FF52C3D /* Pods_UserSessionTests.framework */,
 				2F167FF918FE580D7167655F /* Pods_EasyKIIP_iOS.framework */,
 				30F3EFD1CF8ECF9E61614281 /* Pods_EasyKIIP_iOSTests.framework */,
+				EDDA0B3770660C59FC5B9AE0 /* Pods_EasyKIIPKit_EasyKIIPKitTests.framework */,
+				10354E400E6A62457F3A3874 /* Pods_UserSession_UserSessionTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1020,6 +1018,10 @@
 				2F73EEDCDEA8E5784229A606 /* Pods-EasyKIIP_iOS.release.xcconfig */,
 				98B1027361CFA56309F7D4EE /* Pods-EasyKIIP_iOSTests.debug.xcconfig */,
 				C8D359D2E39FA82ECCBE0866 /* Pods-EasyKIIP_iOSTests.release.xcconfig */,
+				AFAED07A5824029DE3B9D2E5 /* Pods-EasyKIIPKit-EasyKIIPKitTests.debug.xcconfig */,
+				CDA0D40DE08433E3B0DB4C04 /* Pods-EasyKIIPKit-EasyKIIPKitTests.release.xcconfig */,
+				C15DC600C16F9E986A042AAE /* Pods-UserSession-UserSessionTests.debug.xcconfig */,
+				BC3DC2EBEB610AA243E74E59 /* Pods-UserSession-UserSessionTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1162,7 +1164,6 @@
 			);
 			dependencies = (
 				17B70B63245580B700C67334 /* PBXTargetDependency */,
-				17B70B65245580B700C67334 /* PBXTargetDependency */,
 			);
 			name = UserSessionTests;
 			productName = UserSessionTests;
@@ -1199,7 +1200,6 @@
 					};
 					17B70B5F245580B700C67334 = {
 						CreatedOnToolsVersion = 11.4.1;
-						TestTargetID = 17B70A81244C180200C67334;
 					};
 				};
 			};
@@ -1300,7 +1300,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EasyKIIPKitTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-EasyKIIPKit-EasyKIIPKitTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1313,15 +1313,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UserSessionTests/Pods-UserSessionTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-UserSession-UserSessionTests/Pods-UserSession-UserSessionTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-UserSessionTests/Pods-UserSessionTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-UserSession-UserSessionTests/Pods-UserSession-UserSessionTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UserSessionTests/Pods-UserSessionTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UserSession-UserSessionTests/Pods-UserSession-UserSessionTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2A40199626F6AB751765BEF8 /* [CP] Check Pods Manifest.lock */ = {
@@ -1352,15 +1352,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIPKitTests/Pods-EasyKIIPKitTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIPKit-EasyKIIPKitTests/Pods-EasyKIIPKit-EasyKIIPKitTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIPKitTests/Pods-EasyKIIPKitTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-EasyKIIPKit-EasyKIIPKitTests/Pods-EasyKIIPKit-EasyKIIPKitTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyKIIPKitTests/Pods-EasyKIIPKitTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EasyKIIPKit-EasyKIIPKitTests/Pods-EasyKIIPKit-EasyKIIPKitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		55D205C516A4934359FD03D0 /* [CP] Check Pods Manifest.lock */ = {
@@ -1422,7 +1422,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-UserSessionTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-UserSession-UserSessionTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1568,6 +1568,7 @@
 				17FBF6F0245BEBD000A65233 /* NiblessViewController.swift in Sources */,
 				17954AAB245D06E100C8CC95 /* MainNavVC.swift in Sources */,
 				17FBF718245BEC1800A65233 /* LaunchRootView.swift in Sources */,
+				176ADE042460471F006C5D3C /* MainBookItemCVC.swift in Sources */,
 				17FBF712245BEC0E00A65233 /* OnboardingVM.swift in Sources */,
 				17FBF705245BEBF800A65233 /* LoginViewModel.swift in Sources */,
 				17954ABD245EA9CE00C8CC95 /* BookDetailViewModelTests.swift in Sources */,
@@ -1706,11 +1707,6 @@
 			isa = PBXTargetDependency;
 			target = 17B70B57245580B600C67334 /* UserSession */;
 			targetProxy = 17B70B62245580B700C67334 /* PBXContainerItemProxy */;
-		};
-		17B70B65245580B700C67334 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 17B70A81244C180200C67334 /* EasyKIIP */;
-			targetProxy = 17B70B64245580B700C67334 /* PBXContainerItemProxy */;
 		};
 		17B70B6C245580B700C67334 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2017,7 +2013,7 @@
 		};
 		17B70ACF244CF1CE00C67334 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77FD3C673292AFC03F137330 /* Pods-EasyKIIPKitTests.debug.xcconfig */;
+			baseConfigurationReference = AFAED07A5824029DE3B9D2E5 /* Pods-EasyKIIPKit-EasyKIIPKitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -2025,6 +2021,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CW3DR8XJT7;
 				INFOPLIST_FILE = EasyKIIPKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -2041,7 +2038,7 @@
 		};
 		17B70AD0244CF1CE00C67334 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAE9533D0FD4E72C514287BF /* Pods-EasyKIIPKitTests.release.xcconfig */;
+			baseConfigurationReference = CDA0D40DE08433E3B0DB4C04 /* Pods-EasyKIIPKit-EasyKIIPKitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -2049,6 +2046,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CW3DR8XJT7;
 				INFOPLIST_FILE = EasyKIIPKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -2124,12 +2122,13 @@
 		};
 		17B70B71245580B700C67334 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9BA4AEA3CBD18D79290F64D /* Pods-UserSessionTests.debug.xcconfig */;
+			baseConfigurationReference = C15DC600C16F9E986A042AAE /* Pods-UserSession-UserSessionTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CW3DR8XJT7;
 				INFOPLIST_FILE = UserSessionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2138,19 +2137,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.UserSessionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy KIIP.app/Easy KIIP";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		17B70B72245580B700C67334 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0DF5FC3C60A9BB6B51A6EF38 /* Pods-UserSessionTests.release.xcconfig */;
+			baseConfigurationReference = BC3DC2EBEB610AA243E74E59 /* Pods-UserSession-UserSessionTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CW3DR8XJT7;
 				INFOPLIST_FILE = UserSessionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2159,8 +2158,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.UserSessionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy KIIP.app/Easy KIIP";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

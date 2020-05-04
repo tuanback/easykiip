@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_EasyKIIPKitTestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_EasyKIIPKitTestsVersionString[];
+FOUNDATION_EXPORT double Pods_EasyKIIPKit_EasyKIIPKitTestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_EasyKIIPKit_EasyKIIPKitTestsVersionString[];
 
