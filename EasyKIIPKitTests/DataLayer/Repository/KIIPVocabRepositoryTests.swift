@@ -7,8 +7,6 @@
 //
 
 import XCTest
-import RxSwift
-import RxCocoa
 import SwiftDate
 import UserSession
 @testable import EasyKIIPKit
@@ -16,7 +14,6 @@ import UserSession
 class KIIPVocabRepositoryTests: XCTestCase {
   
   private lazy var dataStore = VocabDataStoreInMemory()
-  private let disposeBag = DisposeBag()
   
   func testGestListOfBook() {
     let sut = makeSut()
@@ -193,7 +190,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
       self.practiceHistory = practiceHistory
     }
     
-    func loadBookData(userID: String, bookdID: UInt, completion: ([FirebaseBook]) -> ()) {
+    func loadLessonData(userID: String, bookdID: UInt, completion: ([FirebaseLesson]) -> ()) {
       
     }
     

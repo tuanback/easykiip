@@ -12,7 +12,7 @@ public class FakeVocabRemoteAPI: VocabRemoteAPI {
 
   public init() { }
   
-  public func loadBookData(userID: String, bookdID: UInt, completion: ([FirebaseBook]) -> ()) {
+  public func loadLessonData(userID: String, bookdID: UInt, completion: ([FirebaseLesson]) -> ()) {
     
   }
   

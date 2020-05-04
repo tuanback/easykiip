@@ -108,6 +108,11 @@ public class VocabDataStoreInMemory: VocabDataStore {
     return result
   }
   
+  public func syncLessonProficiency(lessonID: UInt, proficiency: UInt8, lastTimeSynced: Double) {
+    guard let lesson = books.flatMap({ $0.lessons }).first(where: { $0.id == lessonID }) else { return }
+    lesson.setProficiency(proficiency)
+  }
+  
   public func syncPracticeHistory(vocabID: UInt,
                                   isMastered: Bool,
                                   testTaken: UInt,

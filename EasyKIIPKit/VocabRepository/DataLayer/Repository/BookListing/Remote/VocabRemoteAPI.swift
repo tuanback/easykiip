@@ -27,12 +27,7 @@ public struct FirebaseLesson {
   let lastTimeSynced: Double
 }
 
-public struct FirebaseBook {
-  let id: UInt
-  var lessons: [FirebaseLesson]
-}
-
 public protocol VocabRemoteAPI {
-  func loadBookData(userID: String, bookdID: UInt, completion: ([FirebaseBook])->())
+  func loadLessonData(userID: String, bookdID: UInt, completion: ([FirebaseLesson])->())
   func loadVocabData(userID: String, lessonID: UInt, completion: ([FirebaseVocab])->())
 }

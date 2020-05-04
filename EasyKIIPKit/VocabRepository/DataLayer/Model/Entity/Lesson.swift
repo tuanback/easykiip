@@ -15,7 +15,30 @@ public class Lesson {
   public private(set) var readingParts: [ReadingPart]
   private(set) var vocabs: [Vocab]
   
-  public var proficiency: UInt8 {
+  private(set) var proficiency: UInt8
+  
+  public var lastTimeLearned: Date? {
+    let learnedVocabs = vocabs.filter { $0.lastTimeTest != nil }
+    guard learnedVocabs.count > 0 else { return nil }
+    return learnedVocabs.sorted { $0.lastTimeTest! > $1.lastTimeTest! }[0].lastTimeTest
+  }
+  
+  init(id: UInt, name: String, translations: [LanguageCode: String], vocabs: [Vocab], readingParts: [ReadingPart], proficiency: UInt8? = nil) {
+    self.id = id
+    self.name = name
+    self.translations = translations
+    self.vocabs = vocabs
+    self.readingParts = readingParts
+    if let proficiency = proficiency {
+      self.proficiency = proficiency
+    }
+    else {
+      self.proficiency = 0
+      self.proficiency = self.calculateProficiency()
+    }
+  }
+  
+  private func calculateProficiency() -> UInt8 {
     guard vocabs.count > 0 else { return 100 }
     let total = vocabs.reduce(0) { (result, vocab) -> UInt in
       result + UInt(vocab.proficiency)
@@ -23,18 +46,8 @@ public class Lesson {
     let count = UInt(vocabs.count)
     return UInt8(total / count)
   }
-  public var lastTimeLearned: Date? {
-    let learnedVocabs = vocabs.filter { $0.lastTimeTest != nil }
-    guard learnedVocabs.count > 0 else { return nil }
-    return learnedVocabs.sorted { $0.lastTimeTest! > $1.lastTimeTest! }[0].lastTimeTest
-  }
   
-  init(id: UInt, name: String, translations: [LanguageCode: String], vocabs: [Vocab], readingParts: [ReadingPart]) {
-    self.id = id
-    self.name = name
-    self.translations = translations
-    self.vocabs = vocabs
-    self.readingParts = readingParts
+  func setProficiency(_ proficiency: UInt8) {
+    self.proficiency = proficiency
   }
-  
 }

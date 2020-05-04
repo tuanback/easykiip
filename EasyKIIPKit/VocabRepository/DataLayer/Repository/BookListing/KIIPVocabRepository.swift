@@ -34,8 +34,17 @@ public class KIIPVocabRepository: VocabRepository {
     let dataStoreLessons = dataStore.getListOfLesson(in: book)
     
     if let userSession = self.userSession {
-      remoteAPI.loadBookData(userID: userSession.profile.id, bookdID: book.id) { (books) in
+      remoteAPI.loadLessonData(userID: userSession.profile.id, bookdID: book.id) { [weak self] (lessons) in
+        guard let strongSelf = self else { return }
         // Algorithm to merge history from Back end with local datastore
+        for lesson in lessons {
+          self?.dataStore.syncLessonProficiency(lessonID: lesson.id,
+                                                proficiency: lesson.proficiency,
+                                                lastTimeSynced: lesson.lastTimeSynced)
+        }
+        
+        let syncedLessons = strongSelf.dataStore.getListOfLesson(in: book)
+        observable.onNext(syncedLessons)
         observable.onCompleted()
       }
     }
@@ -55,6 +64,7 @@ public class KIIPVocabRepository: VocabRepository {
     
     if let userSession = self.userSession {
       remoteAPI.loadVocabData(userID: userSession.profile.id, lessonID: lesson.id) { [weak self] (vocabs) in
+        guard let strongSelf = self else { return }
         // Algorithm to merge history from Back end with local datastore
         for vocab in vocabs {
           let firstTimeLearned = Date(timeIntervalSince1970: vocab.firstTimeLearned)
@@ -68,6 +78,9 @@ public class KIIPVocabRepository: VocabRepository {
             firstLearnDate: firstTimeLearned,
             lastTimeTest: lastTimeTest)
         }
+        
+        let syncedVocabs = strongSelf.dataStore.getListOfVocabs(in: lesson)
+        observable.onNext(syncedVocabs)
         observable.onCompleted()
       }
     }

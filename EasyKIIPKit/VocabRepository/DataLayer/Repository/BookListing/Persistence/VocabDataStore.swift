@@ -15,7 +15,13 @@ public protocol VocabDataStore {
   func markVocabAsMastered(_ vocab: Vocab)
   func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool)
   func getVocab(by id: UInt) -> Vocab?
-  func searchVocab(keyword: String) -> [Vocab] 
+  func searchVocab(keyword: String) -> [Vocab]
+  
+  // To Sync With Firestore Cloud
+  func syncLessonProficiency(lessonID: UInt,
+                             proficiency: UInt8,
+                             lastTimeSynced: Double)
+  
   func syncPracticeHistory(vocabID: UInt,
                            isMastered: Bool,
                            testTaken: UInt,
