@@ -12,6 +12,8 @@
 		176ADE042460471F006C5D3C /* MainBookItemCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */; };
 		176ADE072460E958006C5D3C /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176ADE062460E958006C5D3C /* BookDetailViewModel.swift */; };
 		176ADE082460E958006C5D3C /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176ADE062460E958006C5D3C /* BookDetailViewModel.swift */; };
+		176ADE0B24620C07006C5D3C /* RealmDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176ADE0A24620C07006C5D3C /* RealmDataStoreTests.swift */; };
+		176ADE0E24620EAB006C5D3C /* RealmProviderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176ADE0D24620EAB006C5D3C /* RealmProviderExtensions.swift */; };
 		17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
 		17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
 		17954AA2245D028200C8CC95 /* book_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A99245D025400C8CC95 /* book_0.jpg */; };
@@ -267,6 +269,8 @@
 		1766FFEF245BB0CB008B263D /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		1766FFF1245BD993008B263D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		176ADE062460E958006C5D3C /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
+		176ADE0A24620C07006C5D3C /* RealmDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataStoreTests.swift; sourceTree = "<group>"; };
+		176ADE0D24620EAB006C5D3C /* RealmProviderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProviderExtensions.swift; sourceTree = "<group>"; };
 		17954A89245CFC9D00C8CC95 /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
 		17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavViewModel.swift; sourceTree = "<group>"; };
 		17954A93245D025300C8CC95 /* book_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_6.jpg; sourceTree = "<group>"; };
@@ -556,6 +560,22 @@
 			path = BookDetailVC;
 			sourceTree = "<group>";
 		};
+		176ADE0924620BCF006C5D3C /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				176ADE0A24620C07006C5D3C /* RealmDataStoreTests.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		176ADE0C24620E97006C5D3C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				176ADE0D24620EAB006C5D3C /* RealmProviderExtensions.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		17954A87245CFC2B00C8CC95 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -692,6 +712,7 @@
 		17B70AC6244CF1CE00C67334 /* EasyKIIPKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				176ADE0C24620E97006C5D3C /* Helper */,
 				17B70AF5244DBE5C00C67334 /* DataLayer */,
 				17B70ADB244CF23A00C67334 /* UILayer */,
 				17B70AC9244CF1CE00C67334 /* Info.plist */,
@@ -979,6 +1000,7 @@
 		17EB44FF2454262800C9C312 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				176ADE0924620BCF006C5D3C /* Persistence */,
 				17EB45002454263D00C9C312 /* KIIPVocabRepositoryTests.swift */,
 			);
 			path = Repository;
@@ -1622,9 +1644,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				176ADE0E24620EAB006C5D3C /* RealmProviderExtensions.swift in Sources */,
 				17B70AF1244CF57100C67334 /* Book.swift in Sources */,
 				17B70B1E245308EC00C67334 /* Lesson.swift in Sources */,
 				17B70B04244DC7F800C67334 /* Vocab.swift in Sources */,
+				176ADE0B24620C07006C5D3C /* RealmDataStoreTests.swift in Sources */,
 				17B70B07244DC80300C67334 /* VocabTests.swift in Sources */,
 				17B70AF4244DBDCC00C67334 /* PraticeHistory.swift in Sources */,
 				17B70B282453CA1100C67334 /* VocabRemoteAPI.swift in Sources */,
