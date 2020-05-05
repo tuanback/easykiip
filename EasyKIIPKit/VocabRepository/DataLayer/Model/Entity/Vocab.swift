@@ -20,7 +20,7 @@ public class Vocab {
     return practiceHistory.lastTimeTest
   }
   
-  init(id: UInt, word: String, translations: [LanguageCode: String]) {
+  public init(id: UInt, word: String, translations: [LanguageCode: String]) {
     self.id = id
     self.word = word
     self.translations = translations

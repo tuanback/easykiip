@@ -12,6 +12,7 @@ import XCTest
 class LessonTests: XCTestCase {
     
   private let id: UInt = 0
+  private let index: UInt = 0
   private let lessionName = "Lesson"
   private let translations: [LanguageCode: String] = [.en: "Lesson", .vi: "Bài"]
   private let readingParts: [ReadingPart] = [ReadingPart(id: 0, script: "1", translations: [.en: "vi"])]
@@ -85,6 +86,6 @@ class LessonTests: XCTestCase {
   
   // Helper methods
   private func makeSut(with vocabs: [Vocab]) -> Lesson {
-    return Lesson(id: id, name: lessionName, translations: translations, vocabs: vocabs, readingParts: readingParts)
+    return Lesson(id: id, name: lessionName, index: index, translations: translations, vocabs: vocabs, readingParts: readingParts)
   }
 }

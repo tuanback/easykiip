@@ -11,11 +11,13 @@ import Foundation
 public class Lesson {
   public private(set) var id: UInt
   public private(set) var name: String
+  /// To display lesson index in the book
+  public private(set) var index: UInt
   public private(set) var translations: [LanguageCode: String]
   public private(set) var readingParts: [ReadingPart]
-  private(set) var vocabs: [Vocab]
+  public private(set) var vocabs: [Vocab]
   
-  private(set) var proficiency: UInt8
+  public private(set) var proficiency: UInt8
   
   public var lastTimeLearned: Date? {
     let learnedVocabs = vocabs.filter { $0.lastTimeTest != nil }
@@ -23,9 +25,16 @@ public class Lesson {
     return learnedVocabs.sorted { $0.lastTimeTest! > $1.lastTimeTest! }[0].lastTimeTest
   }
   
-  init(id: UInt, name: String, translations: [LanguageCode: String], vocabs: [Vocab], readingParts: [ReadingPart], proficiency: UInt8? = nil) {
+  public init(id: UInt,
+              name: String,
+              index: UInt,
+              translations: [LanguageCode: String],
+              vocabs: [Vocab],
+              readingParts: [ReadingPart],
+              proficiency: UInt8? = nil) {
     self.id = id
     self.name = name
+    self.index = index
     self.translations = translations
     self.vocabs = vocabs
     self.readingParts = readingParts

@@ -13,6 +13,7 @@ target 'EasyKIIP' do
   pod 'FirebaseFirestoreSwift'
   pod 'GoogleSignIn'
   pod 'SnapKit'
+  pod 'SwiftDate'
   
   target 'EasyKIIPTests' do
     inherit! :search_paths

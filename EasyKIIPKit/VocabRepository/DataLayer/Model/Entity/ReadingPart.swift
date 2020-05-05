@@ -14,7 +14,7 @@ public class ReadingPart {
   public let script: String
   public let translations: [LanguageCode: String]
   
-  init(id: UInt, script: String, translations: [LanguageCode: String]) {
+  public init(id: UInt, script: String, translations: [LanguageCode: String]) {
     self.id = id
     self.script = script
     self.translations = translations

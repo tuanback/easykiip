@@ -10,6 +10,8 @@
 		1766FFEB245B9A7E008B263D /* FakeVocabRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFEA245B9A7E008B263D /* FakeVocabRemoteAPI.swift */; };
 		1766FFF2245BD993008B263D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFF1245BD993008B263D /* GoogleService-Info.plist */; };
 		176ADE042460471F006C5D3C /* MainBookItemCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */; };
+		176ADE072460E958006C5D3C /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176ADE062460E958006C5D3C /* BookDetailViewModel.swift */; };
+		176ADE082460E958006C5D3C /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176ADE062460E958006C5D3C /* BookDetailViewModel.swift */; };
 		17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
 		17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
 		17954AA2245D028200C8CC95 /* book_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A99245D025400C8CC95 /* book_0.jpg */; };
@@ -264,6 +266,7 @@
 		1766FFED245BADA2008B263D /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		1766FFEF245BB0CB008B263D /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		1766FFF1245BD993008B263D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		176ADE062460E958006C5D3C /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 		17954A89245CFC9D00C8CC95 /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
 		17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavViewModel.swift; sourceTree = "<group>"; };
 		17954A93245D025300C8CC95 /* book_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_6.jpg; sourceTree = "<group>"; };
@@ -452,6 +455,7 @@
 		1766FF9A245A5CDC008B263D /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
+				176ADE052460E928006C5D3C /* BookDetailVC */,
 				17954A88245CFC8700C8CC95 /* MainNavVC */,
 				17954A87245CFC2B00C8CC95 /* MainVC */,
 			);
@@ -542,6 +546,14 @@
 				1766FFEF245BB0CB008B263D /* WelcomeVC.swift */,
 			);
 			path = WelcomeVC;
+			sourceTree = "<group>";
+		};
+		176ADE052460E928006C5D3C /* BookDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				176ADE062460E958006C5D3C /* BookDetailViewModel.swift */,
+			);
+			path = BookDetailVC;
 			sourceTree = "<group>";
 		};
 		17954A87245CFC2B00C8CC95 /* MainVC */ = {
@@ -1538,6 +1550,7 @@
 				17FBF6F5245BEBDC00A65233 /* MainRootView.swift in Sources */,
 				17FBF6E9245BEBC500A65233 /* NiblessView.swift in Sources */,
 				17FBF6F2245BEBD700A65233 /* MainViewModel.swift in Sources */,
+				176ADE072460E958006C5D3C /* BookDetailViewModel.swift in Sources */,
 				17FBF70E245BEC0800A65233 /* OnboardingVC.swift in Sources */,
 				17FBF6F8245BEBE100A65233 /* MainVC.swift in Sources */,
 				17FBF702245BEBF200A65233 /* WelcomeVC.swift in Sources */,
@@ -1570,6 +1583,7 @@
 				17FBF718245BEC1800A65233 /* LaunchRootView.swift in Sources */,
 				176ADE042460471F006C5D3C /* MainBookItemCVC.swift in Sources */,
 				17FBF712245BEC0E00A65233 /* OnboardingVM.swift in Sources */,
+				176ADE082460E958006C5D3C /* BookDetailViewModel.swift in Sources */,
 				17FBF705245BEBF800A65233 /* LoginViewModel.swift in Sources */,
 				17954ABD245EA9CE00C8CC95 /* BookDetailViewModelTests.swift in Sources */,
 				17FBF71E245BEC2400A65233 /* AppDenpendencyContainer.swift in Sources */,

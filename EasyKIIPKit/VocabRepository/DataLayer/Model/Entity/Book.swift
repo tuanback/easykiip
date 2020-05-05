@@ -12,7 +12,7 @@ public class Book {
   public private(set) var id: UInt
   public private(set) var name: String
   public private(set) var thumbURL: URL?
-  private(set) var lessons: [Lesson]
+  public private(set) var lessons: [Lesson]
   
   public var proficiency: UInt8 {
     guard lessons.count > 0 else { return 100 }
