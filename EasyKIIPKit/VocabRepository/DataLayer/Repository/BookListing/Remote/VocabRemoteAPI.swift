@@ -28,6 +28,6 @@ public struct FirebaseLesson {
 }
 
 public protocol VocabRemoteAPI {
-  func loadLessonData(userID: String, bookdID: UInt, completion: ([FirebaseLesson])->())
-  func loadVocabData(userID: String, lessonID: UInt, completion: ([FirebaseVocab])->())
+  func loadLessonData(userID: String, bookdID: UInt, completion: @escaping ([FirebaseLesson])->())
+  func loadVocabData(userID: String, lessonID: UInt, completion: @escaping ([FirebaseVocab])->())
 }

@@ -53,6 +53,8 @@ target 'EasyKIIPKit' do
   target 'EasyKIIPKitTests' do
     # Pods for testing
     pod 'RxAlamofire'
+    pod 'RxBlocking'
+    pod 'RxTest'
     pod 'SwiftDate'
   end
 
