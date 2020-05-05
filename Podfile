@@ -46,6 +46,8 @@ target 'EasyKIIPKit' do
   use_frameworks!
 
   # Pods for EasyKIIPKit
+  pod 'Realm'
+  pod 'RealmSwift'
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'SwiftDate'
