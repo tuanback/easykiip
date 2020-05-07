@@ -10,14 +10,19 @@ import Foundation
 
 public class ReadingPart {
   
-  public let id: UInt
+  public let scriptName: String
   public let script: String
-  public let translations: [LanguageCode: String]
+  public let scriptNameTranslation: [LanguageCode: String]
+  public let scriptTranslation: [LanguageCode: String]
   
-  public init(id: UInt, script: String, translations: [LanguageCode: String]) {
-    self.id = id
+  public init(scriptName: String,
+              script: String,
+              scriptNameTranslation: [LanguageCode: String],
+              scriptTranslation: [LanguageCode: String]) {
     self.script = script
-    self.translations = translations
+    self.scriptName = scriptName
+    self.scriptNameTranslation = scriptNameTranslation
+    self.scriptTranslation = scriptTranslation
   }
   
 }
