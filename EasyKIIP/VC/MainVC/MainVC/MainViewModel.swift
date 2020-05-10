@@ -13,7 +13,7 @@ import RxSwift
 import RxCocoa
 
 public struct BookItemViewModel: Equatable {
-  let id: UInt
+  let id: Int
   let name: String
   let thumbURL: URL?
 }

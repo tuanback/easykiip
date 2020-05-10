@@ -10,8 +10,11 @@ import Foundation
 import UserSession
 import Firebase
 import GoogleSignIn
+import FirebaseFirestoreSwift
 
 public class FirebaseUserSessionDataStore: UserSessionDataStore {
+  
+  private lazy var cloudDB = Firestore.firestore()
   
   public init() {
     
@@ -32,7 +35,24 @@ public class FirebaseUserSessionDataStore: UserSessionDataStore {
   }
   
   public func save(userSession: UserSession) {
+    let userID = userSession.profile.id
     
+    var data = [FireStoreKey.User.userID: userID,
+                FireStoreKey.User.name: userSession.profile.name,
+                FireStoreKey.User.email: userSession.profile.email]
+    
+    if let profileURL = userSession.profile.avatar {
+      data[FireStoreKey.User.profileURL] = profileURL
+    }
+    
+    cloudDB.collection("users").document(userID).setData(data) { err in
+      if let err = err {
+        print("Error writing document: \(err)")
+      }
+      else {
+        print("Save user to firecloud store")
+      }
+    }
   }
   
   public func delete() {

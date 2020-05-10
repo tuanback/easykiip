@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import EasyKIIPKit
 
 class FirebaseVocabRemoteAPI: VocabRemoteAPI {
   

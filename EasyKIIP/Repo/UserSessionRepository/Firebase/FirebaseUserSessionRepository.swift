@@ -38,13 +38,18 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
       }
       
       let userSession = strongSelf.makeUserSession(from: user)
+      strongSelf.saveUserSession(userSession: userSession)
       strongSelf.authState?.onNext(.success(userSession: userSession))
       strongSelf.authState?.onCompleted()
     }
   }
   
+  private func saveUserSession(userSession: UserSession) {
+    dataStore.save(userSession: userSession)
+  }
+  
   private func makeUserSession(from user: User) -> UserSession {
-    let profile = UserProfile(id: user.uid, name: user.displayName ?? "", email: user.email ?? "", avatar: user.email)
+    let profile = UserProfile(id: user.uid, name: user.displayName ?? "", email: user.email ?? "", avatar: user.photoURL?.absoluteString)
     let remoteSession = RemoteUserSession(token: user.refreshToken ?? "")
     let userSession = UserSession(profile: profile, remoteSession: remoteSession)
     return userSession

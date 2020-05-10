@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import EasyKIIPKit
 
 class FirebaseVocabRemoteAPITests: XCTestCase {
 

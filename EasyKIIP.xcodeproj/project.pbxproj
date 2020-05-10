@@ -104,9 +104,11 @@
 		17BDAEBB245588A3002584AA /* FakeAuthRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEB9245588A3002584AA /* FakeAuthRemoteAPI.swift */; };
 		17E7F16D246627D5008667FB /* RealmDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F16C246627D5008667FB /* RealmDataStore.swift */; };
 		17E7F17324662D1A008667FB /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17224662D1A008667FB /* RealmModel.swift */; };
-		17E7F17624679C31008667FB /* FirebaseVocabRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17524679C31008667FB /* FirebaseVocabRemoteAPI.swift */; };
-		17E7F17724679C31008667FB /* FirebaseVocabRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17524679C31008667FB /* FirebaseVocabRemoteAPI.swift */; };
-		17E7F17A24679CC3008667FB /* FirebaseVocabRemoteAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17924679CC3008667FB /* FirebaseVocabRemoteAPITests.swift */; };
+		17E7F17D2468165D008667FB /* FirebaseVocabRemoteAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17924679CC3008667FB /* FirebaseVocabRemoteAPITests.swift */; };
+		17E7F17E24681664008667FB /* FirebaseVocabRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17524679C31008667FB /* FirebaseVocabRemoteAPI.swift */; };
+		17E7F17F24681665008667FB /* FirebaseVocabRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17524679C31008667FB /* FirebaseVocabRemoteAPI.swift */; };
+		17E7F18224681B12008667FB /* FirestoreKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F18124681B12008667FB /* FirestoreKey.swift */; };
+		17E7F18324681B12008667FB /* FirestoreKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F18124681B12008667FB /* FirestoreKey.swift */; };
 		17EB44FD2454239600C9C312 /* KIIPVocabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB44FC2454239600C9C312 /* KIIPVocabRepository.swift */; };
 		17EB44FE2454239600C9C312 /* KIIPVocabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB44FC2454239600C9C312 /* KIIPVocabRepository.swift */; };
 		17EB45012454263D00C9C312 /* KIIPVocabRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB45002454263D00C9C312 /* KIIPVocabRepositoryTests.swift */; };
@@ -344,6 +346,7 @@
 		17E7F17224662D1A008667FB /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		17E7F17524679C31008667FB /* FirebaseVocabRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseVocabRemoteAPI.swift; sourceTree = "<group>"; };
 		17E7F17924679CC3008667FB /* FirebaseVocabRemoteAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseVocabRemoteAPITests.swift; sourceTree = "<group>"; };
+		17E7F18124681B12008667FB /* FirestoreKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreKey.swift; sourceTree = "<group>"; };
 		17EB44FC2454239600C9C312 /* KIIPVocabRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIIPVocabRepository.swift; sourceTree = "<group>"; };
 		17EB45002454263D00C9C312 /* KIIPVocabRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIIPVocabRepositoryTests.swift; sourceTree = "<group>"; };
 		17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionRepository.swift; sourceTree = "<group>"; };
@@ -682,7 +685,7 @@
 		17B70A84244C180200C67334 /* EasyKIIP */ = {
 			isa = PBXGroup;
 			children = (
-				17FBF733245CE6B900A65233 /* UserSessionRepository */,
+				17E7F18024681AF2008667FB /* Repo */,
 				1766FFC9245A9FF6008B263D /* Assets */,
 				1766FF9F245A5D9A008B263D /* Reuseable */,
 				1766FF9E245A5D8F008B263D /* VC */,
@@ -703,6 +706,7 @@
 				17B70A9E244C180600C67334 /* Info.plist */,
 				17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */,
 				17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */,
+				17E7F17824679C52008667FB /* VocabRepository */,
 			);
 			path = EasyKIIPTests;
 			sourceTree = "<group>";
@@ -872,7 +876,6 @@
 			children = (
 				17B70B262453CA1100C67334 /* VocabRemoteAPI.swift */,
 				1766FFEA245B9A7E008B263D /* FakeVocabRemoteAPI.swift */,
-				17E7F17524679C31008667FB /* FirebaseVocabRemoteAPI.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -1025,18 +1028,43 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		17E7F17824679C52008667FB /* Remote */ = {
+		17E7F17824679C52008667FB /* VocabRepository */ = {
 			isa = PBXGroup;
 			children = (
 				17E7F17924679CC3008667FB /* FirebaseVocabRemoteAPITests.swift */,
 			);
-			path = Remote;
+			path = VocabRepository;
+			sourceTree = "<group>";
+		};
+		17E7F17B24681616008667FB /* VocabRepository */ = {
+			isa = PBXGroup;
+			children = (
+				17E7F17C24681623008667FB /* VocabRemoteAPI */,
+			);
+			path = VocabRepository;
+			sourceTree = "<group>";
+		};
+		17E7F17C24681623008667FB /* VocabRemoteAPI */ = {
+			isa = PBXGroup;
+			children = (
+				17E7F17524679C31008667FB /* FirebaseVocabRemoteAPI.swift */,
+			);
+			path = VocabRemoteAPI;
+			sourceTree = "<group>";
+		};
+		17E7F18024681AF2008667FB /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				17E7F17B24681616008667FB /* VocabRepository */,
+				17FBF733245CE6B900A65233 /* UserSessionRepository */,
+				17E7F18124681B12008667FB /* FirestoreKey.swift */,
+			);
+			path = Repo;
 			sourceTree = "<group>";
 		};
 		17EB44FF2454262800C9C312 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				17E7F17824679C52008667FB /* Remote */,
 				176ADE0924620BCF006C5D3C /* Persistence */,
 				17EB45002454263D00C9C312 /* KIIPVocabRepositoryTests.swift */,
 			);
@@ -1584,6 +1612,7 @@
 				17B70A86244C180200C67334 /* AppDelegate.swift in Sources */,
 				17FBF6E6245BEBC000A65233 /* Navigation.swift in Sources */,
 				17FBF70B245BEC0300A65233 /* LoginVC.swift in Sources */,
+				17E7F18224681B12008667FB /* FirestoreKey.swift in Sources */,
 				17FBF6FC245BEBEA00A65233 /* WelcomeViewModel.swift in Sources */,
 				17FBF71A245BEC1C00A65233 /* LaunchVC.swift in Sources */,
 				17FBF724245BEC2D00A65233 /* SignedInDependencyContainer.swift in Sources */,
@@ -1611,6 +1640,7 @@
 				17FBF6F2245BEBD700A65233 /* MainViewModel.swift in Sources */,
 				176ADE072460E958006C5D3C /* BookDetailViewModel.swift in Sources */,
 				17FBF70E245BEC0800A65233 /* OnboardingVC.swift in Sources */,
+				17E7F17E24681664008667FB /* FirebaseVocabRemoteAPI.swift in Sources */,
 				17FBF6F8245BEBE100A65233 /* MainVC.swift in Sources */,
 				17FBF702245BEBF200A65233 /* WelcomeVC.swift in Sources */,
 			);
@@ -1633,10 +1663,12 @@
 				17FBF6E4245BEBBB00A65233 /* AppView.swift in Sources */,
 				17FBF736245CE6DC00A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
 				17FBF721245BEC2800A65233 /* OnboardingDependencyContainer.swift in Sources */,
+				17E7F17F24681665008667FB /* FirebaseVocabRemoteAPI.swift in Sources */,
 				17FBF6DB245BEBA200A65233 /* AppSetting.swift in Sources */,
 				17FBF739245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */,
 				17FBF6E1245BEBB600A65233 /* UIFront_Extension.swift in Sources */,
 				17954AAD245D06E400C8CC95 /* MainNavViewModel.swift in Sources */,
+				17E7F17D2468165D008667FB /* FirebaseVocabRemoteAPITests.swift in Sources */,
 				17FBF6F0245BEBD000A65233 /* NiblessViewController.swift in Sources */,
 				17954AAB245D06E100C8CC95 /* MainNavVC.swift in Sources */,
 				17FBF718245BEC1800A65233 /* LaunchRootView.swift in Sources */,
@@ -1652,6 +1684,7 @@
 				17FBF6F3245BEBD800A65233 /* MainViewModel.swift in Sources */,
 				17FBF70F245BEC0900A65233 /* OnboardingVC.swift in Sources */,
 				17FBF6F9245BEBE200A65233 /* MainVC.swift in Sources */,
+				17E7F18324681B12008667FB /* FirestoreKey.swift in Sources */,
 				17954AAA245D052B00C8CC95 /* MainViewModelTests.swift in Sources */,
 				17FBF703245BEBF300A65233 /* WelcomeVC.swift in Sources */,
 			);
@@ -1670,7 +1703,6 @@
 				17B70B2F2453D28C00C67334 /* VocabDataStoreInMemory.swift in Sources */,
 				17EB44FD2454239600C9C312 /* KIIPVocabRepository.swift in Sources */,
 				17B70B152451C0F900C67334 /* ReadingPart.swift in Sources */,
-				17E7F17624679C31008667FB /* FirebaseVocabRemoteAPI.swift in Sources */,
 				17B70B272453CA1100C67334 /* VocabRemoteAPI.swift in Sources */,
 				17B70AF0244CF57100C67334 /* Book.swift in Sources */,
 				17B70B2A2453CB0200C67334 /* VocabDataStore.swift in Sources */,
@@ -1695,7 +1727,6 @@
 				17B70B162451C0F900C67334 /* ReadingPart.swift in Sources */,
 				17B70B182451C11200C67334 /* ReadingPartTests.swift in Sources */,
 				17EB45012454263D00C9C312 /* KIIPVocabRepositoryTests.swift in Sources */,
-				17E7F17A24679CC3008667FB /* FirebaseVocabRemoteAPITests.swift in Sources */,
 				17B70B2B2453CB0200C67334 /* VocabDataStore.swift in Sources */,
 				17B70B222453BCB100C67334 /* BookTests.swift in Sources */,
 				17B70B0E244F132F00C67334 /* ProficiencyCalculator.swift in Sources */,
@@ -1704,7 +1735,6 @@
 				17B70AE2244CF37000C67334 /* BookListingViewModelTests.swift in Sources */,
 				17B70B0A244F105E00C67334 /* ProficiencyCalculatorTests.swift in Sources */,
 				17EB44FE2454239600C9C312 /* KIIPVocabRepository.swift in Sources */,
-				17E7F17724679C31008667FB /* FirebaseVocabRemoteAPI.swift in Sources */,
 				17B70B302453D28C00C67334 /* VocabDataStoreInMemory.swift in Sources */,
 				17B70B2024530ADE00C67334 /* LessonTests.swift in Sources */,
 				17B70AF9244DBEEB00C67334 /* PracticeHistoryTests.swift in Sources */,

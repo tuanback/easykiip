@@ -135,7 +135,7 @@ class BookDetailViewModelTests: XCTestCase {
     let vocab10 = Vocab(id: 10, word: "낮다", translations: [.en: "Low", .vi: "Thấp"])
     let vocab11 = Vocab(id: 11, word: "예쁘다", translations: [.en: "Beautiful", .vi: "Đẹp"])
     
-    let readingPart = ReadingPart(id: 0, script: "안녕하세요~", translations: [.en: "Hello", .vi: "Xin chào"])
+    let readingPart = ReadingPart(scriptName: "Script", script: "안녕하세요~", scriptNameTranslation: [.en: "Script", .vi: "Script"], scriptTranslation: [.en: "Hello", .vi: "Xin chào"])
     
     let vocabs = [vocab1, vocab2, vocab3, vocab4, vocab5, vocab6, vocab7, vocab8, vocab9, vocab10, vocab11]
     
@@ -199,6 +199,14 @@ class BookDetailViewModelTests: XCTestCase {
     
     func getNeedReviewVocabs(in book: Book, upto numberOfVocabs: Int) -> [Vocab] {
       return []
+    }
+    
+    func getListOfVocabs(in book: Book, lesson: Lesson) -> Observable<[Vocab]> {
+      return Observable.empty()
+    }
+    
+    func saveLessonPracticeHistory(in bookID: Int, lessonID: Int) {
+      
     }
   }
 }

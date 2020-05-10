@@ -13,10 +13,10 @@ import EasyKIIPKit
 import SwiftDate
 
 struct LessonItemViewModel: Equatable {
-  let id: UInt
+  let id: Int
   let name: String
   let translation: String
-  let lessonIndex: UInt
+  let lessonIndex: Int
   let proficiency: UInt8
   let lastTimeLearnedFromToday: Int?
 }
