@@ -26,7 +26,6 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
   
   public init(dataStore: UserSessionDataStore) {
     self.dataStore = dataStore
-    listenForUserLoggedIn()
   }
   
   private func listenForUserLoggedIn() {
@@ -68,6 +67,8 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
   }
   
   public func signIn(with credential: AuthCredential, provider: Provider) -> Observable<AuthState> {
+    listenForUserLoggedIn()
+    
     let isMFAEnabled = false
     
     authState = BehaviorSubject<AuthState>(value: .authenticating)

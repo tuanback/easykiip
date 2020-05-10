@@ -37,15 +37,15 @@ public class FirebaseUserSessionDataStore: UserSessionDataStore {
   public func save(userSession: UserSession) {
     let userID = userSession.profile.id
     
-    var data = [FireStoreKey.User.userID: userID,
-                FireStoreKey.User.name: userSession.profile.name,
-                FireStoreKey.User.email: userSession.profile.email]
+    var data = [FireStoreUtil.User.userID: userID,
+                FireStoreUtil.User.name: userSession.profile.name,
+                FireStoreUtil.User.email: userSession.profile.email]
     
     if let profileURL = userSession.profile.avatar {
-      data[FireStoreKey.User.profileURL] = profileURL
+      data[FireStoreUtil.User.profileURL] = profileURL
     }
     
-    cloudDB.collection("users").document(userID).setData(data) { err in
+    cloudDB.collection(FireStoreUtil.Collection.users).document(userID).setData(data) { err in
       if let err = err {
         print("Error writing document: \(err)")
       }

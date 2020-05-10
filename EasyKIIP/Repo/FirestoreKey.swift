@@ -8,7 +8,25 @@
 
 import Foundation
 
-struct FireStoreKey {
+struct FireStoreUtil {
+  
+  struct Collection {
+    static let users = "users"
+    static let books = "books"
+    static let lessons = "lessons"
+  }
+  
+  struct Document {
+    
+    static func getBookDocument(bookID: Int) -> String {
+      return "book_\(bookID)"
+    }
+    
+    static func getLessonDocument(lessonID: Int) -> String {
+      return "lesson_\(lessonID)"
+    }
+    
+  }
   
   struct User {
     static let userID = "userID"
@@ -17,6 +35,14 @@ struct FireStoreKey {
     static let profileURL = "profileURL"
   }
   
+  struct Book {
+    static let bookID = "bookID"
+  }
   
+  static func bookDocumentPath(userID: String, bookID: Int) -> String {
+    let bookDocumentPath = Document.getBookDocument(bookID: bookID)
+    let path = Collection.users + "/\(userID)/" + Collection.books + "/\(bookDocumentPath)"
+    return path
+  }
   
 }

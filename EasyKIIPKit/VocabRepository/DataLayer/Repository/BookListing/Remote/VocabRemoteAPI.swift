@@ -9,22 +9,43 @@
 import Foundation
 
 public struct FirebaseVocab {
-  let id: Int
-  let isLearned: Bool
-  let isMastered: Bool
-  let testTaken: Int
-  let correctAnswer: Int
+  public let id: Int
+  public let isLearned: Bool
+  public let isMastered: Bool
+  public let testTaken: Int
+  public let correctAnswer: Int
   /// Time since 1970
-  let firstTimeLearned: Double?
+  public let firstTimeLearned: Double?
   /// Time since 1970
-  let lastTimeLearned: Double?
+  public let lastTimeLearned: Double?
+  
+  public init(id: Int, isLearned: Bool,
+              isMastered: Bool,
+              testTaken: Int,
+              correctAnswer: Int,
+              firstTimeLearned: Double?,
+              lastTimeLearned: Double?) {
+    self.id = id
+    self.isLearned = isLearned
+    self.isMastered = isMastered
+    self.testTaken = testTaken
+    self.correctAnswer = correctAnswer
+    self.firstTimeLearned = firstTimeLearned
+    self.lastTimeLearned = lastTimeLearned
+  }
 }
 
 public struct FirebaseLesson {
-  let id: Int
-  let proficiency: UInt8
+  public let id: Int
+  public let proficiency: UInt8
   /// Time since 1970
-  let lastTimeSynced: Double
+  public let lastTimeSynced: Double
+  
+  public init(id: Int, proficiency: UInt8, lastTimeSynced: Double) {
+    self.id = id
+    self.proficiency = proficiency
+    self.lastTimeSynced = lastTimeSynced
+  }
 }
 
 public protocol VocabRemoteAPI {
