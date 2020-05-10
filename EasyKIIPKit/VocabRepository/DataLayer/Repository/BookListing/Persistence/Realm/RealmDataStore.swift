@@ -283,6 +283,16 @@ class RealmDataStore: VocabDataStore {
     }
   }
   
+  func isLessonSynced(_ lessonID: Int) -> Bool {
+    let historyRealm = historyRealmProvider.realm
+    
+    if let lessonHistory = historyRealm.object(ofType: RealmLessonHistory.self, forPrimaryKey: lessonID) {
+      return lessonHistory.isSynced
+    }
+    
+    return false
+  }
+  
   func syncPracticeHistory(vocabID: Int, isMastered: Bool, testTaken: Int, correctAnswer: Int, firstLearnDate: Date?, lastTimeTest: Date?) {
     
     let time = Date()

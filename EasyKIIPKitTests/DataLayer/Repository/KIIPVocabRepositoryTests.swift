@@ -134,11 +134,13 @@ class KIIPVocabRepositoryTests: XCTestCase {
     XCTAssertEqual(results, [lesson.vocabs])
   }
   
-  func test_getListOfVocab_remoteAPIReturnData_dataStoreSyncFuncCalled() {
+  func test_getListOfVocab_lessonIsNotSynced_remoteAPIReturnData_dataStoreSyncFuncCalled() {
     let observer = scheduler.createObserver([Vocab].self)
     
     let (sut, remoteAPI, dataStore) = makeSut()
     let lesson = dataStore.lesson
+    dataStore.setLessonSyncedValue(false)
+    
     let observable = sut.getListOfVocabs(in: lesson)
     
     subscription = observable.subscribe(observer)
@@ -154,6 +156,30 @@ class KIIPVocabRepositoryTests: XCTestCase {
     
     XCTAssertTrue(dataStore.isSyncedVocabCalled)
     XCTAssertEqual(results.count, 1)
+  }
+  
+  func test_getListOfVocab_lessonIsSynced_dataStoreSyncFuncNotCalled() {
+    let observer = scheduler.createObserver([Vocab].self)
+    
+    let (sut, remoteAPI, dataStore) = makeSut()
+    let lesson = dataStore.lesson
+    dataStore.setLessonSyncedValue(true)
+    
+    let observable = sut.getListOfVocabs(in: lesson)
+    
+    subscription = observable.subscribe(observer)
+    
+    scheduler.scheduleAt(500) {
+      let firebaseVocab = self.makeFakeFirebaseVocab()
+      remoteAPI.loadVocabCompletion?([firebaseVocab])
+    }
+    
+    scheduler.start()
+    
+    let results = observer.events.compactMap { $0.value.element }
+    
+    XCTAssertFalse(dataStore.isSyncedVocabCalled)
+    XCTAssertEqual(results, [lesson.vocabs])
   }
   
   func test_searchVocab_dataStoreSeachFuncCalled() {
@@ -316,6 +342,8 @@ class KIIPVocabRepositoryTests: XCTestCase {
     private(set) var isSyncedLessonCalled = false
     private(set) var isSyncedVocabCalled = false
     
+    private(set) var isLessonSynced = false
+    
     init(books: [Book],
          hasSampleDataBook: Book,
          hasSampleDataLesson: Lesson,
@@ -367,6 +395,14 @@ class KIIPVocabRepositoryTests: XCTestCase {
     
     func syncPracticeHistory(vocabID: Int, isMastered: Bool, testTaken: Int, correctAnswer: Int, firstLearnDate: Date?, lastTimeTest: Date?) {
       isSyncedVocabCalled = true
+    }
+    
+    func isLessonSynced(_ lessonID: Int) -> Bool {
+      return isLessonSynced
+    }
+    
+    func setLessonSyncedValue(_ value: Bool) {
+      isLessonSynced = value
     }
   }
   

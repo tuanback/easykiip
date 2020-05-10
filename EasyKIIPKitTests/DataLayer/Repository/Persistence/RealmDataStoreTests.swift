@@ -575,6 +575,42 @@ class RealmDataStoreTests: XCTestCase {
     XCTAssertTrue(v!.practiceHistory.isLearned)
   }
   
+  func test_getLessonSyncedState_NewLesson_ReturnFalse() {
+    let (_, _, _, lesson, _, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    XCTAssertFalse(sut.isLessonSynced(lesson.id))
+  }
+  
+  func test_getLessonSyncedState_SyncedLesson_ReturnTrue() {
+    let (_, _, _, lesson, _, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    let localLastTimeSynced = (Date() - 1.days).timeIntervalSince1970
+    let localProficiency = 90
+    
+    makeFakeHistory(for: lesson, historyRealmProvider: historyRealmProvider, lastTimeSynced: localLastTimeSynced, proficiency: localProficiency)
+    
+    let lastTimeSynced = (Date() - 1.days - 1.hours).timeIntervalSince1970
+    let proficiency = 80
+    sut.syncLessonProficiency(lessonID: lesson.id, proficiency: UInt8(proficiency), lastTimeSynced: lastTimeSynced)
+    
+    XCTAssertTrue(sut.isLessonSynced(lesson.id))
+  }
+  
+  func test_getLessonSyncedState_NotSyncedLesson_ReturnFalse() {
+    let (_, _, _, lesson, _, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    let localLastTimeSynced = (Date() - 1.days).timeIntervalSince1970
+    let localProficiency = 90
+    
+    makeFakeHistory(for: lesson, historyRealmProvider: historyRealmProvider, lastTimeSynced: localLastTimeSynced, proficiency: localProficiency)
+    
+    let lastTimeSynced = (Date() - 1.hours).timeIntervalSince1970
+    let proficiency = 80
+    sut.syncLessonProficiency(lessonID: lesson.id, proficiency: UInt8(proficiency), lastTimeSynced: lastTimeSynced)
+    
+     XCTAssertFalse(sut.isLessonSynced(lesson.id))
+  }
+  
   // Helpers
   private func makeBundledConfig() -> Realm.Configuration {
     let bundledConfig: Realm.Configuration = Realm.Configuration(inMemoryIdentifier: "ios.realmdatastore.bundled")

@@ -113,6 +113,10 @@ public class VocabDataStoreInMemory: VocabDataStore {
     lesson.setProficiency(proficiency)
   }
   
+  public func isLessonSynced(_ lessonID: Int) -> Bool {
+    return false
+  }
+  
   public func syncPracticeHistory(vocabID: Int,
                                   isMastered: Bool,
                                   testTaken: Int,

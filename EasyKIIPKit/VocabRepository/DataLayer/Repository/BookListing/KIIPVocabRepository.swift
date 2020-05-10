@@ -49,7 +49,6 @@ public class KIIPVocabRepository: VocabRepository {
       
       let syncedLessons = strongSelf.dataStore.getListOfLesson(in: book)
       observable.onNext(syncedLessons)
-      observable.onCompleted()
     }
     
     return observable
@@ -60,33 +59,40 @@ public class KIIPVocabRepository: VocabRepository {
     let observable = PublishSubject<[Vocab]>()
     let dataStoreVocabs = dataStore.getListOfVocabs(in: lesson)
     
-    remoteAPI.loadVocabData(userID: userSession.profile.id, lessonID: lesson.id) { [weak self] (vocabs) in
-      guard let strongSelf = self else { return }
-      // Algorithm to merge history from Back end with local datastore
-      guard vocabs.count > 0 else {
-        observable.onNext(dataStoreVocabs)
-        return
-      }
-      
-      for vocab in vocabs {
-        let firstTimeLearned = Date(timeIntervalSince1970: vocab.firstTimeLearned)
-        let lastTimeTest = Date(timeIntervalSince1970: vocab.lastTimeLearned)
+    if !dataStore.isLessonSynced(lesson.id) {
+      remoteAPI.loadVocabData(userID: userSession.profile.id, lessonID: lesson.id) { [weak self] (vocabs) in
+        guard let strongSelf = self else { return }
+        // Algorithm to merge history from Back end with local datastore
+        guard vocabs.count > 0 else {
+          observable.onNext(dataStoreVocabs)
+          return
+        }
         
-        self?.dataStore.syncPracticeHistory(
-          vocabID: vocab.id,
-          isMastered: vocab.isMastered,
-          testTaken: vocab.testTaken,
-          correctAnswer: vocab.correctAnswer,
-          firstLearnDate: firstTimeLearned,
-          lastTimeTest: lastTimeTest)
+        for vocab in vocabs {
+          let firstTimeLearned = Date(timeIntervalSince1970: vocab.firstTimeLearned)
+          let lastTimeTest = Date(timeIntervalSince1970: vocab.lastTimeLearned)
+          
+          self?.dataStore.syncPracticeHistory(
+            vocabID: vocab.id,
+            isMastered: vocab.isMastered,
+            testTaken: vocab.testTaken,
+            correctAnswer: vocab.correctAnswer,
+            firstLearnDate: firstTimeLearned,
+            lastTimeTest: lastTimeTest)
+        }
+        
+        let syncedVocabs = strongSelf.dataStore.getListOfVocabs(in: lesson)
+        observable.onNext(syncedVocabs)
       }
       
-      let syncedVocabs = strongSelf.dataStore.getListOfVocabs(in: lesson)
-      observable.onNext(syncedVocabs)
-      observable.onCompleted()
+      return observable
     }
     
-    return observable
+    return Observable<[Vocab]>.create { (observer) -> Disposable in
+      let syncedVocabs = self.dataStore.getListOfVocabs(in: lesson)
+      observer.onNext(syncedVocabs)
+      return Disposables.create()
+    }
   }
   
   public func markVocabAsMastered(_ vocab: Vocab) {

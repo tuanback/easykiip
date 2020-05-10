@@ -21,6 +21,8 @@ public protocol VocabDataStore {
   func syncLessonProficiency(lessonID: Int,
                              proficiency: UInt8,
                              lastTimeSynced: Double)
+
+  func isLessonSynced(_ lessonID: Int) -> Bool
   
   func syncPracticeHistory(vocabID: Int,
                            isMastered: Bool,
