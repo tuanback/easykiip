@@ -15,11 +15,23 @@ struct ProficiencyCalculator {
   /// - Parameter vocab: vocab that needs to be calculated for proficiency
   /// - Returns: Proficiency in range of 0 - 100
   static func calculate(vocab: Vocab) -> UInt8 {
-    if vocab.practiceHistory.isMastered {
+    
+    return ProficiencyCalculator
+      .calculate(isMastered: vocab.practiceHistory.isMastered,
+                 isLearned: vocab.practiceHistory.isLearned,
+                 lastTimeTest: vocab.practiceHistory.lastTimeTest,
+                 correctAnswer: vocab.practiceHistory.numberOfCorrectAnswer)
+  }
+  
+  static func calculate(isMastered: Bool,
+                        isLearned: Bool,
+                        lastTimeTest: Date?,
+                        correctAnswer: UInt) -> UInt8 {
+    if isMastered{
       return 100
     }
     
-    if !vocab.practiceHistory.isLearned {
+    if !isLearned {
       return 0
     }
     
@@ -47,12 +59,12 @@ struct ProficiencyCalculator {
      - 37 - 42: Decay rate 1% per day
      - 43 - ..: Decay rate 0% per day
     */
-    guard let lastTimeTest = vocab.practiceHistory.lastTimeTest,
+    guard let lastTimeTest = lastTimeTest,
       let day = (Date() - lastTimeTest).in(.day) else {
         return 0
     }
     
-    let noOfTakenTest = vocab.practiceHistory.numberOfCorrectAnswer
+    let noOfTakenTest = correctAnswer
     
     if day < 1 {
       return (noOfTakenTest > 0 ? 100 : 0)

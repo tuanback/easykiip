@@ -112,27 +112,17 @@ class PracticeHistoryTests: XCTestCase {
     XCTAssertTrue(sut.lastTimeTest! >= timeBeforeTest && sut.lastTimeTest! <= Date())
   }
   
-  func testSetTestTakenData_NumberOfTestTaken_SmallerThanNumberOfCorrectAnswer_ThrowError() {
-    let sut = PracticeHistory(id: 0)
-    let numberOfTestTaken: UInt = 3
-    let numberOfCorrectAnswer: UInt = 5
-    
-    XCTAssertThrowsError(try sut.setTestTakenData(isMastered: false,
-                                                  numberOfTestTaken: numberOfTestTaken,
-                                                  numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: Date(), lastTimeTest: Date()))
-  }
-  
-  func testSetTestTakenData_NumberOfTest_SmallerThanCurrentNumberOfTest_DontSetNewData() throws {
+  func testSetTestTakenData_NumberOfTest_SmallerThanCurrentNumberOfTest_DontSetNewData() {
     let sut = PracticeHistory(id: 0)
     sut.increaseNumberOfCorrectAnswerByOne()
     sut.increaseNumberOfWrongAnswerByOne()
     
     let numberOfTestTaken: UInt = 1
     let numberOfCorrectAnswer: UInt = 1
-    try sut.setTestTakenData(isMastered: false,
-                             numberOfTestTaken: numberOfTestTaken,
-                             numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: Date(),
-                             lastTimeTest: Date())
+    sut.setTestTakenData(isMastered: false,
+                         numberOfTestTaken: numberOfTestTaken,
+                         numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: Date(),
+                         lastTimeTest: Date())
     
     XCTAssertEqual(sut.numberOfTestTaken, 2)
     XCTAssertEqual(sut.numberOfCorrectAnswer, 1)
@@ -140,15 +130,15 @@ class PracticeHistoryTests: XCTestCase {
     XCTAssertEqual(sut.isLearned, true)
   }
   
-  func testSetTestTakenData_NumberOfTest_GreaterThanCurrentNumberOfTest_SetNewData() throws {
+  func testSetTestTakenData_NumberOfTest_GreaterThanCurrentNumberOfTest_SetNewData() {
     let sut = PracticeHistory(id: 0)
     
     let numberOfTestTaken: UInt = 1
     let numberOfCorrectAnswer: UInt = 1
-    try sut.setTestTakenData(isMastered: false,
-                             numberOfTestTaken: numberOfTestTaken,
-                             numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: Date(),
-                             lastTimeTest: Date())
+    sut.setTestTakenData(isMastered: false,
+                         numberOfTestTaken: numberOfTestTaken,
+                         numberOfCorrectAnswer: numberOfCorrectAnswer, firstLearnDate: Date(),
+                         lastTimeTest: Date())
     
     XCTAssertEqual(sut.numberOfTestTaken, 1)
     XCTAssertEqual(sut.numberOfCorrectAnswer, 1)

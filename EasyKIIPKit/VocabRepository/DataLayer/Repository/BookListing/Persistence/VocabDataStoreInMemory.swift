@@ -11,7 +11,7 @@ import Foundation
 public class VocabDataStoreInMemory: VocabDataStore {
   
   private var books: [Book] = []
-
+  
   public init() {
     books = initInMemoryDataStore()
   }
@@ -121,11 +121,11 @@ public class VocabDataStoreInMemory: VocabDataStore {
                                   lastTimeTest: Date) {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
     if let v = vocabs.first(where: { $0.id == vocabID }) {
-      try? v.setTestTakenData(isMastered: isMastered,
-                              numberOfTestTaken: testTaken,
-                              numberOfCorrectAnswer: correctAnswer,
-                              firstLearnDate: firstLearnDate,
-                              lastTimeTest: lastTimeTest)
+      v.setTestTakenData(isMastered: isMastered,
+                         numberOfTestTaken: testTaken,
+                         numberOfCorrectAnswer: correctAnswer,
+                         firstLearnDate: firstLearnDate,
+                         lastTimeTest: lastTimeTest)
     }
   }
   

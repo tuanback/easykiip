@@ -102,6 +102,8 @@
 		17BDAEB8245587BC002584AA /* UserSessionPropertyListCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEB4245587BC002584AA /* UserSessionPropertyListCoder.swift */; };
 		17BDAEBA245588A3002584AA /* FakeAuthRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEB9245588A3002584AA /* FakeAuthRemoteAPI.swift */; };
 		17BDAEBB245588A3002584AA /* FakeAuthRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEB9245588A3002584AA /* FakeAuthRemoteAPI.swift */; };
+		17E7F16D246627D5008667FB /* RealmDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F16C246627D5008667FB /* RealmDataStore.swift */; };
+		17E7F17324662D1A008667FB /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17224662D1A008667FB /* RealmModel.swift */; };
 		17EB44FD2454239600C9C312 /* KIIPVocabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB44FC2454239600C9C312 /* KIIPVocabRepository.swift */; };
 		17EB44FE2454239600C9C312 /* KIIPVocabRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB44FC2454239600C9C312 /* KIIPVocabRepository.swift */; };
 		17EB45012454263D00C9C312 /* KIIPVocabRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EB45002454263D00C9C312 /* KIIPVocabRepositoryTests.swift */; };
@@ -335,6 +337,8 @@
 		17BDAEB2245587BC002584AA /* UserSessionCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionCoding.swift; sourceTree = "<group>"; };
 		17BDAEB4245587BC002584AA /* UserSessionPropertyListCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionPropertyListCoder.swift; sourceTree = "<group>"; };
 		17BDAEB9245588A3002584AA /* FakeAuthRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthRemoteAPI.swift; sourceTree = "<group>"; };
+		17E7F16C246627D5008667FB /* RealmDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataStore.swift; sourceTree = "<group>"; };
+		17E7F17224662D1A008667FB /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		17EB44FC2454239600C9C312 /* KIIPVocabRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIIPVocabRepository.swift; sourceTree = "<group>"; };
 		17EB45002454263D00C9C312 /* KIIPVocabRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIIPVocabRepositoryTests.swift; sourceTree = "<group>"; };
 		17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionRepository.swift; sourceTree = "<group>"; };
@@ -853,6 +857,7 @@
 			children = (
 				17B70B292453CB0200C67334 /* VocabDataStore.swift */,
 				17B70B2E2453D28C00C67334 /* VocabDataStoreInMemory.swift */,
+				17E7F17024662CF2008667FB /* Realm */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -995,6 +1000,23 @@
 				17BDAEB4245587BC002584AA /* UserSessionPropertyListCoder.swift */,
 			);
 			path = Implementations;
+			sourceTree = "<group>";
+		};
+		17E7F17024662CF2008667FB /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				17E7F17124662D06008667FB /* Model */,
+				17E7F16C246627D5008667FB /* RealmDataStore.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		17E7F17124662D06008667FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17E7F17224662D1A008667FB /* RealmModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		17EB44FF2454262800C9C312 /* Repository */ = {
@@ -1625,6 +1647,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B70AF3244DBDCC00C67334 /* PraticeHistory.swift in Sources */,
+				17E7F16D246627D5008667FB /* RealmDataStore.swift in Sources */,
 				1766FFEB245B9A7E008B263D /* FakeVocabRemoteAPI.swift in Sources */,
 				17B70AEA244CF4E300C67334 /* VocabRepository.swift in Sources */,
 				17B70B0D244F132F00C67334 /* ProficiencyCalculator.swift in Sources */,
@@ -1636,6 +1659,7 @@
 				17B70AF0244CF57100C67334 /* Book.swift in Sources */,
 				17B70B2A2453CB0200C67334 /* VocabDataStore.swift in Sources */,
 				17B70B1D245308EC00C67334 /* Lesson.swift in Sources */,
+				17E7F17324662D1A008667FB /* RealmModel.swift in Sources */,
 				17B70AFE244DC60500C67334 /* LanguageCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

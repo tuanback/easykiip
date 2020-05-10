@@ -98,7 +98,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
     }
     
     scheduler.start()
-   
+    
     let results = observer.events.compactMap { $0.value.element }
     
     XCTAssertTrue(dataStore.isSyncedLessonCalled)
@@ -149,7 +149,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
     }
     
     scheduler.start()
-   
+    
     let results = observer.events.compactMap { $0.value.element }
     
     XCTAssertTrue(dataStore.isSyncedVocabCalled)
@@ -192,7 +192,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
       
       let isMastered = Bool.random()
       
-      try? vocab.setTestTakenData(isMastered: isMastered, numberOfTestTaken: testTaken, numberOfCorrectAnswer: correctAnswer, firstLearnDate: date, lastTimeTest: date)
+      vocab.setTestTakenData(isMastered: isMastered, numberOfTestTaken: testTaken, numberOfCorrectAnswer: correctAnswer, firstLearnDate: date, lastTimeTest: date)
     }
     
     let lowProficiencyVocabs = sut.getListOfLowProficiencyVocab(in: book, upto: 5)
@@ -217,11 +217,11 @@ class KIIPVocabRepositoryTests: XCTestCase {
       
       let isMastered = Bool.random()
       
-      try? vocab.setTestTakenData(isMastered: isMastered,
-                                  numberOfTestTaken: testTaken,
-                                  numberOfCorrectAnswer: correctAnswer,
-                                  firstLearnDate: date,
-                                  lastTimeTest: date)
+      vocab.setTestTakenData(isMastered: isMastered,
+                             numberOfTestTaken: testTaken,
+                             numberOfCorrectAnswer: correctAnswer,
+                             firstLearnDate: date,
+                             lastTimeTest: date)
     }
     
     let lowProficiencyVocabs = sut.getListOfLowProficiencyVocab(in: lesson, upto: 20)
@@ -248,11 +248,11 @@ class KIIPVocabRepositoryTests: XCTestCase {
       
       let isMastered = Bool.random()
       
-      try? vocab.setTestTakenData(isMastered: isMastered,
-                                  numberOfTestTaken: testTaken,
-                                  numberOfCorrectAnswer: correctAnswer,
-                                  firstLearnDate: firstDate,
-                                  lastTimeTest: lastDate)
+      vocab.setTestTakenData(isMastered: isMastered,
+                             numberOfTestTaken: testTaken,
+                             numberOfCorrectAnswer: correctAnswer,
+                             firstLearnDate: firstDate,
+                             lastTimeTest: lastDate)
     }
     
     let needReviewVocabs = sut.getNeedReviewVocabs(upto: 20)
@@ -384,7 +384,8 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let vocab10 = Vocab(id: 10, word: "낮다", translations: [.en: "Low", .vi: "Thấp"])
     let vocab11 = Vocab(id: 11, word: "예쁘다", translations: [.en: "Beautiful", .vi: "Đẹp"])
     
-    let readingPart = ReadingPart(id: 0, script: "안녕하세요~", translations: [.en: "Hello", .vi: "Xin chào"])
+    
+    let readingPart = ReadingPart(scriptName: "Name", script: "안녕하세요~", scriptNameTranslation: [.en: "Hello", .vi: "Xin chào"], scriptTranslation: [.en: "Hello", .vi: "Xin chào"])
     
     let vocabs = [vocab1, vocab2, vocab3, vocab4, vocab5, vocab6, vocab7, vocab8, vocab9, vocab10, vocab11]
     

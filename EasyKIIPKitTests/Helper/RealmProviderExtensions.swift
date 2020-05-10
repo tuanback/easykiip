@@ -9,6 +9,8 @@
 import Foundation
 import RealmSwift
 
+@testable import EasyKIIPKit
+
 extension RealmProvider {
   func copyForTesting() -> RealmProvider {
     var conf = self.configuration

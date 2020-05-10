@@ -22,7 +22,7 @@ class ReadingPartTests: XCTestCase {
   
   override func setUp() {
     super.setUp()
-    sut = ReadingPart(id: id, script: script, translations: translations)
+    sut = ReadingPart(scriptName: script, script: script, scriptNameTranslation: translations, scriptTranslation: translations)
   }
   
   override func tearDown() {
@@ -30,27 +30,23 @@ class ReadingPartTests: XCTestCase {
     super.tearDown()
   }
   
-  func testInit_sets_id() {
-    XCTAssertEqual(sut.id, id)
-  }
-  
   func testInit_sets_script() {
     XCTAssertEqual(sut.script, script)
   }
   
   func testInit_sets_translations() {
-    XCTAssertEqual(sut.translations, translations)
+    XCTAssertEqual(sut.scriptTranslation, translations)
   }
   
   func testInit_numberOfTranslations_2() {
-    XCTAssertEqual(sut.translations.count, 2)
+    XCTAssertEqual(sut.scriptTranslation.count, 2)
   }
   
   func testInit_viTranslation_sets() {
-    XCTAssertEqual(sut.translations[.vi], viTranslation)
+    XCTAssertEqual(sut.scriptTranslation[.vi], viTranslation)
   }
   
   func testInit_enTranslation_sets() {
-    XCTAssertEqual(sut.translations[.en], enTranslation)
+    XCTAssertEqual(sut.scriptTranslation[.en], enTranslation)
   }
 }

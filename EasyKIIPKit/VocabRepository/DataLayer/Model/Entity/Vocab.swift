@@ -47,12 +47,12 @@ public class Vocab {
   func setTestTakenData(isMastered: Bool,
                         numberOfTestTaken: UInt,
                         numberOfCorrectAnswer: UInt,
-                        firstLearnDate: Date,
-                        lastTimeTest: Date) throws {
-    try self.practiceHistory.setTestTakenData(isMastered: isMastered,
-                                              numberOfTestTaken: numberOfTestTaken,
-                                              numberOfCorrectAnswer: numberOfCorrectAnswer,
-                                              firstLearnDate: firstLearnDate,
-                                              lastTimeTest: lastTimeTest)
+                        firstLearnDate: Date?,
+                        lastTimeTest: Date?) {
+    self.practiceHistory.setTestTakenData(isMastered: isMastered,
+                                          numberOfTestTaken: numberOfTestTaken,
+                                          numberOfCorrectAnswer: numberOfCorrectAnswer,
+                                          firstLearnDate: firstLearnDate,
+                                          lastTimeTest: lastTimeTest)
   }
 }
