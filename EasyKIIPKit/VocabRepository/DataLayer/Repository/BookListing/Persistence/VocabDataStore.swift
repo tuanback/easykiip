@@ -14,6 +14,7 @@ public protocol VocabDataStore {
   func getListOfVocabs(in lesson: Lesson) -> [Vocab]
   func markVocabAsMastered(_ vocab: Vocab)
   func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool)
+  func getLesson(by id: Int) -> Lesson?
   func getVocab(by id: Int) -> Vocab?
   func searchVocab(keyword: String) -> [Vocab]
   
@@ -30,4 +31,7 @@ public protocol VocabDataStore {
                            correctAnswer: Int,
                            firstLearnDate: Date?,
                            lastTimeTest: Date?)
+  
+  func getNotSyncedVocabsInLesson(lessonID: Int) -> [Vocab]
+  func setLessonSynced(lessonID: Int, lastTimeSynced: Double)
 }

@@ -72,18 +72,6 @@ class LessonTests: XCTestCase {
     XCTAssertEqual(sut.proficiency, 100)
   }
   
-  func testLastTimeLearned() throws {
-    let time1 = Date()
-    let vocab1 = Vocab(id: 0, word: "", translations: [:])
-    vocab1.setTestTakenData(isMastered: false, numberOfTestTaken: 1, numberOfCorrectAnswer: 1, firstLearnDate: time1, lastTimeTest: time1)
-    sleep(1)
-    let time2 = Date()
-    let vocab2 = Vocab(id: 1, word: "", translations: [:])
-    vocab2.setTestTakenData(isMastered: false, numberOfTestTaken: 1, numberOfCorrectAnswer: 1, firstLearnDate: time2, lastTimeTest: time2)
-    let sut = makeSut(with: [vocab1, vocab2])
-    XCTAssertEqual(sut.lastTimeLearned, time2)
-  }
-  
   // Helper methods
   private func makeSut(with vocabs: [Vocab]) -> Lesson {
     return Lesson(id: id, name: lessionName, index: index, translations: translations, vocabs: vocabs, readingParts: readingParts)

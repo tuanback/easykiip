@@ -15,9 +15,9 @@ public struct FirebaseVocab {
   let testTaken: Int
   let correctAnswer: Int
   /// Time since 1970
-  let firstTimeLearned: Double
+  let firstTimeLearned: Double?
   /// Time since 1970
-  let lastTimeLearned: Double
+  let lastTimeLearned: Double?
 }
 
 public struct FirebaseLesson {
@@ -28,6 +28,9 @@ public struct FirebaseLesson {
 }
 
 public protocol VocabRemoteAPI {
-  func loadLessonData(userID: String, bookdID: Int, completion: @escaping ([FirebaseLesson])->())
-  func loadVocabData(userID: String, lessonID: Int, completion: @escaping ([FirebaseVocab])->())
+  func loadLessonData(userID: String, bookID: Int, completion: @escaping ([FirebaseLesson])->())
+  func loadVocabData(userID: String, bookID: Int, lessonID: Int, completion: @escaping ([FirebaseVocab])->())
+  
+  func saveLessonHistory(userID: String, bookID: Int, lesson: FirebaseLesson)
+  func saveVocabHistory(userID: String, bookID: Int, lessonID: Int, vocabs: [FirebaseVocab])
 }

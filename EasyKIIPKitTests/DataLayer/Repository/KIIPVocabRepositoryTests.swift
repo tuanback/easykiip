@@ -107,8 +107,9 @@ class KIIPVocabRepositoryTests: XCTestCase {
   
   func test_getListOfVocab_apiFuncCalled_dataStoreFuncCalled() {
     let (sut, remoteAPI, dataStore) = makeSut()
+    let book = dataStore.book
     let lesson = dataStore.lesson
-    let _ = sut.getListOfVocabs(in: lesson)
+    let _ = sut.getListOfVocabs(in: book, lesson: lesson)
     
     XCTAssertTrue(remoteAPI.isLoadVocabCalled && dataStore.isGetVocabsCalled)
   }
@@ -118,8 +119,9 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let observer = scheduler.createObserver([Vocab].self)
     
     let (sut, remoteAPI, dataStore) = makeSut()
+    let book = dataStore.book
     let lesson = dataStore.lesson
-    let observable = sut.getListOfVocabs(in: lesson)
+    let observable = sut.getListOfVocabs(in: book, lesson: lesson)
     
     subscription = observable.subscribe(observer)
     
@@ -138,10 +140,11 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let observer = scheduler.createObserver([Vocab].self)
     
     let (sut, remoteAPI, dataStore) = makeSut()
+    let book = dataStore.book
     let lesson = dataStore.lesson
     dataStore.setLessonSyncedValue(false)
     
-    let observable = sut.getListOfVocabs(in: lesson)
+    let observable = sut.getListOfVocabs(in: book, lesson: lesson)
     
     subscription = observable.subscribe(observer)
     
@@ -162,10 +165,11 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let observer = scheduler.createObserver([Vocab].self)
     
     let (sut, remoteAPI, dataStore) = makeSut()
+    let book = dataStore.book
     let lesson = dataStore.lesson
     dataStore.setLessonSyncedValue(true)
     
-    let observable = sut.getListOfVocabs(in: lesson)
+    let observable = sut.getListOfVocabs(in: book, lesson: lesson)
     
     subscription = observable.subscribe(observer)
     
@@ -286,6 +290,35 @@ class KIIPVocabRepositoryTests: XCTestCase {
     XCTAssertTrue(needReviewVocabs.count != 0)
   }
   
+  func test_saveLessonPracticeHistory_allVocabSynced_remoteSaveFuncNotCalled() {
+    let (sut, remoteAPI, dataStore) = makeSut()
+    
+    let book = dataStore.book
+    let lesson = dataStore.lesson
+    
+    dataStore.setNotSyncedVocabsValue(false)
+    sut.saveLessonPracticeHistory(in: book.id, lessonID: lesson.id)
+    
+    XCTAssertFalse(remoteAPI.isSaveLessonPracticeHistoryCalled)
+    XCTAssertFalse(remoteAPI.isSaveVocabPracticeHistoryCalled)
+  }
+  
+  func test_saveLessonPracticeHistory_vocabNotSynced_remoteSaveFuncCalled() {
+    let (sut, remoteAPI, dataStore) = makeSut()
+    
+    let book = dataStore.book
+    let lesson = dataStore.lesson
+    let vocab = dataStore.vocab
+    
+    sut.recordVocabPracticed(vocab: vocab, isCorrectAnswer: true)
+    
+    dataStore.setNotSyncedVocabsValue(true)
+    sut.saveLessonPracticeHistory(in: book.id, lessonID: lesson.id)
+    
+    XCTAssertTrue(remoteAPI.isSaveLessonPracticeHistoryCalled)
+    XCTAssertTrue(remoteAPI.isSaveVocabPracticeHistoryCalled)
+  }
+  
   // Helper methods
   private func makeSut(practiceHistory: [PracticeHistory] = []) -> (KIIPVocabRepository, MockRemoteAPI, VocabDataStoreStub) {
     let fakeUserSessionDatastore = FakeUserSessionDataStore(hasToken: true)
@@ -304,6 +337,8 @@ class KIIPVocabRepositoryTests: XCTestCase {
     
     private(set) var isLoadLessonsCalled = false
     private(set) var isLoadVocabCalled = false
+    private(set) var isSaveLessonPracticeHistoryCalled = false
+    private(set) var isSaveVocabPracticeHistoryCalled = false
     
     private(set) var loadLessonCompletion: (([FirebaseLesson])->())?
     private(set) var loadVocabCompletion: (([FirebaseVocab])->())?
@@ -312,14 +347,22 @@ class KIIPVocabRepositoryTests: XCTestCase {
       self.practiceHistory = practiceHistory
     }
     
-    func loadLessonData(userID: String, bookdID: Int, completion: @escaping ([FirebaseLesson]) -> ()) {
+    func loadLessonData(userID: String, bookID: Int, completion: @escaping ([FirebaseLesson]) -> ()) {
       isLoadLessonsCalled = true
       loadLessonCompletion = completion
     }
     
-    func loadVocabData(userID: String, lessonID: Int, completion: @escaping ([FirebaseVocab]) -> ()) {
+    func loadVocabData(userID: String, bookID: Int, lessonID: Int, completion: @escaping ([FirebaseVocab]) -> ()) {
       isLoadVocabCalled = true
       loadVocabCompletion = completion
+    }
+    
+    func saveLessonHistory(userID: String, bookID: Int, lesson: FirebaseLesson) {
+      isSaveLessonPracticeHistoryCalled = true
+    }
+    
+    func saveVocabHistory(userID: String, bookID: Int, lessonID: Int, vocabs: [FirebaseVocab]) {
+      isSaveVocabPracticeHistoryCalled = true
     }
   }
   
@@ -341,8 +384,11 @@ class KIIPVocabRepositoryTests: XCTestCase {
     private(set) var isRecordVocabPracticedCalled = false
     private(set) var isSyncedLessonCalled = false
     private(set) var isSyncedVocabCalled = false
+    private(set) var setLessonSynced = false
     
     private(set) var isLessonSynced = false
+    
+    private var notSyncedVocabs: [Vocab] = []
     
     init(books: [Book],
          hasSampleDataBook: Book,
@@ -404,6 +450,28 @@ class KIIPVocabRepositoryTests: XCTestCase {
     func setLessonSyncedValue(_ value: Bool) {
       isLessonSynced = value
     }
+    
+    func getLesson(by id: Int) -> Lesson? {
+      return lesson
+    }
+    
+    func setLessonSynced(lessonID: Int, lastTimeSynced: Double) {
+      setLessonSynced = true
+    }
+    
+    func getNotSyncedVocabsInLesson(lessonID: Int) -> [Vocab] {
+      return notSyncedVocabs
+    }
+    
+    func setNotSyncedVocabsValue(_ value: Bool) {
+      if value {
+        notSyncedVocabs = [vocab]
+      }
+      else {
+        notSyncedVocabs = []
+      }
+    }
+    
   }
   
   // Sample book

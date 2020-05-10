@@ -19,11 +19,7 @@ public class Lesson {
   
   public private(set) var proficiency: UInt8
   
-  public var lastTimeLearned: Date? {
-    let learnedVocabs = vocabs.filter { $0.lastTimeTest != nil }
-    guard learnedVocabs.count > 0 else { return nil }
-    return learnedVocabs.sorted { $0.lastTimeTest! > $1.lastTimeTest! }[0].lastTimeTest
-  }
+  public private(set) var lastTimeLearned: Date?
   
   public init(id: Int,
               name: String,
@@ -59,4 +55,9 @@ public class Lesson {
   func setProficiency(_ proficiency: UInt8) {
     self.proficiency = proficiency
   }
+  
+  func setLastTimeLearned(_ date: Date?) {
+    self.lastTimeLearned = date
+  }
+  
 }

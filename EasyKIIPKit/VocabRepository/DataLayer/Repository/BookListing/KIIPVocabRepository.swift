@@ -18,6 +18,10 @@ public class KIIPVocabRepository: VocabRepository {
   private let remoteAPI: VocabRemoteAPI
   private let dataStore: VocabDataStore
   
+  private var userID: String {
+    return userSession.profile.id
+  }
+  
   public init(userSession: UserSession, remoteAPI: VocabRemoteAPI, dataStore: VocabDataStore) {
     self.userSession = userSession
     self.remoteAPI = remoteAPI
@@ -33,7 +37,7 @@ public class KIIPVocabRepository: VocabRepository {
     let observable = PublishSubject<[Lesson]>()
     let dataStoreLessons = dataStore.getListOfLesson(in: book)
     
-    remoteAPI.loadLessonData(userID: userSession.profile.id, bookdID: book.id) { [weak self] (lessons) in
+    remoteAPI.loadLessonData(userID: userID, bookID: book.id) { [weak self] (lessons) in
       guard let strongSelf = self else { return }
       // Algorithm to merge history from Back end with local datastore
       guard lessons.count > 0 else {
@@ -54,13 +58,15 @@ public class KIIPVocabRepository: VocabRepository {
     return observable
   }
   
-  public func getListOfVocabs(in lesson: Lesson) -> Observable<[Vocab]> {
+  public func getListOfVocabs(in book: Book, lesson: Lesson) -> Observable<[Vocab]> {
     // Need to queries from auth remote then merge together
     let observable = PublishSubject<[Vocab]>()
     let dataStoreVocabs = dataStore.getListOfVocabs(in: lesson)
     
     if !dataStore.isLessonSynced(lesson.id) {
-      remoteAPI.loadVocabData(userID: userSession.profile.id, lessonID: lesson.id) { [weak self] (vocabs) in
+      remoteAPI.loadVocabData(userID: userID,
+                              bookID: book.id,
+                              lessonID: lesson.id) { [weak self] (vocabs) in
         guard let strongSelf = self else { return }
         // Algorithm to merge history from Back end with local datastore
         guard vocabs.count > 0 else {
@@ -69,8 +75,15 @@ public class KIIPVocabRepository: VocabRepository {
         }
         
         for vocab in vocabs {
-          let firstTimeLearned = Date(timeIntervalSince1970: vocab.firstTimeLearned)
-          let lastTimeTest = Date(timeIntervalSince1970: vocab.lastTimeLearned)
+          var firstTimeLearned: Date?
+          var lastTimeTest: Date?
+          
+          if let ftl = vocab.firstTimeLearned {
+            firstTimeLearned = Date(timeIntervalSince1970: ftl)
+          }
+          if let ltt = vocab.lastTimeLearned {
+            lastTimeTest = Date(timeIntervalSince1970: ltt)
+          }
           
           self?.dataStore.syncPracticeHistory(
             vocabID: vocab.id,
@@ -177,6 +190,52 @@ public class KIIPVocabRepository: VocabRepository {
     result.sort { $0.proficiency < $1.proficiency }
     let numberOfElement = min(numberOfVocabs, result.count)
     return Array(result.prefix(upTo: numberOfElement))
+  }
+  
+  public func saveLessonPracticeHistory(in bookID: Int, lessonID: Int) {
+    guard let updatedLesson = dataStore.getLesson(by: lessonID) else {
+      return
+    }
+    
+    let vocabs = dataStore.getNotSyncedVocabsInLesson(lessonID: lessonID)
+    
+    guard vocabs.count > 0 else {
+      return
+    }
+    
+    let lastTimeSynced = Date().timeIntervalSince1970
+    let proficiency = updatedLesson.proficiency
+    let firebaseLesson = FirebaseLesson(id: lessonID,
+                                        proficiency: proficiency,
+                                        lastTimeSynced: lastTimeSynced)
+    
+    dataStore.setLessonSynced(lessonID: lessonID, lastTimeSynced: lastTimeSynced)
+    
+    remoteAPI.saveLessonHistory(userID: userID, bookID: bookID, lesson: firebaseLesson)
+    
+    let firebaseVocabs: [FirebaseVocab] = vocabs.map { vocab in
+      let practiceHistory = vocab.practiceHistory
+      var firstTimeLearned: Double?
+      var lastTimeLearned: Double?
+      
+      if let fld = practiceHistory.firstLearnDate {
+        firstTimeLearned = fld.timeIntervalSince1970
+      }
+      
+      if let ltt = practiceHistory.lastTimeTest {
+        lastTimeLearned = ltt.timeIntervalSince1970
+      }
+      
+      return FirebaseVocab(id: vocab.id,
+                           isLearned: practiceHistory.isLearned,
+                           isMastered: practiceHistory.isMastered,
+                           testTaken: practiceHistory.numberOfTestTaken,
+                           correctAnswer: practiceHistory.numberOfCorrectAnswer,
+                           firstTimeLearned: firstTimeLearned,
+                           lastTimeLearned: lastTimeLearned)
+    }
+    
+    remoteAPI.saveVocabHistory(userID: userID, bookID: bookID, lessonID: lessonID, vocabs: firebaseVocabs)
   }
   
 }

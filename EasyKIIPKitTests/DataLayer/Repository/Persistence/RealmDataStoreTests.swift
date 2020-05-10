@@ -148,6 +148,35 @@ class RealmDataStoreTests: XCTestCase {
     }
   }
   
+  func test_getLessonByID_notExistedLesson_returnNil() {
+    let (_, _, _, _, _, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    let lesson = sut.getLesson(by: 999)
+    XCTAssertNil(lesson)
+  }
+  
+  func test_getLessonByID_existedLesson_returnCorrectLesson() {
+    let (_, _, _, lesson, _, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    let localLastTimeSynced = (Date() - 3.days).timeIntervalSince1970
+    let proficiency = 90
+    
+    makeFakeHistory(for: lesson, historyRealmProvider: historyRealmProvider, lastTimeSynced: localLastTimeSynced, proficiency: proficiency)
+    
+    let l = sut.getLesson(by: lesson.id)
+    XCTAssertNotNil(l)
+    
+    if lesson.id != l!.id ||
+      lesson.name != l!.name ||
+      lesson.index != l!.index {
+      XCTFail()
+    }
+    
+    if l!.proficiency != proficiency {
+      XCTFail()
+    }
+  }
+  
   func test_getVocabByID_notExistedVocab_returnNil() {
     let (_, _, _, _, _, _) = makeSampleVocabsData(into: bundledRealmProvider)
     
@@ -183,6 +212,21 @@ class RealmDataStoreTests: XCTestCase {
     
     XCTAssertNotNil(v)
     XCTAssertTrue(v!.practiceHistory.isMastered)
+  }
+  
+  func test_markVocabAsMastered_mark2VocabsReturnIsMastered() {
+    let (_, _, _, _, vocabs, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    sut.markVocabAsMastered(vocabs[0].toVocab())
+    sut.markVocabAsMastered(vocabs[1].toVocab())
+    
+    let v0 = sut.getVocab(by: vocabs[0].id)
+    let v1 = sut.getVocab(by: vocabs[1].id)
+    
+    XCTAssertNotNil(v0)
+    XCTAssertTrue(v0!.practiceHistory.isMastered)
+    XCTAssertNotNil(v1)
+    XCTAssertTrue(v1!.practiceHistory.isMastered)
   }
   
   func test_markVocabAsMastered_setIsSyncedToFalse() {
@@ -611,6 +655,52 @@ class RealmDataStoreTests: XCTestCase {
      XCTAssertFalse(sut.isLessonSynced(lesson.id))
   }
   
+  func test_getNotSyncedVocabsInLesson_AllSyncedVocab_ReturnEmpty() {
+    let (_, _, _, lesson, _, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    let vocabs = sut.getNotSyncedVocabsInLesson(lessonID: lesson.id)
+    
+    XCTAssertEqual(vocabs.count, 0)
+  }
+  
+  func test_getNotSyncedVocabsInLesson_1UnsyncedVocab_Return1Vocab() {
+    let (_, _, _, lesson, _, vocab) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    sut.recordVocabPracticed(vocab: vocab.toVocab(), isCorrectAnswer: true)
+    
+    let vocabs = sut.getNotSyncedVocabsInLesson(lessonID: lesson.id)
+    
+    XCTAssertEqual(vocabs.count, 1)
+  }
+  
+  func test_getNotSyncedVocabsInLesson_2UnsyncedVocab_Return1Vocab() {
+    let (_, _, _, lesson, vocabs, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    sut.recordVocabPracticed(vocab: vocabs[0].toVocab(), isCorrectAnswer: true)
+    sut.recordVocabPracticed(vocab: vocabs[1].toVocab(), isCorrectAnswer: true)
+    
+    let vs = sut.getNotSyncedVocabsInLesson(lessonID: lesson.id)
+    
+    XCTAssertEqual(vs.count, 2)
+  }
+  
+  func test_setLessonSynced_SetValues() {
+    let (_, _, _, lesson, vocabs, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    sut.recordVocabPracticed(vocab: vocabs[0].toVocab(), isCorrectAnswer: true)
+    sut.recordVocabPracticed(vocab: vocabs[1].toVocab(), isCorrectAnswer: true)
+  
+    let lastTimeSynced = Date().timeIntervalSince1970
+    sut.setLessonSynced(lessonID: lesson.id, lastTimeSynced: lastTimeSynced)
+    
+    let historyRealm = historyRealmProvider.realm
+    let realmLessonHistory = historyRealm.object(ofType: RealmLessonHistory.self, forPrimaryKey: lesson.id)
+    
+    XCTAssertNotNil(realmLessonHistory)
+    XCTAssertTrue(realmLessonHistory!.isSynced)
+    XCTAssertEqual(realmLessonHistory!.lastTimeSynced.value, lastTimeSynced)
+  }
+  
   // Helpers
   private func makeBundledConfig() -> Realm.Configuration {
     let bundledConfig: Realm.Configuration = Realm.Configuration(inMemoryIdentifier: "ios.realmdatastore.bundled")
@@ -719,6 +809,7 @@ class RealmDataStoreTests: XCTestCase {
     if let history = realm.object(ofType: RealmLessonHistory.self, forPrimaryKey: lesson.id) {
       try! realm.write {
         history.lastTimeSynced.value = lastTimeSynced
+        history.proficiency = proficiency
       }
     }
     else {

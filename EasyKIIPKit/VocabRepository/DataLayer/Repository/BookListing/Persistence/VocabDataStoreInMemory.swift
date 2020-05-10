@@ -82,6 +82,18 @@ public class VocabDataStoreInMemory: VocabDataStore {
     }
   }
   
+  public func getLesson(by id: Int) -> Lesson? {
+    let lessons = books.flatMap { $0.lessons }
+    if let lesson = lessons.first(where: { $0.id == id }) {
+      return lesson
+    }
+    return nil
+  }
+  
+  public func setLessonSynced(lessonID: Int, lastTimeSynced: Double) {
+    
+  }
+  
   public func getVocab(by id: Int) -> Vocab? {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
     if let v = vocabs.first(where: { $0.id == id }) {
@@ -115,6 +127,10 @@ public class VocabDataStoreInMemory: VocabDataStore {
   
   public func isLessonSynced(_ lessonID: Int) -> Bool {
     return false
+  }
+  
+  public func getNotSyncedVocabsInLesson(lessonID: Int) -> [Vocab] {
+    return []
   }
   
   public func syncPracticeHistory(vocabID: Int,
