@@ -28,8 +28,10 @@ class FirebaseVocabRemoteAPITests: XCTestCase {
     
     let expect = expectation(description: "Return empty array")
     
-    sut.loadLessonData(userID: userID, bookID: bookID) { (lessons) in
-      expect.fulfill()
+    sut.loadLessonData(userID: userID, bookID: bookID) { (_) in
+      sut.loadLessonData(userID: self.userID, bookID: self.bookID) { (_) in
+        expect.fulfill()
+      }
     }
     
     wait(for: [expect], timeout: 5)

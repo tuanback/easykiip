@@ -37,11 +37,27 @@ struct FireStoreUtil {
   
   struct Book {
     static let bookID = "bookID"
+    static let lessons = "lessons"
+  }
+  
+  struct Lesson {
+    static let key = "lesson_"
+    static let lessonID = "lessonID"
+    static let vocabs = "vocabs"
+    static let proficiency = "proficiency"
+    static let lastTimeSynced = "lastTimeSynced"
   }
   
   static func bookDocumentPath(userID: String, bookID: Int) -> String {
     let bookDocumentPath = Document.getBookDocument(bookID: bookID)
     let path = Collection.users + "/\(userID)/" + Collection.books + "/\(bookDocumentPath)"
+    return path
+  }
+  
+  static func lessonDocumentPath(userID: String, bookID: Int, lessonID: Int) -> String {
+    let bookDocumentPath = Document.getBookDocument(bookID: bookID)
+    let lessonDocPath = Document.getLessonDocument(lessonID: lessonID)
+    let path = Collection.users + "/\(userID)/" + Collection.books + "/\(bookDocumentPath)/" + Collection.lessons + "/\(lessonDocPath)"
     return path
   }
   

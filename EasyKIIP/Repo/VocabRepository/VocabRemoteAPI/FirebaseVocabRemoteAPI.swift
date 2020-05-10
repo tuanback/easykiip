@@ -27,15 +27,18 @@ class FirebaseVocabRemoteAPI: VocabRemoteAPI {
   private lazy var db = Firestore.firestore()
   
   private var bookDict: [Int: FirestoreDocument] = [:]
+  private var lessonDict: [Int: FirestoreDocument] = [:]
   
   init() { }
   
   func loadLessonData(userID: String, bookID: Int, completion: @escaping ([FirebaseLesson]) -> ()) {
     
     // Check if the firestore document is already existed
-    if let fireStoreDocument = bookDict[bookID] {
+    if let fireStoreDocument = bookDict[bookID],
+      let snapShot = fireStoreDocument.snapShot {
       // TODO: Parse document to get firebase lesson
-      
+      let lessons = parseBookData(snapShot: snapShot)
+      completion(lessons)
       return
     }
     
@@ -50,10 +53,13 @@ class FirebaseVocabRemoteAPI: VocabRemoteAPI {
       
       if let document = document, document.exists {
         // TODO: Parse data then return
+        let lessons = strongSelf.parseBookData(snapShot: document)
+        completion(lessons)
       }
       else {
-        print("Document doesn't exist")
-        docRef.setData([FireStoreUtil.Book.bookID: bookID]) { error in
+        print("Document doesn't exist. Creating new document")
+        docRef.setData([FireStoreUtil.Book.bookID: bookID,
+                        FireStoreUtil.Book.lessons: [:]]) { error in
           if let err = error {
             print("Can't create book document \(err.localizedDescription)")
           }
@@ -79,8 +85,113 @@ class FirebaseVocabRemoteAPI: VocabRemoteAPI {
     
   }
   
+  private func parseBookData(snapShot: DocumentSnapshot) -> [FirebaseLesson] {
+    guard let data = snapShot.data() else {
+      return []
+    }
+    
+    var results: [FirebaseLesson] = []
+    
+    if let lessonDict = data[FireStoreUtil.Book.lessons] as? [String: Any] {
+      for (key, value) in lessonDict {
+        guard let valueDict = value as? [String: Any] else { continue }
+        guard let id = Int(key.dropFirst(FireStoreUtil.Lesson.key.count)),
+          let proficiency = valueDict[FireStoreUtil.Lesson.proficiency] as? UInt8,
+          let lastTimeSynced = valueDict[FireStoreUtil.Lesson.lastTimeSynced] as? Double else {
+          continue
+        }
+        
+        let lesson = FirebaseLesson(id: id,
+                                    proficiency: proficiency,
+                                    lastTimeSynced: lastTimeSynced)
+        results.append(lesson)
+      }
+    }
+    
+    return results
+  }
+  
   func loadVocabData(userID: String, bookID: Int, lessonID: Int, completion: @escaping ([FirebaseVocab]) -> ()) {
     
+    // Check if the firestore document is already existed
+    if let fireStoreDocument = lessonDict[bookID],
+      let snapShot = fireStoreDocument.snapShot {
+      // TODO: Parse document to get firebase vocabs
+      let vocabs = parseLessonData(snapShot: snapShot)
+      completion(vocabs)
+      return
+    }
+    
+    let lessonDocPath = FireStoreUtil.lessonDocumentPath(userID: userID, bookID: bookID, lessonID: lessonID)
+    
+    let docRef = db.document(lessonDocPath)
+    docRef.getDocument { [weak self] (document, error) in
+      guard let strongSelf = self else { return }
+      
+      strongSelf.lessonDict[bookID] = FirestoreDocument(reference: docRef, snapShot: document)
+      strongSelf.listenToLessonSnapShotChanged(lessonID: lessonID, docRef: docRef)
+      
+      if let document = document, document.exists {
+        // TODO: Parse data then return
+        let vocabs = strongSelf.parseLessonData(snapShot: document)
+        completion(vocabs)
+      }
+      else {
+        print("Document doesn't exist. Creating new document")
+        docRef.setData([FireStoreUtil.Lesson.lessonID: bookID,
+                        FireStoreUtil.Lesson.vocabs: [:]]) { error in
+          if let err = error {
+            print("Can't create book document \(err.localizedDescription)")
+          }
+          else {
+            print("Book document created")
+          }
+        }
+        completion([])
+      }
+    }
+    
+  }
+  
+  private func listenToLessonSnapShotChanged(lessonID: Int,
+                                             docRef: DocumentReference) {
+    
+    docRef.addSnapshotListener { [weak self] (document, error) in
+      guard let strongSelf = self else { return }
+      if let fireStoreDocument = strongSelf.lessonDict[lessonID] {
+        print("Lesson \(lessonID) document snapshot changed")
+        fireStoreDocument.snapShot = document
+      }
+    }
+  }
+  
+  private func parseLessonData(snapShot: DocumentSnapshot) -> [FirebaseVocab] {
+    guard let data = snapShot.data() else {
+      return []
+    }
+    
+    var results: [FirebaseVocab] = []
+    
+    if let vocabsDict = data[FireStoreUtil.Lesson.vocabs] as? [String: Any] {
+      for (key, value) in vocabsDict {
+        guard let valueDict = value as? [String: Any] else { continue }
+        // TODO: Parse vocabs
+        /*
+        guard let id = Int(key.dropFirst(FireStoreUtil.Lesson.key.count)),
+          let proficiency = valueDict[FireStoreUtil.Lesson.proficiency] as? UInt8,
+          let lastTimeSynced = valueDict[FireStoreUtil.Lesson.lastTimeSynced] as? Double else {
+          continue
+        }
+        
+        let lesson = FirebaseLesson(id: id,
+                                    proficiency: proficiency,
+                                    lastTimeSynced: lastTimeSynced)
+        results.append(lesson)
+        */
+      }
+    }
+    
+    return results
   }
   
   func saveLessonHistory(userID: String, bookID: Int, lesson: FirebaseLesson) {
@@ -89,9 +200,10 @@ class FirebaseVocabRemoteAPI: VocabRemoteAPI {
     
     let docRef = db.document(bookDocumentPath)
     
-    let lessonDict = ["lessons": ["lesson_\(lesson.id)": lesson.id,
-                                  "proficiency": lesson.proficiency,
-                                  "lastTimeSynced": lesson.lastTimeSynced]]
+    let key = "lessons.\(FireStoreUtil.Lesson.key)\(lesson.id)"
+    let value: [String: Any] = [FireStoreUtil.Lesson.proficiency: lesson.proficiency,
+                                FireStoreUtil.Lesson.lastTimeSynced: lesson.lastTimeSynced]
+    let lessonDict = [key: value]
     
     docRef.updateData(lessonDict) { (error) in
       if let error = error {
