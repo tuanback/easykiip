@@ -57,7 +57,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_1TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs51() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 1
+    let numberOfTakenTest = 1
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -70,7 +70,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_1TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs26() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 1
+    let numberOfTakenTest = 1
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -84,7 +84,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_6TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs51() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 6
+    let numberOfTakenTest = 6
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -98,7 +98,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_6TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs26() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 6
+    let numberOfTakenTest = 6
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -114,7 +114,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_7TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs64() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 7
+    let numberOfTakenTest = 7
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -128,7 +128,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_7TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs40() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 7
+    let numberOfTakenTest = 7
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -142,7 +142,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_12TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs64() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 12
+    let numberOfTakenTest = 12
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -156,7 +156,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_12TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs40() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 12
+    let numberOfTakenTest = 12
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -171,7 +171,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_13TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs75() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 13
+    let numberOfTakenTest = 13
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -185,7 +185,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_13TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs56() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 13
+    let numberOfTakenTest = 13
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -199,7 +199,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_18TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs75() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 18
+    let numberOfTakenTest = 18
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -213,7 +213,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_18TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs56() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 18
+    let numberOfTakenTest = 18
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -228,7 +228,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_19TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs84() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 19
+    let numberOfTakenTest = 19
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -242,7 +242,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_19TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs70() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 19
+    let numberOfTakenTest = 19
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -256,7 +256,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_24TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs84() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 24
+    let numberOfTakenTest = 24
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -270,7 +270,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_24TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs70() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 24
+    let numberOfTakenTest = 24
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -285,7 +285,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_25TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs91() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 25
+    let numberOfTakenTest = 25
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -299,7 +299,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_25TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs82() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 25
+    let numberOfTakenTest = 25
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -313,7 +313,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_30TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs91() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 30
+    let numberOfTakenTest = 30
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -327,7 +327,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_30TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs82() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 30
+    let numberOfTakenTest = 30
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -342,7 +342,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_31TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs96() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 31
+    let numberOfTakenTest = 31
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -356,7 +356,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_31TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs92() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 31
+    let numberOfTakenTest = 31
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -370,7 +370,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_36TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs96() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 36
+    let numberOfTakenTest = 36
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -384,7 +384,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_36TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs96() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 36
+    let numberOfTakenTest = 36
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -399,7 +399,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_37TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs99() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 37
+    let numberOfTakenTest = 37
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -413,7 +413,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_37TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs98() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 37
+    let numberOfTakenTest = 37
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -427,7 +427,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_42TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs99() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 42
+    let numberOfTakenTest = 42
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -441,7 +441,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_42TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs98() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 42
+    let numberOfTakenTest = 42
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -456,7 +456,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_43TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs100() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 43
+    let numberOfTakenTest = 43
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -470,7 +470,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_43TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs100() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 43
+    let numberOfTakenTest = 43
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -484,7 +484,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_99TimeTestTaken_CorrectAnswer_LastTimeTest_1dayAgo_ProficiencyIs100() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 1.days - 1.seconds
-    let numberOfTakenTest: UInt = 99
+    let numberOfTakenTest = 99
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,
@@ -498,7 +498,7 @@ class ProficiencyCalculatorTests: XCTestCase {
   func testCalculate_99TimeTestTaken_CorrectAnswer_LastTimeTest_2daysAgo_ProficiencyIs100() {
     let vocab = makeVocab()
     let lastTimeTest = Date() - 2.days - 1.seconds
-    let numberOfTakenTest: UInt = 99
+    let numberOfTakenTest = 99
     let numberOfCorrectAnswer = numberOfTakenTest
     vocab.setTestTakenData(isMastered: false,
                            numberOfTestTaken: numberOfTakenTest,

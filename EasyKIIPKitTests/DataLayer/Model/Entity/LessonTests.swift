@@ -11,8 +11,8 @@ import XCTest
 
 class LessonTests: XCTestCase {
   
-  private let id: UInt = 0
-  private let index: UInt = 0
+  private let id: Int = 0
+  private let index: Int = 0
   private let lessionName = "Lesson"
   private let translations: [LanguageCode: String] = [.en: "Lesson", .vi: "Bài"]
   private let readingParts: [ReadingPart] = [ReadingPart(scriptName: "Name", script: "안녕하세요~", scriptNameTranslation: [.en: "Hello", .vi: "Xin chào"], scriptTranslation: [.en: "Hello", .vi: "Xin chào"])]

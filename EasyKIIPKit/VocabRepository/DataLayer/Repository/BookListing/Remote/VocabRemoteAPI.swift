@@ -9,11 +9,11 @@
 import Foundation
 
 public struct FirebaseVocab {
-  let id: UInt
+  let id: Int
   let isLearned: Bool
   let isMastered: Bool
-  let testTaken: UInt
-  let correctAnswer: UInt
+  let testTaken: Int
+  let correctAnswer: Int
   /// Time since 1970
   let firstTimeLearned: Double
   /// Time since 1970
@@ -21,13 +21,13 @@ public struct FirebaseVocab {
 }
 
 public struct FirebaseLesson {
-  let id: UInt
+  let id: Int
   let proficiency: UInt8
   /// Time since 1970
   let lastTimeSynced: Double
 }
 
 public protocol VocabRemoteAPI {
-  func loadLessonData(userID: String, bookdID: UInt, completion: @escaping ([FirebaseLesson])->())
-  func loadVocabData(userID: String, lessonID: UInt, completion: @escaping ([FirebaseVocab])->())
+  func loadLessonData(userID: String, bookdID: Int, completion: @escaping ([FirebaseLesson])->())
+  func loadVocabData(userID: String, lessonID: Int, completion: @escaping ([FirebaseVocab])->())
 }

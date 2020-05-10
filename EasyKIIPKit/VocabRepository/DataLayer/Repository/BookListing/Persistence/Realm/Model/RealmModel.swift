@@ -47,7 +47,7 @@ class RealmBook: Object {
       thumbURL = url
     }
     let lessons: [Lesson] = self.lessons.map { $0.toLesson() }
-    return Book(id: UInt(id), name: name, thumbURL: thumbURL, lessons: lessons)
+    return Book(id: id, name: name, thumbURL: thumbURL, lessons: lessons)
   }
 }
 
@@ -81,7 +81,7 @@ class RealmLesson: Object {
     let trans = convertListTranslationToDict(translations)
     let vocabs: [Vocab] = self.vocabs.map { $0.toVocab() }
     let readingPart: [ReadingPart] = self.readingParts.map { $0.toReadingPart() }
-    return Lesson(id: UInt(id), name: name, index: UInt(index), translations: trans, vocabs: vocabs, readingParts: readingPart)
+    return Lesson(id: id, name: name, index: index, translations: trans, vocabs: vocabs, readingParts: readingPart)
   }
 }
 
@@ -145,7 +145,7 @@ class RealmVocab: Object {
   
   func toVocab() -> Vocab {
     let trans = convertListTranslationToDict(translations)
-    return Vocab(id: UInt(id), word: word, translations: trans)
+    return Vocab(id: id, word: word, translations: trans)
   }
 }
 
@@ -199,7 +199,7 @@ class RealmVocabPracticeHistory: Object {
     return ProficiencyCalculator.calculate(isMastered: isMastered,
                                            isLearned: isLearned,
                                            lastTimeTest: lastTimeTest,
-                                           correctAnswer: UInt(correctAnswer))
+                                           correctAnswer: correctAnswer)
   }
   
   override class func primaryKey() -> String? {

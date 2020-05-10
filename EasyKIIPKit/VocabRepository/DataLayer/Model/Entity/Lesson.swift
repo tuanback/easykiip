@@ -9,10 +9,10 @@
 import Foundation
 
 public class Lesson {
-  public private(set) var id: UInt
+  public private(set) var id: Int
   public private(set) var name: String
   /// To display lesson index in the book
-  public private(set) var index: UInt
+  public private(set) var index: Int
   public private(set) var translations: [LanguageCode: String]
   public private(set) var readingParts: [ReadingPart]
   public private(set) var vocabs: [Vocab]
@@ -25,9 +25,9 @@ public class Lesson {
     return learnedVocabs.sorted { $0.lastTimeTest! > $1.lastTimeTest! }[0].lastTimeTest
   }
   
-  public init(id: UInt,
+  public init(id: Int,
               name: String,
-              index: UInt,
+              index: Int,
               translations: [LanguageCode: String],
               vocabs: [Vocab],
               readingParts: [ReadingPart],

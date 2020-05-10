@@ -158,7 +158,7 @@ class RealmDataStoreTests: XCTestCase {
   func test_getVocabByID_existedVocab_returnCorrectVocab() {
     let (_, _, _, _, _, vocab) = makeSampleVocabsData(into: bundledRealmProvider)
     
-    let v = sut.getVocab(by: UInt(vocab.id))
+    let v = sut.getVocab(by: vocab.id)
     XCTAssertNotNil(vocab)
     
     if vocab.id != v!.id ||
@@ -179,7 +179,7 @@ class RealmDataStoreTests: XCTestCase {
     
     sut.markVocabAsMastered(vocab.toVocab())
     
-    let v = sut.getVocab(by: UInt(vocab.id))
+    let v = sut.getVocab(by: vocab.id)
     
     XCTAssertNotNil(v)
     XCTAssertTrue(v!.practiceHistory.isMastered)
@@ -202,7 +202,7 @@ class RealmDataStoreTests: XCTestCase {
     let (_, _, _, _, _, vocab) = makeSampleVocabsData(into: bundledRealmProvider)
     sut.markVocabAsMastered(vocab.toVocab())
     
-    let v = sut.getVocab(by: UInt(vocab.id))
+    let v = sut.getVocab(by: vocab.id)
     
     XCTAssertNotNil(v)
     XCTAssertTrue(v!.practiceHistory.isLearned)
@@ -213,7 +213,7 @@ class RealmDataStoreTests: XCTestCase {
     
     sut.recordVocabPracticed(vocab: vocab.toVocab(), isCorrectAnswer: true)
     
-    let v = sut.getVocab(by: UInt(vocab.id))
+    let v = sut.getVocab(by: vocab.id)
     
     XCTAssertNotNil(v)
     XCTAssertEqual(v!.practiceHistory.numberOfTestTaken, 1)
@@ -227,7 +227,7 @@ class RealmDataStoreTests: XCTestCase {
     
     sut.recordVocabPracticed(vocab: vocab.toVocab(), isCorrectAnswer: false)
     
-    let v = sut.getVocab(by: UInt(vocab.id))
+    let v = sut.getVocab(by: vocab.id)
     
     XCTAssertNotNil(v)
     XCTAssertEqual(v!.practiceHistory.numberOfTestTaken, 1)
@@ -243,10 +243,10 @@ class RealmDataStoreTests: XCTestCase {
     
     sut.recordVocabPracticed(vocab: vocab.toVocab(), isCorrectAnswer: true)
     
-    let v = sut.getVocab(by: UInt(vocab.id))
+    let v = sut.getVocab(by: vocab.id)
     
     XCTAssertNotNil(v)
-    XCTAssertEqual(v!.practiceHistory.numberOfCorrectAnswer, UInt(correctAnswer + 1))
+    XCTAssertEqual(v!.practiceHistory.numberOfCorrectAnswer, correctAnswer + 1)
     XCTAssertTrue(v!.practiceHistory.isLearned)
   }
   
@@ -257,10 +257,10 @@ class RealmDataStoreTests: XCTestCase {
     
     sut.recordVocabPracticed(vocab: vocab.toVocab(), isCorrectAnswer: false)
     
-    let v = sut.getVocab(by: UInt(vocab.id))
+    let v = sut.getVocab(by: vocab.id)
     
     XCTAssertNotNil(v)
-    XCTAssertEqual(v!.practiceHistory.numberOfWrongAnswer, UInt(testTaken - correctAnswer + 1))
+    XCTAssertEqual(v!.practiceHistory.numberOfWrongAnswer, testTaken - correctAnswer + 1)
     XCTAssertTrue(v!.practiceHistory.isLearned)
   }
   
@@ -268,7 +268,7 @@ class RealmDataStoreTests: XCTestCase {
     let (_, _, _, _, _, vocab) = makeSampleVocabsData(into: bundledRealmProvider)
     sut.recordVocabPracticed(vocab: vocab.toVocab(), isCorrectAnswer: false)
     
-    let v = sut.getVocab(by: UInt(vocab.id))
+    let v = sut.getVocab(by: vocab.id)
     
     XCTAssertNotNil(v)
     XCTAssertTrue(v!.practiceHistory.isLearned)
@@ -278,7 +278,7 @@ class RealmDataStoreTests: XCTestCase {
     let (_, _, _, _, _, vocab) = makeSampleVocabsData(into: bundledRealmProvider)
     sut.recordVocabPracticed(vocab: vocab.toVocab(), isCorrectAnswer: false)
     
-    let v = sut.getVocab(by: UInt(vocab.id))
+    let v = sut.getVocab(by: vocab.id)
     
     XCTAssertNotNil(v)
     XCTAssertNotNil(v!.practiceHistory.firstLearnDate)
@@ -288,7 +288,7 @@ class RealmDataStoreTests: XCTestCase {
     let (_, _, _, _, _, vocab) = makeSampleVocabsData(into: bundledRealmProvider)
     sut.recordVocabPracticed(vocab: vocab.toVocab(), isCorrectAnswer: false)
     
-    let v = sut.getVocab(by: UInt(vocab.id))
+    let v = sut.getVocab(by: vocab.id)
     
     XCTAssertNotNil(v)
     XCTAssertNotNil(v!.practiceHistory.lastTimeTest)
@@ -301,7 +301,7 @@ class RealmDataStoreTests: XCTestCase {
     
     sut.recordVocabPracticed(vocab: vocab.toVocab(), isCorrectAnswer: false)
     
-    let v = sut.getVocab(by: UInt(vocab.id))
+    let v = sut.getVocab(by: vocab.id)
     
     XCTAssertNotNil(v)
     XCTAssertEqual(v!.practiceHistory.firstLearnDate!, firstLearnDate)
@@ -314,7 +314,7 @@ class RealmDataStoreTests: XCTestCase {
     
     sut.recordVocabPracticed(vocab: vocab.toVocab(), isCorrectAnswer: false)
     
-    let v = sut.getVocab(by: UInt(vocab.id))
+    let v = sut.getVocab(by: vocab.id)
     
     XCTAssertNotNil(v)
     XCTAssertGreaterThan(v!.practiceHistory.lastTimeTest!, lastTimeTest)
@@ -378,7 +378,7 @@ class RealmDataStoreTests: XCTestCase {
     
     let lastTimeSynced = (Date() - 1.days - 1.hours).timeIntervalSince1970
     let proficiency = 80
-    sut.syncLessonProficiency(lessonID: UInt(lesson.id), proficiency: UInt8(proficiency), lastTimeSynced: lastTimeSynced)
+    sut.syncLessonProficiency(lessonID: lesson.id, proficiency: UInt8(proficiency), lastTimeSynced: lastTimeSynced)
     
     let historyRealm = historyRealmProvider.realm
     let lessonHistory = historyRealm.object(ofType: RealmLessonHistory.self,
@@ -400,7 +400,7 @@ class RealmDataStoreTests: XCTestCase {
     
     let lastTimeSynced = (Date() - 1.days - 1.hours).timeIntervalSince1970
     let proficiency = 80
-    sut.syncLessonProficiency(lessonID: UInt(lesson.id), proficiency: UInt8(proficiency), lastTimeSynced: lastTimeSynced)
+    sut.syncLessonProficiency(lessonID: lesson.id, proficiency: UInt8(proficiency), lastTimeSynced: lastTimeSynced)
     
     let historyRealm = historyRealmProvider.realm
     let lessonHistory = historyRealm.object(ofType: RealmLessonHistory.self,
@@ -422,7 +422,7 @@ class RealmDataStoreTests: XCTestCase {
     
     let lastTimeSynced = (Date() - 1.hours).timeIntervalSince1970
     let proficiency = 80
-    sut.syncLessonProficiency(lessonID: UInt(lesson.id), proficiency: UInt8(proficiency), lastTimeSynced: lastTimeSynced)
+    sut.syncLessonProficiency(lessonID: lesson.id, proficiency: UInt8(proficiency), lastTimeSynced: lastTimeSynced)
     
     let historyRealm = historyRealmProvider.realm
     let lessonHistory = historyRealm.object(ofType: RealmLessonHistory.self,
@@ -434,6 +434,29 @@ class RealmDataStoreTests: XCTestCase {
     XCTAssertEqual(lessonHistory!.proficiency, proficiency)
   }
   
+  func test_syncVocabPracticeHistory_NewVocab_SyncServerData() {
+    let (_, _, _, _, _, vocab) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    let serverTestTaken = testTaken + 2
+    let serverCorrectAnswer = correctAnswer + 1
+    
+    sut.syncPracticeHistory(vocabID: vocab.id,
+                            isMastered: true,
+                            testTaken: serverTestTaken,
+                            correctAnswer: serverCorrectAnswer,
+                            firstLearnDate: firstLearnDate,
+                            lastTimeTest: lastTimeTest)
+    
+    let v = sut.getVocab(by: vocab.id)
+    
+    XCTAssertEqual(v!.practiceHistory.numberOfTestTaken, serverTestTaken)
+    XCTAssertEqual(v!.practiceHistory.numberOfCorrectAnswer, serverCorrectAnswer)
+    XCTAssertTrue(v!.practiceHistory.isMastered)
+    XCTAssertTrue(v!.practiceHistory.isLearned)
+    XCTAssertEqual(v!.practiceHistory.firstLearnDate, firstLearnDate)
+    XCTAssertEqual(v!.practiceHistory.lastTimeTest, lastTimeTest)
+  }
+  
   func test_syncVocabPracticeHistory_ServerTestTakenGreaterThanLocalTestTaken_SyncServerData() {
     let (_, _, _, _, _, vocab) = makeSampleVocabsData(into: bundledRealmProvider)
     
@@ -442,12 +465,114 @@ class RealmDataStoreTests: XCTestCase {
     
     makeFakeHistory(for: vocab, historyRealmProvider: historyRealmProvider, testTaken: testTaken, correctAnswer: correctAnswer, isLearned: false, isMastered: false, isSynced: true, firstLearnDate: firstLearnDate, lastTimeTest: lastTimeTest)
     
-    sut.syncPracticeHistory(vocabID: UInt(vocab.id),
+    sut.syncPracticeHistory(vocabID: vocab.id,
                             isMastered: false,
                             testTaken: serverTestTaken,
                             correctAnswer: serverCorrectAnswer,
                             firstLearnDate: firstLearnDate,
                             lastTimeTest: lastTimeTest)
+    
+    let v = sut.getVocab(by: vocab.id)
+    
+    XCTAssertEqual(v!.practiceHistory.numberOfTestTaken, serverTestTaken)
+    XCTAssertEqual(v!.practiceHistory.numberOfCorrectAnswer, serverCorrectAnswer)
+  }
+  
+  func test_syncVocabPracticeHistory_ServerTestTakenLesserThanLocalTestTaken_KeepLocalData() {
+    let (_, _, _, _, _, vocab) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    let localTestTaken = testTaken + 2
+    let locaCorrectAnswer = correctAnswer + 1
+    
+    makeFakeHistory(for: vocab,
+                    historyRealmProvider: historyRealmProvider,
+                    testTaken: localTestTaken,
+                    correctAnswer: locaCorrectAnswer,
+                    isLearned: false,
+                    isMastered: false,
+                    isSynced: false,
+                    firstLearnDate: firstLearnDate,
+                    lastTimeTest: lastTimeTest)
+    
+    sut.syncPracticeHistory(vocabID: vocab.id,
+                            isMastered: false,
+                            testTaken: testTaken,
+                            correctAnswer: correctAnswer,
+                            firstLearnDate: firstLearnDate,
+                            lastTimeTest: lastTimeTest)
+    
+    let v = sut.getVocab(by: vocab.id)
+    
+    XCTAssertEqual(v!.practiceHistory.numberOfTestTaken, localTestTaken)
+    XCTAssertEqual(v!.practiceHistory.numberOfCorrectAnswer, locaCorrectAnswer)
+  }
+  
+  func test_syncVocabPracticeHistory_ServerIsMastered_LocalIsNotMastered_SetToIsMastered() {
+    let (_, _, _, _, _, vocab) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    makeFakeHistory(for: vocab, historyRealmProvider: historyRealmProvider, testTaken: testTaken, correctAnswer: correctAnswer, isLearned: false, isMastered: false, isSynced: true, firstLearnDate: firstLearnDate, lastTimeTest: lastTimeTest)
+    
+    sut.syncPracticeHistory(vocabID: vocab.id,
+                            isMastered: true,
+                            testTaken: testTaken,
+                            correctAnswer: correctAnswer,
+                            firstLearnDate: firstLearnDate,
+                            lastTimeTest: lastTimeTest)
+    
+    let v = sut.getVocab(by: vocab.id)
+    
+    XCTAssertTrue(v!.practiceHistory.isMastered)
+  }
+  
+  func test_syncVocabPracticeHistory_ServerIsNotMastered_LocalIsMastered_SetToIsMastered() {
+    let (_, _, _, _, _, vocab) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    makeFakeHistory(for: vocab, historyRealmProvider: historyRealmProvider, testTaken: testTaken, correctAnswer: correctAnswer, isLearned: false, isMastered: true, isSynced: true, firstLearnDate: firstLearnDate, lastTimeTest: lastTimeTest)
+    
+    sut.syncPracticeHistory(vocabID: vocab.id,
+                            isMastered: false,
+                            testTaken: testTaken,
+                            correctAnswer: correctAnswer,
+                            firstLearnDate: firstLearnDate,
+                            lastTimeTest: lastTimeTest)
+    
+    let v = sut.getVocab(by: vocab.id)
+    
+    XCTAssertTrue(v!.practiceHistory.isMastered)
+  }
+  
+  func test_syncVocabPracticeHistory_ServerIsLearned_LocalIsNotLearned_SetToIsLearned() {
+    let (_, _, _, _, _, vocab) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    makeFakeHistory(for: vocab, historyRealmProvider: historyRealmProvider, testTaken: 0, correctAnswer: 0, isLearned: false, isMastered: false, isSynced: true, firstLearnDate: nil, lastTimeTest: nil)
+    
+    sut.syncPracticeHistory(vocabID: vocab.id,
+                            isMastered: true,
+                            testTaken: testTaken,
+                            correctAnswer: correctAnswer,
+                            firstLearnDate: firstLearnDate,
+                            lastTimeTest: lastTimeTest)
+    
+    let v = sut.getVocab(by: vocab.id)
+    
+    XCTAssertTrue(v!.practiceHistory.isLearned)
+  }
+  
+  func test_syncVocabPracticeHistory_ServerIsNotLearned_LocalIsLearned_SetToIsLearned() {
+    let (_, _, _, _, _, vocab) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    makeFakeHistory(for: vocab, historyRealmProvider: historyRealmProvider, testTaken: testTaken, correctAnswer: correctAnswer, isLearned: true, isMastered: false, isSynced: true, firstLearnDate: firstLearnDate, lastTimeTest: lastTimeTest)
+    
+    sut.syncPracticeHistory(vocabID: vocab.id,
+                            isMastered: false,
+                            testTaken: 0,
+                            correctAnswer: 0,
+                            firstLearnDate: nil,
+                            lastTimeTest: nil)
+    
+    let v = sut.getVocab(by: vocab.id)
+    
+    XCTAssertTrue(v!.practiceHistory.isLearned)
   }
   
   // Helpers

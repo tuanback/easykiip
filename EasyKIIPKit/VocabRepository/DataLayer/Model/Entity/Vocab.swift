@@ -9,7 +9,7 @@
 import Foundation
 
 public class Vocab {
-  public private(set) var id: UInt
+  public private(set) var id: Int
   public private(set) var word: String
   public private(set) var translations: [LanguageCode: String]
   private(set) var practiceHistory: PracticeHistory
@@ -20,7 +20,7 @@ public class Vocab {
     return practiceHistory.lastTimeTest
   }
   
-  public init(id: UInt, word: String, translations: [LanguageCode: String]) {
+  public init(id: Int, word: String, translations: [LanguageCode: String]) {
     self.id = id
     self.word = word
     self.translations = translations
@@ -45,8 +45,8 @@ public class Vocab {
   ///   - numberOfTakenTest: number of test has been taken
   ///   - numberOfCorrectAnswer: number of correct answer
   func setTestTakenData(isMastered: Bool,
-                        numberOfTestTaken: UInt,
-                        numberOfCorrectAnswer: UInt,
+                        numberOfTestTaken: Int,
+                        numberOfCorrectAnswer: Int,
                         firstLearnDate: Date?,
                         lastTimeTest: Date?) {
     self.practiceHistory.setTestTakenData(isMastered: isMastered,

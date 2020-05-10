@@ -184,8 +184,8 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let vocabs = dataStore.lesson.vocabs
     
     for vocab in vocabs {
-      let testTaken = UInt.random(in: 0...30)
-      let correctAnswer = UInt.random(in: 0...testTaken)
+      let testTaken = Int.random(in: 0...30)
+      let correctAnswer = Int.random(in: 0...testTaken)
       
       let offsetDate = Int.random(in: 0...50)
       let date = Date() - offsetDate.days
@@ -209,8 +209,8 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let vocabs = dataStore.lesson.vocabs
     
     for vocab in vocabs {
-      let testTaken = UInt.random(in: 0...30)
-      let correctAnswer = UInt.random(in: 0...testTaken)
+      let testTaken = Int.random(in: 0...30)
+      let correctAnswer = Int.random(in: 0...testTaken)
       
       let offsetDate = Int.random(in: 0...50)
       let date = Date() - offsetDate.days
@@ -238,8 +238,8 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let vocabs = dataStore.lesson.vocabs
     
     for vocab in vocabs {
-      let testTaken = UInt.random(in: 0...30)
-      let correctAnswer = UInt.random(in: 0...testTaken)
+      let testTaken = Int.random(in: 0...30)
+      let correctAnswer = Int.random(in: 0...testTaken)
       
       let firstOffsetDate = Int.random(in: 0...50)
       let lastOffsetDate = Int.random(in: 0...firstOffsetDate)
@@ -286,12 +286,12 @@ class KIIPVocabRepositoryTests: XCTestCase {
       self.practiceHistory = practiceHistory
     }
     
-    func loadLessonData(userID: String, bookdID: UInt, completion: @escaping ([FirebaseLesson]) -> ()) {
+    func loadLessonData(userID: String, bookdID: Int, completion: @escaping ([FirebaseLesson]) -> ()) {
       isLoadLessonsCalled = true
       loadLessonCompletion = completion
     }
     
-    func loadVocabData(userID: String, lessonID: UInt, completion: @escaping ([FirebaseVocab]) -> ()) {
+    func loadVocabData(userID: String, lessonID: Int, completion: @escaping ([FirebaseVocab]) -> ()) {
       isLoadVocabCalled = true
       loadVocabCompletion = completion
     }
@@ -351,7 +351,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
       isCorrectAnswer ? vocab.increaseNumberOfCorrectAnswerByOne() : vocab.increaseNumberOfWrongAnswerByOne()
     }
     
-    func getVocab(by id: UInt) -> Vocab? {
+    func getVocab(by id: Int) -> Vocab? {
       let vocabs = books.flatMap { $0.lessons }.flatMap { $0.vocabs }
       return vocabs.first { $0.id == id }
     }
@@ -361,11 +361,11 @@ class KIIPVocabRepositoryTests: XCTestCase {
       return []
     }
     
-    func syncLessonProficiency(lessonID: UInt, proficiency: UInt8, lastTimeSynced: Double) {
+    func syncLessonProficiency(lessonID: Int, proficiency: UInt8, lastTimeSynced: Double) {
       isSyncedLessonCalled = true
     }
     
-    func syncPracticeHistory(vocabID: UInt, isMastered: Bool, testTaken: UInt, correctAnswer: UInt, firstLearnDate: Date, lastTimeTest: Date) {
+    func syncPracticeHistory(vocabID: Int, isMastered: Bool, testTaken: Int, correctAnswer: Int, firstLearnDate: Date?, lastTimeTest: Date?) {
       isSyncedVocabCalled = true
     }
   }

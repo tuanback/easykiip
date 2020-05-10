@@ -20,15 +20,15 @@ public class PracticeHistory {
       }
     }
   }
-  private(set) var id: UInt
-  private(set) var numberOfTestTaken: UInt
-  private(set) var numberOfCorrectAnswer: UInt
-  private(set) var numberOfWrongAnswer: UInt
+  private(set) var id: Int
+  private(set) var numberOfTestTaken: Int
+  private(set) var numberOfCorrectAnswer: Int
+  private(set) var numberOfWrongAnswer: Int
   private(set) var firstLearnDate: Date?
   private(set) var lastTimeTest: Date?
   private(set) var isMastered: Bool
   
-  init(id: UInt) {
+  init(id: Int) {
     self.id = id
     self.isLearned = false
     self.numberOfTestTaken = 0
@@ -63,8 +63,8 @@ public class PracticeHistory {
   ///   - numberOfTakenTest: number of test has been taken
   ///   - numberOfCorrectAnswer: number of correct answer
   func setTestTakenData(isMastered: Bool,
-                        numberOfTestTaken: UInt,
-                        numberOfCorrectAnswer: UInt,
+                        numberOfTestTaken: Int,
+                        numberOfCorrectAnswer: Int,
                         firstLearnDate: Date?,
                         lastTimeTest: Date?) {
     // Only set if the is mastered equal to true

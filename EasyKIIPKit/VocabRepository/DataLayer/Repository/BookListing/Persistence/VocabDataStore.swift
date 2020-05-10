@@ -14,18 +14,18 @@ public protocol VocabDataStore {
   func getListOfVocabs(in lesson: Lesson) -> [Vocab]
   func markVocabAsMastered(_ vocab: Vocab)
   func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool)
-  func getVocab(by id: UInt) -> Vocab?
+  func getVocab(by id: Int) -> Vocab?
   func searchVocab(keyword: String) -> [Vocab]
   
   // To Sync With Firestore Cloud
-  func syncLessonProficiency(lessonID: UInt,
+  func syncLessonProficiency(lessonID: Int,
                              proficiency: UInt8,
                              lastTimeSynced: Double)
   
-  func syncPracticeHistory(vocabID: UInt,
+  func syncPracticeHistory(vocabID: Int,
                            isMastered: Bool,
-                           testTaken: UInt,
-                           correctAnswer: UInt,
-                           firstLearnDate: Date,
-                           lastTimeTest: Date)
+                           testTaken: Int,
+                           correctAnswer: Int,
+                           firstLearnDate: Date?,
+                           lastTimeTest: Date?)
 }

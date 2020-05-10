@@ -26,7 +26,7 @@ struct ProficiencyCalculator {
   static func calculate(isMastered: Bool,
                         isLearned: Bool,
                         lastTimeTest: Date?,
-                        correctAnswer: UInt) -> UInt8 {
+                        correctAnswer: Int) -> UInt8 {
     if isMastered{
       return 100
     }

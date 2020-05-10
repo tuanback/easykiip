@@ -9,7 +9,7 @@
 import Foundation
 
 public class Book {
-  public private(set) var id: UInt
+  public private(set) var id: Int
   public private(set) var name: String
   public private(set) var thumbURL: URL?
   public private(set) var lessons: [Lesson]
@@ -23,7 +23,7 @@ public class Book {
     return UInt8(total / count)
   }
   
-  public init(id: UInt, name: String, thumbURL: URL?, lessons: [Lesson]) {
+  public init(id: Int, name: String, thumbURL: URL?, lessons: [Lesson]) {
     self.id = id
     self.name = name
     self.thumbURL = thumbURL

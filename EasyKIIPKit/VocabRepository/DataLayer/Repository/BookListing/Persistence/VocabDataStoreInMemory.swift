@@ -82,7 +82,7 @@ public class VocabDataStoreInMemory: VocabDataStore {
     }
   }
   
-  public func getVocab(by id: UInt) -> Vocab? {
+  public func getVocab(by id: Int) -> Vocab? {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
     if let v = vocabs.first(where: { $0.id == id }) {
       return v
@@ -108,17 +108,17 @@ public class VocabDataStoreInMemory: VocabDataStore {
     return result
   }
   
-  public func syncLessonProficiency(lessonID: UInt, proficiency: UInt8, lastTimeSynced: Double) {
+  public func syncLessonProficiency(lessonID: Int, proficiency: UInt8, lastTimeSynced: Double) {
     guard let lesson = books.flatMap({ $0.lessons }).first(where: { $0.id == lessonID }) else { return }
     lesson.setProficiency(proficiency)
   }
   
-  public func syncPracticeHistory(vocabID: UInt,
+  public func syncPracticeHistory(vocabID: Int,
                                   isMastered: Bool,
-                                  testTaken: UInt,
-                                  correctAnswer: UInt,
-                                  firstLearnDate: Date,
-                                  lastTimeTest: Date) {
+                                  testTaken: Int,
+                                  correctAnswer: Int,
+                                  firstLearnDate: Date?,
+                                  lastTimeTest: Date?) {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
     if let v = vocabs.first(where: { $0.id == vocabID }) {
       v.setTestTakenData(isMastered: isMastered,
