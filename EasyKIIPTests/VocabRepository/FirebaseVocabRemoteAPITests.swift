@@ -16,6 +16,8 @@ class FirebaseVocabRemoteAPITests: XCTestCase {
   private let bookID = 9999
   private let lessonID = 1
   
+  private let testTaken = 99
+  private let correct = 83
   
   func test_isVocabRemoteAPI() {
     let sut = FirebaseVocabRemoteAPI()
@@ -57,9 +59,47 @@ class FirebaseVocabRemoteAPITests: XCTestCase {
     
   }
   
+  func test_saveVocabsHistory() {
+    
+    let sut = FirebaseVocabRemoteAPI()
+    let firebaseVocabs = makeFirebaseVocabs()
+    
+    sut.saveVocabHistory(userID: userID, bookID: bookID, lessonID: lessonID, vocabs: firebaseVocabs)
+    
+    let expect = expectation(description: "Return array includes firebaseLesson")
+    
+    sut.loadVocabData(userID: userID, bookID: bookID, lessonID: lessonID) { (vocabs) in
+      
+      if vocabs.count > 0 {
+        expect.fulfill()
+      }
+    }
+    
+    wait(for: [expect], timeout: 5)
+  }
+  
   private func makeFakeFirebaseLesson() -> FirebaseLesson {
     let lesson = FirebaseLesson(id: lessonID, proficiency: 80, lastTimeSynced: Date().timeIntervalSince1970)
     return lesson
+  }
+  
+  private func makeFirebaseVocabs() -> [FirebaseVocab] {
+    var vocabs: [FirebaseVocab] = []
+    
+    for i in 1...5 {
+      let isLearned = (i % 2 == 0) ? true : false
+      let isMastered = (i % 3 == 0) ? true : false
+      
+      let vocab = FirebaseVocab(id: i,
+                                isLearned: isLearned,
+                                isMastered: isMastered,
+                                testTaken: isLearned ? testTaken - i : 0,
+                                correctAnswer: isLearned ? correct - i : 0,
+                                firstTimeLearned: isLearned ? Date().timeIntervalSince1970 : nil,
+                                lastTimeLearned: isLearned ? Date().timeIntervalSince1970 : nil)
+      vocabs.append(vocab)
+    }
+    return vocabs
   }
   
 }

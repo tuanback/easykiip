@@ -60,17 +60,17 @@ class FirebaseVocabRemoteAPI: VocabRemoteAPI {
         print("Document doesn't exist. Creating new document")
         docRef.setData([FireStoreUtil.Book.bookID: bookID,
                         FireStoreUtil.Book.lessons: [:]]) { error in
-          if let err = error {
-            print("Can't create book document \(err.localizedDescription)")
-          }
-          else {
-            print("Book document created")
-          }
+                          if let err = error {
+                            print("Can't create book document \(err.localizedDescription)")
+                          }
+                          else {
+                            print("Book document created")
+                          }
         }
         completion([])
       }
     }
-        
+    
   }
   
   private func listenToBookSnapShotChanged(bookID: Int, docRef: DocumentReference) {
@@ -98,7 +98,7 @@ class FirebaseVocabRemoteAPI: VocabRemoteAPI {
         guard let id = Int(key.dropFirst(FireStoreUtil.Lesson.key.count)),
           let proficiency = valueDict[FireStoreUtil.Lesson.proficiency] as? UInt8,
           let lastTimeSynced = valueDict[FireStoreUtil.Lesson.lastTimeSynced] as? Double else {
-          continue
+            continue
         }
         
         let lesson = FirebaseLesson(id: id,
@@ -140,12 +140,12 @@ class FirebaseVocabRemoteAPI: VocabRemoteAPI {
         print("Document doesn't exist. Creating new document")
         docRef.setData([FireStoreUtil.Lesson.lessonID: bookID,
                         FireStoreUtil.Lesson.vocabs: [:]]) { error in
-          if let err = error {
-            print("Can't create book document \(err.localizedDescription)")
-          }
-          else {
-            print("Book document created")
-          }
+                          if let err = error {
+                            print("Can't create book document \(err.localizedDescription)")
+                          }
+                          else {
+                            print("Book document created")
+                          }
         }
         completion([])
       }
@@ -175,19 +175,20 @@ class FirebaseVocabRemoteAPI: VocabRemoteAPI {
     if let vocabsDict = data[FireStoreUtil.Lesson.vocabs] as? [String: Any] {
       for (key, value) in vocabsDict {
         guard let valueDict = value as? [String: Any] else { continue }
-        // TODO: Parse vocabs
-        /*
-        guard let id = Int(key.dropFirst(FireStoreUtil.Lesson.key.count)),
-          let proficiency = valueDict[FireStoreUtil.Lesson.proficiency] as? UInt8,
-          let lastTimeSynced = valueDict[FireStoreUtil.Lesson.lastTimeSynced] as? Double else {
-          continue
+        guard let id = Int(key.dropFirst(FireStoreUtil.Vocab.key.count)),
+          let isLearned = valueDict[FireStoreUtil.Vocab.learned] as? Bool,
+          let taken = valueDict[FireStoreUtil.Vocab.taken] as? Int,
+          let correct = valueDict[FireStoreUtil.Vocab.correct] as? Int,
+          let isMastered = valueDict[FireStoreUtil.Vocab.master] as? Bool
+          else {
+            continue
         }
         
-        let lesson = FirebaseLesson(id: id,
-                                    proficiency: proficiency,
-                                    lastTimeSynced: lastTimeSynced)
-        results.append(lesson)
-        */
+        let firstDate = valueDict[FireStoreUtil.Vocab.firstDate] as? Double
+        let lastDate = valueDict[FireStoreUtil.Vocab.lastDate] as? Double
+        
+        let vocab = FirebaseVocab(id: id, isLearned: isLearned, isMastered: isMastered, testTaken: taken, correctAnswer: correct, firstTimeLearned: firstDate, lastTimeLearned: lastDate)
+        results.append(vocab)
       }
     }
     
@@ -200,7 +201,7 @@ class FirebaseVocabRemoteAPI: VocabRemoteAPI {
     
     let docRef = db.document(bookDocumentPath)
     
-    let key = "lessons.\(FireStoreUtil.Lesson.key)\(lesson.id)"
+    let key = "\(FireStoreUtil.Book.lessons).\(FireStoreUtil.Lesson.key)\(lesson.id)"
     let value: [String: Any] = [FireStoreUtil.Lesson.proficiency: lesson.proficiency,
                                 FireStoreUtil.Lesson.lastTimeSynced: lesson.lastTimeSynced]
     let lessonDict = [key: value]
@@ -217,6 +218,32 @@ class FirebaseVocabRemoteAPI: VocabRemoteAPI {
   }
   
   func saveVocabHistory(userID: String, bookID: Int, lessonID: Int, vocabs: [FirebaseVocab]) {
+    let lessonDocumentPath = FireStoreUtil.lessonDocumentPath(userID: userID, bookID: bookID, lessonID: lessonID)
+    
+    let docRef = db.document(lessonDocumentPath)
+    
+    var vocabsDict: [String: Any] = [:]
+    
+    for vocab in vocabs {
+      let key = "\(FireStoreUtil.Lesson.vocabs).\(FireStoreUtil.Vocab.key)\(vocab.id)"
+      var value: [String: Any] = [:]
+      value[FireStoreUtil.Vocab.learned] = vocab.isLearned
+      value[FireStoreUtil.Vocab.taken] = vocab.testTaken
+      value[FireStoreUtil.Vocab.correct] = vocab.correctAnswer
+      value[FireStoreUtil.Vocab.master] = vocab.isMastered
+      value[FireStoreUtil.Vocab.firstDate] = vocab.firstTimeLearned
+      value[FireStoreUtil.Vocab.lastDate] = vocab.lastTimeLearned
+      vocabsDict[key] = value
+    }
+    
+    docRef.updateData(vocabsDict) { error in
+      if let error = error {
+        print("Save vocabs history failed: \(error)")
+      }
+      else {
+        print("Save vocabs history successfully")
+      }
+    }
     
   }
   

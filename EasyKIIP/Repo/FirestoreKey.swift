@@ -48,6 +48,16 @@ struct FireStoreUtil {
     static let lastTimeSynced = "lastTimeSynced"
   }
   
+  struct Vocab {
+    static let key = "vocab_"
+    static let learned = "learned"
+    static let taken = "taken"
+    static let correct = "correct"
+    static let master = "master"
+    static let firstDate = "firstDate"
+    static let lastDate = "lastDate"
+  }
+  
   static func bookDocumentPath(userID: String, bookID: Int) -> String {
     let bookDocumentPath = Document.getBookDocument(bookID: bookID)
     let path = Collection.users + "/\(userID)/" + Collection.books + "/\(bookDocumentPath)"
