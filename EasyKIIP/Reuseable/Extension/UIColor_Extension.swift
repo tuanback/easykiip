@@ -60,13 +60,13 @@ extension UIColor {
   
   class var appShadowColor: UIColor {
     if #available(iOS 13.0, *) {
-      return UIColor.systemGray
+      return UIColor.label
     } else {
       return UIColor.black
     }
   }
   
   class var appRed: UIColor {
-    return UIColor.systemRed
+    return UIColor(hexString: "EB5757")
   }
 }

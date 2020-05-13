@@ -7,7 +7,34 @@
 //
 
 import UIKit
+import Firebase
+import GoogleMobileAds
 
 class BookDetailAdsCVC: UICollectionViewCell {
     
+  private var adsView: GADTSmallTemplateView!
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    setupViews()
+  }
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  func configCell(_ nativeAds: GADUnifiedNativeAd) {
+    adsView.nativeAd = nativeAds
+  }
+  
+  private func setupViews() {
+    
+    adsView = GADTSmallTemplateView()
+    addSubview(adsView)
+    
+    adsView.snp.makeConstraints { (make) in
+      make.edges.equalToSuperview()
+    }
+  }
+  
 }

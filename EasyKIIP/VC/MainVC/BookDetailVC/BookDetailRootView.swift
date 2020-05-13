@@ -63,6 +63,7 @@ class BookDetailRootView: NiblessView {
         return cell
       case .ads(let viewModel):
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.adsIdentifier, for: IndexPath(item: index, section: 0)) as! BookDetailAdsCVC
+        cell.configCell(viewModel)
         return cell
       }
     }

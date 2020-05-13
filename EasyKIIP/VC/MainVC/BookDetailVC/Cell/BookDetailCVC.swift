@@ -49,10 +49,10 @@ class BookDetailCVC: UICollectionViewCell {
   private func setupViews() {
     
     backgroundColor = UIColor.appBackground
-    layer.shadowColor = UIColor.black.cgColor
+    layer.shadowColor = UIColor.appShadowColor.cgColor
     layer.shadowOpacity = 0.25
     layer.shadowRadius = 3
-    layer.shadowOffset = CGSize(width: 2, height: 2)
+    layer.shadowOffset = CGSize(width: 0, height: 0)
     layer.cornerRadius = 10
     
     viewUnitIndicatorContainer = UIView()

@@ -48,7 +48,7 @@ public class BookDetailVC: NiblessViewController {
                            adTypes: [.unifiedNative],
                            options: [options])
     adLoader.delegate = self
-    //adLoader.load(GADRequest())
+    adLoader.load(GADRequest())
   }
   
 }
