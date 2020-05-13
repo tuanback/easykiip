@@ -12,6 +12,7 @@ target 'EasyKIIP' do
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
   pod 'GoogleSignIn'
+  pod 'Google-Mobile-Ads-SDK'
   pod 'SnapKit'
   pod 'SwiftDate'
   

@@ -48,7 +48,7 @@ class MainBookItemCVC: UICollectionViewCell {
     labelBookName.adjustsFontSizeToFitWidth = true
     labelBookName.minimumScaleFactor = 0.5
     labelBookName.textAlignment = .center
-    labelBookName.textColor = UIColor.appLabelColor
+    labelBookName.textColor = UIColor.appLabelBlack
     addSubview(labelBookName)
     
     labelBookName.snp.makeConstraints { (make) in

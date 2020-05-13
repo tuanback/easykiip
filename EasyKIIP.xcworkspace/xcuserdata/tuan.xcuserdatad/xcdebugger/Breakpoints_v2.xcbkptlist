@@ -83,49 +83,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6181F39F-8EC9-49AC-ABB4-AF3F8F9F8949"
+            uuid = "46BCAA57-D895-4B80-92EC-E45FD58B5FE7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EasyKIIP/Repo/VocabRepository/VocabRemoteAPI/FirebaseVocabRemoteAPI.swift"
+            filePath = "EasyKIIP/Assets/GoogleAds/AdsIdentifier.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
-            landmarkName = "saveVocabHistory(userID:bookID:lessonID:vocabs:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "id(for:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6181F39F-8EC9-49AC-ABB4-AF3F8F9F8949 - 7e4559200c36c24"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Easy_KIIP.FirebaseVocabRemoteAPI.saveVocabHistory(userID: Swift.String, bookID: Swift.Int, lessonID: Swift.Int, vocabs: Swift.Array&lt;EasyKIIPKit.FirebaseVocab&gt;) -&gt; ()"
-                  moduleName = "Easy KIIP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIP/Repo/VocabRepository/VocabRemoteAPI/FirebaseVocabRemoteAPI.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "240"
-                  endingLineNumber = "240"
-                  offsetFromSymbolStart = "95">
-               </Location>
-               <Location
-                  uuid = "6181F39F-8EC9-49AC-ABB4-AF3F8F9F8949 - f03a1d95190c6369"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in EasyKIIPTests.FirebaseVocabRemoteAPI.saveVocabHistory(userID: Swift.String, bookID: Swift.Int, lessonID: Swift.Int, vocabs: Swift.Array&lt;EasyKIIPKit.FirebaseVocab&gt;) -&gt; ()"
-                  moduleName = "EasyKIIPTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tuan/0.Apps/EasyKIIP/EasyKIIP/Repo/VocabRepository/VocabRemoteAPI/FirebaseVocabRemoteAPI.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "240"
-                  endingLineNumber = "240"
-                  offsetFromSymbolStart = "95">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

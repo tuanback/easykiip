@@ -41,6 +41,8 @@ public class MainNavVC: NiblessNavigationController {
           case .main:
             let mainVC = strongSelf.makeMainVC()
             self?.pushViewController(mainVC, animated: true)
+          case .bookDetail:
+            break
           }
         case .pop:
           self?.popViewController(animated: true)
@@ -100,6 +102,8 @@ extension MainNavVC {
     switch viewController {
     case is MainVC:
       return .main
+    case is BookDetailVC:
+      return .bookDetail(nil)
     default:
       assertionFailure("Encountered unexpected child view controller type in OnboardingViewController")
       return nil

@@ -11,6 +11,12 @@ import RxSwift
 import RxCocoa
 import EasyKIIPKit
 import SwiftDate
+import GoogleMobileAds
+
+enum BookDetailItemViewModel {
+  case item(viewModel: LessonItemViewModel)
+  case ads(viewModel: GADUnifiedNativeAd)
+}
 
 struct LessonItemViewModel: Equatable {
   let id: Int
@@ -26,9 +32,10 @@ class BookDetailViewModel {
   private let book: Book
   private let vocabRepository: VocabRepository
   
-  public var lessonViewModels: Observable<[LessonItemViewModel]>!
+  public var itemViewModels: Observable<[BookDetailItemViewModel]>!
   
   private(set) var lessons = BehaviorRelay<[Lesson]>(value: [])
+  private(set) var nativeAds = BehaviorRelay<[GADUnifiedNativeAd]>(value: [])
   private(set) var isLoading = BehaviorRelay<Bool>(value: false)
   
   private let disposeBag = DisposeBag()
@@ -36,25 +43,57 @@ class BookDetailViewModel {
   init(book: Book, vocabRepository: VocabRepository) {
     self.book = book
     self.vocabRepository = vocabRepository
+    setupItemViewModels()
     initLessons()
   }
   
   private func initLessons() {
     self.isLoading.accept(true)
     
-    let observable = self.vocabRepository.getListOfLesson(in: book).share()
+    let observable = self.vocabRepository.getListOfLesson(in: book).share(replay: 1, scope: .whileConnected)
     
     observable
       .bind(to: lessons)
       .disposed(by: disposeBag)
     
     observable
+      .debug()
       .subscribe(onNext: { [weak self] _ in
         self?.isLoading.accept(false)
       })
       .disposed(by: disposeBag)
-    
-    lessonViewModels = lessons.map(convertToLessonItemViewModels(lessons:))
+  }
+  
+  private func setupItemViewModels() {
+    itemViewModels = Observable.combineLatest(lessons.asObservable(), nativeAds.asObservable())
+      .map { [weak self] (lessons, ads) -> [BookDetailItemViewModel] in
+        guard let strongSelf = self else { return [] }
+        let lessonsItemVM = strongSelf.convertToLessonItemViewModels(lessons: lessons)
+        
+        var results: [BookDetailItemViewModel] = []
+        
+        var i = 0
+        var j = 0
+        
+        while i < lessons.count {
+          if i % 4 == 4 && j < ads.count {
+            results.append(.item(viewModel: lessonsItemVM[i]))
+            results.append(.ads(viewModel: ads[j]))
+            j += 1
+          }
+          else {
+            results.append(.item(viewModel: lessonsItemVM[i]))
+          }
+          
+          i += 1
+        }
+        
+        return results
+    }
+  }
+  
+  func addNativeAds(ads: [GADUnifiedNativeAd]) {
+    nativeAds.accept(ads)
   }
   
   private func convertToLessonItemViewModels(lessons: [Lesson]) -> [LessonItemViewModel] {

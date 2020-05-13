@@ -9,13 +9,17 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import EasyKIIPKit
 
 enum SignedInView: AppView {
   case main
+  case bookDetail(Book?)
   
   public func hidesNavigationBar() -> Bool {
     switch self {
     case .main:
+      return false
+    case .bookDetail:
       return false
     }
   }

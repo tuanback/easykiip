@@ -34,7 +34,7 @@ public class KIIPVocabRepository: VocabRepository {
   
   public func getListOfLesson(in book: Book) -> Observable<[Lesson]> {
     // Need to queries from auth remote then merge together
-    let observable = PublishSubject<[Lesson]>()
+    let observable = BehaviorSubject<[Lesson]>(value: [])
     let dataStoreLessons = dataStore.getListOfLesson(in: book)
     
     remoteAPI.loadLessonData(userID: userID, bookID: book.id) { [weak self] (lessons) in

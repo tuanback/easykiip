@@ -11,6 +11,7 @@ import UserSession
 import EasyKIIPKit
 import RxSwift
 import RxCocoa
+import Action
 
 public struct BookItemViewModel: Equatable {
   let id: Int
@@ -26,6 +27,8 @@ public class MainViewModel {
   lazy var bookViewModels = makeObservableOfBookItemViewModel()
   
   private var oBooks = BehaviorRelay<[Book]>(value: [])
+  
+  var oNavigation = PublishRelay<NavigationEvent<SignedInView>>()
   
   public init(userSessionRepository: UserSessionRepository,
        vocabRepository: VocabRepository) {
@@ -58,5 +61,11 @@ public class MainViewModel {
   
   private func convertToItemViewModel(_ book: Book) -> BookItemViewModel {
     return BookItemViewModel(id: book.id, name: book.name, thumbURL: book.thumbURL)
+  }
+  
+  func handleBookItemClicked(_ itemViewModel: BookItemViewModel) {
+    if let book = oBooks.value.first(where: { $0.id == itemViewModel.id   }) {
+      oNavigation.accept(.push(view: .bookDetail(book)))
+    }
   }
 }

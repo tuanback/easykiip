@@ -13,11 +13,11 @@ public class FakeVocabRemoteAPI: VocabRemoteAPI {
   public init() { }
   
   public func loadLessonData(userID: String, bookID: Int, completion: ([FirebaseLesson]) -> ()) {
-    
+    completion([])
   }
   
   public func loadVocabData(userID: String, bookID: Int, lessonID: Int, completion: ([FirebaseVocab]) -> ()) {
-    
+    completion([])
   }
   
   public func saveLessonHistory(userID: String, bookID: Int, lesson: FirebaseLesson) {

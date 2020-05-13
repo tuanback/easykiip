@@ -57,6 +57,11 @@ class MainRootView: NiblessView {
       cell.configCell(viewModel: itemViewModel)
     }
     .disposed(by: disposeBag)
+    
+    collectionView.rx
+      .modelSelected(BookItemViewModel.self)
+      .subscribe(onNext: viewModel.handleBookItemClicked(_:))
+      .disposed(by: disposeBag)
   }
   
 }

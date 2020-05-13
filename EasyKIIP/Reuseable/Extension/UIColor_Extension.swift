@@ -41,11 +41,20 @@ extension UIColor {
     }
   }
   
-  class var appLabelColor: UIColor {
+  class var appLabelBlack: UIColor {
     if #available(iOS 13.0, *) {
       return UIColor.label
     } else {
       return UIColor.black
+    }
+  }
+  
+  class var appSecondaryLabel: UIColor {
+    if #available(iOS 13.0, *) {
+      return UIColor.secondaryLabel
+    }
+    else {
+      return UIColor(hexString: "3C3C43", alpha: 0.6)
     }
   }
   
@@ -55,5 +64,9 @@ extension UIColor {
     } else {
       return UIColor.black
     }
+  }
+  
+  class var appRed: UIColor {
+    return UIColor.systemRed
   }
 }
