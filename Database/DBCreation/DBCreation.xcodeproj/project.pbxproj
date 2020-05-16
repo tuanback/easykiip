@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1757FC2B24701DB700E41DA3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC2A24701DB700E41DA3 /* main.swift */; };
+		1757FC3324701E5300E41DA3 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC3224701E5300E41DA3 /* RealmModel.swift */; };
+		1757FC3E24701E8F00E41DA3 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC3624701E8F00E41DA3 /* Lesson.swift */; };
+		1757FC3F24701E8F00E41DA3 /* LanguageCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC3724701E8F00E41DA3 /* LanguageCode.swift */; };
+		1757FC4024701E8F00E41DA3 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC3824701E8F00E41DA3 /* Book.swift */; };
+		1757FC4124701E8F00E41DA3 /* PraticeHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC3924701E8F00E41DA3 /* PraticeHistory.swift */; };
+		1757FC4224701E8F00E41DA3 /* ReadingPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC3A24701E8F00E41DA3 /* ReadingPart.swift */; };
+		1757FC4324701E8F00E41DA3 /* Vocab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC3B24701E8F00E41DA3 /* Vocab.swift */; };
+		1757FC4424701E8F00E41DA3 /* ProficiencyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC3D24701E8F00E41DA3 /* ProficiencyCalculator.swift */; };
+		1757FC4724701EE800E41DA3 /* DBCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC4624701EE800E41DA3 /* DBCreation.swift */; };
+		1757FC482470210400E41DA3 /* Pods_DBCreation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587761D89EA8241A3E165304 /* Pods_DBCreation.framework */; };
+		1757FC492470210400E41DA3 /* Pods_DBCreation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 587761D89EA8241A3E165304 /* Pods_DBCreation.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1757FC2524701DB700E41DA3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		1757FC4A2470210400E41DA3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1757FC492470210400E41DA3 /* Pods_DBCreation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1757FC2724701DB700E41DA3 /* DBCreation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DBCreation; sourceTree = BUILT_PRODUCTS_DIR; };
+		1757FC2A24701DB700E41DA3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1757FC3224701E5300E41DA3 /* RealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		1757FC3624701E8F00E41DA3 /* Lesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		1757FC3724701E8F00E41DA3 /* LanguageCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageCode.swift; sourceTree = "<group>"; };
+		1757FC3824701E8F00E41DA3 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		1757FC3924701E8F00E41DA3 /* PraticeHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PraticeHistory.swift; sourceTree = "<group>"; };
+		1757FC3A24701E8F00E41DA3 /* ReadingPart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingPart.swift; sourceTree = "<group>"; };
+		1757FC3B24701E8F00E41DA3 /* Vocab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocab.swift; sourceTree = "<group>"; };
+		1757FC3D24701E8F00E41DA3 /* ProficiencyCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProficiencyCalculator.swift; sourceTree = "<group>"; };
+		1757FC4624701EE800E41DA3 /* DBCreation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBCreation.swift; sourceTree = "<group>"; };
+		587761D89EA8241A3E165304 /* Pods_DBCreation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DBCreation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6CB431373245F761536E1DA /* Pods-DBCreation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBCreation.release.xcconfig"; path = "Target Support Files/Pods-DBCreation/Pods-DBCreation.release.xcconfig"; sourceTree = "<group>"; };
+		E1ED534B86F730420CEED3A5 /* Pods-DBCreation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBCreation.debug.xcconfig"; path = "Target Support Files/Pods-DBCreation/Pods-DBCreation.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1757FC2424701DB700E41DA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1757FC482470210400E41DA3 /* Pods_DBCreation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1757FC1E24701DB700E41DA3 = {
+			isa = PBXGroup;
+			children = (
+				1757FC2924701DB700E41DA3 /* DBCreation */,
+				1757FC2824701DB700E41DA3 /* Products */,
+				2AE928072542B9519A7CCE27 /* Pods */,
+				43D1F37DED1E8E0918064E5D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1757FC2824701DB700E41DA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1757FC2724701DB700E41DA3 /* DBCreation */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1757FC2924701DB700E41DA3 /* DBCreation */ = {
+			isa = PBXGroup;
+			children = (
+				1757FC4524701EE800E41DA3 /* DBCreation */,
+				1757FC3124701E5300E41DA3 /* Model */,
+				1757FC3424701E8F00E41DA3 /* Model */,
+				1757FC2A24701DB700E41DA3 /* main.swift */,
+			);
+			path = DBCreation;
+			sourceTree = "<group>";
+		};
+		1757FC3124701E5300E41DA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1757FC3224701E5300E41DA3 /* RealmModel.swift */,
+			);
+			name = Model;
+			path = ../../../EasyKIIPKit/VocabRepository/DataLayer/Repository/BookListing/Persistence/Realm/Model;
+			sourceTree = "<group>";
+		};
+		1757FC3424701E8F00E41DA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1757FC3524701E8F00E41DA3 /* Entity */,
+				1757FC3C24701E8F00E41DA3 /* Helper */,
+			);
+			name = Model;
+			path = ../../../EasyKIIPKit/VocabRepository/DataLayer/Model;
+			sourceTree = "<group>";
+		};
+		1757FC3524701E8F00E41DA3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1757FC3624701E8F00E41DA3 /* Lesson.swift */,
+				1757FC3724701E8F00E41DA3 /* LanguageCode.swift */,
+				1757FC3824701E8F00E41DA3 /* Book.swift */,
+				1757FC3924701E8F00E41DA3 /* PraticeHistory.swift */,
+				1757FC3A24701E8F00E41DA3 /* ReadingPart.swift */,
+				1757FC3B24701E8F00E41DA3 /* Vocab.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		1757FC3C24701E8F00E41DA3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				1757FC3D24701E8F00E41DA3 /* ProficiencyCalculator.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		1757FC4524701EE800E41DA3 /* DBCreation */ = {
+			isa = PBXGroup;
+			children = (
+				1757FC4624701EE800E41DA3 /* DBCreation.swift */,
+			);
+			path = DBCreation;
+			sourceTree = "<group>";
+		};
+		2AE928072542B9519A7CCE27 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E1ED534B86F730420CEED3A5 /* Pods-DBCreation.debug.xcconfig */,
+				B6CB431373245F761536E1DA /* Pods-DBCreation.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		43D1F37DED1E8E0918064E5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				587761D89EA8241A3E165304 /* Pods_DBCreation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1757FC2624701DB700E41DA3 /* DBCreation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1757FC2E24701DB700E41DA3 /* Build configuration list for PBXNativeTarget "DBCreation" */;
+			buildPhases = (
+				1BD3FFDBCDFA0DA1625B58B5 /* [CP] Check Pods Manifest.lock */,
+				1757FC2324701DB700E41DA3 /* Sources */,
+				1757FC2424701DB700E41DA3 /* Frameworks */,
+				1757FC2524701DB700E41DA3 /* CopyFiles */,
+				1757FC4A2470210400E41DA3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DBCreation;
+			productName = DBCreation;
+			productReference = 1757FC2724701DB700E41DA3 /* DBCreation */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1757FC1F24701DB700E41DA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = 3i;
+				TargetAttributes = {
+					1757FC2624701DB700E41DA3 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 1757FC2224701DB700E41DA3 /* Build configuration list for PBXProject "DBCreation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1757FC1E24701DB700E41DA3;
+			productRefGroup = 1757FC2824701DB700E41DA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1757FC2624701DB700E41DA3 /* DBCreation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BD3FFDBCDFA0DA1625B58B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DBCreation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1757FC2324701DB700E41DA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1757FC3F24701E8F00E41DA3 /* LanguageCode.swift in Sources */,
+				1757FC4324701E8F00E41DA3 /* Vocab.swift in Sources */,
+				1757FC3E24701E8F00E41DA3 /* Lesson.swift in Sources */,
+				1757FC2B24701DB700E41DA3 /* main.swift in Sources */,
+				1757FC4024701E8F00E41DA3 /* Book.swift in Sources */,
+				1757FC4424701E8F00E41DA3 /* ProficiencyCalculator.swift in Sources */,
+				1757FC3324701E5300E41DA3 /* RealmModel.swift in Sources */,
+				1757FC4224701E8F00E41DA3 /* ReadingPart.swift in Sources */,
+				1757FC4724701EE800E41DA3 /* DBCreation.swift in Sources */,
+				1757FC4124701E8F00E41DA3 /* PraticeHistory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1757FC2C24701DB700E41DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1757FC2D24701DB700E41DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		1757FC2F24701DB700E41DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1ED534B86F730420CEED3A5 /* Pods-DBCreation.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4JQH63J424;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+					"@executable_path/Realm/",
+					"@executable_path/RealmSwift/",
+					"@executable_path/SwiftDate/",
+					"@executable_path/Pods-DBCreation/",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		1757FC3024701DB700E41DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6CB431373245F761536E1DA /* Pods-DBCreation.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4JQH63J424;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+					"@executable_path/Realm/",
+					"@executable_path/RealmSwift/",
+					"@executable_path/SwiftDate/",
+					"@executable_path/Pods-DBCreation/",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1757FC2224701DB700E41DA3 /* Build configuration list for PBXProject "DBCreation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1757FC2C24701DB700E41DA3 /* Debug */,
+				1757FC2D24701DB700E41DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1757FC2E24701DB700E41DA3 /* Build configuration list for PBXNativeTarget "DBCreation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1757FC2F24701DB700E41DA3 /* Debug */,
+				1757FC3024701DB700E41DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1757FC1F24701DB700E41DA3 /* Project object */;
+}
