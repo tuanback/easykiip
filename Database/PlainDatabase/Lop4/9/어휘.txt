@@ -1,0 +1,57 @@
+경제 주체	Chủ thể kinh tế
+가계	Hộ gia đình
+기업	Công ty, doanh nghiệp, tập đoàn
+정부	Chính phủ
+소비자	Người tiêu dùng
+생산자	Nhà sản xuất/ manufacturer
+수요	Nhu cầu
+공급	Sự cung cấp
+세금을 내다	Nộp thuế
+세금을 걷다	Thu thuế
+직원을 고용하다	Thuê nhân công, nhân viên
+월급을 받다	Nhận lương tháng
+생산하다	Sản xuất
+판매하다	Bán ra
+제공하다	Cung ứng
+소비하다	Tiêu thụ
+구매하다	Mua sắm
+대기업	Doanh nghiệp lớn
+중소기업	Doanh nghiệp vừa và nhỏ
+농산물	Sản phẩm nông nghiệp
+수산물	Hàng thủy sản
+공산품	Sản phẩm công nghiệp
+물가가 오르다	Vật giá, giá cả tăng lên
+물가가 내리다	Vật giá, giá cả hạ xuống
+소비가 늘다	Nhu cầu tiêu thụ gia tăng
+소비가 줄다	Nhu cầu tiêu thụ giảm
+경기가 줗다	Tình trạng kinh tế tốt
+경기가 나쁘다	Tình trạng kinh tế xấu
+실업률이 증가하다	Tỷ lệ thất nghiệp tăng
+실업률이 감소하다	Tỷ lệ thất nghiệp giảm
+수출하다	Xuất khẩu
+수입하다	Nhập khẩu
+수출(수입)이 늘다	Xuất (nhập) tăng
+수출(수입)이 줄다	Xuất (nhập) giảm
+수출품	Hàng xuất khẩu
+수입품	Hàng nhập khẩu
+손해	Sự thiệt hại, tổn thất
+이익	Lợi ích, lợi nhuận
+해외에 투자하다	Đầu tư nước ngoài
+사업에 투자하다	Đầu tư kinh doanh
+환율이 오르다	Tỷ giá hối đoái tăng
+환율이 내리다	Tỷ giá hối đoái giảm
+선진국	Nước phát triển
+개발도생국	Nước đang phát triển
+저개발국	Nước kém phát triển
+산업	Công nghiệp
+농업	Nông nghiệp
+수산업	Thủy sản
+공업	Công nghiệp
+건설업	Xây dựng
+서비스업	Dịch vụ
+국민소득	Thu nhập quốc dân
+국민총소득	tổng thu nhập quốc dân
+인구수	Dân số
+1인당 국민소득	Thu nhập quốc dân tính theo đầu người
+한국의 국민소득은 2만 달러	Thu nhập quốc dân của Hàn Quốc là 20000 USD
+경제성정률	Tỷ lệ tăng trưởng kinh tế

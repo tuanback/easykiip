@@ -1,0 +1,89 @@
+신문사	òa soạn báo
+광고	Quảng cáo
+경제면	Trang kinh tế
+스포츠면	Trang thể thao
+기사	Bài báo
+사설	Bài xã luận
+사회면	Trang xã hội
+국제면	Trang quốc tế
+머리기사	Tiêu đề bài báo
+정치면	Trang chính trị
+문화면	Trang văn hóa
+제호	Tiêu đề
+1면 사진	Hình trang đầu
+사진설명문	Mô tả hình ảnh
+주요기사 안내	mẫu tin chính
+기사	Mẫu tin, bài báo
+지면	Mặt báo
+머리기사	Mẫu tin trang nhất
+공중파 방송/ 지상파 방송	 truyền hình mặt đất
+유선 방송/ 케이블 방송	 truyền hình hữu tuyến, có dây
+인터넷 방송	Truyền hình internet
+채널	Kênh (tivi, đài...)
+채널을 돌리다	chuyển kênh
+시청자	Người xem, khán giả
+시청하다	xem (nghe và nhìn)
+기자	phóng viên, nhà báo, ký giả
+특파원	đặc phái viên
+아나운서	phát thanh viên
+프로듀서	Nhà sản xuất
+취재하다	lấy tin
+보도하다	đưa tin
+제작하다	sản xuất
+프로그램	chương trình
+속보	tin nhanh, tin vắn
+생방송	truyền hình trực tiếp
+재방송	phát sóng lại
+뉴스	Tin tức
+시사 프로그램	Chương trình thời sự
+특집 방송	 phát sóng đặc biệt, đặc san
+스포츠 중계방송	truyền hình trực tiếp thể thao
+예능 프로그램	chương trình nghệ thuật, chương trình giải trí
+드라마 phim	truyền hình
+
+
+
+출연	trình diễn, biểu diễn (sự xuất hiện trên truyền hình, sân khấu...)
+늘어나다	tăng lên
+특집	ấn phẩm đặc biệt
+등장하다	xuất hiện trên sân khấu, ra mắt
+실력	thực lực
+거침없다	không có gì trở ngại
+입담	tài ăn nói
+활약하다	hoạt động tích cực
+꾸준하다	liên tục, bền bỉ
+유창한	thành thạo, lưu loát, trôi chảy
+구사하다	sử dụng thành thạo
+혼혈인	người con lai (lai dòng máu 2 dân tộc/ đất nước)
+시청자	khán thính giả
+사로잡다	thu hút, hớp hồn, bắt sống...
+친숙하다	thân thuộc, thân quen, quen mặt
+
+
+
+겨울연가	bản tình ca mùa đông
+꾸준히	đều đặn
+수출되다	được xuất khẩu
+시나리오	kịch bản
+판권	bản quyền
+형식	hình thức
+터키	Turkey - Thổ nhĩ kỳ
+탐구	tham cứu, khảo cứu, thăm dò
+코너	corner-  góc độ
+활발하게	một cách hoạt bát, sinh động, sôi nổi
+영향	sự ảnh hưởng
+연예인	nghệ sĩ
+쏠리다	bị đổ, bị dồn về một phía 
+색다르다	khác lạ, đặc sắc
+기대하다	mong đợi
+
+
+
+거주하다	cư trú, sinh sống
+이주민	 người di trú, di cư
+구성원	thành viên
+소통하다	thông hiểu, giao tiếp, trao đổi
+다국어	đa ngôn ngữ
+운영되다	được điều hành, được vận hành
+사항	điều khoản, thông tin
+이주민 방송	đài truyền hình cho người nhập cư

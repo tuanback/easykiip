@@ -1,0 +1,75 @@
+처방: sự kê đơn, đơn thuốc
+비용: chi phí
+치료: trị liệu, sự chữa trị
+검사: sự kiểm tra
+혹은: hoặc, hay/ đôi khi
+전체: toàn thể
+일부: một phần
+국민건강보험공단: tổ chức/ cơ quan bảo hiểm sức khỏe quốc dân
+주위: xung quanh, chung quanh
+의원: trạm xá, trung tâm y tế
+배탈: rối loạn tiêu hóa
+비교적: tương đối, khá
+증상: triệu chứng
+외과: khoa ngoại, bệnh viện ngoại khoa
+치과: nha khoa, bệnh viện nha khoa
+피부과: khoa da liễu, bệnh viện da liễu
+내과: khoa nội, bệnh viện nội khoa
+운영하다: điều hành, vận hành, hoạt động
+예방접종: tiêm phòng, chích ngừa
+각종: các loại, các thứ
+물리치료: vật lý trị liệu
+-는/-은/ -ㄴ 편이다: thuộc vào loại, thuộc diện
+세밀하다: tỉ mỉ, kỹ lưỡng, cặn kẽ
+진료의뢰서: giấy ủy quyền chữa trị, giấy ủy thác điều trị
+만약: nếu, giả dụ, nhỡ như
+응급환자: bệnh nhân cần cấp cứu
+우선: trước tiên, ưu tiên
+대원: thành viên, đội viên
+현장: hiện trường
+응급처치: sự sơ cứu
+응급실: phòng cấp cứu
+데려다 주다: đưa đi, chở đi
+몇 가지: mấy loại, một vài, một số
+정해지다: được quy định
+도둑: trộm cắp
+범죄: sự phạm tội
+해양사고: sự cố ngoài biển
+
+재난: tai nạn, tai ương
+생명: sinh mạng, mạng sống
+재산: tài sản
+지키다: gìn giữ, bảo vệ
+정착시키다: thiết lập, xây dựng
+파손되다: bị hư hỏng, bị phá hỏng
+안내표지판: bảng chỉ dẫn
+노후된 건축물: công trình xây dựng bị cũ nát, lạc hậu
+제대로: một cách bài bản, đúng cách…
+여객선: tàu khách
+철도: đường ray, đường sắt
+요소: yếu tố
+주도하다: chủ đạo
+전개하다: triển khai, phát triển, mở rộng
+의식: ý thức
+높이다: nâng cao, nâng lên
+분야: lĩnh vực
+실천: việc đưa vào thực tiễn, việc thực hiện
+과제: bài toán 
+정하다: định, chọn, quyết định
+실시하다: thực thi, thi hành
+점검: sự rà soát
+비롯하다: bắt đầu, khởi nguồn
+이루어지다: được thực hiện, đạt được, được tạo thành
+그럼에도 불구하고: tuy vậy, tuy thế, dù vậy
+침착하게: một cách bình tĩnh
+상황: tình hình, tình huống, hoàn cảnh
+자세히: một cách chi tiết, tỉ mỉ, cụ thể
+당하다: bị, gặp phải, bị lừa…
+당황하다: hốt hoảng, bối rối
+차례대로: lần lượt
+대피하다: lánh nạn
+무엇보다: hơn tất cả, hơn hết
+평소: thường khi, thường ngày
+살피다: soi xét, xem xét, suy xét
+발견하다: phát kiến, phát hiện, tìm ra, tìm thấy
+건의하다: kiến nghị, đề xuất

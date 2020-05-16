@@ -1,0 +1,111 @@
+명소	địa danh nổi tiếng, danh lam thắng cảnh
+유적지	khu di tích lịch sử
+정상	đỉnh, chỏm, chóp, ngọn
+산 정상에 오르다	trèo lên đỉnh núi
+단풍을 구경하다	đi ngắm lá vàng
+캠핑을 하다	đi cắm trại 
+삼림욕을 하다	đi dạo trong rừng, đắm mình trong thiên nhiên rừng xanh
+계곡	khe núi, thung lũng hẹp
+피서를 즐기다	tận hưởng mùa hè
+물놀이를 하다	Chơi các trò dưới nước
+해수욕을 하다	tắm biển
+일광욕을 하다	tắm nắng
+모래찜질을 하다	chườm bằng cát, tắm với cát
+수상 레포츠를 즐기다	tận hưởng các trò chơi giải trí dưới nước
+낚시를 하다	câu cá
+해산물을 맛보다	Nếm thử hải sản
+템플스테이 하다	tham quan, nghỉ lại và trải nghiệm các hoạt động ở chùa
+명상을 하다	mặc tưởng
+사찰음식 맛보다	nếm thử đồ ăn chay
+108배를 하다	lạy 108 lạy
+조상	tổ tiên
+생활 모습	cách thức sinh hoạt
+엿보다	nghía qua, xem qua, lén xem
+조상들의 생활 모습을 엿보다	Nghía qua cách thức sinh sống của người xưa, tổ tiên
+과거로의 시간 여행하다	du lịch về quá khứ 
+유물	di vật
+유물을 관람하다	xem ngắm di vật
+유적지를 방문하다	đến thăm khu di tích
+국립공원	công viên quốc gia
+__의 수도	kinh đô của  __
+섬	đảo
+역사 유적지	di tích lịch sử
+항구 도시	thành phố cảng
+활기가 넘치다	 tràn đầy sức sống
+전통적이다	mang tính truyền thống
+고즈넉하다	 tĩnh lặng, tĩnh mịch
+공기가 맑다	không khí trong lành
+재래시장	truyền thống
+야시장	chợ đêm
+야경	cảnh đêm
+왕릉	lăng mộ vua
+탑	tháp
+박물관	bảo tàng
+한옥	nhà Hanok
+백화점	trung tâm mua sắm
+해변을 산책하다	đi dạo bờ biển
+바닷가에서 해수욕을 즐기다	tận hưởng tắm ở bãi biển
+유적지를 방문하다	đến thăm khu di tích
+지혜	trí tuệ
+조상들의 지혜를 엿보다	đoán biết trí tuệ của người xưa
+올레길	con đường chạy quanh biển
+올레길을 걷다	đi bộ quanh đảo
+둘레길	con đường chạy quanh núi
+둘레길을 걷다	đi bộ quanh núi
+전통 체험하다	trải nghiệm truyền thống
+동해안	bờ biển Đông
+서해안	bờ biển Tây
+남해안	bờ biển Nam
+중부	miền trung
+싱싱한 해산물을 맛보다	ăn thử hải sản tươi ngon
+전통음식을 맛보다	nếm thử đồ ăn truyền thống
+가정식을 맛보다	ăn thử bữa ăn gia đình
+길거리음식 (포장마차)을 맛보다	nếm thử món ăn đường phố
+
+
+
+얼굴이 타다	mặt bị cháy nắng
+팔만대장경	Bát Vạn Đại Tạng Kinh 
+목판	 bản khắc gỗ, khuôn in
+새기다	 khắc, chạm trổ, điêu khắc
+오래간만	lâu rồi mới lại
+찻소리	tiếng xe ô tô
+벗어나다	ra khỏi, thoái khỏi
+예불	lễ Phật, việc lễ Phật
+기상하다	ngủ dậy, thức dậy
+새벽	Bình minh
+눈꺼풀	mí mắt
+천근만근	sức nặng ngàn cân
+눈꺼풀이 천근만근이다	mí mắt nặng trĩu
+간이 싱겁다	nhạt, không mặn
+
+
+
+평화롭다	thanh bình, bình yên
+마치	hệt như
+석굴암	Am Seokgul
+둘러보다	nhìn quanh
+건축 양식	kiểu kiến trúc, phong cách kiến trúc
+감탄	sự cảm thán
+절로	một cách tự động, một cách tự dưng
+뛰어나다	nổi trội, nổi bật
+조각 기술	kỹ thuật điêu khắc
+불상	tượng Phật
+장엄함	sự trang nghiêm, sự uy nghiêm
+고개가 숙이다	cúi đầu
+만족스럽다	đầy thỏa mãn, đầy mãn nguyện
+
+
+
+유네스코	Unesco
+보편적	mang tính phổ biến
+가치를 지니다	mang giá trị
+등재되다	được đăng ký, được đăng tải
+복합	sự tổ hợp, sự kết hợp
+유산	di sản
+...에 의하다	bởi, theo
+동굴	hang động
+늪	bãi lầy, đầm lầy
+뛰어나다	nổi bật, xuất sắc, nổi trội
+가치	giá trị
+잠정 목록	danh sách dự kiến

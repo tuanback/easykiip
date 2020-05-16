@@ -1,0 +1,42 @@
+신문사	òa soạn báo
+광고	Quảng cáo
+경제면	Trang kinh tế
+스포츠면	Trang thể thao
+기사	Bài báo
+사설	Bài xã luận
+사회면	Trang xã hội
+국제면	Trang quốc tế
+머리기사	Tiêu đề bài báo
+정치면	Trang chính trị
+문화면	Trang văn hóa
+제호	Tiêu đề
+1면 사진	Hình trang đầu
+사진설명문	Mô tả hình ảnh
+주요기사 안내	mẫu tin chính
+기사	Mẫu tin, bài báo
+지면	Mặt báo
+머리기사	Mẫu tin trang nhất
+공중파 방송/ 지상파 방송	 truyền hình mặt đất
+유선 방송/ 케이블 방송	 truyền hình hữu tuyến, có dây
+인터넷 방송	Truyền hình internet
+채널	Kênh (tivi, đài...)
+채널을 돌리다	chuyển kênh
+시청자	Người xem, khán giả
+시청하다	xem (nghe và nhìn)
+기자	phóng viên, nhà báo, ký giả
+특파원	đặc phái viên
+아나운서	phát thanh viên
+프로듀서	Nhà sản xuất
+취재하다	lấy tin
+보도하다	đưa tin
+제작하다	sản xuất
+프로그램	chương trình
+속보	tin nhanh, tin vắn
+생방송	truyền hình trực tiếp
+재방송	phát sóng lại
+뉴스	Tin tức
+시사 프로그램	Chương trình thời sự
+특집 방송	 phát sóng đặc biệt, đặc san
+스포츠 중계방송	truyền hình trực tiếp thể thao
+예능 프로그램	chương trình nghệ thuật, chương trình giải trí
+드라마 phim	truyền hình

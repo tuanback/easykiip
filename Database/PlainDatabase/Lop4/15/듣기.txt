@@ -1,0 +1,3 @@
+기표소	Quầy bỏ phiếu, điểm bỏ phiếu
+뽑다	Tuyển chọn ra, rút ra lấy ra
+선거일	Ngày bầu cử

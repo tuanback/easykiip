@@ -1,0 +1,65 @@
+사고	Tai nạn, sự cố
+가스사고	Tai nạn khí ga (cháy, nổ)
+화재사고	Tai nạn hỏa hoạn
+감전사고	Tai nạn điện giật
+교통사고	Tai nạn giao thông
+접촉 사고	Tai nạn do va chạm
+음주운전 사고	Tai nạn do uống rượu, bia
+신고하다	Khai báo, trình báo
+보험으로 처리하다/보험금을 받다	Giải quyết qua công ty bảo hiểm
+합의하다	Thỏa thuận
+합의금을 주다	Gửi tiền đền bù theo thỏa thuận
+합의금을 받다	Nhận tiền đền bù theo thỏa thuận
+사건	Sự kiên, vụ việc (vụ việc thu hút sự chú ý quan tâm)
+강도·절도	Cướp giật · Trộm cắp
+폭행	Bạo hành, bạo lực, hành hung
+사기	Sự lừa đảo 
+납치	Sự bắt cóc
+살인	Giết người
+피해자	Người bị hại/ the injured party
+납치당하다	trở thành nạn nhân bắt cóc
+사기당하다	trở thành nạn nhân lừa đảo
+폭행하다	trở thành nạn nhân của bạo hành
+도난당하다	Bị cướp đoạt, trộm cướp
+도둑맞다	Bị mất trộm, ăn trộm
+소매치기를 당하다	Bị móc túi
+범인을 잡다	Bắt tội phạm
+체포하다	bắt giữ, tóm cổ
+
+
+
+접촉	sự va chạm, sự tiếp xúc
+실수	sự sai sót, sự sai lầm, sự thất lễ, sự khiếm nhã
+-자마자	ngay tức khắc, ngay lập tức, ngay khi... thì
+
+
+
+빗길	đường mưa, đường ướt
+사망하다	tử vong
+국도	đường quốc lộ
+인근	lân cận, gần
+이송되다	được di chuyển, được vận chuyển, được di lý
+치료를 받다	được điều trị, được chữa trị, trải qua điều trị
+...모씨	anh...gì đó, cô...gì đó.
+장모 씨	Bà Chang nào đó, bà Chang (không xác định cụ thể tên người cụ thể)
+이모 씨	Bà Lee nào đó
+보이스피싱	lừa đảo qua điện thoại (voice phishing)
+피해액	số tiền thiệt hại
+폭행	sự bạo hành, sự cưỡng ép quan hệ...
+혐의	sự hiềm nghi, mối nghi ngờ
+
+
+
+긴급 전화번호	số điện thoại khẩn cấp
+치안	sự giữ an ninh, trị an
+순위	thứ tự trong bảng xếp hạng
+안전하다	an toàn
+예방하다	dự phòng, phòng ngừa
+대처하다	 ứng phó
+신속하다	thần tốc, nhanh chóng
+각종	các loại, các thứ
+도난	trộm cắp
+분실	sự thất lạc
+폭행	bạo hành, cưỡng ép quan hệ
+근로자	người lao động
+부당하다	không chính đáng, bất chính

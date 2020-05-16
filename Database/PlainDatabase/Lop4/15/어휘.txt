@@ -1,0 +1,33 @@
+선거 관련 어휘	Từ vựng liên quan đến bầu cử
+대통령 선거	Bầu cử tổng thống
+국회의원 선거	Bầu cử nghị viện quốc hội
+후보자	ứng cử viên (tranh cử)
+출마하다	tranh cử, ứng cử
+당선되다	thắng cử
+유권자	người có quyền bỏ phiếu, cử tri
+뽑다	lựa chọn, bầu chọn
+투표하다	bỏ phiếu, biểu quyết
+선출하다	bầu ra
+선거일	ngày bầu cử
+투표 장소	địa điểm bỏ phiếu
+투표 용지	phiếu bầu
+투표하다	bỏ phiếu
+투표함	thùng phiếu
+개표하다	mở phiếu, kiểm phiếu
+지도자의 자질 관련 어휘	Từ vựng liên quan đến tư chất nhà lãnh đạo
+지도자	người lãnh đạo
+인품이 훌륭하다	nhân cách tốt đẹp
+인품	nhân cách, nhân phẩm
+책임감	tinh thần trách nhiệm
+공정하다	công bằng, phân minh
+판단력	khả năng phán đoán, nhận định
+정직하다	chính trực, trung thực
+지도력	khả năng chỉ đạo, lãnh đạo
+투표 절차 관련 어휘	Từ vựng liên quan đến trình tự bỏ phiếu
+투표소를 방문하다	Đến điểm bỏ phiếu
+신분증을 제시하다	Xuất trình chứng minh thư
+신분증을 확인하다	Xác nhận chứng minh thư
+투표용지를 받다	Nhận phiếu bầu
+기표소에 들어가다	Đi vào quầy bỏ phiếu
+기표하다	Viết phiếu bầu
+투표함에 넣다	Bỏ vào thùng phiếu

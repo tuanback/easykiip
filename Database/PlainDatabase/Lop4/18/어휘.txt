@@ -1,0 +1,33 @@
+출생률	tỷ lệ sinh
+태어나다	sinh ra, được sinh ra
+출생하다	sinh ra, ra đời
+자라다	phát triển, lớn lên
+성장하다	trưởng thành
+고령화	Sự già hóa
+나이를 먹다	già đi, có tuổi, thêm tuổi
+늙다	già, già đi
+사망률	tỷ lệ tử vong
+죽다	chết
+사망하다	tử vong, qua đời, chết
+출산율	tỷ lệ sinh đẻ (sinh sản)
+낳다	sinh nở
+출산하다	sinh nở, sinh đẻ, sinh sản
+키우다	nuôi nấng, nuôi dưỡng
+양육하다	dưỡng dục, nuôi lớn
+높다	cao, lớn
+낮다	thấp, nhỏ
+늘다	tăng lên
+줄다	giảm đi
+증가하다	tăng lên, gia tăng
+감소하다	giảm đi, giảm bớt
+유아	trẻ sơ sinh, trẻ nhỏ
+아동	nhi đồng, thiếu nhi
+청소년	thanh thiếu niên
+성인	vị thành niên
+청년층	trưởng thành, thanh niên
+장년층	trung niên
+노년층	người cao tuổi, cao niên, lão niên
+비율	tỷ lệ, tỷ số, phần trăm
+추이	sự thay đổi/ change; shift; transition
+고령화	già hóa dân số
+전망	Sự nhìn xa, tiên đoán

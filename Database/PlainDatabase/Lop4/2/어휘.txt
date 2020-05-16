@@ -1,0 +1,26 @@
+코미디	Hài
+로맨틱코미디	Lãng mạn hài hước
+멜로(영화)	phim tình cảm
+액션(영화)	phim hành động
+공포(영화)	phim kinh dị
+전쟁(영화)	phim chiến tranh
+감독	Đạo diễn
+상영 시간	thời gian chiếu phim
+관람 등급	phân lớp đối tượng xem
+줄거리	cốt truyện
+주연	diễn viên chính
+조연	diễn viên phụ
+표를 예매하다	đặt vé
+개봉	khai chiếu
+일일 연속극	phim truyền hình hàng ngày (chiếu từ thứ 2 đến thứ 6)
+미니 시리즈	phim truyền hình ngắn tập (chiếu 2 ~ 3 ngày trong 1 tuần)
+주말 드라마	phim truyền hình cuối tuần
+드라마 평가	Đánh giá phim truyền hình
+시청률이 높다	Tỷ lệ người xem cao
+영상미가 뛰어나다	Hình ảnh phim đẹp
+연기력이 뛰어나다	Diễn xuất giỏi
+줄거리가 흥미롭다	Cốt truyện phim hấp dẫn
+배경음악이 아름답다	Nhạc phim hay
+배우가 멋있다	Diễn viên đẹp
+인기가 많다	Được yêu thích nhiều
+화제가 되다	Trở thành chủ đề bàn tán

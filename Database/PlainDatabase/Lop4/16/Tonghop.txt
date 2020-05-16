@@ -1,0 +1,73 @@
+환경이 오염되다	Môi trường bị ô nhiễm
+환경오염 문제가 심각하다	vấn đề ô nhiễm môi trường nghiêm trọng
+지구온난화	hiện tượng ấm lên toàn cầu
+자동차를 많이 이용하다	Sử dụng quá nhiều ô tô
+자동차가 매연을 발생시키다	Ô tô gây phát sinh khí thải
+공기가 나빠지다	Không khí trở nên ô nhiễm
+대기오염이 심각하다	ô nhiễm không khí nghiêm trọng
+자동차 이용을 줄이다	Giảm thiểu sử dụng ô tô
+대중교통을 이용하다	Sử dụng phương tiện giao thông công cộng
+샴푸, 세제를 이용하다	Sử dụng dầu gội, chất tẩy rửa
+물이 더러워지다	nguồn nước bị lây bẩn
+수질오염이 심각하다	ô nhiễm nguồn nước trầm trọng
+바닷물이 오염되다	nước biển bị ô nhiễm
+해양오염이 심각하다	ô nhiễm đại dương nghiêm trọng
+필요한 양만 사용하다	chỉ sử dụng lượng vừa đủ
+일회용품을 많이 이용하다	Sử dụng quá nhiều sản phầm dùng 1 lần
+쓰레기를 많이 버리다	Vứt bỏ nhiều rác
+쓰레기가 넘쳐나다	Rác thải tràn ngập
+쓰레기를 매립하다	Chôn lấp rác thải
+땅(토양)이 오염되다	đất, thổ nhưỡng bị ô nhiễm
+쓰레기를 소각하다	Đốt, thiêu rác thải 
+유해성분이 발생하다	phát sinh thành phần, chất có hại
+쓰레기를 분리수거하다	Phân loại rác thải
+쓰레기를 재활용하다	Tái sinh, tái chế rác thải
+전기장판, 전기 온풍기 등 전기 난방 기기 사용을 자제합니다	Tiết chế sử dụng hệ thống sưởi điện như máy sưởi, quạt sưởi, chăn điện
+실내 온도는 겨울철 건강온도인 18~20℃를 유지합니다	Nhiệt độ trong nhà vào mùa đông duy trì 18~20℃ là nhiệt độ tốt cho sức khỏe.
+에어컨 등 전기 냉방 기기의 사용을 자제합니다	Tiết chế sử dụng hệ thống làm mát như máy điều hòa nhiệt độ.
+실내 온도는 26℃ 이상으로 유지합니다	Nhiệt độ trong nhà duy trì trên 26℃.
+실내 기기의 희망 온도는 한 단계 낮게(강 → 약) 설정합니다	Thiết lập nhiệt độ mong muốn của các thiết bị máy móc trong nhà giảm đi một cấp (mạnh→yếu)
+세탁기는 한 번에 모아서 사용합니다	Với máy giặt, gom hết một lần rồi sử dụng.
+전기밥솥 대신 압력 밥솥을 사용합니다.전기밥솥은 장시간 보온으로 사용하지 않습니다	Sử dụng nồi áp suất thay cho nồi cơm điện. Không sử dụng giữ ấm trong thời gian dài với nồi cơm điện
+TV, 컴퓨터의 사용 시간을 줄입니다	Giảm thời gian sử dụng Tivi, máy tính
+컴퓨터는 절전모드를 설정하여 사용합니다	Máy tính thiết lập và sử dụng ở chế độ tiết kiệm điện 
+청소기는 한 단계 낮게 조절(강 → 약)하여 사용합니다	Máy hút bụi điều chỉnh thấp đi một cấp (mạnh→ yếu) rồi sử dụng
+냉장고의 음식물은 60%만 넣어 냉기 순환이 잘 되게 합니다	Đặt, để không quá 60% thực phẩm vào trong tủ lạnh để tuần hoàn hơi lạnh được tốt.
+사용하지 않는 곳의 조명은 완전히 소등합니다	Tắt đèn hoàn toàn ở những nơi không sử dụng ảnh sáng
+
+
+
+골칫거리	việc phiền toái, mối lo ngại
+국토	lãnh thổ quốc gia (quốc thổ)
+미처	chưa, đến mức đó, trước đó...
+그 밖에	ngoài ra
+엄청나다	ghê gớm, khủng khiếp (thể hiện một lượng rất nhiều hay mức độ rất nghiêm trọng)
+성분	thành phần, phần tử
+배출되다	được thải ra
+바람직하다	lý tưởng, đúng đắn
+구체적	tính cụ thể
+
+
+
+비닐 쇼핑백	 túi nilon
+캠페인	chiến dịch, cuộc vận động
+장바구니	túi đi chợ, giỏ đi chợ
+유해 물질	chất độc hại
+분해되다	 bị phân hủy, được tháo rời, được tháo dỡ, bị tan rã,...
+방긋 웃다	 mỉm cười
+
+
+
+공공 기관	 cơ quan nhà nước
+앞장서다	 đứng đầu
+순차	lần lượt, trật tự
+가동하다	 hoạt động, vận hành, khởi động, thực hiện...
+특정	sự riêng biệt, sự cá biệt
+지자체	(Cách nói rút gọn của "지방 자치 단체") chính quyền địa phương
+실시하다	thực thi
+자치단체	tổ chức tự trị
+내복	quần áo mặc lót bên trong áo ngoài để chống lạnh vào mùa đông.
+석유	dầu hỏa, dầu lửa
+절약	sự tiết kiệm
+대기	bầu khí quyển
+승용차	xe ô tô con

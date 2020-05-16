@@ -1,0 +1,73 @@
+가족의 형태	Hình thái gia đình
+대가족	Đại gia đình (có nhiều thế hệ)
+핵가족	Gia đình hạt nhân (Chỉ có bố mẹ và con cái)
+1인 가구	Gia đình 1 thành viên
+다문화 가족	Gia đình đa văn hóa
+한부모 가족	Gia đình con cái chỉ sống với bố (hoặc mẹ)
+입양 가족	Gia đình nhận con nuôi
+독신으로 혼자 살다	Sống độc thân 1 mình
+결혼하지 않거나 이혼 등의 이유로 혼자 사는 것	Không kết hôn hoặc vì lý do li hôn rồi sống 1 mình
+주말부부로 살다	Vợ chồng sinh hoạt cuối tuần
+부부가 직장 등의 문제로 주말에만 같이 지내는 것	Do vấn đề công việc nên vợ chồng chỉ gặp nhau vào cuối tuần
+기러기부부로 살다	Vợ chồng ngỗng
+아이 유학 등의 이유로 부부 중 한 명이 외국으로 가게 되어 따로 지내는 것	Vì lý do con cái du học nên 1 trong 2 vợ chồng đi ra nước ngoài sống
+아이를 입양하다	Nhận con nuôi
+다른 사람이 낳은 아이를 자식으로 삼아 키우는 것	Lấy con người khác sinh ra nhận nuôi nấng chăm sóc như con của mình
+가족의 변화	Sự thay đổi của gia đình
+옛날에는	Ngày xưa, trước đây
+효도하다	hiếu thảo, hiếu đạo
+부모님을 모시다	sống cùng và chăm sóc cha mẹ
+부모님께 복종하다	vâng lời, tuân theo cha mẹ
+가부장적이다	gia trưởng
+혈연을 중시하다	coi trọng, xem trọng huyết thống, họ hàng
+이들을 선호하다	trọng con trai
+여자가가사를 전담하다	Phụ nữ chuyên trách, đảm nhận việc nội trợ
+효도하다	hiếu thảo, hiếu đạo
+분가하다	ở riêng, tách hộ
+독립하다	độc lập, tự lập
+개인 생활을 중시하다	xem trọng cuộc sống riêng
+아들과 딸을 차별하지 않다	không phân biệt, thiên vị con trai hay gái
+부부가 맛벌이를 하다	Cả vợ chồng cùng đi làm
+부부가 가사를 분담하다	phân công, chia sẻ công việc nội trợ, gia đình
+
+
+
+손자	cháu trai
+손녀	cháu gái
+마찬가지	sự giống nhau
+복종하다	phục tùng
+가부장적	tính gia trưởng, mang tính gia trưởng
+분위기	bầu không khí, khí phách (Tâm trạng/ tình huống cảm nhận được tại địa điểm hay khung cảnh nào đó)
+선호하다	ưa chuộng, ưa thích
+핵가족	gia đình hạt nhân
+분가하다	ra ở riêng
+결정하다	quyết định
+가사	việc nhà
+분담하다	phân công
+차별하다	phân biệt, kỳ thị
+맞벌이 부부	cả 2 vợ chồng đều đi làm
+역할	vai trò, nhiệm vụ
+독신	sự độc thân, người độc thân
+혈연	huyết thống
+입양	sự nhận con nuôi, sự làm con nuôi
+
+
+
+어린이날 (5월 5일)	Ngày thiếu nhi
+차별	sự phân biệt, sự kỳ thị
+법정	pháp định, luật định
+어버이날 (5월 8일)	Ngày của cha mẹ
+강조하다	khẳng định, nhấn mạnh
+카네이션	hoa cẩm chướng
+입양의 날 (5월 11일)	Ngày con nuôi
+건전하다	 tích cực, lành mạnh
+입양	sự nhận con nuôi
+활성화	sự phát triển, sự thúc đẩy phát triển
+부부의 날 (5월 21일)	Ngày vợ chồng
+소중하다	quý báu, rất quý trọng, quan trọng
+깨닫다	nhận ra, hiểu được, nhận thức, ý thức, hiểu ra
+가족 사랑의 날 (매주 수요일)	Ngày của tình yêu gia đình (thứ 4 hàng tuần)
+현대인	con người hiện đại
+주중 하루	ngày thường, ngày trong tuần
+정시퇴근	sự tan làm đúng giờ
+권장하다	khuyến khích, cổ vũ, động viên

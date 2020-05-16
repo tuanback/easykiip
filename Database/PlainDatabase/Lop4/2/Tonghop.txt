@@ -1,0 +1,75 @@
+코미디	Hài
+로맨틱코미디	Lãng mạn hài hước
+멜로(영화)	phim tình cảm
+액션(영화)	phim hành động
+공포(영화)	phim kinh dị
+전쟁(영화)	phim chiến tranh
+감독	Đạo diễn
+상영 시간	thời gian chiếu phim
+관람 등급	phân lớp đối tượng xem
+줄거리	cốt truyện
+주연	diễn viên chính
+조연	diễn viên phụ
+표를 예매하다	đặt vé
+개봉	khai chiếu
+일일 연속극	phim truyền hình hàng ngày (chiếu từ thứ 2 đến thứ 6)
+미니 시리즈	phim truyền hình ngắn tập (chiếu 2 ~ 3 ngày trong 1 tuần)
+주말 드라마	phim truyền hình cuối tuần
+드라마 평가	Đánh giá phim truyền hình
+시청률이 높다	Tỷ lệ người xem cao
+영상미가 뛰어나다	Hình ảnh phim đẹp
+연기력이 뛰어나다	Diễn xuất giỏi
+줄거리가 흥미롭다	Cốt truyện phim hấp dẫn
+배경음악이 아름답다	Nhạc phim hay
+배우가 멋있다	Diễn viên đẹp
+인기가 많다	Được yêu thích nhiều
+화제가 되다	Trở thành chủ đề bàn tán
+
+
+
+방송국	đài phát thanh truyền hình
+겨울연가	bản tình ca mùa đông
+매력	sức hấp dẫn, sự lôi cuốn
+흥미롭다	hứng thú, hứng khởi
+주인공	nhân vật chính
+영상미	nét đẹp thể hiện qua màn ảnh
+
+
+
+화제	tiêu điểm, chủ điểm, tiêu đề
+개봉	sự trình chiếu lần đầu của bộ phim mới, khai chiếu
+감독	đạo diễn
+뛰어나다	nổi trội, nổi bật
+주연	vai chính
+조연	vai phụ
+영상미	nét đẹp nét đẹp thể hiện qua màn ảnh, cảnh quay
+흥미롭다	hứng thú, hứng khởi
+줄거리	cốt truyện
+애타다	lo âu, lo lắng, khắc khoải
+반갑다	hân hoan, vui sướng, hân hạnh, vui mừng, hài lòng
+주인공	nhân vật chính
+범죄자	người phạm tội
+배경	cảnh nền, bối cảnh
+살리다	làm sống động
+시사회	buổi xem trước, buổi duyệt trước
+끄덕이다	gật gù, gật đầu
+
+
+
+방영하다	phát sóng, chiếu phim
+공중파	sóng truyền hình, truyền hình mặt đất
+케이블 방송	truyền hình cáp
+인기를 끌다	hấp dẫn, thu hút, lôi kéo
+모래시계	đồng hồ cát
+한산해지다	thưa thớt, vắng vẻ, nhàn nhã
+겨울연가	bản tình ca mùa đông
+풀하우스	ngôi nhà hạnh phúc (full house)
+한류 열풍	làn sóng Hallu, làn sóng Hàn Quốc (bạn có thể tra google để hiểu rõ về làn sóng này)
+역할	vai trò, nhiệm vụ
+제작되다	được chế tác, được sản xuất
+비롯하다	bắt nguồn, khởi đầu, bao gồm, trong đó có
+정서	tình cảm, hướng chính Tây
+공감하다	đồng cảm
+보편적	tính phổ biến
+가치	giá trị 
+담다	chứa đựng

@@ -1,0 +1,40 @@
+교통수단	Phương tiện giao thông
+발달하다	Phát triển
+도로상에 	Trên đường 
+일정하다 	Nhất định 
+간격	Khoảng cách 
+위치하다 	Nằm ở vị trí ở 
+목적지 	Nơi đến điểm đến 
+주변 	Xung quanh 
+전광판 	Bảng điện tử 
+편리하다	Tiện lợi
+노선도 	Bản đồ tuyến tàu/ xe chạy 
+목적지	Nơi đến điểm đến đích đến
+부근	Phụ cận lân cận 
+노선 	Tuyến đường 
+비교적 	Tương đối 
+일정하다 	Nhất định 
+장점	Ưu điểm điểm mạnh
+운행거리	Cự ly di chuyển khoảng cách di chuyển
+승객	Hành khách
+데리다	Đưa đón hộ tống
+정해지다 	Được quy định 
+경로	Tuyến đường lộ trình 
+다소	Ít nhiều 
+수록 => Cấu trúc càng …càng 
+부과되다	Bị đóng phí bị đóng phạt bị đóng thuế
+모범택시 	Taxi cao cấp 
+제공하다	Cung cấp 
+대형택시 	Taxi cỡ lớn 
+시외버스 	Xe bus ngoại thành 
+고속버스 	Xe bus tốc hành 
+고속철	Tàu lửa cao tốc 
+더욱	Hơn nữa càng
+환승제도	chế độ đổi tuyến chế độ đổi tàu xe
+일정하다	nhất định
+금액 	số tiền
+충전하다	nạp tiền nạp vào
+포함하다	bao gồm
+할인받게 되다	được giảm giá
+단말기	thiết bị đầu cuối máy đọc thẻ 
+횟수	số lần

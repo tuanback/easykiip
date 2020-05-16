@@ -1,0 +1,57 @@
+회의를 준비하다	Chuẩn bị cho cuộc họp
+회의하다	Họp
+보고서를 작성하다	Viết báo cáo
+결재를 하다	Phê duyệt, phê chuẩn
+결재를 받다	Nhận được phê duyệt
+보고하다	Báo cáo
+외근을 나가다	Làm việc ở bên ngoài (văn phòng)
+출장을 가다	Đi công tác
+근무하다	Làm việc
+야근하다	Làm tăng ca (buổi tối, đếm)
+급여	Tiền lương
+월급	Lương tháng
+주급	Lương theo tuần
+일당	Lương theo ngày
+연봉	Lương cả năm
+수당	Tiền trợ cấp
+상여금	Tiền thưởng
+직함	Cấp bậc
+사장	Giám đốc, tổng giám đốc
+이사	Giám đốc điều hành
+부장	Đứng đầu một bộ phận
+과장	Quản lý team
+대리	Trợ lý
+사원	Nhân viên bình thường
+직장상사	Cấp trên
+직장동료	Đồng nghiệp làm việc
+부하직원	Cấp dưới
+휴가와 결근	Sự nghỉ phép và nghỉ làm
+휴가를 내다	nghỉ phép
+조퇴하다	tan làm sớm
+결근하다	vắng làm, vắng mặt vào ngày đáng ra phải đi làm
+지각하다	Trễ giờ, muộn giờ
+
+
+
+첫날	ngày đầu tiên
+궁금하다	tò mò, thắc mắc, hồi hộp
+영업	việc kinh doanh
+
+
+
+마음대로	tùy tâm, tùy ý
+그만큼	chừng đó, đến mức độ ấy, đến chừng mực đó.
+태도	thái độ
+책임감	tinh thần trách nhiệm
+
+
+
+주 5일 근무제	chế độ làm việc 5 ngày/ tuần
+직함	chức danh, chức vụ
+수직 관계	mối quan hệ cấp bậc
+분명하다	rõ ràng, chắc chắn, minh bạch
+존댓말	kính ngữ
+개인적	tính cá nhân, tính riêng tư
+친해지다	thân quen, quen
+호칭	tên gọi, danh tính, sự gọi tên
+대인 관계	quan hệ đối nhân xử thế

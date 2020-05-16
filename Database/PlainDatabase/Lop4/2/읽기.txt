@@ -1,0 +1,17 @@
+화제	tiêu điểm, chủ điểm, tiêu đề
+개봉	sự trình chiếu lần đầu của bộ phim mới, khai chiếu
+감독	đạo diễn
+뛰어나다	nổi trội, nổi bật
+주연	vai chính
+조연	vai phụ
+영상미	nét đẹp nét đẹp thể hiện qua màn ảnh, cảnh quay
+흥미롭다	hứng thú, hứng khởi
+줄거리	cốt truyện
+애타다	lo âu, lo lắng, khắc khoải
+반갑다	hân hoan, vui sướng, hân hạnh, vui mừng, hài lòng
+주인공	nhân vật chính
+범죄자	người phạm tội
+배경	cảnh nền, bối cảnh
+살리다	làm sống động
+시사회	buổi xem trước, buổi duyệt trước
+끄덕이다	gật gù, gật đầu

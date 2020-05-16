@@ -1,0 +1,88 @@
+개학하다	Tựu trường, khai giảng (bắt đầu một kỳ học mới)
+입학하다	Nhập học (Bắt đầu năm học mới)
+(여름) 방학하다	Nghỉ hè
+개학하다	Khai giảng, khai trường, bắt đầu đi học lại 
+(겨울) 방학하다	Nghỉ đông
+졸업하다	Tốt nghiệp
+학교에 입학하다	Nhập học
+학교에 들어가다	Nhập học
+시험을 보다	Thi
+시험을 치르다	Thi
+학교를 졸업하다	Tốt nghiệp
+학교를 마치다	Học xong, hoàn tất việc học
+점수	Điểm số
+평균	trung bình
+성적	thành tích
+학년	năm học 
+과목	môn học 
+담임	giáo viên chủ nhiệm
+성적 통지표	Bảng thông báo thành tích, giấy báo điểm
+구분	sự phân loại
+과목	môn học
+국어	Quốc ngữ, ngữ văn 
+수학	Toán học 
+사회	Xã hội 
+과학	Khoa học 
+영어	Tiếng Anh
+점수	điểm số
+중간고사	thi giữa kỳ
+기말고사	thi cuối kỳ
+평균 점수	điểm trung bình
+출석	có mặt
+결석	vắng mặt
+지각	muộn
+조퇴	về sớm
+가정 통신문	sổ liên lạc với gia đình
+교육 목표	Mục tiêu giáo dục
+실력을 기르다	Bồi dưỡng năng lực
+적성을 살리다	Phát triển năng lực (khả năng phù hợp với việc nào đó)
+개성을 살리다	Phát triển cá tính
+특기를 살리다	Phát triển cái nổi trội nhất, giỏi nhất
+소질을 개발하다	Khai thác, phát triển tố chất, năng khiếu
+자신감을 키우다	Bồi dưỡng tính tự tin
+창의력을 키우다	Bồi dưỡng tính sáng tạo
+사고력을 키우다	Bồi dưỡng tính tư duy
+
+
+
+대학수학능력시험	Kỳ thi tuyển sinh đại học
+늦추다	dời lại
+놓치다	tuột mất, vuột mất, lỡ mất
+수능	kỳ thi tuyển sinh đại học
+
+
+사이사이	những khoảng trống, những khoảng giữa, những lúc rỗi
+의무 교육	giáo dục bắt buộc
+등록금	phí nhập học
+과정	khóa học
+대학 진학	học lên đại học
+일반계 고등학교	trường trung học phổ thông thường
+인문계 고등학교	trường trung học phổ thông khối nhân văn
+직업 교육	giáo dục nghề, dạy nghề
+전문계 고등학교	trường trung học phổ thông dạy nghề
+특수목적고등학교	trường cấp 3 chuyên biệt
+예술고등학교	trường cấp 3 nghệ thuật
+대학수학능력시험(수능)	kỳ thi năng lực vào đại học, kỳ thi tuyển sinh đại học
+교육열	nhiệt huyết giáo dục
+졸업생	sinh viên tốt nghiệp, học sinh tốt nghiệp
+
+
+
+사교육	giáo dục tư, sự dạy tư
+회원국	nước thành viên
+자원이 부족하다	thiếu nguồn lực, thiếu tài nguyên
+경제 성장	sự tăng trưởng kinh tế
+원동력	động lực, sức mạnh, năng lượng
+덕분에	nhờ vào, nhờ có
+인재	nhân tài
+욕심	sự tham vọng, sự tham lam
+뒤떨어지다	rớt lại sau, tụt hậu, lỗi thời
+지나치다	quá, thái quá, quá mức
+소규모	quy mô nhỏ
+과외	dạy thêm, học thêm
+어학연수	du học tiếng
+지출하다	tiêu, xài, chi tiêu
+방과후학교	giáo dục sau giờ học
+입시	 thi tuyển sinh
+수능강의	việc giảng dạy luyện thi đại học
+기울이다	nghiêng, thiên, hướng (tập trung sự tận tâm hay nỗ lực vào một chỗ)

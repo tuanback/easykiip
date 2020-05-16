@@ -1,0 +1,38 @@
+인터넷의 장단점	Ưu điểm của internet
+정보를 검색하다	Tìm kiếm thông tin
+인터넷 쇼핑을 하다	mua sắm trên mạng
+이메일을 보내다	gửi thư điện tử
+인터넷 뱅킹을	하다 Giao dịch ngân hàng qua mạng
+인터넷 게임을 하다	Chơi game
+채팅하다	chat
+블로그를 하다	viết blog
+영화를 내려 받다	Tải phim
+자료를 올리다	Tải tài liệu lên
+인터넷 단점	Nhược điểm của internet
+중독이 되다	Bị nghiện
+건강을 해치다	Hại sức khỏe
+부정확한 자료가 있다	có tư liệu không chính xác
+눈이 나빠지다	Hại mắt
+유해한 정보가 많다	Nhiều thông tin có hại
+폭력적인 게임이 많다	nhiều game bạo lực
+개인 정보가 유출되다	Lộ thông tin cá nhân
+시간을 낭비하다	Lãng phí thời gian
+주문하기	việc đặt hàng, sự đặt hàng 
+장바구니	rổ đi chợ, túi đi chợ
+상품명	tên sản phẩm
+수량	số lượng
+선택	sự lựa chọn
+변경	sự thay đổi, sự chỉnh sửa
+삭제	sự xóa bỏ
+주문하기	sự đặt hàng
+결제하기	Sự thanh toán, việc thanh toán
+상품 가격	giá cả hàng hóa
+포인트 할인	chiết khấu điểm
+배송비(배송료)	phí vận chuyển 
+총 결제 금액	tổng số tiền thanh toán
+결제 방법	phương pháp thanh toán
+신용카드	thẻ tín dụng
+무통장 입금	gởi tiền không cẩn sổ ngân hàng, nạp tiền không cần sổ tài khoản
+계좌 이체	chuyển tiền qua tài khoản
+휴대폰 결제	thanh toán qua điện thoại di động
+결제하기	Thanh toán

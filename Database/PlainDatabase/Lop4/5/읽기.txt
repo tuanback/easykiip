@@ -1,0 +1,14 @@
+사이사이	những khoảng trống, những khoảng giữa, những lúc rỗi
+의무 교육	giáo dục bắt buộc
+등록금	phí nhập học
+과정	khóa học
+대학 진학	học lên đại học
+일반계 고등학교	trường trung học phổ thông thường
+인문계 고등학교	trường trung học phổ thông khối nhân văn
+직업 교육	giáo dục nghề, dạy nghề
+전문계 고등학교	trường trung học phổ thông dạy nghề
+특수목적고등학교	trường cấp 3 chuyên biệt
+예술고등학교	trường cấp 3 nghệ thuật
+대학수학능력시험(수능)	kỳ thi năng lực vào đại học, kỳ thi tuyển sinh đại học
+교육열	nhiệt huyết giáo dục
+졸업생	sinh viên tốt nghiệp, học sinh tốt nghiệp
