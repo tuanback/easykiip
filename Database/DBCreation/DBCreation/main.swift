@@ -11,4 +11,4 @@ import RealmSwift
 
 print("Hello, World!")
 
-DBCreation.run()
+DBCreation().run()

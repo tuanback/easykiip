@@ -19,6 +19,14 @@
 		1757FC4724701EE800E41DA3 /* DBCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC4624701EE800E41DA3 /* DBCreation.swift */; };
 		1757FC482470210400E41DA3 /* Pods_DBCreation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587761D89EA8241A3E165304 /* Pods_DBCreation.framework */; };
 		1757FC492470210400E41DA3 /* Pods_DBCreation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 587761D89EA8241A3E165304 /* Pods_DBCreation.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1757FC542470A51F00E41DA3 /* CSVError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC4C2470A51F00E41DA3 /* CSVError.swift */; };
+		1757FC552470A51F00E41DA3 /* CSVWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC4D2470A51F00E41DA3 /* CSVWriter.swift */; };
+		1757FC562470A51F00E41DA3 /* BinaryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC4E2470A51F00E41DA3 /* BinaryReader.swift */; };
+		1757FC572470A51F00E41DA3 /* Legacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC4F2470A51F00E41DA3 /* Legacy.swift */; };
+		1757FC582470A51F00E41DA3 /* UnicodeIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC502470A51F00E41DA3 /* UnicodeIterator.swift */; };
+		1757FC592470A51F00E41DA3 /* Endian.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC512470A51F00E41DA3 /* Endian.swift */; };
+		1757FC5A2470A51F00E41DA3 /* CSVRowDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC522470A51F00E41DA3 /* CSVRowDecoder.swift */; };
+		1757FC5B2470A51F00E41DA3 /* CSVReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC532470A51F00E41DA3 /* CSVReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +64,14 @@
 		1757FC3B24701E8F00E41DA3 /* Vocab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vocab.swift; sourceTree = "<group>"; };
 		1757FC3D24701E8F00E41DA3 /* ProficiencyCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProficiencyCalculator.swift; sourceTree = "<group>"; };
 		1757FC4624701EE800E41DA3 /* DBCreation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBCreation.swift; sourceTree = "<group>"; };
+		1757FC4C2470A51F00E41DA3 /* CSVError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVError.swift; sourceTree = "<group>"; };
+		1757FC4D2470A51F00E41DA3 /* CSVWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVWriter.swift; sourceTree = "<group>"; };
+		1757FC4E2470A51F00E41DA3 /* BinaryReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinaryReader.swift; sourceTree = "<group>"; };
+		1757FC4F2470A51F00E41DA3 /* Legacy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Legacy.swift; sourceTree = "<group>"; };
+		1757FC502470A51F00E41DA3 /* UnicodeIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnicodeIterator.swift; sourceTree = "<group>"; };
+		1757FC512470A51F00E41DA3 /* Endian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endian.swift; sourceTree = "<group>"; };
+		1757FC522470A51F00E41DA3 /* CSVRowDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVRowDecoder.swift; sourceTree = "<group>"; };
+		1757FC532470A51F00E41DA3 /* CSVReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVReader.swift; sourceTree = "<group>"; };
 		587761D89EA8241A3E165304 /* Pods_DBCreation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DBCreation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CB431373245F761536E1DA /* Pods-DBCreation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBCreation.release.xcconfig"; path = "Target Support Files/Pods-DBCreation/Pods-DBCreation.release.xcconfig"; sourceTree = "<group>"; };
 		E1ED534B86F730420CEED3A5 /* Pods-DBCreation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBCreation.debug.xcconfig"; path = "Target Support Files/Pods-DBCreation/Pods-DBCreation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +110,7 @@
 		1757FC2924701DB700E41DA3 /* DBCreation */ = {
 			isa = PBXGroup;
 			children = (
+				1757FC4B2470A51F00E41DA3 /* CSV */,
 				1757FC4524701EE800E41DA3 /* DBCreation */,
 				1757FC3124701E5300E41DA3 /* Model */,
 				1757FC3424701E8F00E41DA3 /* Model */,
@@ -148,6 +165,21 @@
 				1757FC4624701EE800E41DA3 /* DBCreation.swift */,
 			);
 			path = DBCreation;
+			sourceTree = "<group>";
+		};
+		1757FC4B2470A51F00E41DA3 /* CSV */ = {
+			isa = PBXGroup;
+			children = (
+				1757FC4C2470A51F00E41DA3 /* CSVError.swift */,
+				1757FC4D2470A51F00E41DA3 /* CSVWriter.swift */,
+				1757FC4E2470A51F00E41DA3 /* BinaryReader.swift */,
+				1757FC4F2470A51F00E41DA3 /* Legacy.swift */,
+				1757FC502470A51F00E41DA3 /* UnicodeIterator.swift */,
+				1757FC512470A51F00E41DA3 /* Endian.swift */,
+				1757FC522470A51F00E41DA3 /* CSVRowDecoder.swift */,
+				1757FC532470A51F00E41DA3 /* CSVReader.swift */,
+			);
+			path = CSV;
 			sourceTree = "<group>";
 		};
 		2AE928072542B9519A7CCE27 /* Pods */ = {
@@ -252,8 +284,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1757FC542470A51F00E41DA3 /* CSVError.swift in Sources */,
+				1757FC562470A51F00E41DA3 /* BinaryReader.swift in Sources */,
 				1757FC3F24701E8F00E41DA3 /* LanguageCode.swift in Sources */,
+				1757FC582470A51F00E41DA3 /* UnicodeIterator.swift in Sources */,
 				1757FC4324701E8F00E41DA3 /* Vocab.swift in Sources */,
+				1757FC5B2470A51F00E41DA3 /* CSVReader.swift in Sources */,
+				1757FC572470A51F00E41DA3 /* Legacy.swift in Sources */,
+				1757FC592470A51F00E41DA3 /* Endian.swift in Sources */,
+				1757FC552470A51F00E41DA3 /* CSVWriter.swift in Sources */,
+				1757FC5A2470A51F00E41DA3 /* CSVRowDecoder.swift in Sources */,
 				1757FC3E24701E8F00E41DA3 /* Lesson.swift in Sources */,
 				1757FC2B24701DB700E41DA3 /* main.swift in Sources */,
 				1757FC4024701E8F00E41DA3 /* Book.swift in Sources */,
