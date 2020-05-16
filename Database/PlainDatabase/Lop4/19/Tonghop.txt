@@ -33,9 +33,6 @@
 운전 중 휴대전화 사용금지	Cấm sử dụng điện thoại trong khi lái xe
 전 좌석 안전벨트 착용	Thắt dây an toàn ở hàng ghế trước
 안전모 착용	Đội mũ bảo hiểm
-
-
-
 괴롭히다	làm đau buồn, gây đau đớn
 스토킹	bám đuôi, theo dõi
 범칙금	tiền phạt phạm luật (giao thông)
@@ -60,9 +57,6 @@
 부과되다	bị bắt phạt, bị bắt đóng phí, bị đánh thuế
 요금 총액	tổng số tiền chi phí, cước phí
 외부	ngoài, bên ngoài
-
-
-
 주최하다	bảo trợ, đỡ đầu 
 독자	Độc giả
 예절	lễ tiết, nghi thức giao tiếp, lễ nghi phép tắc
@@ -76,9 +70,6 @@
 목줄을 매다	buộc dây cổ
 배설물	chất thải, phân
 치우다	Cất, dọn, thu dọn
-
-
-
 법규	pháp quy
 흔히	thường, thường hay
 저지르다	gây ra, tạo ra (lỗi, sai trái), phạm lỗi

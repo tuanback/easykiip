@@ -61,9 +61,6 @@ __의 수도	kinh đô của  __
 전통음식을 맛보다	nếm thử đồ ăn truyền thống
 가정식을 맛보다	ăn thử bữa ăn gia đình
 길거리음식 (포장마차)을 맛보다	nếm thử món ăn đường phố
-
-
-
 얼굴이 타다	mặt bị cháy nắng
 팔만대장경	Bát Vạn Đại Tạng Kinh 
 목판	 bản khắc gỗ, khuôn in
@@ -78,9 +75,6 @@ __의 수도	kinh đô của  __
 천근만근	sức nặng ngàn cân
 눈꺼풀이 천근만근이다	mí mắt nặng trĩu
 간이 싱겁다	nhạt, không mặn
-
-
-
 평화롭다	thanh bình, bình yên
 마치	hệt như
 석굴암	Am Seokgul
@@ -94,9 +88,6 @@ __의 수도	kinh đô của  __
 장엄함	sự trang nghiêm, sự uy nghiêm
 고개가 숙이다	cúi đầu
 만족스럽다	đầy thỏa mãn, đầy mãn nguyện
-
-
-
 유네스코	Unesco
 보편적	mang tính phổ biến
 가치를 지니다	mang giá trị

@@ -31,9 +31,6 @@
 접촉	sự va chạm, sự tiếp xúc
 실수	sự sai sót, sự sai lầm, sự thất lễ, sự khiếm nhã
 -자마자	ngay tức khắc, ngay lập tức, ngay khi... thì
-
-
-
 빗길	đường mưa, đường ướt
 사망하다	tử vong
 국도	đường quốc lộ
@@ -47,9 +44,6 @@
 피해액	số tiền thiệt hại
 폭행	sự bạo hành, sự cưỡng ép quan hệ...
 혐의	sự hiềm nghi, mối nghi ngờ
-
-
-
 긴급 전화번호	số điện thoại khẩn cấp
 치안	sự giữ an ninh, trị an
 순위	thứ tự trong bảng xếp hạng

@@ -21,9 +21,6 @@
 온정주의가 있다	có quyền làm cha, quyền bảo vệ che chở
 서열을 중시하다	coi trọng thứ bậc
 체면을 중시하다	xem trọng thể diện
-
-
-
 한국 전통 공연	buổi trình diễn truyền thống Hàn Quốc
 사물놀이	Samulnori
 마당놀이	Matangnori
@@ -36,9 +33,6 @@
 뻗어나가다	lan rộng, vươn ra
 언어의 장벽	 rào cản ngôn ngữ
 사고방식	lối tư duy, phương pháp tư duy
-
-
-
 잠자리	chỗ ngủ
 거절하다	từ chối, khước từ
 수치스럽다	hổ thẹn, nhục nhã

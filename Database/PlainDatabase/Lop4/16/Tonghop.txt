@@ -34,9 +34,6 @@ TV, 컴퓨터의 사용 시간을 줄입니다	Giảm thời gian sử dụng Ti
 청소기는 한 단계 낮게 조절(강 → 약)하여 사용합니다	Máy hút bụi điều chỉnh thấp đi một cấp (mạnh→ yếu) rồi sử dụng
 냉장고의 음식물은 60%만 넣어 냉기 순환이 잘 되게 합니다	Đặt, để không quá 60% thực phẩm vào trong tủ lạnh để tuần hoàn hơi lạnh được tốt.
 사용하지 않는 곳의 조명은 완전히 소등합니다	Tắt đèn hoàn toàn ở những nơi không sử dụng ảnh sáng
-
-
-
 골칫거리	việc phiền toái, mối lo ngại
 국토	lãnh thổ quốc gia (quốc thổ)
 미처	chưa, đến mức đó, trước đó...
@@ -46,18 +43,12 @@ TV, 컴퓨터의 사용 시간을 줄입니다	Giảm thời gian sử dụng Ti
 배출되다	được thải ra
 바람직하다	lý tưởng, đúng đắn
 구체적	tính cụ thể
-
-
-
 비닐 쇼핑백	 túi nilon
 캠페인	chiến dịch, cuộc vận động
 장바구니	túi đi chợ, giỏ đi chợ
 유해 물질	chất độc hại
 분해되다	 bị phân hủy, được tháo rời, được tháo dỡ, bị tan rã,...
 방긋 웃다	 mỉm cười
-
-
-
 공공 기관	 cơ quan nhà nước
 앞장서다	 đứng đầu
 순차	lần lượt, trật tự
