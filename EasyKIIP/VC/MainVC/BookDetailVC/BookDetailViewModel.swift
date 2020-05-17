@@ -87,7 +87,7 @@ class BookDetailViewModel {
         var j = 0
         
         while i < lessons.count {
-          if i > 0 && i % 4 == 0 && j < ads.count {
+          if i > 0 && (i + 1) % 5 == 0 && j < ads.count {
             results.append(.item(viewModel: lessonsItemVM[i]))
             results.append(.ads(viewModel: ads[j]))
             j += 1

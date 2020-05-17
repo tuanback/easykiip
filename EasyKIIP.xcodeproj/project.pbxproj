@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1738424C2470CF3500BEFE2F /* LessonDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */; };
+		1738425424712C2900BEFE2F /* AdsSmallTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738425324712C2900BEFE2F /* AdsSmallTemplateView.swift */; };
+		1738425524712C2900BEFE2F /* AdsSmallTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738425324712C2900BEFE2F /* AdsSmallTemplateView.swift */; };
 		1757FC5D2470B8C400E41DA3 /* vocabBundled.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */; };
 		1757FC5E2470B8C400E41DA3 /* vocabBundled.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */; };
 		1757FC602470B92E00E41DA3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC5F2470B92E00E41DA3 /* Path.swift */; };
@@ -34,16 +36,6 @@
 		17954AB2245D3F6000C8CC95 /* MainBookItemCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */; };
 		17954ABD245EA9CE00C8CC95 /* BookDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */; };
 		17954ABE245EB4DB00C8CC95 /* UserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70B58245580B600C67334 /* UserSession.framework */; };
-		17A8A2EB246C983B00794C64 /* GADTMediumTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A8A2E3246C983B00794C64 /* GADTMediumTemplateView.xib */; };
-		17A8A2EC246C983B00794C64 /* GADTMediumTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A8A2E3246C983B00794C64 /* GADTMediumTemplateView.xib */; };
-		17A8A2ED246C983B00794C64 /* GADTSmallTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8A2E6246C983B00794C64 /* GADTSmallTemplateView.m */; };
-		17A8A2EE246C983B00794C64 /* GADTSmallTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8A2E6246C983B00794C64 /* GADTSmallTemplateView.m */; };
-		17A8A2EF246C983B00794C64 /* GADTSmallTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A8A2E7246C983B00794C64 /* GADTSmallTemplateView.xib */; };
-		17A8A2F0246C983B00794C64 /* GADTSmallTemplateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A8A2E7246C983B00794C64 /* GADTSmallTemplateView.xib */; };
-		17A8A2F1246C983B00794C64 /* GADTTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8A2E8246C983B00794C64 /* GADTTemplateView.m */; };
-		17A8A2F2246C983B00794C64 /* GADTTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8A2E8246C983B00794C64 /* GADTTemplateView.m */; };
-		17A8A2F3246C983B00794C64 /* GADTMediumTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8A2E9246C983B00794C64 /* GADTMediumTemplateView.m */; };
-		17A8A2F4246C983B00794C64 /* GADTMediumTemplateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A8A2E9246C983B00794C64 /* GADTMediumTemplateView.m */; };
 		17B70A86244C180200C67334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70A85244C180200C67334 /* AppDelegate.swift */; };
 		17B70A8F244C180500C67334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A8E244C180500C67334 /* Assets.xcassets */; };
 		17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A90244C180500C67334 /* LaunchScreen.storyboard */; };
@@ -271,6 +263,7 @@
 		10354E400E6A62457F3A3874 /* Pods_UserSession_UserSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSession_UserSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModelTests.swift; sourceTree = "<group>"; };
+		1738425324712C2900BEFE2F /* AdsSmallTemplateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsSmallTemplateView.swift; sourceTree = "<group>"; };
 		1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = vocabBundled.realm; path = Database/vocabBundled.realm; sourceTree = SOURCE_ROOT; };
 		1757FC5F2470B92E00E41DA3 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		1766FF92245A5A93008B263D /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
@@ -318,14 +311,6 @@
 		17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBookItemCVC.swift; sourceTree = "<group>"; };
 		17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModelTests.swift; sourceTree = "<group>"; };
-		17A8A2E3246C983B00794C64 /* GADTMediumTemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GADTMediumTemplateView.xib; sourceTree = "<group>"; };
-		17A8A2E4246C983B00794C64 /* GADTTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTTemplateView.h; sourceTree = "<group>"; };
-		17A8A2E5246C983B00794C64 /* GADTMediumTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTMediumTemplateView.h; sourceTree = "<group>"; };
-		17A8A2E6246C983B00794C64 /* GADTSmallTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTSmallTemplateView.m; sourceTree = "<group>"; };
-		17A8A2E7246C983B00794C64 /* GADTSmallTemplateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GADTSmallTemplateView.xib; sourceTree = "<group>"; };
-		17A8A2E8246C983B00794C64 /* GADTTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTTemplateView.m; sourceTree = "<group>"; };
-		17A8A2E9246C983B00794C64 /* GADTMediumTemplateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADTMediumTemplateView.m; sourceTree = "<group>"; };
-		17A8A2EA246C983B00794C64 /* GADTSmallTemplateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADTSmallTemplateView.h; sourceTree = "<group>"; };
 		17A8A2F5246C990B00794C64 /* EasyKIIP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyKIIP-Bridging-Header.h"; sourceTree = "<group>"; };
 		17B70A82244C180200C67334 /* Easy KIIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy KIIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70A85244C180200C67334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -713,25 +698,9 @@
 			path = BookCell;
 			sourceTree = "<group>";
 		};
-		17A8A2E2246C983B00794C64 /* nativetemplates */ = {
-			isa = PBXGroup;
-			children = (
-				17A8A2E3246C983B00794C64 /* GADTMediumTemplateView.xib */,
-				17A8A2E4246C983B00794C64 /* GADTTemplateView.h */,
-				17A8A2E5246C983B00794C64 /* GADTMediumTemplateView.h */,
-				17A8A2E6246C983B00794C64 /* GADTSmallTemplateView.m */,
-				17A8A2E7246C983B00794C64 /* GADTSmallTemplateView.xib */,
-				17A8A2E8246C983B00794C64 /* GADTTemplateView.m */,
-				17A8A2E9246C983B00794C64 /* GADTMediumTemplateView.m */,
-				17A8A2EA246C983B00794C64 /* GADTSmallTemplateView.h */,
-			);
-			path = nativetemplates;
-			sourceTree = "<group>";
-		};
 		17A8A2F6246C99F600794C64 /* Ads */ = {
 			isa = PBXGroup;
 			children = (
-				17A8A2E2246C983B00794C64 /* nativetemplates */,
 			);
 			path = Ads;
 			sourceTree = "<group>";
@@ -1164,6 +1133,7 @@
 		17F30EED246B55E7008040BE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				1738425324712C2900BEFE2F /* AdsSmallTemplateView.swift */,
 				17F30EEE246B5608008040BE /* BookDetailCVC.swift */,
 				17F30EF1246B561D008040BE /* BookDetailAdsCVC.swift */,
 			);
@@ -1430,12 +1400,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A8A2EF246C983B00794C64 /* GADTSmallTemplateView.xib in Resources */,
 				17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */,
 				17FBF726245BEC3400A65233 /* Localizable.strings in Resources */,
 				17B70A8F244C180500C67334 /* Assets.xcassets in Resources */,
 				1766FFF2245BD993008B263D /* GoogleService-Info.plist in Resources */,
-				17A8A2EB246C983B00794C64 /* GADTMediumTemplateView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1443,9 +1411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A8A2F0246C983B00794C64 /* GADTSmallTemplateView.xib in Resources */,
 				17FBF727245BEC3400A65233 /* Localizable.strings in Resources */,
-				17A8A2EC246C983B00794C64 /* GADTMediumTemplateView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1741,17 +1707,15 @@
 				17FBF717245BEC1800A65233 /* LaunchRootView.swift in Sources */,
 				17FBF711245BEC0E00A65233 /* OnboardingVM.swift in Sources */,
 				17FBF706245BEBF900A65233 /* LoginViewModel.swift in Sources */,
+				1738425424712C2900BEFE2F /* AdsSmallTemplateView.swift in Sources */,
 				17FBF71D245BEC2300A65233 /* AppDenpendencyContainer.swift in Sources */,
 				17FBF6DE245BEBB000A65233 /* UIColor_Extension.swift in Sources */,
 				17FBF6F5245BEBDC00A65233 /* MainRootView.swift in Sources */,
 				17FBF6E9245BEBC500A65233 /* NiblessView.swift in Sources */,
 				17FBF6F2245BEBD700A65233 /* MainViewModel.swift in Sources */,
-				17A8A2F3246C983B00794C64 /* GADTMediumTemplateView.m in Sources */,
 				176ADE072460E958006C5D3C /* BookDetailViewModel.swift in Sources */,
-				17A8A2F1246C983B00794C64 /* GADTTemplateView.m in Sources */,
 				17FBF70E245BEC0800A65233 /* OnboardingVC.swift in Sources */,
 				17F30EF2246B561D008040BE /* BookDetailAdsCVC.swift in Sources */,
-				17A8A2ED246C983B00794C64 /* GADTSmallTemplateView.m in Sources */,
 				17F30EE3246ACBAC008040BE /* BookDetailRootView.swift in Sources */,
 				17E7F17E24681664008667FB /* FirebaseVocabRemoteAPI.swift in Sources */,
 				17FBF6F8245BEBE100A65233 /* MainVC.swift in Sources */,
@@ -1767,12 +1731,10 @@
 				17FBF6E7245BEBC000A65233 /* Navigation.swift in Sources */,
 				17FBF70C245BEC0300A65233 /* LoginVC.swift in Sources */,
 				17FBF6FD245BEBEA00A65233 /* WelcomeViewModel.swift in Sources */,
-				17A8A2F2246C983B00794C64 /* GADTTemplateView.m in Sources */,
 				17FBF71B245BEC1C00A65233 /* LaunchVC.swift in Sources */,
 				17FBF723245BEC2D00A65233 /* SignedInDependencyContainer.swift in Sources */,
 				17F30EE8246AD1C6008040BE /* AdsIdentifier.swift in Sources */,
 				17F30EE4246ACBAC008040BE /* BookDetailRootView.swift in Sources */,
-				17A8A2F4246C983B00794C64 /* GADTMediumTemplateView.m in Sources */,
 				17FBF700245BEBEF00A65233 /* WelcomeRootView.swift in Sources */,
 				17FBF6ED245BEBCB00A65233 /* NiblessNavigationController.swift in Sources */,
 				17FBF715245BEC1300A65233 /* LaunchViewModel.swift in Sources */,
@@ -1802,9 +1764,9 @@
 				17F30EF0246B5608008040BE /* BookDetailCVC.swift in Sources */,
 				17FBF6EA245BEBC600A65233 /* NiblessView.swift in Sources */,
 				17FBF6F3245BEBD800A65233 /* MainViewModel.swift in Sources */,
+				1738425524712C2900BEFE2F /* AdsSmallTemplateView.swift in Sources */,
 				17FBF70F245BEC0900A65233 /* OnboardingVC.swift in Sources */,
 				17FBF6F9245BEBE200A65233 /* MainVC.swift in Sources */,
-				17A8A2EE246C983B00794C64 /* GADTSmallTemplateView.m in Sources */,
 				17F30EEB246B4A76008040BE /* BookDetailVC.swift in Sources */,
 				17E7F18324681B12008667FB /* FirestoreKey.swift in Sources */,
 				17954AAA245D052B00C8CC95 /* MainViewModelTests.swift in Sources */,

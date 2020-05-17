@@ -9,6 +9,7 @@
 import XCTest
 import EasyKIIPKit
 
+/*
 class FirebaseVocabRemoteAPITests: XCTestCase {
   
   private let userID = "H0NIPkDah7Vc1RkZF3TgpJ0jGsp2"
@@ -118,3 +119,4 @@ class FirebaseVocabRemoteAPITests: XCTestCase {
   }
   
 }
+*/

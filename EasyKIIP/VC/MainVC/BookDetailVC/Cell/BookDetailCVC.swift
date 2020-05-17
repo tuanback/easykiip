@@ -55,11 +55,16 @@ class BookDetailCVC: UICollectionViewCell {
     layer.shadowOffset = CGSize(width: 0, height: 0)
     layer.cornerRadius = 10
     
+    let containerView = UIView()
+    containerView.backgroundColor = UIColor.clear
+    
     viewUnitIndicatorContainer = UIView()
     viewUnitIndicatorContainer.backgroundColor = UIColor.appRed
     viewUnitIndicatorContainer.layer.cornerRadius = 8
     
-    addSubview(viewUnitIndicatorContainer)
+    addSubview(containerView)
+    
+    containerView.addSubview(viewUnitIndicatorContainer)
     
     labelUnitIndicator = UILabel()
     labelUnitIndicator.font = UIFont.appFontDemiBold(ofSize: 25)
@@ -68,7 +73,7 @@ class BookDetailCVC: UICollectionViewCell {
     viewUnitIndicatorContainer.addSubview(labelUnitIndicator)
     
     labelLessonKorean = UILabel()
-    labelLessonKorean.numberOfLines = 2
+    labelLessonKorean.numberOfLines = 0
     labelLessonKorean.font = UIFont.appFontRegular(ofSize: 16)
     labelLessonKorean.textColor = UIColor.appLabelBlack
     labelLessonKorean.textAlignment = .left
@@ -76,7 +81,7 @@ class BookDetailCVC: UICollectionViewCell {
     labelLessonKorean.minimumScaleFactor = 0.5
     
     labelLessonTranslation = UILabel()
-    labelLessonTranslation.numberOfLines = 2
+    labelLessonTranslation.numberOfLines = 0
     labelLessonTranslation.font = UIFont.appFontRegular(ofSize: 14)
     labelLessonTranslation.textColor = UIColor.appSecondaryLabel
     labelLessonTranslation.textAlignment = .left
@@ -113,7 +118,7 @@ class BookDetailCVC: UICollectionViewCell {
     rightStackview.alignment = .fill
     rightStackview.distribution = .fill
     
-    let containerStackView = UIStackView(arrangedSubviews: [viewUnitIndicatorContainer,
+    let containerStackView = UIStackView(arrangedSubviews: [containerView,
                                                             rightStackview])
     containerStackView.axis = .horizontal
     containerStackView.spacing = 8
@@ -123,8 +128,14 @@ class BookDetailCVC: UICollectionViewCell {
     addSubview(containerStackView)
     
     // Set constraint here
+    containerView.snp.makeConstraints { (make) in
+      make.width.equalTo(120)
+    }
+    
     viewUnitIndicatorContainer.snp.makeConstraints { (make) in
-      make.width.equalTo(viewUnitIndicatorContainer.snp.height).multipliedBy(0.9)
+      make.center.equalToSuperview()
+      make.width.equalToSuperview()
+      make.height.equalTo(viewUnitIndicatorContainer.snp.width)
     }
     
     labelUnitIndicator.snp.makeConstraints { (make) in
@@ -140,8 +151,10 @@ class BookDetailCVC: UICollectionViewCell {
     }
     
     containerStackView.snp.makeConstraints { (make) in
-      make.edges.equalToSuperview().inset(10)
-      
+      make.top.equalToSuperview().inset(15)
+      make.bottom.equalToSuperview().inset(10)
+      make.leading.equalToSuperview().inset(10)
+      make.trailing.equalToSuperview().inset(10)
     }
   }
   

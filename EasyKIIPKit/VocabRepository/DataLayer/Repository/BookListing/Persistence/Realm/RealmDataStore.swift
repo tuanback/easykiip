@@ -44,7 +44,11 @@ public class RealmDataStore: VocabDataStore {
   private let bundledRealmProvider: RealmProvider
   private let historyRealmProvider: RealmProvider
   
-  public init(bundled: RealmProvider = RealmProvider.bundled, history: RealmProvider = RealmProvider.history) {
+  public convenience init() {
+    self.init(bundled: RealmProvider.bundled, history: RealmProvider.history)
+  }
+  
+  init(bundled: RealmProvider = RealmProvider.bundled, history: RealmProvider = RealmProvider.history) {
     self.bundledRealmProvider = bundled
     self.historyRealmProvider = history
   }

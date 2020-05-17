@@ -12,7 +12,7 @@ import GoogleMobileAds
 
 class BookDetailAdsCVC: UICollectionViewCell {
     
-  private var adsView: GADTSmallTemplateView!
+  private var adsView: AdsSmallTemplateView!
   
   private weak var nativeAds: GADUnifiedNativeAd?
   
@@ -32,7 +32,14 @@ class BookDetailAdsCVC: UICollectionViewCell {
   
   private func setupViews() {
     
-    adsView = GADTSmallTemplateView()
+    backgroundColor = UIColor.appBackground
+    layer.shadowColor = UIColor.appShadowColor.cgColor
+    layer.shadowOpacity = 0.25
+    layer.shadowRadius = 3
+    layer.shadowOffset = CGSize(width: 0, height: 0)
+    layer.cornerRadius = 10
+    
+    adsView = AdsSmallTemplateView()
     addSubview(adsView)
     
     adsView.snp.makeConstraints { (make) in
