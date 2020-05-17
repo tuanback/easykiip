@@ -26,7 +26,7 @@ public class MainViewModel {
   
   var bookViewModels = BehaviorRelay<[BookItemViewModel]>(value: [])
   
-  private var oBooks: [Book] = []
+  private var books: [Book] = []
   
   var oNavigation = PublishRelay<NavigationEvent<SignedInView>>()
   
@@ -42,16 +42,18 @@ public class MainViewModel {
   }
   
   private func initBookList() {
-    oBooks = vocabRepository.getListOfBook()
-    let itemViewModels = convertToItemViewModel(books: oBooks)
+    books = vocabRepository.getListOfBook()
+    let itemViewModels = convertToItemViewModel(books: books)
     bookViewModels.accept(itemViewModels)
+    
+    
   }
   
   func getNumberOfBooks() -> Int {
-    if oBooks.count == 0 {
+    if books.count == 0 {
       initBookList()
     }
-    return oBooks.count
+    return books.count
   }
   
   private func convertToItemViewModel(books: [Book]) -> [BookItemViewModel] {
@@ -63,7 +65,7 @@ public class MainViewModel {
   }
   
   func handleBookItemClicked(_ itemViewModel: BookItemViewModel) {
-    if let book = oBooks.first(where: { $0.id == itemViewModel.id   }) {
+    if let book = books.first(where: { $0.id == itemViewModel.id   }) {
       oNavigation.accept(.push(view: .bookDetail(book)))
     }
   }
