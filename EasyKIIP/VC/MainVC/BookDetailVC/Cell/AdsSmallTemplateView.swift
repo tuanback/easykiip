@@ -58,11 +58,12 @@ class AdsSmallTemplateView: GADUnifiedNativeAdView {
     self.headlineView = headlineView
     
     let labelAd = UILabel()
-    labelAd.font = UIFont.appFontRegular(ofSize: 10)
+    labelAd.font = UIFont.appFontMedium(ofSize: 10)
     labelAd.textColor = UIColor.white
     labelAd.backgroundColor = UIColor(hexString: "E4BE59")
     labelAd.text = "Ad"
     labelAd.textAlignment = .center
+    labelAd.layer.cornerRadius = 2
     
     addSubview(labelAd)
     
