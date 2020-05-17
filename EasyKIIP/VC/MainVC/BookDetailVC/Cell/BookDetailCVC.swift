@@ -72,12 +72,16 @@ class BookDetailCVC: UICollectionViewCell {
     labelLessonKorean.font = UIFont.appFontRegular(ofSize: 16)
     labelLessonKorean.textColor = UIColor.appLabelBlack
     labelLessonKorean.textAlignment = .left
+    labelLessonKorean.adjustsFontSizeToFitWidth = true
+    labelLessonKorean.minimumScaleFactor = 0.5
     
     labelLessonTranslation = UILabel()
     labelLessonTranslation.numberOfLines = 2
     labelLessonTranslation.font = UIFont.appFontRegular(ofSize: 14)
     labelLessonTranslation.textColor = UIColor.appSecondaryLabel
     labelLessonTranslation.textAlignment = .left
+    labelLessonTranslation.adjustsFontSizeToFitWidth = true
+    labelLessonTranslation.minimumScaleFactor = 0.5
     
     labelLastPracticed = UILabel()
     labelLastPracticed.font = UIFont.appFontRegular(ofSize: 12)
@@ -127,8 +131,12 @@ class BookDetailCVC: UICollectionViewCell {
       make.center.equalToSuperview()
     }
     
+    viewProgressContainer.snp.makeConstraints { (make) in
+      make.height.equalTo(20)
+    }
+    
     lastPracticeContainer.snp.makeConstraints { (make) in
-      make.width.equalTo(53)
+      make.width.equalTo(40)
     }
     
     containerStackView.snp.makeConstraints { (make) in

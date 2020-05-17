@@ -21,7 +21,7 @@ public class SignedInDependencyContainer {
     }
     
     func makeVocabDataStore() -> VocabDataStore {
-      return VocabDataStoreInMemory()
+      return RealmDataStore()
     }
     func makeVocabRepository(userSession: UserSession) -> VocabRepository {
       let remoteAPI = makeRemoteAPI()

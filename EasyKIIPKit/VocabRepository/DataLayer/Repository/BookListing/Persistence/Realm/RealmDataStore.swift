@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-struct RealmProvider {
+public struct RealmProvider {
   
   let configuration: Realm.Configuration
   
@@ -21,25 +21,41 @@ struct RealmProvider {
     return try! Realm(configuration: configuration)
   }
   
+  public static var bundled: RealmProvider = {
+    return RealmProvider(config: bundledConfig)
+  }()
+  
+  // MARK: - Bundled sets
+  private static let bundledConfig = Realm.Configuration(
+    fileURL: try! Path.inBundle(bundle: Bundle(identifier: "com.tuando.EasyKIIPKit")!, fileName: "vocabBundled.realm"),
+    readOnly: true)
+  
+  public static var history: RealmProvider {
+    return RealmProvider(config: historyConfig)
+  }
+  
+  private static let historyConfig = Realm.Configuration(
+    fileURL: try! Path.inDocuments("practiceHistory.realm")
+  )
 }
 
-class RealmDataStore: VocabDataStore {
+public class RealmDataStore: VocabDataStore {
   
   private let bundledRealmProvider: RealmProvider
   private let historyRealmProvider: RealmProvider
   
-  init(bundled: RealmProvider, history: RealmProvider) {
+  public init(bundled: RealmProvider = RealmProvider.bundled, history: RealmProvider = RealmProvider.history) {
     self.bundledRealmProvider = bundled
     self.historyRealmProvider = history
   }
   
-  func getListOfBook() -> [Book] {
+  public func getListOfBook() -> [Book] {
     let realm = bundledRealmProvider.realm
     let realmBooks = realm.objects(RealmBook.self)
     return realmBooks.map { $0.toBook() }
   }
   
-  func getListOfLesson(in book: Book) -> [Lesson] {
+  public func getListOfLesson(in book: Book) -> [Lesson] {
     let realm = bundledRealmProvider.realm
     let historyRealm = historyRealmProvider.realm
     guard let book = realm.object(ofType: RealmBook.self, forPrimaryKey: book.id) else {
@@ -52,7 +68,7 @@ class RealmDataStore: VocabDataStore {
     return lessons
   }
   
-  func getListOfVocabs(in lesson: Lesson) -> [Vocab] {
+  public func getListOfVocabs(in lesson: Lesson) -> [Vocab] {
     let realm = bundledRealmProvider.realm
     let historyRealm = historyRealmProvider.realm
     
@@ -67,7 +83,7 @@ class RealmDataStore: VocabDataStore {
     return vocabs
   }
   
-  func markVocabAsMastered(_ vocab: Vocab) {
+  public func markVocabAsMastered(_ vocab: Vocab) {
     let time = Date()
     
     let historyRealm = historyRealmProvider.realm
@@ -114,7 +130,7 @@ class RealmDataStore: VocabDataStore {
     updateLessonLastLearnDate(vocab: vocab, date: time)
   }
   
-  func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool) {
+  public func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool) {
     let time = Date()
     
     let historyRealm = historyRealmProvider.realm
@@ -225,7 +241,7 @@ class RealmDataStore: VocabDataStore {
     }
   }
   
-  func getLesson(by id: Int) -> Lesson? {
+  public func getLesson(by id: Int) -> Lesson? {
     let bundledRealm = bundledRealmProvider.realm
     let historyRealm = historyRealmProvider.realm
     guard let realmLesson = bundledRealm.object(ofType: RealmLesson.self, forPrimaryKey: id)
@@ -240,7 +256,7 @@ class RealmDataStore: VocabDataStore {
     return lesson
   }
   
-  func getVocab(by id: Int) -> Vocab? {
+  public func getVocab(by id: Int) -> Vocab? {
     let bundledRealm = bundledRealmProvider.realm
     let historyRealm = historyRealmProvider.realm
     guard let realmVocab = bundledRealm.object(ofType: RealmVocab.self, forPrimaryKey: id)
@@ -255,7 +271,7 @@ class RealmDataStore: VocabDataStore {
     return vocab
   }
   
-  func getNotSyncedVocabsInLesson(lessonID: Int) -> [Vocab] {
+  public func getNotSyncedVocabsInLesson(lessonID: Int) -> [Vocab] {
     
     let bundledRealm = bundledRealmProvider.realm
     let historyRealm = historyRealmProvider.realm
@@ -280,7 +296,7 @@ class RealmDataStore: VocabDataStore {
     return vocabs
   }
   
-  func searchVocab(keyword: String) -> [Vocab] {
+  public func searchVocab(keyword: String) -> [Vocab] {
     let bundledRealm = bundledRealmProvider.realm
     let historyRealm = historyRealmProvider.realm
     
@@ -301,7 +317,7 @@ class RealmDataStore: VocabDataStore {
     return vocabs
   }
   
-  func syncLessonProficiency(lessonID: Int, proficiency: UInt8, lastTimeSynced: Double) {
+  public func syncLessonProficiency(lessonID: Int, proficiency: UInt8, lastTimeSynced: Double) {
     let historyRealm = historyRealmProvider.realm
     
     //Lesson history is existed and synced
@@ -337,7 +353,7 @@ class RealmDataStore: VocabDataStore {
     }
   }
   
-  func isLessonSynced(_ lessonID: Int) -> Bool {
+  public func isLessonSynced(_ lessonID: Int) -> Bool {
     let historyRealm = historyRealmProvider.realm
     
     if let lessonHistory = historyRealm.object(ofType: RealmLessonHistory.self, forPrimaryKey: lessonID) {
@@ -347,7 +363,7 @@ class RealmDataStore: VocabDataStore {
     return false
   }
   
-  func syncPracticeHistory(vocabID: Int, isMastered: Bool, testTaken: Int, correctAnswer: Int, firstLearnDate: Date?, lastTimeTest: Date?) {
+  public func syncPracticeHistory(vocabID: Int, isMastered: Bool, testTaken: Int, correctAnswer: Int, firstLearnDate: Date?, lastTimeTest: Date?) {
     
     let time = Date()
     
@@ -403,7 +419,7 @@ class RealmDataStore: VocabDataStore {
     
   }
   
-  func setLessonSynced(lessonID: Int, lastTimeSynced: Double) {
+  public func setLessonSynced(lessonID: Int, lastTimeSynced: Double) {
     let historyRealm = historyRealmProvider.realm
     
     guard let realmLessonHistory = historyRealm.object(ofType: RealmLessonHistory.self, forPrimaryKey: lessonID) else {

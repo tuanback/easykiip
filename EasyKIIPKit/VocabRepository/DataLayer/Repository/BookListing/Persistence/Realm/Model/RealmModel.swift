@@ -43,7 +43,7 @@ class RealmBook: Object {
   func toBook() -> Book {
     var thumbURL: URL? = nil
     if let thumbName = self.thumbName,
-      let url = Bundle(for: type(of: self)).url(forResource: thumbName, withExtension: "jpg") {
+      let url = Bundle(for: type(of: self)).url(forResource: thumbName, withExtension: "") {
       thumbURL = url
     }
     let lessons: [Lesson] = self.lessons.map { $0.toLesson() }

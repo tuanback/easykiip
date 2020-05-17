@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1757FC5D2470B8C400E41DA3 /* vocabBundled.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */; };
+		1757FC5E2470B8C400E41DA3 /* vocabBundled.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */; };
+		1757FC602470B92E00E41DA3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC5F2470B92E00E41DA3 /* Path.swift */; };
+		1757FC612470B92E00E41DA3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC5F2470B92E00E41DA3 /* Path.swift */; };
 		1766FFEB245B9A7E008B263D /* FakeVocabRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFEA245B9A7E008B263D /* FakeVocabRemoteAPI.swift */; };
 		1766FFF2245BD993008B263D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1766FFF1245BD993008B263D /* GoogleService-Info.plist */; };
 		176ADE042460471F006C5D3C /* MainBookItemCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */; };
@@ -265,6 +269,8 @@
 		0DF5FC3C60A9BB6B51A6EF38 /* Pods-UserSessionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSessionTests.release.xcconfig"; path = "Target Support Files/Pods-UserSessionTests/Pods-UserSessionTests.release.xcconfig"; sourceTree = "<group>"; };
 		10354E400E6A62457F3A3874 /* Pods_UserSession_UserSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSession_UserSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = vocabBundled.realm; path = Database/vocabBundled.realm; sourceTree = SOURCE_ROOT; };
+		1757FC5F2470B92E00E41DA3 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		1766FF92245A5A93008B263D /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
 		1766FFA1245A5DAE008B263D /* NiblessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessView.swift; sourceTree = "<group>"; };
 		1766FFA2245A5DAE008B263D /* NiblessNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NiblessNavigationController.swift; sourceTree = "<group>"; };
@@ -650,7 +656,9 @@
 		17954A90245D01A600C8CC95 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */,
 				17954A91245D01B000C8CC95 /* Images */,
+				1757FC5F2470B92E00E41DA3 /* Path.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -1436,6 +1444,7 @@
 			files = (
 				17954AA4245D029700C8CC95 /* book_2.jpg in Resources */,
 				17954AA2245D028200C8CC95 /* book_0.jpg in Resources */,
+				1757FC5D2470B8C400E41DA3 /* vocabBundled.realm in Resources */,
 				17954AA3245D029400C8CC95 /* book_1.jpg in Resources */,
 				17954AA7245D02A200C8CC95 /* book_5.jpg in Resources */,
 				17954AA8245D02A600C8CC95 /* book_6.jpg in Resources */,
@@ -1448,6 +1457,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1757FC5E2470B8C400E41DA3 /* vocabBundled.realm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1796,6 +1806,7 @@
 			files = (
 				17B70AF3244DBDCC00C67334 /* PraticeHistory.swift in Sources */,
 				17E7F16D246627D5008667FB /* RealmDataStore.swift in Sources */,
+				1757FC602470B92E00E41DA3 /* Path.swift in Sources */,
 				1766FFEB245B9A7E008B263D /* FakeVocabRemoteAPI.swift in Sources */,
 				17B70AEA244CF4E300C67334 /* VocabRepository.swift in Sources */,
 				17B70B0D244F132F00C67334 /* ProficiencyCalculator.swift in Sources */,
@@ -1817,6 +1828,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				176ADE0E24620EAB006C5D3C /* RealmProviderExtensions.swift in Sources */,
+				1757FC612470B92E00E41DA3 /* Path.swift in Sources */,
 				17B70AF1244CF57100C67334 /* Book.swift in Sources */,
 				17B70B1E245308EC00C67334 /* Lesson.swift in Sources */,
 				17B70B04244DC7F800C67334 /* Vocab.swift in Sources */,

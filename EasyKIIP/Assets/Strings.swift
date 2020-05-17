@@ -45,6 +45,6 @@ public struct Strings {
   
   static let today = NSLocalizedString("Today", bundle: Strings.languageBundle, comment: "")
   static let yesterday = NSLocalizedString("Yesterday", bundle: Strings.languageBundle, comment: "")
-  static let daysAgo = NSLocalizedString("days ago", bundle: Strings.languageBundle, comment: "")
+  static let daysAgo = NSLocalizedString("d ago", bundle: Strings.languageBundle, comment: "")
   
 }
