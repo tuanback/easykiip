@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t2U-1f-VCv">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Tutorial ItemVC-->
+        <scene sceneID="Rbi-a2-PQL">
+            <objects>
+                <viewController id="t2U-1f-VCv" customClass="TutorialItemVC" customModule="_i_INSITE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jEO-fq-c8A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="f3s-CJ-qcT">
+                                <rect key="frame" x="0.0" y="10" width="414" height="666"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="s74-WD-crm">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="429"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zOQ-zc-8fV">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="429"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oIT-jA-dEH">
+                                        <rect key="frame" x="0.0" y="437" width="414" height="229"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="749" text="Smartphone Alignment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bu9-BY-z3j">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="177.66666666666666"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Align the smartphone with the 360° camera." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Grt-ei-T07">
+                                                <rect key="frame" x="0.0" y="177.66666666666663" width="414" height="51.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="oIT-jA-dEH" firstAttribute="height" secondItem="s74-WD-crm" secondAttribute="height" constant="-200" id="6Hg-lP-8ci">
+                                        <variation key="heightClass=compact" constant="0.0"/>
+                                    </constraint>
+                                    <constraint firstItem="oIT-jA-dEH" firstAttribute="width" secondItem="s74-WD-crm" secondAttribute="width" id="Vmn-QJ-iok">
+                                        <variation key="heightClass=compact" constant="-100"/>
+                                    </constraint>
+                                </constraints>
+                                <variation key="heightClass=compact" axis="horizontal"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.46274509803921571" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f3s-CJ-qcT" firstAttribute="bottom" secondItem="VQO-iG-KWf" secondAttribute="bottom" constant="-60" id="GfH-pA-7RC"/>
+                            <constraint firstItem="f3s-CJ-qcT" firstAttribute="top" secondItem="VQO-iG-KWf" secondAttribute="top" constant="10" id="OTB-eO-88a"/>
+                            <constraint firstItem="VQO-iG-KWf" firstAttribute="trailing" secondItem="f3s-CJ-qcT" secondAttribute="trailing" id="iq3-Ta-QWu"/>
+                            <constraint firstItem="f3s-CJ-qcT" firstAttribute="leading" secondItem="VQO-iG-KWf" secondAttribute="leading" id="nrG-aE-PZt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VQO-iG-KWf"/>
+                    </view>
+                    <connections>
+                        <outlet property="textHeading" destination="Bu9-BY-z3j" id="o8z-9n-h1n"/>
+                        <outlet property="textMessage" destination="Grt-ei-T07" id="yCd-Zy-8BQ"/>
+                        <outlet property="viewVideoContainer" destination="zOQ-zc-8fV" id="pWj-Hr-i7N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oW-P9-fkD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="167" y="138"/>
+        </scene>
+    </scenes>
+</document>
