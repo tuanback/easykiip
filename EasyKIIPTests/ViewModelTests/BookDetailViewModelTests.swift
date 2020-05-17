@@ -32,11 +32,11 @@ class BookDetailViewModelTests: XCTestCase {
   }
   
   func test_init_getLessons_equalToLesson() {
-    let observer = scheduler.createObserver([LessonItemViewModel].self)
+    let observer = scheduler.createObserver([BookDetailItemViewModel].self)
     let (book, lessons, _) = makeSampleBook()
     let sut = makeSut(book: book)
     
-    subscription = sut.lessonViewModels.subscribe(observer)
+    subscription = sut.itemViewModels.subscribe(observer)
     
     scheduler.start()
     
@@ -44,7 +44,20 @@ class BookDetailViewModelTests: XCTestCase {
       $0.value.element
     }
     
-    XCTAssertEqual(results.last, convertToLessonItemViewModels(lessons: lessons))
+    var lessonViewModel: [LessonItemViewModel] = []
+    
+    if let last = results.last {
+      for item in last {
+        switch item {
+        case .item(let vm):
+          lessonViewModel.append(vm)
+        default:
+          break
+        }
+      }
+    }
+    
+    XCTAssertEqual(lessonViewModel, convertToLessonItemViewModels(lessons: lessons))
   }
   
   func test_afterGettingLesson_stateIsFalse() {

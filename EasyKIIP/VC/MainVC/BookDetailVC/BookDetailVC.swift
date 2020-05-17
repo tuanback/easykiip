@@ -10,18 +10,19 @@ import Foundation
 import UIKit
 import Firebase
 import GoogleMobileAds
+import RxSwift
+import RxCocoa
 
 public class BookDetailVC: NiblessViewController {
   
   private let viewModel: BookDetailViewModel
   
   private lazy var adUnitID = AdsIdentifier.id(for: .bookDetailItem)
+  private let numAdsToLoad = 4
+  private var nativeAds = [GADUnifiedNativeAd]()
+  private var adLoader: GADAdLoader!
   
-  let numAdsToLoad = 4
-  
-  var nativeAds = [GADUnifiedNativeAd]()
-  
-  var adLoader: GADAdLoader!
+  private let disposeBag = DisposeBag()
   
   init(viewModel: BookDetailViewModel) {
     self.viewModel = viewModel
@@ -34,8 +35,14 @@ public class BookDetailVC: NiblessViewController {
   
   public override func viewDidLoad() {
     super.viewDidLoad()
-    
+    observeViewModel()
     startAdLoader()
+  }
+  
+  private func observeViewModel() {
+    viewModel.oNavigationTitle
+      .bind(to: navigationItem.rx.title)
+      .disposed(by: disposeBag)
   }
   
   private func startAdLoader() {

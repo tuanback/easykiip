@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1738424C2470CF3500BEFE2F /* LessonDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */; };
 		1757FC5D2470B8C400E41DA3 /* vocabBundled.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */; };
 		1757FC5E2470B8C400E41DA3 /* vocabBundled.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */; };
 		1757FC602470B92E00E41DA3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC5F2470B92E00E41DA3 /* Path.swift */; };
@@ -269,6 +270,7 @@
 		0DF5FC3C60A9BB6B51A6EF38 /* Pods-UserSessionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSessionTests.release.xcconfig"; path = "Target Support Files/Pods-UserSessionTests/Pods-UserSessionTests.release.xcconfig"; sourceTree = "<group>"; };
 		10354E400E6A62457F3A3874 /* Pods_UserSession_UserSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSession_UserSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModelTests.swift; sourceTree = "<group>"; };
 		1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = vocabBundled.realm; path = Database/vocabBundled.realm; sourceTree = SOURCE_ROOT; };
 		1757FC5F2470B92E00E41DA3 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		1766FF92245A5A93008B263D /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
@@ -478,6 +480,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1738424A2470CF0600BEFE2F /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */,
+				17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */,
+				1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
 		1766FF91245A5A75008B263D /* LaunchVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -775,8 +787,7 @@
 			isa = PBXGroup;
 			children = (
 				17B70A9E244C180600C67334 /* Info.plist */,
-				17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */,
-				17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */,
+				1738424A2470CF0600BEFE2F /* ViewModelTests */,
 				17E7F17824679C52008667FB /* VocabRepository */,
 			);
 			path = EasyKIIPTests;
@@ -1776,6 +1787,7 @@
 				17954AAD245D06E400C8CC95 /* MainNavViewModel.swift in Sources */,
 				17E7F17D2468165D008667FB /* FirebaseVocabRemoteAPITests.swift in Sources */,
 				17FBF6F0245BEBD000A65233 /* NiblessViewController.swift in Sources */,
+				1738424C2470CF3500BEFE2F /* LessonDetailViewModelTests.swift in Sources */,
 				17954AAB245D06E100C8CC95 /* MainNavVC.swift in Sources */,
 				17FBF718245BEC1800A65233 /* LaunchRootView.swift in Sources */,
 				176ADE042460471F006C5D3C /* MainBookItemCVC.swift in Sources */,

@@ -54,19 +54,32 @@ class BookDetailRootView: NiblessView {
     collectionView.register(BookDetailCVC.self, forCellWithReuseIdentifier: bookDetailIdentifier)
     collectionView.register(BookDetailAdsCVC.self, forCellWithReuseIdentifier: adsIdentifier)
     
+    let bookDetailIdentifier = self.bookDetailIdentifier
+    let adsIdentifier = self.adsIdentifier
     viewModel.itemViewModels.bind(to: collectionView.rx.items) { collectionView, index, itemViewModel in
       
       switch itemViewModel {
       case .item(let viewModel):
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.bookDetailIdentifier, for: IndexPath(item: index, section: 0)) as! BookDetailCVC
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: bookDetailIdentifier, for: IndexPath(item: index, section: 0)) as! BookDetailCVC
         cell.configCell(viewModel: viewModel)
         return cell
       case .ads(let viewModel):
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.adsIdentifier, for: IndexPath(item: index, section: 0)) as! BookDetailAdsCVC
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: adsIdentifier, for: IndexPath(item: index, section: 0)) as! BookDetailAdsCVC
         cell.configCell(viewModel)
         return cell
       }
     }
+    .disposed(by: disposeBag)
+    
+    collectionView.rx.modelSelected(BookDetailItemViewModel.self)
+      .subscribe(onNext: { [weak self] viewModel in
+        switch viewModel {
+        case .item(let itemViewModel):
+          self?.viewModel.handleViewModelSelected(itemVM: itemViewModel)
+        default:
+          break
+        }
+      })
     .disposed(by: disposeBag)
   }
 }

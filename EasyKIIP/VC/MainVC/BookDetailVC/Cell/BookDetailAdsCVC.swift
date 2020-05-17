@@ -14,6 +14,8 @@ class BookDetailAdsCVC: UICollectionViewCell {
     
   private var adsView: GADTSmallTemplateView!
   
+  private weak var nativeAds: GADUnifiedNativeAd?
+  
   override init(frame: CGRect) {
     super.init(frame: frame)
     setupViews()
@@ -24,7 +26,8 @@ class BookDetailAdsCVC: UICollectionViewCell {
   }
   
   func configCell(_ nativeAds: GADUnifiedNativeAd) {
-    adsView.nativeAd = nativeAds
+    self.nativeAds = nativeAds
+    adsView.nativeAd = self.nativeAds
   }
   
   private func setupViews() {

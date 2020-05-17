@@ -124,7 +124,7 @@ class BookDetailCVC: UICollectionViewCell {
     
     // Set constraint here
     viewUnitIndicatorContainer.snp.makeConstraints { (make) in
-      make.width.equalTo(viewUnitIndicatorContainer.snp.height)
+      make.width.equalTo(viewUnitIndicatorContainer.snp.height).multipliedBy(0.9)
     }
     
     labelUnitIndicator.snp.makeConstraints { (make) in
@@ -140,7 +140,8 @@ class BookDetailCVC: UICollectionViewCell {
     }
     
     containerStackView.snp.makeConstraints { (make) in
-      make.edges.equalToSuperview().inset(16)
+      make.edges.equalToSuperview().inset(10)
+      
     }
   }
   

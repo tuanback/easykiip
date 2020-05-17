@@ -32,6 +32,7 @@ class BookDetailViewModel {
   private let book: Book
   private let vocabRepository: VocabRepository
   
+  public var oNavigationTitle = BehaviorRelay<String>(value: "")
   public var itemViewModels: Observable<[BookDetailItemViewModel]>!
   
   private(set) var lessons = BehaviorRelay<[Lesson]>(value: [])
@@ -43,8 +44,18 @@ class BookDetailViewModel {
   init(book: Book, vocabRepository: VocabRepository) {
     self.book = book
     self.vocabRepository = vocabRepository
+    oNavigationTitle.accept(book.name)
     setupItemViewModels()
     initLessons()
+  }
+  
+  func handleViewModelSelected(itemVM: LessonItemViewModel) {
+    guard let lesson = lessons.value.first(where: { $0.id == itemVM.id }) else {
+      return
+    }
+    
+    // TODO: Open detail views
+    
   }
   
   private func initLessons() {
