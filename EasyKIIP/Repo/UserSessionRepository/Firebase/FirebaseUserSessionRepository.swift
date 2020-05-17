@@ -141,6 +141,7 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
   }
   
   public func signOut() {
+    GIDSignIn.sharedInstance()?.signOut()
     try? Auth.auth().signOut()
   }
   

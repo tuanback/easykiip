@@ -36,6 +36,10 @@ public class SignedInDependencyContainer {
     self.vocabRepository = makeVocabRepository(userSession: userSession)
   }
   
+  deinit {
+    print("Deinit")
+  }
+  
   func makeMainNavVC() -> MainNavVC {
     let makeMainVC = {
       self.makeMainVC()

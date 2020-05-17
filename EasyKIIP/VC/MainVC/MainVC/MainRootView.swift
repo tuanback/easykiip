@@ -35,6 +35,10 @@ class MainRootView: NiblessView {
     setupCollectionViews()
   }
   
+  deinit {
+    print("Deinit")
+  }
+  
   private func setupCollectionViews() {
     collectionViewFlowLayout = UICollectionViewFlowLayout()
     collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)

@@ -36,6 +36,10 @@ public class MainVC: NiblessViewController {
     observeViewModel()
   }
   
+  deinit {
+    print("Deinit")
+  }
+  
   func setupNavBar() {
     navigationItem.title = "KIIP"
     
@@ -44,6 +48,9 @@ public class MainVC: NiblessViewController {
     
     //navigationController?.navigationBar.prefersLargeTitles = true
     
+    let signOutBarButton = UIBarButtonItem(title: "Sign out", style: .done, target: self, action: #selector(handleSignoutButtonClicked(_:)))
+    
+    navigationItem.rightBarButtonItem = signOutBarButton
     /*
      let frame = CGRect(x: 0, y: 0, width: 300, height: 30)
      let titleView = UILabel(frame: frame)
@@ -51,6 +58,10 @@ public class MainVC: NiblessViewController {
      titleView.textColor = UIColor.appLabelColor
      navigationItem.titleView = titleView
      */
+  }
+  
+  @objc func handleSignoutButtonClicked(_ barButton: UIBarButtonItem) {
+    viewModel.handleSignoutClicked()
   }
   
   private func observeViewModel() {

@@ -24,9 +24,9 @@ public class MainViewModel {
   let userSessionRepository: UserSessionRepository
   let vocabRepository: VocabRepository
   
-  lazy var bookViewModels = makeObservableOfBookItemViewModel()
+  var bookViewModels = BehaviorRelay<[BookItemViewModel]>(value: [])
   
-  private var oBooks = BehaviorRelay<[Book]>(value: [])
+  private var oBooks: [Book] = []
   
   var oNavigation = PublishRelay<NavigationEvent<SignedInView>>()
   
@@ -37,22 +37,21 @@ public class MainViewModel {
     self.initBookList()
   }
   
+  deinit {
+    print("Deinit")
+  }
+  
   private func initBookList() {
-    let books = vocabRepository.getListOfBook()
-    oBooks.accept(books)
+    oBooks = vocabRepository.getListOfBook()
+    let itemViewModels = convertToItemViewModel(books: oBooks)
+    bookViewModels.accept(itemViewModels)
   }
   
   func getNumberOfBooks() -> Int {
-    if oBooks.value.count == 0 {
+    if oBooks.count == 0 {
       initBookList()
     }
-    return oBooks.value.count
-  }
-  
-  private func makeObservableOfBookItemViewModel() -> Observable<[BookItemViewModel]> {
-    return oBooks
-      .map(convertToItemViewModel(books:))
-      .asObservable()
+    return oBooks.count
   }
   
   private func convertToItemViewModel(books: [Book]) -> [BookItemViewModel] {
@@ -64,8 +63,13 @@ public class MainViewModel {
   }
   
   func handleBookItemClicked(_ itemViewModel: BookItemViewModel) {
-    if let book = oBooks.value.first(where: { $0.id == itemViewModel.id   }) {
+    if let book = oBooks.first(where: { $0.id == itemViewModel.id   }) {
       oNavigation.accept(.push(view: .bookDetail(book)))
     }
+  }
+  
+  func handleSignoutClicked() {
+    userSessionRepository.signOut()
+    oNavigation.accept(.dismiss)
   }
 }
