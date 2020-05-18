@@ -45,8 +45,6 @@ public class MainViewModel {
     books = vocabRepository.getListOfBook()
     let itemViewModels = convertToItemViewModel(books: books)
     bookViewModels.accept(itemViewModels)
-    
-    
   }
   
   func getNumberOfBooks() -> Int {
