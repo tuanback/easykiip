@@ -10,10 +10,10 @@ import Foundation
 
 public protocol VocabDataStore {
   func getListOfBook() -> [Book]
-  func getListOfLesson(in book: Book) -> [Lesson]
-  func getListOfVocabs(in lesson: Lesson) -> [Vocab]
-  func markVocabAsMastered(_ vocab: Vocab)
-  func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool)
+  func getListOfLesson(inBook id: Int) -> [Lesson]
+  func getListOfVocabs(inLesson id: Int) -> [Vocab]
+  func markVocabAsMastered(vocabID id: Int)
+  func recordVocabPracticed(vocabID: Int, isCorrectAnswer: Bool)
   func getLesson(by id: Int) -> Lesson?
   func getVocab(by id: Int) -> Vocab?
   func searchVocab(keyword: String) -> [Vocab]

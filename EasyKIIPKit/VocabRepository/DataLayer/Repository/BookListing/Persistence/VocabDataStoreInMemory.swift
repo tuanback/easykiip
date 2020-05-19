@@ -60,24 +60,26 @@ public class VocabDataStoreInMemory: VocabDataStore {
     return books
   }
   
-  public func getListOfLesson(in book: Book) -> [Lesson] {
+  public func getListOfLesson(inBook id: Int) -> [Lesson] {
+    guard let book = books.first(where: { $0.id == id }) else { return [] }
     return book.lessons
   }
   
-  public func getListOfVocabs(in lesson: Lesson) -> [Vocab] {
+  public func getListOfVocabs(inLesson id: Int) -> [Vocab] {
+    guard let lesson = books.flatMap({ $0.lessons }).first(where: { $0.id == id }) else { return [] }
     return lesson.vocabs
   }
   
-  public func markVocabAsMastered(_ vocab: Vocab) {
+  public func markVocabAsMastered(vocabID id: Int) {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
-    if let v = vocabs.first(where: { $0.id == vocab.id }) {
+    if let v = vocabs.first(where: { $0.id == id }) {
       v.markAsIsMastered()
     }
   }
   
-  public func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool) {
+  public func recordVocabPracticed(vocabID: Int, isCorrectAnswer: Bool) {
     let vocabs = books.flatMap { $0.lessons.flatMap { $0.vocabs } }
-    if let v = vocabs.first(where: { $0.id == vocab.id }) {
+    if let v = vocabs.first(where: { $0.id == vocabID }) {
       isCorrectAnswer ? v.increaseNumberOfCorrectAnswerByOne() : v.increaseNumberOfWrongAnswerByOne()
     }
   }

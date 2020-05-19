@@ -61,7 +61,7 @@ class BookDetailViewModel {
   private func initLessons() {
     self.isLoading.accept(true)
     
-    let observable = self.vocabRepository.getListOfLesson(in: book).share(replay: 1, scope: .whileConnected)
+    let observable = self.vocabRepository.getListOfLesson(inBook: book.id).share(replay: 1, scope: .whileConnected)
     
     observable
       .bind(to: lessons)

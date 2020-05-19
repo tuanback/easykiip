@@ -32,41 +32,45 @@ public class KIIPVocabRepository: VocabRepository {
     dataStore.getListOfBook()
   }
   
-  public func getListOfLesson(in book: Book) -> Observable<[Lesson]> {
+  public func getListOfLesson(inBook id: Int) -> Observable<[Lesson]> {
     // Need to queries from auth remote then merge together
-    let observable = BehaviorSubject<[Lesson]>(value: [])
-    let dataStoreLessons = dataStore.getListOfLesson(in: book)
+    let userID = self.userID
+    let dataStoreLessons = dataStore.getListOfLesson(inBook: id)
     
-    remoteAPI.loadLessonData(userID: userID, bookID: book.id) { [weak self] (lessons) in
-      guard let strongSelf = self else { return }
-      // Algorithm to merge history from Back end with local datastore
-      guard lessons.count > 0 else {
-        observable.onNext(dataStoreLessons)
-        return
+    return Observable<[Lesson]>.deferred { [weak self] in
+      return Observable.create { (observer) -> Disposable in
+        self?.remoteAPI.loadLessonData(userID: userID, bookID: id) { [weak self] (lessons) in
+          guard let strongSelf = self else { return }
+          // Algorithm to merge history from Back end with local datastore
+          guard lessons.count > 0 else {
+            observer.onNext(dataStoreLessons)
+            return
+          }
+          
+          for lesson in lessons {
+            self?.dataStore.syncLessonProficiency(lessonID: lesson.id,
+                                                  proficiency: lesson.proficiency,
+                                                  lastTimeSynced: lesson.lastTimeSynced)
+          }
+          
+          let syncedLessons = strongSelf.dataStore.getListOfLesson(inBook: id)
+          observer.onNext(syncedLessons)
+        }
+        
+        return Disposables.create()
       }
-      
-      for lesson in lessons {
-        self?.dataStore.syncLessonProficiency(lessonID: lesson.id,
-                                              proficiency: lesson.proficiency,
-                                              lastTimeSynced: lesson.lastTimeSynced)
-      }
-      
-      let syncedLessons = strongSelf.dataStore.getListOfLesson(in: book)
-      observable.onNext(syncedLessons)
     }
-    
-    return observable
   }
   
-  public func getListOfVocabs(in book: Book, lesson: Lesson) -> Observable<[Vocab]> {
+  public func getListOfVocabs(inBook bookID: Int, inLesson lessonID: Int) -> Observable<[Vocab]> {
     // Need to queries from auth remote then merge together
     let observable = PublishSubject<[Vocab]>()
-    let dataStoreVocabs = dataStore.getListOfVocabs(in: lesson)
+    let dataStoreVocabs = dataStore.getListOfVocabs(inLesson: lessonID)
     
-    if !dataStore.isLessonSynced(lesson.id) {
+    if !dataStore.isLessonSynced(lessonID) {
       remoteAPI.loadVocabData(userID: userID,
-                              bookID: book.id,
-                              lessonID: lesson.id) { [weak self] (vocabs) in
+                              bookID: bookID,
+                              lessonID: lessonID) { [weak self] (vocabs) in
         guard let strongSelf = self else { return }
         // Algorithm to merge history from Back end with local datastore
         guard vocabs.count > 0 else {
@@ -94,7 +98,7 @@ public class KIIPVocabRepository: VocabRepository {
             lastTimeTest: lastTimeTest)
         }
         
-        let syncedVocabs = strongSelf.dataStore.getListOfVocabs(in: lesson)
+        let syncedVocabs = strongSelf.dataStore.getListOfVocabs(inLesson: lessonID)
         observable.onNext(syncedVocabs)
       }
       
@@ -102,35 +106,35 @@ public class KIIPVocabRepository: VocabRepository {
     }
     
     return Observable<[Vocab]>.create { (observer) -> Disposable in
-      let syncedVocabs = self.dataStore.getListOfVocabs(in: lesson)
+      let syncedVocabs = self.dataStore.getListOfVocabs(inLesson: lessonID)
       observer.onNext(syncedVocabs)
       return Disposables.create()
     }
   }
   
-  public func markVocabAsMastered(_ vocab: Vocab) {
-    dataStore.markVocabAsMastered(vocab)
+  public func markVocabAsMastered(vocabID id: Int) {
+    dataStore.markVocabAsMastered(vocabID: id)
   }
   
-  public func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool) {
-    dataStore.recordVocabPracticed(vocab: vocab, isCorrectAnswer: isCorrectAnswer)
+  public func recordVocabPracticed(vocabID: Int, isCorrectAnswer: Bool) {
+    dataStore.recordVocabPracticed(vocabID: vocabID, isCorrectAnswer: isCorrectAnswer)
   }
   
   public func searchVocab(keyword: String) -> [Vocab] {
     return dataStore.searchVocab(keyword: keyword)
   }
   
-  public func getListOfLowProficiencyVocab(in book: Book, upto numberOfVocabs: Int) -> [Vocab] {
-    var vocabs = dataStore.getListOfLesson(in: book)
-      .flatMap { dataStore.getListOfVocabs(in: $0) }
+  public func getListOfLowProficiencyVocab(inBook id: Int, upto numberOfVocabs: Int) -> [Vocab] {
+    var vocabs = dataStore.getListOfLesson(inBook: id)
+      .flatMap { dataStore.getListOfVocabs(inLesson: $0.id) }
     vocabs = vocabs.filter { $0.practiceHistory.isLearned }
     vocabs.sort { $0.proficiency < $1.proficiency }
     let numberOfElement = min(numberOfVocabs, vocabs.count)
     return Array(vocabs.prefix(upTo: numberOfElement))
   }
   
-  public func getListOfLowProficiencyVocab(in lession: Lesson, upto numberOfVocabs: Int) -> [Vocab] {
-    var vocabs = dataStore.getListOfVocabs(in: lession)
+  public func getListOfLowProficiencyVocab(inLesson id: Int, upto numberOfVocabs: Int) -> [Vocab] {
+    var vocabs = dataStore.getListOfVocabs(inLesson: id)
     vocabs = vocabs.filter { $0.practiceHistory.isLearned }
     vocabs.sort { $0.proficiency < $1.proficiency }
     let numberOfElement = min(numberOfVocabs, vocabs.count)
@@ -139,14 +143,14 @@ public class KIIPVocabRepository: VocabRepository {
   
   public func getNeedReviewVocabs(upto numberOfVocabs: Int) -> [Vocab] {
     let vocabs = getListOfBook()
-      .flatMap { dataStore.getListOfLesson(in: $0)
-        .flatMap { dataStore.getListOfVocabs(in: $0) }}
+      .flatMap { dataStore.getListOfLesson(inBook: $0.id)
+        .flatMap { dataStore.getListOfVocabs(inLesson: $0.id) }}
     return getNeedReviewVocabs(from: vocabs, upto: numberOfVocabs)
   }
   
-  public func getNeedReviewVocabs(in book: Book, upto numberOfVocabs: Int) -> [Vocab] {
-    let vocabs = dataStore.getListOfLesson(in: book)
-      .flatMap { dataStore.getListOfVocabs(in: $0) }
+  public func getNeedReviewVocabs(inBook id: Int, upto numberOfVocabs: Int) -> [Vocab] {
+    let vocabs = dataStore.getListOfLesson(inBook: id)
+      .flatMap { dataStore.getListOfVocabs(inLesson: $0.id) }
     return getNeedReviewVocabs(from: vocabs, upto: numberOfVocabs)
   }
   
@@ -192,7 +196,7 @@ public class KIIPVocabRepository: VocabRepository {
     return Array(result.prefix(upTo: numberOfElement))
   }
   
-  public func saveLessonPracticeHistory(in bookID: Int, lessonID: Int) {
+  public func saveLessonPracticeHistory(inBook id: Int, lessonID: Int) {
     guard let updatedLesson = dataStore.getLesson(by: lessonID) else {
       return
     }
@@ -211,7 +215,7 @@ public class KIIPVocabRepository: VocabRepository {
     
     dataStore.setLessonSynced(lessonID: lessonID, lastTimeSynced: lastTimeSynced)
     
-    remoteAPI.saveLessonHistory(userID: userID, bookID: bookID, lesson: firebaseLesson)
+    remoteAPI.saveLessonHistory(userID: userID, bookID: id, lesson: firebaseLesson)
     
     let firebaseVocabs: [FirebaseVocab] = vocabs.map { vocab in
       let practiceHistory = vocab.practiceHistory
@@ -235,7 +239,7 @@ public class KIIPVocabRepository: VocabRepository {
                            lastTimeLearned: lastTimeLearned)
     }
     
-    remoteAPI.saveVocabHistory(userID: userID, bookID: bookID, lessonID: lessonID, vocabs: firebaseVocabs)
+    remoteAPI.saveVocabHistory(userID: userID, bookID: id, lessonID: lessonID, vocabs: firebaseVocabs)
   }
   
 }

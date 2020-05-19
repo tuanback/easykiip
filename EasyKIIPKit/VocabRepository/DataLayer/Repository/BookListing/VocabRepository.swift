@@ -14,23 +14,23 @@ public protocol SearchEngine {
 }
 
 public protocol NeedMorePracticeVocabGetter {
-  func getListOfLowProficiencyVocab(in book: Book, upto numberOfVocabs: Int) -> [Vocab]
-  func getListOfLowProficiencyVocab(in lession: Lesson, upto numberOfVocabs: Int) -> [Vocab]
+  func getListOfLowProficiencyVocab(inBook id: Int, upto numberOfVocabs: Int) -> [Vocab]
+  func getListOfLowProficiencyVocab(inLesson id: Int, upto numberOfVocabs: Int) -> [Vocab]
 }
 
 public protocol NeedReviewVocabsGetter {
   /// Get list of vocabs in all the books if the users didn't review the learned vocab after 1 days 1 week or one months
   func getNeedReviewVocabs(upto numberOfVocabs: Int) -> [Vocab]
   /// Get list of vocabs in a specific book if the users didn't review the learned vocab after 1 days 1 week or one months
-  func getNeedReviewVocabs(in book: Book, upto numberOfVocabs: Int) -> [Vocab]
+  func getNeedReviewVocabs(inBook id: Int, upto numberOfVocabs: Int) -> [Vocab]
 }
 
 public protocol VocabRepository: SearchEngine, NeedMorePracticeVocabGetter, NeedReviewVocabsGetter {
   func getListOfBook() -> [Book]
-  func getListOfLesson(in book: Book) -> Observable<[Lesson]>
-  func getListOfVocabs(in book: Book, lesson: Lesson) -> Observable<[Vocab]>
-  func markVocabAsMastered(_ vocab: Vocab)
-  func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool)
+  func getListOfLesson(inBook id: Int) -> Observable<[Lesson]>
+  func getListOfVocabs(inBook bookID: Int, inLesson lessonID: Int) -> Observable<[Vocab]>
+  func markVocabAsMastered(vocabID id: Int)
+  func recordVocabPracticed(vocabID: Int, isCorrectAnswer: Bool)
   
-  func saveLessonPracticeHistory(in bookID: Int, lessonID: Int)
+  func saveLessonPracticeHistory(inBook id: Int, lessonID: Int)
 }

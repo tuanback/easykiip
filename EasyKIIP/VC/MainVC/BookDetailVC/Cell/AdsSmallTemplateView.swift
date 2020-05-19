@@ -162,6 +162,7 @@ class AdsSmallTemplateView: GADUnifiedNativeAdView {
     
     labelAd.snp.makeConstraints { (make) in
       make.width.equalTo(20)
+      make.height.equalTo(15)
     }
     
     callToActionView.snp.makeConstraints { (make) in

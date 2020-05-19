@@ -59,10 +59,10 @@ public class RealmDataStore: VocabDataStore {
     return realmBooks.map { $0.toBook() }
   }
   
-  public func getListOfLesson(in book: Book) -> [Lesson] {
+  public func getListOfLesson(inBook id: Int) -> [Lesson] {
     let realm = bundledRealmProvider.realm
     let historyRealm = historyRealmProvider.realm
-    guard let book = realm.object(ofType: RealmBook.self, forPrimaryKey: book.id) else {
+    guard let book = realm.object(ofType: RealmBook.self, forPrimaryKey: id) else {
       return []
     }
     let lessons: [Lesson] = book.lessons.map { (realmLesson) -> Lesson in
@@ -72,11 +72,11 @@ public class RealmDataStore: VocabDataStore {
     return lessons
   }
   
-  public func getListOfVocabs(in lesson: Lesson) -> [Vocab] {
+  public func getListOfVocabs(inLesson id: Int) -> [Vocab] {
     let realm = bundledRealmProvider.realm
     let historyRealm = historyRealmProvider.realm
     
-    guard let lesson = realm.object(ofType: RealmLesson.self, forPrimaryKey: lesson.id) else {
+    guard let lesson = realm.object(ofType: RealmLesson.self, forPrimaryKey: id) else {
       return []
     }
     
@@ -87,13 +87,13 @@ public class RealmDataStore: VocabDataStore {
     return vocabs
   }
   
-  public func markVocabAsMastered(_ vocab: Vocab) {
+  public func markVocabAsMastered(vocabID id: Int) {
     let time = Date()
     
     let historyRealm = historyRealmProvider.realm
     // Check if history is existed => Update else create
     if let history = historyRealm.object(ofType: RealmVocabPracticeHistory.self,
-                                         forPrimaryKey: vocab.id) {
+                                         forPrimaryKey: id) {
       try! historyRealm.write {
         history.isMastered = true
         history.isLearned = true
@@ -101,8 +101,9 @@ public class RealmDataStore: VocabDataStore {
       }
     }
     else {
+      guard let vocab = getVocab(by: id) else { return }
       let vocabHis = vocab.practiceHistory
-      let history = RealmVocabPracticeHistory(vocabID: Int(vocab.id),
+      let history = RealmVocabPracticeHistory(vocabID: Int(id),
                                               testTaken: Int(vocabHis.numberOfTestTaken),
                                               correctAnswer: Int(vocabHis.numberOfCorrectAnswer),
                                               wrongAnswer: Int(vocabHis.numberOfWrongAnswer),
@@ -113,7 +114,7 @@ public class RealmDataStore: VocabDataStore {
       
       history.isSynced = false
       
-      if let lessonHisory = getRealmLessonHistoryContains(vocab: vocab.id) {
+      if let lessonHisory = getRealmLessonHistoryContains(vocabID: id) {
         try! historyRealm.write {
           lessonHisory.vocabsHistory.append(history)
         }
@@ -131,23 +132,25 @@ public class RealmDataStore: VocabDataStore {
       }
     }
     
-    updateLessonLastLearnDate(vocab: vocab, date: time)
+    updateLessonLastLearnDate(vocabID: id, date: time)
   }
   
-  public func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool) {
+  public func recordVocabPracticed(vocabID: Int, isCorrectAnswer: Bool) {
     let time = Date()
     
     let historyRealm = historyRealmProvider.realm
     // Check if history is existed => Update else create
     if let history = historyRealm.object(ofType: RealmVocabPracticeHistory.self,
-                                         forPrimaryKey: vocab.id) {
+                                         forPrimaryKey:vocabID) {
+      let vocab = getVocab(by: vocabID)
+      
       try! historyRealm.write {
         history.testTaken += 1
         if isCorrectAnswer {
           history.correctAnswer += 1
         }
         history.isLearned = true
-        history.isMastered = vocab.practiceHistory.isMastered
+        history.isMastered = vocab?.practiceHistory.isMastered ?? false
         
         if history.firstLearnDate == nil {
           history.firstLearnDate = time
@@ -156,6 +159,7 @@ public class RealmDataStore: VocabDataStore {
       }
     }
     else {
+      guard let vocab = getVocab(by: vocabID) else { return }
       let correctAnswer = isCorrectAnswer ? 1 : 0
       let wrongAnswer = isCorrectAnswer ? 0 : 1
       let history = RealmVocabPracticeHistory(vocabID: Int(vocab.id),
@@ -168,7 +172,7 @@ public class RealmDataStore: VocabDataStore {
                                               lastTimeTest: time)
       history.isSynced = false
       
-      if let lessonHisory = getRealmLessonHistoryContains(vocab: vocab.id) {
+      if let lessonHisory = getRealmLessonHistoryContains(vocabID: vocab.id) {
         try! historyRealm.write {
           lessonHisory.vocabsHistory.append(history)
         }
@@ -185,7 +189,7 @@ public class RealmDataStore: VocabDataStore {
       }
     }
     
-    updateLessonLastLearnDate(vocab: vocab, date: time)
+    updateLessonLastLearnDate(vocabID: vocabID, date: time)
   }
   
   private func getRealmLesson(of vocabID: Int) -> RealmLesson? {
@@ -199,7 +203,7 @@ public class RealmDataStore: VocabDataStore {
     return realmLesson
   }
   
-  private func getRealmLessonHistoryContains(vocab vocabID: Int) -> RealmLessonHistory? {
+  private func getRealmLessonHistoryContains(vocabID: Int) -> RealmLessonHistory? {
     let bundleRealm = bundledRealmProvider.realm
     let historyRealm = historyRealmProvider.realm
     
@@ -219,13 +223,13 @@ public class RealmDataStore: VocabDataStore {
     return realmLessonHistory
   }
   
-  private func updateLessonLastLearnDate(vocab: Vocab, date: Date) {
-    guard let realmLesson = getRealmLesson(of: vocab.id) else { return }
+  private func updateLessonLastLearnDate(vocabID: Int, date: Date) {
+    guard let realmLesson = getRealmLesson(of: vocabID) else { return }
     let lessonID = realmLesson.id
     
     let historyRealm = historyRealmProvider.realm
     
-    if let lessonHistory = getRealmLessonHistoryContains(vocab: vocab.id) {
+    if let lessonHistory = getRealmLessonHistoryContains(vocabID: vocabID) {
       try! historyRealm.write {
         lessonHistory.lastTimeLearned = date
         lessonHistory.isSynced = false
@@ -404,7 +408,7 @@ public class RealmDataStore: VocabDataStore {
     
     history.isSynced = true
     
-    if let lessonHisory = getRealmLessonHistoryContains(vocab:  vocabID) {
+    if let lessonHisory = getRealmLessonHistoryContains(vocabID:  vocabID) {
       try! historyRealm.write {
         lessonHisory.vocabsHistory.append(history)
       }

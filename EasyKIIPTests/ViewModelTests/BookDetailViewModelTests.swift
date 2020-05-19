@@ -176,21 +176,21 @@ class BookDetailViewModelTests: XCTestCase {
       return []
     }
     
-    func getListOfLesson(in book: Book) -> Observable<[Lesson]> {
+    func getListOfLesson(inBook id: Int) -> Observable<[Lesson]> {
       return scheduler.createHotObservable([
         Recorded.next(500, book.lessons)
         ]).asObservable()
     }
     
-    func getListOfVocabs(in lesson: Lesson) -> Observable<[Vocab]> {
+    func getListOfVocabs(inBook bookID: Int, inLesson lessonID: Int) -> Observable<[Vocab]> {
       return Observable.empty()
     }
     
-    func markVocabAsMastered(_ vocab: Vocab) {
+    func markVocabAsMastered(vocabID id: Int) {
       
     }
     
-    func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool) {
+    func recordVocabPracticed(vocabID: Int, isCorrectAnswer: Bool) {
       
     }
     
@@ -198,11 +198,11 @@ class BookDetailViewModelTests: XCTestCase {
       return []
     }
     
-    func getListOfLowProficiencyVocab(in book: Book, upto numberOfVocabs: Int) -> [Vocab] {
+    func getListOfLowProficiencyVocab(inBook id: Int, upto numberOfVocabs: Int) -> [Vocab] {
       return []
     }
     
-    func getListOfLowProficiencyVocab(in lession: Lesson, upto numberOfVocabs: Int) -> [Vocab] {
+    func getListOfLowProficiencyVocab(inLesson id: Int, upto numberOfVocabs: Int) -> [Vocab] {
       return []
     }
     
@@ -210,7 +210,7 @@ class BookDetailViewModelTests: XCTestCase {
       return []
     }
     
-    func getNeedReviewVocabs(in book: Book, upto numberOfVocabs: Int) -> [Vocab] {
+    func getNeedReviewVocabs(inBook id: Int, upto numberOfVocabs: Int) -> [Vocab] {
       return []
     }
     
@@ -218,7 +218,7 @@ class BookDetailViewModelTests: XCTestCase {
       return Observable.empty()
     }
     
-    func saveLessonPracticeHistory(in bookID: Int, lessonID: Int) {
+    func saveLessonPracticeHistory(inBook id: Int, lessonID: Int) {
       
     }
   }

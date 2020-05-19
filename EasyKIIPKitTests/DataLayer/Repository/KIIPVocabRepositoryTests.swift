@@ -57,7 +57,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
   func test_getListOfLesson_apiFuncCalled_dataStoreFuncCalled() {
     let (sut, remoteAPI, dataStore) = makeSut()
     let book = dataStore.book
-    let _ = sut.getListOfLesson(in: book)
+    let _ = sut.getListOfLesson(inBook: book.id)
     
     XCTAssertTrue(remoteAPI.isLoadLessonsCalled && dataStore.isGetLessonsCalled)
   }
@@ -68,7 +68,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
     
     let (sut, remoteAPI, dataStore) = makeSut()
     let book = dataStore.book
-    let observable = sut.getListOfLesson(in: book)
+    let observable = sut.getListOfLesson(inBook: book.id)
     
     subscription = observable.subscribe(observer)
     
@@ -88,7 +88,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
     
     let (sut, remoteAPI, dataStore) = makeSut()
     let book = dataStore.book
-    let observable = sut.getListOfLesson(in: book)
+    let observable = sut.getListOfLesson(inBook: book.id)
     
     subscription = observable.subscribe(observer)
     
@@ -109,7 +109,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let (sut, remoteAPI, dataStore) = makeSut()
     let book = dataStore.book
     let lesson = dataStore.lesson
-    let _ = sut.getListOfVocabs(in: book, lesson: lesson)
+    let _ = sut.getListOfVocabs(inBook: book.id, inLesson: lesson.id)
     
     XCTAssertTrue(remoteAPI.isLoadVocabCalled && dataStore.isGetVocabsCalled)
   }
@@ -121,7 +121,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let (sut, remoteAPI, dataStore) = makeSut()
     let book = dataStore.book
     let lesson = dataStore.lesson
-    let observable = sut.getListOfVocabs(in: book, lesson: lesson)
+    let observable = sut.getListOfVocabs(inBook: book.id, inLesson: lesson.id)
     
     subscription = observable.subscribe(observer)
     
@@ -144,7 +144,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let lesson = dataStore.lesson
     dataStore.setLessonSyncedValue(false)
     
-    let observable = sut.getListOfVocabs(in: book, lesson: lesson)
+    let observable = sut.getListOfVocabs(inBook: book.id, inLesson: lesson.id)
     
     subscription = observable.subscribe(observer)
     
@@ -169,7 +169,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let lesson = dataStore.lesson
     dataStore.setLessonSyncedValue(true)
     
-    let observable = sut.getListOfVocabs(in: book, lesson: lesson)
+    let observable = sut.getListOfVocabs(inBook: book.id, inLesson: lesson.id)
     
     subscription = observable.subscribe(observer)
     
@@ -196,14 +196,14 @@ class KIIPVocabRepositoryTests: XCTestCase {
   func test_markVocabAsMasteredCalled() {
     let (sut, _, dataStore) = makeSut()
     let vocab = dataStore.vocab
-    let _ = sut.markVocabAsMastered(vocab)
+    let _ = sut.markVocabAsMastered(vocabID: vocab.id)
     XCTAssertTrue(dataStore.isMarkVocabAsMasteredCalled)
   }
   
   func test_recordVocabPracticedCalled() {
     let (sut, _, dataStore) = makeSut()
     let vocab = dataStore.vocab
-    let _ = sut.recordVocabPracticed(vocab: vocab, isCorrectAnswer: true)
+    let _ = sut.recordVocabPracticed(vocabID: vocab.id, isCorrectAnswer: true)
     XCTAssertTrue(dataStore.isRecordVocabPracticedCalled)
   }
   
@@ -225,7 +225,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
       vocab.setTestTakenData(isMastered: isMastered, numberOfTestTaken: testTaken, numberOfCorrectAnswer: correctAnswer, firstLearnDate: date, lastTimeTest: date)
     }
     
-    let lowProficiencyVocabs = sut.getListOfLowProficiencyVocab(in: book, upto: 5)
+    let lowProficiencyVocabs = sut.getListOfLowProficiencyVocab(inBook: book.id, upto: 5)
     
     for i in 0..<lowProficiencyVocabs.count - 1 {
       XCTAssertTrue(lowProficiencyVocabs[i].proficiency <= lowProficiencyVocabs[i + 1].proficiency)
@@ -254,7 +254,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
                              lastTimeTest: date)
     }
     
-    let lowProficiencyVocabs = sut.getListOfLowProficiencyVocab(in: lesson, upto: 20)
+    let lowProficiencyVocabs = sut.getListOfLowProficiencyVocab(inLesson: lesson.id, upto: 20)
     
     for i in 0..<lowProficiencyVocabs.count - 1 {
       XCTAssertTrue(lowProficiencyVocabs[i].practiceHistory.isLearned)
@@ -297,7 +297,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let lesson = dataStore.lesson
     
     dataStore.setNotSyncedVocabsValue(false)
-    sut.saveLessonPracticeHistory(in: book.id, lessonID: lesson.id)
+    sut.saveLessonPracticeHistory(inBook: book.id, lessonID: lesson.id)
     
     XCTAssertFalse(remoteAPI.isSaveLessonPracticeHistoryCalled)
     XCTAssertFalse(remoteAPI.isSaveVocabPracticeHistoryCalled)
@@ -310,10 +310,10 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let lesson = dataStore.lesson
     let vocab = dataStore.vocab
     
-    sut.recordVocabPracticed(vocab: vocab, isCorrectAnswer: true)
+    sut.recordVocabPracticed(vocabID: vocab.id, isCorrectAnswer: true)
     
     dataStore.setNotSyncedVocabsValue(true)
-    sut.saveLessonPracticeHistory(in: book.id, lessonID: lesson.id)
+    sut.saveLessonPracticeHistory(inBook: book.id, lessonID: lesson.id)
     
     XCTAssertTrue(remoteAPI.isSaveLessonPracticeHistoryCalled)
     XCTAssertTrue(remoteAPI.isSaveVocabPracticeHistoryCalled)
@@ -405,22 +405,22 @@ class KIIPVocabRepositoryTests: XCTestCase {
       return books
     }
     
-    func getListOfLesson(in book: Book) -> [Lesson] {
+    func getListOfLesson(inBook id: Int) -> [Lesson] {
       isGetLessonsCalled = true
       return book.lessons
     }
     
-    func getListOfVocabs(in lesson: Lesson) -> [Vocab] {
+    func getListOfVocabs(inLesson id: Int) -> [Vocab] {
       isGetVocabsCalled = true
       return lesson.vocabs
     }
     
-    func markVocabAsMastered(_ vocab: Vocab) {
+    func markVocabAsMastered(vocabID id: Int) {
       isMarkVocabAsMasteredCalled = true
       vocab.markAsIsMastered()
     }
     
-    func recordVocabPracticed(vocab: Vocab, isCorrectAnswer: Bool) {
+    func recordVocabPracticed(vocabID: Int, isCorrectAnswer: Bool) {
       isRecordVocabPracticedCalled = true
       isCorrectAnswer ? vocab.increaseNumberOfCorrectAnswerByOne() : vocab.increaseNumberOfWrongAnswerByOne()
     }
