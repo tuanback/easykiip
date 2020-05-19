@@ -48,8 +48,8 @@ class AdsSmallTemplateView: GADUnifiedNativeAdView {
     iconViewContainer.addSubview(iconView)
     
     let headlineView = UILabel()
-    headlineView.numberOfLines = 0
-    headlineView.font = UIFont.appFontRegular(ofSize: 13)
+    headlineView.numberOfLines = 2
+    headlineView.font = UIFont.appFontRegular(ofSize: 16)
     headlineView.textColor = UIColor.appLabelBlack
     headlineView.textAlignment = .left
     headlineView.adjustsFontSizeToFitWidth = true
@@ -59,35 +59,25 @@ class AdsSmallTemplateView: GADUnifiedNativeAdView {
     
     let labelAd = UILabel()
     labelAd.font = UIFont.appFontMedium(ofSize: 10)
-    labelAd.textColor = UIColor.appBackground
+    labelAd.textColor = UIColor.white
     labelAd.backgroundColor = UIColor(hexString: "E4BE59")
     labelAd.text = "Ad"
     labelAd.textAlignment = .center
-    labelAd.layer.cornerRadius = 5
+    labelAd.layer.cornerRadius = 2
     
-    let bodyView = UILabel()
-    bodyView.font = UIFont.appFontRegular(ofSize: 12)
-    bodyView.textColor = UIColor.appSecondaryLabel
-    bodyView.textAlignment = .left
-    bodyView.adjustsFontSizeToFitWidth = true
-    bodyView.minimumScaleFactor = 0.6
-    bodyView.numberOfLines = 0
-    self.bodyView = bodyView
+    addSubview(labelAd)
+    
+    let advertiserView = UILabel()
+    advertiserView.font = UIFont.appFontRegular(ofSize: 14)
+    advertiserView.textColor = UIColor.appSecondaryLabel
+    advertiserView.textAlignment = .left
+    advertiserView.adjustsFontSizeToFitWidth = true
+    advertiserView.minimumScaleFactor = 0.6
+    self.advertiserView = advertiserView
     
     let ratingView = UIImageView()
     ratingView.contentMode = .scaleAspectFit
     self.starRatingView = ratingView
-    
-    let priceLabel = UILabel()
-    priceLabel.font = UIFont.appFontMedium(ofSize: 10)
-    priceLabel.textColor = UIColor.appLabelBlack
-    self.priceView = priceLabel
-    
-    let adSV = UIStackView(arrangedSubviews: [labelAd, ratingView, priceLabel, UIView()])
-    adSV.axis = .horizontal
-    adSV.spacing = 3
-    adSV.alignment = .fill
-    adSV.distribution = .fill
     
     let callToActionView = UIButton()
     callToActionView.backgroundColor = UIColor.appRed
@@ -96,18 +86,11 @@ class AdsSmallTemplateView: GADUnifiedNativeAdView {
     callToActionView.layer.cornerRadius = 5
     self.callToActionView = callToActionView
     
-    headlineView.setContentHuggingPriority(.defaultHigh, for: .vertical)
-    headlineView.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
-    adSV.setContentHuggingPriority(.defaultHigh, for: .vertical)
-    adSV.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
-    bodyView.setContentHuggingPriority(.defaultLow, for: .vertical)
-    bodyView.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
- 
     let textContainerSV = UIStackView(arrangedSubviews: [headlineView,
-                                                         adSV,
-                                                         bodyView])
+                                                         ratingView,
+                                                         advertiserView])
     textContainerSV.axis = .vertical
-    textContainerSV.spacing = 3
+    textContainerSV.spacing = 8
     textContainerSV.distribution = .fill
     textContainerSV.alignment = .fill
     
@@ -161,11 +144,22 @@ class AdsSmallTemplateView: GADUnifiedNativeAdView {
     }
     
     labelAd.snp.makeConstraints { (make) in
-      make.width.equalTo(20)
+      make.top.equalToSuperview()
+      make.leading.equalToSuperview()
+      make.width.equalTo(25)
+      make.height.equalTo(15)
+    }
+    
+    advertiserView.snp.makeConstraints { (make) in
+      make.height.equalTo(17)
+    }
+    
+    ratingView.snp.makeConstraints { (make) in
+      make.height.equalTo(17)
     }
     
     callToActionView.snp.makeConstraints { (make) in
-      make.height.equalTo(25)
+      make.height.equalTo(30)
     }
     
     iconView.snp.makeConstraints { (make) in
@@ -198,9 +192,6 @@ class AdsSmallTemplateView: GADUnifiedNativeAdView {
     (starRatingView as? UIImageView)?.image = imageOfStars(from:nativeAd.starRating)
     starRatingView?.isHidden = nativeAd.starRating == nil
 
-    (priceView as? UILabel)?.text = nativeAd.price
-    priceView?.isHidden = nativeAd.price == nil
-    
     (advertiserView as? UILabel)?.text = nativeAd.advertiser
     advertiserView?.isHidden = nativeAd.advertiser == nil
 

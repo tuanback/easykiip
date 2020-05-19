@@ -93,11 +93,10 @@ class BookDetailCVC: UICollectionViewCell {
     labelLastPracticed.textColor = UIColor.appSecondaryLabel
     
     let lessonNameContainer = UIStackView(arrangedSubviews: [labelLessonKorean,
-                                                             labelLessonTranslation,
-                                                             UIView()])
+                                                             labelLessonTranslation])
     lessonNameContainer.alignment = .fill
     lessonNameContainer.axis = .vertical
-    lessonNameContainer.distribution = .fill
+    lessonNameContainer.distribution = .fillEqually
     lessonNameContainer.spacing = 8
     
     let lastPracticeContainer = UIStackView(arrangedSubviews: [labelLastPracticed])
