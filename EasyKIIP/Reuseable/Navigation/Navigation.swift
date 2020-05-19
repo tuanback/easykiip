@@ -7,11 +7,10 @@
 //
 
 import Foundation
-import UIKit
 
-enum NavigationEvent {
-  case push(vc: UIViewController)
-  case present(vc: UIViewController)
+enum NavigationEvent<T: AppView> {
+  case push(view: T)
+  case present(view: T)
   case dismiss
   case pop
 }

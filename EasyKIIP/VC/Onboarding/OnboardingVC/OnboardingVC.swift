@@ -13,11 +13,17 @@ import RxCocoa
 public class OnboardingVC: NiblessNavigationController {
 
   private let viewModel: OnboardingVM
+  private let makeLoginVC: ()->(LoginVC)
+  private let makeWelcomeVC: ()->(WelcomeVC)
   
   private let disposeBag = DisposeBag()
   
-  public init(viewModel: OnboardingVM) {
+  public init(viewModel: OnboardingVM,
+              makeWelcomeVC: @escaping ()->(WelcomeVC),
+              makeLoginVC: @escaping ()->(LoginVC)) {
     self.viewModel = viewModel
+    self.makeWelcomeVC = makeWelcomeVC
+    self.makeLoginVC = makeLoginVC
     super.init()
     self.delegate = self
   }
@@ -33,8 +39,15 @@ public class OnboardingVC: NiblessNavigationController {
       .subscribe(onNext: { [weak self] event in
         guard let strongSelf = self else { return }
         switch event {
-        case .push(let vc):
-          strongSelf.pushViewController(vc, animated: true)
+        case .push(let view):
+          switch view {
+          case .login:
+            let loginVC = strongSelf.makeLoginVC()
+            strongSelf.pushViewController(loginVC, animated: true)
+          case .welcome:
+            let welcomeVC = strongSelf.makeWelcomeVC()
+            strongSelf.pushViewController(welcomeVC, animated: false)
+          }
         case .pop:
           self?.popViewController(animated: true)
         case .dismiss:
@@ -49,6 +62,14 @@ public class OnboardingVC: NiblessNavigationController {
 
 // MARK: - Navigation Bar Presentation
 extension OnboardingVC {
+
+  func hideOrShowNavigationBarIfNeeded(for view: OnboardingView, animated: Bool) {
+    if view.hidesNavigationBar() {
+      hideNavigationBar(animated: animated)
+    } else {
+      showNavigationBar(animated: animated)
+    }
+  }
 
   func hideNavigationBar(animated: Bool) {
     if animated {
@@ -73,24 +94,19 @@ extension OnboardingVC: UINavigationControllerDelegate {
   public func navigationController(_ navigationController: UINavigationController,
                                    willShow viewController: UIViewController,
                                    animated: Bool) {
-    guard let shouldShowNavBar = shouldShowNavBar(associatedWith: viewController) else { return }
-    
-    if shouldShowNavBar {
-      hideNavigationBar(animated: animated)
-    } else {
-      showNavigationBar(animated: animated)
-    }
+    guard let viewToBeShown = onboardingView(associatedWith: viewController) else { return }
+    hideOrShowNavigationBarIfNeeded(for: viewToBeShown, animated: animated)
   }
 }
 
 extension OnboardingVC {
   
-  func shouldShowNavBar(associatedWith viewController: UIViewController) -> Bool? {
+  func onboardingView(associatedWith viewController: UIViewController) -> OnboardingView? {
     switch viewController {
     case is WelcomeVC:
-      return false
+      return .welcome
     case is LoginVC:
-      return true
+      return .login
     default:
       assertionFailure("Encountered unexpected child view controller type in OnboardingViewController")
       return nil

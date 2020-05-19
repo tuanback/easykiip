@@ -12,17 +12,25 @@ import UserSession
 class OnboardingDependencyContainer {
   
   let userSessionRepository: UserSessionRepository
-  var onboardingViewModel: OnboardingVM!
+  let onboardingViewModel: OnboardingVM
   
   init(appDependencyContainer: AppDependencyContainer) {
     self.userSessionRepository = appDependencyContainer.userSessionRepository
-    defer {
-      self.onboardingViewModel = OnboardingVM(viewControllerFactory: self)
-    }
+    self.onboardingViewModel = OnboardingVM()
   }
   
   func makeOnboardingVC() -> OnboardingVC {
-    return OnboardingVC(viewModel: onboardingViewModel)
+    let makeWelcomeVC = {
+      self.makeWelcomeVC()
+    }
+    
+    let makeLoginVC = {
+      self.makeLoginVC()
+    }
+    
+    return OnboardingVC(viewModel: onboardingViewModel,
+                        makeWelcomeVC: makeWelcomeVC,
+                        makeLoginVC: makeLoginVC)
   }
   
   func makeLoginVC() -> LoginVC {
@@ -40,9 +48,5 @@ class OnboardingDependencyContainer {
     let viewModel = WelcomeViewModel(goToLogInNavigator: onboardingViewModel)
     return WelcomeVC(viewModel: viewModel)
   }
-  
-}
-
-extension OnboardingDependencyContainer: WelcomeVCFactory, LoginVCFactory {
   
 }

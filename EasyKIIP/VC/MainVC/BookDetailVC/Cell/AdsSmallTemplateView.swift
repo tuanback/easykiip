@@ -49,7 +49,7 @@ class AdsSmallTemplateView: GADUnifiedNativeAdView {
     
     let headlineView = UILabel()
     headlineView.numberOfLines = 0
-    headlineView.font = UIFont.appFontMedium(ofSize: 13)
+    headlineView.font = UIFont.appFontRegular(ofSize: 13)
     headlineView.textColor = UIColor.appLabelBlack
     headlineView.textAlignment = .left
     headlineView.adjustsFontSizeToFitWidth = true
@@ -63,11 +63,10 @@ class AdsSmallTemplateView: GADUnifiedNativeAdView {
     labelAd.backgroundColor = UIColor(hexString: "E4BE59")
     labelAd.text = "Ad"
     labelAd.textAlignment = .center
-    labelAd.layer.cornerRadius = 2
-    labelAd.layer.masksToBounds = true
+    labelAd.layer.cornerRadius = 5
     
     let bodyView = UILabel()
-    bodyView.font = UIFont.appFontMedium(ofSize: 12)
+    bodyView.font = UIFont.appFontRegular(ofSize: 12)
     bodyView.textColor = UIColor.appSecondaryLabel
     bodyView.textAlignment = .left
     bodyView.adjustsFontSizeToFitWidth = true
