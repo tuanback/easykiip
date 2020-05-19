@@ -20,30 +20,32 @@ public protocol GoToLogInNavigator {
   func navigateToLogIn()
 }
 
-enum OnboardingView: AppView {
-  case welcome
-  case login
-  
-  public func hidesNavigationBar() -> Bool {
-    switch self {
-    case .welcome:
-      return true
-    case .login:
-      return false
-    }
-  }
-}
-
 public class OnboardingVM: SignedInResponder, GoToLogInNavigator {
   
-  var oNavigation = BehaviorRelay<NavigationEvent<OnboardingView>>(value: .push(view: .welcome))
+  lazy var oNavigation = BehaviorRelay<NavigationEvent>(value: .push(vc: factory.makeWelcomeVC()))
+  
+  public typealias Factory = WelcomeVCFactory & LoginVCFactory
+  
+  let factory: Factory
+  
+  init(viewControllerFactory: Factory) {
+    self.factory = viewControllerFactory
+  }
   
   public func navigateToLogIn() {
-    oNavigation.accept(.push(view: .login))
+    oNavigation.accept(.push(vc: factory.makeLoginVC()))
   }
   
   func signedIn() {
     oNavigation.accept(.dismiss)
   }
   
+}
+
+public protocol WelcomeVCFactory {
+  func makeWelcomeVC() -> WelcomeVC
+}
+
+public protocol LoginVCFactory {
+  func makeLoginVC() -> LoginVC
 }

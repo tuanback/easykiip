@@ -13,21 +13,34 @@ import UserSession
 
 public class LaunchViewModel {
   
+  public typealias Factory = MainNavigationControllerFactory & OnboardingVCFactory
+  
   private let userSessionRepository: UserSessionRepository
   
-  let oNavigation = PublishRelay<NavigationEvent<StartUpView>>()
+  let oNavigation = PublishRelay<NavigationEvent>()
   
-  init(userSessionRepository: UserSessionRepository) {
+  let vcFactory: Factory
+  
+  init(userSessionRepository: UserSessionRepository, viewControllerFactory: Factory) {
     self.userSessionRepository = userSessionRepository
+    self.vcFactory = viewControllerFactory
   }
   
   func start() {
     if let _ = userSessionRepository.readUserSession() {
-      oNavigation.accept(.present(view: StartUpView.main))
+      oNavigation.accept(.present(vc: vcFactory.makeMainNavVC()))
       return
     }
     
-    oNavigation.accept(.present(view: StartUpView.onboarding))
+    oNavigation.accept(.present(vc: vcFactory.makeOnboardingVC()))
   }
   
+}
+
+public protocol MainNavigationControllerFactory {
+  func makeMainNavVC() -> MainNavVC
+}
+
+public protocol OnboardingVCFactory {
+  func makeOnboardingVC() -> OnboardingVC
 }

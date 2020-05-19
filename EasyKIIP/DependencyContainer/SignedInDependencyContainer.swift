@@ -41,32 +41,25 @@ public class SignedInDependencyContainer {
   }
   
   func makeMainNavVC() -> MainNavVC {
-    let makeMainVC = {
-      self.makeMainVC()
-    }
-    
-    let viewModel = MainNavViewModel()
-    let mainNavVC = MainNavVC(viewModel: viewModel, makeMainVC: makeMainVC)
+    let viewModel = MainNavViewModel(viewControllerFactory: self)
+    let mainNavVC = MainNavVC(viewModel: viewModel)
     return mainNavVC
   }
   
-  func makeMainVC() -> MainVC {
-    let factory: (Book) -> (BookDetailVC) = { book in
-      return self.makeBookDetailVC(book: book)
-    }
-    
+  public func makeMainVC() -> MainVC {
     let viewModel = makeMainViewModel()
-    let mainVC = MainVC(viewModel: viewModel,
-                        bookDetailVCFactory: factory)
+    let mainVC = MainVC(viewModel: viewModel)
     return mainVC
   }
   
   func makeMainViewModel() -> MainViewModel {
-    let mainVM = MainViewModel(userSessionRepository: userSessionRepository, vocabRepository: vocabRepository)
+    let mainVM = MainViewModel(userSessionRepository: userSessionRepository,
+                               vocabRepository: vocabRepository,
+                               viewControllerFactory: self)
     return mainVM
   }
   
-  func makeBookDetailVC(book: Book) -> BookDetailVC {
+  public func makeBookDetailVC(book: Book) -> BookDetailVC {
     
     func makeViewModel(book: Book) -> BookDetailViewModel {
       return BookDetailViewModel(book: book, vocabRepository: vocabRepository)
@@ -77,3 +70,6 @@ public class SignedInDependencyContainer {
   }
   
 }
+
+extension SignedInDependencyContainer: MainVCFactory { }
+extension SignedInDependencyContainer: BookDetailVCFactory {}

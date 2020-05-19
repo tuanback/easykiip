@@ -23,17 +23,20 @@ public class MainViewModel {
   
   let userSessionRepository: UserSessionRepository
   let vocabRepository: VocabRepository
+  let factory: BookDetailVCFactory
   
   var bookViewModels = BehaviorRelay<[BookItemViewModel]>(value: [])
   
   private var books: [Book] = []
   
-  var oNavigation = PublishRelay<NavigationEvent<SignedInView>>()
+  var oNavigation = PublishRelay<NavigationEvent>()
   
   public init(userSessionRepository: UserSessionRepository,
-       vocabRepository: VocabRepository) {
+              vocabRepository: VocabRepository,
+              viewControllerFactory: BookDetailVCFactory) {
     self.userSessionRepository = userSessionRepository
     self.vocabRepository = vocabRepository
+    self.factory = viewControllerFactory
     self.initBookList()
   }
   
@@ -66,7 +69,7 @@ public class MainViewModel {
   
   func handleBookItemClicked(_ itemViewModel: BookItemViewModel) {
     if let book = books.first(where: { $0.id == itemViewModel.id   }) {
-      oNavigation.accept(.push(view: .bookDetail(book)))
+      oNavigation.accept(.push(vc: factory.makeBookDetailVC(book: book)))
     }
   }
   
@@ -74,4 +77,8 @@ public class MainViewModel {
     userSessionRepository.signOut()
     oNavigation.accept(.dismiss)
   }
+}
+
+public protocol BookDetailVCFactory {
+  func makeBookDetailVC(book: Book) -> BookDetailVC
 }

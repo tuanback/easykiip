@@ -24,29 +24,23 @@ public class AppDependencyContainer {
   }
   
   public func makeLaunchVC() -> LaunchVC {
-    let makeOnboardingVC = {
-      return self.makeOnboardingVC()
-    }
-    
-    let makeMainNavVC = {
-      return self.makeMainNavVC()
-    }
-    
     let viewModel = makeLaunchViewModel()
-    return LaunchVC(viewModel: viewModel, makeOnboardingVC: makeOnboardingVC, makeMainNavVC: makeMainNavVC)
+    return LaunchVC(viewModel: viewModel)
   }
   
   private func makeLaunchViewModel() -> LaunchViewModel {
-    return LaunchViewModel(userSessionRepository: userSessionRepository)
+    return LaunchViewModel(userSessionRepository: userSessionRepository, viewControllerFactory: self)
   }
   
-  private func makeOnboardingVC() -> OnboardingVC {
+  public func makeOnboardingVC() -> OnboardingVC {
     let dependencyContainer = OnboardingDependencyContainer(appDependencyContainer: self)
     return dependencyContainer.makeOnboardingVC()
   }
   
-  private func makeMainNavVC() -> MainNavVC {
+  public func makeMainNavVC() -> MainNavVC {
     let dependencyContainer = SignedInDependencyContainer(appDenpendencyContainer: self)
     return dependencyContainer.makeMainNavVC()
   }
 }
+
+extension AppDependencyContainer: MainNavigationControllerFactory, OnboardingVCFactory { }
