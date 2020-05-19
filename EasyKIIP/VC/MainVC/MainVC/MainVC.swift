@@ -15,12 +15,12 @@ public class MainVC: NiblessViewController {
   
   private let viewModel: MainViewModel
   
-  private let makeBookDetailVCFactory: ((Book) -> (BookDetailVC))
+  private let makeBookDetailVCFactory: ((Int, String) -> (BookDetailVC))
   
   private let disposeBag = DisposeBag()
   
   public init(viewModel: MainViewModel,
-              bookDetailVCFactory: @escaping ((Book) -> (BookDetailVC))) {
+              bookDetailVCFactory: @escaping ((Int, String) -> (BookDetailVC))) {
     self.viewModel = viewModel
     self.makeBookDetailVCFactory = bookDetailVCFactory
     super.init()
@@ -70,11 +70,9 @@ public class MainVC: NiblessViewController {
         switch event {
         case .push(let view):
           switch view {
-          case .bookDetail(let book):
-            if let book = book,
-              let vc = self?.makeBookDetailVCFactory(book) {
-              self?.navigationController?.pushViewController(vc, animated: true)
-            }
+          case let .bookDetail(bookID, bookName):
+            guard let vc = self?.makeBookDetailVCFactory(bookID, bookName) else { return }
+            self?.navigationController?.pushViewController(vc, animated: true)
           default:
             break
           }

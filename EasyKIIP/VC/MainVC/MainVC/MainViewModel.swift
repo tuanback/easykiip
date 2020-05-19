@@ -66,7 +66,7 @@ public class MainViewModel {
   
   func handleBookItemClicked(_ itemViewModel: BookItemViewModel) {
     if let book = books.first(where: { $0.id == itemViewModel.id   }) {
-      oNavigation.accept(.push(view: .bookDetail(book)))
+      oNavigation.accept(.push(view: .bookDetail(bookID: book.id, bookName: book.name)))
     }
   }
   

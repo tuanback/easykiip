@@ -29,7 +29,7 @@ struct LessonItemViewModel: Equatable {
 
 class BookDetailViewModel {
   
-  private let book: Book
+  private let bookID: Int
   private let vocabRepository: VocabRepository
   
   public var oNavigationTitle = BehaviorRelay<String>(value: "")
@@ -41,10 +41,10 @@ class BookDetailViewModel {
   
   private let disposeBag = DisposeBag()
   
-  init(book: Book, vocabRepository: VocabRepository) {
-    self.book = book
+  init(bookID: Int, bookName: String, vocabRepository: VocabRepository) {
+    self.bookID = bookID
     self.vocabRepository = vocabRepository
-    oNavigationTitle.accept(book.name)
+    oNavigationTitle.accept(bookName)
     setupItemViewModels()
     initLessons()
   }
@@ -61,7 +61,7 @@ class BookDetailViewModel {
   private func initLessons() {
     self.isLoading.accept(true)
     
-    let observable = self.vocabRepository.getListOfLesson(inBook: book.id).share(replay: 1, scope: .whileConnected)
+    let observable = self.vocabRepository.getListOfLesson(inBook: bookID).share(replay: 1, scope: .whileConnected)
     
     observable
       .bind(to: lessons)

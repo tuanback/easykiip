@@ -59,15 +59,6 @@ public class MainNavVC: NiblessNavigationController {
 
 // MARK: - Navigation Bar Presentation
 extension MainNavVC {
-
-  func hideOrShowNavigationBarIfNeeded(for view: SignedInView, animated: Bool) {
-    if view.hidesNavigationBar() {
-      hideNavigationBar(animated: animated)
-    } else {
-      showNavigationBar(animated: animated)
-    }
-  }
-
   func hideNavigationBar(animated: Bool) {
     if animated {
       transitionCoordinator?.animate(alongsideTransition: { context in
@@ -91,19 +82,22 @@ extension MainNavVC: UINavigationControllerDelegate {
   public func navigationController(_ navigationController: UINavigationController,
                                    willShow viewController: UIViewController,
                                    animated: Bool) {
-    guard let viewToBeShown = signedInView(associatedWith: viewController) else { return }
-    hideOrShowNavigationBarIfNeeded(for: viewToBeShown, animated: animated)
+    guard let shouldShowNavBar = shouldShowNavBar(associatedWith: viewController) else {
+      return
+    }
+    
+    shouldShowNavBar ? showNavigationBar(animated: animated) : hideNavigationBar(animated: animated)
   }
 }
 
 extension MainNavVC {
   
-  func signedInView(associatedWith viewController: UIViewController) -> SignedInView? {
+  func shouldShowNavBar(associatedWith viewController: UIViewController) -> Bool? {
     switch viewController {
     case is MainVC:
-      return .main
+      return true
     case is BookDetailVC:
-      return .bookDetail(nil)
+      return true
     default:
       assertionFailure("Encountered unexpected child view controller type in OnboardingViewController")
       return nil

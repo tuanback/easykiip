@@ -13,16 +13,8 @@ import EasyKIIPKit
 
 enum SignedInView: AppView {
   case main
-  case bookDetail(Book?)
-  
-  public func hidesNavigationBar() -> Bool {
-    switch self {
-    case .main:
-      return false
-    case .bookDetail:
-      return false
-    }
-  }
+  case bookDetail(bookID: Int, bookName: String)
+  case lessonDetail(bookID: Int, lessonID: Int, lessonName: String)
 }
 
 public class MainNavViewModel {
