@@ -11,23 +11,17 @@ import RxSwift
 import RxCocoa
 import EasyKIIPKit
 
-enum SignedInView: AppView {
-  case main
-  case bookDetail(Book?)
+public class MainNavViewModel {
   
-  public func hidesNavigationBar() -> Bool {
-    switch self {
-    case .main:
-      return false
-    case .bookDetail:
-      return false
-    }
+  lazy var oNavigation = BehaviorRelay<NavigationEvent>(value: .push(vc: factory.makeMainVC()))
+  
+  let factory: MainVCFactory
+  
+  init(viewControllerFactory: MainVCFactory) {
+    self.factory = viewControllerFactory
   }
 }
 
-public class MainNavViewModel {
-  
-  var oNavigation = BehaviorRelay<NavigationEvent<SignedInView>>(value: .push(view: .main))
-  
-  init() {}
+public protocol MainVCFactory {
+  func makeMainVC() -> MainVC
 }
