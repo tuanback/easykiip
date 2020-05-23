@@ -8,17 +8,39 @@
 
 import Foundation
 import EasyKIIPKit
+import RxSwift
+import RxCocoa
+
+enum LessonDetailChildVC {
+  case learnVocab
+  case readingPart
+  case listOfVocabs
+}
 
 class LessonDetailViewModel {
   
-  let book: Book
-  let lesson: Lesson
+  var childVC: Observable<[LessonDetailChildVC]> {
+    return rVocabs.filter { $0.count > 0 }.map { _ in [.learnVocab, .listOfVocabs] }
+  }
+  
+  private let rVocabs = BehaviorRelay<[Vocab]>(value: [])
+  private let disposeBag = DisposeBag()
+  
+  let bookID: Int
+  let lessonID: Int
   let vocabRepository: VocabRepository
   
-  init(book: Book, lesson: Lesson, vocabRepository: VocabRepository) {
-    self.book = book
-    self.lesson = lesson
+  init(bookID: Int, lessonID: Int, vocabRepository: VocabRepository) {
+    self.bookID = bookID
+    self.lessonID = lessonID
     self.vocabRepository = vocabRepository
+    getVocabs()
+  }
+  
+  private func getVocabs() {
+    vocabRepository.getListOfVocabs(inBook: bookID, inLesson: lessonID)
+    .bind(to: rVocabs)
+    .disposed(by: disposeBag)
   }
   
 }

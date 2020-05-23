@@ -17,10 +17,15 @@ class LessonDetailViewModelTests: XCTestCase {
   
   var subscription: Disposable!
   
+  private var book: Book!
+  private var lesson: Lesson!
+  private lazy var vocabRepository = VocabRepositoryStub(book: book, lesson: lesson)
+  
   override func setUp() {
     super.setUp()
     
     scheduler = TestScheduler(initialClock: 0)
+    (book, _, lesson, _) = makeSampleBook()
   }
   
   override func tearDown() {
@@ -30,18 +35,42 @@ class LessonDetailViewModelTests: XCTestCase {
     super.tearDown()
   }
   
-  func test_init() {
-    let (book, _, lesson, _) = makeSampleBook()
-    let sut = makeSut(book: book, lesson: lesson)
-    
+  func test_init_callGetVocabs() {
+    makeSut(book: book, lesson: lesson)
+    XCTAssertTrue(vocabRepository.isGetVocabsCalled)
   }
   
+  func test_init_return() {
+    let sut = makeSut(book: book, lesson: lesson)
+    
+    let itemVmSpy = ItemVMSpy(observable: sut.childVC)
+    
+    XCTAssertEqual(itemVmSpy.childViewModel, [[.learnVocab, .listOfVocabs]])
+  }
   
   // Classes
   private func makeSut(book: Book, lesson: Lesson) -> LessonDetailViewModel {
-    let vocabRepository = VocabRepositoryStub(book: book, lesson: lesson)
-    let sut = LessonDetailViewModel(book: book, lesson: lesson, vocabRepository: vocabRepository)
+    let sut = LessonDetailViewModel(bookID: book.id, lessonID: lesson.id, vocabRepository: vocabRepository)
     return sut
+  }
+  
+  // Spy
+  class ItemVMSpy {
+    
+    private let observable: Observable<[LessonDetailChildVC]>
+    private let disposeBag = DisposeBag()
+    
+    private(set) var childViewModel: [[LessonDetailChildVC]] = []
+    
+    init(observable: Observable<[LessonDetailChildVC]>) {
+      self.observable = observable
+      
+      self.observable
+        .subscribe(onNext: { [weak self] vms in
+          self?.childViewModel.append(vms)
+        })
+        .disposed(by: disposeBag)
+    }
   }
   
   // Sample book
@@ -76,6 +105,8 @@ class LessonDetailViewModelTests: XCTestCase {
   
   private class VocabRepositoryStub: VocabRepository {
     
+    private(set) var isGetVocabsCalled = false
+    
     private let book: Book
     private let lesson: Lesson
     
@@ -95,7 +126,8 @@ class LessonDetailViewModelTests: XCTestCase {
     }
     
     func getListOfVocabs(inBook bookID: Int, inLesson lessonID: Int) -> Observable<[Vocab]> {
-      return Observable.empty()
+      isGetVocabsCalled = true
+      return Observable.just(lesson.vocabs)
     }
     
     func markVocabAsMastered(vocabID id: Int) {
