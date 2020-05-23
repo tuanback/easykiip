@@ -11,26 +11,25 @@ import RxSwift
 import RxCocoa
 import EasyKIIPKit
 
-public class MainVC: NiblessViewController {
+class MainVC: NiblessViewController {
   
   private let viewModel: MainViewModel
-  
-  private let makeBookDetailVCFactory: ((Int, String) -> (BookDetailVC))
+  private let navigator: MainNavigator
   
   private let disposeBag = DisposeBag()
   
-  public init(viewModel: MainViewModel,
-              bookDetailVCFactory: @escaping ((Int, String) -> (BookDetailVC))) {
+  init(viewModel: MainViewModel,
+              navigator: MainNavigator) {
     self.viewModel = viewModel
-    self.makeBookDetailVCFactory = bookDetailVCFactory
+    self.navigator = navigator
     super.init()
   }
   
-  public override func loadView() {
+  override func loadView() {
     view = MainRootView(viewModel: viewModel)
   }
   
-  public override func viewDidLoad() {
+  override func viewDidLoad() {
     super.viewDidLoad()
     setupNavBar()
     observeViewModel()
@@ -67,17 +66,12 @@ public class MainVC: NiblessViewController {
   private func observeViewModel() {
     viewModel.oNavigation
       .subscribe(onNext: { [weak self] event in
+        guard let strongSelf = self else { return }
         switch event {
-        case .push(let view):
-          switch view {
-          case let .bookDetail(bookID, bookName):
-            guard let vc = self?.makeBookDetailVCFactory(bookID, bookName) else { return }
-            self?.navigationController?.pushViewController(vc, animated: true)
-          default:
-            break
-          }
-        case .present(_):
-          break
+        case .push(let destination):
+          strongSelf.navigator.navigate(from: strongSelf, to: destination, type: .push)
+        case .present(let destination):
+          strongSelf.navigator.navigate(from: strongSelf, to: destination, type: .present)
         case .pop:
           self?.navigationController?.popViewController(animated: true)
         case .dismiss:
@@ -85,6 +79,7 @@ public class MainVC: NiblessViewController {
         }
       })
       .disposed(by: disposeBag)
+    
   }
   
 }

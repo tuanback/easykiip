@@ -10,22 +10,22 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-public class MainNavVC: NiblessNavigationController {
+class MainNavVC: NiblessNavigationController {
   
   private let viewModel: MainNavViewModel
-  private let makeMainVC: ()->(MainVC)
+  private let navigator: MainNavConNavigator
   
   private let disposeBag = DisposeBag()
   
-  public init(viewModel: MainNavViewModel,
-              makeMainVC: @escaping ()->(MainVC)) {
+  init(viewModel: MainNavViewModel,
+              navigator: MainNavConNavigator) {
     self.viewModel = viewModel
-    self.makeMainVC = makeMainVC
+    self.navigator = navigator
     super.init()
     self.delegate = self
   }
   
-  public override func viewDidLoad() {
+  override func viewDidLoad() {
     super.viewDidLoad()
     observeViewModel()
   }
@@ -36,20 +36,14 @@ public class MainNavVC: NiblessNavigationController {
       .subscribe(onNext: { [weak self] event in
         guard let strongSelf = self else { return }
         switch event {
-        case .push(let view):
-          switch view {
-          case .main:
-            let mainVC = strongSelf.makeMainVC()
-            self?.pushViewController(mainVC, animated: true)
-          case .bookDetail:
-            break
-          }
+        case .push(let destination):
+          strongSelf.navigator.navigate(from: strongSelf, to: destination, type: .push)
+        case .present(let destination):
+          strongSelf.navigator.navigate(from: strongSelf, to: destination, type: .present)
         case .pop:
           self?.popViewController(animated: true)
         case .dismiss:
           self?.dismiss(animated: true, completion: nil)
-        default:
-          break
         }
       })
     .disposed(by: disposeBag)

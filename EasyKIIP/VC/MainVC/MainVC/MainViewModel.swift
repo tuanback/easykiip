@@ -28,7 +28,7 @@ public class MainViewModel {
   
   private var books: [Book] = []
   
-  var oNavigation = PublishRelay<NavigationEvent<SignedInView>>()
+  var oNavigation = PublishRelay<NavigationEvent<MainNavigator.Destination>>()
   
   public init(userSessionRepository: UserSessionRepository,
        vocabRepository: VocabRepository) {
@@ -66,7 +66,7 @@ public class MainViewModel {
   
   func handleBookItemClicked(_ itemViewModel: BookItemViewModel) {
     if let book = books.first(where: { $0.id == itemViewModel.id   }) {
-      oNavigation.accept(.push(view: .bookDetail(bookID: book.id, bookName: book.name)))
+      oNavigation.accept(.push(destination: .bookDetail(bookID: book.id, bookName: book.name)))
     }
   }
   

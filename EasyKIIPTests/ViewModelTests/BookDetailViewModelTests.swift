@@ -76,7 +76,7 @@ class BookDetailViewModelTests: XCTestCase {
   
   private func makeSut(book: Book) -> BookDetailViewModel {
     let vocabRepository = VocabRepositoryStub(book: book)
-    let sut = BookDetailViewModel(book: book, vocabRepository: vocabRepository)
+    let sut = BookDetailViewModel(bookID: book.id, bookName: book.name, vocabRepository: vocabRepository)
     return sut
   }
   

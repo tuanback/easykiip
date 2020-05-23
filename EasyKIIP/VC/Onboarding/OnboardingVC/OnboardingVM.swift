@@ -20,26 +20,12 @@ public protocol GoToLogInNavigator {
   func navigateToLogIn()
 }
 
-enum OnboardingView: AppView {
-  case welcome
-  case login
-  
-  public func hidesNavigationBar() -> Bool {
-    switch self {
-    case .welcome:
-      return true
-    case .login:
-      return false
-    }
-  }
-}
-
 public class OnboardingVM: SignedInResponder, GoToLogInNavigator {
   
-  var oNavigation = BehaviorRelay<NavigationEvent<OnboardingView>>(value: .push(view: .welcome))
+  var oNavigation = BehaviorRelay<NavigationEvent<OnboardingNavigator.Destination>>(value: .push(destination: .welcome))
   
   public func navigateToLogIn() {
-    oNavigation.accept(.push(view: .login))
+    oNavigation.accept(.push(destination: .login))
   }
   
   func signedIn() {

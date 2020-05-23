@@ -11,15 +11,9 @@ import RxSwift
 import RxCocoa
 import EasyKIIPKit
 
-enum SignedInView: AppView {
-  case main
-  case bookDetail(bookID: Int, bookName: String)
-  case lessonDetail(bookID: Int, lessonID: Int, lessonName: String)
-}
-
 public class MainNavViewModel {
   
-  var oNavigation = BehaviorRelay<NavigationEvent<SignedInView>>(value: .push(view: .main))
+  var oNavigation = BehaviorRelay<NavigationEvent<MainNavConNavigator.Destination>>(value: .push(destination: .main))
   
   init() {}
 }

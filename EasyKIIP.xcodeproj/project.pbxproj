@@ -135,6 +135,16 @@
 		17F30EF0246B5608008040BE /* BookDetailCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F30EEE246B5608008040BE /* BookDetailCVC.swift */; };
 		17F30EF2246B561D008040BE /* BookDetailAdsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F30EF1246B561D008040BE /* BookDetailAdsCVC.swift */; };
 		17F30EF3246B561D008040BE /* BookDetailAdsCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F30EF1246B561D008040BE /* BookDetailAdsCVC.swift */; };
+		17F57F992478A9FE00F26EF4 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F57F982478A9FE00F26EF4 /* Navigator.swift */; };
+		17F57F9A2478A9FE00F26EF4 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F57F982478A9FE00F26EF4 /* Navigator.swift */; };
+		17F57F9D2478AA7300F26EF4 /* LaunchNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F57F9C2478AA7300F26EF4 /* LaunchNavigator.swift */; };
+		17F57F9E2478AA7300F26EF4 /* LaunchNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F57F9C2478AA7300F26EF4 /* LaunchNavigator.swift */; };
+		17F57FA02478B0CB00F26EF4 /* OnboardingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F57F9F2478B0CB00F26EF4 /* OnboardingNavigator.swift */; };
+		17F57FA12478B0CB00F26EF4 /* OnboardingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F57F9F2478B0CB00F26EF4 /* OnboardingNavigator.swift */; };
+		17F57FA32478B40800F26EF4 /* MainNavConNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F57FA22478B40800F26EF4 /* MainNavConNavigator.swift */; };
+		17F57FA42478B40800F26EF4 /* MainNavConNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F57FA22478B40800F26EF4 /* MainNavConNavigator.swift */; };
+		17F57FA62478B62500F26EF4 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F57FA52478B62500F26EF4 /* MainNavigator.swift */; };
+		17F57FA72478B62500F26EF4 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F57FA52478B62500F26EF4 /* MainNavigator.swift */; };
 		17FBF6D8245BEB9C00A65233 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFCA245AA51C008B263D /* Strings.swift */; };
 		17FBF6D9245BEB9F00A65233 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFCA245AA51C008B263D /* Strings.swift */; };
 		17FBF6DA245BEBA200A65233 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD2245AB466008B263D /* AppSetting.swift */; };
@@ -385,6 +395,11 @@
 		17F30EE9246B4A76008040BE /* BookDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailVC.swift; sourceTree = "<group>"; };
 		17F30EEE246B5608008040BE /* BookDetailCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailCVC.swift; sourceTree = "<group>"; };
 		17F30EF1246B561D008040BE /* BookDetailAdsCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailAdsCVC.swift; sourceTree = "<group>"; };
+		17F57F982478A9FE00F26EF4 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		17F57F9C2478AA7300F26EF4 /* LaunchNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchNavigator.swift; sourceTree = "<group>"; };
+		17F57F9F2478B0CB00F26EF4 /* OnboardingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigator.swift; sourceTree = "<group>"; };
+		17F57FA22478B40800F26EF4 /* MainNavConNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavConNavigator.swift; sourceTree = "<group>"; };
+		17F57FA52478B62500F26EF4 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
 		17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionRepository.swift; sourceTree = "<group>"; };
 		17FBF72D245C392E00A65233 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionDataStore.swift; sourceTree = "<group>"; };
@@ -537,6 +552,7 @@
 		1766FF9E245A5D8F008B263D /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				17F57F9B2478AA5C00F26EF4 /* Navigator */,
 				173842562471589200BEFE2F /* LessonDetailVC */,
 				1766FF9A245A5CDC008B263D /* MainVC */,
 				1766FF99245A5CD0008B263D /* Onboarding */,
@@ -1160,6 +1176,18 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		17F57F9B2478AA5C00F26EF4 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				17F57F982478A9FE00F26EF4 /* Navigator.swift */,
+				17F57F9C2478AA7300F26EF4 /* LaunchNavigator.swift */,
+				17F57F9F2478B0CB00F26EF4 /* OnboardingNavigator.swift */,
+				17F57FA22478B40800F26EF4 /* MainNavConNavigator.swift */,
+				17F57FA52478B62500F26EF4 /* MainNavigator.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
 		17FBF72C245C391800A65233 /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -1699,6 +1727,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F57FA02478B0CB00F26EF4 /* OnboardingNavigator.swift in Sources */,
 				17FBF6D8245BEB9C00A65233 /* Strings.swift in Sources */,
 				17B70A86244C180200C67334 /* AppDelegate.swift in Sources */,
 				17F30EEF246B5608008040BE /* BookDetailCVC.swift in Sources */,
@@ -1710,7 +1739,9 @@
 				17FBF724245BEC2D00A65233 /* SignedInDependencyContainer.swift in Sources */,
 				17FBF6FF245BEBEE00A65233 /* WelcomeRootView.swift in Sources */,
 				17FBF6EC245BEBCA00A65233 /* NiblessNavigationController.swift in Sources */,
+				17F57F992478A9FE00F26EF4 /* Navigator.swift in Sources */,
 				17F30EE7246AD1C6008040BE /* AdsIdentifier.swift in Sources */,
+				17F57FA62478B62500F26EF4 /* MainNavigator.swift in Sources */,
 				17FBF714245BEC1300A65233 /* LaunchViewModel.swift in Sources */,
 				17FBF709245BEBFF00A65233 /* LoginRootView.swift in Sources */,
 				17954AB2245D3F6000C8CC95 /* MainBookItemCVC.swift in Sources */,
@@ -1722,12 +1753,14 @@
 				17FBF720245BEC2800A65233 /* OnboardingDependencyContainer.swift in Sources */,
 				17384258247158D700BEFE2F /* LessonDetailViewModel.swift in Sources */,
 				17FBF6DA245BEBA200A65233 /* AppSetting.swift in Sources */,
+				17F57FA32478B40800F26EF4 /* MainNavConNavigator.swift in Sources */,
 				17FBF738245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */,
 				17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */,
 				17FBF6E0245BEBB600A65233 /* UIFront_Extension.swift in Sources */,
 				17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */,
 				17FBF6EF245BEBCF00A65233 /* NiblessViewController.swift in Sources */,
 				17FBF717245BEC1800A65233 /* LaunchRootView.swift in Sources */,
+				17F57F9D2478AA7300F26EF4 /* LaunchNavigator.swift in Sources */,
 				17FBF711245BEC0E00A65233 /* OnboardingVM.swift in Sources */,
 				17FBF706245BEBF900A65233 /* LoginViewModel.swift in Sources */,
 				1738425424712C2900BEFE2F /* AdsSmallTemplateView.swift in Sources */,
@@ -1750,11 +1783,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F57FA12478B0CB00F26EF4 /* OnboardingNavigator.swift in Sources */,
 				17FBF6D9245BEB9F00A65233 /* Strings.swift in Sources */,
 				1738425C24715CB600BEFE2F /* LessonDetailVC.swift in Sources */,
 				17FBF6E7245BEBC000A65233 /* Navigation.swift in Sources */,
 				17FBF70C245BEC0300A65233 /* LoginVC.swift in Sources */,
 				17FBF6FD245BEBEA00A65233 /* WelcomeViewModel.swift in Sources */,
+				17F57F9A2478A9FE00F26EF4 /* Navigator.swift in Sources */,
 				17FBF71B245BEC1C00A65233 /* LaunchVC.swift in Sources */,
 				17FBF723245BEC2D00A65233 /* SignedInDependencyContainer.swift in Sources */,
 				17F30EE8246AD1C6008040BE /* AdsIdentifier.swift in Sources */,
@@ -1779,9 +1814,11 @@
 				17FBF718245BEC1800A65233 /* LaunchRootView.swift in Sources */,
 				176ADE042460471F006C5D3C /* MainBookItemCVC.swift in Sources */,
 				17FBF712245BEC0E00A65233 /* OnboardingVM.swift in Sources */,
+				17F57FA42478B40800F26EF4 /* MainNavConNavigator.swift in Sources */,
 				176ADE082460E958006C5D3C /* BookDetailViewModel.swift in Sources */,
 				17FBF705245BEBF800A65233 /* LoginViewModel.swift in Sources */,
 				17954ABD245EA9CE00C8CC95 /* BookDetailViewModelTests.swift in Sources */,
+				17F57F9E2478AA7300F26EF4 /* LaunchNavigator.swift in Sources */,
 				17FBF71E245BEC2400A65233 /* AppDenpendencyContainer.swift in Sources */,
 				17384259247158D700BEFE2F /* LessonDetailViewModel.swift in Sources */,
 				17FBF6DF245BEBB000A65233 /* UIColor_Extension.swift in Sources */,
@@ -1796,6 +1833,7 @@
 				17F30EEB246B4A76008040BE /* BookDetailVC.swift in Sources */,
 				17E7F18324681B12008667FB /* FirestoreKey.swift in Sources */,
 				17954AAA245D052B00C8CC95 /* MainViewModelTests.swift in Sources */,
+				17F57FA72478B62500F26EF4 /* MainNavigator.swift in Sources */,
 				17FBF703245BEBF300A65233 /* WelcomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

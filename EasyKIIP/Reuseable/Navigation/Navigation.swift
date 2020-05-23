@@ -8,9 +8,9 @@
 
 import Foundation
 
-enum NavigationEvent<T: AppView> {
-  case push(view: T)
-  case present(view: T)
+enum NavigationEvent<T> {
+  case push(destination: T)
+  case present(destination: T)
   case dismiss
   case pop
 }

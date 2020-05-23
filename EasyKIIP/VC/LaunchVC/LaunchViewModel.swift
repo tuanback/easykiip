@@ -15,7 +15,7 @@ public class LaunchViewModel {
   
   private let userSessionRepository: UserSessionRepository
   
-  let oNavigation = PublishRelay<NavigationEvent<StartUpView>>()
+  let oNavigation = PublishRelay<NavigationEvent<LaunchNavigator.Destination>>()
   
   init(userSessionRepository: UserSessionRepository) {
     self.userSessionRepository = userSessionRepository
@@ -23,11 +23,11 @@ public class LaunchViewModel {
   
   func start() {
     if let _ = userSessionRepository.readUserSession() {
-      oNavigation.accept(.present(view: StartUpView.main))
+      oNavigation.accept(.present(destination: .main))
       return
     }
     
-    oNavigation.accept(.present(view: StartUpView.onboarding))
+    oNavigation.accept(.present(destination: .onboarding))
   }
   
 }

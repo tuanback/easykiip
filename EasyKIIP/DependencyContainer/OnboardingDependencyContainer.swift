@@ -20,17 +20,12 @@ class OnboardingDependencyContainer {
   }
   
   func makeOnboardingVC() -> OnboardingVC {
-    let makeWelcomeVC = {
-      self.makeWelcomeVC()
-    }
-    
-    let makeLoginVC = {
-      self.makeLoginVC()
+    func makeOnboardingNavigator() -> OnboardingNavigator {
+      return OnboardingNavigator(factory: self)
     }
     
     return OnboardingVC(viewModel: onboardingViewModel,
-                        makeWelcomeVC: makeWelcomeVC,
-                        makeLoginVC: makeLoginVC)
+                        navigator: makeOnboardingNavigator())
   }
   
   func makeLoginVC() -> LoginVC {
@@ -50,3 +45,5 @@ class OnboardingDependencyContainer {
   }
   
 }
+
+extension OnboardingDependencyContainer: LoginVCFactory, WelcomeVCFactory { }

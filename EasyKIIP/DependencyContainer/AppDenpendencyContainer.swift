@@ -9,11 +9,11 @@
 import Foundation
 import UserSession
 
-public class AppDependencyContainer {
+class AppDependencyContainer {
   
   let userSessionRepository: UserSessionRepository
   
-  public init() {
+  init() {
     func makeUserSessionDataStore() -> UserSessionDataStore {
       return FirebaseUserSessionDataStore()
     }
@@ -23,30 +23,29 @@ public class AppDependencyContainer {
     self.userSessionRepository = FirebaseUserSessionRepository(dataStore: dataStore)
   }
   
-  public func makeLaunchVC() -> LaunchVC {
-    let makeOnboardingVC = {
-      return self.makeOnboardingVC()
-    }
-    
-    let makeMainNavVC = {
-      return self.makeMainNavVC()
+  func makeLaunchVC() -> LaunchVC {
+    func makeLaunchNavigator() -> LaunchNavigator {
+      return LaunchNavigator(factory: self)
     }
     
     let viewModel = makeLaunchViewModel()
-    return LaunchVC(viewModel: viewModel, makeOnboardingVC: makeOnboardingVC, makeMainNavVC: makeMainNavVC)
+    let factory = makeLaunchNavigator()
+    return LaunchVC(viewModel: viewModel, navigator: factory)
   }
   
   private func makeLaunchViewModel() -> LaunchViewModel {
     return LaunchViewModel(userSessionRepository: userSessionRepository)
   }
   
-  private func makeOnboardingVC() -> OnboardingVC {
+  func makeOnboardingVC() -> OnboardingVC {
     let dependencyContainer = OnboardingDependencyContainer(appDependencyContainer: self)
     return dependencyContainer.makeOnboardingVC()
   }
   
-  private func makeMainNavVC() -> MainNavVC {
+  func makeMainNavVC() -> MainNavVC {
     let dependencyContainer = SignedInDependencyContainer(appDenpendencyContainer: self)
     return dependencyContainer.makeMainNavVC()
   }
 }
+
+extension AppDependencyContainer: OnboardingVCFactory, MainNavConFactory { }
