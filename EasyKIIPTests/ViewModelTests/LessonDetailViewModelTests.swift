@@ -13,19 +13,28 @@ import RxTest
 import EasyKIIPKit
 import SwiftDate
 
+extension LearnVocabItemViewModel: Equatable {
+  static func == (lhs: LearnVocabItemViewModel, rhs: LearnVocabItemViewModel) -> Bool {
+    if lhs.index == rhs.index && lhs.proficiency == rhs.proficiency && lhs.vocabs.count == rhs.vocabs.count {
+      return true
+    }
+    return false
+  }
+}
+
 class LessonDetailViewModelTests: XCTestCase {
   
   var subscription: Disposable!
   
   private var book: Book!
-  private var lesson: Lesson!
-  private lazy var vocabRepository = VocabRepositoryStub(book: book, lesson: lesson)
+  private var lessons: [Lesson]!
+  private lazy var vocabRepository = VocabRepositoryStub(book: book, lessons: lessons)
   
   override func setUp() {
     super.setUp()
     
     scheduler = TestScheduler(initialClock: 0)
-    (book, _, lesson, _) = makeSampleBook()
+    (book, lessons, _, _) = makeSampleBook()
   }
   
   override func tearDown() {
@@ -35,17 +44,56 @@ class LessonDetailViewModelTests: XCTestCase {
     super.tearDown()
   }
   
-  func test_init_callGetVocabs() {
-    makeSut(book: book, lesson: lesson)
-    XCTAssertTrue(vocabRepository.isGetVocabsCalled)
+  func test_init_callGetLesson() {
+    let lesson = lessons[0]
+    let _ = makeSut(book: book, lesson: lesson)
+    XCTAssertTrue(vocabRepository.isGetLessonCalled)
   }
   
-  func test_init_return() {
+  func test_init_lessonIncludesVocabAndReadingPart_return3ChildViewModel() {
+    let lesson = lessons[0]
     let sut = makeSut(book: book, lesson: lesson)
     
     let itemVmSpy = ItemVMSpy(observable: sut.childVC)
     
+    XCTAssertEqual(itemVmSpy.childViewModel, [[.learnVocab, .readingPart, .listOfVocabs]])
+  }
+  
+  func test_int_lessonIncludesVocabOnly_return2ChildViewModel() {
+    let lesson = lessons[1]
+    let sut = makeSut(book: book, lesson: lesson)
+    
+    let itemVmSpy = ItemVMSpy(observable: sut.childVC)
     XCTAssertEqual(itemVmSpy.childViewModel, [[.learnVocab, .listOfVocabs]])
+  }
+  
+  func test_int_lessonIncludesReadingPartOnly_return1ChildViewModel() {
+    let lesson = lessons[2]
+    let sut = makeSut(book: book, lesson: lesson)
+    
+    let itemVmSpy = ItemVMSpy(observable: sut.childVC)
+    XCTAssertEqual(itemVmSpy.childViewModel, [[.readingPart]])
+  }
+  
+  func test_int_lessonNotIncludesBoth_returnEmpty() {
+    let lesson = lessons[3]
+    let sut = makeSut(book: book, lesson: lesson)
+    
+    let itemVmSpy = ItemVMSpy(observable: sut.childVC)
+    XCTAssertEqual(itemVmSpy.childViewModel, [[]])
+  }
+  
+  // For child view controllers
+  func test_lessonWithVocabs_SetLearnVocabViewModel() {
+    let lesson = lessons[0]
+    let sut = makeSut(book: book, lesson: lesson)
+    
+    let expectedResult = LessonDetailViewModel
+      .ToDetailViewModelConverter
+      .convertVocabsToLearnVocabItemVMs(vocabs: lesson.vocabs)
+    
+    let learnVocabSpy = LearnVocabSpy(observable: sut.oLearnVocabViewModels)
+    XCTAssertEqual(learnVocabSpy.viewModels, [expectedResult])
   }
   
   // Classes
@@ -73,6 +121,25 @@ class LessonDetailViewModelTests: XCTestCase {
     }
   }
   
+  class LearnVocabSpy {
+    
+    private let observable: Observable<[LearnVocabItemViewModel]>
+    private let disposeBag = DisposeBag()
+    
+    private(set) var viewModels: [[LearnVocabItemViewModel]] = []
+    
+    init(observable: Observable<[LearnVocabItemViewModel]>) {
+      self.observable = observable
+      
+      observable
+        .subscribe(onNext: { [weak self] vms in
+          self?.viewModels.append(vms)
+        })
+        .disposed(by: disposeBag)
+    }
+    
+  }
+  
   // Sample book
   private func makeSampleBook() -> (Book, [Lesson], Lesson, [Vocab]) {
     let vocab1 = Vocab(id: 1, word: "안녕!", translations: [.en: "Hello", .vi: "Xin chào"])
@@ -92,8 +159,8 @@ class LessonDetailViewModelTests: XCTestCase {
     let vocabs = [vocab1, vocab2, vocab3, vocab4, vocab5, vocab6, vocab7, vocab8, vocab9, vocab10, vocab11]
     
     let lesson1 = Lesson(id: 1, name: "제1과 1", index: 1, translations: [.en: "Lesson 1", .vi: "Bải 1"], vocabs: vocabs, readingParts: [readingPart])
-    let lesson2 = Lesson(id: 2, name: "제1과 2", index: 2, translations: [.en: "Lesson 2", .vi: "Bải 2"], vocabs: [], readingParts: [])
-    let lesson3 = Lesson(id: 3, name: "제1과 3", index: 3, translations: [.en: "Lesson 3", .vi: "Bải 3"], vocabs: [], readingParts: [])
+    let lesson2 = Lesson(id: 2, name: "제1과 2", index: 2, translations: [.en: "Lesson 2", .vi: "Bải 2"], vocabs: vocabs, readingParts: [])
+    let lesson3 = Lesson(id: 3, name: "제1과 3", index: 3, translations: [.en: "Lesson 3", .vi: "Bải 3"], vocabs: [], readingParts: [readingPart])
     let lesson4 = Lesson(id: 4, name: "제1과 4", index: 4, translations: [.en: "Lesson 4", .vi: "Bải 4"], vocabs: [], readingParts: [])
     let lesson5 = Lesson(id: 5, name: "제1과 5", index: 5, translations: [.en: "Lesson 5", .vi: "Bải 5"], vocabs: [], readingParts: [])
     
@@ -105,14 +172,14 @@ class LessonDetailViewModelTests: XCTestCase {
   
   private class VocabRepositoryStub: VocabRepository {
     
-    private(set) var isGetVocabsCalled = false
+    private(set) var isGetLessonCalled = false
     
     private let book: Book
-    private let lesson: Lesson
+    private let lessons: [Lesson]
     
-    init(book: Book, lesson: Lesson) {
+    init(book: Book, lessons: [Lesson]) {
       self.book = book
-      self.lesson = lesson
+      self.lessons = lessons
     }
     
     func getListOfBook() -> [Book] {
@@ -125,8 +192,19 @@ class LessonDetailViewModelTests: XCTestCase {
         ]).asObservable()
     }
     
+    func getLesson(inBook id: Int, lessonID: Int) -> Observable<Lesson> {
+      isGetLessonCalled = true
+      guard let lesson = lessons.first(where: { $0.id == lessonID }) else {
+        return Observable.empty()
+      }
+      return .just(lesson)
+    }
+    
     func getListOfVocabs(inBook bookID: Int, inLesson lessonID: Int) -> Observable<[Vocab]> {
-      isGetVocabsCalled = true
+      isGetLessonCalled = true
+      guard let lesson = lessons.first(where: { $0.id == lessonID }) else {
+        return Observable.empty()
+      }
       return Observable.just(lesson.vocabs)
     }
     

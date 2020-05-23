@@ -59,5 +59,9 @@ public class Lesson {
   func setLastTimeLearned(_ date: Date?) {
     self.lastTimeLearned = date
   }
+ 
+  func setVocabs(_ vocabs: [Vocab]) {
+    self.vocabs = vocabs
+  }
   
 }

@@ -28,6 +28,7 @@ public protocol NeedReviewVocabsGetter {
 public protocol VocabRepository: SearchEngine, NeedMorePracticeVocabGetter, NeedReviewVocabsGetter {
   func getListOfBook() -> [Book]
   func getListOfLesson(inBook id: Int) -> Observable<[Lesson]>
+  func getLesson(inBook id: Int, lessonID: Int) -> Observable<Lesson>
   func getListOfVocabs(inBook bookID: Int, inLesson lessonID: Int) -> Observable<[Vocab]>
   func markVocabAsMastered(vocabID id: Int)
   func recordVocabPracticed(vocabID: Int, isCorrectAnswer: Bool)

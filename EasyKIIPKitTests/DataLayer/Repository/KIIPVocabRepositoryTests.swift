@@ -55,9 +55,15 @@ class KIIPVocabRepositoryTests: XCTestCase {
   }
   
   func test_getListOfLesson_apiFuncCalled_dataStoreFuncCalled() {
+    let observer = scheduler.createObserver([Lesson].self)
+    
     let (sut, remoteAPI, dataStore) = makeSut()
     let book = dataStore.book
-    let _ = sut.getListOfLesson(inBook: book.id)
+    let observable = sut.getListOfLesson(inBook: book.id)
+    
+    subscription = observable.subscribe(observer)
+    
+    scheduler.start()
     
     XCTAssertTrue(remoteAPI.isLoadLessonsCalled && dataStore.isGetLessonsCalled)
   }
@@ -103,6 +109,17 @@ class KIIPVocabRepositoryTests: XCTestCase {
     
     XCTAssertTrue(dataStore.isSyncedLessonCalled)
     XCTAssertEqual(results.count, 1)
+  }
+  
+  func test_getLesson_getListOfVocabCalled() {
+    
+    let (sut, remoteAPI, dataStore) = makeSut()
+    let book = dataStore.book
+    let lesson = dataStore.lesson
+    let _ = sut.getLesson(inBook: book.id, lessonID: lesson.id)
+    
+    XCTAssertTrue(remoteAPI.isLoadVocabCalled && dataStore.isGetVocabsCalled)
+    
   }
   
   func test_getListOfVocab_apiFuncCalled_dataStoreFuncCalled() {

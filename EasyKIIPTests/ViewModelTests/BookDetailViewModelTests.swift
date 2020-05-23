@@ -182,6 +182,10 @@ class BookDetailViewModelTests: XCTestCase {
         ]).asObservable()
     }
     
+    func getLesson(inBook id: Int, lessonID: Int) -> Observable<Lesson> {
+      return Observable.empty()
+    }
+    
     func getListOfVocabs(inBook bookID: Int, inLesson lessonID: Int) -> Observable<[Vocab]> {
       return Observable.empty()
     }
