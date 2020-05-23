@@ -23,18 +23,49 @@ struct LearnVocabItemViewModel {
   let vocabs: [Vocab]
 }
 
+struct ReadingPartItemViewModel: Equatable {
+  let scriptName: String
+  let scriptNameTranslation: String
+}
+
+struct VocabListItemViewModel: Equatable {
+  let id: Int
+  let word: String
+  let wordTranslation: String
+}
+
 class LessonDetailViewModel {
   
   var childVC: Observable<[LessonDetailChildVC]> {
     return rChildVC.asObservable()
   }
   
-  var oLearnVocabViewModels: Observable<[LearnVocabItemViewModel]> {
-    return rVocabs.map { [weak self] (vocabs) -> [LearnVocabItemViewModel] in
+  var oLearnVocabVItemiewModels: Observable<[LearnVocabItemViewModel]> {
+    return rVocabs.map { [weak self] (vocabs) in
       guard let strongSelf = self else {
         return []
       }
       return strongSelf.createLearnVocabViewModels(from: vocabs)
+    }
+  }
+  
+  var oReadingPartItemViewModels: Observable<[ReadingPartItemViewModel]> {
+    return rReadingParts.map { [weak self] (readingParts) in
+      guard let strongSelf = self else {
+        return []
+      }
+      
+      return strongSelf.createReadingPartViewModels(from: readingParts)
+    }
+  }
+  
+  var oListOfVocabsItemViewModels: Observable<[VocabListItemViewModel]> {
+    return rVocabs.map { [weak self] (vocabs) in
+      guard let strongSelf = self else {
+        return []
+      }
+      
+      return strongSelf.createListOfVocabsViewModels(from: vocabs)
     }
   }
   
@@ -90,7 +121,32 @@ class LessonDetailViewModel {
     return ToDetailViewModelConverter.convertVocabsToLearnVocabItemVMs(vocabs: vocabs)
   }
   
+  private func createReadingPartViewModels(from readingParts: [ReadingPart]) -> [ReadingPartItemViewModel] {
+    return ToDetailViewModelConverter.convertReadingPartToReadingPartItemVMs(readingPart: readingParts)
+  }
+  
+  private func createListOfVocabsViewModels(from vocabs: [Vocab]) -> [VocabListItemViewModel] {
+    return ToDetailViewModelConverter.convertVocabsToVocabListItemVMs(vocabs: vocabs)
+  }
+  
   struct ToDetailViewModelConverter {
+    
+    static let numberOfItemForOneTimeLearn = 5
+    
+    static func convertVocabsToVocabListItemVMs(vocabs: [Vocab]) -> [VocabListItemViewModel] {
+      return vocabs.map {
+        return VocabListItemViewModel(id: $0.id,
+                                      word: $0.word,
+                                      wordTranslation: $0.translations[AppSetting.languageCode] ?? "")
+      }
+    }
+    
+    static func convertReadingPartToReadingPartItemVMs(readingPart: [ReadingPart]) -> [ReadingPartItemViewModel] {
+      return readingPart.map {
+        return ReadingPartItemViewModel(
+          scriptName: $0.scriptName,
+          scriptNameTranslation: $0.scriptNameTranslation[AppSetting.languageCode] ?? "")}
+    }
     
     static func convertVocabsToLearnVocabItemVMs(vocabs: [Vocab]) -> [LearnVocabItemViewModel] {
       
@@ -101,7 +157,7 @@ class LessonDetailViewModel {
       var tempVocabs: [Vocab] = []
       
       while i < vocabs.count {
-        if (i + 1) % 5 == 0 {
+        if (i + 1) % numberOfItemForOneTimeLearn == 0 {
           tempVocabs.append(vocabs[i])
           collectionID += 1
           let viewModel = convertVocabsToLearnVocabItemVMs(index: collectionID, vocabs: tempVocabs)

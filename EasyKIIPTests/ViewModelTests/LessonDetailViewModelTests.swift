@@ -84,7 +84,7 @@ class LessonDetailViewModelTests: XCTestCase {
   }
   
   // For child view controllers
-  func test_lessonWithVocabs_SetLearnVocabViewModel() {
+  func test_lessonWithVocabs_setLearnVocabViewModel() {
     let lesson = lessons[0]
     let sut = makeSut(book: book, lesson: lesson)
     
@@ -92,8 +92,33 @@ class LessonDetailViewModelTests: XCTestCase {
       .ToDetailViewModelConverter
       .convertVocabsToLearnVocabItemVMs(vocabs: lesson.vocabs)
     
-    let learnVocabSpy = LearnVocabSpy(observable: sut.oLearnVocabViewModels)
+    let learnVocabSpy = LearnVocabSpy(observable: sut.oLearnVocabVItemiewModels)
     XCTAssertEqual(learnVocabSpy.viewModels, [expectedResult])
+  }
+  
+  func test_lessonWithVocabs_setReadingPartViewModes() {
+    let lesson = lessons[0]
+    let sut = makeSut(book: book, lesson: lesson)
+    
+    let expectedResult = LessonDetailViewModel
+      .ToDetailViewModelConverter
+      .convertReadingPartToReadingPartItemVMs(readingPart: lesson.readingParts)
+    
+    let readingPartSpy = ReadingPartSpy(observable: sut.oReadingPartItemViewModels)
+    XCTAssertEqual(readingPartSpy.viewModels, [expectedResult])
+  }
+  
+  func test_lessonWithVocabs_setVocabListItemViewModels() {
+    
+    let lesson = lessons[0]
+    let sut = makeSut(book: book, lesson: lesson)
+    
+    let expectedResult = LessonDetailViewModel
+      .ToDetailViewModelConverter
+      .convertVocabsToVocabListItemVMs(vocabs: lesson.vocabs)
+    
+    let vocabListSpy = VocabListSpy(observable: sut.oListOfVocabsItemViewModels)
+    XCTAssertEqual(vocabListSpy.viewModels, [expectedResult])
   }
   
   // Classes
@@ -138,6 +163,40 @@ class LessonDetailViewModelTests: XCTestCase {
         .disposed(by: disposeBag)
     }
     
+  }
+  
+  class ReadingPartSpy {
+    private let observable: Observable<[ReadingPartItemViewModel]>
+    private let disposeBag = DisposeBag()
+    
+    private(set) var viewModels: [[ReadingPartItemViewModel]] = []
+    
+    init(observable: Observable<[ReadingPartItemViewModel]>) {
+      self.observable = observable
+      
+      observable
+        .subscribe(onNext: { [weak self] vms in
+          self?.viewModels.append(vms)
+        })
+        .disposed(by: disposeBag)
+    }
+  }
+  
+  class VocabListSpy {
+    private let observable: Observable<[VocabListItemViewModel]>
+    private let disposeBag = DisposeBag()
+    
+    private(set) var viewModels: [[VocabListItemViewModel]] = []
+    
+    init(observable: Observable<[VocabListItemViewModel]>) {
+      self.observable = observable
+      
+      observable
+        .subscribe(onNext: { [weak self] vms in
+          self?.viewModels.append(vms)
+        })
+        .disposed(by: disposeBag)
+    }
   }
   
   // Sample book
