@@ -121,6 +121,12 @@
 		17CBE66E247A075A005D4CFD /* ReadingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE66C247A075A005D4CFD /* ReadingListVC.swift */; };
 		17CBE671247A078E005D4CFD /* VocabListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE670247A078E005D4CFD /* VocabListVC.swift */; };
 		17CBE672247A078E005D4CFD /* VocabListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE670247A078E005D4CFD /* VocabListVC.swift */; };
+		17CBE674247A19CE005D4CFD /* LearnVocabListRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE673247A19CE005D4CFD /* LearnVocabListRootView.swift */; };
+		17CBE675247A19CE005D4CFD /* LearnVocabListRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE673247A19CE005D4CFD /* LearnVocabListRootView.swift */; };
+		17CBE677247A1A47005D4CFD /* ReadingListRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE676247A1A47005D4CFD /* ReadingListRootView.swift */; };
+		17CBE678247A1A47005D4CFD /* ReadingListRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE676247A1A47005D4CFD /* ReadingListRootView.swift */; };
+		17CBE67A247A1A5C005D4CFD /* VocabListRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE679247A1A5C005D4CFD /* VocabListRootView.swift */; };
+		17CBE67B247A1A5C005D4CFD /* VocabListRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE679247A1A5C005D4CFD /* VocabListRootView.swift */; };
 		17E7F16D246627D5008667FB /* RealmDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F16C246627D5008667FB /* RealmDataStore.swift */; };
 		17E7F17324662D1A008667FB /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17224662D1A008667FB /* RealmModel.swift */; };
 		17E7F17D2468165D008667FB /* FirebaseVocabRemoteAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17924679CC3008667FB /* FirebaseVocabRemoteAPITests.swift */; };
@@ -392,6 +398,9 @@
 		17CBE668247A06CC005D4CFD /* LearnVocabListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnVocabListVC.swift; sourceTree = "<group>"; };
 		17CBE66C247A075A005D4CFD /* ReadingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListVC.swift; sourceTree = "<group>"; };
 		17CBE670247A078E005D4CFD /* VocabListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabListVC.swift; sourceTree = "<group>"; };
+		17CBE673247A19CE005D4CFD /* LearnVocabListRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnVocabListRootView.swift; sourceTree = "<group>"; };
+		17CBE676247A1A47005D4CFD /* ReadingListRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListRootView.swift; sourceTree = "<group>"; };
+		17CBE679247A1A5C005D4CFD /* VocabListRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabListRootView.swift; sourceTree = "<group>"; };
 		17E7F16C246627D5008667FB /* RealmDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataStore.swift; sourceTree = "<group>"; };
 		17E7F17224662D1A008667FB /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		17E7F17524679C31008667FB /* FirebaseVocabRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseVocabRemoteAPI.swift; sourceTree = "<group>"; };
@@ -1113,6 +1122,7 @@
 			isa = PBXGroup;
 			children = (
 				17CBE668247A06CC005D4CFD /* LearnVocabListVC.swift */,
+				17CBE673247A19CE005D4CFD /* LearnVocabListRootView.swift */,
 			);
 			path = LearnVocab;
 			sourceTree = "<group>";
@@ -1121,6 +1131,7 @@
 			isa = PBXGroup;
 			children = (
 				17CBE66C247A075A005D4CFD /* ReadingListVC.swift */,
+				17CBE676247A1A47005D4CFD /* ReadingListRootView.swift */,
 			);
 			path = ReadingPart;
 			sourceTree = "<group>";
@@ -1129,6 +1140,7 @@
 			isa = PBXGroup;
 			children = (
 				17CBE670247A078E005D4CFD /* VocabListVC.swift */,
+				17CBE679247A1A5C005D4CFD /* VocabListRootView.swift */,
 			);
 			path = VocabList;
 			sourceTree = "<group>";
@@ -1780,6 +1792,7 @@
 				17F57FA62478B62500F26EF4 /* MainNavigator.swift in Sources */,
 				17FBF714245BEC1300A65233 /* LaunchViewModel.swift in Sources */,
 				17FBF709245BEBFF00A65233 /* LoginRootView.swift in Sources */,
+				17CBE677247A1A47005D4CFD /* ReadingListRootView.swift in Sources */,
 				17954AB2245D3F6000C8CC95 /* MainBookItemCVC.swift in Sources */,
 				17FBF6E3245BEBBB00A65233 /* AppView.swift in Sources */,
 				17FBF735245CE6D900A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
@@ -1809,11 +1822,13 @@
 				17FBF6F2245BEBD700A65233 /* MainViewModel.swift in Sources */,
 				176ADE072460E958006C5D3C /* BookDetailViewModel.swift in Sources */,
 				17CBE669247A06CC005D4CFD /* LearnVocabListVC.swift in Sources */,
+				17CBE67A247A1A5C005D4CFD /* VocabListRootView.swift in Sources */,
 				17FBF70E245BEC0800A65233 /* OnboardingVC.swift in Sources */,
 				17F30EF2246B561D008040BE /* BookDetailAdsCVC.swift in Sources */,
 				17F30EE3246ACBAC008040BE /* BookDetailRootView.swift in Sources */,
 				17E7F17E24681664008667FB /* FirebaseVocabRemoteAPI.swift in Sources */,
 				17FBF6F8245BEBE100A65233 /* MainVC.swift in Sources */,
+				17CBE674247A19CE005D4CFD /* LearnVocabListRootView.swift in Sources */,
 				17FBF702245BEBF200A65233 /* WelcomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1827,8 +1842,10 @@
 				1738425C24715CB600BEFE2F /* LessonDetailVC.swift in Sources */,
 				17CBE6662479FE0F005D4CFD /* BookDetailNavigator.swift in Sources */,
 				17FBF6E7245BEBC000A65233 /* Navigation.swift in Sources */,
+				17CBE678247A1A47005D4CFD /* ReadingListRootView.swift in Sources */,
 				17FBF70C245BEC0300A65233 /* LoginVC.swift in Sources */,
 				17FBF6FD245BEBEA00A65233 /* WelcomeViewModel.swift in Sources */,
+				17CBE675247A19CE005D4CFD /* LearnVocabListRootView.swift in Sources */,
 				17F57F9A2478A9FE00F26EF4 /* Navigator.swift in Sources */,
 				17FBF71B245BEC1C00A65233 /* LaunchVC.swift in Sources */,
 				17FBF723245BEC2D00A65233 /* SignedInDependencyContainer.swift in Sources */,
@@ -1836,6 +1853,7 @@
 				17F30EE4246ACBAC008040BE /* BookDetailRootView.swift in Sources */,
 				17FBF700245BEBEF00A65233 /* WelcomeRootView.swift in Sources */,
 				17FBF6ED245BEBCB00A65233 /* NiblessNavigationController.swift in Sources */,
+				17CBE67B247A1A5C005D4CFD /* VocabListRootView.swift in Sources */,
 				17CBE66A247A06CC005D4CFD /* LearnVocabListVC.swift in Sources */,
 				17FBF715245BEC1300A65233 /* LaunchViewModel.swift in Sources */,
 				17CBE672247A078E005D4CFD /* VocabListVC.swift in Sources */,

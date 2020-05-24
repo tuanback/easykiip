@@ -40,6 +40,10 @@ class LessonDetailViewModel {
     return rChildVC.asObservable()
   }
   
+  var oNavigationTitle: Driver<String> {
+    rNavigagtionTitle.asDriver()
+  }
+  
   var oLearnVocabVItemiewModels: Observable<[LearnVocabItemViewModel]> {
     return rVocabs.map { [weak self] (vocabs) in
       guard let strongSelf = self else {
@@ -72,6 +76,7 @@ class LessonDetailViewModel {
   private let rChildVC = BehaviorRelay<[LessonDetailChildVC]>(value: [])
   private let rVocabs = BehaviorRelay<[Vocab]>(value: [])
   private let rReadingParts = BehaviorRelay<[ReadingPart]>(value: [])
+  private let rNavigagtionTitle = BehaviorRelay<String>(value: "")
   private let disposeBag = DisposeBag()
   
   let bookID: Int
@@ -108,6 +113,12 @@ class LessonDetailViewModel {
     .disposed(by: disposeBag)
     
     observable.map {
+      $0.name
+    }
+    .bind(to: rNavigagtionTitle)
+    .disposed(by: disposeBag)
+    
+    observable.map {
       return $0.vocabs
     }
     .bind(to: rVocabs)
@@ -135,7 +146,7 @@ class LessonDetailViewModel {
   
   struct ToDetailViewModelConverter {
     
-    static let numberOfItemForOneTimeLearn = 5
+    static let numberOfItemForOneTimeLearn = 8
     
     static func convertVocabsToVocabListItemVMs(vocabs: [Vocab]) -> [VocabListItemViewModel] {
       return vocabs.map {

@@ -14,9 +14,15 @@ import SnapKit
 
 class LearnVocabListVC: NiblessViewController {
   
+  private let viewModel: LessonDetailViewModel
+  
+  init(viewModel: LessonDetailViewModel) {
+    self.viewModel = viewModel
+    super.init()
+  }
+  
   override func loadView() {
-    view = UIView()
-    view.backgroundColor = UIColor.red
+    view = LearnVocabListRootView(viewModel: viewModel)
   }
   
 }

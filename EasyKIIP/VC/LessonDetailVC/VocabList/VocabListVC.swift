@@ -13,8 +13,15 @@ import RxCocoa
 import SnapKit
 
 class VocabListVC: NiblessViewController {
+  
+  private let viewModel: LessonDetailViewModel
+  
+  init(viewModel: LessonDetailViewModel) {
+    self.viewModel = viewModel
+    super.init()
+  }
+  
   override func loadView() {
-    view = UIView()
-    view.backgroundColor = UIColor.blue
+    view = VocabListRootView(viewModel: viewModel)
   }
 }

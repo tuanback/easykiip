@@ -41,6 +41,14 @@ extension UIColor {
     }
   }
   
+  class var appSecondaryBackground: UIColor {
+    if #available(iOS 13.0, *) {
+      return UIColor.systemGray6
+    } else {
+      return UIColor(hexString: "F2F2F2")
+    }
+  }
+  
   class var appLabelBlack: UIColor {
     if #available(iOS 13.0, *) {
       return UIColor.label

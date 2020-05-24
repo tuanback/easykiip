@@ -14,16 +14,22 @@ import SnapKit
 
 class LessonDetailVC: NiblessViewController {
   
-  let viewButtonContainer = UIView()
-  let viewViewControllerContainer = UIView()
+  private lazy var viewButtonContainer = UIView()
+  private lazy var stackViewButtonContainer = UIStackView()
+  private lazy var viewCurrentVCIndicator = UIView()
+  private lazy var viewViewControllerContainer = UIView()
+  private var buttonLearn: UIButton?
+  private var buttonReading: UIButton?
+  private var buttonVocabList: UIButton?
   
-  let pageViewController = UIPageViewController(transitionStyle: .scroll,
+  private let pageViewController = UIPageViewController(transitionStyle: .scroll,
                                                 navigationOrientation: .horizontal,
                                                 options: nil)
-  var viewControllers: [UIViewController] = []
-  var learnListVC: LearnVocabListVC?
-  var readingListVC: ReadingListVC?
-  var vocabListVC: VocabListVC?
+  private var viewControllers: [UIViewController] = []
+  private var learnListVC: LearnVocabListVC?
+  private var readingListVC: ReadingListVC?
+  private var vocabListVC: VocabListVC?
+  private var currentVCIndex = 0
   
   private let disposeBag = DisposeBag()
   
@@ -42,8 +48,22 @@ class LessonDetailVC: NiblessViewController {
   
   private func setupViews() {
     
+    stackViewButtonContainer.axis = .horizontal
+    stackViewButtonContainer.alignment = .fill
+    stackViewButtonContainer.distribution = .fillEqually
+    
     view.addSubview(viewButtonContainer)
     view.addSubview(viewViewControllerContainer)
+    
+    viewButtonContainer.addSubview(stackViewButtonContainer)
+    viewButtonContainer.addSubview(viewCurrentVCIndicator)
+    
+    viewCurrentVCIndicator.backgroundColor = UIColor.appRed
+    viewCurrentVCIndicator.isHidden = true
+    
+    stackViewButtonContainer.snp.makeConstraints { (make) in
+      make.edges.equalToSuperview()
+    }
     
     viewButtonContainer.snp.makeConstraints { (make) in
       make.top.equalTo(view.safeAreaLayoutGuide)
@@ -66,31 +86,130 @@ class LessonDetailVC: NiblessViewController {
   }
   
   private func observeViewModel() {
+    viewModel.oNavigationTitle
+      .drive(navigationItem.rx.title)
+      .disposed(by: disposeBag)
+    
     viewModel.childVC
       .observeOn(MainScheduler.asyncInstance)
       .subscribe(onNext: { [weak self] childVCs in
         guard let strongSelf = self else { return }
         
         strongSelf.viewControllers.removeAll()
+        strongSelf.stackViewButtonContainer.arrangedSubviews.forEach {
+          $0.removeFromSuperview()
+        }
         
         for childVC in childVCs {
           switch childVC {
           case .learnVocab:
-            strongSelf.learnListVC = LearnVocabListVC()
-            strongSelf.viewControllers.append(strongSelf.learnListVC!)
+            let vc = LearnVocabListVC(viewModel: strongSelf.viewModel)
+            strongSelf.learnListVC = vc
+            strongSelf.viewControllers.append(vc)
+            let button = strongSelf.setupLearnVocabButton()
+            strongSelf.stackViewButtonContainer.addArrangedSubview(button)
           case .readingPart:
-            strongSelf.readingListVC = ReadingListVC()
-            strongSelf.viewControllers.append(strongSelf.readingListVC!)
+            let vc = ReadingListVC(viewModel: strongSelf.viewModel)
+            strongSelf.readingListVC = vc
+            strongSelf.viewControllers.append(vc)
+            let button = strongSelf.setupParagraphButton()
+            strongSelf.stackViewButtonContainer.addArrangedSubview(button)
           case .listOfVocabs:
-            strongSelf.vocabListVC = VocabListVC()
-            strongSelf.viewControllers.append(strongSelf.vocabListVC!)
+            let vc = VocabListVC(viewModel: strongSelf.viewModel)
+            strongSelf.vocabListVC = vc
+            strongSelf.viewControllers.append(vc)
+            let button = strongSelf.setupVocabularyButton()
+            strongSelf.stackViewButtonContainer.addArrangedSubview(button)
           }
         }
         
         guard strongSelf.viewControllers.count > 0 else { return }
         strongSelf.setupPageViewController(with: strongSelf.viewControllers)
+        
+        strongSelf.updateIndicatorView(leading: 0, width: strongSelf.view.frame.width / 3)
       })
       .disposed(by: disposeBag)
+  }
+  
+  private func setupLearnVocabButton() -> UIButton {
+    buttonLearn = UIButton()
+    buttonLearn?.setTitle(Strings.learn, for: .normal)
+    buttonLearn?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
+    buttonLearn?.addTarget(self, action: #selector(handleButtonLearnClicked(_:)), for: .touchUpInside)
+    return buttonLearn!
+  }
+  
+  @objc func handleButtonLearnClicked(_ sender: UIButton) {
+    guard let vc = learnListVC,
+      let index = indexOfViewController(vc),
+      index != currentVCIndex else {
+      return
+    }
+    
+    let direction: UIPageViewController.NavigationDirection = currentVCIndex < index ? .forward : .reverse
+    currentVCIndex = index
+    pageViewController.setViewControllers([vc], direction: direction, animated: true, completion: nil)
+    updateIndicatorView(view: sender)
+  }
+  
+  private func setupParagraphButton() -> UIButton {
+    buttonReading = UIButton()
+    buttonReading?.setTitle(Strings.paragraph, for: .normal)
+    buttonReading?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
+    buttonReading?.addTarget(self, action: #selector(handleButtonParagraphClicked(_:)), for: .touchUpInside)
+    return buttonReading!
+  }
+  
+  @objc func handleButtonParagraphClicked(_ sender: UIButton) {
+    guard let vc = readingListVC,
+      let index = indexOfViewController(vc),
+      index != currentVCIndex else {
+        return
+    }
+    
+    let direction: UIPageViewController.NavigationDirection = currentVCIndex < index ? .forward : .reverse
+    currentVCIndex = index
+    pageViewController.setViewControllers([vc], direction: direction, animated: true, completion: nil)
+    updateIndicatorView(view: sender)
+  }
+  
+  private func setupVocabularyButton() -> UIButton {
+    buttonVocabList = UIButton()
+    buttonVocabList?.setTitle(Strings.vocabulary, for: .normal)
+    buttonVocabList?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
+    buttonVocabList?.addTarget(self, action: #selector(handleButtonVocabularClicked), for: .touchUpInside)
+    return buttonVocabList!
+  }
+  
+  @objc func handleButtonVocabularClicked(_ sender: UIButton) {
+    guard let vc = vocabListVC,
+      let index = indexOfViewController(vc),
+      index != currentVCIndex else {
+      return
+    }
+    
+    let direction: UIPageViewController.NavigationDirection = currentVCIndex < index ? .forward : .reverse
+    currentVCIndex = index
+    pageViewController.setViewControllers([vc], direction: direction, animated: true, completion: nil)
+    updateIndicatorView(view: sender)
+  }
+  
+  private func updateIndicatorView(view: UIView) {
+    let frame = view.frame
+    updateIndicatorView(leading: frame.origin.x, width: frame.width)
+  }
+  
+  private func updateIndicatorView(leading: CGFloat, width: CGFloat) {
+    viewCurrentVCIndicator.isHidden = false
+    
+    UIView.animate(withDuration: 0.5) {
+      self.viewCurrentVCIndicator.snp.remakeConstraints { (make) in
+        make.bottom.equalToSuperview()
+        make.height.equalTo(1.5)
+        make.leading.equalTo(leading)
+        make.width.equalTo(width)
+      }
+    }
   }
   
   private func setupPageViewController(with viewControllers: [UIViewController]) {
@@ -100,6 +219,9 @@ class LessonDetailVC: NiblessViewController {
     
     addChild(pageViewController)
     viewViewControllerContainer.addSubview(pageViewController.view)
+    pageViewController.didMove(toParent: self)
+    
+    view.gestureRecognizers = pageViewController.gestureRecognizers
     
     pageViewController.view.snp.makeConstraints { (make) in
       make.edges.equalToSuperview()
@@ -114,6 +236,7 @@ extension LessonDetailVC: UIPageViewControllerDataSource, UIPageViewControllerDe
       index >= 1 else { return nil }
     
     index -= 1
+    
     return viewControllerAtIndex(index)
   }
   
@@ -122,6 +245,19 @@ extension LessonDetailVC: UIPageViewControllerDataSource, UIPageViewControllerDe
     
     index += 1
     return viewControllerAtIndex(index)
+  }
+  
+  func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    guard completed else { return }
+    
+    if let vc = pageViewController.viewControllers?.first,
+      let index = indexOfViewController(vc) {
+      currentVCIndex = index
+      let width = self.view.frame.width / 3
+      let leading = width * CGFloat(index)
+      updateIndicatorView(leading: leading, width: width)
+      print(index)
+    }
   }
 }
 

@@ -47,4 +47,8 @@ public struct Strings {
   static let yesterday = NSLocalizedString("Yesterday", bundle: Strings.languageBundle, comment: "")
   static let daysAgo = NSLocalizedString("d ago", bundle: Strings.languageBundle, comment: "")
   
+  static let learn = NSLocalizedString("Learn", bundle: Strings.languageBundle, comment: "")
+  static let paragraph = NSLocalizedString("Paragraph", bundle: Strings.languageBundle, comment: "")
+  static let vocabulary = NSLocalizedString("Vocabulary", bundle: Strings.languageBundle, comment: "")
+  
 }
