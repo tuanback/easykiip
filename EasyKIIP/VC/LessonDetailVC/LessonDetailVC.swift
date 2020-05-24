@@ -55,7 +55,11 @@ class LessonDetailVC: NiblessViewController {
     view.addSubview(viewButtonContainer)
     view.addSubview(viewViewControllerContainer)
     
+    let separator = UIView()
+    separator.backgroundColor = UIColor.systemGray
+    
     viewButtonContainer.addSubview(stackViewButtonContainer)
+    viewButtonContainer.addSubview(separator)
     viewButtonContainer.addSubview(viewCurrentVCIndicator)
     
     viewCurrentVCIndicator.backgroundColor = UIColor.appRed
@@ -70,6 +74,13 @@ class LessonDetailVC: NiblessViewController {
       make.leading.equalTo(view.safeAreaLayoutGuide)
       make.trailing.equalTo(view.safeAreaLayoutGuide)
       make.height.equalTo(40)
+    }
+    
+    separator.snp.makeConstraints { (make) in
+      make.height.equalTo(0.5)
+      make.leading.equalToSuperview()
+      make.trailing.equalToSuperview()
+      make.bottom.equalToSuperview()
     }
     
     viewViewControllerContainer.snp.makeConstraints { [viewButtonContainer] (make) in
@@ -136,6 +147,7 @@ class LessonDetailVC: NiblessViewController {
     buttonLearn?.setTitle(Strings.learn, for: .normal)
     buttonLearn?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
     buttonLearn?.addTarget(self, action: #selector(handleButtonLearnClicked(_:)), for: .touchUpInside)
+    buttonLearn?.setTitleColor(UIColor.appLabelBlack, for: .normal)
     return buttonLearn!
   }
   
@@ -157,6 +169,7 @@ class LessonDetailVC: NiblessViewController {
     buttonReading?.setTitle(Strings.paragraph, for: .normal)
     buttonReading?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
     buttonReading?.addTarget(self, action: #selector(handleButtonParagraphClicked(_:)), for: .touchUpInside)
+    buttonReading?.setTitleColor(UIColor.appLabelBlack, for: .normal)
     return buttonReading!
   }
   
@@ -177,6 +190,7 @@ class LessonDetailVC: NiblessViewController {
     buttonVocabList = UIButton()
     buttonVocabList?.setTitle(Strings.vocabulary, for: .normal)
     buttonVocabList?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
+    buttonVocabList?.setTitleColor(UIColor.appLabelBlack, for: .normal)
     buttonVocabList?.addTarget(self, action: #selector(handleButtonVocabularClicked), for: .touchUpInside)
     return buttonVocabList!
   }
