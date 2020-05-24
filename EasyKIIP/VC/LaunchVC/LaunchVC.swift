@@ -35,7 +35,19 @@ class LaunchVC: NiblessViewController {
   
   public override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    viewModel.start()
+    showLanguageSelectIfNeeded()
+  }
+  
+  private func showLanguageSelectIfNeeded() {
+    if AppValuesStorage.didSetLanguage {
+      viewModel.start()
+      return
+    }
+      
+    let vc = SelectLanguageVC(didSelected: { [weak self] in
+      self?.viewModel.start()
+    })
+    present(vc, animated: true, completion: nil)
   }
   
   private func observeViewModel() {

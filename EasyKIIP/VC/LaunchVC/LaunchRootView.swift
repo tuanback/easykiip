@@ -17,7 +17,7 @@ class LaunchRootView: NiblessView {
   }
   
   private func styleViews() {
-    backgroundColor = UIColor.systemBlue
+    backgroundColor = UIColor.appBackground
   }
   
 }

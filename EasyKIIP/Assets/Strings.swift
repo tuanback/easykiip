@@ -38,9 +38,9 @@ public struct Strings {
     return LanguageBundleManager().getBundle()
   }
   
-  static let logo = NSLocalizedString("Logo", bundle: Strings.languageBundle, comment: "")
+  static let logo = NSLocalizedString("Easy KIIP", bundle: Strings.languageBundle, comment: "")
   static let onboardingTitle = NSLocalizedString("Easiest way to pass KIIP", bundle: Strings.languageBundle, comment: "")
-  static let onboardingMessage = NSLocalizedString("10 minutes per day, passing Korean Immigration and Integration Program program has never been easier", bundle: Strings.languageBundle, comment: "")
+  static let onboardingMessage = NSLocalizedString("10 minutes per day, that's all you need", bundle: Strings.languageBundle, comment: "")
   static let login = NSLocalizedString("Login", bundle: Strings.languageBundle, comment: "")
   
   static let today = NSLocalizedString("Today", bundle: Strings.languageBundle, comment: "")

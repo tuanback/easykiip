@@ -35,7 +35,7 @@ class WelcomeRootView: NiblessView {
     
     labelLogo = UILabel()
     labelLogo.text = Strings.logo
-    labelLogo.font = UIFont.appFontDemiBold(ofSize: 50)
+    labelLogo.font = UIFont.appFontDemiBold(ofSize: 40)
     labelLogo.textColor = UIColor.white
     
     labelTitle = UILabel()
@@ -56,9 +56,11 @@ class WelcomeRootView: NiblessView {
     labelMessage.adjustsFontSizeToFitWidth = true
     
     buttonLogin = UIButton()
-    buttonLogin.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 25)
+    buttonLogin.titleLabel?.font = UIFont.appFontMedium(ofSize: 20)
     buttonLogin.setTitle(Strings.login, for: .normal)
     buttonLogin.backgroundColor = UIColor.white
+    buttonLogin.layer.cornerRadius = 8
+    buttonLogin.layer.masksToBounds = true
     buttonLogin.setTitleColor(UIColor.black, for: .normal)
     
     buttonLogin.rx.action = viewModel.loginAction
@@ -76,20 +78,20 @@ class WelcomeRootView: NiblessView {
     labelTitle.snp.makeConstraints { (make) in
       make.leading.equalTo(self).offset(20)
       make.trailing.equalTo(self).offset(-20)
-      make.centerY.equalTo(self).offset(-100)
-    }
-    
-    labelMessage.snp.makeConstraints { (make) in
-      make.top.equalTo(labelTitle.snp.bottom).offset(60)
-      make.leading.equalTo(self).offset(20)
-      make.trailing.equalTo(self).offset(-20)
+      make.centerY.equalTo(self).offset(-50)
     }
     
     buttonLogin.snp.makeConstraints { (make) in
       make.centerX.equalTo(self)
       make.bottom.equalTo(self).offset(-60)
       make.width.equalTo(self).multipliedBy(0.8)
-      make.height.equalTo(60)
+      make.height.equalTo(50)
+    }
+    
+    labelMessage.snp.makeConstraints { (make) in
+      make.bottom.equalTo(buttonLogin.snp.top).offset(-20)
+      make.leading.equalTo(self).offset(20)
+      make.trailing.equalTo(self).offset(-20)
     }
   }
   

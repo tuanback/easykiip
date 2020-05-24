@@ -34,7 +34,7 @@ class ReadingListRootView: NiblessView {
     addSubview(tableView)
     
     tableView.snp.makeConstraints { (make) in
-      make.edges.equalToSuperview().inset(16)
+      make.edges.equalToSuperview()
     }
     
     setupTableView()

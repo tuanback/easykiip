@@ -25,6 +25,4 @@ public struct AppSetting {
       UserDefaults.standard.set(newValue.rawValue, forKey: "AppSetting_LanguageCode")
     }
   }
-  
-  
 }

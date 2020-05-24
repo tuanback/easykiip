@@ -28,6 +28,7 @@ class OnboardingVC: NiblessNavigationController {
   override func viewDidLoad() {
     super.viewDidLoad()
     observeViewModel()
+    setNavigationBarHidden(true, animated: true)
   }
   
   private func observeViewModel() {

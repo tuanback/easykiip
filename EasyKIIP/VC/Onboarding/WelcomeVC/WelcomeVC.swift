@@ -21,5 +21,9 @@ public class WelcomeVC: NiblessViewController {
   public override func loadView() {
     view = WelcomeRootView(viewModel: viewModel)
   }
+ 
+  public override var preferredStatusBarStyle: UIStatusBarStyle {
+    return .lightContent
+  }
   
 }

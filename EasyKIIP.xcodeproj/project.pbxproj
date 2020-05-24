@@ -127,6 +127,12 @@
 		17CBE678247A1A47005D4CFD /* ReadingListRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE676247A1A47005D4CFD /* ReadingListRootView.swift */; };
 		17CBE67A247A1A5C005D4CFD /* VocabListRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE679247A1A5C005D4CFD /* VocabListRootView.swift */; };
 		17CBE67B247A1A5C005D4CFD /* VocabListRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE679247A1A5C005D4CFD /* VocabListRootView.swift */; };
+		17CBE67D247AA301005D4CFD /* SelectLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE67C247AA301005D4CFD /* SelectLanguageVC.swift */; };
+		17CBE67E247AA301005D4CFD /* SelectLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE67C247AA301005D4CFD /* SelectLanguageVC.swift */; };
+		17CBE680247AAC2F005D4CFD /* AppValuesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE67F247AAC2F005D4CFD /* AppValuesStorage.swift */; };
+		17CBE681247AAC2F005D4CFD /* AppValuesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE67F247AAC2F005D4CFD /* AppValuesStorage.swift */; };
+		17CBE684247AB133005D4CFD /* SelectLanguageRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE683247AB133005D4CFD /* SelectLanguageRootView.swift */; };
+		17CBE685247AB133005D4CFD /* SelectLanguageRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE683247AB133005D4CFD /* SelectLanguageRootView.swift */; };
 		17E7F16D246627D5008667FB /* RealmDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F16C246627D5008667FB /* RealmDataStore.swift */; };
 		17E7F17324662D1A008667FB /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17224662D1A008667FB /* RealmModel.swift */; };
 		17E7F17D2468165D008667FB /* FirebaseVocabRemoteAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17924679CC3008667FB /* FirebaseVocabRemoteAPITests.swift */; };
@@ -401,6 +407,9 @@
 		17CBE673247A19CE005D4CFD /* LearnVocabListRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnVocabListRootView.swift; sourceTree = "<group>"; };
 		17CBE676247A1A47005D4CFD /* ReadingListRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListRootView.swift; sourceTree = "<group>"; };
 		17CBE679247A1A5C005D4CFD /* VocabListRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabListRootView.swift; sourceTree = "<group>"; };
+		17CBE67C247AA301005D4CFD /* SelectLanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageVC.swift; sourceTree = "<group>"; };
+		17CBE67F247AAC2F005D4CFD /* AppValuesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppValuesStorage.swift; sourceTree = "<group>"; };
+		17CBE683247AB133005D4CFD /* SelectLanguageRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageRootView.swift; sourceTree = "<group>"; };
 		17E7F16C246627D5008667FB /* RealmDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataStore.swift; sourceTree = "<group>"; };
 		17E7F17224662D1A008667FB /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		17E7F17524679C31008667FB /* FirebaseVocabRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseVocabRemoteAPI.swift; sourceTree = "<group>"; };
@@ -535,6 +544,7 @@
 				1766FF92245A5A93008B263D /* LaunchViewModel.swift */,
 				1766FFBB245A682F008B263D /* LaunchVC.swift */,
 				1766FFBD245A6893008B263D /* LaunchRootView.swift */,
+				17CBE682247AB112005D4CFD /* SelectLanguage */,
 			);
 			path = LaunchVC;
 			sourceTree = "<group>";
@@ -635,6 +645,7 @@
 				17F30EE5246AD1A9008040BE /* GoogleAds */,
 				1766FFCA245AA51C008B263D /* Strings.swift */,
 				1766FFD2245AB466008B263D /* AppSetting.swift */,
+				17CBE67F247AAC2F005D4CFD /* AppValuesStorage.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -1143,6 +1154,15 @@
 				17CBE679247A1A5C005D4CFD /* VocabListRootView.swift */,
 			);
 			path = VocabList;
+			sourceTree = "<group>";
+		};
+		17CBE682247AB112005D4CFD /* SelectLanguage */ = {
+			isa = PBXGroup;
+			children = (
+				17CBE67C247AA301005D4CFD /* SelectLanguageVC.swift */,
+				17CBE683247AB133005D4CFD /* SelectLanguageRootView.swift */,
+			);
+			path = SelectLanguage;
 			sourceTree = "<group>";
 		};
 		17E7F17024662CF2008667FB /* Realm */ = {
@@ -1789,9 +1809,11 @@
 				17FBF6EC245BEBCA00A65233 /* NiblessNavigationController.swift in Sources */,
 				17F57F992478A9FE00F26EF4 /* Navigator.swift in Sources */,
 				17F30EE7246AD1C6008040BE /* AdsIdentifier.swift in Sources */,
+				17CBE67D247AA301005D4CFD /* SelectLanguageVC.swift in Sources */,
 				17F57FA62478B62500F26EF4 /* MainNavigator.swift in Sources */,
 				17FBF714245BEC1300A65233 /* LaunchViewModel.swift in Sources */,
 				17FBF709245BEBFF00A65233 /* LoginRootView.swift in Sources */,
+				17CBE684247AB133005D4CFD /* SelectLanguageRootView.swift in Sources */,
 				17CBE677247A1A47005D4CFD /* ReadingListRootView.swift in Sources */,
 				17954AB2245D3F6000C8CC95 /* MainBookItemCVC.swift in Sources */,
 				17FBF6E3245BEBBB00A65233 /* AppView.swift in Sources */,
@@ -1813,6 +1835,7 @@
 				17FBF717245BEC1800A65233 /* LaunchRootView.swift in Sources */,
 				17F57F9D2478AA7300F26EF4 /* LaunchNavigator.swift in Sources */,
 				17FBF711245BEC0E00A65233 /* OnboardingVM.swift in Sources */,
+				17CBE680247AAC2F005D4CFD /* AppValuesStorage.swift in Sources */,
 				17FBF706245BEBF900A65233 /* LoginViewModel.swift in Sources */,
 				1738425424712C2900BEFE2F /* AdsSmallTemplateView.swift in Sources */,
 				17FBF71D245BEC2300A65233 /* AppDenpendencyContainer.swift in Sources */,
@@ -1872,6 +1895,7 @@
 				17954AAB245D06E100C8CC95 /* MainNavVC.swift in Sources */,
 				17FBF718245BEC1800A65233 /* LaunchRootView.swift in Sources */,
 				176ADE042460471F006C5D3C /* MainBookItemCVC.swift in Sources */,
+				17CBE685247AB133005D4CFD /* SelectLanguageRootView.swift in Sources */,
 				17FBF712245BEC0E00A65233 /* OnboardingVM.swift in Sources */,
 				17F57FA42478B40800F26EF4 /* MainNavConNavigator.swift in Sources */,
 				176ADE082460E958006C5D3C /* BookDetailViewModel.swift in Sources */,
@@ -1888,10 +1912,12 @@
 				17FBF6EA245BEBC600A65233 /* NiblessView.swift in Sources */,
 				17FBF6F3245BEBD800A65233 /* MainViewModel.swift in Sources */,
 				1738425524712C2900BEFE2F /* AdsSmallTemplateView.swift in Sources */,
+				17CBE681247AAC2F005D4CFD /* AppValuesStorage.swift in Sources */,
 				17FBF70F245BEC0900A65233 /* OnboardingVC.swift in Sources */,
 				17FBF6F9245BEBE200A65233 /* MainVC.swift in Sources */,
 				17F30EEB246B4A76008040BE /* BookDetailVC.swift in Sources */,
 				17E7F18324681B12008667FB /* FirestoreKey.swift in Sources */,
+				17CBE67E247AA301005D4CFD /* SelectLanguageVC.swift in Sources */,
 				17954AAA245D052B00C8CC95 /* MainViewModelTests.swift in Sources */,
 				17F57FA72478B62500F26EF4 /* MainNavigator.swift in Sources */,
 				17FBF703245BEBF300A65233 /* WelcomeVC.swift in Sources */,
