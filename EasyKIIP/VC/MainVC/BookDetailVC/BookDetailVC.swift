@@ -16,6 +16,7 @@ import RxCocoa
 public class BookDetailVC: NiblessViewController {
   
   private let viewModel: BookDetailViewModel
+  private let navigator: BookDetailNavigator
   
   private lazy var adUnitID = AdsIdentifier.id(for: .bookDetailItem)
   private let numAdsToLoad = 4
@@ -24,8 +25,10 @@ public class BookDetailVC: NiblessViewController {
   
   private let disposeBag = DisposeBag()
   
-  init(viewModel: BookDetailViewModel) {
+  init(viewModel: BookDetailViewModel,
+       navigator: BookDetailNavigator) {
     self.viewModel = viewModel
+    self.navigator = navigator
     super.init()
   }
   
@@ -43,6 +46,22 @@ public class BookDetailVC: NiblessViewController {
     viewModel.oNavigationTitle
       .bind(to: navigationItem.rx.title)
       .disposed(by: disposeBag)
+    
+    viewModel.oNavigation
+      .subscribe(onNext: { [weak self] event in
+        guard let strongSelf = self else { return }
+        switch event {
+        case .push(let destination):
+          strongSelf.navigator.navigate(from: strongSelf, to: destination, type: .push)
+        case .present(let destination):
+          strongSelf.navigator.navigate(from: strongSelf, to: destination, type: .present)
+        case .pop:
+          strongSelf.navigationController?.popViewController(animated: true)
+        case .dismiss:
+          strongSelf.dismiss(animated: true, completion: nil)
+        }
+      })
+    .disposed(by: disposeBag)
   }
   
   private func startAdLoader() {

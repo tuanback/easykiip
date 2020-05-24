@@ -23,17 +23,19 @@ public class SignedInDependencyContainer {
     func makeVocabDataStore() -> VocabDataStore {
       return RealmDataStore()
     }
-    func makeVocabRepository(userSession: UserSession) -> VocabRepository {
+    
+    func makeVocabRepository(userSessionRepo: UserSessionRepository) -> VocabRepository {
       let remoteAPI = makeRemoteAPI()
       let dataStore = makeVocabDataStore()
-      let vocabRepository = KIIPVocabRepository(userSession: userSession, remoteAPI: remoteAPI, dataStore: dataStore)
+      let vocabRepository = KIIPVocabRepository(userSessionRepo: userSessionRepo,
+                                                remoteAPI: remoteAPI,
+                                                dataStore: dataStore)
       return vocabRepository
       
     }
     
     self.userSessionRepository = appDenpendencyContainer.userSessionRepository
-    let userSession = self.userSessionRepository.readUserSession()!
-    self.vocabRepository = makeVocabRepository(userSession: userSession)
+    self.vocabRepository = makeVocabRepository(userSessionRepo: userSessionRepository)
   }
   
   deinit {
@@ -72,11 +74,20 @@ public class SignedInDependencyContainer {
       return BookDetailViewModel(bookID: bookID, bookName: bookName, vocabRepository: vocabRepository)
     }
     
+    let navigator = BookDetailNavigator(factory: self)
     let viewModel = makeViewModel(bookID: bookID, bookName: bookName)
-    return BookDetailVC(viewModel: viewModel)
+    return BookDetailVC(viewModel: viewModel, navigator: navigator)
+  }
+  
+  func makeLessonDetailVC(bookID: Int, lessonID: Int) -> LessonDetailVC {
+    let viewModel = LessonDetailViewModel(bookID: bookID,
+                                          lessonID: lessonID,
+                                          vocabRepository: vocabRepository)
+    return LessonDetailVC(viewModel: viewModel)
   }
   
 }
 
 extension SignedInDependencyContainer: MainVCFactory { }
 extension SignedInDependencyContainer: BookDetailFactory { }
+extension SignedInDependencyContainer: LessonDetailVCFactory { }

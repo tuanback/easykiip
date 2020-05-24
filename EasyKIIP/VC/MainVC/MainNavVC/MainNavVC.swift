@@ -92,6 +92,8 @@ extension MainNavVC {
       return true
     case is BookDetailVC:
       return true
+    case is LessonDetailVC:
+      return true
     default:
       assertionFailure("Encountered unexpected child view controller type in OnboardingViewController")
       return nil

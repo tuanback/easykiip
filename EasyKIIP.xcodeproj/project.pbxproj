@@ -14,8 +14,6 @@
 		17384259247158D700BEFE2F /* LessonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17384257247158D700BEFE2F /* LessonDetailViewModel.swift */; };
 		1738425B24715CB600BEFE2F /* LessonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738425A24715CB600BEFE2F /* LessonDetailVC.swift */; };
 		1738425C24715CB600BEFE2F /* LessonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738425A24715CB600BEFE2F /* LessonDetailVC.swift */; };
-		1738425E24715D6200BEFE2F /* LessonDetailRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738425D24715D6200BEFE2F /* LessonDetailRootView.swift */; };
-		1738425F24715D6200BEFE2F /* LessonDetailRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738425D24715D6200BEFE2F /* LessonDetailRootView.swift */; };
 		1757FC5D2470B8C400E41DA3 /* vocabBundled.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */; };
 		1757FC5E2470B8C400E41DA3 /* vocabBundled.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */; };
 		1757FC602470B92E00E41DA3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC5F2470B92E00E41DA3 /* Path.swift */; };
@@ -115,6 +113,14 @@
 		17BDAEB8245587BC002584AA /* UserSessionPropertyListCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEB4245587BC002584AA /* UserSessionPropertyListCoder.swift */; };
 		17BDAEBA245588A3002584AA /* FakeAuthRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEB9245588A3002584AA /* FakeAuthRemoteAPI.swift */; };
 		17BDAEBB245588A3002584AA /* FakeAuthRemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BDAEB9245588A3002584AA /* FakeAuthRemoteAPI.swift */; };
+		17CBE6652479FE0F005D4CFD /* BookDetailNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE6642479FE0F005D4CFD /* BookDetailNavigator.swift */; };
+		17CBE6662479FE0F005D4CFD /* BookDetailNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE6642479FE0F005D4CFD /* BookDetailNavigator.swift */; };
+		17CBE669247A06CC005D4CFD /* LearnVocabListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE668247A06CC005D4CFD /* LearnVocabListVC.swift */; };
+		17CBE66A247A06CC005D4CFD /* LearnVocabListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE668247A06CC005D4CFD /* LearnVocabListVC.swift */; };
+		17CBE66D247A075A005D4CFD /* ReadingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE66C247A075A005D4CFD /* ReadingListVC.swift */; };
+		17CBE66E247A075A005D4CFD /* ReadingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE66C247A075A005D4CFD /* ReadingListVC.swift */; };
+		17CBE671247A078E005D4CFD /* VocabListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE670247A078E005D4CFD /* VocabListVC.swift */; };
+		17CBE672247A078E005D4CFD /* VocabListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE670247A078E005D4CFD /* VocabListVC.swift */; };
 		17E7F16D246627D5008667FB /* RealmDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F16C246627D5008667FB /* RealmDataStore.swift */; };
 		17E7F17324662D1A008667FB /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17224662D1A008667FB /* RealmModel.swift */; };
 		17E7F17D2468165D008667FB /* FirebaseVocabRemoteAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17924679CC3008667FB /* FirebaseVocabRemoteAPITests.swift */; };
@@ -282,7 +288,6 @@
 		1738425324712C2900BEFE2F /* AdsSmallTemplateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsSmallTemplateView.swift; sourceTree = "<group>"; };
 		17384257247158D700BEFE2F /* LessonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModel.swift; sourceTree = "<group>"; };
 		1738425A24715CB600BEFE2F /* LessonDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailVC.swift; sourceTree = "<group>"; };
-		1738425D24715D6200BEFE2F /* LessonDetailRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailRootView.swift; sourceTree = "<group>"; };
 		1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = vocabBundled.realm; path = Database/vocabBundled.realm; sourceTree = SOURCE_ROOT; };
 		1757FC5F2470B92E00E41DA3 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		1766FF92245A5A93008B263D /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
@@ -383,6 +388,10 @@
 		17BDAEB2245587BC002584AA /* UserSessionCoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionCoding.swift; sourceTree = "<group>"; };
 		17BDAEB4245587BC002584AA /* UserSessionPropertyListCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSessionPropertyListCoder.swift; sourceTree = "<group>"; };
 		17BDAEB9245588A3002584AA /* FakeAuthRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthRemoteAPI.swift; sourceTree = "<group>"; };
+		17CBE6642479FE0F005D4CFD /* BookDetailNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailNavigator.swift; sourceTree = "<group>"; };
+		17CBE668247A06CC005D4CFD /* LearnVocabListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnVocabListVC.swift; sourceTree = "<group>"; };
+		17CBE66C247A075A005D4CFD /* ReadingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListVC.swift; sourceTree = "<group>"; };
+		17CBE670247A078E005D4CFD /* VocabListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabListVC.swift; sourceTree = "<group>"; };
 		17E7F16C246627D5008667FB /* RealmDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataStore.swift; sourceTree = "<group>"; };
 		17E7F17224662D1A008667FB /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		17E7F17524679C31008667FB /* FirebaseVocabRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseVocabRemoteAPI.swift; sourceTree = "<group>"; };
@@ -502,9 +511,11 @@
 		173842562471589200BEFE2F /* LessonDetailVC */ = {
 			isa = PBXGroup;
 			children = (
+				17CBE66F247A076B005D4CFD /* VocabList */,
+				17CBE66B247A0720005D4CFD /* ReadingPart */,
+				17CBE667247A0631005D4CFD /* LearnVocab */,
 				17384257247158D700BEFE2F /* LessonDetailViewModel.swift */,
 				1738425A24715CB600BEFE2F /* LessonDetailVC.swift */,
-				1738425D24715D6200BEFE2F /* LessonDetailRootView.swift */,
 			);
 			path = LessonDetailVC;
 			sourceTree = "<group>";
@@ -1098,6 +1109,30 @@
 			path = Implementations;
 			sourceTree = "<group>";
 		};
+		17CBE667247A0631005D4CFD /* LearnVocab */ = {
+			isa = PBXGroup;
+			children = (
+				17CBE668247A06CC005D4CFD /* LearnVocabListVC.swift */,
+			);
+			path = LearnVocab;
+			sourceTree = "<group>";
+		};
+		17CBE66B247A0720005D4CFD /* ReadingPart */ = {
+			isa = PBXGroup;
+			children = (
+				17CBE66C247A075A005D4CFD /* ReadingListVC.swift */,
+			);
+			path = ReadingPart;
+			sourceTree = "<group>";
+		};
+		17CBE66F247A076B005D4CFD /* VocabList */ = {
+			isa = PBXGroup;
+			children = (
+				17CBE670247A078E005D4CFD /* VocabListVC.swift */,
+			);
+			path = VocabList;
+			sourceTree = "<group>";
+		};
 		17E7F17024662CF2008667FB /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -1184,6 +1219,7 @@
 				17F57F9F2478B0CB00F26EF4 /* OnboardingNavigator.swift */,
 				17F57FA22478B40800F26EF4 /* MainNavConNavigator.swift */,
 				17F57FA52478B62500F26EF4 /* MainNavigator.swift */,
+				17CBE6642479FE0F005D4CFD /* BookDetailNavigator.swift */,
 			);
 			path = Navigator;
 			sourceTree = "<group>";
@@ -1745,9 +1781,10 @@
 				17FBF714245BEC1300A65233 /* LaunchViewModel.swift in Sources */,
 				17FBF709245BEBFF00A65233 /* LoginRootView.swift in Sources */,
 				17954AB2245D3F6000C8CC95 /* MainBookItemCVC.swift in Sources */,
-				1738425E24715D6200BEFE2F /* LessonDetailRootView.swift in Sources */,
 				17FBF6E3245BEBBB00A65233 /* AppView.swift in Sources */,
 				17FBF735245CE6D900A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
+				17CBE671247A078E005D4CFD /* VocabListVC.swift in Sources */,
+				17CBE66D247A075A005D4CFD /* ReadingListVC.swift in Sources */,
 				17F30EEA246B4A76008040BE /* BookDetailVC.swift in Sources */,
 				1738425B24715CB600BEFE2F /* LessonDetailVC.swift in Sources */,
 				17FBF720245BEC2800A65233 /* OnboardingDependencyContainer.swift in Sources */,
@@ -1758,6 +1795,7 @@
 				17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */,
 				17FBF6E0245BEBB600A65233 /* UIFront_Extension.swift in Sources */,
 				17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */,
+				17CBE6652479FE0F005D4CFD /* BookDetailNavigator.swift in Sources */,
 				17FBF6EF245BEBCF00A65233 /* NiblessViewController.swift in Sources */,
 				17FBF717245BEC1800A65233 /* LaunchRootView.swift in Sources */,
 				17F57F9D2478AA7300F26EF4 /* LaunchNavigator.swift in Sources */,
@@ -1770,6 +1808,7 @@
 				17FBF6E9245BEBC500A65233 /* NiblessView.swift in Sources */,
 				17FBF6F2245BEBD700A65233 /* MainViewModel.swift in Sources */,
 				176ADE072460E958006C5D3C /* BookDetailViewModel.swift in Sources */,
+				17CBE669247A06CC005D4CFD /* LearnVocabListVC.swift in Sources */,
 				17FBF70E245BEC0800A65233 /* OnboardingVC.swift in Sources */,
 				17F30EF2246B561D008040BE /* BookDetailAdsCVC.swift in Sources */,
 				17F30EE3246ACBAC008040BE /* BookDetailRootView.swift in Sources */,
@@ -1786,6 +1825,7 @@
 				17F57FA12478B0CB00F26EF4 /* OnboardingNavigator.swift in Sources */,
 				17FBF6D9245BEB9F00A65233 /* Strings.swift in Sources */,
 				1738425C24715CB600BEFE2F /* LessonDetailVC.swift in Sources */,
+				17CBE6662479FE0F005D4CFD /* BookDetailNavigator.swift in Sources */,
 				17FBF6E7245BEBC000A65233 /* Navigation.swift in Sources */,
 				17FBF70C245BEC0300A65233 /* LoginVC.swift in Sources */,
 				17FBF6FD245BEBEA00A65233 /* WelcomeViewModel.swift in Sources */,
@@ -1793,11 +1833,12 @@
 				17FBF71B245BEC1C00A65233 /* LaunchVC.swift in Sources */,
 				17FBF723245BEC2D00A65233 /* SignedInDependencyContainer.swift in Sources */,
 				17F30EE8246AD1C6008040BE /* AdsIdentifier.swift in Sources */,
-				1738425F24715D6200BEFE2F /* LessonDetailRootView.swift in Sources */,
 				17F30EE4246ACBAC008040BE /* BookDetailRootView.swift in Sources */,
 				17FBF700245BEBEF00A65233 /* WelcomeRootView.swift in Sources */,
 				17FBF6ED245BEBCB00A65233 /* NiblessNavigationController.swift in Sources */,
+				17CBE66A247A06CC005D4CFD /* LearnVocabListVC.swift in Sources */,
 				17FBF715245BEC1300A65233 /* LaunchViewModel.swift in Sources */,
+				17CBE672247A078E005D4CFD /* VocabListVC.swift in Sources */,
 				17FBF708245BEBFE00A65233 /* LoginRootView.swift in Sources */,
 				17FBF6E4245BEBBB00A65233 /* AppView.swift in Sources */,
 				17FBF736245CE6DC00A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
@@ -1823,6 +1864,7 @@
 				17384259247158D700BEFE2F /* LessonDetailViewModel.swift in Sources */,
 				17FBF6DF245BEBB000A65233 /* UIColor_Extension.swift in Sources */,
 				17F30EF3246B561D008040BE /* BookDetailAdsCVC.swift in Sources */,
+				17CBE66E247A075A005D4CFD /* ReadingListVC.swift in Sources */,
 				17FBF6F6245BEBDD00A65233 /* MainRootView.swift in Sources */,
 				17F30EF0246B5608008040BE /* BookDetailCVC.swift in Sources */,
 				17FBF6EA245BEBC600A65233 /* NiblessView.swift in Sources */,

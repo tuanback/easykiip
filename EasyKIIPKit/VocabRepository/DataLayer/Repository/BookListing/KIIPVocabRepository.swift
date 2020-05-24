@@ -14,16 +14,16 @@ import UserSession
 
 public class KIIPVocabRepository: VocabRepository {
   
-  private var userSession: UserSession?
+  private var userSessionRepo: UserSessionRepository?
   private let remoteAPI: VocabRemoteAPI
   private let dataStore: VocabDataStore
   
   private var userID: String? {
-    return userSession?.profile.id
+    return userSessionRepo?.readUserSession()?.profile.id
   }
   
-  public init(userSession: UserSession?, remoteAPI: VocabRemoteAPI, dataStore: VocabDataStore) {
-    self.userSession = userSession
+  public init(userSessionRepo: UserSessionRepository?, remoteAPI: VocabRemoteAPI, dataStore: VocabDataStore) {
+    self.userSessionRepo = userSessionRepo
     self.remoteAPI = remoteAPI
     self.dataStore = dataStore
   }
@@ -82,21 +82,30 @@ public class KIIPVocabRepository: VocabRepository {
   
   public func getListOfVocabs(inBook bookID: Int, inLesson lessonID: Int) -> Observable<[Vocab]> {
     // Need to queries from auth remote then merge together
-    let observable = PublishSubject<[Vocab]>()
     let dataStoreVocabs = dataStore.getListOfVocabs(inLesson: lessonID)
     
     guard let userID = userID else {
       return .just(dataStoreVocabs)
     }
     
-    if !dataStore.isLessonSynced(lessonID) {
-      remoteAPI.loadVocabData(userID: userID,
-                              bookID: bookID,
-                              lessonID: lessonID) { [weak self] (vocabs) in
+    guard !dataStore.isLessonSynced(lessonID) else {
+      return .just(dataStoreVocabs)
+    }
+    
+    return Observable<[Vocab]>.create {  [weak self] (observer) in
+      guard let strongSelf = self else {
+        observer.onCompleted()
+        return Disposables.create()
+      }
+      
+      strongSelf.remoteAPI.loadVocabData(userID: userID,
+                                         bookID: bookID,
+                                         lessonID: lessonID)
+      { (vocabs) in
         guard let strongSelf = self else { return }
         // Algorithm to merge history from Back end with local datastore
         guard vocabs.count > 0 else {
-          observable.onNext(dataStoreVocabs)
+          observer.onNext(dataStoreVocabs)
           return
         }
         
@@ -121,15 +130,8 @@ public class KIIPVocabRepository: VocabRepository {
         }
         
         let syncedVocabs = strongSelf.dataStore.getListOfVocabs(inLesson: lessonID)
-        observable.onNext(syncedVocabs)
+        observer.onNext(syncedVocabs)
       }
-      
-      return observable
-    }
-    
-    return Observable<[Vocab]>.create { (observer) -> Disposable in
-      let syncedVocabs = self.dataStore.getListOfVocabs(inLesson: lessonID)
-      observer.onNext(syncedVocabs)
       return Disposables.create()
     }
   }

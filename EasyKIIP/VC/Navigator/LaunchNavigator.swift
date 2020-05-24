@@ -38,7 +38,7 @@ class LaunchNavigator: Navigator {
     case .push:
       if let nav = (viewController as? UINavigationController) ?? viewController.navigationController {
         //push root controller on navigation stack
-        nav.pushViewController(vc, animated: false)
+        nav.pushViewController(vc, animated: true)
         return
       }
       viewController.present(vc, animated: true, completion: nil)

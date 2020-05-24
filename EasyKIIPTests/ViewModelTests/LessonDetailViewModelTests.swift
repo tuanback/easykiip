@@ -121,6 +121,13 @@ class LessonDetailViewModelTests: XCTestCase {
     XCTAssertEqual(vocabListSpy.viewModels, [expectedResult])
   }
   
+  func test_reload_callGetVocabs() {
+    let lesson = lessons[0]
+    let sut = makeSut(book: book, lesson: lesson)
+    sut.reload()
+    XCTAssertEqual(vocabRepository.numberOfGetLessonCalled, 2)
+  }
+  
   // Classes
   private func makeSut(book: Book, lesson: Lesson) -> LessonDetailViewModel {
     let sut = LessonDetailViewModel(bookID: book.id, lessonID: lesson.id, vocabRepository: vocabRepository)
@@ -232,6 +239,7 @@ class LessonDetailViewModelTests: XCTestCase {
   private class VocabRepositoryStub: VocabRepository {
     
     private(set) var isGetLessonCalled = false
+    private(set) var numberOfGetLessonCalled = 0
     
     private let book: Book
     private let lessons: [Lesson]
@@ -253,6 +261,7 @@ class LessonDetailViewModelTests: XCTestCase {
     
     func getLesson(inBook id: Int, lessonID: Int) -> Observable<Lesson> {
       isGetLessonCalled = true
+      numberOfGetLessonCalled += 1
       guard let lesson = lessons.first(where: { $0.id == lessonID }) else {
         return Observable.empty()
       }

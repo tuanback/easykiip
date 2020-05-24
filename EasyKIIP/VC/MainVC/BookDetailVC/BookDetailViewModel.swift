@@ -32,6 +32,8 @@ class BookDetailViewModel {
   private let bookID: Int
   private let vocabRepository: VocabRepository
   
+  public var oNavigation = PublishRelay<NavigationEvent<BookDetailNavigator.Destination>>()
+  
   public var oNavigationTitle = BehaviorRelay<String>(value: "")
   public var itemViewModels: Observable<[BookDetailItemViewModel]>!
   
@@ -44,7 +46,11 @@ class BookDetailViewModel {
   init(bookID: Int, bookName: String, vocabRepository: VocabRepository) {
     self.bookID = bookID
     self.vocabRepository = vocabRepository
-    oNavigationTitle.accept(bookName)
+    var name = bookName
+    if bookName.contains("\n") {
+      name = String(bookName.split(separator: "\n").last ?? "")
+    }
+    oNavigationTitle.accept(name)
     setupItemViewModels()
     initLessons()
   }
@@ -54,8 +60,7 @@ class BookDetailViewModel {
       return
     }
     
-    // TODO: Open detail views
-    
+    oNavigation.accept(.push(destination: .lessonDetail(bookID: bookID, lessonID: lesson.id)))
   }
   
   private func initLessons() {

@@ -85,6 +85,10 @@ class LessonDetailViewModel {
     getVocabs()
   }
   
+  func reload() {
+    getVocabs()
+  }
+  
   private func getVocabs() {
     let observable = vocabRepository.getLesson(inBook: bookID, lessonID: lessonID).share(replay: 1, scope: .forever)
     

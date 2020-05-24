@@ -1,23 +1,23 @@
 //
-//  MainNavConNavigator.swift
+//  BookDetailNavigator.swift
 //  EasyKIIP
 //
-//  Created by Tuan on 2020/05/23.
+//  Created by Tuan on 2020/05/24.
 //  Copyright © 2020 Real Life Swift. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class MainNavConNavigator {
+class BookDetailNavigator: Navigator {
   
   enum Destination {
-    case main
+    case lessonDetail(bookID: Int, lessonID: Int)
   }
   
-  typealias Factory = MainVCFactory
-  private let factory: Factory
+  typealias Factory = LessonDetailVCFactory
   
+  private let factory: Factory
   init(factory: Factory) {
     self.factory = factory
   }
@@ -44,13 +44,13 @@ class MainNavConNavigator {
   
   private func makeVC(for destination: Destination) -> UIViewController {
     switch destination {
-    case .main:
-      return factory.makeMainVC()
+    case .lessonDetail(let bookID, let lessonID):
+      return factory.makeLessonDetailVC(bookID: bookID, lessonID: lessonID)
     }
   }
   
 }
 
-protocol MainVCFactory {
-  func makeMainVC() -> MainVC
+protocol LessonDetailVCFactory {
+  func makeLessonDetailVC(bookID: Int, lessonID: Int) -> LessonDetailVC
 }
