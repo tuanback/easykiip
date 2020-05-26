@@ -1343,6 +1343,7 @@
 				17B70AD6244CF1E500C67334 /* Embed Frameworks */,
 				DC158DF6EF5D937E577E1FF6 /* [CP] Embed Pods Frameworks */,
 				B9EA17C2BCDBADD3AD20ADAA /* [CP] Copy Pods Resources */,
+				17DF65A0247D456900540528 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1609,6 +1610,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UserSession-UserSessionTests/Pods-UserSession-UserSessionTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		17DF65A0247D456900540528 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		2A40199626F6AB751765BEF8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
