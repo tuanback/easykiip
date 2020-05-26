@@ -22,12 +22,13 @@ public class LaunchViewModel {
   }
   
   func start() {
-    if let _ = userSessionRepository.readUserSession() {
-      oNavigation.accept(.present(destination: .main))
+    // First Time Launch
+    if !AppValuesStorage.isNotFirstTimeLaunched {
+      oNavigation.accept(.present(destination: .onboarding))
       return
     }
     
-    oNavigation.accept(.present(destination: .onboarding))
+    oNavigation.accept(.present(destination: .main))
   }
   
 }

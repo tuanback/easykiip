@@ -9,20 +9,20 @@
 import Foundation
 import UIKit
 
-public class WelcomeVC: NiblessViewController {
+class WelcomeVC: NiblessViewController {
   
   private let viewModel: WelcomeViewModel
   
-  public init(viewModel: WelcomeViewModel) {
+  init(viewModel: WelcomeViewModel) {
     self.viewModel = viewModel
     super.init()
   }
   
-  public override func loadView() {
+  override func loadView() {
     view = WelcomeRootView(viewModel: viewModel)
   }
- 
-  public override var preferredStatusBarStyle: UIStatusBarStyle {
+  
+  override var preferredStatusBarStyle: UIStatusBarStyle {
     return .lightContent
   }
   

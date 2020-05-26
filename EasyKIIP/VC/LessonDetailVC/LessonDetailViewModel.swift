@@ -97,14 +97,23 @@ class LessonDetailViewModel {
   private func getVocabs() {
     let observable = vocabRepository.getLesson(inBook: bookID, lessonID: lessonID).share(replay: 1, scope: .forever)
     
+    let languageCode = AppSetting.languageCode
+    
     observable.map { (lesson) -> [LessonDetailChildVC] in
-      if lesson.vocabs.count > 0 && lesson.readingParts.count > 0 {
+      let vocabs = lesson.vocabs.filter { (vocab) -> Bool in
+        vocab.translations[languageCode] != nil
+      }
+      let readingParts = lesson.readingParts.filter { (readingPart) -> Bool in
+        readingPart.scriptTranslation[languageCode] != nil
+      }
+      
+      if vocabs.count > 0 && readingParts.count > 0 {
         return [.learnVocab, .readingPart, .listOfVocabs]
       }
-      else if lesson.vocabs.count > 0 {
+      else if vocabs.count > 0 {
         return [.learnVocab, .listOfVocabs]
       }
-      else if lesson.readingParts.count > 0 {
+      else if readingParts.count > 0 {
         return [.readingPart]
       }
       return []

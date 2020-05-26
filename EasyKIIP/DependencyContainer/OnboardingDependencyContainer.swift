@@ -40,7 +40,8 @@ class OnboardingDependencyContainer {
   }
   
   func makeWelcomeVC() -> WelcomeVC {
-    let viewModel = WelcomeViewModel(goToLogInNavigator: onboardingViewModel)
+    let viewModel = WelcomeViewModel(goToLogInNavigator: onboardingViewModel,
+                                     signedInLaterResponder: onboardingViewModel)
     return WelcomeVC(viewModel: viewModel)
   }
   

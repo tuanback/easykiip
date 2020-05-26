@@ -11,19 +11,25 @@ import RxSwift
 import RxCocoa
 import Action
 
-public class WelcomeViewModel {
+class WelcomeViewModel {
   
   private let gotoLogInNavigator: GoToLogInNavigator
+  private let signedInLaterResponder: SignedInLaterResponder
   
-  public init(goToLogInNavigator: GoToLogInNavigator) {
+  init(goToLogInNavigator: GoToLogInNavigator,
+       signedInLaterResponder: SignedInLaterResponder) {
     self.gotoLogInNavigator = goToLogInNavigator
+    self.signedInLaterResponder = signedInLaterResponder
   }
   
   lazy var loginAction = CocoaAction { [weak self] in
     self?.gotoLogInNavigator.navigateToLogIn()
-    return .just(())
+    return Observable.empty()
   }
   
-  
+  lazy var signedInLaterAction = CocoaAction { [weak self] in
+    self?.signedInLaterResponder.signInLater()
+    return Observable.empty()
+  }
   
 }

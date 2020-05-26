@@ -22,6 +22,7 @@ class SelectLanguageVC: NiblessViewController {
   override func loadView() {
     view = SelectLanguageRootView(didLanguageSelected: { [weak self] language in
       AppSetting.languageCode = language.languageCode
+      AppValuesStorage.didSetLanguage = true
       self?.didSelected()
       self?.dismiss(animated: true, completion: nil)
     })

@@ -16,11 +16,15 @@ protocol SignedInResponder {
   func signedIn()
 }
 
+protocol SignedInLaterResponder {
+  func signInLater()
+}
+
 public protocol GoToLogInNavigator {
   func navigateToLogIn()
 }
 
-public class OnboardingVM: SignedInResponder, GoToLogInNavigator {
+public class OnboardingVM: SignedInResponder, SignedInLaterResponder, GoToLogInNavigator {
   
   var oNavigation = BehaviorRelay<NavigationEvent<OnboardingNavigator.Destination>>(value: .push(destination: .welcome))
   
@@ -29,6 +33,12 @@ public class OnboardingVM: SignedInResponder, GoToLogInNavigator {
   }
   
   func signedIn() {
+    AppValuesStorage.isNotFirstTimeLaunched = true
+    oNavigation.accept(.dismiss)
+  }
+  
+  func signInLater() {
+    AppValuesStorage.isNotFirstTimeLaunched = true
     oNavigation.accept(.dismiss)
   }
   

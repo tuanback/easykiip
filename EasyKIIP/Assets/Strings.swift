@@ -42,6 +42,8 @@ public struct Strings {
   static let onboardingTitle = NSLocalizedString("Easiest way to pass KIIP", bundle: Strings.languageBundle, comment: "")
   static let onboardingMessage = NSLocalizedString("10 minutes per day, that's all you need", bundle: Strings.languageBundle, comment: "")
   static let login = NSLocalizedString("Login", bundle: Strings.languageBundle, comment: "")
+  static let loginLater = NSLocalizedString("Login later? ", bundle: Strings.languageBundle, comment: "")
+  static let playAsGuest = NSLocalizedString("Learn As Guest", bundle: Strings.languageBundle, comment: "")
   
   static let today = NSLocalizedString("Today", bundle: Strings.languageBundle, comment: "")
   static let yesterday = NSLocalizedString("Yesterday", bundle: Strings.languageBundle, comment: "")

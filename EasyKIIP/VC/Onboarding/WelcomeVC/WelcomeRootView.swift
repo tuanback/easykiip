@@ -18,7 +18,9 @@ class WelcomeRootView: NiblessView {
   private var labelLogo: UILabel!
   private var labelTitle: UILabel!
   private var labelMessage: UILabel!
+  private var labelLoginLater: UILabel!
   private var buttonLogin: UIButton!
+  private var buttonPlayAsGuest: UIButton!
   
   init(frame: CGRect = .zero, viewModel: WelcomeViewModel) {
     self.viewModel = viewModel
@@ -65,10 +67,31 @@ class WelcomeRootView: NiblessView {
     
     buttonLogin.rx.action = viewModel.loginAction
     
+    labelLoginLater = UILabel()
+    labelLoginLater.text = Strings.loginLater
+    labelLoginLater.textColor = UIColor(hexString: "F0F0F0")
+    labelLoginLater.font = UIFont.appFontRegular(ofSize: 18)
+    
+    buttonPlayAsGuest = UIButton()
+    buttonPlayAsGuest.titleLabel?.font = UIFont.appFontMedium(ofSize: 18)
+    buttonPlayAsGuest.setTitle(Strings.playAsGuest, for: .normal)
+    buttonPlayAsGuest.backgroundColor = UIColor.clear
+    buttonPlayAsGuest.setTitleColor(UIColor.white, for: .normal)
+    
+    buttonPlayAsGuest.rx.action = viewModel.signedInLaterAction
+    
     addSubview(labelLogo)
     addSubview(labelTitle)
     addSubview(labelMessage)
     addSubview(buttonLogin)
+    
+    let stackView = UIStackView(arrangedSubviews: [labelLoginLater,
+                                                   buttonPlayAsGuest])
+    stackView.axis = .horizontal
+    stackView.alignment = .fill
+    stackView.distribution = .fill
+    
+    addSubview(stackView)
     
     labelLogo.snp.makeConstraints { (make) in
       make.centerX.equalTo(self)
@@ -81,9 +104,15 @@ class WelcomeRootView: NiblessView {
       make.centerY.equalTo(self).offset(-50)
     }
     
+    stackView.snp.makeConstraints { (make) in
+      make.centerX.equalToSuperview()
+      make.bottom.equalTo(self).offset(-20)
+      make.height.equalTo(40)
+    }
+    
     buttonLogin.snp.makeConstraints { (make) in
       make.centerX.equalTo(self)
-      make.bottom.equalTo(self).offset(-60)
+      make.bottom.equalTo(buttonPlayAsGuest.snp.top).offset(-20)
       make.width.equalTo(self).multipliedBy(0.8)
       make.height.equalTo(50)
     }
