@@ -345,7 +345,9 @@ class KIIPVocabRepositoryTests: XCTestCase {
                                        hasSampleDataBook: book,
                                        hasSampleDataLesson: lesson,
                                        hasSampleDataVocab: vocab)
-    let sut = KIIPVocabRepository(userSession: fakeUserSessionDatastore.readUserSession()!, remoteAPI: remoteAPI, dataStore: dataStore)
+    let userSessionRepo = KIIPUserSessionRepository(dataStore: fakeUserSessionDatastore, remoteAPI: FakeAuthRemoteAPI())
+    
+    let sut = KIIPVocabRepository(userSessionRepo: userSessionRepo, remoteAPI: remoteAPI, dataStore: dataStore)
     return (sut, remoteAPI, dataStore)
   }
   

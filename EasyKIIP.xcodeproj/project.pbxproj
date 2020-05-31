@@ -40,6 +40,7 @@
 		17954AB2245D3F6000C8CC95 /* MainBookItemCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */; };
 		17954ABD245EA9CE00C8CC95 /* BookDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */; };
 		17954ABE245EB4DB00C8CC95 /* UserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70B58245580B600C67334 /* UserSession.framework */; };
+		179CB97F2483790B00A8B37C /* QuizEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB97E2483790B00A8B37C /* QuizEngineTests.swift */; };
 		17B70A86244C180200C67334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70A85244C180200C67334 /* AppDelegate.swift */; };
 		17B70A8F244C180500C67334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A8E244C180500C67334 /* Assets.xcassets */; };
 		17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A90244C180500C67334 /* LaunchScreen.storyboard */; };
@@ -347,6 +348,7 @@
 		17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModelTests.swift; sourceTree = "<group>"; };
 		17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBookItemCVC.swift; sourceTree = "<group>"; };
 		17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModelTests.swift; sourceTree = "<group>"; };
+		179CB97E2483790B00A8B37C /* QuizEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEngineTests.swift; sourceTree = "<group>"; };
 		17A8A2F5246C990B00794C64 /* EasyKIIP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyKIIP-Bridging-Header.h"; sourceTree = "<group>"; };
 		17B70A82244C180200C67334 /* Easy KIIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy KIIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70A85244C180200C67334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -765,6 +767,21 @@
 			path = BookCell;
 			sourceTree = "<group>";
 		};
+		179CB97C248378DC00A8B37C /* QuizEngine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QuizEngine;
+			sourceTree = "<group>";
+		};
+		179CB97D248378EC00A8B37C /* QuizEngine */ = {
+			isa = PBXGroup;
+			children = (
+				179CB97E2483790B00A8B37C /* QuizEngineTests.swift */,
+			);
+			path = QuizEngine;
+			sourceTree = "<group>";
+		};
 		17A8A2F6246C99F600794C64 /* Ads */ = {
 			isa = PBXGroup;
 			children = (
@@ -832,6 +849,7 @@
 		17B70ABB244CF1CD00C67334 /* EasyKIIPKit */ = {
 			isa = PBXGroup;
 			children = (
+				179CB97C248378DC00A8B37C /* QuizEngine */,
 				17954AA1245D026A00C8CC95 /* Assets */,
 				17B70B34245572C100C67334 /* VocabRepository */,
 				17B70ABC244CF1CD00C67334 /* EasyKIIPKit.h */,
@@ -843,6 +861,7 @@
 		17B70AC6244CF1CE00C67334 /* EasyKIIPKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				179CB97D248378EC00A8B37C /* QuizEngine */,
 				176ADE0C24620E97006C5D3C /* Helper */,
 				17B70AF5244DBE5C00C67334 /* DataLayer */,
 				17B70ADB244CF23A00C67334 /* UILayer */,
@@ -1980,6 +1999,7 @@
 				17B70B282453CA1100C67334 /* VocabRemoteAPI.swift in Sources */,
 				17B70B162451C0F900C67334 /* ReadingPart.swift in Sources */,
 				17B70B182451C11200C67334 /* ReadingPartTests.swift in Sources */,
+				179CB97F2483790B00A8B37C /* QuizEngineTests.swift in Sources */,
 				17EB45012454263D00C9C312 /* KIIPVocabRepositoryTests.swift in Sources */,
 				17B70B2B2453CB0200C67334 /* VocabDataStore.swift in Sources */,
 				17B70B222453BCB100C67334 /* BookTests.swift in Sources */,
