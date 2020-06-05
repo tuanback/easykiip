@@ -12,10 +12,12 @@ import RxCocoa
 
 public protocol QuizEngine {
   func start() throws
+  func handleAnswer(for question: Question, answer: String?)
 }
 
 public protocol QuizEngineDelegate {
-  func routeToQuestion(question: String)
+  func quizEngine(routeTo question: Question)
+  func quizEngineDidCompleted()
 }
 
 enum QuizEngineError: LocalizedError {
@@ -23,7 +25,19 @@ enum QuizEngineError: LocalizedError {
 }
 
 public protocol QuestionMaker {
-  func createQuestions() -> [String]
+  func createQuestions() -> [Question]
+}
+
+public enum QuestionType {
+  case newWord
+  case practice
+}
+
+public struct Question: Equatable {
+  public let question: String
+  public let questionType: QuestionType
+  public let options: [String]
+  public let answer: String
 }
 
 public class KIIPQuizEngine: QuizEngine {
@@ -32,7 +46,9 @@ public class KIIPQuizEngine: QuizEngine {
   private let vocabRepository: VocabRepository
   private let delegate: QuizEngineDelegate
   
-  private var questions: [String] = []
+  private var questions: [Question] = []
+  
+  private var mCurrentQuestion: Int = 0
   
   public init(questionMaker: QuestionMaker,
               vocabRepository: VocabRepository,
@@ -49,7 +65,18 @@ public class KIIPQuizEngine: QuizEngine {
     }
     
     let question = self.questions[0]
-    delegate.routeToQuestion(question: question)
+    delegate.quizEngine(routeTo: question)
+  }
+  
+  public func handleAnswer(for question: Question, answer: String? = nil) {
+    guard mCurrentQuestion < questions.count - 1 else {
+      delegate.quizEngineDidCompleted()
+      return
+    }
+    
+    mCurrentQuestion += 1
+    let question = questions[mCurrentQuestion]
+    delegate.quizEngine(routeTo: question)
   }
 }
 
@@ -68,40 +95,84 @@ class QuizEngineTests: XCTestCase {
   
   func test_start_withOneQuestion_routeToFirstQuestion() throws {
     let vocabRepository = VocabRepositoryStub()
-    let questionMaker = QuestionMakerStub(questions: ["Q1"])
+    let questionMaker = QuestionMakerStub(questions: [("Q1", .newWord)])
     let delegate = QuizEngineDelegateSpy()
     let sut = KIIPQuizEngine(questionMaker: questionMaker,
                              vocabRepository: vocabRepository,
                              delegate: delegate)
     try sut.start()
     
-    XCTAssertEqual(delegate.questions, ["Q1"])
+    XCTAssertEqual(delegate.questions, [Question(question: "Q1",
+                                                 questionType: .newWord,
+                                                 options: [], answer: "")])
+  }
+  
+  func test_start_withOneNewWordQuestion_answerQuestion_completeQuiz() throws {
+    let vocabRepository = VocabRepositoryStub()
+    let questionMaker = QuestionMakerStub(questions: [("Q1", .newWord)])
+    let question = Question(question: "Q1", questionType: .newWord, options: [], answer: "")
+    let delegate = QuizEngineDelegateSpy()
+    let sut = KIIPQuizEngine(questionMaker: questionMaker,
+                             vocabRepository: vocabRepository,
+                             delegate: delegate)
+    try sut.start()
+    
+    sut.handleAnswer(for: question)
+    
+    XCTAssertTrue(delegate.completed)
+  }
+  
+  func test_startWithTwoQuestions_answer1Question_routeToSecondQuestion() throws {
+    
+    let vocabRepository = VocabRepositoryStub()
+    let questionMaker = QuestionMakerStub(questions: [("Q1", .newWord),
+                                                      ("Q2", .newWord)])
+    let question1 = Question(question: "Q1", questionType: .newWord, options: [], answer: "")
+    let question2 = Question(question: "Q2", questionType: .newWord, options: [], answer: "")
+    let delegate = QuizEngineDelegateSpy()
+    let sut = KIIPQuizEngine(questionMaker: questionMaker,
+                             vocabRepository: vocabRepository,
+                             delegate: delegate)
+    try sut.start()
+    
+    sut.handleAnswer(for: question1)
+    
+    XCTAssertFalse(delegate.completed)
+    XCTAssertEqual(delegate.questions, [question1, question2])
   }
   
   
   // Helpers
+  
   class QuestionMakerStub: QuestionMaker {
     
-    private(set) var questions: [String]
+    private(set) var questions: [Question]
     
-    init(questions: [String]) {
-      self.questions = questions
+    init(questions: [(String, QuestionType)]) {
+      self.questions = questions.map { Question(question: $0.0,
+                                                questionType: $0.1,
+                                                options: [], answer: "") }
     }
     
-    func createQuestions() -> [String] {
+    func createQuestions() -> [Question] {
       return self.questions
     }
   }
 
   class QuizEngineDelegateSpy: QuizEngineDelegate {
-    private(set) var questions: [String] = []
+    private(set) var questions: [Question] = []
+    private(set) var completed = false
     
     init() {
       
     }
     
-    func routeToQuestion(question: String) {
+    func quizEngine(routeTo question: Question) {
       self.questions.append(question)
+    }
+    
+    func quizEngineDidCompleted() {
+      completed = true
     }
   }
   
