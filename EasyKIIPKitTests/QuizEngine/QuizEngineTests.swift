@@ -9,129 +9,11 @@
 import XCTest
 import RxSwift
 import RxCocoa
-
-public protocol QuizEngine {
-  func start() throws
-  func handleAnswer(for question: Question, answer: String?)
-  func markAsMastered(for question: Question)
-}
-
-public protocol QuizEngineDelegate {
-  func quizEngine(routeTo question: Question)
-  func quizEngineDidCompleted()
-}
-
-enum QuizEngineError: LocalizedError {
-  case noQuestion
-}
-
-public protocol QuestionMaker {
-  func createQuestions() -> [Question]
-  func createANewQuestion(for: Question) -> Question
-}
-
-public enum Question: Equatable, Hashable {
-  case newWord(NewWordQuestion)
-  case practice(PracticeQuestion)
-}
-
-public struct NewWordQuestion: Equatable, Hashable {
-  public let vocabID: Int
-  public let word: String
-  public let meaning: String
-}
-
-public struct PracticeQuestion: Equatable, Hashable {
-  public let vocabID: Int
-  public let question: String
-  public let options: [String]
-  public let answer: String
-}
+@testable import EasyKIIPKit
 
 enum QuestionType {
   case newWord
   case practice
-}
-
-public class KIIPQuizEngine: QuizEngine {
-  
-  private let questionMaker: QuestionMaker
-  private let vocabRepository: VocabRepository
-  private let delegate: QuizEngineDelegate
-  
-  private var questions: [Question] = []
-  
-  private var mCurrentQuestion: Int = 0
-  
-  private let bookID: Int
-  private let lessonID: Int
-  private let vocabs: [Vocab]
-  
-  public init(bookID: Int,
-              lessonID: Int,
-              vocabs: [Vocab],
-              questionMaker: QuestionMaker,
-              vocabRepository: VocabRepository,
-              delegate: QuizEngineDelegate) {
-    self.bookID = bookID
-    self.lessonID = lessonID
-    self.vocabs = vocabs
-    self.questionMaker = questionMaker
-    self.vocabRepository = vocabRepository
-    self.delegate = delegate
-    self.questions = questionMaker.createQuestions()
-  }
-  
-  public func start() {
-    guard self.questions.count > 0 else {
-      delegate.quizEngineDidCompleted()
-      return
-    }
-    
-    let question = self.questions[0]
-    delegate.quizEngine(routeTo: question)
-  }
-  
-  public func handleAnswer(for question: Question, answer: String? = nil) {
-    
-    switch question {
-    case .practice(let q):
-      guard let answer = answer else {
-        fatalError("Can't answer practice question with nil answer")
-      }
-      if q.answer == answer {
-        vocabRepository.recordVocabPracticed(vocabID: q.vocabID, isCorrectAnswer: true)
-      }
-      else {
-        vocabRepository.recordVocabPracticed(vocabID: q.vocabID, isCorrectAnswer: false)
-        let question = questionMaker.createANewQuestion(for: question)
-        questions.append(question)
-      }
-    case .newWord(let q):
-      vocabRepository.recordVocabPracticed(vocabID: q.vocabID, isCorrectAnswer: true)
-    }
-    
-    guard mCurrentQuestion < questions.count - 1 else {
-      delegate.quizEngineDidCompleted()
-      vocabRepository.saveLessonPracticeHistory(inBook: bookID, lessonID: lessonID)
-      return
-    }
-    
-    mCurrentQuestion += 1
-    let question = questions[mCurrentQuestion]
-    delegate.quizEngine(routeTo: question)
-  }
-  
-  public func markAsMastered(for question: Question) {
-    let vocabID: Int
-    switch question {
-    case .newWord(let q):
-      vocabID = q.vocabID
-    case .practice(let q):
-      vocabID = q.vocabID
-    }
-    vocabRepository.markVocabAsMastered(vocabID: vocabID)
-  }
 }
 
 class QuizEngineTests: XCTestCase {
@@ -214,25 +96,20 @@ class QuizEngineTests: XCTestCase {
     XCTAssertEqual(delegate.questions, [question1, question2])
   }
   
-  func test_start_withOnePracticeQuestions_answer1Question_wrong_routeToSecondQuestion() {
+  func test_start_withOnePracticeQuestions_answer1Question_wrong_stayInTheSameQuestion() {
     let (book, _, lesson, vocabs) = makeSampleBook()
-    let (sut, questionMaker, delegate, _, questions) = makeSut(bookID: book.id, lessonID: lesson.id, vocabs: vocabs, questions: [(1, "Q1", "A1", .practice)])
+    let (sut, _, delegate, _, questions) = makeSut(bookID: book.id, lessonID: lesson.id, vocabs: vocabs, questions: [(1, "Q1", "A1", .practice)])
     sut.start()
     
     let question1 = questions[0]
     
     sut.handleAnswer(for: question1, answer: "")
     
-    let question2 = questionMaker.newCreatedQuestionDic[question1]
-    
-    XCTAssertNotNil(question2)
     XCTAssertFalse(delegate.completed)
-    if let q2 = question2 {
-      XCTAssertEqual(delegate.questions, [question1, q2])
-    }
+    XCTAssertEqual(delegate.questions, [question1])
   }
   
-  func test_start_withTwoPracticeQuestions_answer1Question_wrong_routeToThirdQuestion() {
+  func test_start_withTwoPracticeQuestions_answer1Question_wrong_correct_routeToSeconddQuestion() {
     let (book, _, lesson, vocabs) = makeSampleBook()
     let (sut, questionMaker, delegate, _, questions) = makeSut(bookID: book.id, lessonID: lesson.id, vocabs: vocabs, questions: [(1, "Q1", "A1", .practice),
                                                                                                                                  (2, "Q2", "A2", .practice)])
@@ -242,18 +119,16 @@ class QuizEngineTests: XCTestCase {
     let question2 = questions[1]
     
     sut.handleAnswer(for: question1, answer: "")
-    sut.handleAnswer(for: question2, answer: "A2")
+    sut.handleAnswer(for: question1, answer: "A1")
     
     let question3 = questionMaker.newCreatedQuestionDic[question1]
     
     XCTAssertNotNil(question3)
     XCTAssertFalse(delegate.completed)
-    if let q3 = question3 {
-      XCTAssertEqual(delegate.questions, [question1, question2, q3])
-    }
+    XCTAssertEqual(delegate.questions, [question1, question2])
   }
   
-  func test_start_withTwoPracticeQuestions_answer2Questions_wrong_routeToThirdFourthQuestion() {
+  func test_start_withTwoPracticeQuestions_answer2Questions_2wrong_2correct_routeToThirdQuestion() {
     let (book, _, lesson, vocabs) = makeSampleBook()
     let (sut, questionMaker, delegate, _, questions) = makeSut(bookID: book.id, lessonID: lesson.id, vocabs: vocabs, questions: [(1, "Q1", "A1", .practice),
                                                                                                                                  (2, "Q2", "A2", .practice)])
@@ -263,7 +138,9 @@ class QuizEngineTests: XCTestCase {
     let question2 = questions[1]
     
     sut.handleAnswer(for: question1, answer: "")
+    sut.handleAnswer(for: question1, answer: "A1")
     sut.handleAnswer(for: question2, answer: "")
+    sut.handleAnswer(for: question2, answer: "A2")
     
     let question3 = questionMaker.newCreatedQuestionDic[question1]
     let question4 = questionMaker.newCreatedQuestionDic[question2]
@@ -271,15 +148,13 @@ class QuizEngineTests: XCTestCase {
     XCTAssertNotNil(question3)
     XCTAssertNotNil(question4)
     
-    sut.handleAnswer(for: question3!, answer: "A1")
-    
     XCTAssertFalse(delegate.completed)
-    if let q3 = question3, let q4 = question4 {
-      XCTAssertEqual(delegate.questions, [question1, question2, q3, q4])
+    if let q3 = question3 {
+      XCTAssertEqual(delegate.questions, [question1, question2, q3])
     }
   }
   
-  func test_start_withTwoPracticeQuestions_answer2Questions_wrong_answerAgain_correct_completeQuiz() {
+  func test_start_withTwoPracticeQuestions_answer2Questions_wrong_correct_completeQuiz() {
     let (book, _, lesson, vocabs) = makeSampleBook()
     let (sut, questionMaker, delegate, vocabRepo, questions) = makeSut(bookID: book.id, lessonID: lesson.id, vocabs: vocabs, questions: [(1, "Q1", "A1", .practice),
                                                                                                                                          (2, "Q2", "A2", .practice)])
@@ -289,7 +164,9 @@ class QuizEngineTests: XCTestCase {
     let question2 = questions[1]
     
     sut.handleAnswer(for: question1, answer: "")
+    sut.handleAnswer(for: question1, answer: "A1")
     sut.handleAnswer(for: question2, answer: "")
+    sut.handleAnswer(for: question2, answer: "A2")
     
     let question3 = questionMaker.newCreatedQuestionDic[question1]
     let question4 = questionMaker.newCreatedQuestionDic[question2]
@@ -375,8 +252,89 @@ class QuizEngineTests: XCTestCase {
     XCTAssertTrue(vocabRepo.markAsMasteredArray.contains(1))
   }
   
+  func test_startWith3PracticeQuestions_3Hearts_numberOfHeartEqual3() {
+    
+    let (book, _, lesson, vocabs) = makeSampleBook()
+    let (sut, _, delegate, _, _) = makeSut(bookID: book.id,
+                                                   lessonID: lesson.id,
+                                                   vocabs: vocabs,
+                                                   questions: [(1, "Q1", "A1", .practice),
+                                                               (2, "Q2", "A2", .practice),
+                                                               (3, "Q3", "A3", .practice)],
+                                                   numberOfHeart: 3)
+    sut.start()
+    
+    XCTAssertEqual(delegate.numberOfHeart, 3)
+  }
+  
+  func test_startWith3PracticeQuestions_3Hearts_1wrongAnswer_numberOfHeartEqual2() {
+    
+    let (book, _, lesson, vocabs) = makeSampleBook()
+    let (sut, _, delegate, _, questions) = makeSut(bookID: book.id,
+                                                   lessonID: lesson.id,
+                                                   vocabs: vocabs,
+                                                   questions: [(1, "Q1", "A1", .practice),
+                                                               (2, "Q2", "A2", .practice),
+                                                               (3, "Q3", "A3", .practice)],
+                                                   numberOfHeart: 3)
+    sut.start()
+    let question = questions[0]
+    sut.handleAnswer(for: question, answer: "")
+    XCTAssertEqual(delegate.numberOfHeart, 2)
+  }
+  
+  func test_startWith3PracticeQuestions_3Hearts_1wrongAnswer_1correctAnswer_numberOfHeartEqual2() {
+    
+    let (book, _, lesson, vocabs) = makeSampleBook()
+    let (sut, _, delegate, _, questions) = makeSut(bookID: book.id,
+                                                   lessonID: lesson.id,
+                                                   vocabs: vocabs,
+                                                   questions: [(1, "Q1", "A1", .practice),
+                                                               (2, "Q2", "A2", .practice),
+                                                               (3, "Q3", "A3", .practice)],
+                                                   numberOfHeart: 3)
+    sut.start()
+    let question = questions[0]
+    sut.handleAnswer(for: question, answer: "")
+    sut.handleAnswer(for: question, answer: "A1")
+    XCTAssertEqual(delegate.numberOfHeart, 2)
+  }
+  
+  func test_startWith3PracticeQuestions_3Hearts_2wrongAnswer_numberOfHeartEqual1() {
+    
+    let (book, _, lesson, vocabs) = makeSampleBook()
+    let (sut, _, delegate, _, questions) = makeSut(bookID: book.id,
+                                                   lessonID: lesson.id,
+                                                   vocabs: vocabs,
+                                                   questions: [(1, "Q1", "A1", .practice),
+                                                               (2, "Q2", "A2", .practice),
+                                                               (3, "Q3", "A3", .practice)],
+                                                   numberOfHeart: 3)
+    sut.start()
+    let question = questions[0]
+    sut.handleAnswer(for: question, answer: "")
+    sut.handleAnswer(for: question, answer: "")
+    XCTAssertEqual(delegate.numberOfHeart, 1)
+  }
+  
+  func test_startWith3NewWordQuestions_3Hearts_1wrongAnswer_numberOfHeartEqual3() {
+    
+    let (book, _, lesson, vocabs) = makeSampleBook()
+    let (sut, _, delegate, _, questions) = makeSut(bookID: book.id,
+                                                   lessonID: lesson.id,
+                                                   vocabs: vocabs,
+                                                   questions: [(1, "Q1", "A1", .newWord),
+                                                               (2, "Q2", "A2", .newWord),
+                                                               (3, "Q3", "A3", .newWord)],
+                                                   numberOfHeart: 3)
+    sut.start()
+    let question = questions[0]
+    sut.handleAnswer(for: question, answer: "")
+    XCTAssertEqual(delegate.numberOfHeart, 3)
+  }
+  
   // Helpers
-  private func makeSut(bookID: Int, lessonID: Int, vocabs: [Vocab], questions: [(Int, String, String, QuestionType)]) -> (KIIPQuizEngine, QuestionMakerStub, QuizEngineDelegateSpy, VocabRepositoryStub, [Question]) {
+  private func makeSut(bookID: Int, lessonID: Int, vocabs: [Vocab], questions: [(Int, String, String, QuestionType)], numberOfHeart: Int? = nil) -> (KIIPQuizEngine, QuestionMakerStub, QuizEngineDelegateSpy, VocabRepositoryStub, [Question]) {
     let vocabRepository = VocabRepositoryStub()
     let questionMaker = QuestionMakerStub(questions: questions)
     let questions = questionMaker.questions
@@ -384,6 +342,7 @@ class QuizEngineTests: XCTestCase {
     let sut = KIIPQuizEngine(bookID: bookID,
                              lessonID: lessonID,
                              vocabs: vocabs,
+                             numberOfHeart: numberOfHeart,
                              questionMaker: questionMaker,
                              vocabRepository: vocabRepository,
                              delegate: delegate)
@@ -448,6 +407,7 @@ class QuizEngineTests: XCTestCase {
   class QuizEngineDelegateSpy: QuizEngineDelegate {
     private(set) var questions: [Question] = []
     private(set) var completed = false
+    private(set) var numberOfHeart: Int = 0
     
     init() {
       
@@ -459,6 +419,10 @@ class QuizEngineTests: XCTestCase {
     
     func quizEngineDidCompleted() {
       completed = true
+    }
+    
+    func quizEngine(numberOfHeart: Int) {
+      self.numberOfHeart = numberOfHeart
     }
   }
   
