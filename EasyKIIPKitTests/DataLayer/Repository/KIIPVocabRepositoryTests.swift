@@ -36,6 +36,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
   
   private var scheduler: TestScheduler!
   private var subscription: Disposable!
+  private let disposeBag = DisposeBag()
   
   override func setUp() {
     super.setUp()
@@ -116,9 +117,13 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let (sut, remoteAPI, dataStore) = makeSut()
     let book = dataStore.book
     let lesson = dataStore.lesson
-    let _ = sut.getLesson(inBook: book.id, lessonID: lesson.id)
+    sut.getLesson(inBook: book.id, lessonID: lesson.id)
+      .subscribe(onNext: { lesson in
+        XCTAssertTrue(remoteAPI.isLoadVocabCalled)
+      })
+      .dispose()
     
-    XCTAssertTrue(remoteAPI.isLoadVocabCalled && dataStore.isGetVocabsCalled)
+    XCTAssertTrue(dataStore.isGetVocabsCalled)
     
   }
   
@@ -126,9 +131,14 @@ class KIIPVocabRepositoryTests: XCTestCase {
     let (sut, remoteAPI, dataStore) = makeSut()
     let book = dataStore.book
     let lesson = dataStore.lesson
-    let _ = sut.getListOfVocabs(inBook: book.id, inLesson: lesson.id)
     
-    XCTAssertTrue(remoteAPI.isLoadVocabCalled && dataStore.isGetVocabsCalled)
+    sut.getListOfVocabs(inBook: book.id, inLesson: lesson.id)
+      .subscribe(onNext: { vocabs in
+        XCTAssertTrue(remoteAPI.isLoadVocabCalled)
+      })
+      .dispose()
+    
+    XCTAssertTrue(dataStore.isGetVocabsCalled)
   }
   
   func test_getListOfVocab_remoteAPIReturnEmpty_getLocalLessons() {
