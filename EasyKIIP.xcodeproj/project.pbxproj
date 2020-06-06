@@ -129,6 +129,10 @@
 		17D98F79248B59460049F5BB /* NewWordQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D98F78248B59460049F5BB /* NewWordQuestion.swift */; };
 		17D98F7B248B59580049F5BB /* PracticeQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D98F7A248B59580049F5BB /* PracticeQuestion.swift */; };
 		17D98F7D248B596A0049F5BB /* KIIPQuizEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D98F7C248B596A0049F5BB /* KIIPQuizEngine.swift */; };
+		17D98F7F248B65000049F5BB /* NewWordQuestionsMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D98F7E248B65000049F5BB /* NewWordQuestionsMakerTests.swift */; };
+		17D98F81248B874A0049F5BB /* NewWordQuestionMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D98F80248B874A0049F5BB /* NewWordQuestionMaker.swift */; };
+		17D98F83248B87B60049F5BB /* PracticeQuestionMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D98F82248B87B60049F5BB /* PracticeQuestionMakerTests.swift */; };
+		17D98F85248B88020049F5BB /* PracticeQuestionMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D98F84248B88020049F5BB /* PracticeQuestionMaker.swift */; };
 		17E7F16D246627D5008667FB /* RealmDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F16C246627D5008667FB /* RealmDataStore.swift */; };
 		17E7F17324662D1A008667FB /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17224662D1A008667FB /* RealmModel.swift */; };
 		17E7F17D2468165D008667FB /* FirebaseVocabRemoteAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7F17924679CC3008667FB /* FirebaseVocabRemoteAPITests.swift */; };
@@ -413,6 +417,10 @@
 		17D98F78248B59460049F5BB /* NewWordQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordQuestion.swift; sourceTree = "<group>"; };
 		17D98F7A248B59580049F5BB /* PracticeQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeQuestion.swift; sourceTree = "<group>"; };
 		17D98F7C248B596A0049F5BB /* KIIPQuizEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIIPQuizEngine.swift; sourceTree = "<group>"; };
+		17D98F7E248B65000049F5BB /* NewWordQuestionsMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordQuestionsMakerTests.swift; sourceTree = "<group>"; };
+		17D98F80248B874A0049F5BB /* NewWordQuestionMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWordQuestionMaker.swift; sourceTree = "<group>"; };
+		17D98F82248B87B60049F5BB /* PracticeQuestionMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeQuestionMakerTests.swift; sourceTree = "<group>"; };
+		17D98F84248B88020049F5BB /* PracticeQuestionMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeQuestionMaker.swift; sourceTree = "<group>"; };
 		17E7F16C246627D5008667FB /* RealmDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataStore.swift; sourceTree = "<group>"; };
 		17E7F17224662D1A008667FB /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		17E7F17524679C31008667FB /* FirebaseVocabRemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseVocabRemoteAPI.swift; sourceTree = "<group>"; };
@@ -776,6 +784,8 @@
 				17D98F71248B58ED0049F5BB /* QuizEngineDelegate.swift */,
 				17D98F73248B59030049F5BB /* QuestionMaker.swift */,
 				17D98F7C248B596A0049F5BB /* KIIPQuizEngine.swift */,
+				17D98F80248B874A0049F5BB /* NewWordQuestionMaker.swift */,
+				17D98F84248B88020049F5BB /* PracticeQuestionMaker.swift */,
 			);
 			path = QuizEngine;
 			sourceTree = "<group>";
@@ -784,6 +794,8 @@
 			isa = PBXGroup;
 			children = (
 				179CB97E2483790B00A8B37C /* QuizEngineTests.swift */,
+				17D98F7E248B65000049F5BB /* NewWordQuestionsMakerTests.swift */,
+				17D98F82248B87B60049F5BB /* PracticeQuestionMakerTests.swift */,
 			);
 			path = QuizEngine;
 			sourceTree = "<group>";
@@ -1984,6 +1996,7 @@
 				17B70AF3244DBDCC00C67334 /* PraticeHistory.swift in Sources */,
 				17E7F16D246627D5008667FB /* RealmDataStore.swift in Sources */,
 				17D98F70248B58CD0049F5BB /* QuizEngine.swift in Sources */,
+				17D98F81248B874A0049F5BB /* NewWordQuestionMaker.swift in Sources */,
 				1757FC602470B92E00E41DA3 /* Path.swift in Sources */,
 				1766FFEB245B9A7E008B263D /* FakeVocabRemoteAPI.swift in Sources */,
 				17D98F77248B592F0049F5BB /* Question.swift in Sources */,
@@ -1999,6 +2012,7 @@
 				17B70B152451C0F900C67334 /* ReadingPart.swift in Sources */,
 				17B70B272453CA1100C67334 /* VocabRemoteAPI.swift in Sources */,
 				17B70AF0244CF57100C67334 /* Book.swift in Sources */,
+				17D98F85248B88020049F5BB /* PracticeQuestionMaker.swift in Sources */,
 				17D98F7D248B596A0049F5BB /* KIIPQuizEngine.swift in Sources */,
 				17B70B2A2453CB0200C67334 /* VocabDataStore.swift in Sources */,
 				17B70B1D245308EC00C67334 /* Lesson.swift in Sources */,
@@ -2017,7 +2031,9 @@
 				17B70B182451C11200C67334 /* ReadingPartTests.swift in Sources */,
 				179CB97F2483790B00A8B37C /* QuizEngineTests.swift in Sources */,
 				17EB45012454263D00C9C312 /* KIIPVocabRepositoryTests.swift in Sources */,
+				17D98F7F248B65000049F5BB /* NewWordQuestionsMakerTests.swift in Sources */,
 				17B70B222453BCB100C67334 /* BookTests.swift in Sources */,
+				17D98F83248B87B60049F5BB /* PracticeQuestionMakerTests.swift in Sources */,
 				17B70AE2244CF37000C67334 /* BookListingViewModelTests.swift in Sources */,
 				17B70B0A244F105E00C67334 /* ProficiencyCalculatorTests.swift in Sources */,
 				17B70B2024530ADE00C67334 /* LessonTests.swift in Sources */,

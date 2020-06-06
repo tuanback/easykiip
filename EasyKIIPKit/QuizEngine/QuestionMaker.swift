@@ -10,5 +10,5 @@ import Foundation
 
 public protocol QuestionMaker {
   func createQuestions() -> [Question]
-  func createANewQuestion(for: Question) -> Question
+  func createANewQuestion(for question: Question) -> Question
 }

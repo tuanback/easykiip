@@ -13,3 +13,4 @@ public protocol QuizEngine {
   func handleAnswer(for question: Question, answer: String?)
   func markAsMastered(for question: Question)
 }
+
