@@ -1,0 +1,153 @@
+//
+//  QuizVC.swift
+//  EasyKIIP
+//
+//  Created by Tuan on 2020/06/07.
+//  Copyright © 2020 Real Life Swift. All rights reserved.
+//
+
+import Foundation
+import UIKit
+import RxSwift
+import RxCocoa
+import SnapKit
+
+class QuizVC: NiblessViewController {
+  
+  private lazy var buttonClose = UIButton()
+  private lazy var stackViewHeart = UIStackView()
+  private lazy var viewViewControllerContainer = UIView()
+  
+  private let pageViewController = UIPageViewController(transitionStyle: .scroll,
+                                                        navigationOrientation: .horizontal,
+                                                        options: nil)
+  
+  private let disposeBag = DisposeBag()
+  
+  private let viewModel: QuizViewModel
+  private let navigator: QuizNavigator
+  
+  init(viewModel: QuizViewModel,
+       navigator: QuizNavigator) {
+    self.viewModel = viewModel
+    self.navigator = navigator
+    super.init()
+  }
+  
+  override func loadView() {
+    view = UIView()
+    view.backgroundColor = UIColor.appBackground
+    setupViews()
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    observeViewModel()
+  }
+  
+  @objc func handleCloseButtonClicked(sender: UIButton) {
+    viewModel.handleClose()
+  }
+  
+  private func observeViewModel() {
+    
+    viewModel.oDisplayingChildVC
+      .subscribe(onNext: { [weak self] viewModel in
+        // TODO: To make child view controller then display
+        
+      })
+      .disposed(by: disposeBag)
+    
+    viewModel.oHeartViewHidden
+      .drive(stackViewHeart.rx.isHidden)
+      .disposed(by: disposeBag)
+    
+    viewModel.oHeart
+      .subscribe(onNext: { [weak self] (numberOfHeart, totalHeart) in
+        self?.setupStackViewHeart(numberOfHeart: numberOfHeart, totalHeart: totalHeart)
+        
+      })
+      .disposed(by: disposeBag)
+    
+    // TODO: More to come
+  }
+  
+}
+
+extension QuizVC {
+  private func setupViews() {
+    
+    buttonClose.setImage(UIImage(named: IconName.close), for: .normal)
+    buttonClose.addTarget(self, action: #selector(handleCloseButtonClicked(sender:)), for: .touchUpInside)
+    stackViewHeart.isHidden = true
+    stackViewHeart.axis = .horizontal
+    stackViewHeart.alignment = .fill
+    stackViewHeart.distribution = .fillEqually
+    stackViewHeart.spacing = 4
+    
+    view.addSubview(buttonClose)
+    view.addSubview(stackViewHeart)
+    view.addSubview(viewViewControllerContainer)
+    
+    buttonClose.snp.makeConstraints { (make) in
+      make.leading.equalToSuperview().inset(16)
+      make.top.equalToSuperview().inset(16)
+      make.size.equalTo(44)
+    }
+    
+    stackViewHeart.snp.makeConstraints { (make) in
+      make.trailing.equalToSuperview().inset(16)
+      make.centerY.equalTo(buttonClose.snp.centerY)
+      make.height.equalTo(44)
+      make.width.equalTo(0)
+    }
+    
+    viewViewControllerContainer.snp.makeConstraints { (make) in
+      make.top.equalTo(buttonClose.snp.bottom).offset(16)
+      make.bottom.equalToSuperview()
+      make.leading.equalToSuperview().inset(16)
+      make.trailing.equalToSuperview().inset(16)
+    }
+    
+    setupPageViewController()
+  }
+  
+  private func setupPageViewController() {
+    
+    addChild(pageViewController)
+    viewViewControllerContainer.addSubview(pageViewController.view)
+    pageViewController.didMove(toParent: self)
+    
+    view.gestureRecognizers = pageViewController.gestureRecognizers
+    
+    pageViewController.view.snp.makeConstraints { (make) in
+      make.edges.equalToSuperview()
+    }
+    
+    /*
+     pageViewController.setViewControllers([viewControllers[0]], direction: .forward, animated: true, completion: nil)
+     */
+  }
+  
+  private func setupStackViewHeart(numberOfHeart: Int, totalHeart: Int) {
+    stackViewHeart.snp.updateConstraints({ (make) in
+      make.width.equalTo(44 * totalHeart)
+    })
+    
+    stackViewHeart.arrangedSubviews.forEach({ $0.removeFromSuperview() })
+    
+    for i in 0..<totalHeart {
+      let imageView = UIImageView()
+      imageView.contentMode = .scaleAspectFit
+      if i < numberOfHeart {
+        imageView.image = UIImage(named: IconName.heartFill)
+      }
+      else {
+        imageView.image = UIImage(named: IconName.heartEmpty)
+      }
+      
+      stackViewHeart.addArrangedSubview(imageView)
+    }
+  }
+}

@@ -12,6 +12,7 @@
 		17328477248CC27400103B5A /* LessonDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */; };
 		17328478248CC27600103B5A /* QuizViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D98F88248CB3F90049F5BB /* QuizViewModelTests.swift */; };
 		1732847A248CD96800103B5A /* QuizNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17328479248CD96800103B5A /* QuizNavigator.swift */; };
+		1732847C248D124900103B5A /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1732847B248D124900103B5A /* QuizVC.swift */; };
 		1738425424712C2900BEFE2F /* AdsSmallTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738425324712C2900BEFE2F /* AdsSmallTemplateView.swift */; };
 		17384258247158D700BEFE2F /* LessonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17384257247158D700BEFE2F /* LessonDetailViewModel.swift */; };
 		1738425B24715CB600BEFE2F /* LessonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738425A24715CB600BEFE2F /* LessonDetailVC.swift */; };
@@ -242,6 +243,7 @@
 		10354E400E6A62457F3A3874 /* Pods_UserSession_UserSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSession_UserSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17328479248CD96800103B5A /* QuizNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizNavigator.swift; sourceTree = "<group>"; };
+		1732847B248D124900103B5A /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModelTests.swift; sourceTree = "<group>"; };
 		1738425324712C2900BEFE2F /* AdsSmallTemplateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsSmallTemplateView.swift; sourceTree = "<group>"; };
 		17384257247158D700BEFE2F /* LessonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModel.swift; sourceTree = "<group>"; };
@@ -1169,6 +1171,7 @@
 			isa = PBXGroup;
 			children = (
 				17D98F8B248CB4390049F5BB /* QuizViewModel.swift */,
+				1732847B248D124900103B5A /* QuizVC.swift */,
 			);
 			path = QuizVC;
 			sourceTree = "<group>";
@@ -1847,6 +1850,7 @@
 				17FBF6E3245BEBBB00A65233 /* AppView.swift in Sources */,
 				17FBF735245CE6D900A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
 				17CBE671247A078E005D4CFD /* VocabListVC.swift in Sources */,
+				1732847C248D124900103B5A /* QuizVC.swift in Sources */,
 				17CBE66D247A075A005D4CFD /* ReadingListVC.swift in Sources */,
 				17F30EEA246B4A76008040BE /* BookDetailVC.swift in Sources */,
 				1738425B24715CB600BEFE2F /* LessonDetailVC.swift in Sources */,

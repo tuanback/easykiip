@@ -261,6 +261,7 @@ class QuizEngineTests: XCTestCase {
     try sut.start()
     
     XCTAssertEqual(delegate.numberOfHeart, 3)
+    XCTAssertEqual(delegate.maxHeart, 3)
   }
   
   func test_startWith3PracticeQuestions_3Hearts_1wrongAnswer_numberOfHeartEqual2() throws {
@@ -454,6 +455,7 @@ class QuizEngineTests: XCTestCase {
     private(set) var questions: [Question] = []
     private(set) var completed = false
     private(set) var numberOfHeart: Int = 0
+    private(set) var maxHeart: Int = 0
     
     var isCorrectAnswerCalled = false
     var isWrongAnswerCalled = false
@@ -470,8 +472,9 @@ class QuizEngineTests: XCTestCase {
       completed = true
     }
     
-    func quizEngine(numberOfHeart: Int) {
+    func quizEngine(numberOfHeart: Int, totalHeart: Int) {
       self.numberOfHeart = numberOfHeart
+      self.maxHeart = totalHeart
     }
     
     func quizEngine(correctAnswerFor question: Question, answer: String) {

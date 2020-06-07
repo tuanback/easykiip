@@ -100,16 +100,17 @@ class QuizViewModelTests: XCTestCase {
   
   func test_init_heartViewHidden_true() {
     let (sut, _) = makeSut(questions: [])
-    let heartViewHidden: Spy<Bool> = Spy<Bool>(observable: sut.oHeartViewHidden)
+    let heartViewHidden: Spy<Bool> = Spy<Bool>(observable: sut.oHeartViewHidden.asObservable())
     XCTAssertEqual(heartViewHidden.values, [true])
   }
   
   func test_init_handleNumberOfHeart() {
     let (sut, quizEngine) = makeSut(questions: [])
-    let heartSpy: Spy<Int> = Spy<Int>(observable: sut.oHeart)
-    let heartViewHidden: Spy<Bool> = Spy<Bool>(observable: sut.oHeartViewHidden)
-    quizEngine.outputNumberOfHeart(heart: 3)
-    XCTAssertEqual(heartSpy.values[0], 3)
+    let heartSpy: Spy<(Int, Int)> = Spy<(Int, Int)>(observable: sut.oHeart)
+    let heartViewHidden: Spy<Bool> = Spy<Bool>(observable: sut.oHeartViewHidden.asObservable())
+    quizEngine.outputNumberOfHeart(heart: 3, totalHeart: 3)
+    XCTAssertEqual(heartSpy.values[0].0, 3)
+    XCTAssertEqual(heartSpy.values[0].1, 3)
     XCTAssertEqual(heartViewHidden.values, [true, false])
   }
   
@@ -151,7 +152,7 @@ class QuizViewModelTests: XCTestCase {
     let errorSpy = ErrorSpy(observable: sut.oErrors)
     let navigationSpy = NavigationSpy(observable: sut.oNavigationEvent)
     
-    quizEngine.outputNumberOfHeart(heart: 0)
+    quizEngine.outputNumberOfHeart(heart: 0, totalHeart: 3)
     
     XCTAssertEqual(errorSpy.errors.count, 1)
     if case .present(let destination) = navigationSpy.navigationEvents[0] {
@@ -383,8 +384,8 @@ class QuizViewModelTests: XCTestCase {
       isMarkAsMastered = true
     }
     
-    func outputNumberOfHeart(heart: Int) {
-      delegate?.quizEngine(numberOfHeart: heart)
+    func outputNumberOfHeart(heart: Int, totalHeart: Int) {
+      delegate?.quizEngine(numberOfHeart: heart, totalHeart: totalHeart)
     }
     
     func completeQuiz() {

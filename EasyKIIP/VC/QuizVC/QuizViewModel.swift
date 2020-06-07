@@ -46,16 +46,17 @@ enum QuizItemViewModel {
 class QuizViewModel {
   
   // Heart
-  var oHeart: Observable<Int> {
+  var oHeart: Observable<(Int, Int)> {
     return rHeart.asObservable()
   }
-  private var rHeart = PublishRelay<Int>()
+  private var rHeart = PublishRelay<(Int, Int)>()
   
-  var oHeartViewHidden: Observable<Bool> {
+  var oHeartViewHidden: Driver<Bool> {
     return Observable.merge(
       Observable.just(true),
       rHeart.map({ _ in return false })
     )
+    .asDriver(onErrorJustReturn: true)
   }
   
   // Child VC
@@ -166,12 +167,12 @@ extension QuizViewModel: QuizEngineDelegate {
     rNavigationEvent.accept(.push(destination: .endQuiz))
   }
   
-  func quizEngine(numberOfHeart: Int) {
+  func quizEngine(numberOfHeart: Int, totalHeart: Int) {
     guard numberOfHeart > 0 else {
       showMessageToWatchVideoToRefillHeart()
       return
     }
-    rHeart.accept(numberOfHeart)
+    rHeart.accept((numberOfHeart, totalHeart))
   }
   
   private func showMessageToWatchVideoToRefillHeart() {

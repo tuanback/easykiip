@@ -51,8 +51,8 @@ public class KIIPQuizEngine: QuizEngine {
     
     let question = self.questions[0]
     delegate?.quizEngine(routeTo: question)
-    if let heart = numberOfHeart {
-      delegate?.quizEngine(numberOfHeart: heart)
+    if let heart = numberOfHeart, let maxHeart = self.maxHeart {
+      delegate?.quizEngine(numberOfHeart: heart, totalHeart: maxHeart)
     }
   }
   
@@ -71,9 +71,9 @@ public class KIIPQuizEngine: QuizEngine {
         vocabRepository.recordVocabPracticed(vocabID: q.vocabID, isCorrectAnswer: false)
         let question = questionMaker.createANewQuestion(for: question)
         questions.append(question)
-        if let heart = self.numberOfHeart {
+        if let heart = self.numberOfHeart, let maxHeart = self.maxHeart {
           numberOfHeart = heart - 1
-          delegate?.quizEngine(numberOfHeart: heart - 1)
+          delegate?.quizEngine(numberOfHeart: heart - 1, totalHeart: maxHeart)
         }
         delegate?.quizEngine(wrongAnswerFor: question, answer: answer)
         // If user answer is wrong => Let user to select again, don't route to next question
@@ -107,8 +107,8 @@ public class KIIPQuizEngine: QuizEngine {
   
   public func refillHeart() {
     numberOfHeart = maxHeart
-    if let heart = numberOfHeart {
-      delegate?.quizEngine(numberOfHeart: heart)
+    if let heart = numberOfHeart, let maxHeart = self.maxHeart {
+      delegate?.quizEngine(numberOfHeart: heart, totalHeart: maxHeart)
     }
   }
 }
