@@ -8,8 +8,10 @@
 
 import Foundation
 
-public protocol QuizEngineDelegate {
+public protocol QuizEngineDelegate: class {
   func quizEngine(routeTo question: Question)
   func quizEngineDidCompleted()
   func quizEngine(numberOfHeart: Int)
+  func quizEngine(correctAnswerFor question: Question, answer: String)
+  func quizEngine(wrongAnswerFor question: Question, answer: String)
 }

@@ -54,3 +54,16 @@ public struct Strings {
   static let vocabulary = NSLocalizedString("Vocabulary", bundle: Strings.languageBundle, comment: "")
   
 }
+
+// Errors
+extension Strings {
+  
+  static let nothingNeedMorePractice = NSLocalizedString("Nothing needs more practice", bundle: Strings.languageBundle, comment: "")
+  static let youAreMasteredAllVocabularies = NSLocalizedString("You are master all vocabularies. Great!", bundle: Strings.languageBundle, comment: "")
+  
+  static let quit = NSLocalizedString("Quit", bundle: Strings.languageBundle, comment: "")
+  static let areYouSureYouWantToQuit = NSLocalizedString("Are you sure you want to quit?", bundle: Strings.languageBundle, comment: "")
+  
+  static let outOfHeart = NSLocalizedString("Out of heart", bundle: Strings.languageBundle, comment: "")
+  static let youRanOutOfTheHeart = NSLocalizedString("You ran out of the heart. Do you want to watch a video ads to refill the heart?", bundle: Strings.languageBundle, comment: "")
+}

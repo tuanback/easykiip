@@ -12,6 +12,7 @@ import RxCocoa
 import RxTest
 import EasyKIIPKit
 import SwiftDate
+@testable import Easy_KIIP
 
 var scheduler: TestScheduler!
 class BookDetailViewModelTests: XCTestCase {

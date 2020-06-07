@@ -8,11 +8,15 @@
 
 import Foundation
 
+public enum QuizEngineError: Error {
+  case noQuestion
+}
+
 public class KIIPQuizEngine: QuizEngine {
+  public weak var delegate: QuizEngineDelegate?
   
   private let questionMaker: QuestionMaker
   private let vocabRepository: VocabRepository
-  private let delegate: QuizEngineDelegate
   
   private var questions: [Question] = []
   
@@ -22,34 +26,33 @@ public class KIIPQuizEngine: QuizEngine {
   private let lessonID: Int
   private let vocabs: [Vocab]
   private var numberOfHeart: Int?
+  private var maxHeart: Int?
   
   public init(bookID: Int,
               lessonID: Int,
               vocabs: [Vocab],
               numberOfHeart: Int?,
               questionMaker: QuestionMaker,
-              vocabRepository: VocabRepository,
-              delegate: QuizEngineDelegate) {
+              vocabRepository: VocabRepository) {
     self.bookID = bookID
     self.lessonID = lessonID
     self.vocabs = vocabs
+    self.maxHeart = numberOfHeart
     self.numberOfHeart = numberOfHeart
     self.questionMaker = questionMaker
     self.vocabRepository = vocabRepository
-    self.delegate = delegate
     self.questions = questionMaker.createQuestions()
   }
   
-  public func start() {
+  public func start() throws {
     guard self.questions.count > 0 else {
-      delegate.quizEngineDidCompleted()
-      return
+      throw QuizEngineError.noQuestion
     }
     
     let question = self.questions[0]
-    delegate.quizEngine(routeTo: question)
+    delegate?.quizEngine(routeTo: question)
     if let heart = numberOfHeart {
-      delegate.quizEngine(numberOfHeart: heart)
+      delegate?.quizEngine(numberOfHeart: heart)
     }
   }
   
@@ -62,6 +65,7 @@ public class KIIPQuizEngine: QuizEngine {
       }
       if q.answer == answer {
         vocabRepository.recordVocabPracticed(vocabID: q.vocabID, isCorrectAnswer: true)
+        delegate?.quizEngine(correctAnswerFor: question, answer: answer)
       }
       else {
         vocabRepository.recordVocabPracticed(vocabID: q.vocabID, isCorrectAnswer: false)
@@ -69,8 +73,9 @@ public class KIIPQuizEngine: QuizEngine {
         questions.append(question)
         if let heart = self.numberOfHeart {
           numberOfHeart = heart - 1
-          delegate.quizEngine(numberOfHeart: heart - 1)
+          delegate?.quizEngine(numberOfHeart: heart - 1)
         }
+        delegate?.quizEngine(wrongAnswerFor: question, answer: answer)
         // If user answer is wrong => Let user to select again, don't route to next question
         return
       }
@@ -79,14 +84,14 @@ public class KIIPQuizEngine: QuizEngine {
     }
     
     guard mCurrentQuestion < questions.count - 1 else {
-      delegate.quizEngineDidCompleted()
+      delegate?.quizEngineDidCompleted()
       vocabRepository.saveLessonPracticeHistory(inBook: bookID, lessonID: lessonID)
       return
     }
     
     mCurrentQuestion += 1
     let question = questions[mCurrentQuestion]
-    delegate.quizEngine(routeTo: question)
+    delegate?.quizEngine(routeTo: question)
   }
   
   public func markAsMastered(for question: Question) {
@@ -98,5 +103,12 @@ public class KIIPQuizEngine: QuizEngine {
       vocabID = q.vocabID
     }
     vocabRepository.markVocabAsMastered(vocabID: vocabID)
+  }
+  
+  public func refillHeart() {
+    numberOfHeart = maxHeart
+    if let heart = numberOfHeart {
+      delegate?.quizEngine(numberOfHeart: heart)
+    }
   }
 }

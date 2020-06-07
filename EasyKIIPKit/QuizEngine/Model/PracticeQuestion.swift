@@ -13,4 +13,11 @@ public struct PracticeQuestion: Equatable, Hashable {
   public let question: String
   public let options: [String]
   public let answer: String
+  
+  public init(vocabID: Int, question: String, options: [String], answer: String) {
+    self.vocabID = vocabID
+    self.question = question
+    self.options = options
+    self.answer = answer
+  }
 }

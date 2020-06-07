@@ -12,9 +12,10 @@ import RxCocoa
 import RxTest
 import EasyKIIPKit
 import SwiftDate
+@testable import Easy_KIIP
 
 extension LearnVocabItemViewModel: Equatable {
-  static func == (lhs: LearnVocabItemViewModel, rhs: LearnVocabItemViewModel) -> Bool {
+  public static func == (lhs: LearnVocabItemViewModel, rhs: LearnVocabItemViewModel) -> Bool {
     if lhs.index == rhs.index && lhs.proficiency == rhs.proficiency && lhs.vocabs.count == rhs.vocabs.count {
       return true
     }

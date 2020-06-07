@@ -8,9 +8,12 @@
 
 import Foundation
 
-public protocol QuizEngine {
-  func start()
+public protocol QuizEngine: class {
+  var delegate: QuizEngineDelegate? { get set }
+  
+  func start() throws
   func handleAnswer(for question: Question, answer: String?)
   func markAsMastered(for question: Question)
+  func refillHeart()
 }
 
