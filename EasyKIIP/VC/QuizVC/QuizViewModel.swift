@@ -11,10 +11,16 @@ import EasyKIIPKit
 import RxSwift
 import RxCocoa
 
-struct ErrorWithCompletion {
+struct ErrorAction {
+  let title: String
+  let style: UIAlertAction.Style
+  let handler: () -> ()
+}
+
+struct AlertWithAction {
   let title: String
   let message: String
-  var completion: (()->())?
+  var actions: [ErrorAction] = []
 }
 
 extension QuizEngineError {
@@ -56,7 +62,7 @@ class QuizViewModel {
       Observable.just(true),
       rHeart.map({ _ in return false })
     )
-    .asDriver(onErrorJustReturn: true)
+      .asDriver(onErrorJustReturn: true)
   }
   
   // Child VC
@@ -66,10 +72,10 @@ class QuizViewModel {
   private var rDisplayingChildVC = BehaviorRelay<QuizItemViewModel?>(value: nil)
   
   // To show error
-  var oErrors: Observable<ErrorWithCompletion> {
-    return rErrors.compactMap { $0 }.asObservable()
+  var oAlerts: Observable<AlertWithAction> {
+    return rAlerts.compactMap { $0 }.asObservable()
   }
-  private var rErrors = BehaviorRelay<ErrorWithCompletion?>(value: nil)
+  private var rAlerts = BehaviorRelay<AlertWithAction?>(value: nil)
   
   // To navigate
   var oNavigationEvent: Observable<NavigationEvent<QuizNavigator.Destination>> {
@@ -93,10 +99,17 @@ class QuizViewModel {
       // Inform user that no question => navigate back to previous page
       guard let error = error as? QuizEngineError else { return }
       let (title, message) = error.toString()
-      let e = ErrorWithCompletion(title: title, message: message, completion: { [weak self] in
+      let actionHandler: ()->() = { [weak self] in
         self?.rNavigationEvent.accept(.dismiss)
-      })
-      rErrors.accept(e)
+      }
+      let action = ErrorAction(title: Strings.ok,
+                               style: .default,
+                               handler: actionHandler)
+      
+      let e = AlertWithAction(title: title,
+                              message: message,
+                              actions: [action])
+      rAlerts.accept(e)
     }
   }
   
@@ -116,10 +129,19 @@ class QuizViewModel {
   }
   
   func handleClose() {
-    let error = ErrorWithCompletion(title: Strings.quit, message: Strings.areYouSureYouWantToQuit) { [weak self] in
+    let cancelHandler: ()->() = { }
+    let cancelAction = ErrorAction(title: Strings.cancel,
+                                   style: .cancel,
+                                   handler: cancelHandler)
+    let quitHandler: ()->() = { [weak self] in
       self?.rNavigationEvent.accept(.dismiss)
     }
-    rErrors.accept(error)
+    let quitAction = ErrorAction(title: Strings.quit,
+                                 style: .destructive,
+                                 handler: quitHandler)
+    
+    let error = AlertWithAction(title: Strings.quit, message: Strings.areYouSureYouWantToQuit, actions: [cancelAction, quitAction])
+    rAlerts.accept(error)
   }
   
   func handleVideoAdsWatchingFinished() {
@@ -176,9 +198,15 @@ extension QuizViewModel: QuizEngineDelegate {
   }
   
   private func showMessageToWatchVideoToRefillHeart() {
-    let error = ErrorWithCompletion(title: Strings.outOfHeart, message: Strings.youRanOutOfTheHeart) { [weak self] in
+    let watchAction = ErrorAction(title: Strings.watch, style: .default) { [weak self] in
       self?.rNavigationEvent.accept(.present(destination: .showVideoAds))
     }
-    rErrors.accept(error)
+    
+    let quitAction = ErrorAction(title: Strings.quit, style: .destructive) { [weak self] in
+      self?.rNavigationEvent.accept(.dismiss)
+    }
+    
+    let error = AlertWithAction(title: Strings.outOfHeart, message: Strings.youRanOutOfTheHeart, actions: [quitAction, watchAction])
+    rAlerts.accept(error)
   }
 }

@@ -71,8 +71,41 @@ class QuizVC: NiblessViewController {
       .disposed(by: disposeBag)
     
     // TODO: More to come
+    viewModel.oAlerts
+      .subscribe(onNext: { [weak self] alert in
+        self?.showAlertMessage(alert: alert)
+      })
+    .disposed(by: disposeBag)
+    
+    viewModel.oNavigationEvent
+      .subscribe(onNext: { [weak self] event in
+        guard let strongSelf = self else { return }
+        switch event {
+        case .dismiss:
+          self?.dismiss(animated: true, completion: nil)
+        case .pop:
+          self?.navigationController?.popViewController(animated: true)
+        case .present(let destination):
+          self?.navigator.navigate(from: strongSelf, to: destination, type: .present)
+        case .push(let destination):
+          self?.navigator.navigate(from: strongSelf, to: destination, type: .push)
+        }
+      })
+    .disposed(by: disposeBag)
   }
   
+  private func showAlertMessage(alert: AlertWithAction) {
+    let alertMessage = UIAlertController(title: alert.title, message: alert.message, preferredStyle: .alert)
+    
+    for action in alert.actions {
+      let alertAction = UIAlertAction(title: action.title, style: action.style) { (_) in
+        action.handler()
+      }
+      alertMessage.addAction(alertAction)
+    }
+    
+    present(alertMessage, animated: true, completion: nil)
+  }
 }
 
 extension QuizVC {

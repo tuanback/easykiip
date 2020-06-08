@@ -29,7 +29,7 @@ class QuizViewModelTests: XCTestCase {
  
   func test_int_noQuestion_error_clickButton_Dismiss() {
     let (sut, _) = makeSut(questions: [])
-    let errorSpy = ErrorSpy(observable: sut.oErrors)
+    let errorSpy = ErrorSpy(observable: sut.oAlerts)
     let navigationSpy = NavigationSpy(observable: sut.oNavigationEvent)
     
     XCTAssertEqual(errorSpy.errors.count, 1)
@@ -133,7 +133,7 @@ class QuizViewModelTests: XCTestCase {
     let newWordQuestion = NewWordQuestion(vocabID: 1, word: "Q1", meaning: "A1")
     let question = Question.newWord(newWordQuestion)
     let (sut, _) = makeSut(questions: [question])
-    let errorSpy = ErrorSpy(observable: sut.oErrors)
+    let errorSpy = ErrorSpy(observable: sut.oAlerts)
     let navigationSpy = NavigationSpy(observable: sut.oNavigationEvent)
     
     sut.handleClose()
@@ -149,7 +149,7 @@ class QuizViewModelTests: XCTestCase {
     let newWordQuestion = NewWordQuestion(vocabID: 1, word: "Q1", meaning: "A1")
     let question = Question.newWord(newWordQuestion)
     let (sut, quizEngine) = makeSut(questions: [question])
-    let errorSpy = ErrorSpy(observable: sut.oErrors)
+    let errorSpy = ErrorSpy(observable: sut.oAlerts)
     let navigationSpy = NavigationSpy(observable: sut.oNavigationEvent)
     
     quizEngine.outputNumberOfHeart(heart: 0, totalHeart: 3)
@@ -314,15 +314,20 @@ class QuizViewModelTests: XCTestCase {
   
   class ErrorSpy {
     
-    private(set) var errors: [ErrorWithCompletion] = []
+    private(set) var errors: [AlertWithAction] = []
     private let disposeBag = DisposeBag()
     
-    init(observable: Observable<ErrorWithCompletion>) {
+    init(observable: Observable<AlertWithAction>) {
       
       observable
         .subscribe(onNext: { [weak self] error in
           self?.errors.append(error)
-          error.completion?()
+          if let action = error.action.first(where: { $0.style == .default }) {
+            action.handler()
+          }
+          else if let action = error.action.first(where: { $0.style == .destructive }) {
+            action.handler()
+          }
         })
         .disposed(by: disposeBag)
     }

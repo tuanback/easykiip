@@ -55,13 +55,20 @@ public struct Strings {
   
 }
 
+// Common
+extension Strings {
+  static let ok = NSLocalizedString("Okay", bundle: Strings.languageBundle, comment: "")
+  static let quit = NSLocalizedString("Quit", bundle: Strings.languageBundle, comment: "")
+  static let cancel = NSLocalizedString("Cancel", bundle: Strings.languageBundle, comment: "")
+  static let watch = NSLocalizedString("Watch", bundle: Strings.languageBundle, comment: "")
+}
+
 // Errors
 extension Strings {
   
   static let nothingNeedMorePractice = NSLocalizedString("Nothing needs more practice", bundle: Strings.languageBundle, comment: "")
   static let youAreMasteredAllVocabularies = NSLocalizedString("You are master all vocabularies. Great!", bundle: Strings.languageBundle, comment: "")
   
-  static let quit = NSLocalizedString("Quit", bundle: Strings.languageBundle, comment: "")
   static let areYouSureYouWantToQuit = NSLocalizedString("Are you sure you want to quit?", bundle: Strings.languageBundle, comment: "")
   
   static let outOfHeart = NSLocalizedString("Out of heart", bundle: Strings.languageBundle, comment: "")
