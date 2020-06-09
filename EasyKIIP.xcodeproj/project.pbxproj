@@ -137,6 +137,12 @@
 		17F57FA02478B0CB00F26EF4 /* OnboardingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F57F9F2478B0CB00F26EF4 /* OnboardingNavigator.swift */; };
 		17F57FA32478B40800F26EF4 /* MainNavConNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F57FA22478B40800F26EF4 /* MainNavConNavigator.swift */; };
 		17F57FA62478B62500F26EF4 /* MainNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F57FA52478B62500F26EF4 /* MainNavigator.swift */; };
+		17F5C08C248FA806001ABA43 /* QuizNewWordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5C08B248FA806001ABA43 /* QuizNewWordVC.swift */; };
+		17F5C08E248FA842001ABA43 /* QuizNewWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5C08D248FA842001ABA43 /* QuizNewWordViewModel.swift */; };
+		17F5C090248FAD31001ABA43 /* QuizPracticeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5C08F248FAD31001ABA43 /* QuizPracticeViewModelTests.swift */; };
+		17F5C092248FAEED001ABA43 /* QuizPracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5C091248FAEED001ABA43 /* QuizPracticeViewModel.swift */; };
+		17F5C095248FB8CB001ABA43 /* QuizNewWordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5C094248FB8CB001ABA43 /* QuizNewWordVC.swift */; };
+		17F5C097248FB925001ABA43 /* QuizNewWordRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5C096248FB925001ABA43 /* QuizNewWordRootView.swift */; };
 		17FBF6D8245BEB9C00A65233 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFCA245AA51C008B263D /* Strings.swift */; };
 		17FBF6DA245BEBA200A65233 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD2245AB466008B263D /* AppSetting.swift */; };
 		17FBF6DE245BEBB000A65233 /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFC7245A72CC008B263D /* UIColor_Extension.swift */; };
@@ -390,6 +396,12 @@
 		17F57F9F2478B0CB00F26EF4 /* OnboardingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNavigator.swift; sourceTree = "<group>"; };
 		17F57FA22478B40800F26EF4 /* MainNavConNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavConNavigator.swift; sourceTree = "<group>"; };
 		17F57FA52478B62500F26EF4 /* MainNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigator.swift; sourceTree = "<group>"; };
+		17F5C08B248FA806001ABA43 /* QuizNewWordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizNewWordVC.swift; sourceTree = "<group>"; };
+		17F5C08D248FA842001ABA43 /* QuizNewWordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizNewWordViewModel.swift; sourceTree = "<group>"; };
+		17F5C08F248FAD31001ABA43 /* QuizPracticeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPracticeViewModelTests.swift; sourceTree = "<group>"; };
+		17F5C091248FAEED001ABA43 /* QuizPracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPracticeViewModel.swift; sourceTree = "<group>"; };
+		17F5C094248FB8CB001ABA43 /* QuizNewWordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizNewWordVC.swift; sourceTree = "<group>"; };
+		17F5C096248FB925001ABA43 /* QuizNewWordRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizNewWordRootView.swift; sourceTree = "<group>"; };
 		17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionRepository.swift; sourceTree = "<group>"; };
 		17FBF72D245C392E00A65233 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionDataStore.swift; sourceTree = "<group>"; };
@@ -486,6 +498,8 @@
 				17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */,
 				1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */,
 				17D98F88248CB3F90049F5BB /* QuizViewModelTests.swift */,
+				17F5C08B248FA806001ABA43 /* QuizNewWordVC.swift */,
+				17F5C08F248FAD31001ABA43 /* QuizPracticeViewModelTests.swift */,
 			);
 			path = ViewModelTests;
 			sourceTree = "<group>";
@@ -1170,8 +1184,9 @@
 		17D98F8A248CB4260049F5BB /* QuizVC */ = {
 			isa = PBXGroup;
 			children = (
-				17D98F8B248CB4390049F5BB /* QuizViewModel.swift */,
-				1732847B248D124900103B5A /* QuizVC.swift */,
+				17F5C093248FB888001ABA43 /* QuizPracticeVC */,
+				17F5C08A248FA7D6001ABA43 /* QuizNewWordVC */,
+				17F5C089248FA7C5001ABA43 /* QuizVC */,
 			);
 			path = QuizVC;
 			sourceTree = "<group>";
@@ -1266,6 +1281,33 @@
 				17328479248CD96800103B5A /* QuizNavigator.swift */,
 			);
 			path = Navigator;
+			sourceTree = "<group>";
+		};
+		17F5C089248FA7C5001ABA43 /* QuizVC */ = {
+			isa = PBXGroup;
+			children = (
+				17D98F8B248CB4390049F5BB /* QuizViewModel.swift */,
+				1732847B248D124900103B5A /* QuizVC.swift */,
+			);
+			path = QuizVC;
+			sourceTree = "<group>";
+		};
+		17F5C08A248FA7D6001ABA43 /* QuizNewWordVC */ = {
+			isa = PBXGroup;
+			children = (
+				17F5C08D248FA842001ABA43 /* QuizNewWordViewModel.swift */,
+				17F5C094248FB8CB001ABA43 /* QuizNewWordVC.swift */,
+				17F5C096248FB925001ABA43 /* QuizNewWordRootView.swift */,
+			);
+			path = QuizNewWordVC;
+			sourceTree = "<group>";
+		};
+		17F5C093248FB888001ABA43 /* QuizPracticeVC */ = {
+			isa = PBXGroup;
+			children = (
+				17F5C091248FAEED001ABA43 /* QuizPracticeViewModel.swift */,
+			);
+			path = QuizPracticeVC;
 			sourceTree = "<group>";
 		};
 		17FBF72C245C391800A65233 /* Error */ = {
@@ -1844,10 +1886,13 @@
 				17F57FA62478B62500F26EF4 /* MainNavigator.swift in Sources */,
 				17FBF714245BEC1300A65233 /* LaunchViewModel.swift in Sources */,
 				17FBF709245BEBFF00A65233 /* LoginRootView.swift in Sources */,
+				17F5C095248FB8CB001ABA43 /* QuizNewWordVC.swift in Sources */,
 				17CBE684247AB133005D4CFD /* SelectLanguageRootView.swift in Sources */,
 				17CBE677247A1A47005D4CFD /* ReadingListRootView.swift in Sources */,
 				17954AB2245D3F6000C8CC95 /* MainBookItemCVC.swift in Sources */,
+				17F5C092248FAEED001ABA43 /* QuizPracticeViewModel.swift in Sources */,
 				17FBF6E3245BEBBB00A65233 /* AppView.swift in Sources */,
+				17F5C08E248FA842001ABA43 /* QuizNewWordViewModel.swift in Sources */,
 				17FBF735245CE6D900A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
 				17CBE671247A078E005D4CFD /* VocabListVC.swift in Sources */,
 				1732847C248D124900103B5A /* QuizVC.swift in Sources */,
@@ -1876,6 +1921,7 @@
 				17FBF6E9245BEBC500A65233 /* NiblessView.swift in Sources */,
 				17FBF6F2245BEBD700A65233 /* MainViewModel.swift in Sources */,
 				17D98F87248CB34B0049F5BB /* IconName.swift in Sources */,
+				17F5C097248FB925001ABA43 /* QuizNewWordRootView.swift in Sources */,
 				176ADE072460E958006C5D3C /* BookDetailViewModel.swift in Sources */,
 				17CBE669247A06CC005D4CFD /* LearnVocabListVC.swift in Sources */,
 				17CBE67A247A1A5C005D4CFD /* VocabListRootView.swift in Sources */,
@@ -1898,6 +1944,8 @@
 				17328475248CC26F00103B5A /* MainViewModelTests.swift in Sources */,
 				17328477248CC27400103B5A /* LessonDetailViewModelTests.swift in Sources */,
 				17328478248CC27600103B5A /* QuizViewModelTests.swift in Sources */,
+				17F5C090248FAD31001ABA43 /* QuizPracticeViewModelTests.swift in Sources */,
+				17F5C08C248FA806001ABA43 /* QuizNewWordVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

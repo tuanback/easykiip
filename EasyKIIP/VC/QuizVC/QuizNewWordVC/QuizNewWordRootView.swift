@@ -1,0 +1,97 @@
+//
+//  QuizNewWordRootView.swift
+//  EasyKIIP
+//
+//  Created by Real Life Swift on 2020/06/09.
+//  Copyright © 2020 Real Life Swift. All rights reserved.
+//
+
+import Foundation
+import UIKit
+import RxSwift
+import RxCocoa
+
+class QuizNewWordRootView: NiblessView {
+  
+  private let stackViewLabelContainer = UIStackView()
+  private let labelWord = UILabel()
+  private let labelMeaning = UILabel()
+  private let stackViewButtonContainer = UIStackView()
+  private let buttonLearn = UIButton()
+  private let buttonMaster = UIButton()
+  
+  private let viewModel: QuizNewWordViewModel
+  
+  init(viewModel: QuizNewWordViewModel,
+       frame: CGRect = .zero) {
+    self.viewModel = viewModel
+    super.init(frame: frame)
+    setupViews()
+  }
+  
+  private func setupViews() {
+    
+    addSubview(stackViewLabelContainer)
+    addSubview(stackViewButtonContainer)
+  
+    stackViewLabelContainer.axis = .vertical
+    stackViewLabelContainer.alignment = .fill
+    stackViewLabelContainer.distribution = .fillEqually
+    stackViewLabelContainer.spacing = 8
+    
+    labelWord.font = UIFont.appFontDemiBold(ofSize: 30)
+    labelWord.numberOfLines = 0
+    labelWord.textColor = UIColor.appLabelBlack
+    labelWord.textAlignment = .center
+    
+    labelMeaning.font = UIFont.appFontDemiBold(ofSize: 30)
+    labelMeaning.numberOfLines = 0
+    labelMeaning.textColor = UIColor.appLabelBlack
+    labelMeaning.textAlignment = .center
+    
+    stackViewLabelContainer.addArrangedSubview(labelWord)
+    stackViewLabelContainer.addArrangedSubview(labelMeaning)
+    
+    stackViewButtonContainer.axis = .horizontal
+    stackViewButtonContainer.alignment = .fill
+    stackViewButtonContainer.distribution = .fillEqually
+    stackViewButtonContainer.spacing = 8
+    
+    buttonLearn.backgroundColor = UIColor.appRed
+    buttonLearn.setTitleColor(UIColor.white, for: .normal)
+    buttonLearn.titleLabel?.font = UIFont.appFontMedium(ofSize: 18)
+    buttonLearn.setTitle(Strings.learn, for: .normal)
+    buttonLearn.addTarget(self, action: #selector(didLearnButtonClicked(sender:)), for: .touchUpInside)
+    
+    buttonMaster.backgroundColor = UIColor.appSecondaryBackground
+    buttonMaster.setTitleColor(UIColor.appRed, for: .normal)
+    buttonMaster.titleLabel?.font = UIFont.appFontMedium(ofSize: 18)
+    buttonMaster.setTitle(Strings.knew, for: .normal)
+    buttonMaster.addTarget(self, action: #selector(didMasterButtonClicked(sender:)), for: .touchUpInside)
+    
+    stackViewButtonContainer.addArrangedSubview(buttonMaster)
+    stackViewButtonContainer.addArrangedSubview(buttonLearn)
+    
+    stackViewButtonContainer.snp.makeConstraints { (make) in
+      make.width.equalToSuperview().multipliedBy(0.8)
+      make.centerX.equalToSuperview()
+      make.height.equalTo(44)
+    }
+    
+    stackViewLabelContainer.snp.makeConstraints { (make) in
+      make.width.equalToSuperview().multipliedBy(0.8)
+      make.centerX.equalToSuperview()
+      make.top.equalToSuperview()
+      make.bottom.equalTo(stackViewButtonContainer.snp.top).offset(-16)
+    }
+  }
+  
+  @objc private func didLearnButtonClicked(sender: UIButton) {
+    viewModel.handleAnswer()
+  }
+  
+  @objc private func didMasterButtonClicked(sender: UIButton) {
+    viewModel.markAsMastered()
+  }
+  
+}

@@ -27,6 +27,8 @@ class QuizVC: NiblessViewController {
   private let viewModel: QuizViewModel
   private let navigator: QuizNavigator
   
+  private var newWordVC: QuizNewWordVC?
+  
   init(viewModel: QuizViewModel,
        navigator: QuizNavigator) {
     self.viewModel = viewModel
@@ -54,8 +56,18 @@ class QuizVC: NiblessViewController {
     
     viewModel.oDisplayingChildVC
       .subscribe(onNext: { [weak self] viewModel in
+        guard let strongSelf = self else { return }
         // TODO: To make child view controller then display
-        
+        switch viewModel {
+        case .newWord(let question):
+          let vm = QuizNewWordViewModel(question: question, answerHandler: strongSelf.viewModel)
+          strongSelf.newWordVC = QuizNewWordVC(viewModel: vm)
+          strongSelf.pageViewController
+            .setViewControllers([strongSelf.newWordVC!], direction: .forward,
+                                animated: true, completion: nil)
+        case .practice(let viewModel):
+          break
+        }
       })
       .disposed(by: disposeBag)
     

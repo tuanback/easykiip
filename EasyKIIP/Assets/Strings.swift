@@ -52,7 +52,7 @@ public struct Strings {
   static let learn = NSLocalizedString("Learn", bundle: Strings.languageBundle, comment: "")
   static let paragraph = NSLocalizedString("Paragraph", bundle: Strings.languageBundle, comment: "")
   static let vocabulary = NSLocalizedString("Vocabulary", bundle: Strings.languageBundle, comment: "")
-  
+  static let knew = NSLocalizedString("Knew", bundle: Strings.languageBundle, comment: "practice screen")
 }
 
 // Common

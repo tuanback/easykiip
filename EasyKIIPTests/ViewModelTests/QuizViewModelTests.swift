@@ -322,10 +322,10 @@ class QuizViewModelTests: XCTestCase {
       observable
         .subscribe(onNext: { [weak self] error in
           self?.errors.append(error)
-          if let action = error.action.first(where: { $0.style == .default }) {
+          if let action = error.actions.first(where: { $0.style == .default }) {
             action.handler()
           }
-          else if let action = error.action.first(where: { $0.style == .destructive }) {
+          else if let action = error.actions.first(where: { $0.style == .destructive }) {
             action.handler()
           }
         })

@@ -147,7 +147,18 @@ class QuizViewModel {
   func handleVideoAdsWatchingFinished() {
     quizEngine.refillHeart()
   }
-  
+}
+
+extension QuizViewModel: NewWordQuestionAnswerHandler {}
+extension QuizViewModel: PracticeQuestionAnswerHandler {}
+
+protocol NewWordQuestionAnswerHandler {
+  func handleAnswer(for question: NewWordQuestion)
+  func markAsMastered(for question: NewWordQuestion)
+}
+
+protocol PracticeQuestionAnswerHandler {
+  func handleAnswer(for question: PracticeQuestion, answer: String)
 }
 
 extension QuizViewModel: QuizEngineDelegate {
