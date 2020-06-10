@@ -83,15 +83,7 @@ public class KIIPQuizEngine: QuizEngine {
       vocabRepository.recordVocabPracticed(vocabID: q.vocabID, isCorrectAnswer: true)
     }
     
-    guard mCurrentQuestion < questions.count - 1 else {
-      delegate?.quizEngineDidCompleted()
-      vocabRepository.saveLessonPracticeHistory(inBook: bookID, lessonID: lessonID)
-      return
-    }
-    
-    mCurrentQuestion += 1
-    let question = questions[mCurrentQuestion]
-    delegate?.quizEngine(routeTo: question)
+    routeToNextQuestion()
   }
   
   public func markAsMastered(for question: Question) {
@@ -103,6 +95,20 @@ public class KIIPQuizEngine: QuizEngine {
       vocabID = q.vocabID
     }
     vocabRepository.markVocabAsMastered(vocabID: vocabID)
+    
+    routeToNextQuestion()
+  }
+  
+  private func routeToNextQuestion() {
+    guard mCurrentQuestion < questions.count - 1 else {
+      delegate?.quizEngineDidCompleted()
+      vocabRepository.saveLessonPracticeHistory(inBook: bookID, lessonID: lessonID)
+      return
+    }
+    
+    mCurrentQuestion += 1
+    let question = questions[mCurrentQuestion]
+    delegate?.quizEngine(routeTo: question)
   }
   
   public func refillHeart() {

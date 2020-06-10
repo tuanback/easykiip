@@ -111,6 +111,11 @@ class LearnVocabListRootView: NiblessView {
     }
     .disposed(by: disposeBag)
     
+    collectionView.rx.modelSelected(LearnVocabItemViewModel.self)
+      .subscribe(onNext: { [weak self] itemViewModel in
+        self?.viewModel.handleItemViewModelClicked(viewModel: itemViewModel)
+      })
+      .disposed(by: disposeBag)
   }
   
 }

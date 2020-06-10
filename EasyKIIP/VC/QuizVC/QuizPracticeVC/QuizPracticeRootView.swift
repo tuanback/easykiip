@@ -47,6 +47,7 @@ class QuizPracticeRootView: NiblessView {
     labelQuestion.font = UIFont.appFontDemiBold(ofSize: 25)
     labelQuestion.numberOfLines = 0
     labelQuestion.minimumScaleFactor = 0.3
+    labelQuestion.textAlignment = .center
     
     labelQuestion.layer.cornerRadius = 10
     labelQuestion.layer.borderWidth = 2
@@ -162,14 +163,19 @@ class QuizPracticeRootView: NiblessView {
       button.layer.borderColor = UIColor.appRed.cgColor
     case .wrong:
       button.isEnabled = false
-      button.backgroundColor = UIColor.appSecondaryBackground
       button.layer.borderColor = UIColor.appSecondaryBackground.cgColor
     case .notSelected:
       button.backgroundColor = UIColor.clear
       button.layer.borderColor = UIColor.appRed.cgColor
     }
+  
+    button.addTarget(self, action: #selector(handleOptionButtonClicked(sender:)), for: .touchUpInside)
     
     return button
   }
   
+  @objc private func handleOptionButtonClicked(sender: UIButton) {
+    guard let answer = sender.titleLabel?.text else { return }
+    viewModel.handleAnswer(answer:  answer)
+  }
 }

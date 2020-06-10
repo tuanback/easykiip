@@ -147,6 +147,7 @@
 		17F5C09B2490330A001ABA43 /* QuizPracticeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5C09A2490330A001ABA43 /* QuizPracticeRootView.swift */; };
 		17F5C09E249112B8001ABA43 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17F5C09D249112B8001ABA43 /* correct.wav */; };
 		17F5C0A0249112BE001ABA43 /* incorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17F5C09F249112BE001ABA43 /* incorrect.wav */; };
+		17F5C0A2249114B2001ABA43 /* LessonDetailNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5C0A1249114B2001ABA43 /* LessonDetailNavigator.swift */; };
 		17FBF6D8245BEB9C00A65233 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFCA245AA51C008B263D /* Strings.swift */; };
 		17FBF6DA245BEBA200A65233 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD2245AB466008B263D /* AppSetting.swift */; };
 		17FBF6DE245BEBB000A65233 /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFC7245A72CC008B263D /* UIColor_Extension.swift */; };
@@ -410,6 +411,7 @@
 		17F5C09A2490330A001ABA43 /* QuizPracticeRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPracticeRootView.swift; sourceTree = "<group>"; };
 		17F5C09D249112B8001ABA43 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
 		17F5C09F249112BE001ABA43 /* incorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incorrect.wav; sourceTree = "<group>"; };
+		17F5C0A1249114B2001ABA43 /* LessonDetailNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailNavigator.swift; sourceTree = "<group>"; };
 		17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionRepository.swift; sourceTree = "<group>"; };
 		17FBF72D245C392E00A65233 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionDataStore.swift; sourceTree = "<group>"; };
@@ -1288,6 +1290,7 @@
 				17F57FA52478B62500F26EF4 /* MainNavigator.swift */,
 				17CBE6642479FE0F005D4CFD /* BookDetailNavigator.swift */,
 				17328479248CD96800103B5A /* QuizNavigator.swift */,
+				17F5C0A1249114B2001ABA43 /* LessonDetailNavigator.swift */,
 			);
 			path = Navigator;
 			sourceTree = "<group>";
@@ -1898,6 +1901,7 @@
 				17FBF70B245BEC0300A65233 /* LoginVC.swift in Sources */,
 				17E7F18224681B12008667FB /* FirestoreKey.swift in Sources */,
 				17FBF6FC245BEBEA00A65233 /* WelcomeViewModel.swift in Sources */,
+				17F5C0A2249114B2001ABA43 /* LessonDetailNavigator.swift in Sources */,
 				17FBF71A245BEC1C00A65233 /* LaunchVC.swift in Sources */,
 				17FBF724245BEC2D00A65233 /* SignedInDependencyContainer.swift in Sources */,
 				17FBF6FF245BEBEE00A65233 /* WelcomeRootView.swift in Sources */,

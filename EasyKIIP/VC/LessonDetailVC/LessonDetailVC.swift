@@ -33,10 +33,13 @@ class LessonDetailVC: NiblessViewController {
   
   private let disposeBag = DisposeBag()
   
+  let navigator: LessonDetailNavigator
   let viewModel: LessonDetailViewModel
   
-  init(viewModel: LessonDetailViewModel) {
+  init(viewModel: LessonDetailViewModel,
+       navigator: LessonDetailNavigator) {
     self.viewModel = viewModel
+    self.navigator = navigator
     super.init()
   }
   
@@ -140,6 +143,23 @@ class LessonDetailVC: NiblessViewController {
         strongSelf.updateIndicatorView(leading: 0, width: strongSelf.view.frame.width / 3)
       })
       .disposed(by: disposeBag)
+    
+    viewModel.oNavigationEvent
+      .observeOn(MainScheduler.asyncInstance)
+      .subscribe(onNext: { [weak self] event in
+        guard let strongSelf = self else { return }
+        switch event {
+        case .pop:
+          self?.navigationController?.popViewController(animated: true)
+        case .dismiss:
+          self?.dismiss(animated: true, completion: nil)
+        case .present(let destination):
+          self?.navigator.navigate(from: strongSelf, to: destination, type: .present)
+        case .push(let destination):
+          self?.navigator.navigate(from: strongSelf, to: destination, type: .push)
+        }
+      })
+    .disposed(by: disposeBag)
   }
   
   private func setupLearnVocabButton() -> UIButton {

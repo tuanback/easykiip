@@ -76,6 +76,7 @@ class QuizVC: NiblessViewController {
           }
           else {
             let vm = QuizPracticeViewModel(quizItemViewModel: viewModel, answerHandler: strongSelf.viewModel)
+            strongSelf.practiceVM = vm
             strongSelf.practiceVC = QuizPracticeVC(viewModel: vm)
             strongSelf.pageViewController
               .setViewControllers([strongSelf.practiceVC!], direction: .forward,

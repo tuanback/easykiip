@@ -66,12 +66,14 @@ class QuizNewWordRootView: NiblessView {
     buttonLearn.titleLabel?.font = UIFont.appFontMedium(ofSize: 18)
     buttonLearn.setTitle(Strings.learn, for: .normal)
     buttonLearn.addTarget(self, action: #selector(didLearnButtonClicked(sender:)), for: .touchUpInside)
+    buttonLearn.layer.cornerRadius = 8
     
     buttonMaster.backgroundColor = UIColor.appSecondaryBackground
     buttonMaster.setTitleColor(UIColor.appRed, for: .normal)
     buttonMaster.titleLabel?.font = UIFont.appFontMedium(ofSize: 18)
     buttonMaster.setTitle(Strings.knew, for: .normal)
     buttonMaster.addTarget(self, action: #selector(didMasterButtonClicked(sender:)), for: .touchUpInside)
+    buttonMaster.layer.cornerRadius = 8
     
     stackViewButtonContainer.addArrangedSubview(buttonMaster)
     stackViewButtonContainer.addArrangedSubview(buttonLearn)

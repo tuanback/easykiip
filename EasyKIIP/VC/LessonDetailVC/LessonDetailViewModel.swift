@@ -73,6 +73,11 @@ class LessonDetailViewModel {
     }
   }
   
+  var oNavigationEvent: Observable<NavigationEvent<LessonDetailNavigator.Destination>> {
+    return rNavigationEvent.asObservable()
+  }
+  
+  private let rNavigationEvent = PublishRelay<NavigationEvent<LessonDetailNavigator.Destination>>()
   private let rChildVC = BehaviorRelay<[LessonDetailChildVC]>(value: [])
   private let rVocabs = BehaviorRelay<[Vocab]>(value: [])
   private let rReadingParts = BehaviorRelay<[ReadingPart]>(value: [])
@@ -138,6 +143,10 @@ class LessonDetailViewModel {
     }
     .bind(to: rReadingParts)
     .disposed(by: disposeBag)
+  }
+  
+  func handleItemViewModelClicked(viewModel: LearnVocabItemViewModel) {
+    rNavigationEvent.accept(.present(destination: .quizNewWord(bookID: bookID, lessonID: lessonID, vocabs: viewModel.vocabs)))
   }
   
   private func createLearnVocabViewModels(from vocabs: [Vocab]) -> [LearnVocabItemViewModel] {

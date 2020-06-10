@@ -129,6 +129,25 @@ class LessonDetailViewModelTests: XCTestCase {
     XCTAssertEqual(vocabRepository.numberOfGetLessonCalled, 2)
   }
   
+  func test_selectVocabs_navigateToQuizVC() {
+    let lesson = lessons[0]
+    let sut = makeSut(book: book, lesson: lesson)
+    let viewModels = LessonDetailViewModel
+      .ToDetailViewModelConverter
+      .convertVocabsToLearnVocabItemVMs(vocabs: lesson.vocabs)
+    
+    let navigationEventSpy = Spy<NavigationEvent<LessonDetailNavigator.Destination>>(observable: sut.oNavigationEvent)
+    
+    sut.handleItemViewModelClicked(viewModel: viewModels[0])
+    
+    if case .present(.quizNewWord(_, _, _)) = navigationEventSpy.values.last! {
+      
+    }
+    else {
+      XCTFail()
+    }
+  }
+  
   // Classes
   private func makeSut(book: Book, lesson: Lesson) -> LessonDetailViewModel {
     let sut = LessonDetailViewModel(bookID: book.id, lessonID: lesson.id, vocabRepository: vocabRepository)
@@ -136,6 +155,21 @@ class LessonDetailViewModelTests: XCTestCase {
   }
   
   // Spy
+  class Spy<T> {
+    private(set) var values: [T] = []
+    
+    private let disposeBag = DisposeBag()
+    
+    init(observable: Observable<T>) {
+      
+      observable
+        .subscribe(onNext: { [weak self] value in
+          self?.values.append(value)
+        })
+        .disposed(by: disposeBag)
+    }
+  }
+  
   class ItemVMSpy {
     
     private let observable: Observable<[LessonDetailChildVC]>

@@ -9,6 +9,7 @@
 import Foundation
 import UserSession
 import EasyKIIPKit
+import UIKit
 
 public class SignedInDependencyContainer {
   
@@ -83,7 +84,30 @@ public class SignedInDependencyContainer {
     let viewModel = LessonDetailViewModel(bookID: bookID,
                                           lessonID: lessonID,
                                           vocabRepository: vocabRepository)
-    return LessonDetailVC(viewModel: viewModel)
+    let navigator = LessonDetailNavigator(factory: self)
+    return LessonDetailVC(viewModel: viewModel, navigator: navigator)
+  }
+  
+  func makeQuizNewWordVC(bookID: Int, lessonID: Int, vocabs: [Vocab]) -> QuizVC {
+   
+    // TODO: Need to change this code
+    let randomVocabs: [Vocab] = []
+    
+    let questionMaker = NewWordQuestionMaker(createQuestionVocabs: vocabs, randomVocabs: randomVocabs, languageCode: AppSetting.languageCode)
+    
+    let quizEngine = KIIPQuizEngine(bookID: bookID, lessonID: lessonID, vocabs: vocabs, numberOfHeart: nil, questionMaker: questionMaker, vocabRepository: vocabRepository)
+    let viewModel = QuizViewModel(quizEngine: quizEngine)
+    
+    let navigator = QuizNavigator(factory: self)
+    return QuizVC(viewModel: viewModel, navigator: navigator)
+  }
+  
+  func makeEndQuizVC() -> UIViewController {
+    return UIViewController()
+  }
+  
+  func makeVideoAdsVC() -> UIViewController {
+    return UIViewController()
   }
   
 }
@@ -91,3 +115,7 @@ public class SignedInDependencyContainer {
 extension SignedInDependencyContainer: MainVCFactory { }
 extension SignedInDependencyContainer: BookDetailFactory { }
 extension SignedInDependencyContainer: LessonDetailVCFactory { }
+extension SignedInDependencyContainer: QuizNewWordVCFactory { }
+
+extension SignedInDependencyContainer: EndQuizAdVCFactory { }
+extension SignedInDependencyContainer: VideoAdsVCFactory { }
