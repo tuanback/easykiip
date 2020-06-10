@@ -20,6 +20,8 @@ class QuizNewWordRootView: NiblessView {
   private let buttonLearn = UIButton()
   private let buttonMaster = UIButton()
   
+  private let disposeBag = DisposeBag()
+  
   private let viewModel: QuizNewWordViewModel
   
   init(viewModel: QuizNewWordViewModel,
@@ -43,11 +45,13 @@ class QuizNewWordRootView: NiblessView {
     labelWord.numberOfLines = 0
     labelWord.textColor = UIColor.appLabelBlack
     labelWord.textAlignment = .center
+    labelWord.minimumScaleFactor = 0.3
     
     labelMeaning.font = UIFont.appFontDemiBold(ofSize: 30)
     labelMeaning.numberOfLines = 0
     labelMeaning.textColor = UIColor.appLabelBlack
     labelMeaning.textAlignment = .center
+    labelMeaning.minimumScaleFactor = 0.3
     
     stackViewLabelContainer.addArrangedSubview(labelWord)
     stackViewLabelContainer.addArrangedSubview(labelMeaning)
@@ -76,6 +80,7 @@ class QuizNewWordRootView: NiblessView {
       make.width.equalToSuperview().multipliedBy(0.8)
       make.centerX.equalToSuperview()
       make.height.equalTo(44)
+      make.bottom.equalToSuperview().inset(80)
     }
     
     stackViewLabelContainer.snp.makeConstraints { (make) in
@@ -84,6 +89,18 @@ class QuizNewWordRootView: NiblessView {
       make.top.equalToSuperview()
       make.bottom.equalTo(stackViewButtonContainer.snp.top).offset(-16)
     }
+    
+    bindViewModel()
+  }
+  
+  private func bindViewModel() {
+    viewModel.oWord
+      .drive(labelWord.rx.text)
+      .disposed(by: disposeBag)
+    
+    viewModel.oMeaning
+      .drive(labelMeaning.rx.text)
+      .disposed(by: disposeBag)
   }
   
   @objc private func didLearnButtonClicked(sender: UIButton) {

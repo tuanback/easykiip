@@ -143,6 +143,10 @@
 		17F5C092248FAEED001ABA43 /* QuizPracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5C091248FAEED001ABA43 /* QuizPracticeViewModel.swift */; };
 		17F5C095248FB8CB001ABA43 /* QuizNewWordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5C094248FB8CB001ABA43 /* QuizNewWordVC.swift */; };
 		17F5C097248FB925001ABA43 /* QuizNewWordRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5C096248FB925001ABA43 /* QuizNewWordRootView.swift */; };
+		17F5C099249032BB001ABA43 /* QuizPracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5C098249032BB001ABA43 /* QuizPracticeVC.swift */; };
+		17F5C09B2490330A001ABA43 /* QuizPracticeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F5C09A2490330A001ABA43 /* QuizPracticeRootView.swift */; };
+		17F5C09E249112B8001ABA43 /* correct.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17F5C09D249112B8001ABA43 /* correct.wav */; };
+		17F5C0A0249112BE001ABA43 /* incorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17F5C09F249112BE001ABA43 /* incorrect.wav */; };
 		17FBF6D8245BEB9C00A65233 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFCA245AA51C008B263D /* Strings.swift */; };
 		17FBF6DA245BEBA200A65233 /* AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFD2245AB466008B263D /* AppSetting.swift */; };
 		17FBF6DE245BEBB000A65233 /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1766FFC7245A72CC008B263D /* UIColor_Extension.swift */; };
@@ -402,6 +406,10 @@
 		17F5C091248FAEED001ABA43 /* QuizPracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPracticeViewModel.swift; sourceTree = "<group>"; };
 		17F5C094248FB8CB001ABA43 /* QuizNewWordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizNewWordVC.swift; sourceTree = "<group>"; };
 		17F5C096248FB925001ABA43 /* QuizNewWordRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizNewWordRootView.swift; sourceTree = "<group>"; };
+		17F5C098249032BB001ABA43 /* QuizPracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPracticeVC.swift; sourceTree = "<group>"; };
+		17F5C09A2490330A001ABA43 /* QuizPracticeRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPracticeRootView.swift; sourceTree = "<group>"; };
+		17F5C09D249112B8001ABA43 /* correct.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correct.wav; sourceTree = "<group>"; };
+		17F5C09F249112BE001ABA43 /* incorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incorrect.wav; sourceTree = "<group>"; };
 		17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionRepository.swift; sourceTree = "<group>"; };
 		17FBF72D245C392E00A65233 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionDataStore.swift; sourceTree = "<group>"; };
@@ -621,6 +629,7 @@
 		1766FFC9245A9FF6008B263D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				17F5C09C249112AB001ABA43 /* Music */,
 				17F30EE5246AD1A9008040BE /* GoogleAds */,
 				1766FFCA245AA51C008B263D /* Strings.swift */,
 				1766FFD2245AB466008B263D /* AppSetting.swift */,
@@ -1306,8 +1315,19 @@
 			isa = PBXGroup;
 			children = (
 				17F5C091248FAEED001ABA43 /* QuizPracticeViewModel.swift */,
+				17F5C098249032BB001ABA43 /* QuizPracticeVC.swift */,
+				17F5C09A2490330A001ABA43 /* QuizPracticeRootView.swift */,
 			);
 			path = QuizPracticeVC;
+			sourceTree = "<group>";
+		};
+		17F5C09C249112AB001ABA43 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				17F5C09D249112B8001ABA43 /* correct.wav */,
+				17F5C09F249112BE001ABA43 /* incorrect.wav */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 		17FBF72C245C391800A65233 /* Error */ = {
@@ -1574,6 +1594,8 @@
 				17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */,
 				17FBF726245BEC3400A65233 /* Localizable.strings in Resources */,
 				17B70A8F244C180500C67334 /* Assets.xcassets in Resources */,
+				17F5C09E249112B8001ABA43 /* correct.wav in Resources */,
+				17F5C0A0249112BE001ABA43 /* incorrect.wav in Resources */,
 				1766FFF2245BD993008B263D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1879,6 +1901,7 @@
 				17FBF71A245BEC1C00A65233 /* LaunchVC.swift in Sources */,
 				17FBF724245BEC2D00A65233 /* SignedInDependencyContainer.swift in Sources */,
 				17FBF6FF245BEBEE00A65233 /* WelcomeRootView.swift in Sources */,
+				17F5C099249032BB001ABA43 /* QuizPracticeVC.swift in Sources */,
 				17FBF6EC245BEBCA00A65233 /* NiblessNavigationController.swift in Sources */,
 				17F57F992478A9FE00F26EF4 /* Navigator.swift in Sources */,
 				17F30EE7246AD1C6008040BE /* AdsIdentifier.swift in Sources */,
@@ -1922,6 +1945,7 @@
 				17FBF6F2245BEBD700A65233 /* MainViewModel.swift in Sources */,
 				17D98F87248CB34B0049F5BB /* IconName.swift in Sources */,
 				17F5C097248FB925001ABA43 /* QuizNewWordRootView.swift in Sources */,
+				17F5C09B2490330A001ABA43 /* QuizPracticeRootView.swift in Sources */,
 				176ADE072460E958006C5D3C /* BookDetailViewModel.swift in Sources */,
 				17CBE669247A06CC005D4CFD /* LearnVocabListVC.swift in Sources */,
 				17CBE67A247A1A5C005D4CFD /* VocabListRootView.swift in Sources */,

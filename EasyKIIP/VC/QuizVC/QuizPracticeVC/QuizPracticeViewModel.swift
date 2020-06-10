@@ -14,6 +14,15 @@ import EasyKIIPKit
 enum Sound {
   case correct
   case wrong
+  
+  var url: URL {
+    switch self {
+    case .correct:
+      return Bundle.main.url(forResource: "correct", withExtension: "wav")!
+    default:
+      return Bundle.main.url(forResource: "incorrect", withExtension: "wav")!
+    }
+  }
 }
 
 class QuizPracticeViewModel {
@@ -22,12 +31,12 @@ class QuizPracticeViewModel {
     return rQuestion.asDriver()
   }
   
-  var oOption: Driver<[String: QuizOptionStatus]> {
-    return rOption.asDriver()
+  var oOption: Observable<[String: QuizOptionStatus]> {
+    return rOption.asObservable()
   }
   
-  var oCorrectViewHidden: Driver<Bool> {
-    return rCorrectViewHidden.asDriver()
+  var oCorrectViewHidden: Observable<Bool> {
+    return rCorrectViewHidden.asObservable()
   }
   
   var oPlaySound: Observable<Sound> {

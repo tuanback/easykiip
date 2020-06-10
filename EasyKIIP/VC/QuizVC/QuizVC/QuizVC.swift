@@ -28,6 +28,8 @@ class QuizVC: NiblessViewController {
   private let navigator: QuizNavigator
   
   private var newWordVC: QuizNewWordVC?
+  private var practiceVC: QuizPracticeVC?
+  private var practiceVM: QuizPracticeViewModel?
   
   init(viewModel: QuizViewModel,
        navigator: QuizNavigator) {
@@ -62,11 +64,23 @@ class QuizVC: NiblessViewController {
         case .newWord(let question):
           let vm = QuizNewWordViewModel(question: question, answerHandler: strongSelf.viewModel)
           strongSelf.newWordVC = QuizNewWordVC(viewModel: vm)
+          strongSelf.practiceVC = nil
           strongSelf.pageViewController
             .setViewControllers([strongSelf.newWordVC!], direction: .forward,
                                 animated: true, completion: nil)
         case .practice(let viewModel):
-          break
+          // NOTE: If current vc is practive vc => reuse
+          if let _ = strongSelf.practiceVC,
+            let practiceVM = strongSelf.practiceVM {
+            practiceVM.updateViewModel(quizItemViewModel: viewModel)
+          }
+          else {
+            let vm = QuizPracticeViewModel(quizItemViewModel: viewModel, answerHandler: strongSelf.viewModel)
+            strongSelf.practiceVC = QuizPracticeVC(viewModel: vm)
+            strongSelf.pageViewController
+              .setViewControllers([strongSelf.practiceVC!], direction: .forward,
+                                  animated: true, completion: nil)
+          }
         }
       })
       .disposed(by: disposeBag)
@@ -87,7 +101,7 @@ class QuizVC: NiblessViewController {
       .subscribe(onNext: { [weak self] alert in
         self?.showAlertMessage(alert: alert)
       })
-    .disposed(by: disposeBag)
+      .disposed(by: disposeBag)
     
     viewModel.oNavigationEvent
       .subscribe(onNext: { [weak self] event in
@@ -103,7 +117,7 @@ class QuizVC: NiblessViewController {
           self?.navigator.navigate(from: strongSelf, to: destination, type: .push)
         }
       })
-    .disposed(by: disposeBag)
+      .disposed(by: disposeBag)
   }
   
   private func showAlertMessage(alert: AlertWithAction) {
@@ -169,10 +183,6 @@ extension QuizVC {
     pageViewController.view.snp.makeConstraints { (make) in
       make.edges.equalToSuperview()
     }
-    
-    /*
-     pageViewController.setViewControllers([viewControllers[0]], direction: .forward, animated: true, completion: nil)
-     */
   }
   
   private func setupStackViewHeart(numberOfHeart: Int, totalHeart: Int) {
