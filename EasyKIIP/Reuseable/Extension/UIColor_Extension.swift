@@ -49,6 +49,14 @@ extension UIColor {
     }
   }
   
+  class var appSystemGray3: UIColor {
+    if #available(iOS 13.0, *) {
+      return UIColor.systemGray3
+    } else {
+      return UIColor(hexString: "C7C7CC")
+    }
+  }
+  
   class var appLabelBlack: UIColor {
     if #available(iOS 13.0, *) {
       return UIColor.label

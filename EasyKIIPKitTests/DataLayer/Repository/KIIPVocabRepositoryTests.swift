@@ -346,6 +346,19 @@ class KIIPVocabRepositoryTests: XCTestCase {
     XCTAssertTrue(remoteAPI.isSaveVocabPracticeHistoryCalled)
   }
   
+  func test_getRandomVocabs_numberOfVocabs1_return1RandomVocab() {
+    
+    let (sut, _, dataStore) = makeSut()
+    
+    let lesson = dataStore.lesson
+    let vocabs = Array(lesson.vocabs.prefix(5))
+    let vocabIDs = vocabs.map { $0.id }
+    
+    let _ = sut.getRandomVocabs(differentFromVocabIDs: vocabIDs, upto: 1)
+    
+    XCTAssertTrue(dataStore.isGetRandomVocabsCalled)
+  }
+  
   // Helper methods
   private func makeSut(practiceHistory: [PracticeHistory] = []) -> (KIIPVocabRepository, MockRemoteAPI, VocabDataStoreStub) {
     let fakeUserSessionDatastore = FakeUserSessionDataStore(hasToken: true)
@@ -416,6 +429,7 @@ class KIIPVocabRepositoryTests: XCTestCase {
     private(set) var setLessonSynced = false
     
     private(set) var isLessonSynced = false
+    private(set) var isGetRandomVocabsCalled = false
     
     private var notSyncedVocabs: [Vocab] = []
     
@@ -499,6 +513,11 @@ class KIIPVocabRepositoryTests: XCTestCase {
       else {
         notSyncedVocabs = []
       }
+    }
+    
+    func getRandomVocabs(differentFromVocabIDs: [Int], upto numberOfVocabs: Int) -> [Vocab] {
+      isGetRandomVocabsCalled = true
+      return []
     }
     
   }

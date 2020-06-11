@@ -32,6 +32,7 @@ public protocol VocabRepository: SearchEngine, NeedMorePracticeVocabGetter, Need
   func getListOfVocabs(inBook bookID: Int, inLesson lessonID: Int) -> Observable<[Vocab]>
   func markVocabAsMastered(vocabID id: Int)
   func recordVocabPracticed(vocabID: Int, isCorrectAnswer: Bool)
-  
   func saveLessonPracticeHistory(inBook id: Int, lessonID: Int)
+  
+  func getRandomVocabs(differentFromVocabIDs: [Int], upto numberOfVocabs: Int) -> [Vocab]
 }

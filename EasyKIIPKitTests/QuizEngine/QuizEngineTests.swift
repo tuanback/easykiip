@@ -540,5 +540,9 @@ class QuizEngineTests: XCTestCase {
     func getNeedReviewVocabs(inBook id: Int, upto numberOfVocabs: Int) -> [Vocab] {
       return []
     }
+    
+    func getRandomVocabs(differentFromVocabIDs: [Int], upto numberOfVocabs: Int) -> [Vocab] {
+      return []
+    }
   }
 }

@@ -70,7 +70,9 @@ public class KIIPQuizEngine: QuizEngine {
       else {
         vocabRepository.recordVocabPracticed(vocabID: q.vocabID, isCorrectAnswer: false)
         let question = questionMaker.createANewQuestion(for: question)
-        questions.append(question)
+        if !questions.contains(question) {
+          questions.append(question)
+        }
         if let heart = self.numberOfHeart, let maxHeart = self.maxHeart {
           numberOfHeart = heart - 1
           delegate?.quizEngine(numberOfHeart: heart - 1, totalHeart: maxHeart)

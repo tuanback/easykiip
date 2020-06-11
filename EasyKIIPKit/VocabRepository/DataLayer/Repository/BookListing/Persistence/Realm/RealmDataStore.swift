@@ -441,6 +441,27 @@ public class RealmDataStore: VocabDataStore {
     
   }
   
+  public func getRandomVocabs(differentFromVocabIDs: [Int], upto numberOfVocabs: Int) -> [Vocab] {
+    let bundledRealm = bundledRealmProvider.realm
+    
+    let count = differentFromVocabIDs.count + numberOfVocabs
+    
+    let realmVocabs = bundledRealm.objects(RealmVocab.self).shuffled().prefix(count)
+    var randomVocabs: [Vocab] = []
+    
+    for realmVocab in realmVocabs {
+      if !differentFromVocabIDs.contains(realmVocab.id) {
+        randomVocabs.append(realmVocab.toVocab())
+      }
+      
+      if randomVocabs.count == numberOfVocabs {
+        break
+      }
+    }
+    
+    return randomVocabs
+  }
+  
   // Helpers
   private func getLesson(from realmLesson: RealmLesson, lessonHistory: RealmLessonHistory?) -> Lesson {
     

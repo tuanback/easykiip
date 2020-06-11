@@ -226,5 +226,9 @@ class BookDetailViewModelTests: XCTestCase {
     func saveLessonPracticeHistory(inBook id: Int, lessonID: Int) {
       
     }
+    
+    func getRandomVocabs(differentFromVocabIDs: [Int], upto numberOfVocabs: Int) -> [Vocab] {
+      return []
+    }
   }
 }

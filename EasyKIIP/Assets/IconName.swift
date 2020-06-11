@@ -12,7 +12,9 @@ struct IconName {
   
   static let close = "ic_button_close"
   static let report = "ic_button_report"
-  static let heartFill = "ic_button_fill"
-  static let heartEmpty = "ic_button_empty"
+  static let heartFill = "ic_heart_fill"
+  static let heartEmpty = "ic_heart_empty"
+  
+  static let buttonPractice = "ic_button_practice"
   
 }

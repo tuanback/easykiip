@@ -151,4 +151,8 @@ public class VocabDataStoreInMemory: VocabDataStore {
     }
   }
   
+  public func getRandomVocabs(differentFromVocabIDs: [Int], upto numberOfVocabs: Int) -> [Vocab] {
+    return []
+  }
+  
 }

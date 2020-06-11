@@ -44,6 +44,10 @@ class QuizVC: NiblessViewController {
     setupViews()
   }
   
+  override var prefersStatusBarHidden: Bool {
+    return true
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -87,10 +91,13 @@ class QuizVC: NiblessViewController {
       .disposed(by: disposeBag)
     
     viewModel.oHeartViewHidden
+      .debug()
       .drive(stackViewHeart.rx.isHidden)
       .disposed(by: disposeBag)
     
     viewModel.oHeart
+      .debug()
+      .observeOn(MainScheduler.asyncInstance)
       .subscribe(onNext: { [weak self] (numberOfHeart, totalHeart) in
         self?.setupStackViewHeart(numberOfHeart: numberOfHeart, totalHeart: totalHeart)
         
@@ -159,7 +166,7 @@ extension QuizVC {
     stackViewHeart.snp.makeConstraints { (make) in
       make.trailing.equalToSuperview().inset(16)
       make.centerY.equalTo(buttonClose.snp.centerY)
-      make.height.equalTo(44)
+      make.height.equalTo(30)
       make.width.equalTo(0)
     }
     
@@ -188,7 +195,7 @@ extension QuizVC {
   
   private func setupStackViewHeart(numberOfHeart: Int, totalHeart: Int) {
     stackViewHeart.snp.updateConstraints({ (make) in
-      make.width.equalTo(44 * totalHeart)
+      make.width.equalTo(30 * totalHeart)
     })
     
     stackViewHeart.arrangedSubviews.forEach({ $0.removeFromSuperview() })

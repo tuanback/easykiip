@@ -65,7 +65,7 @@ class QuizPracticeRootView: NiblessView {
       make.top.equalToSuperview().inset(30)
       make.leading.equalToSuperview().inset(40)
       make.trailing.equalToSuperview().inset(40)
-      make.bottom.equalToSuperview().inset(80)
+      make.bottom.equalToSuperview().inset(50)
     }
     
     stackViewOptionContainer.snp.makeConstraints { (make) in
@@ -92,7 +92,7 @@ class QuizPracticeRootView: NiblessView {
         
         strongSelf.stackViewOptionContainer.snp.updateConstraints { (make) in
           if options.count > 0 {
-            make.height.equalTo(options.count * 44 + (options.count - 1) * 8)
+            make.height.equalTo(options.count * 60 + (options.count - 1) * 8)
           }
           else {
             make.height.equalTo(0)
@@ -143,27 +143,29 @@ class QuizPracticeRootView: NiblessView {
   private func createOptionButton(option: String, status: QuizOptionStatus) -> UIButton {
     
     let button = UIButton()
+    button.contentEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
     button.setTitle(option, for: .normal)
-    button.titleLabel?.font = UIFont.appFontRegular(ofSize: 20)
+    button.titleLabel?.font = UIFont.appFontRegular(ofSize: 15)
     button.titleLabel?.numberOfLines = 0
     button.titleLabel?.minimumScaleFactor = 0.2
     button.titleLabel?.adjustsFontSizeToFitWidth = true
-    
+
     button.layer.cornerRadius = 10
-    button.layer.borderWidth = 3
+    button.layer.borderWidth = 2
     
     button.setTitleColor(UIColor.white, for: .selected)
     button.setTitleColor(UIColor.appLabelBlack, for: .normal)
-    button.setTitleColor(UIColor.appSecondaryBackground, for: .disabled)
+    button.setTitleColor(UIColor.appSystemGray3, for: .disabled)
     
     switch status {
     case .correct:
       button.isEnabled = true
       button.backgroundColor = UIColor.appRed
       button.layer.borderColor = UIColor.appRed.cgColor
+      button.isSelected = true
     case .wrong:
       button.isEnabled = false
-      button.layer.borderColor = UIColor.appSecondaryBackground.cgColor
+      button.layer.borderColor = UIColor.appSystemGray3.cgColor
     case .notSelected:
       button.backgroundColor = UIColor.clear
       button.layer.borderColor = UIColor.appRed.cgColor

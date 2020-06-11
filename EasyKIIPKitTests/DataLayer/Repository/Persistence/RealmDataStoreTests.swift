@@ -701,6 +701,45 @@ class RealmDataStoreTests: XCTestCase {
     XCTAssertEqual(realmLessonHistory!.lastTimeSynced.value, lastTimeSynced)
   }
   
+  func test_getRandomVocabs_upto1_return1RandomVocab() {
+    let (_, _, _, _, realmVocabs, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    let vocabIDs = realmVocabs.prefix(5).map { $0.toVocab().id }
+    
+    let randomVocabs = sut.getRandomVocabs(differentFromVocabIDs: vocabIDs, upto: 1)
+    
+    XCTAssertEqual(randomVocabs.count, 1)
+    if randomVocabs.count == 1 {
+      XCTAssertFalse(vocabIDs.contains(randomVocabs[0].id))
+    }
+  }
+  
+  func test_getRandomVocabs_upto2_return2RandomVocab() {
+    let (_, _, _, _, realmVocabs, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    let vocabIDs = realmVocabs.prefix(5).map { $0.toVocab().id }
+    
+    let randomVocabs = sut.getRandomVocabs(differentFromVocabIDs: vocabIDs, upto: 2)
+    
+    XCTAssertEqual(randomVocabs.count, 2)
+    for vocab in randomVocabs {
+      XCTAssertFalse(vocabIDs.contains(vocab.id))
+    }
+  }
+  
+  func test_getRandomVocabs_upto10_return6RandomVocab() {
+    let (_, _, _, _, realmVocabs, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    
+    let vocabIDs = realmVocabs.prefix(5).map { $0.toVocab().id }
+    
+    let randomVocabs = sut.getRandomVocabs(differentFromVocabIDs: vocabIDs, upto: 10)
+    
+    XCTAssertEqual(randomVocabs.count, 6)
+    for vocab in randomVocabs {
+      XCTAssertFalse(vocabIDs.contains(vocab.id))
+    }
+  }
+  
   // Helpers
   private func makeBundledConfig() -> Realm.Configuration {
     let bundledConfig: Realm.Configuration = Realm.Configuration(inMemoryIdentifier: "ios.realmdatastore.bundled")

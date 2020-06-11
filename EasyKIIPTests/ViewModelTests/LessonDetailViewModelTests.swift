@@ -148,6 +148,22 @@ class LessonDetailViewModelTests: XCTestCase {
     }
   }
   
+  func test_handlePracticeButtonClicked_navigateToQuizVC() {
+    let lesson = lessons[0]
+    let sut = makeSut(book: book, lesson: lesson)
+    
+    let navigationEventSpy = Spy<NavigationEvent<LessonDetailNavigator.Destination>>(observable: sut.oNavigationEvent)
+    
+    sut.handlePracticeButtonClicked()
+    
+    if case .present(.quizPractice(_, _, _)) = navigationEventSpy.values.last! {
+      
+    }
+    else {
+      XCTFail()
+    }
+  }
+  
   // Classes
   private func makeSut(book: Book, lesson: Lesson) -> LessonDetailViewModel {
     let sut = LessonDetailViewModel(bookID: book.id, lessonID: lesson.id, vocabRepository: vocabRepository)
@@ -345,6 +361,10 @@ class LessonDetailViewModelTests: XCTestCase {
     
     func saveLessonPracticeHistory(inBook id: Int, lessonID: Int) {
       
+    }
+    
+    func getRandomVocabs(differentFromVocabIDs: [Int], upto numberOfVocabs: Int) -> [Vocab] {
+      return []
     }
   }
 }

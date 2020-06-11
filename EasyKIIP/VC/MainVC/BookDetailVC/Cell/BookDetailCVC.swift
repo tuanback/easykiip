@@ -9,7 +9,7 @@
 import UIKit
 
 class BookDetailCVC: UICollectionViewCell {
-    
+  
   private var viewUnitIndicatorContainer: UIView!
   private var labelUnitIndicator: UILabel!
   
@@ -92,18 +92,18 @@ class BookDetailCVC: UICollectionViewCell {
     labelLastPracticed.font = UIFont.appFontRegular(ofSize: 12)
     labelLastPracticed.textColor = UIColor.appSecondaryLabel
     
-    let lessonNameContainer = UIStackView(arrangedSubviews: [labelLessonKorean,
-                                                             labelLessonTranslation,
-                                                             UIView()])
+    let lessonNameContainer = UIStackView(arrangedSubviews: [labelLessonKorean, labelLessonTranslation, UIView()])
     lessonNameContainer.alignment = .fill
     lessonNameContainer.axis = .vertical
     lessonNameContainer.distribution = .fill
     lessonNameContainer.spacing = 8
     
-    let lastPracticeContainer = UIStackView(arrangedSubviews: [labelLastPracticed])
+    let lastPracticeContainer = UIStackView(arrangedSubviews: [labelLastPracticed, UIView()])
+    lastPracticeContainer.axis = .vertical
+    lastPracticeContainer.alignment = .fill
+    lastPracticeContainer.distribution = .fill
     
-    let labelContainer = UIStackView(arrangedSubviews: [lessonNameContainer,
-                                                        lastPracticeContainer])
+    let labelContainer = UIStackView(arrangedSubviews: [lessonNameContainer, lastPracticeContainer])
     labelContainer.axis = .horizontal
     labelContainer.alignment = .fill
     labelContainer.distribution = .fill
@@ -112,15 +112,13 @@ class BookDetailCVC: UICollectionViewCell {
     viewProgressContainer = UIView()
     viewProgressContainer.backgroundColor = UIColor.appRed
     
-    let rightStackview = UIStackView(arrangedSubviews: [labelContainer,
-                                                        viewProgressContainer])
+    let rightStackview = UIStackView(arrangedSubviews: [labelContainer, viewProgressContainer])
     rightStackview.axis = .vertical
     rightStackview.spacing = 8
     rightStackview.alignment = .fill
     rightStackview.distribution = .fill
     
-    let containerStackView = UIStackView(arrangedSubviews: [containerView,
-                                                            rightStackview])
+    let containerStackView = UIStackView(arrangedSubviews: [containerView, rightStackview])
     containerStackView.axis = .horizontal
     containerStackView.spacing = 8
     containerStackView.alignment = .fill

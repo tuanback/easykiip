@@ -90,12 +90,26 @@ public class SignedInDependencyContainer {
   
   func makeQuizNewWordVC(bookID: Int, lessonID: Int, vocabs: [Vocab]) -> QuizVC {
    
-    // TODO: Need to change this code
-    let randomVocabs: [Vocab] = []
+    let randomVocabs: [Vocab] = vocabRepository.getRandomVocabs(differentFromVocabIDs: vocabs.map { $0.id }, upto: vocabs.count)
     
     let questionMaker = NewWordQuestionMaker(createQuestionVocabs: vocabs, randomVocabs: randomVocabs, languageCode: AppSetting.languageCode)
     
-    let quizEngine = KIIPQuizEngine(bookID: bookID, lessonID: lessonID, vocabs: vocabs, numberOfHeart: nil, questionMaker: questionMaker, vocabRepository: vocabRepository)
+    let vc = makeQuizVC(bookID: bookID, lessonID: lessonID, vocabs: vocabs, questionMaker: questionMaker, numberOfHeart: nil)
+    return vc
+  }
+  
+  func makeQuizPracticeVC(bookID: Int, lessonID: Int, vocabs: [Vocab]) -> QuizVC {
+    
+    let randomVocabs: [Vocab] = vocabRepository.getRandomVocabs(differentFromVocabIDs: vocabs.map { $0.id }, upto: vocabs.count)
+    
+    let questionMaker = PracticeQuestionMaker(createQuestionVocabs: vocabs, randomVocabs: randomVocabs, languageCode: AppSetting.languageCode)
+    
+    let vc = makeQuizVC(bookID: bookID, lessonID: lessonID, vocabs: vocabs, questionMaker: questionMaker, numberOfHeart: 3)
+    return vc
+  }
+  
+  private func makeQuizVC(bookID: Int, lessonID: Int, vocabs: [Vocab], questionMaker: QuestionMaker, numberOfHeart: Int?) -> QuizVC {
+    let quizEngine = KIIPQuizEngine(bookID: bookID, lessonID: lessonID, vocabs: vocabs, numberOfHeart: numberOfHeart, questionMaker: questionMaker, vocabRepository: vocabRepository)
     let viewModel = QuizViewModel(quizEngine: quizEngine)
     
     let navigator = QuizNavigator(factory: self)
@@ -116,6 +130,7 @@ extension SignedInDependencyContainer: MainVCFactory { }
 extension SignedInDependencyContainer: BookDetailFactory { }
 extension SignedInDependencyContainer: LessonDetailVCFactory { }
 extension SignedInDependencyContainer: QuizNewWordVCFactory { }
+extension SignedInDependencyContainer: QuizPracticeVCFactory { }
 
 extension SignedInDependencyContainer: EndQuizAdVCFactory { }
 extension SignedInDependencyContainer: VideoAdsVCFactory { }

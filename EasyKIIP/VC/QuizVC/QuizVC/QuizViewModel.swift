@@ -53,16 +53,17 @@ class QuizViewModel {
   
   // Heart
   var oHeart: Observable<(Int, Int)> {
-    return rHeart.asObservable()
+    return rHeart.compactMap{ $0 }.asObservable()
   }
-  private var rHeart = PublishRelay<(Int, Int)>()
+  private var rHeart = BehaviorRelay<(Int, Int)?>(value: nil)
   
   var oHeartViewHidden: Driver<Bool> {
     return Observable.merge(
       Observable.just(true),
-      rHeart.map({ _ in return false })
+      rHeart.compactMap{ $0 }.map({ _ in return false })
     )
-      .asDriver(onErrorJustReturn: true)
+    .debug()
+    .asDriver(onErrorJustReturn: true)
   }
   
   // Child VC
@@ -201,11 +202,11 @@ extension QuizViewModel: QuizEngineDelegate {
   }
   
   func quizEngine(numberOfHeart: Int, totalHeart: Int) {
-    guard numberOfHeart > 0 else {
-      showMessageToWatchVideoToRefillHeart()
-      return
-    }
     rHeart.accept((numberOfHeart, totalHeart))
+    
+    if numberOfHeart == 0 {
+      showMessageToWatchVideoToRefillHeart()
+    }
   }
   
   private func showMessageToWatchVideoToRefillHeart() {

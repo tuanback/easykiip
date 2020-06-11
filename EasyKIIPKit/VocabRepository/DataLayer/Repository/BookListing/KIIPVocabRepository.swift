@@ -265,4 +265,9 @@ public class KIIPVocabRepository: VocabRepository {
     remoteAPI.saveVocabHistory(userID: userID, bookID: id, lessonID: lessonID, vocabs: firebaseVocabs)
   }
   
+  public func getRandomVocabs(differentFromVocabIDs: [Int], upto numberOfVocabs: Int) -> [Vocab] {
+    return dataStore.getRandomVocabs(differentFromVocabIDs: differentFromVocabIDs,
+                                     upto: numberOfVocabs)
+  }
+  
 }

@@ -82,7 +82,7 @@ class QuizNewWordRootView: NiblessView {
       make.width.equalToSuperview().multipliedBy(0.8)
       make.centerX.equalToSuperview()
       make.height.equalTo(44)
-      make.bottom.equalToSuperview().inset(80)
+      make.bottom.equalToSuperview().inset(50)
     }
     
     stackViewLabelContainer.snp.makeConstraints { (make) in

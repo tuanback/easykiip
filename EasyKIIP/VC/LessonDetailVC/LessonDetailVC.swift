@@ -18,6 +18,7 @@ class LessonDetailVC: NiblessViewController {
   private lazy var stackViewButtonContainer = UIStackView()
   private lazy var viewCurrentVCIndicator = UIView()
   private lazy var viewViewControllerContainer = UIView()
+  private lazy var buttonPractice = UIButton()
   private var buttonLearn: UIButton?
   private var buttonReading: UIButton?
   private var buttonVocabList: UIButton?
@@ -35,6 +36,8 @@ class LessonDetailVC: NiblessViewController {
   
   let navigator: LessonDetailNavigator
   let viewModel: LessonDetailViewModel
+  
+  var isVCJustEntering = true
   
   init(viewModel: LessonDetailViewModel,
        navigator: LessonDetailNavigator) {
@@ -55,8 +58,14 @@ class LessonDetailVC: NiblessViewController {
     stackViewButtonContainer.alignment = .fill
     stackViewButtonContainer.distribution = .fillEqually
     
+    buttonPractice.setImage(UIImage(named: IconName.buttonPractice), for: .normal)
+    buttonPractice.backgroundColor = UIColor.appRed
+    buttonPractice.layer.cornerRadius = 30
+    buttonPractice.addTarget(self, action: #selector(didButtonPracticeClicked(sender:)), for: .touchUpInside)
+    
     view.addSubview(viewButtonContainer)
     view.addSubview(viewViewControllerContainer)
+    view.addSubview(buttonPractice)
     
     let separator = UIView()
     separator.backgroundColor = UIColor.systemGray
@@ -92,11 +101,27 @@ class LessonDetailVC: NiblessViewController {
       make.trailing.equalTo(view.safeAreaLayoutGuide)
       make.bottom.equalTo(view.safeAreaLayoutGuide)
     }
+    
+    buttonPractice.snp.makeConstraints { (make) in
+      make.bottom.equalToSuperview().inset(50)
+      make.trailing.equalToSuperview().inset(20)
+      make.size.equalTo(60)
+    }
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     observeViewModel()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    if isVCJustEntering {
+      isVCJustEntering = false
+    }
+    else {
+      viewModel.reload()
+    }
   }
   
   private func observeViewModel() {
@@ -160,6 +185,10 @@ class LessonDetailVC: NiblessViewController {
         }
       })
     .disposed(by: disposeBag)
+    
+    viewModel.oPracticeButtonHidden
+      .drive(buttonPractice.rx.isHidden)
+      .disposed(by: disposeBag)
   }
   
   private func setupLearnVocabButton() -> UIButton {
@@ -182,6 +211,10 @@ class LessonDetailVC: NiblessViewController {
     currentVCIndex = index
     pageViewController.setViewControllers([vc], direction: direction, animated: true, completion: nil)
     updateIndicatorView(view: sender)
+  }
+  
+  @objc func didButtonPracticeClicked(sender: UIButton) {
+    viewModel.handlePracticeButtonClicked()
   }
   
   private func setupParagraphButton() -> UIButton {

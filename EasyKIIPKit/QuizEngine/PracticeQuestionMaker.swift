@@ -43,7 +43,7 @@ public class PracticeQuestionMaker: QuestionMaker {
       questions.append(contentsOf: vocabQuestions)
     }
     
-    return questions
+    return questions.shuffled()
   }
   
   public func createANewQuestion(for question: Question) -> Question {

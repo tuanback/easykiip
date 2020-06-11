@@ -34,4 +34,6 @@ public protocol VocabDataStore {
   
   func getNotSyncedVocabsInLesson(lessonID: Int) -> [Vocab]
   func setLessonSynced(lessonID: Int, lastTimeSynced: Double)
+  
+  func getRandomVocabs(differentFromVocabIDs: [Int], upto numberOfVocabs: Int) -> [Vocab]
 }

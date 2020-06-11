@@ -77,11 +77,17 @@ class LessonDetailViewModel {
     return rNavigationEvent.asObservable()
   }
   
+  var oPracticeButtonHidden: Driver<Bool> {
+    return rPracticeButtonHidden.asDriver()
+  }
+  
   private let rNavigationEvent = PublishRelay<NavigationEvent<LessonDetailNavigator.Destination>>()
   private let rChildVC = BehaviorRelay<[LessonDetailChildVC]>(value: [])
   private let rVocabs = BehaviorRelay<[Vocab]>(value: [])
   private let rReadingParts = BehaviorRelay<[ReadingPart]>(value: [])
   private let rNavigagtionTitle = BehaviorRelay<String>(value: "")
+  private let rPracticeButtonHidden = BehaviorRelay<Bool>(value: true)
+  
   private let disposeBag = DisposeBag()
   
   let bookID: Int
@@ -143,10 +149,18 @@ class LessonDetailViewModel {
     }
     .bind(to: rReadingParts)
     .disposed(by: disposeBag)
+    
+    let vocabs = vocabRepository.getListOfLowProficiencyVocab(inLesson: lessonID, upto: 10)
+    rPracticeButtonHidden.accept(vocabs.count == 0)
   }
   
   func handleItemViewModelClicked(viewModel: LearnVocabItemViewModel) {
     rNavigationEvent.accept(.present(destination: .quizNewWord(bookID: bookID, lessonID: lessonID, vocabs: viewModel.vocabs)))
+  }
+  
+  func handlePracticeButtonClicked() {
+    let vocabs = vocabRepository.getListOfLowProficiencyVocab(inLesson: lessonID, upto: 10)
+    rNavigationEvent.accept(.present(destination: .quizPractice(bookID: bookID, lessonID: lessonID, vocabs: vocabs)))
   }
   
   private func createLearnVocabViewModels(from vocabs: [Vocab]) -> [LearnVocabItemViewModel] {
