@@ -16,5 +16,6 @@ struct IconName {
   static let heartEmpty = "ic_heart_empty"
   
   static let buttonPractice = "ic_button_practice"
+  static let avatar = "ic_avatar"
   
 }

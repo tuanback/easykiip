@@ -46,10 +46,7 @@ class MainVC: NiblessViewController {
     navigationItem.searchController = searchController
     
     //navigationController?.navigationBar.prefersLargeTitles = true
-    
-    let signOutBarButton = UIBarButtonItem(title: "Sign out", style: .done, target: self, action: #selector(handleSignoutButtonClicked(_:)))
-    
-    navigationItem.rightBarButtonItem = signOutBarButton
+    setupMenuButton()
     /*
      let frame = CGRect(x: 0, y: 0, width: 300, height: 30)
      let titleView = UILabel(frame: frame)
@@ -59,7 +56,18 @@ class MainVC: NiblessViewController {
      */
   }
   
-  @objc func handleSignoutButtonClicked(_ barButton: UIBarButtonItem) {
+  private func setupMenuButton() {
+    let button = UIButton()
+    button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+    button.layer.cornerRadius = 0.5 * button.bounds.size.width
+    button.setImage(UIImage(named: IconName.avatar), for: .normal)
+    button.addTarget(self, action: #selector(handleSettingButtonClicked(_:)), for: .touchUpInside)
+    let barButton = UIBarButtonItem()
+    barButton.customView = button
+    self.navigationItem.rightBarButtonItem = barButton
+  }
+  
+  @objc func handleSettingButtonClicked(_ barButton: UIBarButtonItem) {
     viewModel.handleSignoutClicked()
   }
   
