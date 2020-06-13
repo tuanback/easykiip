@@ -41,7 +41,7 @@ class BookDetailViewModel {
   private(set) var nativeAds = BehaviorRelay<[GADUnifiedNativeAd]>(value: [])
   private(set) var isLoading = BehaviorRelay<Bool>(value: false)
   
-  private let disposeBag = DisposeBag()
+  private var disposeBag = DisposeBag()
   
   init(bookID: Int, bookName: String, vocabRepository: VocabRepository) {
     self.bookID = bookID
@@ -52,6 +52,11 @@ class BookDetailViewModel {
     }
     oNavigationTitle.accept(name)
     setupItemViewModels()
+    initLessons()
+  }
+  
+  func reload() {
+    disposeBag = DisposeBag()
     initLessons()
   }
   

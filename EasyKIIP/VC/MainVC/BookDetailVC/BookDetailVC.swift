@@ -27,6 +27,8 @@ public class BookDetailVC: NiblessViewController {
   
   private let disposeBag = DisposeBag()
   
+  private var isVCJustEntering = true
+  
   init(viewModel: BookDetailViewModel,
        navigator: BookDetailNavigator) {
     self.viewModel = viewModel
@@ -42,6 +44,16 @@ public class BookDetailVC: NiblessViewController {
     super.viewDidLoad()
     observeViewModel()
     startAdLoader()
+  }
+  
+  public override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    if isVCJustEntering {
+      isVCJustEntering = false
+    }
+    else {
+      viewModel.reload()
+    }
   }
   
   private func observeViewModel() {

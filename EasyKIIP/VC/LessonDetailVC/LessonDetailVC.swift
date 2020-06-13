@@ -37,7 +37,7 @@ class LessonDetailVC: NiblessViewController {
   let navigator: LessonDetailNavigator
   let viewModel: LessonDetailViewModel
   
-  var isVCJustEntering = true
+  private var isVCJustEntering = true
   
   init(viewModel: LessonDetailViewModel,
        navigator: LessonDetailNavigator) {

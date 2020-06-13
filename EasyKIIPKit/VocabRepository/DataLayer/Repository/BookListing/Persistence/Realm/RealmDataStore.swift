@@ -121,6 +121,7 @@ public class RealmDataStore: VocabDataStore {
       }
       else if let lesson = getRealmLesson(of: vocab.id) {
         let lessonHistory = RealmLessonHistory(lessonID: lesson.index,
+                                               numberOfVocabs: lesson.vocabs.count,
                                                isSynced: false,
                                                lastTimeSynced: nil,
                                                proficiency: 0,
@@ -179,6 +180,7 @@ public class RealmDataStore: VocabDataStore {
       }
       else if let lesson = getRealmLesson(of: vocab.id) {
         let lessonHistory = RealmLessonHistory(lessonID: lesson.index,
+                                               numberOfVocabs: lesson.vocabs.count,
                                                isSynced: false,
                                                lastTimeSynced: nil,
                                                proficiency: 0, lastTimeLearned: time)
@@ -236,8 +238,9 @@ public class RealmDataStore: VocabDataStore {
         lessonHistory.proficiency = Int(lessonHistory.calculateProficiency())
       }
     }
-    else {
+    else if let lesson = getRealmLesson(of: vocabID) {
       let lessonHistory = RealmLessonHistory(lessonID: lessonID,
+                                             numberOfVocabs: lesson.vocabs.count,
                                              isSynced: false,
                                              lastTimeSynced: nil,
                                              proficiency: 0, lastTimeLearned: date)
@@ -321,7 +324,7 @@ public class RealmDataStore: VocabDataStore {
       let vocabHistory = historyRealm.object(ofType: RealmVocabPracticeHistory.self, forPrimaryKey: realmVocab.id)
       return getVocab(from: realmVocab, vocabHistory: vocabHistory)
     }
-   
+    
     return vocabs
   }
   
@@ -349,15 +352,17 @@ public class RealmDataStore: VocabDataStore {
       
       return
     }
-    
-    // Lesson history is not existed or never synced, need to sync the vocab also
-    let lessonHistory = RealmLessonHistory(lessonID: Int(lessonID),
-                                           isSynced: false,
-                                           lastTimeSynced: lastTimeSynced,
-                                           proficiency: Int(proficiency),
-                                           lastTimeLearned: nil)
-    try! historyRealm.write {
-      historyRealm.add(lessonHistory)
+    if let lesson = getLesson(by: lessonID) {
+      // Lesson history is not existed or never synced, need to sync the vocab also
+      let lessonHistory = RealmLessonHistory(lessonID: Int(lessonID),
+                                             numberOfVocabs: lesson.vocabs.count,
+                                             isSynced: false,
+                                             lastTimeSynced: lastTimeSynced,
+                                             proficiency: Int(proficiency),
+                                             lastTimeLearned: nil)
+      try! historyRealm.write {
+        historyRealm.add(lessonHistory)
+      }
     }
   }
   
@@ -415,6 +420,7 @@ public class RealmDataStore: VocabDataStore {
     }
     else if let lesson = getRealmLesson(of: vocabID) {
       let lessonHistory = RealmLessonHistory(lessonID: lesson.index,
+                                             numberOfVocabs: lesson.vocabs.count,
                                              isSynced: false,
                                              lastTimeSynced: nil,
                                              proficiency: 0,

@@ -229,7 +229,12 @@ class LessonDetailViewModel {
     }
     
     private static func convertVocabsToLearnVocabItemVMs(index: Int, vocabs: [Vocab]) -> LearnVocabItemViewModel {
-      let proficiency = calculateProficiency(vocabs: vocabs)
+      var proficiency: UInt8 = 0
+      
+      let learnedVocabs = vocabs.filter({ $0.lastTimeTest != nil })
+      if learnedVocabs.count == vocabs.count {
+        proficiency = calculateProficiency(vocabs: vocabs)
+      }
       return LearnVocabItemViewModel(index: index, proficiency: proficiency, vocabs: vocabs)
     }
     

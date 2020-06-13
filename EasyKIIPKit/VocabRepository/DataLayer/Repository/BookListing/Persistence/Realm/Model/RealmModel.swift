@@ -154,6 +154,7 @@ class RealmLessonHistory: Object {
   @objc dynamic var isSynced: Bool = true
   @objc dynamic var proficiency: Int = 0
   @objc dynamic var lastTimeLearned: Date?
+  @objc dynamic var numberOfVocabs: Int = 0
   
   /// Last time synced is stored as Date since 1970
   let lastTimeSynced = RealmOptional<Double>()
@@ -164,9 +165,10 @@ class RealmLessonHistory: Object {
     return "lessonID"
   }
   
-  convenience init(lessonID: Int, isSynced: Bool, lastTimeSynced: Double?, proficiency: Int, lastTimeLearned: Date?) {
+  convenience init(lessonID: Int, numberOfVocabs: Int, isSynced: Bool, lastTimeSynced: Double?, proficiency: Int, lastTimeLearned: Date?) {
     self.init()
     self.lessonID = lessonID
+    self.numberOfVocabs = numberOfVocabs
     self.isSynced = isSynced
     self.lastTimeSynced.value = lastTimeSynced
     self.proficiency = proficiency
@@ -178,7 +180,7 @@ class RealmLessonHistory: Object {
     let total = vocabsHistory.reduce(0) { (result, vocabHistory) -> UInt in
       result + UInt(vocabHistory.proficiency)
     }
-    let count = UInt(vocabsHistory.count)
+    let count = UInt(numberOfVocabs)
     return UInt8(total / count)
   }
 }
