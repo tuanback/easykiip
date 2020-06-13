@@ -47,9 +47,11 @@ class LessonDetailNavigator: Navigator {
   private func makeVC(for destination: Destination) -> UIViewController {
     switch destination {
     case .quizNewWord(let bookID, let lessonID, let vocabs):
-      return factory.makeQuizNewWordVC(bookID: bookID, lessonID: lessonID, vocabs: vocabs)
+      let vc = factory.makeQuizNewWordVC(bookID: bookID, lessonID: lessonID, vocabs: vocabs)
+      return UINavigationController(rootViewController: vc)
     case .quizPractice(let bookID, let lessonID, let vocabs):
-      return factory.makeQuizPracticeVC(bookID: bookID, lessonID: lessonID, vocabs: vocabs)
+      let vc = factory.makeQuizPracticeVC(bookID: bookID, lessonID: lessonID, vocabs: vocabs)
+      return UINavigationController(rootViewController: vc)
     }
   }
   

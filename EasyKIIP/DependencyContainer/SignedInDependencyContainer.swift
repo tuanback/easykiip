@@ -6,10 +6,11 @@
 //  Copyright © 2020 Real Life Swift. All rights reserved.
 //
 
-import Foundation
-import UserSession
 import EasyKIIPKit
+import Firebase
+import Foundation
 import UIKit
+import UserSession
 
 public class SignedInDependencyContainer {
   
@@ -116,8 +117,9 @@ public class SignedInDependencyContainer {
     return QuizVC(viewModel: viewModel, navigator: navigator)
   }
   
-  func makeEndQuizVC() -> UIViewController {
-    return UIViewController()
+  func makeEndQuizVC(ad: GADUnifiedNativeAd?) -> QuizEndVC {
+    let viewModel = QuizEndViewModel(ad: ad)
+    return QuizEndVC(viewModel: viewModel)
   }
   
   func makeVideoAdsVC() -> UIViewController {

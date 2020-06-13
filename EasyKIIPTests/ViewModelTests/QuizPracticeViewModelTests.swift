@@ -106,21 +106,6 @@ class QuizPracticeViewModelTests: XCTestCase {
     XCTAssertTrue(handler.isAnswerHandlerCalled)
   }
   
-  class Spy<T> {
-    private(set) var values: [T] = []
-    
-    private let disposeBag = DisposeBag()
-    
-    init(observable: Observable<T>) {
-      
-      observable
-        .subscribe(onNext: { [weak self] value in
-          self?.values.append(value)
-        })
-        .disposed(by: disposeBag)
-    }
-  }
-  
   // Helpers
   class AnswerHandlerStub: PracticeQuestionAnswerHandler {
     

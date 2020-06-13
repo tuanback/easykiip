@@ -8,6 +8,7 @@
 
 import Foundation
 import EasyKIIPKit
+import Firebase
 import RxSwift
 import RxCocoa
 
@@ -84,6 +85,8 @@ class QuizViewModel {
   }
   private var rNavigationEvent = BehaviorRelay<NavigationEvent<QuizNavigator.Destination>?>(value: nil)
   
+  private var endQuizAd: GADUnifiedNativeAd?
+  
   private let quizEngine: QuizEngine
   
   init(quizEngine: QuizEngine) {
@@ -148,6 +151,10 @@ class QuizViewModel {
   func handleVideoAdsWatchingFinished() {
     quizEngine.refillHeart()
   }
+  
+  func setEndQuizAd(ad: GADUnifiedNativeAd) {
+    endQuizAd = ad
+  }
 }
 
 extension QuizViewModel: NewWordQuestionAnswerHandler {}
@@ -198,7 +205,7 @@ extension QuizViewModel: QuizEngineDelegate {
   }
   
   func quizEngineDidCompleted() {
-    rNavigationEvent.accept(.push(destination: .endQuiz))
+    rNavigationEvent.accept(.push(destination: .endQuiz(ad: endQuizAd)))
   }
   
   func quizEngine(numberOfHeart: Int, totalHeart: Int) {

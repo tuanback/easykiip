@@ -120,7 +120,8 @@ class QuizViewModelTests: XCTestCase {
     quizEngine.completeQuiz()
     
     if case .push(let destination) = navigationEvent.navigationEvents[0] {
-      if destination != .endQuiz {
+      if case .endQuiz(_) = destination {}
+      else {
         XCTFail()
       }
     }
@@ -156,7 +157,8 @@ class QuizViewModelTests: XCTestCase {
     
     XCTAssertEqual(errorSpy.errors.count, 1)
     if case .present(let destination) = navigationSpy.navigationEvents[0] {
-      if destination != .showVideoAds {
+      if case .showVideoAds = destination { }
+      else {
         XCTFail()
       }
     }

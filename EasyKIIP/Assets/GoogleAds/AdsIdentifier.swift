@@ -16,7 +16,7 @@ enum AdsType {
 struct AdsIdentifier {
   
   private struct App {
-    static let bookDetailItemAds = "ca-app-pub-4377015897765379/2266520475"
+    static let nativeAds = "ca-app-pub-4377015897765379/2266520475"
   }
   
   private struct Test {
@@ -30,7 +30,7 @@ struct AdsIdentifier {
       #if DEBUG
       return Test.nativeAds
       #else
-      return App.bookDetailItemAds
+      return App.nativeAds
       #endif
     }
     

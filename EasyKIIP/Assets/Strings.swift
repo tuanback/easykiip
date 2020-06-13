@@ -53,6 +53,10 @@ public struct Strings {
   static let paragraph = NSLocalizedString("Paragraph", bundle: Strings.languageBundle, comment: "")
   static let vocabulary = NSLocalizedString("Vocabulary", bundle: Strings.languageBundle, comment: "")
   static let knew = NSLocalizedString("Knew", bundle: Strings.languageBundle, comment: "practice screen")
+  
+  static let adHelpULearnForFree = NSLocalizedString("This advertisement helps you to learn for free", bundle: Strings.languageBundle, comment: "practice screen")
+  
+  static let practiceMakePerfect = NSLocalizedString("Practice makes perfect. Practice every day will help your memory better", bundle: Strings.languageBundle, comment: "practice screen")
 }
 
 // Common
@@ -61,6 +65,7 @@ extension Strings {
   static let quit = NSLocalizedString("Quit", bundle: Strings.languageBundle, comment: "")
   static let cancel = NSLocalizedString("Cancel", bundle: Strings.languageBundle, comment: "")
   static let watch = NSLocalizedString("Watch", bundle: Strings.languageBundle, comment: "")
+  static let continueStr = NSLocalizedString("Continue", bundle: Strings.languageBundle, comment: "")
 }
 
 // Errors

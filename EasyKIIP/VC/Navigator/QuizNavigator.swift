@@ -6,13 +6,14 @@
 //  Copyright © 2020 Real Life Swift. All rights reserved.
 //
 
+import Firebase
 import Foundation
 import UIKit
 
 class QuizNavigator: Navigator {
   
   enum Destination {
-    case endQuiz
+    case endQuiz(ad: GADUnifiedNativeAd?)
     case showVideoAds
   }
   
@@ -45,8 +46,8 @@ class QuizNavigator: Navigator {
   
   private func makeVC(for destination: Destination) -> UIViewController {
     switch destination {
-    case .endQuiz:
-      return factory.makeEndQuizVC()
+    case .endQuiz(let ad):
+      return factory.makeEndQuizVC(ad: ad)
     case .showVideoAds:
       return factory.makeVideoAdsVC()
     }
@@ -55,7 +56,7 @@ class QuizNavigator: Navigator {
 }
 
 protocol EndQuizAdVCFactory {
-  func makeEndQuizVC() -> UIViewController
+  func makeEndQuizVC(ad: GADUnifiedNativeAd?) -> QuizEndVC
 }
 
 protocol VideoAdsVCFactory {

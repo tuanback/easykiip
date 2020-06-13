@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 import RxSwift
 import RxCocoa
 import SnapKit
@@ -31,6 +32,12 @@ class QuizVC: NiblessViewController {
   private var practiceVC: QuizPracticeVC?
   private var practiceVM: QuizPracticeViewModel?
   
+  private lazy var adUnitID = AdsIdentifier.id(for: .bookDetailItem)
+  private lazy var adLoader = NativeAdLoader(adUnitID: adUnitID,
+                                             numberOfAdsToLoad: 1,
+                                             viewController: self,
+                                             delegate: self)
+  
   init(viewModel: QuizViewModel,
        navigator: QuizNavigator) {
     self.viewModel = viewModel
@@ -51,7 +58,13 @@ class QuizVC: NiblessViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    hideNavBar()
+    adLoader.load()
     observeViewModel()
+  }
+  
+  func hideNavBar() {
+    navigationController?.isNavigationBarHidden = true
   }
   
   @objc func handleCloseButtonClicked(sender: UIButton) {
@@ -211,6 +224,14 @@ extension QuizVC {
       }
       
       stackViewHeart.addArrangedSubview(imageView)
+    }
+  }
+}
+
+extension QuizVC: NativeAdLoaderDelegate {
+  func adLoaderFinishLoading(ads: [GADUnifiedNativeAd]) {
+    if ads.count > 0 {
+      viewModel.setEndQuizAd(ad: ads[0])
     }
   }
 }

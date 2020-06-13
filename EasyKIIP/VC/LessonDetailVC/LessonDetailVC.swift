@@ -281,7 +281,7 @@ class LessonDetailVC: NiblessViewController {
   
   private func setupPageViewController(with viewControllers: [UIViewController]) {
     pageViewController.delegate = self
-    pageViewController.setViewControllers([viewControllers[0]], direction: .forward, animated: true, completion: nil)
+    pageViewController.setViewControllers([viewControllers[0]], direction: .forward, animated: false, completion: nil)
     pageViewController.dataSource = self
     
     addChild(pageViewController)

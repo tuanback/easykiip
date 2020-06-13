@@ -20,8 +20,10 @@ public class BookDetailVC: NiblessViewController {
   
   private lazy var adUnitID = AdsIdentifier.id(for: .bookDetailItem)
   private let numAdsToLoad = 4
-  private var nativeAds = [GADUnifiedNativeAd]()
-  private var adLoader: GADAdLoader!
+  private lazy var adLoader = NativeAdLoader(adUnitID: adUnitID,
+                                             numberOfAdsToLoad: numAdsToLoad,
+                                             viewController: self,
+                                             delegate: self)
   
   private let disposeBag = DisposeBag()
   
@@ -65,34 +67,12 @@ public class BookDetailVC: NiblessViewController {
   }
   
   private func startAdLoader() {
-    
-    let options = GADMultipleAdsAdLoaderOptions()
-    options.numberOfAds = numAdsToLoad
-    
-    adLoader = GADAdLoader(adUnitID: adUnitID,
-                           rootViewController: self,
-                           adTypes: [.unifiedNative],
-                           options: [options])
-    adLoader.delegate = self
-    adLoader.load(GADRequest())
+    adLoader.load()
   }
-  
 }
 
-extension BookDetailVC: GADUnifiedNativeAdLoaderDelegate {
-  
-  public func adLoader(_ adLoader: GADAdLoader, didFailToReceiveAdWithError error: GADRequestError) {
-    print("\(adLoader) failed with error: \(error.localizedDescription)")
-  }
-  
-  public func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
-    print("Received native ad: \(nativeAd)")
-
-    // Add the native ad to the list of native ads.
-    nativeAds.append(nativeAd)
-  }
-  
-  public func adLoaderDidFinishLoading(_ adLoader: GADAdLoader) {
-    viewModel.addNativeAds(ads: nativeAds)
+extension BookDetailVC: NativeAdLoaderDelegate {
+  func adLoaderFinishLoading(ads: [GADUnifiedNativeAd]) {
+    viewModel.addNativeAds(ads: ads)
   }
 }
