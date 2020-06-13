@@ -65,11 +65,20 @@ extension Strings {
   static let quit = NSLocalizedString("Quit", bundle: Strings.languageBundle, comment: "")
   static let cancel = NSLocalizedString("Cancel", bundle: Strings.languageBundle, comment: "")
   static let watch = NSLocalizedString("Watch", bundle: Strings.languageBundle, comment: "")
+  static let done = NSLocalizedString("Done", bundle: Strings.languageBundle, comment: "")
   static let continueStr = NSLocalizedString("Continue", bundle: Strings.languageBundle, comment: "")
   static let retry = NSLocalizedString("Retry", bundle: Strings.languageBundle, comment: "")
+  static let settings = NSLocalizedString("Settings", bundle: Strings.languageBundle, comment: "")
   
   static let failed = NSLocalizedString("Failed", bundle: Strings.languageBundle, comment: "")
   static let failedToLoadVideo = NSLocalizedString("Failed to load video. Do you want to try again?", bundle: Strings.languageBundle, comment: "")
+  
+  static let account = NSLocalizedString("Account", bundle: Strings.languageBundle, comment: "")
+  static let language = NSLocalizedString("Language", bundle: Strings.languageBundle, comment: "")
+  
+  static let logIn = NSLocalizedString("Log In", bundle: Strings.languageBundle, comment: "")
+  static let logOut = NSLocalizedString("Log Out", bundle: Strings.languageBundle, comment: "")
+  static let appLanguage = NSLocalizedString("App Language", bundle: Strings.languageBundle, comment: "")
 }
 
 // Errors

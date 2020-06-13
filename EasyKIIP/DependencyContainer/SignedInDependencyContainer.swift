@@ -81,6 +81,11 @@ public class SignedInDependencyContainer {
     return BookDetailVC(viewModel: viewModel, navigator: navigator)
   }
   
+  func makeSettingVC() -> UIViewController {
+    let viewModel = SettingVM(userSessionRepository: userSessionRepository)
+    return UINavigationController(rootViewController: SettingVC(viewModel: viewModel)) 
+  }
+  
   func makeLessonDetailVC(bookID: Int, lessonID: Int) -> LessonDetailVC {
     let viewModel = LessonDetailViewModel(bookID: bookID,
                                           lessonID: lessonID,
@@ -130,6 +135,7 @@ public class SignedInDependencyContainer {
 
 extension SignedInDependencyContainer: MainVCFactory { }
 extension SignedInDependencyContainer: BookDetailFactory { }
+extension SignedInDependencyContainer: SettingVCFactory { }
 extension SignedInDependencyContainer: LessonDetailVCFactory { }
 extension SignedInDependencyContainer: QuizNewWordVCFactory { }
 extension SignedInDependencyContainer: QuizPracticeVCFactory { }

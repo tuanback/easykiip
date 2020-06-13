@@ -34,6 +34,13 @@
 		177AEC752494996000771DF2 /* RewardAdLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC742494996000771DF2 /* RewardAdLoader.swift */; };
 		177AEC782494A44100771DF2 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC772494A44100771DF2 /* Toast.swift */; };
 		177AEC7A2494BB0200771DF2 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC792494BB0200771DF2 /* ProgressBar.swift */; };
+		177AEC7D2494F48200771DF2 /* SettingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC7C2494F48200771DF2 /* SettingVM.swift */; };
+		177AEC7F2494F49F00771DF2 /* SettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC7E2494F49F00771DF2 /* SettingSection.swift */; };
+		177AEC812494F4B900771DF2 /* SettingSectionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC802494F4B900771DF2 /* SettingSectionItem.swift */; };
+		177AEC832494F53200771DF2 /* SettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC822494F53200771DF2 /* SettingItem.swift */; };
+		177AEC852494F79F00771DF2 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC842494F79F00771DF2 /* SettingVC.swift */; };
+		177AEC872494F84B00771DF2 /* SettingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC862494F84B00771DF2 /* SettingRootView.swift */; };
+		177AEC892495017A00771DF2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC882495017A00771DF2 /* UIViewController+Extension.swift */; };
 		17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
 		17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
 		17954AA2245D028200C8CC95 /* book_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A99245D025400C8CC95 /* book_0.jpg */; };
@@ -314,6 +321,13 @@
 		177AEC742494996000771DF2 /* RewardAdLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardAdLoader.swift; sourceTree = "<group>"; };
 		177AEC772494A44100771DF2 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		177AEC792494BB0200771DF2 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		177AEC7C2494F48200771DF2 /* SettingVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVM.swift; sourceTree = "<group>"; };
+		177AEC7E2494F49F00771DF2 /* SettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSection.swift; sourceTree = "<group>"; };
+		177AEC802494F4B900771DF2 /* SettingSectionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSectionItem.swift; sourceTree = "<group>"; };
+		177AEC822494F53200771DF2 /* SettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItem.swift; sourceTree = "<group>"; };
+		177AEC842494F79F00771DF2 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
+		177AEC862494F84B00771DF2 /* SettingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRootView.swift; sourceTree = "<group>"; };
+		177AEC882495017A00771DF2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		17954A89245CFC9D00C8CC95 /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
 		17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavViewModel.swift; sourceTree = "<group>"; };
 		17954A93245D025300C8CC95 /* book_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_6.jpg; sourceTree = "<group>"; };
@@ -591,6 +605,7 @@
 		1766FF9E245A5D8F008B263D /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				177AEC7B2494F46800771DF2 /* SettingVC */,
 				17D98F8A248CB4260049F5BB /* QuizVC */,
 				17F57F9B2478AA5C00F26EF4 /* Navigator */,
 				173842562471589200BEFE2F /* LessonDetailVC */,
@@ -646,6 +661,7 @@
 			children = (
 				1766FFC7245A72CC008B263D /* UIColor_Extension.swift */,
 				1766FFD5245ABCF6008B263D /* UIFront_Extension.swift */,
+				177AEC882495017A00771DF2 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -744,6 +760,19 @@
 				177AEC792494BB0200771DF2 /* ProgressBar.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		177AEC7B2494F46800771DF2 /* SettingVC */ = {
+			isa = PBXGroup;
+			children = (
+				177AEC7C2494F48200771DF2 /* SettingVM.swift */,
+				177AEC7E2494F49F00771DF2 /* SettingSection.swift */,
+				177AEC802494F4B900771DF2 /* SettingSectionItem.swift */,
+				177AEC822494F53200771DF2 /* SettingItem.swift */,
+				177AEC842494F79F00771DF2 /* SettingVC.swift */,
+				177AEC862494F84B00771DF2 /* SettingRootView.swift */,
+			);
+			path = SettingVC;
 			sourceTree = "<group>";
 		};
 		17954A87245CFC2B00C8CC95 /* MainVC */ = {
@@ -1964,6 +1993,7 @@
 				17E7F18224681B12008667FB /* FirestoreKey.swift in Sources */,
 				17FBF6FC245BEBEA00A65233 /* WelcomeViewModel.swift in Sources */,
 				17F5C0A2249114B2001ABA43 /* LessonDetailNavigator.swift in Sources */,
+				177AEC7F2494F49F00771DF2 /* SettingSection.swift in Sources */,
 				17FBF71A245BEC1C00A65233 /* LaunchVC.swift in Sources */,
 				177AEC752494996000771DF2 /* RewardAdLoader.swift in Sources */,
 				17FBF724245BEC2D00A65233 /* SignedInDependencyContainer.swift in Sources */,
@@ -1974,6 +2004,7 @@
 				17F57F992478A9FE00F26EF4 /* Navigator.swift in Sources */,
 				17F30EE7246AD1C6008040BE /* AdsIdentifier.swift in Sources */,
 				17CBE67D247AA301005D4CFD /* SelectLanguageVC.swift in Sources */,
+				177AEC812494F4B900771DF2 /* SettingSectionItem.swift in Sources */,
 				17F57FA62478B62500F26EF4 /* MainNavigator.swift in Sources */,
 				17FBF714245BEC1300A65233 /* LaunchViewModel.swift in Sources */,
 				17FBF709245BEBFF00A65233 /* LoginRootView.swift in Sources */,
@@ -1987,6 +2018,7 @@
 				17FBF735245CE6D900A65233 /* FirebaseUserSessionDataStore.swift in Sources */,
 				17CBE671247A078E005D4CFD /* VocabListVC.swift in Sources */,
 				177AEC702494615600771DF2 /* QuizEndRootView.swift in Sources */,
+				177AEC872494F84B00771DF2 /* SettingRootView.swift in Sources */,
 				1732847C248D124900103B5A /* QuizVC.swift in Sources */,
 				177AEC7A2494BB0200771DF2 /* ProgressBar.swift in Sources */,
 				17CBE66D247A075A005D4CFD /* ReadingListVC.swift in Sources */,
@@ -2002,6 +2034,7 @@
 				17FBF6E0245BEBB600A65233 /* UIFront_Extension.swift in Sources */,
 				17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */,
 				17CBE6652479FE0F005D4CFD /* BookDetailNavigator.swift in Sources */,
+				177AEC832494F53200771DF2 /* SettingItem.swift in Sources */,
 				17FBF6EF245BEBCF00A65233 /* NiblessViewController.swift in Sources */,
 				17FBF717245BEC1800A65233 /* LaunchRootView.swift in Sources */,
 				177AEC73249462C800771DF2 /* AdsLargeTemplateView.swift in Sources */,
@@ -2010,11 +2043,14 @@
 				17CBE680247AAC2F005D4CFD /* AppValuesStorage.swift in Sources */,
 				17FBF706245BEBF900A65233 /* LoginViewModel.swift in Sources */,
 				1738425424712C2900BEFE2F /* AdsSmallTemplateView.swift in Sources */,
+				177AEC892495017A00771DF2 /* UIViewController+Extension.swift in Sources */,
 				177AEC6E249460CA00771DF2 /* QuizEndVC.swift in Sources */,
 				17FBF71D245BEC2300A65233 /* AppDenpendencyContainer.swift in Sources */,
 				17FBF6DE245BEBB000A65233 /* UIColor_Extension.swift in Sources */,
 				17FBF6F5245BEBDC00A65233 /* MainRootView.swift in Sources */,
+				177AEC7D2494F48200771DF2 /* SettingVM.swift in Sources */,
 				17FBF6E9245BEBC500A65233 /* NiblessView.swift in Sources */,
+				177AEC852494F79F00771DF2 /* SettingVC.swift in Sources */,
 				17FBF6F2245BEBD700A65233 /* MainViewModel.swift in Sources */,
 				17D98F87248CB34B0049F5BB /* IconName.swift in Sources */,
 				17F5C097248FB925001ABA43 /* QuizNewWordRootView.swift in Sources */,

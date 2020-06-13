@@ -13,9 +13,10 @@ class MainNavigator: Navigator {
   
   enum Destination {
     case bookDetail(bookID: Int, bookName: String)
+    case setting
   }
   
-  typealias Factory = BookDetailFactory
+  typealias Factory = BookDetailFactory & SettingVCFactory
   private let factory: Factory
   
   init(factory: Factory) {
@@ -46,13 +47,17 @@ class MainNavigator: Navigator {
     switch destination {
     case .bookDetail(let bookID, let bookName):
       return factory.makeBookDetailVC(bookID: bookID, bookName: bookName)
+    case .setting:
+      return factory.makeSettingVC()
     }
   }
   
 }
 
 protocol BookDetailFactory {
-  
   func makeBookDetailVC(bookID: Int, bookName: String) -> BookDetailVC
-  
+}
+
+protocol SettingVCFactory {
+  func makeSettingVC() -> UIViewController
 }

@@ -68,7 +68,7 @@ class MainVC: NiblessViewController {
   }
   
   @objc func handleSettingButtonClicked(_ barButton: UIBarButtonItem) {
-    viewModel.handleSignoutClicked()
+    viewModel.handleSettingButtonClicked()
   }
   
   private func observeViewModel() {

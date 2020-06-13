@@ -74,4 +74,8 @@ public class MainViewModel {
     userSessionRepository.signOut()
     oNavigation.accept(.dismiss)
   }
+  
+  func handleSettingButtonClicked() {
+    oNavigation.accept(.present(destination: .setting))
+  }
 }

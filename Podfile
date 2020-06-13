@@ -16,6 +16,7 @@ target 'EasyKIIP' do
   pod 'Google-Mobile-Ads-SDK'
   pod 'SnapKit'
   pod 'SwiftDate'
+  pod 'RxDataSources'
   
   target 'EasyKIIPTests' do
     inherit! :search_paths

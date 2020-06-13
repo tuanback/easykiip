@@ -75,10 +75,6 @@ class QuizVC: NiblessViewController {
     showHeartFilledToastIfNeeded()
   }
   
-  func hideNavBar() {
-    navigationController?.isNavigationBarHidden = true
-  }
-  
   @objc func handleCloseButtonClicked(sender: UIButton) {
     viewModel.handleClose()
   }
