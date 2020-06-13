@@ -17,7 +17,7 @@ class BookDetailCVC: UICollectionViewCell {
   private var labelLessonTranslation: UILabel!
   private var labelLastPracticed: UILabel!
   
-  private var viewProgressContainer: UIView!
+  private var viewProgressContainer: ProgressBar!
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -44,6 +44,9 @@ class BookDetailCVC: UICollectionViewCell {
         labelLastPracticed.text = "\(lastTimeLearnedFromToday) " + Strings.daysAgo
       }
     }
+    
+    viewProgressContainer.isHidden = (viewModel.lastTimeLearnedFromToday == nil)
+    viewProgressContainer.progress = viewModel.proficiency
   }
   
   private func setupViews() {
@@ -109,8 +112,7 @@ class BookDetailCVC: UICollectionViewCell {
     labelContainer.distribution = .fill
     labelContainer.spacing = 8
     
-    viewProgressContainer = UIView()
-    viewProgressContainer.backgroundColor = UIColor.appRed
+    viewProgressContainer = ProgressBar()
     
     let rightStackview = UIStackView(arrangedSubviews: [labelContainer, viewProgressContainer])
     rightStackview.axis = .vertical

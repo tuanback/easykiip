@@ -16,7 +16,7 @@ class VocabCollectionCVC: UICollectionViewCell {
   
   private let containerView = UIView()
   private let labelIndex = UILabel()
-  private let viewProgress = UIView()
+  private let viewProgress = ProgressBar()
   
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -56,7 +56,6 @@ class VocabCollectionCVC: UICollectionViewCell {
       make.center.equalToSuperview()
     }
     
-    viewProgress.backgroundColor = UIColor.appRed
     viewProgress.snp.makeConstraints { (make) in
       make.leading.equalToSuperview().inset(8)
       make.trailing.equalToSuperview().inset(8)
@@ -67,6 +66,7 @@ class VocabCollectionCVC: UICollectionViewCell {
   
   func configCell(viewModel: LearnVocabItemViewModel) {
     labelIndex.text = "\(viewModel.index)"
+    viewProgress.progress = viewModel.proficiency
   }
   
 }

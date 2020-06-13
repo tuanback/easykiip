@@ -33,6 +33,7 @@
 		177AEC73249462C800771DF2 /* AdsLargeTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC72249462C800771DF2 /* AdsLargeTemplateView.swift */; };
 		177AEC752494996000771DF2 /* RewardAdLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC742494996000771DF2 /* RewardAdLoader.swift */; };
 		177AEC782494A44100771DF2 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC772494A44100771DF2 /* Toast.swift */; };
+		177AEC7A2494BB0200771DF2 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC792494BB0200771DF2 /* ProgressBar.swift */; };
 		17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
 		17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
 		17954AA2245D028200C8CC95 /* book_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A99245D025400C8CC95 /* book_0.jpg */; };
@@ -312,6 +313,7 @@
 		177AEC72249462C800771DF2 /* AdsLargeTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsLargeTemplateView.swift; sourceTree = "<group>"; };
 		177AEC742494996000771DF2 /* RewardAdLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardAdLoader.swift; sourceTree = "<group>"; };
 		177AEC772494A44100771DF2 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		177AEC792494BB0200771DF2 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		17954A89245CFC9D00C8CC95 /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
 		17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavViewModel.swift; sourceTree = "<group>"; };
 		17954A93245D025300C8CC95 /* book_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_6.jpg; sourceTree = "<group>"; };
@@ -739,6 +741,7 @@
 			isa = PBXGroup;
 			children = (
 				177AEC772494A44100771DF2 /* Toast.swift */,
+				177AEC792494BB0200771DF2 /* ProgressBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1985,6 +1988,7 @@
 				17CBE671247A078E005D4CFD /* VocabListVC.swift in Sources */,
 				177AEC702494615600771DF2 /* QuizEndRootView.swift in Sources */,
 				1732847C248D124900103B5A /* QuizVC.swift in Sources */,
+				177AEC7A2494BB0200771DF2 /* ProgressBar.swift in Sources */,
 				17CBE66D247A075A005D4CFD /* ReadingListVC.swift in Sources */,
 				17F30EEA246B4A76008040BE /* BookDetailVC.swift in Sources */,
 				1738425B24715CB600BEFE2F /* LessonDetailVC.swift in Sources */,

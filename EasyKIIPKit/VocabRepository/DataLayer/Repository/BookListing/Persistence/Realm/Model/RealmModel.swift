@@ -174,7 +174,7 @@ class RealmLessonHistory: Object {
   }
   
   func calculateProficiency() -> UInt8 {
-    guard vocabsHistory.count > 0 else { return 100 }
+    guard vocabsHistory.count > 0 else { return 0 }
     let total = vocabsHistory.reduce(0) { (result, vocabHistory) -> UInt in
       result + UInt(vocabHistory.proficiency)
     }

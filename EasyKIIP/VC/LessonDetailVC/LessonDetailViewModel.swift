@@ -209,7 +209,9 @@ class LessonDetailViewModel {
           collectionID += 1
           let viewModel = convertVocabsToLearnVocabItemVMs(index: collectionID, vocabs: tempVocabs)
           viewModels.append(viewModel)
+          i += 1
           tempVocabs.removeAll()
+          continue
         }
         
         tempVocabs.append(vocabs[i])
