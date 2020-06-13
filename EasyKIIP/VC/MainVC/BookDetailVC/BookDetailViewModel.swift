@@ -73,7 +73,6 @@ class BookDetailViewModel {
       .disposed(by: disposeBag)
     
     observable
-      .debug()
       .subscribe(onNext: { [weak self] _ in
         self?.isLoading.accept(false)
       })

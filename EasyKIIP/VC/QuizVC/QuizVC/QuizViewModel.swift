@@ -63,7 +63,6 @@ class QuizViewModel {
       Observable.just(true),
       rHeart.compactMap{ $0 }.map({ _ in return false })
     )
-    .debug()
     .asDriver(onErrorJustReturn: true)
   }
   
@@ -118,11 +117,23 @@ class QuizViewModel {
   }
   
   func handleAnswer(for question: NewWordQuestion) {
+    
+    if let numberOfHeart = rHeart.value?.0, numberOfHeart <= 0 {
+      showMessageToWatchVideoToRefillHeart()
+      return
+    }
+    
     let q = Question.newWord(question)
     quizEngine.handleAnswer(for: q, answer: "")
   }
   
   func handleAnswer(for question: PracticeQuestion, answer: String) {
+    
+    if let numberOfHeart = rHeart.value?.0, numberOfHeart <= 0 {
+      showMessageToWatchVideoToRefillHeart()
+      return
+    }
+    
     let q = Question.practice(question)
     quizEngine.handleAnswer(for: q, answer: answer)
   }
@@ -154,6 +165,26 @@ class QuizViewModel {
   
   func setEndQuizAd(ad: GADUnifiedNativeAd) {
     endQuizAd = ad
+  }
+  
+  func handleCannotPresentVideo() {
+    
+    let quitHandler: ()->() = { [weak self] in
+      self?.rNavigationEvent.accept(.dismiss)
+    }
+    let quitAction = ErrorAction(title: Strings.quit,
+                                 style: .destructive,
+                                 handler: quitHandler)
+    
+    let retryHandler: ()->() = { [weak self] in
+      self?.rNavigationEvent.accept(.present(destination: .showVideoAds))
+    }
+    let retryAction = ErrorAction(title: Strings.retry,
+                                 style: .default,
+                                 handler: retryHandler)
+    
+    let alertWithAction = AlertWithAction(title: Strings.failed, message: Strings.failedToLoadVideo, actions: [quitAction, retryAction] )
+    rAlerts.accept(alertWithAction)
   }
 }
 
@@ -211,7 +242,7 @@ extension QuizViewModel: QuizEngineDelegate {
   func quizEngine(numberOfHeart: Int, totalHeart: Int) {
     rHeart.accept((numberOfHeart, totalHeart))
     
-    if numberOfHeart == 0 {
+    if numberOfHeart <= 0 {
       showMessageToWatchVideoToRefillHeart()
     }
   }

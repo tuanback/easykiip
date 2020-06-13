@@ -66,6 +66,10 @@ extension Strings {
   static let cancel = NSLocalizedString("Cancel", bundle: Strings.languageBundle, comment: "")
   static let watch = NSLocalizedString("Watch", bundle: Strings.languageBundle, comment: "")
   static let continueStr = NSLocalizedString("Continue", bundle: Strings.languageBundle, comment: "")
+  static let retry = NSLocalizedString("Retry", bundle: Strings.languageBundle, comment: "")
+  
+  static let failed = NSLocalizedString("Failed", bundle: Strings.languageBundle, comment: "")
+  static let failedToLoadVideo = NSLocalizedString("Failed to load video. Do you want to try again?", bundle: Strings.languageBundle, comment: "")
 }
 
 // Errors
@@ -78,4 +82,5 @@ extension Strings {
   
   static let outOfHeart = NSLocalizedString("Out of heart", bundle: Strings.languageBundle, comment: "")
   static let youRanOutOfTheHeart = NSLocalizedString("You ran out of the heart. Do you want to watch a video ads to refill the heart?", bundle: Strings.languageBundle, comment: "")
+  static let heartsAreRefilled = NSLocalizedString("Heart are refilled", bundle: Strings.languageBundle, comment: "")
 }

@@ -31,6 +31,8 @@
 		177AEC6E249460CA00771DF2 /* QuizEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC6D249460CA00771DF2 /* QuizEndVC.swift */; };
 		177AEC702494615600771DF2 /* QuizEndRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC6F2494615600771DF2 /* QuizEndRootView.swift */; };
 		177AEC73249462C800771DF2 /* AdsLargeTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC72249462C800771DF2 /* AdsLargeTemplateView.swift */; };
+		177AEC752494996000771DF2 /* RewardAdLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC742494996000771DF2 /* RewardAdLoader.swift */; };
+		177AEC782494A44100771DF2 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC772494A44100771DF2 /* Toast.swift */; };
 		17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
 		17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
 		17954AA2245D028200C8CC95 /* book_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A99245D025400C8CC95 /* book_0.jpg */; };
@@ -308,6 +310,8 @@
 		177AEC6D249460CA00771DF2 /* QuizEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEndVC.swift; sourceTree = "<group>"; };
 		177AEC6F2494615600771DF2 /* QuizEndRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEndRootView.swift; sourceTree = "<group>"; };
 		177AEC72249462C800771DF2 /* AdsLargeTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdsLargeTemplateView.swift; sourceTree = "<group>"; };
+		177AEC742494996000771DF2 /* RewardAdLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardAdLoader.swift; sourceTree = "<group>"; };
+		177AEC772494A44100771DF2 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		17954A89245CFC9D00C8CC95 /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
 		17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavViewModel.swift; sourceTree = "<group>"; };
 		17954A93245D025300C8CC95 /* book_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_6.jpg; sourceTree = "<group>"; };
@@ -598,6 +602,7 @@
 		1766FF9F245A5D9A008B263D /* Reuseable */ = {
 			isa = PBXGroup;
 			children = (
+				177AEC762494A43400771DF2 /* View */,
 				17A8A2F6246C99F600794C64 /* Ads */,
 				1766FFC6245A72B9008B263D /* Extension */,
 				1766FFB1245A5F3F008B263D /* Navigation */,
@@ -730,6 +735,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		177AEC762494A43400771DF2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				177AEC772494A44100771DF2 /* Toast.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		17954A87245CFC2B00C8CC95 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -827,6 +840,7 @@
 			children = (
 				177AEC71249462A300771DF2 /* View */,
 				177AEC6324944FA800771DF2 /* NativeAdLoader.swift */,
+				177AEC742494996000771DF2 /* RewardAdLoader.swift */,
 			);
 			path = Ads;
 			sourceTree = "<group>";
@@ -1948,6 +1962,7 @@
 				17FBF6FC245BEBEA00A65233 /* WelcomeViewModel.swift in Sources */,
 				17F5C0A2249114B2001ABA43 /* LessonDetailNavigator.swift in Sources */,
 				17FBF71A245BEC1C00A65233 /* LaunchVC.swift in Sources */,
+				177AEC752494996000771DF2 /* RewardAdLoader.swift in Sources */,
 				17FBF724245BEC2D00A65233 /* SignedInDependencyContainer.swift in Sources */,
 				17FBF6FF245BEBEE00A65233 /* WelcomeRootView.swift in Sources */,
 				17F5C099249032BB001ABA43 /* QuizPracticeVC.swift in Sources */,
@@ -1977,6 +1992,7 @@
 				17384258247158D700BEFE2F /* LessonDetailViewModel.swift in Sources */,
 				17FBF6DA245BEBA200A65233 /* AppSetting.swift in Sources */,
 				17F57FA32478B40800F26EF4 /* MainNavConNavigator.swift in Sources */,
+				177AEC782494A44100771DF2 /* Toast.swift in Sources */,
 				17FBF738245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */,
 				17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */,
 				17FBF6E0245BEBB600A65233 /* UIFront_Extension.swift in Sources */,

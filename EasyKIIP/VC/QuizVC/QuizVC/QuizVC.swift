@@ -32,11 +32,17 @@ class QuizVC: NiblessViewController {
   private var practiceVC: QuizPracticeVC?
   private var practiceVM: QuizPracticeViewModel?
   
-  private lazy var adUnitID = AdsIdentifier.id(for: .bookDetailItem)
-  private lazy var adLoader = NativeAdLoader(adUnitID: adUnitID,
+  private lazy var nativeAdUnitID = AdsIdentifier.id(for: .bookDetailItem)
+  private lazy var adLoader = NativeAdLoader(adUnitID: nativeAdUnitID,
                                              numberOfAdsToLoad: 1,
                                              viewController: self,
                                              delegate: self)
+  
+  private lazy var rewardAdUnitID = AdsIdentifier.id(for: .rewardVideo)
+  private lazy var rewardAdLoader = RewardAdLoader(adUnitID: rewardAdUnitID,
+                                                   delegate: self)
+  
+  private var didShowVideoAds = false
   
   init(viewModel: QuizViewModel,
        navigator: QuizNavigator) {
@@ -60,7 +66,13 @@ class QuizVC: NiblessViewController {
     
     hideNavBar()
     adLoader.load()
+    rewardAdLoader.load()
     observeViewModel()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    showHeartFilledToastIfNeeded()
   }
   
   func hideNavBar() {
@@ -104,12 +116,10 @@ class QuizVC: NiblessViewController {
       .disposed(by: disposeBag)
     
     viewModel.oHeartViewHidden
-      .debug()
       .drive(stackViewHeart.rx.isHidden)
       .disposed(by: disposeBag)
     
     viewModel.oHeart
-      .debug()
       .observeOn(MainScheduler.asyncInstance)
       .subscribe(onNext: { [weak self] (numberOfHeart, totalHeart) in
         self?.setupStackViewHeart(numberOfHeart: numberOfHeart, totalHeart: totalHeart)
@@ -133,9 +143,25 @@ class QuizVC: NiblessViewController {
         case .pop:
           self?.navigationController?.popViewController(animated: true)
         case .present(let destination):
-          self?.navigator.navigate(from: strongSelf, to: destination, type: .present)
+          switch destination {
+          case .showVideoAds:
+            if let present = self?.rewardAdLoader.present(viewController: strongSelf),
+              !present {
+              strongSelf.viewModel.handleCannotPresentVideo()
+            }
+          default:
+            self?.navigator.navigate(from: strongSelf, to: destination, type: .present)
+          }
         case .push(let destination):
-          self?.navigator.navigate(from: strongSelf, to: destination, type: .push)
+          switch destination {
+          case .showVideoAds:
+            if let present = self?.rewardAdLoader.present(viewController: strongSelf),
+              !present {
+              strongSelf.viewModel.handleCannotPresentVideo()
+            }
+          default:
+            self?.navigator.navigate(from: strongSelf, to: destination, type: .push)
+          }
         }
       })
       .disposed(by: disposeBag)
@@ -232,6 +258,21 @@ extension QuizVC: NativeAdLoaderDelegate {
   func adLoaderFinishLoading(ads: [GADUnifiedNativeAd]) {
     if ads.count > 0 {
       viewModel.setEndQuizAd(ad: ads[0])
+    }
+  }
+}
+
+extension QuizVC: RewardAdLoaderDelegate {
+  func rewardAdLoader(userDidEarn reward: GADAdReward) {
+    viewModel.handleVideoAdsWatchingFinished()
+    didShowVideoAds = true
+    
+  }
+  
+  func showHeartFilledToastIfNeeded() {
+    if didShowVideoAds {
+      view.makeToast(Strings.heartsAreRefilled, duration: 1.5, position: .bottom)
+      didShowVideoAds = false
     }
   }
 }
