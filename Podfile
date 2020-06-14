@@ -7,6 +7,7 @@ target 'EasyKIIP' do
 
   # Pods for EasyKIIP
   pod 'Action'
+  pod 'FBSDKLoginKit'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Crashlytics'

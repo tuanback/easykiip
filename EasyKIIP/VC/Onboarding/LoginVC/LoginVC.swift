@@ -76,7 +76,7 @@ extension LoginVC: GIDSignInDelegate {
     guard let authentication = user.authentication else { return }
     let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                    accessToken: authentication.accessToken)
-    viewModel.googleLogin(with: credential)
+    viewModel.login(with: credential, provider: .google)
   }
   
   /*! @fn showTextInputPromptWithMessage
@@ -87,11 +87,11 @@ extension LoginVC: GIDSignInDelegate {
   func showTextInputPrompt(withMessage message: String,
                            completionBlock: @escaping ((Bool, String?) -> Void)) {
     let prompt = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+    let cancelAction = UIAlertAction(title: Strings.cancel, style: .cancel) { _ in
       completionBlock(false, nil)
     }
     weak var weakPrompt = prompt
-    let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+    let okAction = UIAlertAction(title: Strings.ok, style: .default) { _ in
       guard let text = weakPrompt?.textFields?.first?.text else { return }
       completionBlock(true, text)
     }
@@ -103,7 +103,7 @@ extension LoginVC: GIDSignInDelegate {
   
   func showMessagePrompt(_ message: String) {
     let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    let okAction = UIAlertAction(title: Strings.ok, style: .default, handler: nil)
     alert.addAction(okAction)
     present(alert, animated: false, completion: nil)
   }

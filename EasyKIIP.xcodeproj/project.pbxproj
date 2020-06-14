@@ -50,6 +50,7 @@
 		177AEC9A2495AC1B00771DF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 177AEC982495AC1B00771DF2 /* InfoPlist.strings */; };
 		177AEC9D2495AC1B00771DF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 177AEC9B2495AC1B00771DF2 /* InfoPlist.strings */; };
 		177AEC9F2495B77C00771DF2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC9E2495B77C00771DF2 /* Common.swift */; };
+		177AECA12495F4B800771DF2 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 177AECA02495F4B800771DF2 /* KakaoOpenSDK.framework */; };
 		17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
 		17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
 		17954AA2245D028200C8CC95 /* book_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A99245D025400C8CC95 /* book_0.jpg */; };
@@ -346,6 +347,7 @@
 		177AEC992495AC1B00771DF2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		177AEC9C2495AC1B00771DF2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		177AEC9E2495B77C00771DF2 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		177AECA02495F4B800771DF2 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = Framework/KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		17954A89245CFC9D00C8CC95 /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
 		17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavViewModel.swift; sourceTree = "<group>"; };
 		17954A93245D025300C8CC95 /* book_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_6.jpg; sourceTree = "<group>"; };
@@ -502,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B70AD2244CF1E500C67334 /* EasyKIIPKit.framework in Frameworks */,
+				177AECA12495F4B800771DF2 /* KakaoOpenSDK.framework in Frameworks */,
 				17B70B6D245580B700C67334 /* UserSession.framework in Frameworks */,
 				805274668FD7FD7D0F7E3428 /* Pods_EasyKIIP.framework in Frameworks */,
 			);
@@ -995,6 +998,7 @@
 		17B70AD1244CF1E500C67334 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				177AECA02495F4B800771DF2 /* KakaoOpenSDK.framework */,
 				95C39FF132AEDBD39407410F /* Pods_EasyKIIP.framework */,
 				3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */,
 				12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */,
@@ -2434,6 +2438,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CW3DR8XJT7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = EasyKIIP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2457,6 +2465,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CW3DR8XJT7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
 				INFOPLIST_FILE = EasyKIIP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

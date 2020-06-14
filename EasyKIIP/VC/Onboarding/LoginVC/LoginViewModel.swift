@@ -12,6 +12,7 @@ import RxSwift
 import RxCocoa
 import Firebase
 import GoogleSignIn
+import KakaoOpenSDK
 
 public class LoginViewModel {
   
@@ -35,11 +36,11 @@ public class LoginViewModel {
     self.signedInResponder = signedInResponder
   }
   
-  func googleLogin(with credential: AuthCredential) {
+  func login(with credential: AuthCredential, provider: Provider) {
     guard let userSessionRepository = self.userSessionRepository as? FirebaseUserSessionRepository else {
       return
     }
-    let observerble = userSessionRepository.signIn(with: credential, provider: .google)
+    let observerble = userSessionRepository.signIn(with: credential, provider: provider)
     
     observerble
       .subscribe(
@@ -80,6 +81,23 @@ public class LoginViewModel {
       userSessionRepository.handleUserSelectedVerificationCode(text)
     default:
       break
+    }
+  }
+  
+  func kakaoLogin() {
+    guard let session = KOSession.shared() else { return }
+    
+    if session.isOpen() {
+      session.close()
+    }
+    
+    session.open { (error) -> Void in
+      if let err = error {
+        print(err)
+      }
+      else {
+        print(session.token)
+      }
     }
   }
   
