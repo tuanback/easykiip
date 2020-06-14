@@ -18,7 +18,7 @@ public struct AppSetting {
         let languageCode = LanguageCode(rawValue: code) {
         return languageCode
       }
-      return .en
+      return .vi
     }
     
     set {

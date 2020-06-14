@@ -42,6 +42,14 @@
 		177AEC872494F84B00771DF2 /* SettingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC862494F84B00771DF2 /* SettingRootView.swift */; };
 		177AEC892495017A00771DF2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC882495017A00771DF2 /* UIViewController+Extension.swift */; };
 		177AEC8B249596FB00771DF2 /* SettingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC8A249596FB00771DF2 /* SettingNavigator.swift */; };
+		177AEC8E2495A3E500771DF2 /* ChangeLanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC8D2495A3E500771DF2 /* ChangeLanguageViewModel.swift */; };
+		177AEC902495A58400771DF2 /* ChangeLanguageRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC8F2495A58400771DF2 /* ChangeLanguageRootView.swift */; };
+		177AEC922495A61A00771DF2 /* LanguageCode_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC912495A61A00771DF2 /* LanguageCode_Extension.swift */; };
+		177AEC942495A7EB00771DF2 /* ChangeLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC932495A7EB00771DF2 /* ChangeLanguageVC.swift */; };
+		177AEC972495AC1B00771DF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 177AEC952495AC1B00771DF2 /* InfoPlist.strings */; };
+		177AEC9A2495AC1B00771DF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 177AEC982495AC1B00771DF2 /* InfoPlist.strings */; };
+		177AEC9D2495AC1B00771DF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 177AEC9B2495AC1B00771DF2 /* InfoPlist.strings */; };
+		177AEC9F2495B77C00771DF2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC9E2495B77C00771DF2 /* Common.swift */; };
 		17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
 		17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
 		17954AA2245D028200C8CC95 /* book_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A99245D025400C8CC95 /* book_0.jpg */; };
@@ -330,6 +338,14 @@
 		177AEC862494F84B00771DF2 /* SettingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRootView.swift; sourceTree = "<group>"; };
 		177AEC882495017A00771DF2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		177AEC8A249596FB00771DF2 /* SettingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNavigator.swift; sourceTree = "<group>"; };
+		177AEC8D2495A3E500771DF2 /* ChangeLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageViewModel.swift; sourceTree = "<group>"; };
+		177AEC8F2495A58400771DF2 /* ChangeLanguageRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageRootView.swift; sourceTree = "<group>"; };
+		177AEC912495A61A00771DF2 /* LanguageCode_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCode_Extension.swift; sourceTree = "<group>"; };
+		177AEC932495A7EB00771DF2 /* ChangeLanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLanguageVC.swift; sourceTree = "<group>"; };
+		177AEC962495AC1B00771DF2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		177AEC992495AC1B00771DF2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		177AEC9C2495AC1B00771DF2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		177AEC9E2495B77C00771DF2 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		17954A89245CFC9D00C8CC95 /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
 		17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavViewModel.swift; sourceTree = "<group>"; };
 		17954A93245D025300C8CC95 /* book_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_6.jpg; sourceTree = "<group>"; };
@@ -664,6 +680,7 @@
 				1766FFC7245A72CC008B263D /* UIColor_Extension.swift */,
 				1766FFD5245ABCF6008B263D /* UIFront_Extension.swift */,
 				177AEC882495017A00771DF2 /* UIViewController+Extension.swift */,
+				177AEC912495A61A00771DF2 /* LanguageCode_Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -677,6 +694,7 @@
 				1766FFD2245AB466008B263D /* AppSetting.swift */,
 				17CBE67F247AAC2F005D4CFD /* AppValuesStorage.swift */,
 				17D98F86248CB34B0049F5BB /* IconName.swift */,
+				177AEC9E2495B77C00771DF2 /* Common.swift */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -767,6 +785,7 @@
 		177AEC7B2494F46800771DF2 /* SettingVC */ = {
 			isa = PBXGroup;
 			children = (
+				177AEC8C2495A37400771DF2 /* ChangeLanguageVC */,
 				177AEC7C2494F48200771DF2 /* SettingVM.swift */,
 				177AEC7E2494F49F00771DF2 /* SettingSection.swift */,
 				177AEC802494F4B900771DF2 /* SettingSectionItem.swift */,
@@ -775,6 +794,16 @@
 				177AEC862494F84B00771DF2 /* SettingRootView.swift */,
 			);
 			path = SettingVC;
+			sourceTree = "<group>";
+		};
+		177AEC8C2495A37400771DF2 /* ChangeLanguageVC */ = {
+			isa = PBXGroup;
+			children = (
+				177AEC8D2495A3E500771DF2 /* ChangeLanguageViewModel.swift */,
+				177AEC8F2495A58400771DF2 /* ChangeLanguageRootView.swift */,
+				177AEC932495A7EB00771DF2 /* ChangeLanguageVC.swift */,
+			);
+			path = ChangeLanguageVC;
 			sourceTree = "<group>";
 		};
 		17954A87245CFC2B00C8CC95 /* MainVC */ = {
@@ -920,6 +949,7 @@
 				17B70A8E244C180500C67334 /* Assets.xcassets */,
 				17B70A90244C180500C67334 /* LaunchScreen.storyboard */,
 				17B70A93244C180500C67334 /* Info.plist */,
+				177AEC982495AC1B00771DF2 /* InfoPlist.strings */,
 				1766FFCF245AB037008B263D /* Localizable.strings */,
 				17A8A2F5246C990B00794C64 /* EasyKIIP-Bridging-Header.h */,
 			);
@@ -945,6 +975,7 @@
 				17B70B34245572C100C67334 /* VocabRepository */,
 				17B70ABC244CF1CD00C67334 /* EasyKIIPKit.h */,
 				17B70ABD244CF1CD00C67334 /* Info.plist */,
+				177AEC952495AC1B00771DF2 /* InfoPlist.strings */,
 			);
 			path = EasyKIIPKit;
 			sourceTree = "<group>";
@@ -1181,6 +1212,7 @@
 				17B70B35245572D600C67334 /* UserSessionRepository */,
 				17B70B5A245580B700C67334 /* UserSession.h */,
 				17B70B5B245580B700C67334 /* Info.plist */,
+				177AEC9B2495AC1B00771DF2 /* InfoPlist.strings */,
 			);
 			path = UserSession;
 			sourceTree = "<group>";
@@ -1689,6 +1721,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */,
+				177AEC9A2495AC1B00771DF2 /* InfoPlist.strings in Resources */,
 				17FBF726245BEC3400A65233 /* Localizable.strings in Resources */,
 				17B70A8F244C180500C67334 /* Assets.xcassets in Resources */,
 				17F5C09E249112B8001ABA43 /* correct.wav in Resources */,
@@ -1716,6 +1749,7 @@
 				17954AA7245D02A200C8CC95 /* book_5.jpg in Resources */,
 				17954AA8245D02A600C8CC95 /* book_6.jpg in Resources */,
 				17954AA6245D029E00C8CC95 /* book_4.jpg in Resources */,
+				177AEC972495AC1B00771DF2 /* InfoPlist.strings in Resources */,
 				17954AA5245D029B00C8CC95 /* book_3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1732,6 +1766,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177AEC9D2495AC1B00771DF2 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1996,6 +2031,7 @@
 				17E7F18224681B12008667FB /* FirestoreKey.swift in Sources */,
 				17FBF6FC245BEBEA00A65233 /* WelcomeViewModel.swift in Sources */,
 				17F5C0A2249114B2001ABA43 /* LessonDetailNavigator.swift in Sources */,
+				177AEC942495A7EB00771DF2 /* ChangeLanguageVC.swift in Sources */,
 				177AEC7F2494F49F00771DF2 /* SettingSection.swift in Sources */,
 				17FBF71A245BEC1C00A65233 /* LaunchVC.swift in Sources */,
 				177AEC752494996000771DF2 /* RewardAdLoader.swift in Sources */,
@@ -2036,13 +2072,16 @@
 				17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */,
 				17FBF6E0245BEBB600A65233 /* UIFront_Extension.swift in Sources */,
 				17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */,
+				177AEC8E2495A3E500771DF2 /* ChangeLanguageViewModel.swift in Sources */,
 				17CBE6652479FE0F005D4CFD /* BookDetailNavigator.swift in Sources */,
 				177AEC832494F53200771DF2 /* SettingItem.swift in Sources */,
 				17FBF6EF245BEBCF00A65233 /* NiblessViewController.swift in Sources */,
 				17FBF717245BEC1800A65233 /* LaunchRootView.swift in Sources */,
 				177AEC73249462C800771DF2 /* AdsLargeTemplateView.swift in Sources */,
 				17F57F9D2478AA7300F26EF4 /* LaunchNavigator.swift in Sources */,
+				177AEC9F2495B77C00771DF2 /* Common.swift in Sources */,
 				17FBF711245BEC0E00A65233 /* OnboardingVM.swift in Sources */,
+				177AEC922495A61A00771DF2 /* LanguageCode_Extension.swift in Sources */,
 				177AEC8B249596FB00771DF2 /* SettingNavigator.swift in Sources */,
 				17CBE680247AAC2F005D4CFD /* AppValuesStorage.swift in Sources */,
 				17FBF706245BEBF900A65233 /* LoginViewModel.swift in Sources */,
@@ -2071,6 +2110,7 @@
 				17FBF6F8245BEBE100A65233 /* MainVC.swift in Sources */,
 				17CBE674247A19CE005D4CFD /* LearnVocabListRootView.swift in Sources */,
 				17FBF702245BEBF200A65233 /* WelcomeVC.swift in Sources */,
+				177AEC902495A58400771DF2 /* ChangeLanguageRootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2232,6 +2272,30 @@
 				1766FFD0245AB037008B263D /* vi */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		177AEC952495AC1B00771DF2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				177AEC962495AC1B00771DF2 /* vi */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		177AEC982495AC1B00771DF2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				177AEC992495AC1B00771DF2 /* vi */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		177AEC9B2495AC1B00771DF2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				177AEC9C2495AC1B00771DF2 /* vi */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		17B70A90244C180500C67334 /* LaunchScreen.storyboard */ = {

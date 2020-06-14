@@ -89,7 +89,8 @@ public class SignedInDependencyContainer {
   }
   
   func makeLanguageSettingVC() -> UIViewController {
-    return UIViewController()
+    let viewModel = ChangeLanguageViewModel()
+    return ChangeLanguageVC(viewModel: viewModel)
   }
   
   func makeLoginVC(signedInResponder: SignedInResponder?) -> LoginVC {

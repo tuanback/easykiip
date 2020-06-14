@@ -13,13 +13,16 @@ import EasyKIIPKit
 
 class MainVC: NiblessViewController {
   
+  private var buttonSetting: UIButton!
+  
   private let viewModel: MainViewModel
   private let navigator: MainNavigator
   
   private let disposeBag = DisposeBag()
+  private var imageSettingButton: UIImage? = UIImage(named: IconName.avatar)
   
   init(viewModel: MainViewModel,
-              navigator: MainNavigator) {
+       navigator: MainNavigator) {
     self.viewModel = viewModel
     self.navigator = navigator
     super.init()
@@ -35,6 +38,11 @@ class MainVC: NiblessViewController {
     observeViewModel()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    setupMenuButton()
+  }
+  
   deinit {
     print("Deinit")
   }
@@ -46,7 +54,6 @@ class MainVC: NiblessViewController {
     navigationItem.searchController = searchController
     
     //navigationController?.navigationBar.prefersLargeTitles = true
-    setupMenuButton()
     /*
      let frame = CGRect(x: 0, y: 0, width: 300, height: 30)
      let titleView = UILabel(frame: frame)
@@ -57,13 +64,15 @@ class MainVC: NiblessViewController {
   }
   
   private func setupMenuButton() {
-    let button = UIButton()
-    button.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-    button.layer.cornerRadius = 0.5 * button.bounds.size.width
-    button.setImage(UIImage(named: IconName.avatar), for: .normal)
-    button.addTarget(self, action: #selector(handleSettingButtonClicked(_:)), for: .touchUpInside)
+    buttonSetting?.removeFromSuperview()
+    
+    buttonSetting = UIButton()
+    buttonSetting.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+    buttonSetting.layer.cornerRadius = 0.5 * buttonSetting.bounds.size.width
+    buttonSetting.setImage(imageSettingButton, for: .normal)
+    buttonSetting.addTarget(self, action: #selector(handleSettingButtonClicked(_:)), for: .touchUpInside)
     let barButton = UIBarButtonItem()
-    barButton.customView = button
+    barButton.customView = buttonSetting
     self.navigationItem.rightBarButtonItem = barButton
   }
   
@@ -72,6 +81,21 @@ class MainVC: NiblessViewController {
   }
   
   private func observeViewModel() {
+    
+    viewModel.oAvatarURL
+      .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+      .subscribe(onNext: { [weak self] url in
+        if let data = try? Data(contentsOf: url),
+          let image = UIImage(data: data) {
+          let resizeImage = Common.resizeImage(image, newHeight: 30)
+          self?.imageSettingButton = resizeImage
+          DispatchQueue.main.async {
+            self?.buttonSetting.setImage(resizeImage, for: .normal)
+          }
+        }
+      })
+      .disposed(by: disposeBag)
+    
     viewModel.oNavigation
       .subscribe(onNext: { [weak self] event in
         guard let strongSelf = self else { return }

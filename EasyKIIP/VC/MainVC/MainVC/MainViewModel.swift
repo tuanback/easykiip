@@ -28,6 +28,11 @@ public class MainViewModel {
   
   private var books: [Book] = []
   
+  var oAvatarURL: Observable<URL> {
+    return rAvatarURL.compactMap { $0 }
+  }
+  private var rAvatarURL = BehaviorRelay<URL?>(value: nil)
+  
   var oNavigation = PublishRelay<NavigationEvent<MainNavigator.Destination>>()
   
   public init(userSessionRepository: UserSessionRepository,
@@ -35,6 +40,11 @@ public class MainViewModel {
     self.userSessionRepository = userSessionRepository
     self.vocabRepository = vocabRepository
     self.initBookList()
+    
+    if let avatarString = userSessionRepository.readUserSession()?.profile.avatar,
+      let url = URL(string: avatarString) {
+      rAvatarURL.accept(url)
+    }
   }
   
   deinit {

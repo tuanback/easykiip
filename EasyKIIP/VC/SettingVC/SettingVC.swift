@@ -31,12 +31,12 @@ class SettingVC: NiblessViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     observeViewModel()
-    setupNavBar()
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     viewModel.loadSettingItems()
+    setupNavBar()
   }
   
   private func setupNavBar() {
