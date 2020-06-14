@@ -40,6 +40,7 @@ class MainVC: NiblessViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    viewModel.reload()
     setupMenuButton()
   }
   
@@ -85,12 +86,19 @@ class MainVC: NiblessViewController {
     viewModel.oAvatarURL
       .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
       .subscribe(onNext: { [weak self] url in
-        if let data = try? Data(contentsOf: url),
+        if let url = url,
+          let data = try? Data(contentsOf: url),
           let image = UIImage(data: data) {
           let resizeImage = Common.resizeImage(image, newHeight: 30)
           self?.imageSettingButton = resizeImage
           DispatchQueue.main.async {
             self?.buttonSetting.setImage(resizeImage, for: .normal)
+          }
+        }
+        else {
+          let image = UIImage(named: IconName.avatar)
+          DispatchQueue.main.async {
+            self?.buttonSetting.setImage(image, for: .normal)
           }
         }
       })

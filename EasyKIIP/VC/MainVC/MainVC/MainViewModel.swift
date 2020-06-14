@@ -28,8 +28,8 @@ public class MainViewModel {
   
   private var books: [Book] = []
   
-  var oAvatarURL: Observable<URL> {
-    return rAvatarURL.compactMap { $0 }
+  var oAvatarURL: Observable<URL?> {
+    return rAvatarURL.asObservable()
   }
   private var rAvatarURL = BehaviorRelay<URL?>(value: nil)
   
@@ -40,23 +40,26 @@ public class MainViewModel {
     self.userSessionRepository = userSessionRepository
     self.vocabRepository = vocabRepository
     self.initBookList()
-    
-    if let avatarString = userSessionRepository.readUserSession()?.profile.avatar,
-      let url = URL(string: avatarString) {
-      rAvatarURL.accept(url)
-    }
   }
   
   deinit {
     print("Deinit")
   }
   
+  func reload() {
+    if let avatarString = userSessionRepository.readUserSession()?.profile.avatar,
+      let url = URL(string: avatarString) {
+      rAvatarURL.accept(url)
+    }
+    else {
+      rAvatarURL.accept(nil)
+    }
+  }
+  
   private func initBookList() {
     books = vocabRepository.getListOfBook()
     let itemViewModels = convertToItemViewModel(books: books)
     bookViewModels.accept(itemViewModels)
-    
-    
   }
   
   func getNumberOfBooks() -> Int {

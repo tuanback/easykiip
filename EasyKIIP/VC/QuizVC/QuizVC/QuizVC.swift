@@ -165,6 +165,7 @@ class QuizVC: NiblessViewController {
   
   private func showAlertMessage(alert: AlertWithAction) {
     let alertMessage = UIAlertController(title: alert.title, message: alert.message, preferredStyle: .alert)
+    alertMessage.view.tintColor = UIColor.appRed
     
     for action in alert.actions {
       let alertAction = UIAlertAction(title: action.title, style: action.style) { (_) in
