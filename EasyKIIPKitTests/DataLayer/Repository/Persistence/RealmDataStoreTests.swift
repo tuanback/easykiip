@@ -156,12 +156,12 @@ class RealmDataStoreTests: XCTestCase {
   }
   
   func test_getLessonByID_existedLesson_returnCorrectLesson() {
-    let (_, _, _, lesson, _, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    let (_, _, _, lesson, vocabs, _) = makeSampleVocabsData(into: bundledRealmProvider)
     
     let localLastTimeSynced = (Date() - 3.days).timeIntervalSince1970
     let proficiency = 90
     
-    makeFakeHistory(for: lesson, historyRealmProvider: historyRealmProvider, lastTimeSynced: localLastTimeSynced, proficiency: proficiency)
+    makeFakeHistory(for: lesson, historyRealmProvider: historyRealmProvider, numberOfVocabs: vocabs.count, lastTimeSynced: localLastTimeSynced, proficiency: proficiency)
     
     let l = sut.getLesson(by: lesson.id)
     XCTAssertNotNil(l)
@@ -435,12 +435,12 @@ class RealmDataStoreTests: XCTestCase {
   }
   
   func test_syncLessonProficiency_localLastTimeSyncedLargeThanServerData_KeepLocalData() {
-    let (_, _, _, lesson, _, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    let (_, _, _, lesson, vocabs, _) = makeSampleVocabsData(into: bundledRealmProvider)
     
     let localLastTimeSynced = (Date() - 1.days).timeIntervalSince1970
     let localProficiency = 90
     
-    makeFakeHistory(for: lesson, historyRealmProvider: historyRealmProvider, lastTimeSynced: localLastTimeSynced, proficiency: localProficiency)
+    makeFakeHistory(for: lesson, historyRealmProvider: historyRealmProvider, numberOfVocabs: vocabs.count, lastTimeSynced: localLastTimeSynced, proficiency: localProficiency)
     
     let lastTimeSynced = (Date() - 1.days - 1.hours).timeIntervalSince1970
     let proficiency = 80
@@ -457,12 +457,12 @@ class RealmDataStoreTests: XCTestCase {
   }
   
   func test_syncLessonProficiency_localLastTimeSyncedSmallerThanServerData_SyncServerData() {
-    let (_, _, _, lesson, _, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    let (_, _, _, lesson, vocabs, _) = makeSampleVocabsData(into: bundledRealmProvider)
     
     let localLastTimeSynced = (Date() - 1.days).timeIntervalSince1970
     let localProficiency = 90
     
-    makeFakeHistory(for: lesson, historyRealmProvider: historyRealmProvider, lastTimeSynced: localLastTimeSynced, proficiency: localProficiency)
+    makeFakeHistory(for: lesson, historyRealmProvider: historyRealmProvider, numberOfVocabs: vocabs.count, lastTimeSynced: localLastTimeSynced, proficiency: localProficiency)
     
     let lastTimeSynced = (Date() - 1.hours).timeIntervalSince1970
     let proficiency = 80
@@ -626,12 +626,12 @@ class RealmDataStoreTests: XCTestCase {
   }
   
   func test_getLessonSyncedState_SyncedLesson_ReturnTrue() {
-    let (_, _, _, lesson, _, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    let (_, _, _, lesson, vocabs, _) = makeSampleVocabsData(into: bundledRealmProvider)
     
     let localLastTimeSynced = (Date() - 1.days).timeIntervalSince1970
     let localProficiency = 90
     
-    makeFakeHistory(for: lesson, historyRealmProvider: historyRealmProvider, lastTimeSynced: localLastTimeSynced, proficiency: localProficiency)
+    makeFakeHistory(for: lesson, historyRealmProvider: historyRealmProvider, numberOfVocabs: vocabs.count, lastTimeSynced: localLastTimeSynced, proficiency: localProficiency)
     
     let lastTimeSynced = (Date() - 1.days - 1.hours).timeIntervalSince1970
     let proficiency = 80
@@ -641,12 +641,12 @@ class RealmDataStoreTests: XCTestCase {
   }
   
   func test_getLessonSyncedState_NotSyncedLesson_ReturnFalse() {
-    let (_, _, _, lesson, _, _) = makeSampleVocabsData(into: bundledRealmProvider)
+    let (_, _, _, lesson, vocabs, _) = makeSampleVocabsData(into: bundledRealmProvider)
     
     let localLastTimeSynced = (Date() - 1.days).timeIntervalSince1970
     let localProficiency = 90
     
-    makeFakeHistory(for: lesson, historyRealmProvider: historyRealmProvider, lastTimeSynced: localLastTimeSynced, proficiency: localProficiency)
+    makeFakeHistory(for: lesson, historyRealmProvider: historyRealmProvider, numberOfVocabs: vocabs.count, lastTimeSynced: localLastTimeSynced, proficiency: localProficiency)
     
     let lastTimeSynced = (Date() - 1.hours).timeIntervalSince1970
     let proficiency = 80
@@ -841,6 +841,7 @@ class RealmDataStoreTests: XCTestCase {
   
   private func makeFakeHistory(for lesson: RealmLesson,
                                historyRealmProvider: RealmProvider,
+                               numberOfVocabs: Int,
                                lastTimeSynced: Double,
                                proficiency: Int) {
     let realm = historyRealmProvider.realm
@@ -852,7 +853,7 @@ class RealmDataStoreTests: XCTestCase {
       }
     }
     else {
-      let history = RealmLessonHistory(lessonID: lesson.id, isSynced: true, lastTimeSynced: lastTimeSynced, proficiency: proficiency, lastTimeLearned: nil)
+      let history = RealmLessonHistory(lessonID: lesson.id, numberOfVocabs: numberOfVocabs, isSynced: true, lastTimeSynced: lastTimeSynced, proficiency: proficiency, lastTimeLearned: nil)
       try! realm.write {
         realm.add(history)
       }

@@ -98,6 +98,16 @@ public class KIIPQuizEngine: QuizEngine {
     }
     vocabRepository.markVocabAsMastered(vocabID: vocabID)
     
+    // NOTE: Vocab is marked as mastered, no need to practice more
+    questions.removeAll { (question) -> Bool in
+      switch question {
+      case .newWord(let q):
+        return q.vocabID == vocabID
+      case .practice(let q):
+        return q.vocabID == vocabID
+      }
+    }
+    
     routeToNextQuestion()
   }
   

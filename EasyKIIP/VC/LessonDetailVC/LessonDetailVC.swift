@@ -52,6 +52,15 @@ class LessonDetailVC: NiblessViewController {
     setupViews()
   }
   
+  override func didMove(toParent parent: UIViewController?) {
+    super.didMove(toParent: parent)
+    
+    // NOTE: When the view controller is removed from navigation controller
+    if parent == nil {
+      viewModel.handleFinishLearning()
+    }
+  }
+  
   private func setupViews() {
     
     stackViewButtonContainer.axis = .horizontal

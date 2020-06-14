@@ -163,6 +163,10 @@ class LessonDetailViewModel {
     rNavigationEvent.accept(.present(destination: .quizPractice(bookID: bookID, lessonID: lessonID, vocabs: vocabs)))
   }
   
+  func handleFinishLearning() {
+    vocabRepository.saveLessonPracticeHistory(inBook: bookID, lessonID: lessonID)
+  }
+  
   private func createLearnVocabViewModels(from vocabs: [Vocab]) -> [LearnVocabItemViewModel] {
     // TODO: Create list to learn
     return ToDetailViewModelConverter.convertVocabsToLearnVocabItemVMs(vocabs: vocabs)

@@ -113,8 +113,12 @@ class QuizEndRootView: NiblessView {
     labelAdExplaination.textAlignment =  .center
     labelAdExplaination.numberOfLines = 0
     
+    let viewSeparator = UIView()
+    viewSeparator.backgroundColor = UIColor.appSystemGray3
+    
     viewAdContainer.addSubview(buttonClose)
     viewAdContainer.addSubview(labelAdExplaination)
+    viewAdContainer.addSubview(viewSeparator)
     viewAdContainer.addSubview(adView)
     
     buttonClose.snp.makeConstraints { (make) in
@@ -127,10 +131,18 @@ class QuizEndRootView: NiblessView {
       make.leading.equalTo(buttonClose.snp.trailing).offset(8)
       make.trailing.equalToSuperview().inset(68)
       make.centerY.equalTo(buttonClose.snp.centerY)
+      make.height.greaterThanOrEqualTo(buttonClose.snp.height)
+    }
+    
+    viewSeparator.snp.makeConstraints { (make) in
+      make.leading.equalToSuperview()
+      make.trailing.equalToSuperview()
+      make.height.equalTo(0.5)
+      make.top.equalTo(labelAdExplaination.snp.bottom).offset(8)
     }
     
     adView.snp.makeConstraints { (make) in
-      make.top.equalTo(labelAdExplaination.snp.bottom).offset(32)
+      make.top.equalTo(viewSeparator.snp.bottom).offset(16)
       make.bottom.equalTo(safeAreaInsets.bottom).inset(16)
       make.leading.equalToSuperview().inset(16)
       make.trailing.equalToSuperview().inset(16)

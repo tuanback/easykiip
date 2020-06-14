@@ -40,26 +40,30 @@ class QuizPracticeRootView: NiblessView {
     
     addSubview(stackViewContainer)
     
-    labelQuestion.layer.borderColor = UIColor.appRed.cgColor
-    labelQuestion.layer.borderWidth = 3
-    labelQuestion.layer.cornerRadius = 10
+    let viewQuestionContainer = UIView()
+    viewQuestionContainer.layer.cornerRadius = 10
+    viewQuestionContainer.layer.borderWidth = 2
+    viewQuestionContainer.layer.borderColor = UIColor.appRed.cgColor
+    
     labelQuestion.textColor = UIColor.appLabelBlack
     labelQuestion.font = UIFont.appFontDemiBold(ofSize: 25)
     labelQuestion.numberOfLines = 0
     labelQuestion.minimumScaleFactor = 0.3
     labelQuestion.textAlignment = .center
     
-    labelQuestion.layer.cornerRadius = 10
-    labelQuestion.layer.borderWidth = 2
-    labelQuestion.layer.borderColor = UIColor.appRed.cgColor
+    viewQuestionContainer.addSubview(labelQuestion)
     
     stackViewOptionContainer.axis = .vertical
     stackViewOptionContainer.distribution = .fillEqually
     stackViewOptionContainer.alignment = .fill
     stackViewOptionContainer.spacing = 8
     
-    stackViewContainer.addArrangedSubview(labelQuestion)
+    stackViewContainer.addArrangedSubview(viewQuestionContainer)
     stackViewContainer.addArrangedSubview(stackViewOptionContainer)
+    
+    labelQuestion.snp.makeConstraints { (make) in
+      make.edges.equalToSuperview().inset(8)
+    }
     
     stackViewContainer.snp.makeConstraints { (make) in
       make.top.equalToSuperview().inset(30)
@@ -149,7 +153,8 @@ class QuizPracticeRootView: NiblessView {
     button.titleLabel?.numberOfLines = 0
     button.titleLabel?.minimumScaleFactor = 0.2
     button.titleLabel?.adjustsFontSizeToFitWidth = true
-
+    button.titleLabel?.textAlignment = .center
+    
     button.layer.cornerRadius = 10
     button.layer.borderWidth = 2
     

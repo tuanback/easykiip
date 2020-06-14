@@ -41,6 +41,12 @@ public class NewWordQuestionMaker: QuestionMaker {
       questions.append(contentsOf: vocabQuestions)
     }
     
+    let notLearnedQuestion = createQuestionVocabs.filter({ !$0.practiceHistory.isLearned && !$0.practiceHistory.isMastered })
+    
+    if notLearnedQuestion.count == 0 {
+      return questions.shuffled()
+    }
+    
     return questions
   }
   
