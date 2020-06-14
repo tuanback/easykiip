@@ -18,6 +18,7 @@ target 'EasyKIIP' do
   pod 'SnapKit'
   pod 'SwiftDate'
   pod 'ReachabilitySwift'
+  pod "RxAppState"
   pod 'RxDataSources'
   
   target 'EasyKIIPTests' do

@@ -11,6 +11,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SnapKit
+import RxAppState
 
 class LessonDetailVC: NiblessViewController {
   
@@ -55,8 +56,8 @@ class LessonDetailVC: NiblessViewController {
   override func didMove(toParent parent: UIViewController?) {
     super.didMove(toParent: parent)
     
-    // NOTE: When the view controller is removed from navigation controller
     if parent == nil {
+      // Save practice history When the view controller is removed from navigation controller
       viewModel.handleFinishLearning()
     }
   }
@@ -134,6 +135,13 @@ class LessonDetailVC: NiblessViewController {
   }
   
   private func observeViewModel() {
+    // Save practice history if the app move to background
+    UIApplication.shared.rx.applicationDidEnterBackground
+      .subscribe(onNext: { [weak self] _ in
+        self?.viewModel.handleFinishLearning()
+      })
+      .disposed(by: disposeBag)
+    
     viewModel.oNavigationTitle
       .drive(navigationItem.rx.title)
       .disposed(by: disposeBag)
