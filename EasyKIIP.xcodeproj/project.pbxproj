@@ -51,6 +51,7 @@
 		177AEC9D2495AC1B00771DF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 177AEC9B2495AC1B00771DF2 /* InfoPlist.strings */; };
 		177AEC9F2495B77C00771DF2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC9E2495B77C00771DF2 /* Common.swift */; };
 		177AECA12495F4B800771DF2 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 177AECA02495F4B800771DF2 /* KakaoOpenSDK.framework */; };
+		177AECA52496205400771DF2 /* InternetStateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AECA42496205400771DF2 /* InternetStateProvider.swift */; };
 		17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
 		17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
 		17954AA2245D028200C8CC95 /* book_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A99245D025400C8CC95 /* book_0.jpg */; };
@@ -348,6 +349,7 @@
 		177AEC9C2495AC1B00771DF2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		177AEC9E2495B77C00771DF2 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		177AECA02495F4B800771DF2 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = Framework/KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		177AECA42496205400771DF2 /* InternetStateProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InternetStateProvider.swift; sourceTree = "<group>"; };
 		17954A89245CFC9D00C8CC95 /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
 		17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavViewModel.swift; sourceTree = "<group>"; };
 		17954A93245D025300C8CC95 /* book_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_6.jpg; sourceTree = "<group>"; };
@@ -640,6 +642,7 @@
 		1766FF9F245A5D9A008B263D /* Reuseable */ = {
 			isa = PBXGroup;
 			children = (
+				177AECA32496203C00771DF2 /* Helper */,
 				177AEC762494A43400771DF2 /* View */,
 				17A8A2F6246C99F600794C64 /* Ads */,
 				1766FFC6245A72B9008B263D /* Extension */,
@@ -807,6 +810,14 @@
 				177AEC932495A7EB00771DF2 /* ChangeLanguageVC.swift */,
 			);
 			path = ChangeLanguageVC;
+			sourceTree = "<group>";
+		};
+		177AECA32496203C00771DF2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				177AECA42496205400771DF2 /* InternetStateProvider.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		17954A87245CFC2B00C8CC95 /* MainVC */ = {
@@ -2063,6 +2074,7 @@
 				177AEC702494615600771DF2 /* QuizEndRootView.swift in Sources */,
 				177AEC872494F84B00771DF2 /* SettingRootView.swift in Sources */,
 				1732847C248D124900103B5A /* QuizVC.swift in Sources */,
+				177AECA52496205400771DF2 /* InternetStateProvider.swift in Sources */,
 				177AEC7A2494BB0200771DF2 /* ProgressBar.swift in Sources */,
 				17CBE66D247A075A005D4CFD /* ReadingListVC.swift in Sources */,
 				17F30EEA246B4A76008040BE /* BookDetailVC.swift in Sources */,

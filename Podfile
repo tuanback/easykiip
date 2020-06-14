@@ -17,6 +17,7 @@ target 'EasyKIIP' do
   pod 'Google-Mobile-Ads-SDK'
   pod 'SnapKit'
   pod 'SwiftDate'
+  pod 'ReachabilitySwift'
   pod 'RxDataSources'
   
   target 'EasyKIIPTests' do

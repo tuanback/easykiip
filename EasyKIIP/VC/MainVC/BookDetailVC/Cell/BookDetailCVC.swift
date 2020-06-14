@@ -44,6 +44,9 @@ class BookDetailCVC: UICollectionViewCell {
         labelLastPracticed.text = "\(lastTimeLearnedFromToday) " + Strings.daysAgo
       }
     }
+    else {
+      labelLastPracticed.text = ""
+    }
     
     viewProgressContainer.isHidden = (viewModel.lastTimeLearnedFromToday == nil)
     viewProgressContainer.progress = viewModel.proficiency
@@ -94,20 +97,23 @@ class BookDetailCVC: UICollectionViewCell {
     labelLastPracticed = UILabel()
     labelLastPracticed.font = UIFont.appFontRegular(ofSize: 12)
     labelLastPracticed.textColor = UIColor.appSecondaryLabel
+    labelLastPracticed.adjustsFontSizeToFitWidth = true
+    labelLastPracticed.minimumScaleFactor = 0.3
     
-    let lessonNameContainer = UIStackView(arrangedSubviews: [labelLessonKorean, labelLessonTranslation, UIView()])
+    labelLastPracticed.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+    labelLastPracticed.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+    
+    labelLessonKorean.setContentHuggingPriority(.defaultLow, for: .horizontal)
+    labelLessonKorean.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+    
+    let lessonNameContainer = UIStackView(arrangedSubviews: [labelLessonKorean, labelLastPracticed])
     lessonNameContainer.alignment = .fill
-    lessonNameContainer.axis = .vertical
+    lessonNameContainer.axis = .horizontal
     lessonNameContainer.distribution = .fill
-    lessonNameContainer.spacing = 8
+    lessonNameContainer.spacing = 4
     
-    let lastPracticeContainer = UIStackView(arrangedSubviews: [labelLastPracticed, UIView()])
-    lastPracticeContainer.axis = .vertical
-    lastPracticeContainer.alignment = .fill
-    lastPracticeContainer.distribution = .fill
-    
-    let labelContainer = UIStackView(arrangedSubviews: [lessonNameContainer, lastPracticeContainer])
-    labelContainer.axis = .horizontal
+    let labelContainer = UIStackView(arrangedSubviews: [lessonNameContainer, labelLessonTranslation, UIView()])
+    labelContainer.axis = .vertical
     labelContainer.alignment = .fill
     labelContainer.distribution = .fill
     labelContainer.spacing = 8
@@ -145,10 +151,6 @@ class BookDetailCVC: UICollectionViewCell {
     
     viewProgressContainer.snp.makeConstraints { (make) in
       make.height.equalTo(20)
-    }
-    
-    lastPracticeContainer.snp.makeConstraints { (make) in
-      make.width.equalTo(40)
     }
     
     containerStackView.snp.makeConstraints { (make) in
