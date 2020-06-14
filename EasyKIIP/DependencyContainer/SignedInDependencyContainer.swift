@@ -83,7 +83,24 @@ public class SignedInDependencyContainer {
   
   func makeSettingVC() -> UIViewController {
     let viewModel = SettingVM(userSessionRepository: userSessionRepository)
-    return UINavigationController(rootViewController: SettingVC(viewModel: viewModel)) 
+    let navigator = SettingNavigator(factory: self)
+    return UINavigationController(rootViewController: SettingVC(viewModel: viewModel,
+                                                                navigator: navigator))
+  }
+  
+  func makeLanguageSettingVC() -> UIViewController {
+    return UIViewController()
+  }
+  
+  func makeLoginVC(signedInResponder: SignedInResponder?) -> LoginVC {
+    let viewModel = makeLoginViewModel(signedInResponder: signedInResponder)
+    return LoginVC(viewModel: viewModel)
+  }
+  
+  private func makeLoginViewModel(signedInResponder: SignedInResponder?) -> LoginViewModel {
+    let viewModel = LoginViewModel(userSessionRepository: userSessionRepository,
+                                   signedInResponder: signedInResponder)
+    return viewModel
   }
   
   func makeLessonDetailVC(bookID: Int, lessonID: Int) -> LessonDetailVC {
@@ -142,3 +159,5 @@ extension SignedInDependencyContainer: QuizPracticeVCFactory { }
 
 extension SignedInDependencyContainer: EndQuizAdVCFactory { }
 extension SignedInDependencyContainer: VideoAdsVCFactory { }
+extension SignedInDependencyContainer: LanguageSettingVCFactory { }
+extension SignedInDependencyContainer: LoginVCFactory { }

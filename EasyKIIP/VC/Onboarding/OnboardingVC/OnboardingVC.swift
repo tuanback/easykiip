@@ -93,7 +93,7 @@ extension OnboardingVC {
     case is WelcomeVC:
       return false
     case is LoginVC:
-      return true
+      return false
     default:
       assertionFailure("Encountered unexpected child view controller type in OnboardingViewController")
       return nil

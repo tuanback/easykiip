@@ -84,8 +84,8 @@ class SelectLanguageRootView: NiblessView {
     collectionView.register(LanguageCVC.self, forCellWithReuseIdentifier: cellIdentifier)
     
     Observable<[Language]>.just(
-      [Language(image: UIImage(named: "vietnam")!, name: "Tiếng Việt", languageCode: .vi),
-       Language(image: UIImage(named: "uk")!, name: "English", languageCode: .en)])
+      [Language(image: UIImage(named: "vietnam")!, name: Strings.vietnamese, languageCode: .vi),
+       Language(image: UIImage(named: "uk")!, name: Strings.english, languageCode: .en)])
       .bind(to: collectionView.rx.items(cellIdentifier: cellIdentifier, cellType: LanguageCVC.self)) { row, viewModel, cell in
         cell.configCell(flagImage: viewModel.image, languageName: viewModel.name)
     }

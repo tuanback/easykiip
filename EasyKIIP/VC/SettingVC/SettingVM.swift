@@ -27,7 +27,7 @@ extension TableViewSection: SectionModelType {
   }
 }
 
-struct SettingVM {
+class SettingVM {
   
   var oSections: Observable<[TableViewSection]> {
     return rSections.asObservable()
@@ -35,11 +35,23 @@ struct SettingVM {
   
   private var rSections = BehaviorRelay<[TableViewSection]>(value: [])
   
+  var oNavigation: Observable<NavigationEvent<SettingNavigator.Destination>> {
+    return rNavigationEvent.asObservable()
+  }
+  
+  private var rNavigationEvent = PublishRelay<NavigationEvent<SettingNavigator.Destination>>()
+  
   private var sections: [SettingSection] = []
+  private let userSessionRepo: UserSessionRepository
   
   init(userSessionRepository: UserSessionRepository) {
+    self.userSessionRepo = userSessionRepository
+  }
+  
+  func loadSettingItems() {
+    sections.removeAll()
     var accountSettinsItems: [SettingItem] = []
-    if userSessionRepository.readUserSession() == nil {
+    if userSessionRepo.readUserSession() == nil {
       accountSettinsItems = [.login]
     }
     else {
@@ -55,5 +67,17 @@ struct SettingVM {
     }
     
     rSections.accept(tableViewSections)
+  }
+  
+  func handleSettingItemClicked(item: SettingItem) {
+    switch item {
+    case .login:
+      rNavigationEvent.accept(.present(destination: .login(signedInResponder: nil)))
+    case .logOut:
+      userSessionRepo.signOut()
+      loadSettingItems()
+    case .appLanguage:
+      rNavigationEvent.accept(.push(destination: .changeLanguage))
+    }
   }
 }

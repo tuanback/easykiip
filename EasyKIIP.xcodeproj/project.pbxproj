@@ -41,6 +41,7 @@
 		177AEC852494F79F00771DF2 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC842494F79F00771DF2 /* SettingVC.swift */; };
 		177AEC872494F84B00771DF2 /* SettingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC862494F84B00771DF2 /* SettingRootView.swift */; };
 		177AEC892495017A00771DF2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC882495017A00771DF2 /* UIViewController+Extension.swift */; };
+		177AEC8B249596FB00771DF2 /* SettingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC8A249596FB00771DF2 /* SettingNavigator.swift */; };
 		17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A89245CFC9D00C8CC95 /* MainNavVC.swift */; };
 		17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */; };
 		17954AA2245D028200C8CC95 /* book_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17954A99245D025400C8CC95 /* book_0.jpg */; };
@@ -328,6 +329,7 @@
 		177AEC842494F79F00771DF2 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		177AEC862494F84B00771DF2 /* SettingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRootView.swift; sourceTree = "<group>"; };
 		177AEC882495017A00771DF2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		177AEC8A249596FB00771DF2 /* SettingNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNavigator.swift; sourceTree = "<group>"; };
 		17954A89245CFC9D00C8CC95 /* MainNavVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavVC.swift; sourceTree = "<group>"; };
 		17954A8B245CFCD300C8CC95 /* MainNavViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavViewModel.swift; sourceTree = "<group>"; };
 		17954A93245D025300C8CC95 /* book_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = book_6.jpg; sourceTree = "<group>"; };
@@ -1382,6 +1384,7 @@
 				17CBE6642479FE0F005D4CFD /* BookDetailNavigator.swift */,
 				17328479248CD96800103B5A /* QuizNavigator.swift */,
 				17F5C0A1249114B2001ABA43 /* LessonDetailNavigator.swift */,
+				177AEC8A249596FB00771DF2 /* SettingNavigator.swift */,
 			);
 			path = Navigator;
 			sourceTree = "<group>";
@@ -2040,6 +2043,7 @@
 				177AEC73249462C800771DF2 /* AdsLargeTemplateView.swift in Sources */,
 				17F57F9D2478AA7300F26EF4 /* LaunchNavigator.swift in Sources */,
 				17FBF711245BEC0E00A65233 /* OnboardingVM.swift in Sources */,
+				177AEC8B249596FB00771DF2 /* SettingNavigator.swift in Sources */,
 				17CBE680247AAC2F005D4CFD /* AppValuesStorage.swift in Sources */,
 				17FBF706245BEBF900A65233 /* LoginViewModel.swift in Sources */,
 				1738425424712C2900BEFE2F /* AdsSmallTemplateView.swift in Sources */,

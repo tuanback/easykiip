@@ -14,7 +14,7 @@ import UIKit
 
 class SettingRootView: NiblessView {
   
-  private let viewModel: SettingVM
+  private var viewModel: SettingVM
   private let disposeBag = DisposeBag()
   
   private let tableView = UITableView(frame: .zero, style: .grouped)
@@ -31,8 +31,6 @@ class SettingRootView: NiblessView {
     
     backgroundColor = UIColor.appBackground
     
-    tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
-    
     addSubview(tableView)
     
     tableView.snp.makeConstraints { (make) in
@@ -45,8 +43,20 @@ class SettingRootView: NiblessView {
     let cellIdentifier = self.cellIdentifier
     
     let dataSource = RxTableViewSectionedReloadDataSource<TableViewSection>(configureCell: { dataSource, tableView, indexPath, item in
-      let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+      let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) ?? UITableViewCell(style: .value1, reuseIdentifier: cellIdentifier)
       cell.textLabel?.text = item.toString()
+      switch item {
+      case .appLanguage:
+        cell.accessoryType = .disclosureIndicator
+        switch AppSetting.languageCode {
+        case .en:
+          cell.detailTextLabel?.text = Strings.english
+        case .vi:
+          cell.detailTextLabel?.text = Strings.vietnamese
+        }
+      default:
+        break
+      }
       return cell
     })
     
@@ -56,6 +66,12 @@ class SettingRootView: NiblessView {
     
     viewModel.oSections
       .bind(to: tableView.rx.items(dataSource: dataSource))
+      .disposed(by: disposeBag)
+    
+    tableView.rx.modelSelected(SettingItem.self)
+      .subscribe(onNext: { [weak self] item in
+        self?.viewModel.handleSettingItemClicked(item: item)
+      })
       .disposed(by: disposeBag)
   }
   

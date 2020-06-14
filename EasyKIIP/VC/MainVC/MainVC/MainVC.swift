@@ -87,7 +87,6 @@ class MainVC: NiblessViewController {
         }
       })
       .disposed(by: disposeBag)
-    
   }
   
 }

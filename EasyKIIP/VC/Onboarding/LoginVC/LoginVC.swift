@@ -34,7 +34,7 @@ public class LoginVC: NiblessViewController {
     setupGoogleSignIn()
     observeViewModel()
   }
-
+  
   private func setupGoogleSignIn() {
     GIDSignIn.sharedInstance()?.presentingViewController = self
     GIDSignIn.sharedInstance().delegate = self
@@ -55,7 +55,14 @@ public class LoginVC: NiblessViewController {
     viewModel.errorMessage
       .observeOn(MainScheduler.asyncInstance)
       .subscribe(onNext: showMessagePrompt(_:))
-    .disposed(by: disposeBag)
+      .disposed(by: disposeBag)
+    
+    viewModel.oDismiss
+      .observeOn(MainScheduler.asyncInstance)
+      .subscribe(onNext: { [weak self] _ in
+        self?.dismiss(animated: true, completion: nil)
+      })
+      .disposed(by: disposeBag)
   }
 }
 

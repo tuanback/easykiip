@@ -29,7 +29,7 @@ public class OnboardingVM: SignedInResponder, SignedInLaterResponder, GoToLogInN
   var oNavigation = BehaviorRelay<NavigationEvent<OnboardingNavigator.Destination>>(value: .push(destination: .welcome))
   
   public func navigateToLogIn() {
-    oNavigation.accept(.push(destination: .login))
+    oNavigation.accept(.push(destination: .login(signedInResponder: self)))
   }
   
   func signedIn() {

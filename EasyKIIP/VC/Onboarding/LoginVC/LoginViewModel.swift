@@ -16,16 +16,21 @@ import GoogleSignIn
 public class LoginViewModel {
   
   private let userSessionRepository: UserSessionRepository
-  private let signedInResponder: SignedInResponder
+  private var signedInResponder: SignedInResponder?
   
   var textInput = PublishRelay<String>()
   var errorMessage = PublishRelay<String>()
+  
+  var oDismiss: Observable<Void> {
+    return rDismiss.asObservable()
+  }
+  private var rDismiss = PublishRelay<Void>()
   
   private var authState: AuthState?
   private let disposeBag = DisposeBag()
   
   init(userSessionRepository: UserSessionRepository,
-       signedInResponder: SignedInResponder) {
+       signedInResponder: SignedInResponder?) {
     self.userSessionRepository = userSessionRepository
     self.signedInResponder = signedInResponder
   }
@@ -46,7 +51,12 @@ public class LoginViewModel {
         case .waitingForVerificationCode(let displayName):
           self?.textInput.accept("Verification code for \(displayName)")
         case .success(_):
-          self?.signedInResponder.signedIn()
+          if let responder = self?.signedInResponder {
+            responder.signedIn()
+          }
+          else {
+            self?.rDismiss.accept(())
+          }
         default:
           break
         }
@@ -71,6 +81,10 @@ public class LoginViewModel {
     default:
       break
     }
+  }
+  
+  func handleCloseButtonClicked() {
+    rDismiss.accept(())
   }
   
 }

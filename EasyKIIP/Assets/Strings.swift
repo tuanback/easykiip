@@ -79,6 +79,9 @@ extension Strings {
   static let logIn = NSLocalizedString("Log In", bundle: Strings.languageBundle, comment: "")
   static let logOut = NSLocalizedString("Log Out", bundle: Strings.languageBundle, comment: "")
   static let appLanguage = NSLocalizedString("App Language", bundle: Strings.languageBundle, comment: "")
+  
+  static let vietnamese = "Tiếng Việt"
+  static let english = "English"
 }
 
 // Errors

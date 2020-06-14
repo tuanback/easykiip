@@ -28,14 +28,14 @@ class OnboardingDependencyContainer {
                         navigator: makeOnboardingNavigator())
   }
   
-  func makeLoginVC() -> LoginVC {
-    let viewModel = makeLoginViewModel()
+  func makeLoginVC(signedInResponder: SignedInResponder?) -> LoginVC {
+    let viewModel = makeLoginViewModel(signedInResponder: signedInResponder)
     return LoginVC(viewModel: viewModel)
   }
   
-  private func makeLoginViewModel() -> LoginViewModel {
+  private func makeLoginViewModel(signedInResponder: SignedInResponder?) -> LoginViewModel {
     let viewModel = LoginViewModel(userSessionRepository: userSessionRepository,
-                                   signedInResponder: onboardingViewModel)
+                                   signedInResponder: signedInResponder)
     return viewModel
   }
   

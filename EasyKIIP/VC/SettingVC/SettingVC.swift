@@ -7,14 +7,20 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 import UIKit
 
 class SettingVC: NiblessViewController {
   
-  private let viewModel: SettingVM
+  private var viewModel: SettingVM
+  private var navigator: SettingNavigator
   
-  init(viewModel: SettingVM) {
+  private let disposeBag = DisposeBag()
+  
+  init(viewModel: SettingVM, navigator: SettingNavigator) {
     self.viewModel = viewModel
+    self.navigator = navigator
     super.init()
   }
   
@@ -26,6 +32,11 @@ class SettingVC: NiblessViewController {
     super.viewDidLoad()
     observeViewModel()
     setupNavBar()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    viewModel.loadSettingItems()
   }
   
   private func setupNavBar() {
@@ -41,7 +52,21 @@ class SettingVC: NiblessViewController {
   }
   
   private func observeViewModel() {
-    
+    viewModel.oNavigation
+    .subscribe(onNext: { [weak self] event in
+      guard let strongSelf = self else { return }
+      switch event {
+      case .push(let destination):
+        strongSelf.navigator.navigate(from: strongSelf, to: destination, type: .push)
+      case .present(let destination):
+        strongSelf.navigator.navigate(from: strongSelf, to: destination, type: .present)
+      case .pop:
+        self?.navigationController?.popViewController(animated: true)
+      case .dismiss:
+        self?.dismiss(animated: true, completion: nil)
+      }
+    })
+    .disposed(by: disposeBag)
   }
   
 }

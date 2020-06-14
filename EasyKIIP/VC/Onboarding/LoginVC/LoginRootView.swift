@@ -19,6 +19,7 @@ class LoginRootView: NiblessView {
   private let viewModel: LoginViewModel
   
   private var googleSignInButton: GIDSignInButton!
+  private let buttonClose = UIButton()
   
   init(frame: CGRect = .zero,
        viewModel: LoginViewModel) {
@@ -28,12 +29,23 @@ class LoginRootView: NiblessView {
   }
   
   private func setupViews() {
+    
+    buttonClose.setImage(UIImage(named: IconName.close), for: .normal)
+    buttonClose.addTarget(self, action: #selector(handleCloseButtonClicked(sender:)), for: .touchUpInside)
+    
     backgroundColor = UIColor.appBackground
     
     googleSignInButton = GIDSignInButton()
     googleSignInButton.style = .wide
     
+    addSubview(buttonClose)
     addSubview(googleSignInButton)
+    
+    buttonClose.snp.makeConstraints { (make) in
+      make.leading.equalToSuperview().inset(16)
+      make.top.equalTo(safeAreaInsets.top).inset(32)
+      make.size.equalTo(44)
+    }
     
     googleSignInButton.snp.makeConstraints { (make) in
       make.centerX.equalTo(self)
@@ -43,6 +55,8 @@ class LoginRootView: NiblessView {
     }
   }
   
-  
+  @objc private func handleCloseButtonClicked(sender: UIButton) {
+    viewModel.handleCloseButtonClicked()
+  }
   
 }
