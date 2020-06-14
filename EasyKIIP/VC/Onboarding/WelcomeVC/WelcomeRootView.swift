@@ -30,7 +30,7 @@ class WelcomeRootView: NiblessView {
   }
   
   private func styleView() {
-    backgroundColor = UIColor.appPrimaryColor
+    backgroundColor = UIColor.appRed
   }
   
   private func setupViews() {

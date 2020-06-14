@@ -12,6 +12,7 @@ import RxSwift
 import GoogleSignIn
 import Firebase
 import RxCocoa
+import FBSDKLoginKit
 
 public class FirebaseUserSessionRepository: UserSessionRepository {
   
@@ -32,7 +33,7 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
     Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
       guard let strongSelf = self else { return }
       guard let user = user else {
-        print("Not singed in")
+        print("Not signed in")
         return
       }
       
@@ -142,6 +143,7 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
   
   public func signOut() {
     GIDSignIn.sharedInstance()?.signOut()
+    LoginManager().logOut()
     try? Auth.auth().signOut()
   }
   

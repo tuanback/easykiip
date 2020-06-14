@@ -69,7 +69,8 @@ class MainVC: NiblessViewController {
     
     buttonSetting = UIButton()
     buttonSetting.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-    buttonSetting.layer.cornerRadius = 0.5 * buttonSetting.bounds.size.width
+    buttonSetting.layer.cornerRadius = 15
+    buttonSetting.layer.masksToBounds = true
     buttonSetting.setImage(imageSettingButton, for: .normal)
     buttonSetting.addTarget(self, action: #selector(handleSettingButtonClicked(_:)), for: .touchUpInside)
     let barButton = UIBarButtonItem()

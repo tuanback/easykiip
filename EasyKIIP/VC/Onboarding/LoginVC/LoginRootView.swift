@@ -25,6 +25,7 @@ class LoginRootView: NiblessView {
   private var kakaoSignInButton = KOLoginButton()
   private var faceBookLoginButton = FBLoginButton()
   
+  private var labelLogo = UILabel()
   private let buttonClose = UIButton()
   
   init(frame: CGRect = .zero,
@@ -35,6 +36,10 @@ class LoginRootView: NiblessView {
   }
   
   private func setupViews() {
+    
+    labelLogo.text = Strings.logIn
+    labelLogo.font = UIFont.appFontDemiBold(ofSize: 40)
+    labelLogo.textColor = UIColor.appRed
     
     buttonClose.setImage(UIImage(named: IconName.close), for: .normal)
     buttonClose.addTarget(self, action: #selector(handleCloseButtonClicked(sender:)), for: .touchUpInside)
@@ -51,17 +56,23 @@ class LoginRootView: NiblessView {
     svButtonContainer.distribution = .fillEqually
     svButtonContainer.spacing = 16
     
+    addSubview(labelLogo)
     addSubview(buttonClose)
     addSubview(svButtonContainer)
     
-    svButtonContainer.addArrangedSubview(kakaoSignInButton)
     svButtonContainer.addArrangedSubview(googleSignInButton)
     svButtonContainer.addArrangedSubview(faceBookLoginButton)
+    svButtonContainer.addArrangedSubview(kakaoSignInButton)
     
     buttonClose.snp.makeConstraints { (make) in
       make.leading.equalToSuperview().inset(16)
       make.top.equalTo(safeAreaInsets.top).inset(32)
       make.size.equalTo(44)
+    }
+    
+    labelLogo.snp.makeConstraints { (make) in
+      make.centerX.equalTo(self)
+      make.top.equalTo(buttonClose.snp.bottom).offset(16)
     }
     
     svButtonContainer.snp.makeConstraints { (make) in
@@ -93,7 +104,7 @@ extension LoginRootView: LoginButtonDelegate {
   }
   
   func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
-    
+    print("loginButtonDidLogOut")
   }
   
   private func getFBUserData(){
