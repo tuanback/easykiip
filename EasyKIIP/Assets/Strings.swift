@@ -137,6 +137,11 @@ extension Strings {
   static var appLanguage: String {
     NSLocalizedString("App Language", bundle: Strings.languageBundle, comment: "")
   }
+  static var korean: String {
+    NSLocalizedString("Korean", bundle: Strings.languageBundle, comment: "")
+  }
+  
+  
   static var vietnamese = "Tiếng Việt"
   static var english = "English"
 }

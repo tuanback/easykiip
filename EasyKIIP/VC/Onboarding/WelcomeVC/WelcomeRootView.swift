@@ -90,6 +90,7 @@ class WelcomeRootView: NiblessView {
     stackView.axis = .horizontal
     stackView.alignment = .fill
     stackView.distribution = .fill
+    stackView.spacing = 8
     
     addSubview(stackView)
     

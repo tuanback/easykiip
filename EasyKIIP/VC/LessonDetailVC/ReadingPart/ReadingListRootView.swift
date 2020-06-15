@@ -68,7 +68,7 @@ class ReadingListRootView: NiblessView {
     
     tableView.rx.modelSelected(ReadingPartItemViewModel.self)
       .subscribe(onNext: { [weak self] model in
-        print(model)
+        self?.viewModel.handleReadingPartItemClicked(viewModel: model)
       })
     .disposed(by: disposeBag)
   }

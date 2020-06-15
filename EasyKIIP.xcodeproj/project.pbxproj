@@ -24,6 +24,12 @@
 		176ADE072460E958006C5D3C /* BookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176ADE062460E958006C5D3C /* BookDetailViewModel.swift */; };
 		176ADE0B24620C07006C5D3C /* RealmDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176ADE0A24620C07006C5D3C /* RealmDataStoreTests.swift */; };
 		176ADE0E24620EAB006C5D3C /* RealmProviderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176ADE0D24620EAB006C5D3C /* RealmProviderExtensions.swift */; };
+		1771C711249793CC00983897 /* ParagraphViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771C710249793CC00983897 /* ParagraphViewModelTests.swift */; };
+		1771C7132497963F00983897 /* ParagraphViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771C7122497963F00983897 /* ParagraphViewModel.swift */; };
+		1771C7152497A4E900983897 /* ParagraphViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771C7142497A4E900983897 /* ParagraphViewVM.swift */; };
+		1771C7172497A59000983897 /* ParagraphViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771C7162497A59000983897 /* ParagraphViewVC.swift */; };
+		1771C7192497A5F600983897 /* ParagraphViewRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771C7182497A5F600983897 /* ParagraphViewRootView.swift */; };
+		1771C71B2497A85100983897 /* ParagraphVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1771C71A2497A85100983897 /* ParagraphVC.swift */; };
 		177AEC6424944FA800771DF2 /* NativeAdLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC6324944FA800771DF2 /* NativeAdLoader.swift */; };
 		177AEC662494589900771DF2 /* QuizEndViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC652494589900771DF2 /* QuizEndViewModelTests.swift */; };
 		177AEC69249458F200771DF2 /* QuizEndViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177AEC68249458F200771DF2 /* QuizEndViewModel.swift */; };
@@ -322,6 +328,12 @@
 		176ADE062460E958006C5D3C /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 		176ADE0A24620C07006C5D3C /* RealmDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataStoreTests.swift; sourceTree = "<group>"; };
 		176ADE0D24620EAB006C5D3C /* RealmProviderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProviderExtensions.swift; sourceTree = "<group>"; };
+		1771C710249793CC00983897 /* ParagraphViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphViewModelTests.swift; sourceTree = "<group>"; };
+		1771C7122497963F00983897 /* ParagraphViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphViewModel.swift; sourceTree = "<group>"; };
+		1771C7142497A4E900983897 /* ParagraphViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphViewVM.swift; sourceTree = "<group>"; };
+		1771C7162497A59000983897 /* ParagraphViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphViewVC.swift; sourceTree = "<group>"; };
+		1771C7182497A5F600983897 /* ParagraphViewRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphViewRootView.swift; sourceTree = "<group>"; };
+		1771C71A2497A85100983897 /* ParagraphVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphVC.swift; sourceTree = "<group>"; };
 		177AEC6324944FA800771DF2 /* NativeAdLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeAdLoader.swift; sourceTree = "<group>"; };
 		177AEC652494589900771DF2 /* QuizEndViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEndViewModelTests.swift; sourceTree = "<group>"; };
 		177AEC68249458F200771DF2 /* QuizEndViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEndViewModel.swift; sourceTree = "<group>"; };
@@ -558,6 +570,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1714C40424979324003A795F /* ParagraphVC */ = {
+			isa = PBXGroup;
+			children = (
+				1771C7122497963F00983897 /* ParagraphViewModel.swift */,
+				1771C7142497A4E900983897 /* ParagraphViewVM.swift */,
+				1771C7162497A59000983897 /* ParagraphViewVC.swift */,
+				1771C7182497A5F600983897 /* ParagraphViewRootView.swift */,
+				1771C71A2497A85100983897 /* ParagraphVC.swift */,
+			);
+			path = ParagraphVC;
+			sourceTree = "<group>";
+		};
 		1738424A2470CF0600BEFE2F /* ViewModelTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,6 +592,7 @@
 				17F5C08B248FA806001ABA43 /* QuizNewWordVC.swift */,
 				17F5C08F248FAD31001ABA43 /* QuizPracticeViewModelTests.swift */,
 				177AEC652494589900771DF2 /* QuizEndViewModelTests.swift */,
+				1771C710249793CC00983897 /* ParagraphViewModelTests.swift */,
 			);
 			path = ViewModelTests;
 			sourceTree = "<group>";
@@ -628,6 +653,7 @@
 		1766FF9E245A5D8F008B263D /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				1714C40424979324003A795F /* ParagraphVC */,
 				177AEC7B2494F46800771DF2 /* SettingVC */,
 				17D98F8A248CB4260049F5BB /* QuizVC */,
 				17F57F9B2478AA5C00F26EF4 /* Navigator */,
@@ -2055,6 +2081,7 @@
 				17F5C099249032BB001ABA43 /* QuizPracticeVC.swift in Sources */,
 				17FBF6EC245BEBCA00A65233 /* NiblessNavigationController.swift in Sources */,
 				177AEC6424944FA800771DF2 /* NativeAdLoader.swift in Sources */,
+				1771C7192497A5F600983897 /* ParagraphViewRootView.swift in Sources */,
 				17F57F992478A9FE00F26EF4 /* Navigator.swift in Sources */,
 				17F30EE7246AD1C6008040BE /* AdsIdentifier.swift in Sources */,
 				17CBE67D247AA301005D4CFD /* SelectLanguageVC.swift in Sources */,
@@ -2088,11 +2115,13 @@
 				17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */,
 				17FBF6E0245BEBB600A65233 /* UIFront_Extension.swift in Sources */,
 				17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */,
+				1771C7172497A59000983897 /* ParagraphViewVC.swift in Sources */,
 				177AEC8E2495A3E500771DF2 /* ChangeLanguageViewModel.swift in Sources */,
 				17CBE6652479FE0F005D4CFD /* BookDetailNavigator.swift in Sources */,
 				177AEC832494F53200771DF2 /* SettingItem.swift in Sources */,
 				17FBF6EF245BEBCF00A65233 /* NiblessViewController.swift in Sources */,
 				17FBF717245BEC1800A65233 /* LaunchRootView.swift in Sources */,
+				1771C71B2497A85100983897 /* ParagraphVC.swift in Sources */,
 				177AEC73249462C800771DF2 /* AdsLargeTemplateView.swift in Sources */,
 				17F57F9D2478AA7300F26EF4 /* LaunchNavigator.swift in Sources */,
 				177AEC9F2495B77C00771DF2 /* Common.swift in Sources */,
@@ -2108,6 +2137,7 @@
 				17FBF6DE245BEBB000A65233 /* UIColor_Extension.swift in Sources */,
 				17FBF6F5245BEBDC00A65233 /* MainRootView.swift in Sources */,
 				177AEC7D2494F48200771DF2 /* SettingVM.swift in Sources */,
+				1771C7152497A4E900983897 /* ParagraphViewVM.swift in Sources */,
 				17FBF6E9245BEBC500A65233 /* NiblessView.swift in Sources */,
 				177AEC852494F79F00771DF2 /* SettingVC.swift in Sources */,
 				17FBF6F2245BEBD700A65233 /* MainViewModel.swift in Sources */,
@@ -2125,6 +2155,7 @@
 				17E7F17E24681664008667FB /* FirebaseVocabRemoteAPI.swift in Sources */,
 				17FBF6F8245BEBE100A65233 /* MainVC.swift in Sources */,
 				17CBE674247A19CE005D4CFD /* LearnVocabListRootView.swift in Sources */,
+				1771C7132497963F00983897 /* ParagraphViewModel.swift in Sources */,
 				17FBF702245BEBF200A65233 /* WelcomeVC.swift in Sources */,
 				177AEC902495A58400771DF2 /* ChangeLanguageRootView.swift in Sources */,
 			);
@@ -2137,6 +2168,7 @@
 				177AEC6C24945B8700771DF2 /* Spy.swift in Sources */,
 				177AEC662494589900771DF2 /* QuizEndViewModelTests.swift in Sources */,
 				17328476248CC27100103B5A /* BookDetailViewModelTests.swift in Sources */,
+				1771C711249793CC00983897 /* ParagraphViewModelTests.swift in Sources */,
 				17328475248CC26F00103B5A /* MainViewModelTests.swift in Sources */,
 				17328477248CC27400103B5A /* LessonDetailViewModelTests.swift in Sources */,
 				17328478248CC27600103B5A /* QuizViewModelTests.swift in Sources */,

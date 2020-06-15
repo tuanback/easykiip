@@ -15,9 +15,10 @@ class LessonDetailNavigator: Navigator {
   enum Destination {
     case quizNewWord(bookID: Int, lessonID: Int, vocabs: [Vocab])
     case quizPractice(bookID: Int, lessonID: Int, vocabs: [Vocab])
+    case paragraph(readingPart: ReadingPart)
   }
   
-  typealias Factory = QuizNewWordVCFactory & QuizPracticeVCFactory
+  typealias Factory = QuizNewWordVCFactory & QuizPracticeVCFactory & ParagraphVCFactory
   
   private let factory: Factory
   init(factory: Factory) {
@@ -52,6 +53,8 @@ class LessonDetailNavigator: Navigator {
     case .quizPractice(let bookID, let lessonID, let vocabs):
       let vc = factory.makeQuizPracticeVC(bookID: bookID, lessonID: lessonID, vocabs: vocabs)
       return UINavigationController(rootViewController: vc)
+    case .paragraph(let readingPart):
+      return factory.makeParagraphVC(readingPart: readingPart)
     }
   }
   
@@ -63,4 +66,8 @@ protocol QuizNewWordVCFactory {
 
 protocol QuizPracticeVCFactory {
   func makeQuizPracticeVC(bookID: Int, lessonID: Int, vocabs: [Vocab]) -> QuizVC
+}
+
+protocol ParagraphVCFactory {
+  func makeParagraphVC(readingPart: ReadingPart) -> ParagraphVC
 }

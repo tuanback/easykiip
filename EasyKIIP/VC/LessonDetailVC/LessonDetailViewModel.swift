@@ -24,6 +24,12 @@ struct LearnVocabItemViewModel {
 }
 
 struct ReadingPartItemViewModel: Equatable {
+  
+  static func == (lhs: ReadingPartItemViewModel, rhs: ReadingPartItemViewModel) -> Bool {
+    return lhs.scriptName == rhs.scriptName && lhs.scriptNameTranslation == rhs.scriptNameTranslation
+  }
+  
+  let readingPart: ReadingPart
   let scriptName: String
   let scriptNameTranslation: String
 }
@@ -158,6 +164,10 @@ class LessonDetailViewModel {
     rNavigationEvent.accept(.present(destination: .quizNewWord(bookID: bookID, lessonID: lessonID, vocabs: viewModel.vocabs)))
   }
   
+  func handleReadingPartItemClicked(viewModel: ReadingPartItemViewModel) {
+    rNavigationEvent.accept(.push(destination: .paragraph(readingPart: viewModel.readingPart)))
+  }
+  
   func handlePracticeButtonClicked() {
     let vocabs = vocabRepository.getListOfLowProficiencyVocab(inLesson: lessonID, upto: 10)
     rNavigationEvent.accept(.present(destination: .quizPractice(bookID: bookID, lessonID: lessonID, vocabs: vocabs)))
@@ -195,6 +205,7 @@ class LessonDetailViewModel {
     static func convertReadingPartToReadingPartItemVMs(readingPart: [ReadingPart]) -> [ReadingPartItemViewModel] {
       return readingPart.map {
         return ReadingPartItemViewModel(
+          readingPart: $0,
           scriptName: $0.scriptName,
           scriptNameTranslation: $0.scriptNameTranslation[AppSetting.languageCode] ?? "")}
     }

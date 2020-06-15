@@ -97,6 +97,8 @@ extension MainNavVC {
       return true
     case is QuizVC:
       return false
+    case is ParagraphVC:
+      return true
     default:
       assertionFailure("Encountered unexpected child view controller type in OnboardingViewController")
       return nil

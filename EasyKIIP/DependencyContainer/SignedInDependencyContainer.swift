@@ -112,6 +112,11 @@ public class SignedInDependencyContainer {
     return LessonDetailVC(viewModel: viewModel, navigator: navigator)
   }
   
+  func makeParagraphVC(readingPart: ReadingPart) -> ParagraphVC {
+    let viewModel = ParagraphViewModel(readingPart: readingPart)
+    return ParagraphVC(viewModel: viewModel)
+  }
+  
   func makeQuizNewWordVC(bookID: Int, lessonID: Int, vocabs: [Vocab]) -> QuizVC {
    
     let randomVocabs: [Vocab] = vocabRepository.getRandomVocabs(differentFromVocabIDs: vocabs.map { $0.id }, upto: vocabs.count)
@@ -162,3 +167,5 @@ extension SignedInDependencyContainer: EndQuizAdVCFactory { }
 extension SignedInDependencyContainer: VideoAdsVCFactory { }
 extension SignedInDependencyContainer: LanguageSettingVCFactory { }
 extension SignedInDependencyContainer: LoginVCFactory { }
+
+extension SignedInDependencyContainer: ParagraphVCFactory { }
