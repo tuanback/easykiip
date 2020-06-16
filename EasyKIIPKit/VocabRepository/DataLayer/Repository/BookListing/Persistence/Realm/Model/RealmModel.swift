@@ -116,7 +116,7 @@ class RealmReadingPart: Object {
     self.scriptName = scriptName
     self.script = script
     self.scriptNameTranslations.append(objectsIn: scriptNameTranslations)
-    self.scriptTranslations.append(objectsIn: scriptNameTranslations)
+    self.scriptTranslations.append(objectsIn: scriptTranslations)
   }
   
   func toReadingPart() -> ReadingPart {
