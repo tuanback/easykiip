@@ -16,6 +16,7 @@
 		1738425424712C2900BEFE2F /* AdsSmallTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738425324712C2900BEFE2F /* AdsSmallTemplateView.swift */; };
 		17384258247158D700BEFE2F /* LessonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17384257247158D700BEFE2F /* LessonDetailViewModel.swift */; };
 		1738425B24715CB600BEFE2F /* LessonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738425A24715CB600BEFE2F /* LessonDetailVC.swift */; };
+		173E19C02498F62C001C9AA9 /* InterstitialAdLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173E19BF2498F62C001C9AA9 /* InterstitialAdLoader.swift */; };
 		1757FC5D2470B8C400E41DA3 /* vocabBundled.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */; };
 		1757FC5E2470B8C400E41DA3 /* vocabBundled.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */; };
 		1757FC602470B92E00E41DA3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC5F2470B92E00E41DA3 /* Path.swift */; };
@@ -293,6 +294,7 @@
 		1738425324712C2900BEFE2F /* AdsSmallTemplateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdsSmallTemplateView.swift; sourceTree = "<group>"; };
 		17384257247158D700BEFE2F /* LessonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModel.swift; sourceTree = "<group>"; };
 		1738425A24715CB600BEFE2F /* LessonDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailVC.swift; sourceTree = "<group>"; };
+		173E19BF2498F62C001C9AA9 /* InterstitialAdLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdLoader.swift; sourceTree = "<group>"; };
 		1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = vocabBundled.realm; path = Database/vocabBundled.realm; sourceTree = SOURCE_ROOT; };
 		1757FC5F2470B92E00E41DA3 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		1766FF92245A5A93008B263D /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
@@ -944,6 +946,7 @@
 				177AEC71249462A300771DF2 /* View */,
 				177AEC6324944FA800771DF2 /* NativeAdLoader.swift */,
 				177AEC742494996000771DF2 /* RewardAdLoader.swift */,
+				173E19BF2498F62C001C9AA9 /* InterstitialAdLoader.swift */,
 			);
 			path = Ads;
 			sourceTree = "<group>";
@@ -2075,6 +2078,7 @@
 				177AEC942495A7EB00771DF2 /* ChangeLanguageVC.swift in Sources */,
 				177AEC7F2494F49F00771DF2 /* SettingSection.swift in Sources */,
 				17FBF71A245BEC1C00A65233 /* LaunchVC.swift in Sources */,
+				173E19C02498F62C001C9AA9 /* InterstitialAdLoader.swift in Sources */,
 				177AEC752494996000771DF2 /* RewardAdLoader.swift in Sources */,
 				17FBF724245BEC2D00A65233 /* SignedInDependencyContainer.swift in Sources */,
 				17FBF6FF245BEBEE00A65233 /* WelcomeRootView.swift in Sources */,

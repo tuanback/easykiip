@@ -11,6 +11,7 @@ import Foundation
 enum AdsType {
   case bookDetailItem
   case rewardVideo
+  case interstitial
 }
 
 struct AdsIdentifier {
@@ -18,11 +19,13 @@ struct AdsIdentifier {
   private struct App {
     static let nativeAds = "ca-app-pub-4377015897765379/2266520475"
     static let rewardAds = "ca-app-pub-4377015897765379/1785626982"
+    static let interstitial = "ca-app-pub-4377015897765379/5506106494"
   }
   
   private struct Test {
     static let nativeAds = "ca-app-pub-3940256099942544/3986624511"
     static let rewardAds = "ca-app-pub-3940256099942544/1712485313"
+    static let interstitial = "ca-app-pub-3940256099942544/4411468910"
   }
   
   static func id(for type: AdsType) -> String {
@@ -39,6 +42,12 @@ struct AdsIdentifier {
       return Test.rewardAds
       #else
       return App.rewardAds
+      #endif
+    case .interstitial:
+      #if DEBUG
+      return Test.interstitial
+      #else
+      return App.interstitial
       #endif
     }
     

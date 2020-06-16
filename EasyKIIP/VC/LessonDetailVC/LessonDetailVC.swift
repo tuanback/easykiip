@@ -39,7 +39,11 @@ class LessonDetailVC: NiblessViewController {
   let viewModel: LessonDetailViewModel
   
   private var lastOpenedVC: LessonDetailNavigator.Destination?
+  private var startOpeningAnotherVCTime: Double?
+  private var shouldPresentAd = false
   private var isVCJustEntering = true
+  
+  private lazy var adLoader = InterstitialAdLoader(adUnitID: AdsIdentifier.id(for: .interstitial))
   
   init(viewModel: LessonDetailViewModel,
        navigator: LessonDetailNavigator) {
@@ -52,6 +56,7 @@ class LessonDetailVC: NiblessViewController {
     view = UIView()
     view.backgroundColor = UIColor.appBackground
     setupViews()
+    adLoader.load()
   }
   
   override func didMove(toParent parent: UIViewController?) {
@@ -136,12 +141,28 @@ class LessonDetailVC: NiblessViewController {
       switch destination {
       case .quizNewWord(_, _, _), .quizPractice(_, _, _):
         viewModel.reload()
-        print("Reload view model")
       case .paragraph(_):
-        // NOTE: Show ad view
-        print("Show ad view")
-        break
+        guard let startTime = startOpeningAnotherVCTime else { break }
+        let currentTime = Date().timeIntervalSince1970
+        let passedTime = currentTime - startTime
+        if passedTime >= 60 {
+          shouldPresentAd = true
+        }
       }
+    }
+    lastOpenedVC = nil
+    startOpeningAnotherVCTime = nil
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    presentAdIfNeeded()
+  }
+  
+  private func presentAdIfNeeded() {
+    if shouldPresentAd {
+      shouldPresentAd = false
+      adLoader.present(viewController: self)
     }
   }
   
@@ -208,9 +229,11 @@ class LessonDetailVC: NiblessViewController {
           self?.dismiss(animated: true, completion: nil)
         case .present(let destination):
           self?.lastOpenedVC = destination
+          self?.startOpeningAnotherVCTime = Date().timeIntervalSince1970
           self?.navigator.navigate(from: strongSelf, to: destination, type: .present)
         case .push(let destination):
           self?.lastOpenedVC = destination
+          self?.startOpeningAnotherVCTime = Date().timeIntervalSince1970
           self?.navigator.navigate(from: strongSelf, to: destination, type: .push)
         }
       })
