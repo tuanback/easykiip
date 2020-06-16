@@ -38,6 +38,7 @@ class LessonDetailVC: NiblessViewController {
   let navigator: LessonDetailNavigator
   let viewModel: LessonDetailViewModel
   
+  private var lastOpenedVC: LessonDetailNavigator.Destination?
   private var isVCJustEntering = true
   
   init(viewModel: LessonDetailViewModel,
@@ -130,7 +131,17 @@ class LessonDetailVC: NiblessViewController {
       isVCJustEntering = false
     }
     else {
-      viewModel.reload()
+      // TODO: only reload the view model if return from quiz vc
+      guard let destination = lastOpenedVC else { return }
+      switch destination {
+      case .quizNewWord(_, _, _), .quizPractice(_, _, _):
+        viewModel.reload()
+        print("Reload view model")
+      case .paragraph(_):
+        // NOTE: Show ad view
+        print("Show ad view")
+        break
+      }
     }
   }
   
@@ -196,8 +207,10 @@ class LessonDetailVC: NiblessViewController {
         case .dismiss:
           self?.dismiss(animated: true, completion: nil)
         case .present(let destination):
+          self?.lastOpenedVC = destination
           self?.navigator.navigate(from: strongSelf, to: destination, type: .present)
         case .push(let destination):
+          self?.lastOpenedVC = destination
           self?.navigator.navigate(from: strongSelf, to: destination, type: .push)
         }
       })

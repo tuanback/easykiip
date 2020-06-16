@@ -15,6 +15,7 @@ import RxDataSources
 
 struct TableViewSection {
   var header: String
+  var sectionType: SettingSectionItem
   var items: [SettingItem]
 }
 
@@ -63,6 +64,7 @@ class SettingVM {
     
     let tableViewSections: [TableViewSection] = sections.map {
       return TableViewSection(header: $0.settingSectionItem.toString(),
+                              sectionType: $0.settingSectionItem,
                               items: $0.settingItems)
     }
     

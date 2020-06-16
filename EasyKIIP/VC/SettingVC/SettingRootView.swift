@@ -64,6 +64,16 @@ class SettingRootView: NiblessView {
       return dataSource.sectionModels[index].header
     }
     
+    dataSource.titleForFooterInSection = { dataSource, index in
+      let sectionType = dataSource.sectionModels[index].sectionType
+      switch sectionType {
+      case .account:
+        return Strings.accountExplaination
+      case .language:
+        return ""
+      }
+    }
+    
     viewModel.oSections
     .debug()
       .bind(to: tableView.rx.items(dataSource: dataSource))
