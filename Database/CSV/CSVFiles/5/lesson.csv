@@ -1,0 +1,51 @@
+ID,BookID,Index,Name,vi,en
+81,5,1,한국의 상징,Biểu trưng của Hàn Quốc,Korean symbol
+82,5,2,한국의 가족,Gia đình ở Hàn Quốc,Korean family
+83,5,3,한국의 일터,Nơi làm việc ở Hàn Quốc,Korean workplace
+84,5,4,한국의 교통과 통신,Giao thông liên lạc ở Hàn Quốc,Traffic and communication in Korea
+85,5,5,한국의 대중매체,Phương tiện thông tin đại chúng ở Hàn Quốc,Korean mass media
+86,5,6,한국의 복지체계,Hệ thống phúc lợi ở Hàn Quốc,Korea's welfare system
+87,5,7,한국의 도시와 농촌,Nông thôn và thành thị ở Hàn Quốc,Korean cities and rural areas
+88,5,8,한국의 의료와 안전 생활,Sinh hoạt an toàn và y tế ở Hàn Quốc,Korea's Medical and Safety Life
+89,5,9,한국의 보육제도,Chế độ nuôi dạy trẻ ở Hàn Quốc,Korean childcare system
+90,5,10,한국의 학교,Trường học ở Hàn Quốc,Korean School
+91,5,11,한국의 교육열,Nhiệt huyết giáo dục ở Hàn Quốc,Korean education fever
+92,5,12,지역사회와 평생교육,Giáo dục thường xuyên và cộng đồng khu vực,Community and continuing education
+93,5,13,한국의 전통 의식주,"Cách ăn, mặc, ở truyền thống của Hàn Quốc",Korean traditional ceremony
+94,5,14,한국의 명절,Ngày lễ Tết ở Hàn Quốc,Holidays in South Korea
+95,5,15,한국의 종교,Tôn giáo ở Hàn Quốc,Korean religion
+96,5,16,한국의 주거 문화,Văn hóa nhà ở của Hàn Quốc,Korean residential culture
+97,5,17,한국의 여러 가지 의례,Nhiều loại nghi lễ ở Hàn Quốc,Korean courtesy
+98,5,18,한국의 대중문화,Văn hóa đại chúng ở Hàn Quốc,Korean pop culture
+99,5,19,한국의 전통 가치와 연고,Quan hệ ràng buộc và giá trị truyền thống ở Hàn Quốc,Korean traditional values __and ointments
+100,5,20,한국의 정치와 민주주의의 발전,Sự phát triển của chủ nghĩa dân chủ và chính trị Hàn Quốc,Development of Korean Politics and Democracy
+101,5,21,한국의 정치제도,Chế độ chính trị của Hàn Quốc,Korea's political system
+102,5,22,한국의 정부형태,Hình thái chính phủ ở Hàn Quốc,Korean Government
+103,5,23,한국의 정치과정,Quá trình chính trị của Hàn Quốc,Korean Politics Course
+104,5,24,한국의 국제관계,Quan hệ Quốc tế của Hàn Quốc,Korea's International Relations
+105,5,25,"경제 성장, 한강의 기적","Kỳ tích sông Hàn, sự tăng trưởng kinh tế","Economic growth, the miracle of the Han River"
+106,5,26,세계의 주역이 되고 있는 한국 경제,Kinh tế Hàn Quốc đang trở thành vai trò chính của thế giới,Korea's Economy Leading the World
+107,5,27,금융기관 이용하기,Việc sử dụng các cơ quan tài chính,Using financial institutions
+108,5,28,시장과 장보기,Chợ và việc đi chợ,Market and shopping
+109,5,29,취업하기,Tìm việc,Get a job
+110,5,30,외국인의 권리와 의무,Quyền lợi và nghĩa vụ của người nước ngoài,Rights and obligations of foreigners
+111,5,31,외국인의 정착과 참여를 위한 법과 제도,Chế độ và luật dành cho sự tham dự và định cư của người nước ngoài,Laws and systems for settlement and participation of foreigners
+112,5,32,대한민국 국민 되기,Trở thành quốc dân Đại Hàn Dân Quốc,Become a Korean citizen
+113,5,33,한국의 법집행 및 분쟁해결,Giải quyết tranh chấp cùng việc thực thi luật pháp ở Hàn Quốc,Korean law enforcement and dispute resolution
+114,5,34,한국의 생활법률,Pháp luật đời sống ở Hàn Quốc,Korean Living Law
+115,5,35,권리 침해에 대한 구제와 보호,Sự bảo hộ và cứu trợ về xâm phạm quyền lợi,Remedies and protection against infringement of rights
+116,5,36,준법의 중요성,Tính quan trọng của việc tuân thủ pháp luật,Importance of Compliance
+117,5,37,한국의 역사Ⅰ(고조선의 건국),Lịch sử Hàn Quốc Ⅰ (Sự thành lập Gojoseon),History of Korea_ (Foundation of Gojoseon)
+118,5,38,한국의 역사Ⅱ(삼국 시대와 통실 신라),Lịch sử Hàn Quốc Ⅱ (Thời kỳ tam quốc và triều Silla thống nhất),Korean History II (The Three Kingdoms Era and Silla)
+119,5,39,한국의 역사Ⅲ(고려 시대),Lịch sử Hàn Quốc Ⅲ (Triều đại Goryeo),Korean History III (Korea's Era)
+120,5,40,한국의 역사 IV (조선의 건국과 발전),Lịch sử Hàn Quốc IV (Sự thành lập và phát triển của Triều đại Joseon),Korea's History IV (Chosun's Founding and Development)
+121,5,41,한국의 역사 V (조선의 변화와 일제강점기),Lịch sử Hàn Quốc V (Sự biến hóa của triều đại Joseon và thời kì Nhật Bản chiếm đóng),Korea's History V (Chosun's Change and Japanese Colonial Era)
+122,5,42,한국의 인물사 I,Nhân vật lịch sử của Hàn Quốc I,Korean Personnel History I
+123,5,43,한국의 인물사 II,Nhân vật lịch sử của Hàn Quốc II,Korean History of History II
+124,5,44,"한국의 위치, 기후, 지형","Vị trí, Khí hậu, Địa hình của Hàn Quốc","Korea's Location, Climate, and Topography"
+125,5,45,"한국의 중심부, 수도권","Phần trung tâm của Hàn Quốc, khu vực thủ đô","The heart of Korea, the metropolitan area"
+126,5,46,"아름다운 자연경관의 강원, 충청","Phong cảnh tự nhiên xinh đẹp ở Gangwon, Chungcheong","Gangwon, Chungcheong with beautiful natural scenery"
+127,5,47,"지역경제의 중심, 경상, 전라, 제주","Trung tâm kinh tế địa phương, Gyeongsang, Jeolla, Jeju","The center of regional economy, Gyeongsang, Jeolla, and Jeju"
+128,5,48,지역마다 다른 관광명소와 축제,Các địa điểm tham quan và lễ hội khác nhau ở mỗi khu vực,Local attractions and festivals
+129,5,49,우리 삶을 풍요롭게 하는 지역사회 기관,Tổ chức cộng đồng địa phương làm phong phú cuộc sống chúng ta.,Community organizations that enrich our lives
+130,5,50,지역의 문제를 해결하기 위한 우리의 노력,Nỗ lực để giải quyết vấn đề trong khu vực,Our efforts to solve local problems

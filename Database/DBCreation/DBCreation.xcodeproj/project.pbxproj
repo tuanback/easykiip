@@ -72,6 +72,7 @@
 		1757FC512470A51F00E41DA3 /* Endian.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endian.swift; sourceTree = "<group>"; };
 		1757FC522470A51F00E41DA3 /* CSVRowDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVRowDecoder.swift; sourceTree = "<group>"; };
 		1757FC532470A51F00E41DA3 /* CSVReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVReader.swift; sourceTree = "<group>"; };
+		17ED59252498E901000FB18F /* DBCreation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DBCreation.entitlements; sourceTree = "<group>"; };
 		587761D89EA8241A3E165304 /* Pods_DBCreation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DBCreation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CB431373245F761536E1DA /* Pods-DBCreation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBCreation.release.xcconfig"; path = "Target Support Files/Pods-DBCreation/Pods-DBCreation.release.xcconfig"; sourceTree = "<group>"; };
 		E1ED534B86F730420CEED3A5 /* Pods-DBCreation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DBCreation.debug.xcconfig"; path = "Target Support Files/Pods-DBCreation/Pods-DBCreation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		1757FC2924701DB700E41DA3 /* DBCreation */ = {
 			isa = PBXGroup;
 			children = (
+				17ED59252498E901000FB18F /* DBCreation.entitlements */,
 				1757FC4B2470A51F00E41DA3 /* CSV */,
 				1757FC4524701EE800E41DA3 /* DBCreation */,
 				1757FC3124701E5300E41DA3 /* Model */,
@@ -425,9 +427,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1ED534B86F730420CEED3A5 /* Pods-DBCreation.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DBCreation/DBCreation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4JQH63J424;
-				ENABLE_HARDENED_RUNTIME = YES;
+				DEVELOPMENT_TEAM = CW3DR8XJT7;
+				ENABLE_HARDENED_RUNTIME = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -446,9 +449,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B6CB431373245F761536E1DA /* Pods-DBCreation.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = DBCreation/DBCreation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4JQH63J424;
-				ENABLE_HARDENED_RUNTIME = YES;
+				DEVELOPMENT_TEAM = CW3DR8XJT7;
+				ENABLE_HARDENED_RUNTIME = NO;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

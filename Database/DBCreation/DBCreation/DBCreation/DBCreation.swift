@@ -11,7 +11,10 @@ import RealmSwift
 
 class DBCreation {
   
-  let projectFolder = "/Users/tuan/0.Projects/easykiip/"
+  // Company Mac
+  //let projectFolder = "/Users/tuan/0.Projects/easykiip/"
+  // My Mac
+  let projectFolder = "/Users/tuan/0.Apps/EasyKIIP/"
   lazy var csvFolder = projectFolder + "Database/CSV/CSVFiles/"
   lazy var bookFilePath = csvFolder + "book.csv"
   lazy var realmFilePath = projectFolder + "Database/vocabBundled.realm"
@@ -103,6 +106,8 @@ class DBCreation {
                 let word = vocabFields[2]
                 let vi = vocabFields[3]
                 let en = vocabFields[4]
+                
+                guard let id = Int(vocabID) else { continue }
 
                 var vocabTranslation: [RealmTranslation] = []
                 if !vi.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
@@ -113,7 +118,7 @@ class DBCreation {
                   vocabTranslation.append(RealmTranslation(languageCode: LanguageCode.en.rawValue, translation: en))
                 }
                 
-                let vocab = RealmVocab(id: Int(vocabID)!, word: word, translations: vocabTranslation)
+                let vocab = RealmVocab(id: id, word: word, translations: vocabTranslation)
                 lesson.vocabs.append(vocab)
               }
             }
@@ -172,12 +177,12 @@ class DBCreation {
     print("Finish creating database: \(realm.configuration.fileURL)")
   }
   
-  private func openCSV(filePath: String )-> String? {
+  private func openCSV(filePath: String)-> String? {
     do {
       let contents = try String(contentsOfFile: filePath, encoding: .utf8)
       return contents
     } catch {
-      print("File Read Error for file \(filePath)")
+      print("File Read Error for file \(filePath) \(error)")
       return nil
     }
   }
