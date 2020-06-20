@@ -214,7 +214,7 @@ class LessonDetailVC: NiblessViewController {
         guard strongSelf.viewControllers.count > 0 else { return }
         strongSelf.setupPageViewController(with: strongSelf.viewControllers)
         
-        strongSelf.updateIndicatorView(leading: 0, width: strongSelf.view.frame.width / 3)
+        strongSelf.updateIndicatorView(leading: 0, width: strongSelf.view.frame.width / CGFloat(strongSelf.viewControllers.count))
       })
       .disposed(by: disposeBag)
     
