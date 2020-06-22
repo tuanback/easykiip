@@ -21,7 +21,8 @@ public protocol VocabDataStore {
   // To Sync With Firestore Cloud
   func syncLessonProficiency(lessonID: Int,
                              proficiency: UInt8,
-                             lastTimeSynced: Double)
+                             lastTimeSynced: Double,
+                             lastTimeLearned: Double?)
 
   func isLessonSynced(_ lessonID: Int) -> Bool
   

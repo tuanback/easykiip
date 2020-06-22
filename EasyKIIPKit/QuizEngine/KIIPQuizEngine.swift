@@ -114,7 +114,6 @@ public class KIIPQuizEngine: QuizEngine {
   private func routeToNextQuestion() {
     guard mCurrentQuestion < questions.count - 1 else {
       delegate?.quizEngineDidCompleted()
-      vocabRepository.saveLessonPracticeHistory(inBook: bookID, lessonID: lessonID)
       return
     }
     

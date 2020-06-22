@@ -53,7 +53,7 @@ class ParagraphViewRootView: NiblessView {
     paragraphStyle.alignment = .center
     
     let titleAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.appLabelBlack, .font: UIFont.appFontBold(ofSize: 25), .paragraphStyle: paragraphStyle]
-    let scriptAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.appLabelBlack, .font: UIFont.appFontRegular(ofSize: 17)]
+    let scriptAttributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.appLabelBlack, .font: UIFont.appFontRegular(ofSize: 20)]
 
     let paragraph = NSMutableAttributedString(string: script.name + "\n\n", attributes: titleAttributes)
     let content = NSAttributedString(string: script.translation, attributes: scriptAttributes)

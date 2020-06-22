@@ -101,9 +101,12 @@ class FirebaseVocabRemoteAPI: VocabRemoteAPI {
             continue
         }
         
+        let lastTimeLearned = valueDict[FireStoreUtil.Lesson.lastTimeLearned] as? Double
+        
         let lesson = FirebaseLesson(id: id,
                                     proficiency: proficiency,
-                                    lastTimeSynced: lastTimeSynced)
+                                    lastTimeSynced: lastTimeSynced,
+                                    lastTimeLearned: lastTimeLearned)
         results.append(lesson)
       }
     }
@@ -203,7 +206,8 @@ class FirebaseVocabRemoteAPI: VocabRemoteAPI {
     
     let key = "\(FireStoreUtil.Book.lessons).\(FireStoreUtil.Lesson.key)\(lesson.id)"
     let value: [String: Any] = [FireStoreUtil.Lesson.proficiency: lesson.proficiency,
-                                FireStoreUtil.Lesson.lastTimeSynced: lesson.lastTimeSynced]
+                                FireStoreUtil.Lesson.lastTimeSynced: lesson.lastTimeSynced,
+                                FireStoreUtil.Lesson.lastTimeLearned: lesson.lastTimeLearned]
     let lessonDict = [key: value]
     
     docRef.updateData(lessonDict) { (error) in

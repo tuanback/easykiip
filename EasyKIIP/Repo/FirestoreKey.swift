@@ -46,6 +46,7 @@ struct FireStoreUtil {
     static let vocabs = "vocabs"
     static let proficiency = "proficiency"
     static let lastTimeSynced = "lastTimeSynced"
+    static let lastTimeLearned = "lastTimeLearned"
   }
   
   struct Vocab {

@@ -56,7 +56,8 @@ public class KIIPVocabRepository: VocabRepository {
           for lesson in lessons {
             self?.dataStore.syncLessonProficiency(lessonID: lesson.id,
                                                   proficiency: lesson.proficiency,
-                                                  lastTimeSynced: lesson.lastTimeSynced)
+                                                  lastTimeSynced: lesson.lastTimeSynced,
+                                                  lastTimeLearned: lesson.lastTimeLearned)
           }
           
           let syncedLessons = strongSelf.dataStore.getListOfLesson(inBook: id)
@@ -234,7 +235,8 @@ public class KIIPVocabRepository: VocabRepository {
     let proficiency = updatedLesson.proficiency
     let firebaseLesson = FirebaseLesson(id: lessonID,
                                         proficiency: proficiency,
-                                        lastTimeSynced: lastTimeSynced)
+                                        lastTimeSynced: lastTimeSynced,
+                                        lastTimeLearned: updatedLesson.lastTimeLearned?.timeIntervalSince1970)
     
     dataStore.setLessonSynced(lessonID: lessonID, lastTimeSynced: lastTimeSynced)
     

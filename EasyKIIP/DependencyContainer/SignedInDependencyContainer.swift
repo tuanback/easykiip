@@ -19,7 +19,7 @@ public class SignedInDependencyContainer {
   
   init(appDenpendencyContainer: AppDependencyContainer) {
     func makeRemoteAPI() -> VocabRemoteAPI {
-      return FakeVocabRemoteAPI()
+      return FirebaseVocabRemoteAPI()
     }
     
     func makeVocabDataStore() -> VocabDataStore {

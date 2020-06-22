@@ -66,10 +66,10 @@ class QuizPracticeRootView: NiblessView {
     }
     
     stackViewContainer.snp.makeConstraints { (make) in
-      make.top.equalToSuperview().inset(30)
-      make.leading.equalToSuperview().inset(40)
-      make.trailing.equalToSuperview().inset(40)
-      make.bottom.equalToSuperview().inset(50)
+      make.top.equalToSuperview().inset(20)
+      make.leading.equalToSuperview().inset(32)
+      make.trailing.equalToSuperview().inset(32)
+      make.bottom.equalTo(safeAreaInsets.bottom).inset(20)
     }
     
     stackViewOptionContainer.snp.makeConstraints { (make) in
@@ -96,7 +96,7 @@ class QuizPracticeRootView: NiblessView {
         
         strongSelf.stackViewOptionContainer.snp.updateConstraints { (make) in
           if options.count > 0 {
-            make.height.equalTo(options.count * 60 + (options.count - 1) * 8)
+            make.height.equalTo(options.count * 70 + (options.count - 1) * 8)
           }
           else {
             make.height.equalTo(0)

@@ -328,7 +328,10 @@ public class RealmDataStore: VocabDataStore {
     return vocabs
   }
   
-  public func syncLessonProficiency(lessonID: Int, proficiency: UInt8, lastTimeSynced: Double) {
+  public func syncLessonProficiency(lessonID: Int,
+                                    proficiency: UInt8,
+                                    lastTimeSynced: Double,
+                                    lastTimeLearned: Double?) {
     let historyRealm = historyRealmProvider.realm
     
     //Lesson history is existed and synced
@@ -337,9 +340,6 @@ public class RealmDataStore: VocabDataStore {
       
       // If local last time synced > server last time synced => No need to update other fields
       if historyLastTimeSynced >= lastTimeSynced {
-        try! historyRealm.write {
-          lessonHistory.isSynced = true
-        }
         return
       }
       
@@ -348,18 +348,26 @@ public class RealmDataStore: VocabDataStore {
         lessonHistory.isSynced = false
         lessonHistory.proficiency = Int(proficiency)
         lessonHistory.lastTimeSynced.value = lastTimeSynced
+        if let learnedTime = lastTimeLearned {
+          let date = Date(timeIntervalSince1970: learnedTime)
+          lessonHistory.lastTimeLearned = date
+        }
       }
       
       return
     }
     if let lesson = getLesson(by: lessonID) {
+      var lastLearned: Date?
+      if let time = lastTimeLearned {
+        lastLearned = Date(timeIntervalSince1970: time)
+      }
       // Lesson history is not existed or never synced, need to sync the vocab also
       let lessonHistory = RealmLessonHistory(lessonID: Int(lessonID),
                                              numberOfVocabs: lesson.vocabs.count,
                                              isSynced: false,
                                              lastTimeSynced: lastTimeSynced,
                                              proficiency: Int(proficiency),
-                                             lastTimeLearned: nil)
+                                             lastTimeLearned: lastLearned)
       try! historyRealm.write {
         historyRealm.add(lessonHistory)
       }

@@ -40,11 +40,13 @@ public struct FirebaseLesson {
   public let proficiency: UInt8
   /// Time since 1970
   public let lastTimeSynced: Double
+  public let lastTimeLearned: Double?
   
-  public init(id: Int, proficiency: UInt8, lastTimeSynced: Double) {
+  public init(id: Int, proficiency: UInt8, lastTimeSynced: Double, lastTimeLearned: Double?) {
     self.id = id
     self.proficiency = proficiency
     self.lastTimeSynced = lastTimeSynced
+    self.lastTimeLearned = lastTimeLearned
   }
 }
 

@@ -156,8 +156,13 @@ class LessonDetailViewModel {
     .bind(to: rReadingParts)
     .disposed(by: disposeBag)
     
-    let vocabs = vocabRepository.getListOfLowProficiencyVocab(inLesson: lessonID, upto: 10)
-    rPracticeButtonHidden.accept(vocabs.count == 0)
+    observable.map { [weak self] _ -> Bool in
+      guard let strongSelf = self else { return true }
+      let vocabs = strongSelf.vocabRepository.getListOfLowProficiencyVocab(inLesson: strongSelf.lessonID, upto: 10)
+      return vocabs.count == 0
+    }
+    .bind(to: rPracticeButtonHidden)
+    .disposed(by: disposeBag)
   }
   
   func handleItemViewModelClicked(viewModel: LearnVocabItemViewModel) {

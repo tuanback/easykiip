@@ -31,15 +31,20 @@ public class NewWordQuestionMaker: QuestionMaker {
   public func createQuestions() -> [Question] {
     
     var questions: [Question] = []
+    var orderQuestions: [Question] = []
+    var shuffleQuestions: [Question] = []
     let allVocabs = createQuestionVocabs + randomVocabs
     
     for vocab in createQuestionVocabs {
       guard !vocab.practiceHistory.isMastered else { continue }
       let differentVocabs = getDifferentVocabs(numberOfDiffrentVocab: numberOfOptions - 1,
                                                vocab: vocab, allVocabs: allVocabs)
-      let vocabQuestions = createQuestions(for: vocab, otherVocabs: differentVocabs)
-      questions.append(contentsOf: vocabQuestions)
+      let (orderQs, shuffleQs) = createQuestions(for: vocab, otherVocabs: differentVocabs)
+      orderQuestions.append(contentsOf: orderQs)
+      shuffleQuestions.append(contentsOf: shuffleQs)
     }
+    
+    questions = orderQuestions + shuffleQuestions.shuffled()
     
     let notLearnedQuestion = createQuestionVocabs.filter({ !$0.practiceHistory.isLearned && !$0.practiceHistory.isMastered })
     
@@ -98,7 +103,7 @@ public class NewWordQuestionMaker: QuestionMaker {
     return vocabs
   }
   
-  private func createQuestions(for vocab: Vocab, otherVocabs: [Vocab]) -> [Question] {
+  private func createQuestions(for vocab: Vocab, otherVocabs: [Vocab]) -> ([Question], [Question]) {
     var questions: [Question] = []
     
     if !vocab.practiceHistory.isLearned,
@@ -120,7 +125,20 @@ public class NewWordQuestionMaker: QuestionMaker {
     
     questions.append(contentsOf: practiceQuestions)
     
-    return questions
+    var orderQuestions: [Question] = []
+    var shuffleQuestions: [Question] = []
+    
+    // New word question included
+    if questions.count == 3 {
+      orderQuestions = Array(questions.prefix(2))
+      shuffleQuestions = [questions[2]]
+    }
+    else {
+      // Only include practice question
+      shuffleQuestions = questions
+    }
+    
+    return (orderQuestions, shuffleQuestions)
   }
   
   private func createNewWordQuestion(vocab: Vocab) -> Question? {
