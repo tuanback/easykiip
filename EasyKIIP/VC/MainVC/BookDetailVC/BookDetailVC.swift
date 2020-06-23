@@ -12,6 +12,7 @@ import Firebase
 import GoogleMobileAds
 import RxSwift
 import RxCocoa
+import SVProgressHUD
 
 public class BookDetailVC: NiblessViewController {
   
@@ -59,6 +60,18 @@ public class BookDetailVC: NiblessViewController {
   private func observeViewModel() {
     viewModel.oNavigationTitle
       .bind(to: navigationItem.rx.title)
+      .disposed(by: disposeBag)
+    
+    viewModel.isLoading
+      .observeOn(MainScheduler.asyncInstance)
+      .subscribe(onNext: { [weak self] isLoading in
+        if isLoading {
+          SVProgressHUD.show()
+        }
+        else {
+          SVProgressHUD.dismiss()
+        }
+      })
       .disposed(by: disposeBag)
     
     viewModel.oNavigation

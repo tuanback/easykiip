@@ -21,6 +21,10 @@ class MainVC: NiblessViewController {
   private let disposeBag = DisposeBag()
   private var imageSettingButton: UIImage? = UIImage(named: IconName.avatar)
   
+  private lazy var searchVocabListVM = SearchVocabListViewModel(vocabs: [])
+  private lazy var searchVocabListVC = SearchVocabListVC(viewModel: searchVocabListVM)
+    
+  
   init(viewModel: MainViewModel,
        navigator: MainNavigator) {
     self.viewModel = viewModel
@@ -51,7 +55,9 @@ class MainVC: NiblessViewController {
   func setupNavBar() {
     navigationItem.title = "KIIP"
     
-    let searchController = UISearchController(searchResultsController: nil)
+    let searchController = UISearchController(searchResultsController: searchVocabListVC)
+    searchController.searchResultsUpdater = self
+    searchController.searchBar.placeholder = Strings.searchVocabOrTranslation
     navigationItem.searchController = searchController
     
     //navigationController?.navigationBar.prefersLargeTitles = true
@@ -122,4 +128,14 @@ class MainVC: NiblessViewController {
       .disposed(by: disposeBag)
   }
   
+}
+
+extension MainVC: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+    let searchBar = searchController.searchBar
+    if let text = searchBar.text {
+      let vocabs = viewModel.handleSearchBarTextInput(text)
+      searchVocabListVM.setVocabs(vocabs)
+    }
+  }
 }

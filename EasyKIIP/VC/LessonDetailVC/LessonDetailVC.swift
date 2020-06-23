@@ -12,6 +12,7 @@ import RxSwift
 import RxCocoa
 import SnapKit
 import RxAppState
+import SVProgressHUD
 
 class LessonDetailVC: NiblessViewController {
   
@@ -176,6 +177,18 @@ class LessonDetailVC: NiblessViewController {
     
     viewModel.oNavigationTitle
       .drive(navigationItem.rx.title)
+      .disposed(by: disposeBag)
+    
+    viewModel.oIsLoading
+      .observeOn(MainScheduler.asyncInstance)
+      .subscribe(onNext: { [weak self] isLoading in
+        if isLoading {
+          SVProgressHUD.show()
+        }
+        else {
+          SVProgressHUD.dismiss()
+        }
+      })
       .disposed(by: disposeBag)
     
     viewModel.childVC

@@ -87,12 +87,17 @@ class LessonDetailViewModel {
     return rPracticeButtonHidden.asDriver()
   }
   
+  var oIsLoading: Observable<Bool> {
+    return rIsLoading.asObservable()
+  }
+  
   private let rNavigationEvent = PublishRelay<NavigationEvent<LessonDetailNavigator.Destination>>()
   private let rChildVC = BehaviorRelay<[LessonDetailChildVC]>(value: [])
   private let rVocabs = BehaviorRelay<[Vocab]>(value: [])
   private let rReadingParts = BehaviorRelay<[ReadingPart]>(value: [])
   private let rNavigagtionTitle = BehaviorRelay<String>(value: "")
   private let rPracticeButtonHidden = BehaviorRelay<Bool>(value: true)
+  private let rIsLoading = BehaviorRelay<Bool>(value: false)
   
   private let disposeBag = DisposeBag()
   
@@ -112,11 +117,15 @@ class LessonDetailViewModel {
   }
   
   private func getVocabs() {
+    rIsLoading.accept(true)
     let observable = vocabRepository.getLesson(inBook: bookID, lessonID: lessonID).share(replay: 1, scope: .forever)
     
     let languageCode = AppSetting.languageCode
     
-    observable.map { (lesson) -> [LessonDetailChildVC] in
+    observable.map { [weak self] (lesson) -> [LessonDetailChildVC] in
+      defer {
+        self?.rIsLoading.accept(false)
+      }
       let vocabs = lesson.vocabs.filter { (vocab) -> Bool in
         vocab.translations[languageCode] != nil
       }
@@ -195,78 +204,78 @@ class LessonDetailViewModel {
     return ToDetailViewModelConverter.convertVocabsToVocabListItemVMs(vocabs: vocabs)
   }
   
-  struct ToDetailViewModelConverter {
-    
-    static let numberOfItemForOneTimeLearn = 8
-    
-    static func convertVocabsToVocabListItemVMs(vocabs: [Vocab]) -> [VocabListItemViewModel] {
-      return vocabs.map {
-        return VocabListItemViewModel(id: $0.id,
-                                      word: $0.word,
-                                      wordTranslation: $0.translations[AppSetting.languageCode] ?? "")
-      }
-    }
-    
-    static func convertReadingPartToReadingPartItemVMs(readingPart: [ReadingPart]) -> [ReadingPartItemViewModel] {
-      return readingPart.map {
-        return ReadingPartItemViewModel(
-          readingPart: $0,
-          scriptName: $0.scriptName,
-          scriptNameTranslation: $0.scriptNameTranslation[AppSetting.languageCode] ?? "")}
-    }
-    
-    static func convertVocabsToLearnVocabItemVMs(vocabs: [Vocab]) -> [LearnVocabItemViewModel] {
-      
-      var viewModels: [LearnVocabItemViewModel] = []
-      var i = 0
-      var collectionID = 0
-      
-      var tempVocabs: [Vocab] = []
-      
-      while i < vocabs.count {
-        if (i + 1) % numberOfItemForOneTimeLearn == 0 {
-          tempVocabs.append(vocabs[i])
-          collectionID += 1
-          let viewModel = convertVocabsToLearnVocabItemVMs(index: collectionID, vocabs: tempVocabs)
-          viewModels.append(viewModel)
-          i += 1
-          tempVocabs.removeAll()
-          continue
-        }
-        
-        tempVocabs.append(vocabs[i])
-        i += 1
-      }
-      
-      if !tempVocabs.isEmpty {
-        collectionID += 1
-        let viewModel = convertVocabsToLearnVocabItemVMs(index: collectionID, vocabs: tempVocabs)
-        viewModels.append(viewModel)
-        tempVocabs.removeAll()
-      }
-      
-      return viewModels
-    }
-    
-    private static func convertVocabsToLearnVocabItemVMs(index: Int, vocabs: [Vocab]) -> LearnVocabItemViewModel {
-      var proficiency: UInt8 = 0
-      
-      let learnedVocabs = vocabs.filter({ $0.lastTimeTest != nil })
-      if learnedVocabs.count == vocabs.count {
-        proficiency = calculateProficiency(vocabs: vocabs)
-      }
-      return LearnVocabItemViewModel(index: index, proficiency: proficiency, vocabs: vocabs)
-    }
-    
-    private static func calculateProficiency(vocabs: [Vocab]) -> UInt8 {
-      
-      let total: Int = vocabs.reduce(0) { (result, vocab) in
-        result + Int(vocab.proficiency)
-      }
-      
-      return UInt8(total / vocabs.count)
-      
+}
+
+struct ToDetailViewModelConverter {
+  
+  static let numberOfItemForOneTimeLearn = 8
+  
+  static func convertVocabsToVocabListItemVMs(vocabs: [Vocab]) -> [VocabListItemViewModel] {
+    return vocabs.map {
+      return VocabListItemViewModel(id: $0.id,
+                                    word: $0.word,
+                                    wordTranslation: $0.translations[AppSetting.languageCode] ?? "")
     }
   }
   
+  static func convertReadingPartToReadingPartItemVMs(readingPart: [ReadingPart]) -> [ReadingPartItemViewModel] {
+    return readingPart.map {
+      return ReadingPartItemViewModel(
+        readingPart: $0,
+        scriptName: $0.scriptName,
+        scriptNameTranslation: $0.scriptNameTranslation[AppSetting.languageCode] ?? "")}
+  }
+  
+  static func convertVocabsToLearnVocabItemVMs(vocabs: [Vocab]) -> [LearnVocabItemViewModel] {
+    
+    var viewModels: [LearnVocabItemViewModel] = []
+    var i = 0
+    var collectionID = 0
+    
+    var tempVocabs: [Vocab] = []
+    
+    while i < vocabs.count {
+      if (i + 1) % numberOfItemForOneTimeLearn == 0 {
+        tempVocabs.append(vocabs[i])
+        collectionID += 1
+        let viewModel = convertVocabsToLearnVocabItemVMs(index: collectionID, vocabs: tempVocabs)
+        viewModels.append(viewModel)
+        i += 1
+        tempVocabs.removeAll()
+        continue
+      }
+      
+      tempVocabs.append(vocabs[i])
+      i += 1
+    }
+    
+    if !tempVocabs.isEmpty {
+      collectionID += 1
+      let viewModel = convertVocabsToLearnVocabItemVMs(index: collectionID, vocabs: tempVocabs)
+      viewModels.append(viewModel)
+      tempVocabs.removeAll()
+    }
+    
+    return viewModels
+  }
+  
+  private static func convertVocabsToLearnVocabItemVMs(index: Int, vocabs: [Vocab]) -> LearnVocabItemViewModel {
+    var proficiency: UInt8 = 0
+    
+    let learnedVocabs = vocabs.filter({ $0.lastTimeTest != nil })
+    if learnedVocabs.count == vocabs.count {
+      proficiency = calculateProficiency(vocabs: vocabs)
+    }
+    return LearnVocabItemViewModel(index: index, proficiency: proficiency, vocabs: vocabs)
+  }
+  
+  private static func calculateProficiency(vocabs: [Vocab]) -> UInt8 {
+    
+    let total: Int = vocabs.reduce(0) { (result, vocab) in
+      result + Int(vocab.proficiency)
+    }
+    
+    return UInt8(total / vocabs.count)
+    
+  }
 }

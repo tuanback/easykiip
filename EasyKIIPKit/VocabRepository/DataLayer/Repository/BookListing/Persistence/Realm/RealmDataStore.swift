@@ -312,6 +312,11 @@ public class RealmDataStore: VocabDataStore {
     let historyRealm = historyRealmProvider.realm
     
     let realmVocabs = bundledRealm.objects(RealmVocab.self).filter { (vocab) in
+      
+      if vocab.word.lowercased().contains(keyword.lowercased()) {
+        return true
+      }
+      
       for translation in vocab.translations {
         if translation.translation.lowercased().contains(keyword.lowercased()) {
           return true

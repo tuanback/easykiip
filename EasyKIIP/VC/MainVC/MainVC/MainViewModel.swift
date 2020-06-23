@@ -91,4 +91,8 @@ public class MainViewModel {
   func handleSettingButtonClicked() {
     oNavigation.accept(.present(destination: .setting))
   }
+  
+  func handleSearchBarTextInput(_ searchText: String) -> [Vocab] {
+    return vocabRepository.searchVocab(keyword: searchText)
+  }
 }

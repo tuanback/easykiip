@@ -71,6 +71,9 @@
 		17954AB2245D3F6000C8CC95 /* MainBookItemCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */; };
 		17954ABE245EB4DB00C8CC95 /* UserSession.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B70B58245580B600C67334 /* UserSession.framework */; };
 		179CB97F2483790B00A8B37C /* QuizEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179CB97E2483790B00A8B37C /* QuizEngineTests.swift */; };
+		179E7B3824A224140090F1A2 /* SearchVocabListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E7B3624A224140090F1A2 /* SearchVocabListVC.swift */; };
+		179E7B3924A224140090F1A2 /* SearchVocabListRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E7B3724A224140090F1A2 /* SearchVocabListRootView.swift */; };
+		179E7B3B24A224550090F1A2 /* SearchVocabListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179E7B3A24A224550090F1A2 /* SearchVocabListViewModel.swift */; };
 		17B70A86244C180200C67334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B70A85244C180200C67334 /* AppDelegate.swift */; };
 		17B70A8F244C180500C67334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A8E244C180500C67334 /* Assets.xcassets */; };
 		17B70A92244C180500C67334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B70A90244C180500C67334 /* LaunchScreen.storyboard */; };
@@ -377,6 +380,9 @@
 		17954AB1245D3F6000C8CC95 /* MainBookItemCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBookItemCVC.swift; sourceTree = "<group>"; };
 		17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModelTests.swift; sourceTree = "<group>"; };
 		179CB97E2483790B00A8B37C /* QuizEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEngineTests.swift; sourceTree = "<group>"; };
+		179E7B3624A224140090F1A2 /* SearchVocabListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVocabListVC.swift; sourceTree = "<group>"; };
+		179E7B3724A224140090F1A2 /* SearchVocabListRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVocabListRootView.swift; sourceTree = "<group>"; };
+		179E7B3A24A224550090F1A2 /* SearchVocabListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVocabListViewModel.swift; sourceTree = "<group>"; };
 		17A8A2F5246C990B00794C64 /* EasyKIIP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyKIIP-Bridging-Header.h"; sourceTree = "<group>"; };
 		17B70A82244C180200C67334 /* Easy KIIP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy KIIP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B70A85244C180200C67334 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -645,6 +651,7 @@
 		1766FF9A245A5CDC008B263D /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
+				179E7B3524A224140090F1A2 /* SearchVocabList */,
 				176ADE052460E928006C5D3C /* BookDetailVC */,
 				17954A88245CFC8700C8CC95 /* MainNavVC */,
 				17954A87245CFC2B00C8CC95 /* MainVC */,
@@ -938,6 +945,16 @@
 				17D98F82248B87B60049F5BB /* PracticeQuestionMakerTests.swift */,
 			);
 			path = QuizEngine;
+			sourceTree = "<group>";
+		};
+		179E7B3524A224140090F1A2 /* SearchVocabList */ = {
+			isa = PBXGroup;
+			children = (
+				179E7B3624A224140090F1A2 /* SearchVocabListVC.swift */,
+				179E7B3724A224140090F1A2 /* SearchVocabListRootView.swift */,
+				179E7B3A24A224550090F1A2 /* SearchVocabListViewModel.swift */,
+			);
+			path = SearchVocabList;
 			sourceTree = "<group>";
 		};
 		17A8A2F6246C99F600794C64 /* Ads */ = {
@@ -2115,6 +2132,7 @@
 				17FBF6DA245BEBA200A65233 /* AppSetting.swift in Sources */,
 				17F57FA32478B40800F26EF4 /* MainNavConNavigator.swift in Sources */,
 				177AEC782494A44100771DF2 /* Toast.swift in Sources */,
+				179E7B3B24A224550090F1A2 /* SearchVocabListViewModel.swift in Sources */,
 				17FBF738245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */,
 				17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */,
 				17FBF6E0245BEBB600A65233 /* UIFront_Extension.swift in Sources */,
@@ -2140,6 +2158,7 @@
 				17FBF71D245BEC2300A65233 /* AppDenpendencyContainer.swift in Sources */,
 				17FBF6DE245BEBB000A65233 /* UIColor_Extension.swift in Sources */,
 				17FBF6F5245BEBDC00A65233 /* MainRootView.swift in Sources */,
+				179E7B3924A224140090F1A2 /* SearchVocabListRootView.swift in Sources */,
 				177AEC7D2494F48200771DF2 /* SettingVM.swift in Sources */,
 				1771C7152497A4E900983897 /* ParagraphViewVM.swift in Sources */,
 				17FBF6E9245BEBC500A65233 /* NiblessView.swift in Sources */,
@@ -2151,6 +2170,7 @@
 				176ADE072460E958006C5D3C /* BookDetailViewModel.swift in Sources */,
 				177AEC69249458F200771DF2 /* QuizEndViewModel.swift in Sources */,
 				17CBE669247A06CC005D4CFD /* LearnVocabListVC.swift in Sources */,
+				179E7B3824A224140090F1A2 /* SearchVocabListVC.swift in Sources */,
 				17CBE67A247A1A5C005D4CFD /* VocabListRootView.swift in Sources */,
 				17FBF70E245BEC0800A65233 /* OnboardingVC.swift in Sources */,
 				17F30EF2246B561D008040BE /* BookDetailAdsCVC.swift in Sources */,

@@ -145,6 +145,10 @@ extension Strings {
     NSLocalizedString("Log in to save and synchronize your learning progress between multiple devices", bundle: Strings.languageBundle, comment: "")
   }
   
+  static var searchVocabOrTranslation: String {
+    NSLocalizedString("Search vocab or translation", bundle: Strings.languageBundle, comment: "")
+  }
+  
   static var vietnamese = "Tiếng Việt"
   static var english = "English"
 }

@@ -20,6 +20,7 @@ target 'EasyKIIP' do
   pod 'ReachabilitySwift'
   pod "RxAppState"
   pod 'RxDataSources'
+  pod 'SVProgressHUD'
   
   target 'EasyKIIPTests' do
     inherit! :search_paths

@@ -41,6 +41,9 @@
 "Knew" = "Đã biết";
 
 /* No comment provided by engineer. */
+"Korean" = "Tiếng Hàn";
+
+/* No comment provided by engineer. */
 "Language" = "Ngôn ngữ";
 
 /* No comment provided by engineer. */
@@ -51,6 +54,9 @@
 
 /* No comment provided by engineer. */
 "Log In" = "Đăng nhập";
+
+/* No comment provided by engineer. */
+"Log in to save and synchronize your learning progress between multiple devices" = "Đăng nhập để lưu lịch sử học và đồng bộ giữa các thiết bị";
 
 /* No comment provided by engineer. */
 "Log Out" = "Đăng xuất";
@@ -81,6 +87,9 @@
 
 /* No comment provided by engineer. */
 "Retry" = "Thử lại";
+
+/* No comment provided by engineer. */
+"Search vocab or translation" = "Tìm kiếm từ vựng và nghĩa";
 
 /* No comment provided by engineer. */
 "Settings" = "Cài đặt";
