@@ -1,0 +1,58 @@
+외국인등록증	Thẻ đăng ký người nước ngoài
+앞면	Mặt trước
+외국인등록번호	Số thẻ đăng ký người nước ngoài
+성별	Giới tính
+이름	Tên
+여권상 국적	Quốc tịch trên hộ chiếu
+체류자격	Tư cách lưu trú
+결혼이민(F-6)	Kết hôn nhập cư (F6)
+발급 일자	Ngày cấp phát
+발급사무소	Cơ quan cấp phát
+뒷면	Mặt sau
+허가일자	Ngày chấp thuận	ngày đồng ý thời gian lưu trú
+체류기간을 허가한 날짜	ngày đồng ý thời gian lưu trú
+만료일자	Ngày hết hạn
+체류기간 만료일	ngày hết hạn thời gian lưu trú
+체류지	Nơi cư trú
+한국내 주소	Địa chỉ ở Hàn Quốc
+여권	Hộ chiếu
+이름	Tên
+여권상 국적	Quốc tịch trên hộ chiếu
+성별	Giới tính
+발급 일자	Ngày cấp phát
+여권번호	Số hộ chiếu
+발행관청	Cơ quan phát hành
+출생신고서	Tờ khai sinh
+가족관계증명서	Giấy chứng nhận quan hệ gia đình
+통장잔고증명서	Giấy chứng minh số dư tài khoản
+혼인신고서	Tờ khai đăng ký kết hôn
+개명신고서	Tờ khai thay đổi danh tính (đổi tên)
+신분증사본	Bản sao giấy tờ tùy thân
+통장사본	Bản sao sổ ngân hàng
+출입국사실증명서	Giấy chứng nhận xuất nhập cảnh
+주민등록등본	Bản sao đăng ký cư trú
+출입국관리사무소	Phòng quản lý xuất nhập cảnh
+외국인등록증을 신청하다	Đăng ký thẻ cư trú người nước ngoài
+외국인등록증을 재발급 받다	Được cấp lại thẻ cư trú người nước ngoài
+체류지 변경 신고를 하다	Khai báo thay đổi nơi cư trú
+체류기간을 연장하다	Gia hạn thời gian lưu trú
+출입국사실증명서를 발급받다/떼다	Được cấp phát/ lấy giấy chứng nhận xuất nhập cảnh
+동 주민센터/구청	Ủy ban nhân dân phường/ quận
+혼인신고 를 하다/ 출생신고를 하다	Đăng ký kết hôn/ đăng ký khai sinh
+외국인인력지원센터	Trung tâm hỗ trợ người lao động nước ngoài
+구직상담을 받다	Nhận tư vấn tìm việc
+컴퓨터, 태권도를 배우다	Học máy tính, taekwondo
+보건소	Trung tâm y tế công cộng
+건강검진을 하다	Khám sức khỏe
+예방접종을 하다	Tiêm ngừa
+도로교통공단	Cơ quan giao thông đường bộ
+운전면허를 따다	Lấy bằng lái xe
+운전면허증을 신청하다	Đăng ký bằng lái xe
+운전면허증을 갱신하다	Gia hạn bằng lái xe
+운전면허증을 재발급 받다	Được cấp lại bằng lái xe
+위반하다	vi phạm
+범칙금	tiền phạt do vi phạm luật
+부과되다	bị phạt, bị đánh thuế
+영주자격	 tư cách cư trú dài hạn, tư cách cư trú vĩnh viễn
+사실	sự thật, thật ra
+제한되다	bị hạn chế)

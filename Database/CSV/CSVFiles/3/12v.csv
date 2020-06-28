@@ -1,2 +1,97 @@
-ID,LessonID,Word,vi,en
+﻿ID,LessonID,Word,vi,en
+10201,52,여행 계획을 세우다,Lên kế hoạch du lịch,Travel planning
+10202,52,여행지,Địa điểm du lịch,Tourist attraction
+10203,52,일정(○박○일) ,Lịch trình (○Đêm○Ngày),Schedule (○ Night ○ Day)
+10204,52,짐을 싸다,"Gói ghém hành lý, xếp hành lý","Pack up luggage, pack luggage"
+10205,52,예약하다,"Đặt trước (Phòng, bàn, chỗ…)","Booking (Room, table, seat ...)"
+10206,52,예매하다,đặt mua trước (vé…),pre-order (tickets ...)
+10207,52,여행사,Công ty du lịch,Travel agency
+10208,52,숙박,Ở trọ,Accommodation
+10209,52,호텔,Khách sạn,Hotel
+10210,52,펜션,khách sạn nhỏ kiểu gia đình,small family-style hotel
+10211,52,교통편,Phương tiện giao thông,Transport
+10212,52,기차,Tàu hỏa,Train
+10213,52,항공,hàng không,air
+10214,52,배,tàu thuyền,ships
+10215,52,고속버스,xe bus tốc hành,Express bus
+10216,52,구경하다,Ngắm cảnh ,Sighseeing
+10217,52,즐기다,tận hưởng ,enjoy
+10218,52,관광하다,đi tham quan ,visiting
+10219,52,휴식을 취하다,nghỉ ngơi,rested
+10220,52,구경거리,"Cái để ngắm, cái đáng xem","What to watch, what to watch"
+10221,52,즐길거리,"Cái để tận hưởng, thứ để tận hưởng thích thú","Something to enjoy, something to enjoy to enjoy"
+10222,52,볼거리,"Trò giải trí, cái để xem","Entertainment, one to see"
+10223,52,먹거리,Đồ ăn,Food
+10224,52,숙박 시설,"Cơ sở vật chất trú ngụ, nơi trú ngụ, chỗ ngủ nghỉ…","Accommodation facilities, shelter, sleeping places ..."
+10225,52,민박,Ở trọ nhà dân,Homestay
+10226,52,캠핑,Sự cắm trại,Encampment
+10227,52,유스 호스텔,Nhà khách thanh niên,Youth guesthouse
+10228,52,봄맞이 힐링코스,Cuộc hành trình nghỉ dưỡng đón xuân,Journey to welcome spring
+10229,52,상품명,Tên sản phẩm,Product's name
+10230,52,패키지,"Hàng trọn gói, gói, bưu kiện, bưu phẩm ","Package goods, packages, parcels, parcels"
+10231,52,자유,Tự do,Free
+10232,52,여행기간,Thời gian chuyến đi du lịch,Time travel trip
+10233,52,출발,Sự khởi hành,Start
+10234,52,포함내역,Nội dung chi tiết bao gồm,Detailed content included
+10235,52,왕복 항공권,Vé máy bay khứ hồi,return plane ticket
+10236,52,힐링리조트 숙박,Chỗ ở khu nghỉ dưỡng (resort),Resort accommodation (resort)
+10237,52,렌터카 및 네비게이션,Xe ô tô thuê cùng với máy tìm đường,Rent a car with a finder
+10238,52,불포함내역,Nội dung chi tiết không bao gồm,Content details are not included
+10239,52,유류할증료+공항세,Tiền tăng giá xăng dầu + thuế sân bay,Petrol price increase + airport tax
+10240,52,렌터카 자차비용 및 유류세:,Tổn thất thiệt hại xe cộ do bản thân gây ra và thuế xăng dầu,Personal vehicle damage and fuel tax
+10241,52,기타 개인비용,Chi phí cá nhân khác,Other personal expenses
+10242,52,기타사항,Thông tin khác,Other information
+10243,52,숙소 온돌방/침대방 선택,Chỗ ở chọn phòng sưởi nền/ phòng có giường,Accommodation selects room heating / bed room
+10244,52,패키지,Du lịch trọn gói,Travel Packages
+10245,52,자유여행,du lịch tự do,free travel
+10246,52,성수기,Mùa cao điểm,Peak season
+10247,52,비수기,mùa thấp điểm,low season
+10248,52,체크인,Nhận phòng,Check in
+10249,52,체크아웃,trả phòng,Check
+10250,52,더블 베드,Giường đôi,Double bed
+10251,52,트윈 베드,hai giường,two beds
+10252,52,온돌방,Phòng sưởi nền,Room heating background
+10253,52,침대방,phòng có giường,room with bed
+10254,52,조식,Bữa sáng,Breakfast
+10255,52,석식,bữa tối,dinner
+10256,52,국내선,Tuyến quốc nội ,Domestic route
+10257,52,국제선,tuyến quốc tế,international route
+10258,52,편도,Một chiều,One-way
+10259,52,왕복,khứ hồi,round-trip
+10260,52,발권(하다),Phát hành,To release
+10261,52,유효기간,"Thời hạn sử dụng, ngày hết hạn","Expiry date, expiry date"
+10262,52,코레일 (Korail),Tên công ty quản lý đường sắt Hàn Quốc,Name of Korean railway management company
+10263,52,이색,Sự mới lạ,Novelty
+10264,52,달리다,"chạy, hướng về, được treo, được gắn","run, facing, hanging, mounted"
+10265,52,열차,Tàu đường sắt,Railway train
+10266,52,동쪽,Hướng đông,East
+10267,52,바닷가,Bờ biển,Seaside
+10268,52,붙여지다,"Được đặt tên, được dính vào, được gắn vào","Named, tagged, attached"
+10269,52,년대,"Thập kỷ, thập niên","Decade, decade"
+10270,52,끌다,"Lôi kéo, thu hút, gây chú ý","Entice, attract, attract attention"
+10271,52,인기를 끌다,"thu hút sự mến mộ, tạo nên cơn sốt yêu thích","attract admiration, create favorite fever"
+10272,52,등장하다,"Ra mắt, ra đời, xuất hiện","Debut, birth, appearance"
+10273,52,동해,"Đông hải, biển đông","East sea, east sea"
+10274,52,푸르다,Xanh ngát,Greenish
+10275,52,일출,Bình minh,Dawn
+10276,52,명소,Danh lam thắng cảnh,Attractions
+10277,52,특히,"Một cách đặc biệt, đặc biệt là","In a special way, especially"
+10278,52,젊다,"Trẻ, trẻ trung","Young, young"
+10279,52,연인,"Người yêu, đôi tình nhân","Lover, couple"
+10280,52,발길,"Bước chân, bước đi","Step, walk"
+10281,52,이어지다,"Được tiếp nối, được tiếp diễn, được lưu truyền","Continued, continued, passed on"
+10282,52,가격,"Giá, giá cả","Price, price"
+10283,52,야경,Cảnh đêm,Night scene
+10284,52,와인,Rượu vang,Wine
+10285,52,제공,sự cung cấp,supplication
+10286,52,해돋이,"Bình minh, rạng đông","Dawn, dawn"
+10287,52,자세하다,"Tỉ mỉ, chi tiết","Meticulous, detailed"
+10288,52,일정표,"Bảng lịch trình, thời gian biểu","Schedule, timetables"
+10289,52,취하다,"chọn, áp dụng","select, apply"
+10290,52,만끽하다,tận hưởng,enjoy
+10291,52,배낭여행,"du lịch ba lô, du lịch bụi","backpack travel, backpacker travel"
+10292,52,그 가운데,trong số đó,among them
+,,,,
+,,,,
+,,,,
 ,,,,

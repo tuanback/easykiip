@@ -1,0 +1,96 @@
+여행 계획을 세우다	Lên kế hoạch du lịch
+여행지	Địa điểm du lịch
+일정(○박○일) Lịch trình (○Đêm○Ngày)
+짐을 싸다	Gói ghém hành lý, xếp hành lý
+예약하다	Đặt trước (Phòng, bàn, chỗ…)
+예매하다	đặt mua trước (vé…)
+여행사	Công ty du lịch
+숙박	Ở trọ
+호텔	Khách sạn
+펜션	khách sạn nhỏ kiểu gia đình
+교통편	Phương tiện giao thông
+기차	Tàu hỏa
+항공	hàng không
+배	tàu thuyền
+고속버스	xe bus tốc hành
+구경하다	Ngắm cảnh 
+즐기다	tận hưởng 
+관광하다	đi tham quan 
+휴식을 취하다	nghỉ ngơi
+구경거리	Cái để ngắm, cái đáng xem
+즐길거리	Cái để tận hưởng, thứ để tận hưởng thích thú
+볼거리	Trò giải trí, cái để xem
+먹거리	Đồ ăn
+숙박 시설	Cơ sở vật chất trú ngụ, nơi trú ngụ, chỗ ngủ nghỉ…
+호텔	Khách sạn
+민박	Ở trọ nhà dân
+캠핑	Sự cắm trại
+펜션	Khách sạn nhỏ kiểu gia đình
+유스 호스텔	Nhà khách thanh niên
+봄맞이 힐링코스	Cuộc hành trình nghỉ dưỡng đón xuân
+상품명	Tên sản phẩm
+패키지	Hàng trọn gói, gói, bưu kiện, bưu phẩm 
+자유	Tự do
+여행기간	Thời gian chuyến đi du lịch
+출발	Sự khởi hành
+교통편	Phương tiện giao thông
+포함내역	Nội dung chi tiết bao gồm
+왕복 항공권	Vé máy bay khứ hồi
+힐링리조트 숙박	Chỗ ở khu nghỉ dưỡng (resort)
+렌터카 및 네비게이션	Xe ô tô thuê cùng với máy tìm đường
+불포함내역	Nội dung chi tiết không bao gồm
+유류할증료+공항세	Tiền tăng giá xăng dầu + thuế sân bay
+렌터카 자차비용 및 유류세:
+Tổn thất thiệt hại xe cộ do bản thân gây ra và thuế xăng dầu
+기타 개인비용	Chi phí cá nhân khác
+기타사항	Thông tin khác
+숙소 온돌방/침대방 선택	Chỗ ở chọn phòng sưởi nền/ phòng có giường
+패키지	Du lịch trọn gói
+자유여행	du lịch tự do
+성수기	Mùa cao điểm
+비수기	mùa thấp điểm
+체크인	Nhận phòng
+체크아웃	trả phòng
+더블 베드	Giường đôi
+트윈 베드	hai giường
+온돌방	Phòng sưởi nền
+침대방	phòng có giường
+조식	Bữa sáng
+석식	bữa tối
+국내선	Tuyến quốc nội 
+국제선	tuyến quốc tế
+편도	Một chiều
+왕복	khứ hồi
+발권(하다)	Phát hành
+유효기간	Thời hạn sử dụng, ngày hết hạn
+코레일 (Korail)	Tên công ty quản lý đường sắt Hàn Quốc
+이색	Sự mới lạ
+달리다	chạy, hướng về, được treo, được gắn
+열차	Tàu đường sắt
+동쪽	Hướng đông
+바닷가	Bờ biển
+붙여지다	Được đặt tên, được dính vào, được gắn vào
+년대	Thập kỷ, thập niên
+끌다	Lôi kéo, thu hút, gây chú ý
+인기를 끌다	thu hút sự mến mộ, tạo nên cơn sốt yêu thích
+등장하다	Ra mắt, ra đời, xuất hiện
+동해	Đông hải, biển đông
+푸르다	Xanh ngát
+일출	Bình minh
+명소	Danh lam thắng cảnh
+특히	Một cách đặc biệt, đặc biệt là
+젊다	Trẻ, trẻ trung
+연인	Người yêu, đôi tình nhân
+발길	Bước chân, bước đi
+이어지다	Được tiếp nối, được tiếp diễn, được lưu truyền
+가격	Giá, giá cả
+야경	Cảnh đêm
+와인	Rượu vang
+제공	sự cung cấp
+해돋이	Bình minh, rạng đông
+자세하다	Tỉ mỉ, chi tiết
+일정표	Bảng lịch trình, thời gian biểu
+취하다	chọn, áp dụng
+만끽하다	tận hưởng
+배낭여행	du lịch ba lô, du lịch bụi
+그 가운데	trong số đó

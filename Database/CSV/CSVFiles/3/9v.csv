@@ -1,2 +1,82 @@
-ID,LessonID,Word,vi,en
+﻿ID,LessonID,Word,vi,en
+9601,49,공연,"Công diễn, biểu diễn","Performance, performance"
+9602,49,오페라,Opera,Opera
+9603,49,콘서트,Buổi hòa nhạc,Concert
+9604,49,연주회,Buổi trình diễn,The show
+9605,49,뮤지컬,Ca kịch,Opera
+9606,49,사물놀이,"Samulnori (Hình thức diễn tấu âm nhạc truyền thống của Hàn Quốc với 4 nhạc cụ truyền thống là cồng, trống dài, chiêng, trống).","Samulnori (Traditional Korean musical performance with 4 traditional instruments are gong, long drum, gong and drum)."
+9607,49,국악,Quốc nhạc của Hàn Quốc,National music of Korea
+9608,49,판소리,Thể loại âm nhạc truyền thống Hàn Quốc hát kể lại câu chuyện bằng lời hát.,Korean traditional music genre tells the story with lyrics.
+9609,49,발레,Múa ba lê,Ballet
+9610,49,연극,Kịch,Dramatic
+9611,49,현대무용,Múa hiện đại,Modern dance
+9612,49,기회,Cơ hội,Opportunity
+9613,49,감상 표현,Các biểu hiện thưởng thức,The expression enjoy
+9614,49,내용이 흥미진진하다,"Nội dung đầy hứng thú, nội dung rất thú vị","Interesting content, very interesting content"
+9615,49,내용이 감동적이다,"Nội dung xúc động, nội dung cảm động","Touching content, touching content"
+9616,49,내용이 지루하다,Nội dung buồn chán,The content is boring
+9617,49,대사가 인상적이다,Lời thoại ấn tượng,Impressive speech
+9618,49,연기가 실감 나다,"Diễn xuất thật, diễn xuất hay","Good acting, good acting"
+9619,49,무대가 환상적이다,Sân khấu mang tính ảo tưởng/ kì dị,Illusory / weird stage
+9620,49,여운이 남다,Dư âm/ dư vị còn đọng lại,Aftertaste / aftertaste remains
+9621,49,결말이 비극적이다,"Kết thúc mang tính bi kịch, kết thúc không có hậu","Tragedy ending, no happy ending"
+9622,49,기대만 못하다,Thua sự mong đợi,Lose the expectation
+9623,49,세게,"Mạnh, một cách mạnh mẽ","Strong, strong"
+9624,49,두드리다,"Gõ, đấm, đá, lay động, lay chuyển","Knock, punch, kick, move, move"
+9625,49,뜻,ý nghĩa,meaning
+9626,49,동시,Đồng thời,At the same time
+9627,49,제목,"Tiêu đề, đề mục, tựa, tên","Title, title, title, name"
+9628,49,주방,"Nhà bếp, gian bếp","Kitchen, kitchen"
+9629,49,코믹하다,Hài hước,Humor
+9630,49,대사,Lời thoại,Speech
+9631,49,리듬,Nhịp điệu,Beat
+9632,49,바탕,"Nền tảng, cơ sở, bản chất","Foundation, basis, nature"
+9633,49,몸짓,"Điệu bộ, cử chỉ","Gestures, gestures"
+9634,49,진행되다,"Được tiến hành, được tiến triển","In progress, progression"
+9635,49,프라이 팬,Chảo rán,Frying pan
+9636,49,냄비,Nồi,Pot
+9637,49,도마,Cái thớt,The cutting board
+9638,49,기구,Dụng cụ,Tool
+9639,49,관객,"Khán giả, quan khách","Audience, guests"
+9640,49,흥겹다,"Thú vị, thích thú","Interesting, interesting"
+9641,49,연주,Sự biểu diễn,The performance
+9642,49,들려주다,Cho nghe (cho nghe âm thanh hoặc lời nói).,For listening (for listening to audio or speech).
+9643,49,특히,Một cách đặc biệt,In a special way
+9644,49,북,Cái trống,Drum
+9645,49,장면,"Cảnh quay, cảnh diễn, pha, cảnh, màn…","Scene, scene, phase, scene, screen ..."
+9646,49,인상적,Tính ấn tượng,Impressive
+9647,49,중간,"Trung gian, ở giữa, giữa lúc, giữa chừng","Intermediate, in the middle, in the middle, in the middle"
+9648,49,무대,Sân khấu,Stage
+9649,49,시합하다,"Thi đấu, so tài","Competition, competition"
+9650,49,경험하다,Trải nghiệm,Experience
+9651,49,뉴욕 브로드웨이,New York Broadway.,New York Broadway.
+9652,49,비롯하다,"Bắt nguồn, khởi nguồn, bắt đầu","Originate, originate, begin"
+9653,49,세계,Thế giới,World
+9654,49,앙코르,"Sự yêu cầu diễn lại, việc chiếu lại, việc phát sóng lại","Requests for replay, replay, replay"
+9655,49,요청,"Sự đề nghi, sự yêu cầu","Suggestions, requirements"
+9656,49,뜨겁다,Nóng,Hot
+9657,49,관심,Sự quan tâm,Attention
+9658,49,힘입다,"Được giúp sức, được tiếp sức, chịu sức ép","Helped, energized, under pressure"
+9659,49,방콕,Bangkok,Bangkok
+9660,49,장단,"Nhịp, phách",Beats
+9661,49,맞추다,"Ghép, lắp, so, khớp","Matching, fitting, matching, matching"
+9662,49,북을 치다,Đánh trống,Bum Bum
+9663,49,농민,Nông dân,Farmer
+9664,49,농악,Nông nhạc,Shallow music
+9665,49,유래하다,"Có nguồn gốc, bắt nguồn","Originated, rooted"
+9666,49,꽹과리,Cồng,Gong
+9667,49,징,Chiêng,Gong
+9668,49,장구,Trống phách,Drum beat
+9669,49,흩어지다,"bị rải rác, bị vương vãi, bị chia tách, bị tan tác","scattered, scattered, divided, scattered"
+9670,49,가락,"Nhịp, giọng, bài, khúc","Rhythm, voice, post, song"
+9671,49,즉,Tức là,It mean
+9672,49,자유롭다,Tự do,Free
+9673,49,리듬,"Nhịp, nhịp điệu","Rhythm, rhythm"
+9674,49,연주자,"Người trình diễn nhạc cụ, người biểu diễn nhạc cụ",Musical instrument performers and musical instrument performers
+9675,49,즉흥적,"tính ngẫu hứng, mang tính ngẫu hứng","improvisation, improvisation"
+9676,49,독주곡,Bản độc tấu,Solo version
+9677,49,가야금,Đàn gaya,Gaya
+9678,49,거문고,Huyền cầm, Geomungo
+9679,49,대금,Sáo daegum,Daegum flute
+,,,,
 ,,,,

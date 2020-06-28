@@ -1,2 +1,56 @@
-ID,LessonID,Word,vi,en
-,,,,
+﻿ID,LessonID,Word,vi,en
+8401,43,외국인등록증,Thẻ đăng ký người nước ngoài,Alien registration card
+8402,43,앞면,Mặt trước,Front
+8403,43,외국인등록번호,Số thẻ đăng ký người nước ngoài,Alien registration card Number
+8404,,성별,Giới tính,gender
+8405,43,이름,Tên,Name
+8406,43,여권상 국적,Quốc tịch trên hộ chiếu,Nationality on the passport
+8407,43,체류자격,Tư cách lưu trú,Status of residence
+8408,43,결혼이민(F-6),Kết hôn nhập cư (F6),Marriage immigration (F6)
+8409,43,발급 일자,Ngày cấp phát,Issue date
+8410,43,발급사무소,Cơ quan cấp phát,Issuing agency
+8411,43,뒷면,Mặt sau,Backside
+8412,43,허가일자,Ngày chấp thuận,Date of approval
+8413,43,체류기간을 허가한 날짜,ngày đồng ý thời gian lưu trú,Date of stay
+8414,43,만료일자,Ngày hết hạn,Expiration date
+8415,43,체류기간 만료일,ngày hết hạn thời gian lưu trú,expiry date of stay
+8416,43,체류지,Nơi cư trú,Residence
+8417,43,한국내 주소,Địa chỉ ở Hàn Quốc,Address in Korea
+8418,43,여권,Hộ chiếu,Passport
+8419,43,성별,Giới tính,Sex
+8420,43,여권번호,Số hộ chiếu,Passport
+8421,43,발행관청,Cơ quan phát hành,Issuing agency
+8422,43,출생신고서,Tờ khai sinh,Birth certificate
+8423,43,가족관계증명서,Giấy chứng nhận quan hệ gia đình,Certificate of family ties
+8424,43,통장잔고증명서,Giấy chứng minh số dư tài khoản,Proof of account balance
+8425,43,혼인신고서,Tờ khai đăng ký kết hôn,Marriage registration statement
+8426,43,개명신고서,Tờ khai thay đổi danh tính (đổi tên),Identity change declaration (name change)
+8427,43,신분증사본,Bản sao giấy tờ tùy thân,Copy of identification document
+8428,43,통장사본,Bản sao sổ ngân hàng,Copy of bank book
+8429,43,출입국사실증명서,Giấy chứng nhận xuất nhập cảnh,Immigration certificate
+8430,43,주민등록등본,Bản sao đăng ký cư trú,Copy of resident registration
+8431,43,출입국관리사무소,Phòng quản lý xuất nhập cảnh,Immigration Management Department
+8432,43,외국인등록증을 신청하다,Đăng ký thẻ cư trú người nước ngoài,Registration of alien residence card
+8433,43,외국인등록증을 재발급 받다,Được cấp lại thẻ cư trú người nước ngoài,Reissuance of alien registration card
+8434,43,체류지 변경 신고를 하다,Khai báo thay đổi nơi cư trú,Declare change of residence
+8435,43,체류기간을 연장하다,Gia hạn thời gian lưu trú,Extend your stay
+8436,43,출입국사실증명서를 발급받다/떼다,Được cấp phát/ lấy giấy chứng nhận xuất nhập cảnh,Issued / got an exit certificate
+8437,43,동 주민센터/구청,Ủy ban nhân dân phường/ quận,Ward People's Committee
+8438,43,혼인신고 를 하다/ 출생신고를 하다,Đăng ký kết hôn/ đăng ký khai sinh,Marriage registration / birth registration
+8439,43,외국인인력지원센터,Trung tâm hỗ trợ người lao động nước ngoài,Center to support foreign workers
+8440,43,구직상담을 받다,Nhận tư vấn tìm việc,Get job search advice
+8441,43,"컴퓨터, 태권도를 배우다","Học máy tính, taekwondo","Computer learning, taekwondo"
+8442,43,보건소,Trung tâm y tế công cộng,Public health center
+8443,43,건강검진을 하다,Khám sức khỏe,Physical examination
+8444,43,예방접종을 하다,Tiêm ngừa,Shots
+8445,43,도로교통공단,Cơ quan giao thông đường bộ,Road traffic agency
+8446,43,운전면허를 따다,Lấy bằng lái xe,Get a driver's license
+8447,43,운전면허증을 신청하다,Đăng ký bằng lái xe,Register a driver's license
+8448,43,운전면허증을 갱신하다,Gia hạn bằng lái xe,Renew your driver license
+8449,43,운전면허증을 재발급 받다,Được cấp lại bằng lái xe,Reissued driving license
+8450,43,위반하다,vi phạm,violate
+8451,43,범칙금,tiền phạt do vi phạm luật,Penalty for breaking the law
+8452,43,부과되다,"bị phạt, bị đánh thuế","fined, taxed"
+8453,43,영주자격," tư cách cư trú dài hạn, tư cách cư trú vĩnh viễn"," long-term residence status, permanent residence status"
+8454,43,사실,"sự thật, thật ra","truth, truth"
+8455,43,제한되다,bị hạn chế,is limited

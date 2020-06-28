@@ -1,2 +1,58 @@
-ID,LessonID,Word,vi,en
+﻿ID,LessonID,Word,vi,en
+9001,46,수입,Thu nhập,income
+9002,46,월급,lương tháng,Salary
+9003,46,보너스,thưởng,bonus
+9004,46,아르바이트비,tiền làm thêm,Part-time job salary
+9005,46,연금,"Tiền trợ cấp, lương hưu",Pension
+9006,46,지출,"Chi tiêu, tiêu xài",expenditure
+9007,46,식비,tiền ăn,Food expenses
+9008,46,교통비 ,"tiền đi lại, phí giao thông",Transportation
+9009,46,의료비,Phí điều trị bệnh,Medical expenses
+9010,46,교육비 ,chi phí giáo dục,Education costs
+9011,46,문화비,Chi phí văn hóa,Cultural expenses
+9012,46,전기 요금,Tiền điện,Electricity bill
+9013,46,수도 요금,Tiền nước,water rate
+9014,46,경조사비,"Chi phí hiếu hỉ (Chi phí đám cưới, đám tang, tiệc…)",Contest expenses
+9015,46,통신비,"Chi phí thông tin liên lạc (Điện thoai, internet)",Communication costs
+9016,46,일시불로 사다,"Thanh toán ngay, thanh toán 1 lần",Buy for a lump sum
+9017,46,할부로 구입하다,Mua trả góp,Install in installments
+9018,46,현금으로 계산하다,Chi trả bằng tiền mặt,Calculate in cash
+9019,46,카드로 지불하다,Chi trả/ thanh toán bằng thẻ,Pay by card
+9020,46,절약하다,Tiết kiệm,Retrench
+9021,46,낭비하다,Lãng phí,waste
+9022,46,과소비하다,Tiêu xài quá mức,Overconsume
+9023,46,충동구매하다,Mua hàng ngẫu hứng,Impulse purchase
+9024,46,비용이 들다,"Tốn chi phí, tốn tiền",Cost
+9025,46,돈이 떨어지다,Hết tiền,Money runs out
+9026,46,영수증을 받다,"Nhận hóa đơn, lấy hóa đơn",Receive a receipt
+9027,46,가계부를 작성하다,Ghi chép thu chi gia đình,Make a household account
+9028,46,남다,"Còn lại, thừa lại",left
+9029,46,가계부,Sổ ghi chép chi tiêu gia đình,account book
+9030,46,돈을 모으다,"Gom góp tiền, tiết kiệm tiền",save up money
+9031,46,아끼다,"Tiết kiệm, trân trọng",grudge
+9032,46,계산하다,"Tính toán, tính tiền, thanh toán",Calculate
+9033,46,절약,Tiết kiệm,Saving
+9034,46,특별히,Đặc biệt,especially
+9035,46,허리띠를 졸라맬,Thắt lưng buộc bụng,Wear a belt
+9036,46,고민,"Sự khổ tâm, lo lắng.",Worry
+9037,46,물가,Vật giá,Prices
+9038,46,오르다,Leo lên,climb
+9039,46,다양하다,đa dạng,Varies
+9040,46,값을 깎다,"giảm giá, bớt giá",Cut the price
+9041,46,덤을 얻다,nhận được khuyến mãi,Get a bonus
+9042,46,느끼다,"Cảm thấy, cảm nhận",feel
+9043,46,액세서리,"phụ kiện, đồ trang sức",accessory
+9044,46,여성복,Quần áo dành cho nữ,petticoat
+9045,46,남성복,Quần áo dành cho nam,Men's wear
+9046,46,유아 용품,Đồ dùng cho trẻ em,Baby supplies
+9047,46,전자 제품,đồ điện tử,Electronic products
+9048,46,생활용품,đồ dùng trong sinh hoạt,Household goods
+9049,46,식품,thực phẩm,food
+9050,46,낱개로 팔다 ,bán lẻ,Sell individually
+9051,46,묶음으로 팔다,bán theo bó,Sell in bundles
+9052,46,마찬 가지로,"cũng như, tương tự",Likewise
+9053,46,….과/와 달리 ,Khác với,… Unlike /
+9054,46,과자,"bánh quy, bánh ngọt",snack
+9055,46,음료수,"thức uống, nước giải khát",drink
+9056,46,연중,"trong năm, suốt năm",Year round
 ,,,,

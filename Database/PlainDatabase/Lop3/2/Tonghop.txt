@@ -1,0 +1,80 @@
+음식 종류	Loại thức ăn
+초대 음식	Thức ăn đãi khách
+후식(디저트)	Món tráng miệng
+간식	Đồ ăn nhẹ, đồ ăn giữa buổi
+건강식/보양식	Thực phẩm dinh dưỡng, thức ăn tốt cho sức khỏe
+밑반찬	Đồ ăn mặn, thức ăn mặn
+안주	Đồ nhậu, đồ nhắm
+기름진 음식	Thức ăn có nhiều dầu mỡ
+매콤한 음식	Thức ăn cay cay (dạng khô)
+얼큰한 음식	Thức ăn cay cay (dạng nước)
+해산물, 육류, 야채	Hải sản, thịt, rau
+단 음식	Thức ăn ngọt, đồ ngọt
+담백한 음식	Đồ ăn thanh đạm
+먹는 방법	Cách ăn
+쌈을 싸 먹다	Cuốn lại rồi ăn
+간장을 찍어 먹다	Chấm vào nước tương và ăn
+소스를 뿌려 먹다	Chan nước sốt lên ăn
+국에 말아 먹다	Chan canh ăn, trộn cơm với canh để ăn
+비벼 먹다	Trộn lại ăn
+볶아 먹다	Chiên lên ăn
+식초/겨자를 넣어 먹다	Bỏ dấm/ mù tạt vào ăn
+작게 잘라 먹다	Cắt nhỏ ra ăn
+야채를 곁들여 먹다	Ăn kèm rau
+월남쌈	món gỏi cuốn
+땅콩 소스	nước tương (làm từ đậu phộng/ lạc)
+담백하다	Thanh đạm
+칼로리	Lượng calo
+다이어트	việc ăn kiêng
+맘껏 드시다	ăn thỏa thích
+기름기	chất béo, dầu mo
+없애주다	làm hết đi, làm mất đi
+높다	Cao
+중	Trong số
+몸	Cơ thể
+남녀	Nam nữ
+비유하다	Ví dụ như, so sánh, minh họa, ví như…
+예	Ví dụ
+새우젓	Món tép ướp muối
+예로부터	Từ xưa tới nay
+어울리다	Hòa hợp, phù hợp, hợp
+유명하다	Nổi tiếng, nổi danh, trứ danh
+리파아제	Lipase (thuộc sinh vật học)
+지방	Chất béo, mỡ
+분해하다	Tách rời, tháo rời
+기름지다	Béo, nhiều dầu mỡ
+소화	Sự tiêu hóa, sự hấp thụ
+영양학적	Dinh dưỡng, mang tính dinh dưỡng
+서로	Nhau, lẫn nhau, với nhau
+이런	Như thế này
+된장	Đậu tương lên men
+부추	Hẹ
+감자	Củ khoai tây
+치즈	Phô mai
+고등어	Cá thu
+무	Củ cải
+굴	Con hào
+레몬	Trái chanh
+식초	Dấm chua
+미역	Rong biển
+복	Cá nóc
+미나리	Rau cần
+꿀	Mật ong
+등	Vân vân.., như là
+그러나	Dù vậy, nhưng, thế nhưng
+반대로	Trái ngược, trái nghĩa
+영양소	Chất dinh dưỡng
+파괴하다	Phá hủy, phá hỏng
+게	Con cua, con ghẹ
+파	Hành
+설탕	Đường
+미역국	canh rong biển
+끓여주다	nấu cho ai đó
+또한	Hơn nữa, vả lại, ngoài ra
+반드시	nhất thiết, chắc chắn, nhất định
+아이를 낳다	sinh con
+칼슘	canxi
+영양분	thành phần dinh dưỡng
+미끄럽다	nhẵn, trơn, trượt, dễ trượt, dễ ngã, dễ tuột
+시험에 떨어지다	thi trượt, thi rớt
+뜻	ý nghĩa, suy nghĩ, ý muốn, mục đích

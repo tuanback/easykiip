@@ -1,2 +1,96 @@
-ID,LessonID,Word,vi,en
-,,,,
+﻿ID,LessonID,Word,vi,en
+8000,41,가족 관계,Quan hệ gia đình,Family relationship
+8001,41,친가,Bên nội,Internal party
+8002,41,할아버지,Ông nội,Grandfather
+8003,41,할머니,Bà nội,Paternal grandmother
+8004,41,고모부,Bác/ dượng (Chồng của cô),Uncle / Uncle (Aunt's husband)
+8005,41,고모,Bác/ cô (Chị gái hoặc em gái của bố),Uncle / aunt's father's sister or sister
+8006,41,백부,"Bác trưởng, bác cả",Eldest uncle
+8007,41,백모,Bác gái trưởng (Vợ của bác trưởng),Elsdest uncle's wife)
+8008,41,숙부,Chú (Em trai của bố đã lập gia đình),Uncle (Father's younger brother is married)
+8009,41,숙모,Thím (Vợ của chú),Aunt (Uncle wife)
+8010,41,사촌,Anh chị em họ,Cousin
+8011,41,형,Anh (Người em trai gọi anh lớn hơn mình là 형),Brother (The younger brother calls his older brother 형)
+8012,41,형수,Chị dâu ( Người em trai gọi vợ của anh là 형수),Sister-in-law (The younger brother calls his brother's wife 형수)
+8013,41,남동생,Em trai,Younger brother
+8014,41,제수,Vợ của em trai (Người anh gọi vợ của em trai là 제수),Younger brother's wife (The older brother calls his younger brother's wife 제수)
+8015,41,나,Tôi,I
+8016,41,자형,Anh rể (Em trai gọi chồng của chị gái là 자형),Brother-in-law (The younger brother calls his sister's husband 자형)
+8017,41,누나,Chị gái (Em trai gọi chị là누나),Sister (My younger brother calls me 누나)
+8018,41,매제,Em rể (Chồng em gái),Brother-in-law (Husband of sister)
+8019,41,여동생,Em gái,Sister
+8020,41,조카,Cháu (Con do anh chị em ruột sinh ra),Grandchildren (Children born by siblings)
+8021,41,아들,Con trai (Con trai của mình sinh ra),Son (born by his son)
+8022,41,며느리,Con dâu (Vợ con trai),Daughter-in-law (Wife and son)
+8023,41,사위,Con rể (Chồng con gái),Son-in-law (Husband and daughter)
+8024,41,딸,Con gái (Con gái của mình sinh ra),Daughter (His daughter was born)
+8025,41,손자,Cháu trai,Grandson
+8026,41,손녀,Cháu gái,Niece
+8027,41,외손자,Cháu ngoại trai (Con trai của con gái mình sinh ra),Grandchildren (Son of his daughter was born)
+8028,41,외손녀,Cháu gái ngoại (Con gái của con gái mình sinh ra),Granddaughter (Daughter of her daughter was born)
+8029,41,외가,Bên ngoại,Maternal
+8030,41,외할아버지,Ông ngoại,Grandfather
+8031,41,외할머니,Bà ngoại,Grandmother
+8032,41,외숙모,Mợ/ Bác (Vợ của anh hoặc em trai của mẹ),Aunt / Uncle (His wife or mother's younger brother)
+8033,41,외삼촌,Cậu/ Bác (Anh hoặc em trai của mẹ),Uncle / Uncle (mother's brother or younger brother)
+8034,41,이모부,Dượng (Chồng của dì),Stepfather (Aunt's husband)
+8035,41,이모,Dì/ (Chị hoặc em gái của mẹ),Aunt / (Mother's sister or sister)
+8036,41,외사촌,Anh em họ ngoại (Con của cậu hoặc dì),Maternal cousin (child of an aunt or aunt)
+8037,41,형제자매가 어떻게 돼요? ,Anh chị em thì sao?,What about siblings?
+8038,41,1남 1녀,1 trai 1 gái,1 boy 1 girl
+8039,41,1남 2녀,1 trai 2 gái,1 boy and 2 girls
+8040,41,첫째/맏이,"Con trưởng, con cả, con đầu lòng","The eldest, the eldest, the firstborn"
+8041,41,둘째,Con thứ hai,The second one
+8042,41,막내,Con út,The youngest
+8043,41,외아들,Con trai một,The only son
+8044,41,외동딸,Con gái một,Daughter one
+8045,41,식구가 많다,Gia đình nhiều thành viên,Family with many members
+8046,41,식구가 적다,Gia đình ít thành viên,Family with few members
+8047,41,부모님과 같이 살다,Sống chung với bố mẹ,Living with parents
+8048,41,부모님을 모시고 살다,Sống chung và phụng dưỡng bố mẹ,Living with and caring for parents
+8049,41,부모님과 떨어져 살다,Sống xa bố mẹ,Live away from parents
+8050,41,화목하다 / 가족 관계가 좋다 /사이가 좋다,"Hòa thuận, hòa hợp/ Quan hệ gia đình tốt/ Quan hệ tốt","Harmony, harmony / Good relationship / Good relationship"
+8051,41,가족 관계가 나쁘다 /사이가 나쁘다,Quan hệ gia đình không tốt,Family relationship is not good
+8052,41,나이 차이가 적다,Ít chênh lệch tuổi tác,Less age difference
+8053,41,나이 차이가 많다,Chênh lệch tuổi tác nhiều,Age difference
+8054,41,연년생이다,"Sinh năm một, sinh liền năm","Born in year one, born in a year"
+8055,41,동갑이다,"Cùng tuổi, cùng năm sinh","Same age, same year of birth"
+8056,41,부럽다,"Ganh tị, thèm muốn","Jealousy, envy"
+8057,41,조부모님,Ông bà,Grandparents
+8058,41,러시아,Nước Nga,Russia
+8059,41,아르헨티나,Argentina,Argentina
+8060,41,이민,"Di cư, nhập cư","Migration, immigration"
+8061,41,떠나다,"Rời bỏ, rời khỏi","Leaving, leaving"
+8062,41,언제나,"Luôn luôn, bao giờ cũng","Always, always"
+8063,41,벌써,Đã,Is already
+8064,41,연년생,"Đứa trẻ sinh liền năm, sự sinh liền năm, sinh năm một","The child was born year after year, birth year after year, year one"
+8065,41,이라,Là,Was
+8066,41,싸우다,"Đánh lộn, cãi vã","Fight, quarrel"
+8067,41,자라다,"Lớn lên, phát triển","Grow up, grow"
+8068,41,사이,"Khoảng cách, quan hệ","Distance, relationship"
+8069,41,아마,Có lẽ,Maybe
+8070,41,나이,Tuổi,Year old
+8071,41,차이,"Độ chênh lệch, sự khác biệt","Difference, difference"
+8072,41,독차지하다,"Độc chiếm, chiếm toàn bộ","Monopoly, occupy the whole"
+8073,41,그런,"Như vậy, như thế","So, like that"
+8074,41,양보 하기,"Sự nhường, việc nhường nhịn, việc nhường bộ","Giving, giving up, giving in"
+8075,41,참,"Quả thật, thực sự","Truly, really"
+8076,41,바보,Kẻ ngu ngốc,Fool
+8077,41,어리다,Nhỏ tuổi,Young
+8078,41,시절,"Thời, thời kì","Time, period"
+8079,41,어린 시절,Thời thơ ấu,Childhood
+8080,41,호칭,"sự gọi tên, tên gọi, danh tính","name calling, name calling, identity"
+8081,41,호칭어,từ xưng hô,vocative words
+8082,41,사모님,"phu nhân, quý bà... ((cách nói kính trọng) Phu nhân của người khác).","Lady, lady ... ((respectfully speaking) Lady of another person)."
+8083,41,지긋하다,già dặn,old
+8084,41,점잖다,"đứng đắn, đạo mạo, tử tế, đàng hoàng","decent, decent, decent, decent"
+8085,41,때로,"có khi, có lúc, đôi khi, thỉnh thoảng","sometimes, sometimes, sometimes, sometimes"
+8086,41,외모,ngoại hình,appearence
+8087,41,당황스럽다,"bối rối, hoang mang","confused, bewildered"
+8088,41,친족,họ hàng,relative
+8089,41,심지어,thậm chí,even
+8090,41,미용실,"tiệm làm tóc, salon làm đẹp","Hair salon, beauty salon"
+8091,41,이러하다,như thế này,like this
+8092,41,마음,"tâm tính, tính tình, trái tim, tấm lòng, tâm trạng","Xinxing, temperament, heart, heart, mood"
+8093,41,점점,dần dần,gradually
+8094,41,낯설다,"lạ mặt, lạ lẫm, xa lạ","strange, strange, strange"

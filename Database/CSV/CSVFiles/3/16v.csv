@@ -1,2 +1,78 @@
-ID,LessonID,Word,vi,en
+﻿ID,LessonID,Word,vi,en
+11001,56,모임,Hội họp,The meeting
+11002,56,예시,Ví dụ minh họa,Illustration
+11003,56,송년회,"Tiệc tất niên, liên hoan cuối năm","Year-end party, year-end festival"
+11004,56,연말에 송년회를 하다,Làm tiệc tất niên vào cuối năm,Year-end party at the end of the year
+11005,56,시무식,"Tiệc đầu năm, buổi họp mặt đầu năm","New Year party, the first meeting"
+11006,56,연초에 시무식을 하다,Họp mặt gặp gỡ đầu năm,Meetings at the beginning of the year
+11007,56,송별회,Tiệc chia tay,Farewell party
+11008,56,떠나는 친구를 위한 송별회를 열다,Mở tiệc chia tay dành cho ngời bạn rời đi,A farewell party for you to leave
+11009,56,야유회,Buổi dã ngoại,Picnic
+11010,56,교외로 야유회를 가다,Đi dã ngoại về vùng ngoại ô,Picnic to the suburbs
+11011,56,동창회,"Hội đồng môn, hội bạn học cùng trường","Subject council, classmates at the same school"
+11012,56,대학 동창회에 나가다.,Đến hội đồng môn trường đại học,Go to university council
+11013,56,동호회,Hội những người cùng sở thích,Association of people with similar interests
+11014,56,등산 동호회에 들다,Vào hội những người cùng yêu thích leo núi,Join the climbing lovers
+11015,56,OO연합회,"Liên hiệp, liên đoàn, hội liên hợp OO","Unions, unions, unions OO"
+11016,56,연합회에 가입하다,Gia nhập liên hiệp/ hiệp hội,Join a union / association
+11017,56,학부모회,Hội phụ huynh,Parent associations
+11018,56,학교 학부모회에 참석하다,Tham dự hội phụ huynh trường,Attend a school parent association
+11019,56,반상회,"Họp tổ dân phố, họp khu phố","Neighborhood meeting, neighborhood meeting"
+11020,56,매달 반상회에 참여하다,Tham dự buổi họp tổ dân phố hàng tháng,Attend a monthly neighborhood meeting
+11021,56,부녀회,Hội phụ nữ,Women union
+11022,56,아파트 부녀회 회원이 되다,Trở thành hội viên hội phụ nữ chung cư,Becomes a member of women's union
+11023,56,가족 모임,"Họp mặt gia đình, cuộc họp gia đình","Family gatherings, family meetings"
+11024,56,가족 모임을 가지다,Có buổi họp mặt gia đình,There is a family gathering
+11025,56,부부 동반 모임,Buổi hội họp các cặp vợ chồng ,Couples meeting
+11026,56,부부 동반으로 모임에 참석하다,Tham gia buổi tụ họp của các cặp vợ chồng,Join the gathering of couples
+11027,56,정기 총회,"Đại hội định kì, hộp họp định kì","Periodic congresses, periodic meeting boxes"
+11028,56,송년회 식순,"Chương trình lễ tất niên, trình tự nghi thức buổi liên hoan cuối năm","Year-end ceremony program, ritual order of year-end party"
+11029,56,개회사,Diễn văn khai mạc,Opening speech
+11030,56,귀빈 소개 및 축사,Giới thiệu khách mời danh dự và lời chúc mừng,Introduce the guest of honor and congratulations
+11031,56,회장 인사말,Lời chào của chủ tịch/ hội trưởng,Greeting of president / president
+11032,56,축가,Bài hát chúc mừng,Congratulations song
+11033,56,건배사 및 식사,Sự nâng ly chúc mừng và ăn uống,Cheers and dining
+11034,56,안내 사항 공지,Thông báo/ công bố các thông tin/ sự kiện/ vấn đề,Announcement / publication of information / events / issues
+11035,56,폐회사,Diễn văn bế mạc,Closing speech
+11036,56,송년회,Liên hoan cuối năm,Year-end festival
+11037,56,부부 동반,"Vợ chồng đi cùng, vợ chồng cùng đồng hành","Husband and wife accompany, husband and wife accompany"
+11038,56,처음,Lần đầu,First
+11039,56,긴장하다,Căng thẳng,Stress
+11040,56,분위기,Bầu không khí,Atmosphere
+11041,56,편안하다,"Thoải mái, bình an, thanh thản","Comfortable, peaceful, serene"
+11042,56,쌍,Cặp đôi,Couple
+11043,56,그동안,Thời gian qua,Last time
+11044,56,나누다,"Chia ra, phân chia","Split up, split up"
+11045,56,떠나다,"Rời khỏi, rời xa","Leaving, leaving"
+11046,56,익숙하다,"Quen thuộc, thân thuộc","Familiar, familiar"
+11047,56,소중하다,"Quý báu, quan trọng","Precious, important"
+11048,56,마련하다,Chuẩn bị,Prepare
+11049,56,더라도,"Cho dù, mặc dù","Whether, though"
+11050,56,내외분,Vợ chồng,Couple
+11051,56,빛내다,Làm rạng rỡ.,Radiant.
+11052,56,희망차다,"Đầy kì vọng, đầy hi vọng","Full of expectation, full of hope"
+11053,56,맞이하다,Đón tiếp,Welcome
+11054,56,격려하다,"Động viên, cổ vũ, khích lệ","Encourage, cheer and encourage"
+11055,56,기원하다,"Cầu mong, mong ước","Pray, wish"
+11056,56,단순히,một cách đơn thuần,simply
+11057,56,상사,cấp trên,superior
+11058,56,업무,"nghiệp vụ, công việc","business, work"
+11059,56,연장,"công cụ, dụng cụ/ sự tăng cường thêm, sự tiếp nối","tools, tools / enhancements, continuity"
+11060,56,인식되다,được nhận thức,be aware of
+11061,56,단합하다,"đoàn kết, hòa hợp",solidarity and harmony
+11062,56,지나치다,"quá, thái quá",Excessive
+11063,56,손실,sự tổn thất,the lost
+11064,56,적당하다,"hợp lý, vừa phải, thích hợp","reasonable, moderate, appropriate"
+11065,56,특유,"nét đặc trưng, sự đặc hữu, sự sở hữu đặc biệt","speciality, specialism, specialism"
+11066,56,조직,"cơ cấu tổ chức, việc tổ chức","organizational structure, organization"
+11067,56,형성,sự hình thành,the making progress
+11068,56,긍정적,tính tích cực,Positive
+11069,56,영향을 끼치다,"gây ảnh hưởng, tác động","influence, impact"
+11070,56,입장,lập trường/ sự vào cửa,stance / entrance
+11071,56,술자리,"bàn rượu, bàn nhậu, chỗ nhậu, nơi nhậu","Wine tables, drinking tables, drinking places, drinking places"
+11072,56,이어지다,"tiếp tục, được nối tiếp, được tiếp diễn","continue, continue, continue"
+11073,56,낯설다,"Lạ lẫm, xa lạ, lạ mặt","Strange, strange, strange"
+11074,56,광경,quang cảnh,view
+11075,56,건전하다,"tích cực, lành mạnh","positive, healthy"
+,,,,
 ,,,,

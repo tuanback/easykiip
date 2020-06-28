@@ -1,1 +1,51 @@
-LessonID,Name,Script,name_vi,name_en,script_vi,script_en
+﻿Name,Script,name_vi,name_en,script_vi,script_en
+한국에서 집 구하기,"가격이 싸고 내가 원하는 모든 조건을 가진 집을 구하는 것은 쉽지 않다. 집을 구하는 사람들은 조건이 좋은 집을 찾으면 급한 마음에 계약부터 하려고 한다. 하지만 살면서 후회하지 않으려면 계약 전에 확인해야 할 것이 있다.
+우선 집을 보러 갔을 때에는 집 안과 집 주변 환경을 꼼꼼하게 확인한다.
+
+집 안
+•집에 햇빛이 잘 들어오는지 곰팡이는 없는지 본다.
+•문과 창문이 잘 열리는지 고장 난 것은 없는지 본다.
+•난방, 수도, 전기 시설을 확인한다.
+•현관, 주방, 화장실, 다용도실의 상태를 확인한다.
+
+집 주변
+•자녀가 학생일 경우, 학교와의 거리를 확인한다.
+•주변에 시장이나 마트, 은행, 병원이 있는지 확인한다.
+•버스 정류소나 지하철까지 얼마나 걸리는지 확인한다.
+또한 전·월세 계약자의 경우 계약을 하기 전에 반드시 등기부 등본을 확인한다. 등기부 등본에서 실제 소유자가 누구인지, 은행에 빚이 있는지를 확인해야 된다. 그리고 계약은 반드시 실제 소유자와 직접 해야 된다",Tìm nhà ở Hàn Quốc,Finding a home in Korea,"Việc tìm 1 ngôi nhà giá rẻ và có tất cả điều kiện như mình mong muốn thật không dễ dàng. Những người tìm nhà khi tìm được ngôi nhà có điều kiện tốt thường tâm lý vội vàng (hấp tấp) muốn làm hợp đồng ngay. Nhưng để khi sinh sống mà không phải hối hận thì có những thứ cần phải được xem xét trước khi làm hợp đồng .
+Trước tiên khi đã đi xem nhà thì phải xem xét kỹ lưỡng môi trường xung quanh và bên trong nhà.
+
+Trong nhà:
+· Xem trong nhà có ẩm mốc không, có ánh nắng vào phòng đủ không
+· Xem cửa ra vào, cửa sổ đóng mở tốt không, có chỗ nào hỏng hóc không
+· Xác nhận (kiểm tra) tình trạng thực tế của thiết bị sưởi, đường nước, các thiết bị điện
+· Xác nhận (kiểm tra) tình trạng của hành lang, nhà bếp, nhà về sinh, phòng đa năng
+
+Xung quanh nhà:
+· Trường hợp con cái là học sinh, xem xét khoảng cách đến trường học
+· Xem xét xung quanh có bệnh viện, ngân hàng, chợ, hay siêu thị không.
+· Xem xét đến trạm bắt xe bus hay tàu điện ngầm cách bao lâu.
+Thêm nữa, trường hợp của người ký hợp đồng 전·월세(trả tiền phòng theo năm hoặc tháng), trước khi làm hợp đồng nhất định phải xác nhận bản sao đăng ký bất động sản. Trên bản sao phải xác minh người sở hữu thực tế là ai, có nợ ngân hàng không. Và nhất định phải làm hợp đồng trực tiếp với chủ sở hữu nhà thực tế.","Finding a cheap house and having all the conditions you want is not easy. Those looking for a home when looking for a home with good conditions are often in a hurry to rush into a contract. But in order to live without regret, there are things that need to be considered before making a contract.
+When you first go to see a house, you must carefully consider its surroundings and inside.
+
+Inside the house:
+· See if there is mold in the house if there is enough sunlight in the room
+· See if the doors, windows open or close well, are there any damage?
+· Verify (check) the actual status of heating equipment, water lines, electrical appliances
+· Verify (check) the status of the corridor, kitchen, home delivery, multipurpose room
+
+Around the house:
+· If the child is a student, consider the distance to the school
+· Look around for hospitals, banks, markets, or supermarkets.
+· Consider how long the bus or subway stop is.
+In addition, the case of the person signing the contract 전 · 월세 (room payment by year or month), before making a certain contract must confirm the copy of real estate registration. The copy must verify who the actual owner is, whether or not the bank owes. And definitely have to make a contract directly with the actual homeowner."
+한옥,"한국 사람들은 옛날에는 어떤 집에서 살았을까?
+한국의 가장 전통적인 집으로는 ‘한옥’을 들 수 있다. 한국은 사계절이 뚜렷한 나라로 에어컨이나 보일러가 없던 옛날에는 더운 여름과 추운 겨울을 이기기 위해 한옥에 ‘대청마루와 온돌’을 설치하여 사용했다. 대청은 ‘큰 마루’라는 뜻으로 한옥의 대청마루는 바닥과 사이를 띄우고 나무판을 깐 큰 마루이다. 이러한 한옥의 대청마루에서 더운 여름을 시원하게 보낼 수 있었다.
+온돌은 한국 고유의 난방 방법으로 아궁이에서 불을 때면 불기운이 방바닥 전체의 온도를 높여 주고 마지막에 굴뚝으로 빠지게 만들어 놓은 것을 말한다. 이러한 온돌을 사용하여 바닥 난방을 통해 추운 겨울을 따뜻하게 보낼 수 있었다.
+한옥은 지붕을 만드는 재료에 따라 초가집과 기와집으로 나뉜다.",Nhà truyền thống Hàn Quốc,Hanok,"Người Hàn Quốc ngày xưa đã sống ở ngôi nhà như thế nào?
+Có thể kể đến ""한옥"" là nhà mang tính truyền thống nhất của Hàn Quốc. Hàn Quốc là đất nước 4 mùa rõ rệt, ngày xưa  không có hệ thống sưởi hoặc điều hòa, họ đã lắp đặt và sử dụng ""hệ thống sưởi sàn (온돌) và sàn gỗ đại sảnh (대청마루) để đối phó với cái nóng của mùa hè và lạnh của mùa đông. 대청 có nghĩa là ""sàn gỗ lớn"", 대청마루 của nhà 한옥 là sàn nhà gỗ lớn cách mặt đất một khoảng và trải tấm ván gỗ lên (để không khí tự do lưu thông bên dưới, tạo một môi trường sống mát mẻ trong suốt mùa hè). Ở 대청마루 của nhà truyền thống như thế này có thể trải qua mùa hè nóng nực một cách mát mẻ.
+Hệ thống sưởi sàn ondol được coi là phương pháp sưởi vốn có của Hàn Quốc, khi đốt lửa ở lò sưởi, hơi nóng từ lửa làm tăng nhiệt độ khắp nền nhà và cuối cùng là làm thoát khói ra ngoài qua ống khói . Sử dụng hệ thống sưởi như thế này thông qua sưởi ấm sàn nhà có thể sống ấm áp vào mùa đông giá lạnh.
+Nhà Hanok tùy theo vật liệu làm mái nhà mà được chia thành nhà mái ngói (기와집) và nhà mái tranh (초가집)","How did Koreans in the old days live in houses?
+The ""한옥"" is probably the most traditional house in Korea. Korea is a country with 4 distinct seasons, in the old days without heating or air conditioning, they installed and used ""floor heating (온돌) and parquet floor (대 청마루) to deal with the hot in the summer and cold in the winter. 대청 means ""big wooden floor"", 대 청마루 of house 한옥 is a large wooden floor some distance from the ground and spread wooden planks up (to allow free air circulation inside below, creating a cool living environment during the summer.) In a traditional house like this one can experience the hot, cool summer.
+Ondol floor heating is considered an inherent heating method in Korea, when the fire in the fireplace, the heat from the fire raises the temperature throughout the floor and eventually releases smoke out through the chimney. Using heating like this through floor heating can live warmly in the cold winter.
+Hanok houses are divided into roofing houses (기와집) and thatched roofs (초가집)."

@@ -1,0 +1,70 @@
+직종	Loại nghề, chủng loại nghề
+사무직	Công việc văn phòng
+생산직	Việc sản xuất, nhân viên sản xuất
+서비스직	Việc dịch vụ, ngành dịch vụ
+자영업	Công việc tự kinh doanh
+전문직	Ngành nghề chuyên môn
+기술직	Nghề kỹ thuật, việc kỹ thuật
+영업직	Việc kinh doanh
+판매직	Công việc bán hàng
+서류를 작성하다/ 준비하다	Làm hồ sơ / chuẩn bị hồ sơ
+서류를 접수하다	Tiếp nhận hồ sơ
+회사에 지원하다	Đăng ký dự tuyển vào công ty, ứng tuyển vào công ty
+면접을 보다	Phỏng vấn
+시험을 보다	thi tuyển
+합격 통보를 받다	Nhận thông báo trúng tuyển
+교사	Giáo viên
+모집하다	Chiêu mộ, tuyển dụng, tuyển sinh
+어린이	Thiếu nhi, trẻ em
+능통자	Người thông thạo
+우대	Ưu tiên
+전형	Sự tuyển chọn
+제출	Sự nộp, sự đệ trình, sự trình lên
+접수	Sự tiếp nhận
+구인	Việc tuyển người
+회계	Kế toán
+상냥하다	Hòa nhã, thân thiện
+제격이다	Thích hợp
+뛰어나다	Nổi trội, xuất sắc, vượt bậc
+경영학	kinh doanh học, quản trị kinh doanh
+전공	chuyên về, chuyên môn, chuyên ngành
+무역	mậu dịch, thương mại
+근무하다	làm việc
+의사소통하다	trao đổi, giao tiếp
+교대 근무	Ca làm việc
+원어민	Người bản xứ
+모국어	Tiếng mẹ đẻ, tiếng bản ngữ
+근무	Sự làm việc
+의료보험	Bảo hiểm y tế
+가입	Sự gia nhập, sự tham gia
+접수	Sự tiếp nhận, sự thu nhận
+과정	quá trình, chương trình (học, nghiên cứu)
+꼽다	vạch ra, đưa ra, đếm ngón tay
+면접관	Người phỏng vấn, nhà phỏng vấn
+우선	trước tiên, trước hết
+요구	sự yêu cầu, sự đòi hỏi
+사항	Điều khoản, thông tin
+따라서	theo đó, do đó
+늘어놓다	bày biện, bày bừa, lòng vòng, dàn trải, dài dòng
+사정	điều kiện, hoàn cảnh
+맞추다	điều chỉnh, làm cho khớp
+어필하다	kiến nghị, lôi cuốn...
+상하 관계	quan hệ trên dưới
+엄격하다	nghiêm khắc
+윗사람	Người trên, cấp trên
+예의를 지키다	giữ lễ nghĩa, giữ phép lịch sự
+고개를 숙여	인사하다 Cúi đầu chào
+복장	trang phục (phục trang)
+단정하다	chỉnh tề
+목례하다	cúi đầu chào nhẹ nhàng bằng ánh mắt
+시선	ánh mắt, cái nhìn
+자세	tư thế, tác phong
+바르다	thẳng, đứng đắn
+가볍게	một cách nhẹ nhàng
+주먹을 쥐다	nắm tay lại
+요점	điểm chính, điểm quan trọng
+청바지	quần jean, quần bò
+쳐다보다	nhìn chằm chằm, nhìn thẳng
+껌을 씹다	nhai kẹo cao su
+다리를 떨다	rung chân
+척하다	giả vờ

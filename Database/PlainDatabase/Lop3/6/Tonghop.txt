@@ -1,0 +1,57 @@
+수입	Thu nhập
+월급	lương tháng
+보너스	thưởng
+아르바이트비	tiền làm thêm
+연금	Tiền trợ cấp, lương hưu
+지출	Chi tiêu, tiêu xài
+식비 tiền ăn
+교통비 tiền đi lại, phí giao thông
+의료비	Phí điều trị bệnh
+교육비 chi phí giáo dục
+문화비	Chi phí văn hóa
+전기 요금	Tiền điện
+수도 요금	Tiền nước
+경조사비	Chi phí hiếu hỉ (Chi phí đám cưới, đám tang, tiệc…)
+통신비	Chi phí thông tin liên lạc (Điện thoai, internet)
+일시불로 사다	Thanh toán ngay, thanh toán 1 lần
+할부로 구입하다	Mua trả góp
+현금으로 계산하다	Chi trả bằng tiền mặt
+카드로 지불하다	Chi trả/ thanh toán bằng thẻ
+절약하다	Tiết kiệm
+낭비하다	Lãng phí
+과소비하다	Tiêu xài quá mức
+충동구매하다	Mua hàng ngẫu hứng
+비용이 들다	Tốn chi phí, tốn tiền
+돈이 떨어지다	Hết tiền
+영수증을 받다	Nhận hóa đơn, lấy hóa đơn
+가계부를 작성하다	Ghi chép thu chi gia đình
+남다	Còn lại, thừa lại
+가계부	Sổ ghi chép chi tiêu gia đình
+돈을 모으다	Gom góp tiền, tiết kiệm tiền
+아끼다	Tiết kiệm, trân trọng
+계산하다	Tính toán, tính tiền, thanh toán
+절약	Tiết kiệm
+특별히	Đặc biệt
+허리띠를 졸라맬	Thắt lưng buộc bụng
+가계부	Sổ ghi chép chi tiêu gia đình
+고민	Sự khổ tâm, lo lắng.
+물가	Vật giá
+오르다	Leo lên
+다양하다	đa dạng
+값을 깎다	giảm giá, bớt giá
+덤을 얻다	nhận được khuyến mãi
+느끼다	Cảm thấy, cảm nhận
+액세서리	phụ kiện, đồ trang sức
+여성복	Quần áo dành cho nữ
+남성복	Quần áo dành cho nam
+유아 용품	Đồ dùng cho trẻ em
+전자 제품	đồ điện tử
+생활용품	đồ dùng trong sinh hoạt
+식품	thực phẩm
+낱개로 팔다 bán lẻ
+묶음으로 팔다	bán theo bó
+마찬 가지로	cũng như, tương tự
+….과/와 달리 Khác với
+과자	bánh quy, bánh ngọt
+음료수	thức uống, nước giải khát
+연중	trong năm, suốt năm

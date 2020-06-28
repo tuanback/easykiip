@@ -1,2 +1,71 @@
-ID,LessonID,Word,vi,en
-,,,,
+﻿ID,LessonID,Word,vi,en
+10001,51,직종,"Loại nghề, chủng loại nghề","Type of job, type of job"
+10002,51,사무직,Công việc văn phòng,Office work
+10003,51,생산직,"Việc sản xuất, nhân viên sản xuất","The production, production staff"
+10004,51,서비스직,"Việc dịch vụ, ngành dịch vụ","Service work, service industry"
+10005,51,자영업,Công việc tự kinh doanh,Self-employed business
+10006,51,전문직,Ngành nghề chuyên môn,Profession industry
+10007,51,기술직,"Nghề kỹ thuật, việc kỹ thuật","Technical profession, technical work"
+10008,51,영업직,Việc kinh doanh,Business
+10009,51,판매직,Công việc bán hàng,Sales work
+10010,51,서류를 작성하다/ 준비하다,Làm hồ sơ / chuẩn bị hồ sơ,Document preparation / preparation
+10011,51,서류를 접수하다,Tiếp nhận hồ sơ,Receiving records
+10012,51,회사에 지원하다,"Đăng ký dự tuyển vào công ty, ứng tuyển vào công ty","Register to join the company, apply for the company"
+10013,51,면접을 보다,Phỏng vấn,Interview
+10014,51,시험을 보다,thi tuyển,examination
+10015,51,합격 통보를 받다,Nhận thông báo trúng tuyển,Receive matriculation notices
+10016,51,교사,Giáo viên,Teacher
+10017,51,모집하다,"Chiêu mộ, tuyển dụng, tuyển sinh","Recruitment, recruitment, enrollment"
+10018,51,어린이,"Thiếu nhi, trẻ em","Children, children"
+10019,51,능통자,Người thông thạo,Proficient person
+10020,51,우대,Ưu tiên,Prioritize
+10021,51,전형,Sự tuyển chọn,Selection
+10022,51,제출,"Sự nộp, sự đệ trình, sự trình lên","Submission, submission, submission"
+10023,51,접수,Sự tiếp nhận,Reception
+10024,51,구인,Việc tuyển người,Recruiting people
+10025,51,회계,Kế toán,Accountant
+10026,51,상냥하다,"Hòa nhã, thân thiện","Friendly, friendly"
+10027,51,제격이다,Thích hợp,Suitable
+10028,51,뛰어나다,"Nổi trội, xuất sắc, vượt bậc","Outstanding, outstanding, outstanding"
+10029,51,경영학,"kinh doanh học, quản trị kinh doanh","Business school, business administration"
+10030,51,전공,"chuyên về, chuyên môn, chuyên ngành","specialized, specialized, specialized"
+10031,51,무역,"mậu dịch, thương mại",trade and trade
+10032,51,근무하다,làm việc,work
+10033,51,의사소통하다,"trao đổi, giao tiếp","exchange, communicate"
+10034,51,교대 근무,Ca làm việc,Shift
+10035,51,원어민,Người bản xứ,Natives
+10036,51,모국어,"Tiếng mẹ đẻ, tiếng bản ngữ","Mother tongue, native language"
+10037,51,근무,Sự làm việc,Work
+10038,51,의료보험,Bảo hiểm y tế,Health Insurance
+10039,51,가입,"Sự gia nhập, sự tham gia","Participation, participation"
+10040,51,접수,"Sự tiếp nhận, sự thu nhận","Reception, acquisition"
+10041,51,과정,"quá trình, chương trình (học, nghiên cứu)","process, program (study, research)"
+10042,51,꼽다,"vạch ra, đưa ra, đếm ngón tay","out, out, count fingers"
+10043,51,면접관,"Người phỏng vấn, nhà phỏng vấn","Interviewer, interviewer"
+10044,51,우선,"trước tiên, trước hết",first and foremost
+10045,51,요구,"sự yêu cầu, sự đòi hỏi","request, demand"
+10046,51,사항,"Điều khoản, thông tin","Terms, information"
+10047,51,따라서,"theo đó, do đó","accordingly, therefore"
+10048,51,늘어놓다,"bày biện, bày bừa, lòng vòng, dàn trải, dài dòng","plotting, harrowing, circling, spreading, lengthy"
+10049,51,사정,"điều kiện, hoàn cảnh","conditions, circumstances"
+10050,51,맞추다,"điều chỉnh, làm cho khớp","adjust, make joints"
+10051,51,어필하다,"kiến nghị, lôi cuốn...","petition, entice ..."
+10052,51,상하 관계,quan hệ trên dưới,relations on the bottom
+10053,51,엄격하다,nghiêm khắc,strict
+10054,51,윗사람,"Người trên, cấp trên","People above, superiors"
+10055,51,예의를 지키다,"giữ lễ nghĩa, giữ phép lịch sự","keep respect, keep polite"
+10056,51,고개를 숙여,인사하다 Cúi đầu chào,인사 하다 Bowing your head
+10057,51,복장,trang phục (phục trang),dress (costume)
+10058,51,단정하다,chỉnh tề,groomed
+10059,51,목례하다,cúi đầu chào nhẹ nhàng bằng ánh mắt,bow gently with eyes
+10060,51,시선,"ánh mắt, cái nhìn","eyes, gaze"
+10061,51,자세,"tư thế, tác phong","posture, manners"
+10062,51,바르다,"thẳng, đứng đắn","straight, upright"
+10063,51,가볍게,một cách nhẹ nhàng,gently
+10064,51,주먹을 쥐다,nắm tay lại,fist back
+10065,51,요점,"điểm chính, điểm quan trọng","Key points, important points"
+10066,51,청바지,"quần jean, quần bò",jeans
+10067,51,쳐다보다,"nhìn chằm chằm, nhìn thẳng","Staring, looking straight"
+10068,51,껌을 씹다,nhai kẹo cao su,chewing gum
+10069,51,다리를 떨다,rung chân,Vibrating foot
+10070,51,척하다,giả vờ,pretend

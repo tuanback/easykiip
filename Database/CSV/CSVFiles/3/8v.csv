@@ -1,2 +1,66 @@
-ID,LessonID,Word,vi,en
-,,,,
+﻿ID,LessonID,Word,vi,en
+9401,48,전구가 나가다,"Bóng đèn bị hư, bóng đèn bị cháy",The light is broken
+9402,48,변기가 막히다,Bồn cầu bị tắc,Toilet is clogged
+9403,48,전원이 꺼지다,"Bị tắt nguồn điện, bị sụt nguồn điện",Power is turned off
+9404,48,종이가 걸리다,Bị kẹt giấy,Paper jam
+9405,48,화면이 안 나오다,Màn hình không lên hình,The screen does not appear on the screen
+9406,48,이상한 소리가 나다,Phát ra âm thanh lạ,Make a strange sound
+9407,48,물이 안 내려가다,"Nước không chảy xuống, nước không thoát xuống","Water does not flow, water does not drain"
+9408,48,찬바람이 안 나오다,Không ra gió mát,No cool wind
+9409,48,액정이 깨지다,Bị vỡ màn hình điện thoại (màn hình tinh thể lỏng),Broken phone screen (liquid crystal display)
+9410,48,물이 새다,Bị rỉ nước,Water leaks
+9411,48,싱크대,Bồn rửa chén,Sink
+9412,48,고장이 나다,"Hỏng, bị hỏng","Broken, broken"
+9413,48,서비스를 신청하다,"Đăng ký dịch vụ, yêu cầu dịch vụ","Service registration, service request"
+9414,48,전화로 상담하다,Tư vấn qua điện thoại,Advice by phone
+9415,48,출장 서비스를 신청하다,Đăng ký dịch vụ đến tận nơi,Register the service to take place
+9416,48,수리 센터/서비스센터를 방문하다,Đến gặp trung tâm dịch vụ/ trung tâm sửa chữa,Visit a service center / repair center
+9417,48,수리하다/ 고치다,Sửa chữa,Repair
+9418,48,수리 비용을 내다,Trả chi phí sửa chữa,Pay repair costs
+9419,48,무상 서비스를 받다,Được miễn phí dịch vụ,Get free service
+9420,48,끄다,"Tắt, ngắt","Off, off"
+9421,48,절대,Tuyệt đối,Absolute
+9422,48,전원,Điện nguồn,Power source
+9423,48,켜다,"Bật, mở","Turn on, open"
+9424,48,연락처,"Số điện thoại liên lạc, địa chỉ liên lạc, danh ba điện thoại","Contact phone numbers, contacts, phone contacts"
+9425,48,양말,"Tất, vớ",Socks
+9426,48,젖다,"Ẩm ướt, thấm, ngấm","Wet, absorbent, infused"
+9427,48,어젯밤,đêm qua,last night
+9428,48,쏟다,"Đổ ra, tràn ra","Spill out, spill out"
+9429,48,벽,Bức tường,The wall
+9430,48,사이,"giữa, khoảng cách...","between, the distance ..."
+9431,48,새다,"rò, rỉ, dột","leaking, leaking"
+9432,48,고치다,Sửa chữa,Repair
+9433,48,이상하다,Khác thường,Abnormal
+9434,48,낮다,Thấp,Short
+9435,48,온도,Nhiệt độ,Temperature
+9436,48,담그다,"Muối, ủ, ngâm, ướp","Salt, brewed, pickled, marinated"
+9437,48,김장,"Kim chi muối, kim chi chuẩn bị cho mùa đông","Kimchi salt, kimchi prepare for the winter"
+9438,48,벌써,Đã,Is already
+9439,48,익다,Chín,Nine
+9440,48,전원,"Điện nguồn, nguồn, nguồn điện…","Power source, source, power source ..."
+9441,48,켜다,Bật,On
+9442,48,도대체,"Tóm lại, rốt cuộc, sao lại…","In short, after all, why ..."
+9443,48,답변,"Câu trả lời, lời giải đáp","Answers, answers"
+9444,48,부탁,"Sự yêu cầu, sự đề nghị","Requests, suggestions"
+9445,48,전자,Điện tử,Electronic
+9446,48,제품,"Sản phẩm, chế phẩm, thiết bị…",Products
+9447,48,중에,"Trong lúc, trong khi, trong số","While, while, of"
+9448,48,수리,Sự sửa chữa,Correction
+9449,48,기사,"Kỹ sư, kỹ thuật viên","Engineer, technician"
+9450,48,점검,"Sự kiểm tra, sự rà soát","Inspection, review"
+9451,48,출장 서비스,Dịch vụ đến tận nơi,On-site service
+9452,48,권하다,"Khuyên, khuyên nhủ, tiến cử, giới thiệu","Recommend, recommend, recommend, introduce"
+9453,48,선택하다,Chọn lựa,Selective
+9454,48,남기다,Để lại,Leave
+9455,48,가능하다,"Có khả năng, có thể được","Potentially, that might be"
+9456,48,원하다,Muốn,Want
+9457,48,높다,Cao,High
+9458,48,전자 제품,đồ điện tử,electronice device
+9459,48,품질,chất lượng ,quality
+9460,48,보증,bảo hành,guarantee
+9461,48,정해지다,được quy định,be specified
+9462,48,이때,Lúc này,At this time
+9463,48,보증서,giấy bảo hành,warranty
+9464,48,전자 제품,đồ điện tử,electronice device
+9465,48,비용을 내다,trả phí,pay the fee

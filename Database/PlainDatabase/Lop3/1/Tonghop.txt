@@ -1,0 +1,97 @@
+가족 관계	Quan hệ gia đình
+친가	Bên nội
+할아버지	Ông nội
+할머니	Bà nội
+고모부	Bác/ dượng (Chồng của cô)
+고모	Bác/ cô (Chị gái hoặc em gái của bố)
+백부	Bác trưởng, bác cả
+백모	Bác gái trưởng (Vợ của bác trưởng)
+숙부	Chú (Em trai của bố đã lập gia đình)
+숙모	Thím (Vợ của chú)
+사촌	Anh chị em họ
+형	Anh (Người em trai gọi anh lớn hơn mình là 형)
+형수	Chị dâu ( Người em trai gọi vợ của anh là 형수)
+남동생	Em trai
+제수	Vợ của em trai (Người anh gọi vợ của em trai là 제수)
+나	Tôi
+자형	Anh rể (Em trai gọi chồng của chị gái là 자형)
+누나	Chị gái (Em trai gọi chị là누나)
+매제	Em rể (Chồng em gái)
+여동생	Em gái
+조카	Cháu (Con do anh chị em ruột sinh ra)
+아들	Con trai (Con trai của mình sinh ra)
+며느리	Con dâu (Vợ con trai)
+사위	Con rể (Chồng con gái)
+딸	Con gái (Con gái của mình sinh ra)
+손자	Cháu trai
+손녀	Cháu gái
+외손자	Cháu ngoại trai (Con trai của con gái mình sinh ra)
+외손녀	Cháu gái ngoại (Con gái của con gái mình sinh ra)
+외가	Bên ngoại
+외할아버지	Ông ngoại
+외할머니	Bà ngoại
+외숙모	Mợ/ Bác (Vợ của anh hoặc em trai của mẹ)
+외삼촌	Cậu/ Bác (Anh hoặc em trai của mẹ)
+이모부	Dượng (Chồng của dì)
+이모	Dì/ (Chị hoặc em gái của mẹ)
+외사촌	Anh em họ ngoại (Con của cậu hoặc dì)
+형제자매가 어떻게 돼요? Anh chị em thì sao?
+1남 1녀	1 trai 1 gái
+1남 2녀	1 trai 2 gái
+첫째/맏이	Con trưởng, con cả, con đầu lòng
+둘째	Con thứ hai
+막내	Con út
+외아들	Con trai một
+외동딸	Con gái một
+식구가 많다	Gia đình nhiều thành viên
+식구가 적다	Gia đình ít thành viên
+부모님과 같이 살다	Sống chung với bố mẹ
+부모님을 모시고 살다	Sống chung và phụng dưỡng bố mẹ
+부모님과 떨어져 살다	Sống xa bố mẹ
+화목하다 / 가족 관계가 좋다 /사이가 좋다	Hòa thuận, hòa hợp/ Quan hệ gia đình tốt/ Quan hệ tốt
+가족 관계가 나쁘다 /사이가 나쁘다	Quan hệ gia đình không tốt
+나이 차이가 적다	Ít chênh lệch tuổi tác
+나이 차이가 많다	Chênh lệch tuổi tác nhiều
+연년생이다	Sinh năm một, sinh liền năm
+동갑이다	Cùng tuổi, cùng năm sinh
+부럽다	Ganh tị, thèm muốn
+조부모님	Ông bà
+러시아	Nước Nga
+아르헨티나	Argentina
+이민	Di cư, nhập cư
+떠나다	Rời bỏ, rời khỏi
+언제나	Luôn luôn, bao giờ cũng
+벌써	Đã
+연년생	Đứa trẻ sinh liền năm, sự sinh liền năm, sinh năm một
+이라	Là
+싸우다	Đánh lộn, cãi vã
+자라다	Lớn lên, phát triển
+사이	Khoảng cách, quan hệ
+아마	Có lẽ
+나이	Tuổi
+차이	Độ chênh lệch, sự khác biệt
+막내	Con út, em út
+독차지하다	Độc chiếm, chiếm toàn bộ
+그런	Như vậy, như thế
+부럽다	Ganh tị, thèm muốn
+양보 하기	Sự nhường, việc nhường nhịn, việc nhường bộ
+참	Quả thật, thực sự
+바보	Kẻ ngu ngốc
+어리다	Nhỏ tuổi
+시절	Thời, thời kì
+어린 시절	Thời thơ ấu
+호칭	sự gọi tên, tên gọi, danh tính
+호칭어	từ xưng hô
+사모님	phu nhân, quý bà... ((cách nói kính trọng) Phu nhân của người khác).
+지긋하다	già dặn
+점잖다	đứng đắn, đạo mạo, tử tế, đàng hoàng
+때로	có khi, có lúc, đôi khi, thỉnh thoảng
+외모	ngoại hình
+당황스럽다	bối rối, hoang mang
+친족	họ hàng
+심지어	thậm chí
+미용실	tiệm làm tóc, salon làm đẹp
+이러하다	như thế này
+마음	tâm tính, tính tình, trái tim, tấm lòng, tâm trạng
+점점	dần dần
+낯설다	lạ mặt, lạ lẫm, xa lạ

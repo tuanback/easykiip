@@ -1,2 +1,81 @@
-ID,LessonID,Word,vi,en
-,,,,
+﻿ID,LessonID,Word,vi,en
+8201,42,음식 종류,Loại thức ăn,Kind of food
+8202,42,초대 음식,Thức ăn đãi khách,Food for guests
+8203,42,후식(디저트),Món tráng miệng,Desserts
+8204,42,간식,"Đồ ăn nhẹ, đồ ăn giữa buổi","Snacks, mid-day food"
+8205,42,건강식/보양식,"Thực phẩm dinh dưỡng, thức ăn tốt cho sức khỏe","Nutritional food, healthy food"
+8206,42,밑반찬,"Đồ ăn mặn, thức ăn mặn","Salty food, salty food"
+8207,42,안주,"Đồ nhậu, đồ nhắm","Snacks, sniffers"
+8208,42,기름진 음식,Thức ăn có nhiều dầu mỡ,The food is greasy
+8209,42,매콤한 음식,Thức ăn cay cay (dạng khô),Spicy foods (dry form)
+8210,42,얼큰한 음식,Thức ăn cay cay (dạng nước),Spicy foods (in water form)
+8211,42,"해산물, 육류, 야채","Hải sản, thịt, rau","Seafood, meat, vegetables"
+8212,42,단 음식,"Thức ăn ngọt, đồ ngọt","Sweet food, sweets"
+8213,42,담백한 음식,Đồ ăn thanh đạm,The food is frugal
+8214,42,먹는 방법,Cách ăn,How to eat
+8215,42,쌈을 싸 먹다,Cuốn lại rồi ăn,Roll and eat
+8216,42,간장을 찍어 먹다,Chấm vào nước tương và ăn,Dab in soy sauce and eat
+8217,42,소스를 뿌려 먹다,Chan nước sốt lên ăn,Chan sauce to eat
+8218,42,국에 말아 먹다,"Chan canh ăn, trộn cơm với canh để ăn","Chan soup to eat, mix rice with soup to eat"
+8219,42,비벼 먹다,Trộn lại ăn,Mix again to eat
+8220,42,볶아 먹다,Chiên lên ăn,Fry up to eat
+8221,42,식초/겨자를 넣어 먹다,Bỏ dấm/ mù tạt vào ăn,Add vinegar / mustard to eat
+8222,42,작게 잘라 먹다,Cắt nhỏ ra ăn,Cut into small pieces
+8223,42,야채를 곁들여 먹다,Ăn kèm rau,Served with vegetables
+8224,42,월남쌈,món gỏi cuốn,spring rolls
+8225,42,땅콩 소스,nước tương (làm từ đậu phộng/ lạc),Soy sauce (made from peanuts / peanuts)
+8226,42,담백하다,Thanh đạm,Frugal
+8227,42,칼로리,Lượng calo,Calories
+8228,42,다이어트,việc ăn kiêng,dieting
+8229,42,맘껏 드시다,ăn thỏa thích,eat as much as you want
+8230,42,기름기,"chất béo, dầu mo","fat, mo oil"
+8231,42,없애주다,"làm hết đi, làm mất đi","do it all, lose it"
+8232,42,높다,Cao,High
+8233,42,중,Trong số,Among
+8234,42,몸,Cơ thể,Body
+8235,42,남녀,Nam nữ,male Female
+8236,42,비유하다,"Ví dụ như, so sánh, minh họa, ví như…","For example, compare, illustrate, such as ..."
+8237,42,예,Ví dụ,For example
+8238,42,새우젓,Món tép ướp muối,Salted cloves
+8239,42,예로부터,Từ xưa tới nay,From past to present
+8240,42,어울리다,"Hòa hợp, phù hợp, hợp","Harmony, fit, match"
+8241,42,유명하다,"Nổi tiếng, nổi danh, trứ danh","Famous, famous, famous"
+8242,42,리파아제,Lipase (thuộc sinh vật học),Lipase (biological)
+8243,42,지방,"Chất béo, mỡ",Fat
+8244,42,분해하다,"Tách rời, tháo rời","Separate, disassemble"
+8245,42,기름지다,"Béo, nhiều dầu mỡ","Fatty, greasy"
+8246,42,소화,"Sự tiêu hóa, sự hấp thụ","Digestion, absorption"
+8247,42,영양학적,"Dinh dưỡng, mang tính dinh dưỡng","Nutrition, nutritional"
+8248,42,서로,"Nhau, lẫn nhau, với nhau","Each other, each other, together"
+8249,42,이런,Như thế này,Like this
+8250,42,된장,Đậu tương lên men,Fermented soybeans
+8251,42,부추,Hẹ,Chives
+8252,42,감자,Củ khoai tây,Potato
+8253,42,치즈,Phô mai,Cheese
+8254,42,고등어,Cá thu,Mackerel
+8255,42,무,Củ cải,Radish
+8256,42,굴,Con hào,Moat
+8257,42,레몬,Trái chanh,Citrus
+8258,42,식초,Dấm chua,Sour vinegar
+8259,42,미역,Rong biển,Seaweed
+8260,42,복,Cá nóc,Puffer fish
+8261,42,미나리,Rau cần,Celery
+8262,42,꿀,Mật ong,Honey
+8263,42,등,"Vân vân.., như là","And so on, like"
+8264,42,그러나,"Dù vậy, nhưng, thế nhưng","Despite that, but, but"
+8265,42,반대로,"Trái ngược, trái nghĩa","Contrast, antonym"
+8266,42,영양소,Chất dinh dưỡng,Nutrients
+8267,42,파괴하다,"Phá hủy, phá hỏng","Destroy, wreck"
+8268,42,게,"Con cua, con ghẹ","Crab, crab"
+8269,42,파,Hành,Onions
+8270,42,설탕,Đường,Street
+8271,42,미역국,canh rong biển,seaweed soup
+8272,42,끓여주다,nấu cho ai đó,cook for someone
+8273,42,또한,"Hơn nữa, vả lại, ngoài ra","Moreover, besides, in addition"
+8274,42,반드시,"nhất thiết, chắc chắn, nhất định","necessarily, definitely, definitely"
+8275,42,아이를 낳다,sinh con,birth
+8276,42,칼슘,canxi,calcium
+8277,42,영양분,thành phần dinh dưỡng,nutritional ingredients
+8278,42,미끄럽다,"nhẵn, trơn, trượt, dễ trượt, dễ ngã, dễ tuột","smooth, slippery, slip, easy to slip, easy to fall, easy to slip"
+8279,42,시험에 떨어지다,"thi trượt, thi rớt","failed, failed"
+8280,42,뜻,"ý nghĩa, suy nghĩ, ý muốn, mục đích","meaning, thought, intention, purpose"

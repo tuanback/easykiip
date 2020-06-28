@@ -1,0 +1,100 @@
+주거 유형	Loại hình nhà ở
+아파트	Chung cư (Khoảng 10 tầng trở lên)
+빌라	Villa (Khoảng 10 tầng trở xuống)
+원룸	Phòng đơn
+단독 주택	Nhà riêng
+하숙집	Nhà trọ (trả 1 số tiền nhất định và được ăn ở)
+기숙사	Ký túc xá
+자택 = (우리집)	nhà riêng
+전세	thuê nhà kiểu thế chấp
+월세	Thuê nhà trả tiền theo tháng
+집의 구조	Cấu trúc nhà
+베란다	Ban công
+거실	Phòng khách
+침실	Phòng ngủ
+주방 및 식당	Bếp và phòng ăn
+다용도실	Phòng đa dụng, phòng tiện ích
+현관	Hành lang, hiên
+마당	Sân
+창고	Nhà kho
+대문	Cửa lớn
+담	Hàng rào
+주변 환경이 좋다	Môi trường xung quanh tốt
+교육 환경이 좋다	Môi trường giáo dục tốt
+(학교)가 가깝다	Gần trường học
+근처에 (학원)이 많다	Có nhiều trung tâm học/ học viện ở gần
+공기가 맑다	Không khí trong lành
+전망이 좋다	có quang cảnh/ view đẹp; có tầm nhìn/ triển vọng tốt
+조용하다	Yên tĩnh
+편의 시설이 많다	Nhiều công trình tiện ích
+시장과 대형마트가 있다	Có chợ và siêu thị lớn
+교통이 편리하다	Giao thông tiện lợi
+(버스 정류소)에서 걸어서 5분이다	Cách trạm xe bus 5 phút đi bộ
+관리비, 전기 시설, 난방 등을 확인하다	Kiểm tra chi phí quản lý, hệ thống điện, sưởi ấm…
+계약을 하다	Làm hợp đồng
+계약서를 쓰다	Viết hợp đồng
+계약금을 주다	Đưa tiền đặt cọc
+이삿짐센터를 부르다	Gọi trung tâm chuyển nhà
+이사하다	Chuyển nhà
+잔금을 치르다/주다	Trả phần tiền còn lại
+중개 수수료를 주다	Trả phí mô giới
+욕실	Phòng tắm
+시세	Giá cả thị trường, thời giá
+보증금	tiền đặt cọc
+입주하다	vào ở, đến ở
+초	đầu
+11월 초에	đầu tháng 11
+ 전셋집	nhà thuê kiểu thế chấp
+남향	hướng nam
+이따	lát nữa, chốc nữa
+가격	Giá cả
+원하다	Muốn
+조건	Điều kiện
+후회하다	Hối hận
+우선	Trước tiên
+주변	Xung quanh
+환경	Môi trường
+햇빛	Ánh nắng, ánh mặt trời
+곰팡이	Nấm mốc, mốc meo
+난방	Sưởi
+수도	Đường ống nước
+전기	Điện
+시설	Công trình, trang thiết bị, cơ sở vật chất
+현관	Hành lang, hiên
+주방	Nhà bếp
+다용도실	Phòng đa năng, phòng đa dụng (Phòng ở nhà hoặc ở công ty được sử dụng vào nhiều mục đích).
+상태	Trạng thái, hiện trạng
+자녀	Con cái
+경우	Trường hợp, hoàn cảnh
+거리	Khoảng cách, cự ly
+주변	Xung quanh
+등기부	Sổ đăng ký (bất động sản)
+등본	Bản sao
+실제	Thực tế
+소유자	Người sở hữu, chủ sở hữu
+빚	Món nợ
+마루	sàn gỗ
+대청	đại sảnh
+대청마루	nghĩa là sàn gỗ lớn đặt ở gian nhà trước, sàn gỗ ở đại sảnh
+Hệ thống sưởi sàn	온돌
+한옥	nhà Hanok (nhà truyền thống Hàn Quốc)
+사계절	4 mùa
+뚜렷하다	rõ ràng, rõ rệt
+에어컨	máy điều hòa
+보일러	hệ thống sưởi và cung cấp nước nóng
+이기다	chiến thắng, chế ngự
+온돌	hệ thống sưởi sàn
+설치하다	thiết lập, lắp đặt
+바닥	đáy, mặt bằng, mặt phẳng
+띄우다	cách ra, bỏ cách quãng
+깔다	trải, phủ
+나무판	tấm ván gỗ
+고유	đặc trưng vốn có, cái vốn có
+아궁이	bếp lò, lò sưởi (lỗ hở được tạo ra để đun nấu hoặc để sưởi ấm căn phòng)
+불기운	hơi lửa
+방바닥	nền nhà
+굴뚝	ống khói
+지붕	mái nhà, nóc nhà
+재료	vật liệu, chất liệu
+초가집	nhà lá, nhà tranh
+기와집 	nhà mái ngói

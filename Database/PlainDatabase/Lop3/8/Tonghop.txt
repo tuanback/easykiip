@@ -1,0 +1,65 @@
+전구가 나가다	Bóng đèn bị hư, bóng đèn bị cháy
+변기가 막히다	Bồn cầu bị tắc
+전원이 꺼지다	Bị tắt nguồn điện, bị sụt nguồn điện
+종이가 걸리다	Bị kẹt giấy
+화면이 안 나오다	Màn hình không lên hình
+이상한 소리가 나다	Phát ra âm thanh lạ
+물이 안 내려가다	Nước không chảy xuống, nước không thoát xuống
+찬바람이 안 나오다	Không ra gió mát
+액정이 깨지다	Bị vỡ màn hình điện thoại (màn hình tinh thể lỏng)
+물이 새다	Bị rỉ nước
+싱크대	Bồn rửa chén
+고장이 나다	Hỏng, bị hỏng
+서비스를 신청하다	Đăng ký dịch vụ, yêu cầu dịch vụ
+전화로 상담하다	Tư vấn qua điện thoại
+출장 서비스를 신청하다	Đăng ký dịch vụ đến tận nơi
+수리 센터/서비스센터를 방문하다	Đến gặp trung tâm dịch vụ/ trung tâm sửa chữa
+수리하다/ 고치다	Sửa chữa
+수리 비용을 내다	Trả chi phí sửa chữa
+무상 서비스를 받다	Được miễn phí dịch vụ
+끄다	Tắt, ngắt
+절대	Tuyệt đối
+전원	Điện nguồn
+켜다	Bật, mở
+연락처	Số điện thoại liên lạc, địa chỉ liên lạc, danh ba điện thoại
+양말	Tất, vớ
+젖다	Ẩm ướt, thấm, ngấm
+어젯밤	đêm qua
+쏟다	Đổ ra, tràn ra
+벽	Bức tường
+사이	giữa, khoảng cách...
+새다	rò, rỉ, dột
+고치다	Sửa chữa
+이상하다	Khác thường
+낮다	Thấp
+온도	Nhiệt độ
+담그다	Muối, ủ, ngâm, ướp
+김장	Kim chi muối, kim chi chuẩn bị cho mùa đông
+벌써	Đã
+익다	Chín
+전원	Điện nguồn, nguồn, nguồn điện…
+켜다	Bật
+도대체	Tóm lại, rốt cuộc, sao lại…
+답변	Câu trả lời, lời giải đáp
+부탁	Sự yêu cầu, sự đề nghị
+전자	Điện tử
+제품	Sản phẩm, chế phẩm, thiết bị…
+중에	Trong lúc, trong khi, trong số
+수리	Sự sửa chữa
+기사	Kỹ sư, kỹ thuật viên
+점검	Sự kiểm tra, sự rà soát
+출장 서비스	Dịch vụ đến tận nơi
+권하다	Khuyên, khuyên nhủ, tiến cử, giới thiệu
+선택하다	Chọn lựa
+남기다	Để lại
+가능하다	Có khả năng, có thể được
+원하다	Muốn
+높다	Cao
+전자 제품	đồ điện tử
+품질	chất lượng 
+보증	bảo hành
+정해지다	được quy định
+이때	Lúc này
+보증서	giấy bảo hành
+전자 제품	đồ điện tử
+비용을 내다	trả phí
