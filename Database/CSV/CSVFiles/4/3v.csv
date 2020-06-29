@@ -1,55 +1,55 @@
-ID,LessonID,Word,vi,en
-12401,63,인터넷의 장단점,Ưu điểm của internet,
-12402,63,정보를 검색하다,Tìm kiếm thông tin,
-12403,63,인터넷 쇼핑을 하다,mua sắm trên mạng,
-12404,63,이메일을 보내다,gửi thư điện tử,
-12405,63,인터넷 뱅킹을,하다 Giao dịch ngân hàng qua mạng,
-12406,63,인터넷 게임을 하다,Chơi game,
-12407,63,채팅하다,chat,
-12408,63,블로그를 하다,viết blog,
-12409,63,영화를 내려 받다,Tải phim,
-12410,63,자료를 올리다,Tải tài liệu lên,
-12411,63,인터넷 단점,Nhược điểm của internet,
-12412,63,중독이 되다,Bị nghiện,
-12413,63,건강을 해치다,Hại sức khỏe,
-12414,63,부정확한 자료가 있다,có tư liệu không chính xác,
-12415,63,눈이 나빠지다,Hại mắt,
-12416,63,유해한 정보가 많다,Nhiều thông tin có hại,
-12417,63,폭력적인 게임이 많다,nhiều game bạo lực,
-12418,63,개인 정보가 유출되다,Lộ thông tin cá nhân,
-12419,63,시간을 낭비하다,Lãng phí thời gian,
-12420,63,주문하기,"việc đặt hàng, sự đặt hàng ",
-12421,63,장바구니,"rổ đi chợ, túi đi chợ",
-12422,63,상품명,tên sản phẩm,
-12423,63,수량,số lượng,
-12424,63,선택,sự lựa chọn,
-12425,63,변경,"sự thay đổi, sự chỉnh sửa",
-12426,63,삭제,sự xóa bỏ,
-12429,63,상품 가격,giá cả hàng hóa,
-12430,63,포인트 할인,chiết khấu điểm,
-12431,63,배송비(배송료),phí vận chuyển ,
-12432,63,총 결제 금액,tổng số tiền thanh toán,
-12433,63,결제 방법,phương pháp thanh toán,
-12434,63,신용카드,thẻ tín dụng,
-12435,63,무통장 입금,"gởi tiền không cẩn sổ ngân hàng, nạp tiền không cần sổ tài khoản",
-12436,63,계좌 이체,chuyển tiền qua tài khoản,
-12437,63,휴대폰 결제,thanh toán qua điện thoại di động,
-12438,63,결제하기,Thanh toán ,
-12441,63,놓치다,"lỡ mất, vuột mất, tuột mất",
-12442,63,발견하다,"phát kiến, phát hiện",
-12443,63,달다,"đòi, đòi hỏi",
-12444,63,주문하다,đặt hàng,
-12445,63,화상 전화,điện thoại video,
-12446,63,아무리,"cho dù, dù gì đi chăng nữa",
-12447,63,눕다,nằm,
-12448,63,이처럼,như thế này,
-12449,63,한국의 대표직인 포털 사이트,Cổng thông tin điện tử nổi tiếng của Hàn Quốc,
-12450,63,역할,"vai trò, nhiệm vụ",
-12451,63,제공하다,cung cấp,
-12452,63,포털 사이트,cổng thông tin điện tử,
-12453,63,이용자,người sử dụng,
-12454,63,묻다,hỏi,
-12455,63,답하다,trả lời giải đáp,
-12456,63,동호회,hội những người cùng sở thích,
-12457,63,읽을거리,"cái để đọc, thứ để đọc",
-12458,63,볼거리,"trò giải trí, cái để xem",
+﻿ID,LessonID,Word,vi,en
+12401,63,인터넷의 장단점,Ưu điểm của internet,Advantages of the internet
+12402,63,정보를 검색하다,Tìm kiếm thông tin,Look for information
+12403,63,인터넷 쇼핑을 하다,mua sắm trên mạng,online shopping
+12404,63,이메일을 보내다,gửi thư điện tử,send emails
+12405,63,인터넷 뱅킹을,하다 Giao dịch ngân hàng qua mạng,하다 Online banking
+12406,63,인터넷 게임을 하다,Chơi game,Gaming
+12407,63,채팅하다,chat,chat
+12408,63,블로그를 하다,viết blog,write a blog
+12409,63,영화를 내려 받다,Tải phim,Download the movie
+12410,63,자료를 올리다,Tải tài liệu lên,Upload the document
+12411,63,인터넷 단점,Nhược điểm của internet,Cons of the internet
+12412,63,중독이 되다,Bị nghiện,Be addicted
+12413,63,건강을 해치다,Hại sức khỏe,Unhealthy
+12414,63,부정확한 자료가 있다,có tư liệu không chính xác,have incorrect material
+12415,63,눈이 나빠지다,Hại mắt,Eye damage
+12416,63,유해한 정보가 많다,Nhiều thông tin có hại,Lots of harmful information
+12417,63,폭력적인 게임이 많다,nhiều game bạo lực,Many violent games
+12418,63,개인 정보가 유출되다,Lộ thông tin cá nhân,Revealing personal information
+12419,63,시간을 낭비하다,Lãng phí thời gian,Waste time
+12420,63,주문하기,"việc đặt hàng, sự đặt hàng ","ordering, ordering"
+12421,63,장바구니,"rổ đi chợ, túi đi chợ","shopping basket, shopping bag"
+12422,63,상품명,tên sản phẩm,Product's name
+12423,63,수량,số lượng,amount
+12424,63,선택,sự lựa chọn,selection
+12425,63,변경,"sự thay đổi, sự chỉnh sửa","change, correction"
+12426,63,삭제,sự xóa bỏ,abolition
+12429,63,상품 가격,giá cả hàng hóa,commodity prices
+12430,63,포인트 할인,chiết khấu điểm,point discount
+12431,63,배송비(배송료),phí vận chuyển ,transport fee
+12432,63,총 결제 금액,tổng số tiền thanh toán,total payment amount
+12433,63,결제 방법,phương pháp thanh toán,Payment method
+12434,63,신용카드,thẻ tín dụng,credit
+12435,63,무통장 입금,"gởi tiền không cẩn sổ ngân hàng, nạp tiền không cần sổ tài khoản","Send money without bank books, recharge without an account book"
+12436,63,계좌 이체,chuyển tiền qua tài khoản,Transfer money via account
+12437,63,휴대폰 결제,thanh toán qua điện thoại di động,payment via mobile phone
+12438,63,결제하기,Thanh toán ,Pay
+12441,63,놓치다,"lỡ mất, vuột mất, tuột mất","missed, missed, slip away"
+12442,63,발견하다,"phát kiến, phát hiện",findings
+12443,63,달다,"đòi, đòi hỏi",demanding
+12444,63,주문하다,đặt hàng,order
+12445,63,화상 전화,điện thoại video,video phone
+12446,63,아무리,"cho dù, dù gì đi chăng nữa",no matter what
+12447,63,눕다,nằm,lie
+12448,63,이처럼,như thế này,like this
+12449,63,한국의 대표직인 포털 사이트,Cổng thông tin điện tử nổi tiếng của Hàn Quốc,Korea's famous web portal
+12450,63,역할,"vai trò, nhiệm vụ",roles and duties
+12451,63,제공하다,cung cấp,provided
+12452,63,포털 사이트,cổng thông tin điện tử,Web portal
+12453,63,이용자,người sử dụng,user
+12454,63,묻다,hỏi,ask
+12455,63,답하다,trả lời giải đáp,answer the answer
+12456,63,동호회,hội những người cùng sở thích,Meeting people with similar interests
+12457,63,읽을거리,"cái để đọc, thứ để đọc","something to read, something to read"
+12458,63,볼거리,"trò giải trí, cái để xem","entertainment, one to see"

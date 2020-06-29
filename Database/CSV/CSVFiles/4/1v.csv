@@ -1,67 +1,67 @@
-ID,LessonID,Word,vi,en
-12001,61,결혼,Kết hôn,
-12002,61,연애하다,"hẹn hò, yêu đương",
-12003,61,연애 결혼,kết hôn dựa trên sự yêu đương,
-12004,61,선을 보다,"dạm ngõ, coi mắt, đám hỏi",
-12005,61,약혼하다,"ước hôn, đính hôn",
-12006,61,중매 결혼,kết hôn do mai mối,
-12007,61,결혼하다,"kết hôn, cưới",
-12008,61,이혼하다,ly hôn,
-12009,61,주례,chủ hôn,
-12010,61,사회자,người dẫn chương trình,
-12011,61,신부,cô dâu,
-12012,61,신랑,chú rể,
-12013,61,하객,quan khách chúc mừng,
-12014,61,청혼하다,cầu hôn,
-12015,61,상견례를 하다,gặp mặt hai bên,
-12016,61,결혼 날짜를 잡다,định ngày cưới,
-12017,61,결혼식장을 잡다,định nơi cưới,
-12018,61,예단/예물을 준비하다,chuẩn bị quà cưới,
-12019,61,예단,quà cưới của cô dâu cho gia đình nhà chồng,
-12020,61,예물,quà cưới của cô dâu và chú rể dành cho nhau,
-12021,61,혼수를 장만하다,"sắm sửa, chuẩn bị của hồi môn",
-12022,61,청첩장을 돌리다,phát thiệp mời,
-12023,61,함을 보내다/받다,gửi/ nhận hòm quà cưới,
-12024,61,결혼식을 하다,tổ chức lễ cưới,
-12025,61,폐백을 드리다,lễ vật cô dâu dành cho cha mẹ chồng,
-12026,61,피로연을 하다,tiệc cưới,
-12027,61,신혼여행을 가다,đi tuần trăng mật,
-12028,61,닮은,"xứng đôi, giống",
-12029,61,마침,"đúng lúc, vừa khéo",
-12030,61,조건,điều kiện,
-12031,61,상견례,"lễ ra mắt, diện kiến",
-12032,61,허락,"sự cho phép, sự đồng ý",
-12033,61,본격적,"tính quy cách, tính chính thức",
-12034,61,신혼,tân hôn,
-12035,61,혼수,của hồi môn (vật phẩm cần thiết cho sinh hoạt khi kết hôn),
-12036,61,청첩장,thiệp cưới,
-12037,61,옷감,vải áo,
-12038,61,축의금,tiền mừng,
-12039,61,시댁,"nhà chồng, gia đình chồng",
-12040,61,식구,"người nhà, thành viên",
-12041,61,대추,táo tàu,
-12042,61,밤,hạt dẻ,
-12043,61,던지다,ném,
-12044,61,피로연,tiệc mừng,
-12045,61,절차,"bước, trình tự",
-12046,61,진행 하다,tiến hành,
-12047,61,마주,"đối diện, đối mặt",
-12048,61,절을 하다,bái lạy,
-12049,61,나누다,"chia ra, phân chia",
-12050,61,소나무,cây thông,
-12051,61,대나무,cây tre,
-12052,61,기러기,con ngỗng đực,
-12053,61,암탉,con gà mái,
-12054,61,수탉,con gà trống,
-12055,61,이러하다,như thế này,
-12056,61,예를 듣다,"cho ví dụ, chẳng hạn như, ví dụ như",
-12057,61,나타내다,"biểu thị, thể hiện, chứng tỏ",
-12058,61,상징하다,tượng trưng,
-12059,61,족두리,"Chokturi, mũ vành của phụ nữ đội trong các nghi thức lễ.",
-12060,61,붉은색,màu đỏ đậm,
-12061,61,막다,"giúp che chở, bảo vệ, ngăn chặn",
-12062,61,믿다,"tin, tin tưởng",
-12063,61,볼,"gò má, má",
-12064,61,연지,phấn son màu hồng,
-12065,61,이마,trán,
-12066,61,곤지,vết son đỏ trên trán cô dâu.,
+﻿ID,LessonID,Word,vi,en
+12001,61,결혼,Kết hôn,Get married
+12002,61,연애하다,"hẹn hò, yêu đương","dating, love"
+12003,61,연애 결혼,kết hôn dựa trên sự yêu đương,Marriage is based on love
+12004,61,선을 보다,"dạm ngõ, coi mắt, đám hỏi","brooding, watching the eyes, the questions"
+12005,61,약혼하다,"ước hôn, đính hôn","betrothal, engagement"
+12006,61,중매 결혼,kết hôn do mai mối,marriage by matchmaking
+12007,61,결혼하다,"kết hôn, cưới",get married
+12008,61,이혼하다,ly hôn,divorce
+12009,61,주례,chủ hôn,master of ceremonies
+12010,61,사회자,người dẫn chương trình,MC
+12011,61,신부,cô dâu,bride
+12012,61,신랑,chú rể,groom
+12013,61,하객,quan khách chúc mừng,greeted by the guests
+12014,61,청혼하다,cầu hôn,propose
+12015,61,상견례를 하다,gặp mặt hai bên,meet the two sides
+12016,61,결혼 날짜를 잡다,định ngày cưới,set wedding date
+12017,61,결혼식장을 잡다,định nơi cưới,where to get married
+12018,61,예단/예물을 준비하다,chuẩn bị quà cưới,Prepare wedding gifts
+12019,61,예단,quà cưới của cô dâu cho gia đình nhà chồng,Wedding gifts for the bride's family
+12020,61,예물,quà cưới của cô dâu và chú rể dành cho nhau,Wedding gifts of the bride and groom for each other
+12021,61,혼수를 장만하다,"sắm sửa, chuẩn bị của hồi môn",dowry preparation
+12022,61,청첩장을 돌리다,phát thiệp mời,distribute invitations
+12023,61,함을 보내다/받다,gửi/ nhận hòm quà cưới,Send / receive wedding gift box
+12024,61,결혼식을 하다,tổ chức lễ cưới,wedding ceremony
+12025,61,폐백을 드리다,lễ vật cô dâu dành cho cha mẹ chồng,bridal gifts for parents-in-law
+12026,61,피로연을 하다,tiệc cưới,wedding
+12027,61,신혼여행을 가다,đi tuần trăng mật,go honeymoon
+12028,61,닮은,"xứng đôi, giống","double, like"
+12029,61,마침,"đúng lúc, vừa khéo","timely, smart"
+12030,61,조건,điều kiện,condition
+12031,61,상견례,"lễ ra mắt, diện kiến","launch ceremony, audience"
+12032,61,허락,"sự cho phép, sự đồng ý","permission, consent"
+12033,61,본격적,"tính quy cách, tính chính thức","specifications, formalities"
+12034,61,신혼,tân hôn,wedding
+12035,61,혼수,của hồi môn (vật phẩm cần thiết cho sinh hoạt khi kết hôn),dowry (items necessary for marriage activities)
+12036,61,청첩장,thiệp cưới,wedding invitation
+12037,61,옷감,vải áo,shirt fabric
+12038,61,축의금,tiền mừng,gift money
+12039,61,시댁,"nhà chồng, gia đình chồng","husband's family, husband's family"
+12040,61,식구,"người nhà, thành viên","family members, members"
+12041,61,대추,táo tàu,Chinese apple
+12042,61,밤,hạt dẻ,Chestnut
+12043,61,던지다,ném,throw
+12044,61,피로연,tiệc mừng,celebration party
+12045,61,절차,"bước, trình tự",steps and sequences
+12046,61,진행 하다,tiến hành,proceed
+12047,61,마주,"đối diện, đối mặt",face to face
+12048,61,절을 하다,bái lạy,bowing
+12049,61,나누다,"chia ra, phân chia","split up, divide up"
+12050,61,소나무,cây thông,pine
+12051,61,대나무,cây tre,bamboo
+12052,61,기러기,con ngỗng đực,gander
+12053,61,암탉,con gà mái,hen
+12054,61,수탉,con gà trống,rooster
+12055,61,이러하다,như thế này,like this
+12056,61,예를 듣다,"cho ví dụ, chẳng hạn như, ví dụ như","for example, such as, eg"
+12057,61,나타내다,"biểu thị, thể hiện, chứng tỏ","show, show, prove"
+12058,61,상징하다,tượng trưng,represent
+12059,61,족두리,"Chokturi, mũ vành của phụ nữ đội trong các nghi thức lễ.","Chokturi, women's headwear worn during rituals."
+12060,61,붉은색,màu đỏ đậm,dark red
+12061,61,막다,"giúp che chở, bảo vệ, ngăn chặn","Help protect, protect, prevent"
+12062,61,믿다,"tin, tin tưởng","believe, believe"
+12063,61,볼,"gò má, má","cheekbones, cheeks"
+12064,61,연지,phấn son màu hồng,pink lipstick
+12065,61,이마,trán,forehead
+12066,61,곤지,vết son đỏ trên trán cô dâu.,Red lipstick marks on the bride's forehead.

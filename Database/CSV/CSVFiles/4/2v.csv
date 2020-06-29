@@ -1,59 +1,59 @@
-ID,LessonID,Word,vi,en
-12201,62,코미디,Hài,
-12202,62,로맨틱코미디,Lãng mạn hài hước,
-12203,62,멜로(영화),phim tình cảm,
-12204,62,액션(영화),phim hành động,
-12205,62,공포(영화),phim kinh dị,
-12206,62,전쟁(영화),phim chiến tranh,
-12207,62,감독,Đạo diễn,
-12208,62,상영 시간,thời gian chiếu phim,
-12209,62,관람 등급,phân lớp đối tượng xem,
-12210,62,줄거리,cốt truyện,
-12211,62,주연,diễn viên chính,
-12212,62,조연,diễn viên phụ,
-12213,62,표를 예매하다,đặt vé,
-12214,62,개봉,khai chiếu,
-12215,62,일일 연속극,phim truyền hình hàng ngày (chiếu từ thứ 2 đến thứ 6),
-12216,62,미니 시리즈,phim truyền hình ngắn tập (chiếu 2 ~ 3 ngày trong 1 tuần),
-12217,62,주말 드라마,phim truyền hình cuối tuần,
-12218,62,드라마 평가,Đánh giá phim truyền hình,
-12219,62,시청률이 높다,Tỷ lệ người xem cao,
-12220,62,영상미가 뛰어나다,Hình ảnh phim đẹp,
-12221,62,연기력이 뛰어나다,Diễn xuất giỏi,
-12222,62,줄거리가 흥미롭다,Cốt truyện phim hấp dẫn,
-12223,62,배경음악이 아름답다,Nhạc phim hay,
-12224,62,배우가 멋있다,Diễn viên đẹp,
-12225,62,인기가 많다,Được yêu thích nhiều,
-12226,62,화제가 되다,Trở thành chủ đề bàn tán,
-12227,62,방송국,đài phát thanh truyền hình,
-12228,62,겨울연가,bản tình ca mùa đông,
-12229,62,매력,"sức hấp dẫn, sự lôi cuốn",
-12230,62,흥미롭다,"hứng thú, hứng khởi",
-12231,62,주인공,nhân vật chính,
-12232,62,영상미,nét đẹp thể hiện qua màn ảnh,
-12233,62,화제,"tiêu điểm, chủ điểm, tiêu đề",
-12234,62,개봉,"sự trình chiếu lần đầu của bộ phim mới, khai chiếu",
-12235,62,뛰어나다,"nổi trội, nổi bật",
-12236,62,애타다,"lo âu, lo lắng, khắc khoải",
-12237,62,반갑다,"hân hoan, vui sướng, hân hạnh, vui mừng, hài lòng",
-12238,62,범죄자,người phạm tội,
-12239,62,배경,"cảnh nền, bối cảnh",
-12240,62,살리다,làm sống động,
-12241,62,시사회,"buổi xem trước, buổi duyệt trước",
-12242,62,끄덕이다,"gật gù, gật đầu",
-12243,62,방영하다,"phát sóng, chiếu phim",
-12244,62,공중파,"sóng truyền hình, truyền hình mặt đất",
-12245,62,케이블 방송,truyền hình cáp,
-12246,62,인기를 끌다,"hấp dẫn, thu hút, lôi kéo",
-12247,62,모래시계,đồng hồ cát,
-12248,62,한산해지다,"thưa thớt, vắng vẻ, nhàn nhã",
-12249,62,풀하우스,ngôi nhà hạnh phúc,
-12250,62,한류 열풍,"làn sóng Hallu, làn sóng Hàn Quốc",
-12251,62,역할,"vai trò, nhiệm vụ",
-12252,62,제작되다,"được chế tác, được sản xuất",
-12253,62,비롯하다,"bắt nguồn, khởi đầu, bao gồm, trong đó có",
-12254,62,정서,"tình cảm, hướng chính Tây",
-12255,62,공감하다,đồng cảm,
-12256,62,보편적,tính phổ biến,
-12257,62,가치,giá trị ,
-12258,62,담다,chứa đựng,
+﻿ID,LessonID,Word,vi,en
+12201,62,코미디,Hài,Comedy
+12202,62,로맨틱코미디,Lãng mạn hài hước,Humorous romance
+12203,62,멜로(영화),phim tình cảm,romance
+12204,62,액션(영화),phim hành động,action movie
+12205,62,공포(영화),phim kinh dị,horror film
+12206,62,전쟁(영화),phim chiến tranh,war film
+12207,62,감독,Đạo diễn,Directors
+12208,62,상영 시간,thời gian chiếu phim,movie showtimes
+12209,62,관람 등급,phân lớp đối tượng xem,View object classification
+12210,62,줄거리,cốt truyện,plot
+12211,62,주연,diễn viên chính,main actor
+12212,62,조연,diễn viên phụ,supporting actor
+12213,62,표를 예매하다,đặt vé,ticket booking
+12214,62,개봉,khai chiếu,screening
+12215,62,일일 연속극,phim truyền hình hàng ngày (chiếu từ thứ 2 đến thứ 6),Daily TV series (airing from Monday to Friday)
+12216,62,미니 시리즈,phim truyền hình ngắn tập (chiếu 2 ~ 3 ngày trong 1 tuần),TV series short (aired 2 ~ 3 days a week)
+12217,62,주말 드라마,phim truyền hình cuối tuần,weekend drama series
+12218,62,드라마 평가,Đánh giá phim truyền hình,Movie review
+12219,62,시청률이 높다,Tỷ lệ người xem cao,High viewership
+12220,62,영상미가 뛰어나다,Hình ảnh phim đẹp,Beautiful film images
+12221,62,연기력이 뛰어나다,Diễn xuất giỏi,Good acting
+12222,62,줄거리가 흥미롭다,Cốt truyện phim hấp dẫn,Attractive film plot
+12223,62,배경음악이 아름답다,Nhạc phim hay,Good soundtrack
+12224,62,배우가 멋있다,Diễn viên đẹp,Beautiful actress
+12225,62,인기가 많다,Được yêu thích nhiều,Much loved
+12226,62,화제가 되다,Trở thành chủ đề bàn tán,Become the topic of discussion
+12227,62,방송국,đài phát thanh truyền hình,TV radio
+12228,62,겨울연가,bản tình ca mùa đông,Winter Sonata
+12229,62,매력,"sức hấp dẫn, sự lôi cuốn","attraction, attraction"
+12230,62,흥미롭다,"hứng thú, hứng khởi","excited, excited"
+12231,62,주인공,nhân vật chính,protagonist
+12232,62,영상미,nét đẹp thể hiện qua màn ảnh,beauty shown on screen
+12233,62,화제,"tiêu điểm, chủ điểm, tiêu đề","focus, topic, subject"
+12234,62,개봉,"sự trình chiếu lần đầu của bộ phim mới, khai chiếu","the first screening of a new movie, opening"
+12235,62,뛰어나다,"nổi trội, nổi bật","outstanding, outstanding"
+12236,62,애타다,"lo âu, lo lắng, khắc khoải","Worry, worry, anxiety"
+12237,62,반갑다,"hân hoan, vui sướng, hân hạnh, vui mừng, hài lòng","rejoice, rejoice, rejoice, rejoice, be satisfied"
+12238,62,범죄자,người phạm tội,criminal
+12239,62,배경,"cảnh nền, bối cảnh","Background scene, backdrop"
+12240,62,살리다,làm sống động,liven up
+12241,62,시사회,"buổi xem trước, buổi duyệt trước","preview, preview"
+12242,62,끄덕이다,"gật gù, gật đầu","nodding, nodding"
+12243,62,방영하다,"phát sóng, chiếu phim","broadcast, film projection"
+12244,62,공중파,"sóng truyền hình, truyền hình mặt đất","television waves, terrestrial television"
+12245,62,케이블 방송,truyền hình cáp,cable television
+12246,62,인기를 끌다,"hấp dẫn, thu hút, lôi kéo","attractive, attractive, enticing"
+12247,62,모래시계,đồng hồ cát,hourglass
+12248,62,한산해지다,"thưa thớt, vắng vẻ, nhàn nhã","Sparse, deserted, leisurely"
+12249,62,풀하우스,ngôi nhà hạnh phúc,happy home
+12250,62,한류 열풍,"làn sóng Hallu, làn sóng Hàn Quốc","Hallu wave, Korean wave"
+12251,62,역할,"vai trò, nhiệm vụ",roles and duties
+12252,62,제작되다,"được chế tác, được sản xuất","manipulated, manufactured"
+12253,62,비롯하다,"bắt nguồn, khởi đầu, bao gồm, trong đó có","derived, initiated, included, including"
+12254,62,정서,"tình cảm, hướng chính Tây","sentimental, the main West"
+12255,62,공감하다,đồng cảm,empathetic
+12256,62,보편적,tính phổ biến,popularity
+12257,62,가치,giá trị ,value
+12258,62,담다,chứa đựng,contains

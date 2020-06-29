@@ -1,55 +1,55 @@
-ID,LessonID,Word,vi,en
-13401,68,사고,"Tai nạn, sự cố",
-13402,68,가스사고,"Tai nạn khí ga (cháy, nổ)",
-13403,68,화재사고,Tai nạn hỏa hoạn,
-13404,68,감전사고,Tai nạn điện giật,
-13405,68,교통사고,Tai nạn giao thông,
-13406,68,접촉 사고,Tai nạn do va chạm,
-13407,68,음주운전 사고,"Tai nạn do uống rượu, bia",
-13408,68,신고하다,"Khai báo, trình báo",
-13409,68,보험으로 처리하다/보험금을 받다,Giải quyết qua công ty bảo hiểm,
-13410,68,합의하다,Thỏa thuận,
-13411,68,합의금을 주다,Gửi tiền đền bù theo thỏa thuận,
-13412,68,합의금을 받다,Nhận tiền đền bù theo thỏa thuận,
-13413,68,사건,"Sự kiên, vụ việc",
-13414,68,강도·절도,Cướp giật · Trộm cắp,
-13415,68,폭행,"Bạo hành, bạo lực, hành hung",
-13416,68,사기,Sự lừa đảo ,
-13417,68,납치,Sự bắt cóc,
-13418,68,살인,Giết người,
-13419,68,피해자,Người bị hại/ the injured party,
-13420,68,납치당하다,trở thành nạn nhân bắt cóc,
-13421,68,사기당하다,trở thành nạn nhân lừa đảo,
-13422,68,폭행하다,trở thành nạn nhân của bạo hành,
-13423,68,도난당하다,"Bị cướp đoạt, trộm cướp",
-13424,68,도둑맞다,"Bị mất trộm, ăn trộm",
-13425,68,소매치기를 당하다,Bị móc túi,
-13426,68,범인을 잡다,Bắt tội phạm,
-13427,68,체포하다,"bắt giữ, tóm cổ",
-13428,68,접촉,"sự va chạm, sự tiếp xúc",
-13429,68,실수,"sự sai sót, sự sai lầm, sự thất lễ, sự khiếm nhã",
-13430,68,-자마자,"ngay tức khắc, ngay lập tức, ngay khi... thì",
-13431,68,빗길,"đường mưa, đường ướt",
-13432,68,사망하다,tử vong,
-13433,68,국도,đường quốc lộ,
-13434,68,인근,"lân cận, gần",
-13435,68,이송되다,"được di chuyển, được vận chuyển, được di lý",
-13436,68,치료를 받다,"được điều trị, được chữa trị, trải qua điều trị",
-13437,68,...모씨,"anh...gì đó, cô...gì đó.",
-13438,68,장모 씨,Bà Chang nào đó,
-13439,68,이모 씨,Bà Lee nào đó,
-13440,68,보이스피싱,lừa đảo qua điện thoại (voice phishing),
-13441,68,피해액,số tiền thiệt hại,
-13442,68,혐의,"sự hiềm nghi, mối nghi ngờ",
-13443,68,긴급 전화번호,số điện thoại khẩn cấp,
-13444,68,치안,"sự giữ an ninh, trị an",
-13445,68,순위,thứ tự trong bảng xếp hạng,
-13446,68,안전하다,an toàn,
-13447,68,예방하다,"dự phòng, phòng ngừa",
-13448,68,대처하다, ứng phó,
-13449,68,신속하다,"thần tốc, nhanh chóng",
-13450,68,각종,"các loại, các thứ",
-13451,68,도난,trộm cắp,
-13452,68,분실,sự thất lạc,
-13453,68,근로자,người lao động,
-13454,68,부당하다,"không chính đáng, bất chính",
+﻿ID,LessonID,Word,vi,en
+13401,68,사고,"Tai nạn, sự cố",Accidents and incidents
+13402,68,가스사고,"Tai nạn khí ga (cháy, nổ)","Gas accident (fire, explosion)"
+13403,68,화재사고,Tai nạn hỏa hoạn,Fire accident
+13404,68,감전사고,Tai nạn điện giật,Electric shock accident
+13405,68,교통사고,Tai nạn giao thông,Traffic accidents
+13406,68,접촉 사고,Tai nạn do va chạm,Accident by collision
+13407,68,음주운전 사고,"Tai nạn do uống rượu, bia",Accident due to drinking alcohol
+13408,68,신고하다,"Khai báo, trình báo",Declare and report
+13409,68,보험으로 처리하다/보험금을 받다,Giải quyết qua công ty bảo hiểm,Settled through insurance companies
+13410,68,합의하다,Thỏa thuận,Agree
+13411,68,합의금을 주다,Gửi tiền đền bù theo thỏa thuận,Send compensation as agreed
+13412,68,합의금을 받다,Nhận tiền đền bù theo thỏa thuận,Receive compensation as agreed
+13413,68,사건,"Sự kiên, vụ việc","Perseverance, the incident"
+13414,68,강도·절도,Cướp giật · Trộm cắp,Robbery · Theft
+13415,68,폭행,"Bạo hành, bạo lực, hành hung","Violence, violence, assault"
+13416,68,사기,Sự lừa đảo ,Swindle
+13417,68,납치,Sự bắt cóc,Kidnapping
+13418,68,살인,Giết người,Killing
+13419,68,피해자,Người bị hại/ the injured party,The injured party / the injured party
+13420,68,납치당하다,trở thành nạn nhân bắt cóc,become a kidnapping victim
+13421,68,사기당하다,trở thành nạn nhân lừa đảo,fall victim to fraud
+13422,68,폭행하다,trở thành nạn nhân của bạo hành,fall victim to violence
+13423,68,도난당하다,"Bị cướp đoạt, trộm cướp","Robbed, robbed"
+13424,68,도둑맞다,"Bị mất trộm, ăn trộm","Stolen, stole"
+13425,68,소매치기를 당하다,Bị móc túi,Pickpocketed
+13426,68,범인을 잡다,Bắt tội phạm,Catch criminals
+13427,68,체포하다,"bắt giữ, tóm cổ","Arrest, arrest"
+13428,68,접촉,"sự va chạm, sự tiếp xúc","collision, contact"
+13429,68,실수,"sự sai sót, sự sai lầm, sự thất lễ, sự khiếm nhã","errors, mistakes, rudeness, indecency"
+13430,68,#NAME?,"ngay tức khắc, ngay lập tức, ngay khi... thì","immediately, immediately, immediately ... well"
+13431,68,빗길,"đường mưa, đường ướt","rainy road, wet road"
+13432,68,사망하다,tử vong,dead
+13433,68,국도,đường quốc lộ,Highway
+13434,68,인근,"lân cận, gần","nearby, near"
+13435,68,이송되다,"được di chuyển, được vận chuyển, được di lý","to be moved, to be transported, to be relocated"
+13436,68,치료를 받다,"được điều trị, được chữa trị, trải qua điều trị","be treated, be cured, undergo treatment"
+13437,68,...모씨,"anh...gì đó, cô...gì đó.","he ... something, she ... something."
+13438,68,장모 씨,Bà Chang nào đó,Mrs. Chang does that
+13439,68,이모 씨,Bà Lee nào đó,Some Mrs. Lee
+13440,68,보이스피싱,lừa đảo qua điện thoại (voice phishing),telephone phishing
+13441,68,피해액,số tiền thiệt hại,amount of damage
+13442,68,혐의,"sự hiềm nghi, mối nghi ngờ",suspicion. suspicion
+13443,68,긴급 전화번호,số điện thoại khẩn cấp,Emergency number
+13444,68,치안,"sự giữ an ninh, trị an","security, security"
+13445,68,순위,thứ tự trong bảng xếp hạng,order in the rankings
+13446,68,안전하다,an toàn,safe
+13447,68,예방하다,"dự phòng, phòng ngừa",prevention and prevention
+13448,68,대처하다, ứng phó, cope with
+13449,68,신속하다,"thần tốc, nhanh chóng","god speed, fast"
+13450,68,각종,"các loại, các thứ","types, things"
+13451,68,도난,trộm cắp,theft
+13452,68,분실,sự thất lạc,loss
+13453,68,근로자,người lao động,worker
+13454,68,부당하다,"không chính đáng, bất chính","not righteous, unrighteous"

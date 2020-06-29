@@ -1,32 +1,32 @@
-ID,LessonID,Word,vi,en
-13001,66,두 손으로 드리다,Đưa bằng hai tay,
-13002,66,두 손으로 받다,Nhận bằng hai tay,
-13003,66,고개를 돌리고 술을 마사다,Quay đầu sang một bên rồi uống rượu,
-13004,66,허리를 굽혀 인사하다,Cúi lưng chào hỏi,
-13005,66,높임말을 사용하다,Sử dụng kính ngữ,
-13006,66,무릎을 끓고 앉다,Ngồi quỳ gối,
-13007,66,책상다리를 하고 앉다,Ngồi khoanh chân,
-13008,66,어른이 숟가락을 드신 후에 밥을 먹다?,Ăn sau khi người lớn dùng muỗng trước,
-13009,66,식탁에 밥그릇을 놓고 먹다,Để chén (bát) lên bàn và ăn,
-13010,66,버스나 지하철에서 자리를 양보하다,Nhường chỗ trên tàu điện ngầm hay xe bus,
-13011,66,어른 앞에서 담배를 피우지 않다,Không hút thuốc là trước mặt người lớn,
-13012,66,낯설다,"lạ lẫm, không quen",
-13013,66,어려움을  겪다,gặp khó khăn,
-13014,66,실수를 하다,Gây nhầm lẫn,
-13015,66,적응이 안 되다,Không thể thích ứng,
-13016,66,실례가 되다,Trở thành thất lễ,
-13017,66,오해하다,Hiểu lầm,
-13018,66,착각하다,"Nhầm lẫn, hiểu lầm",
-13019,66,익숙하다,"Quen thuộc, thông thạo",
-13020,66,실수를 안 하다,Không mắc nhầm lẫn,
-13021,66,적응하다,Thích ứng,
-13022,66,습관이 되다,Thành thói quen,
-13023,66,인사말,lời chào,
-13024,66,섭섭하다,"thất vọng, tiếc nuối, buồn nản...",
-13025,66,종종,"thỉnh thoảng, đôi khi",
-13026,66,예식장,nhà hàng tiệc cưới,
-13027,66,축의금,tiền mừng,
-13028,66,장례식,tang lễ,
-13029,66,빈소,nhà tang lễ,
-13030,66,조의금,"tiền phúng viếng, tiền phúng điếu",
+﻿ID,LessonID,Word,vi,en
+13001,66,두 손으로 드리다,Đưa bằng hai tay,Give by two hands
+13002,66,두 손으로 받다,Nhận bằng hai tay,Received by two hands
+13003,66,고개를 돌리고 술을 마사다,Quay đầu sang một bên rồi uống rượu,Turn your head to the side then drink alcohol
+13004,66,허리를 굽혀 인사하다,Cúi lưng chào hỏi,Bowed to say hello
+13005,66,높임말을 사용하다,Sử dụng kính ngữ,Use honorifics
+13006,66,무릎을 끓고 앉다,Ngồi quỳ gối,Kneel down
+13007,66,책상다리를 하고 앉다,Ngồi khoanh chân,Sit cross-legged
+13008,66,어른이 숟가락을 드신 후에 밥을 먹다?,Ăn sau khi người lớn dùng muỗng trước,Eat after an adult uses the previous spoon
+13009,66,식탁에 밥그릇을 놓고 먹다,Để chén (bát) lên bàn và ăn,Put the bowl on the table and eat
+13010,66,버스나 지하철에서 자리를 양보하다,Nhường chỗ trên tàu điện ngầm hay xe bus,Give way on the subway or bus
+13011,66,어른 앞에서 담배를 피우지 않다,Không hút thuốc là trước mặt người lớn,No smoking is in front of adults
+13012,66,낯설다,"lạ lẫm, không quen","strange, unfamiliar"
+13013,66,어려움을  겪다,gặp khó khăn,difficulty
+13014,66,실수를 하다,Gây nhầm lẫn,Confuse
+13015,66,적응이 안 되다,Không thể thích ứng,Unable to adapt
+13016,66,실례가 되다,Trở thành thất lễ,Become rude
+13017,66,오해하다,Hiểu lầm,Misread
+13018,66,착각하다,"Nhầm lẫn, hiểu lầm","Confusion, misunderstanding"
+13019,66,익숙하다,"Quen thuộc, thông thạo","Familiar, fluent"
+13020,66,실수를 안 하다,Không mắc nhầm lẫn,Make no mistake
+13021,66,적응하다,Thích ứng,Adaptation
+13022,66,습관이 되다,Thành thói quen,Become a habit
+13023,66,인사말,lời chào,greeting
+13024,66,섭섭하다,"thất vọng, tiếc nuối, buồn nản...","disappointment, regret, sadness ..."
+13025,66,종종,"thỉnh thoảng, đôi khi","sometimes, sometimes"
+13026,66,예식장,nhà hàng tiệc cưới,wedding restaurant
+13027,66,축의금,tiền mừng,gift money
+13028,66,장례식,tang lễ,funeral
+13029,66,빈소,nhà tang lễ,funeral Home
+13030,66,조의금,"tiền phúng viếng, tiền phúng điếu","funeral expenses, funeral expenses"
 13031,66,부의,"đồ phúng viếng, tiền phúng viếng, sự phúng viếng",

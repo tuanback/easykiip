@@ -1,48 +1,48 @@
-ID,LessonID,Word,vi,en
-14201,72,체류 자격 변경하다,Thay đổi tư cách cư trú,
-14202,72,체류 자격,Tư cách cư trú,
-14203,72,변경하다,Thay đổi,
-14204,72,심사,"sự kiểm tra, sự thẩm tra, sự điều tra",
-14205,72,거치다,"thông qua, trải qua",
-14206,72,귀화 시험을 보다,thi kỳ thi quốc tịch,
-14207,72,귀화 시험,kỳ thi nhập quốc tịch,
-14208,72,기출문제,Đề thi đợt trước,
-14209,72,요건 = 필요 조건,"điều kiện, yêu cầu cần thiết",
-14210,72,요건을 갖추다,thỏa mãn yêu cầu cần thiết,
-14211,72,절차를 밟다,"tiến hành các thủ tục (các khâu, trình tự)",
-14212,72,심사에 통과하다,"thông qua sự kiểm tra, thẩm duyệt",
-14213,72,영주권을 받다,"đạt được, nhận được quyền định cư",
-14214,72,국적을 취득하다,nhập quốc tịch,
-14215,72,국적을 변경하다,thay đổi quốc tịch,
-14216,72,귀화허가신청서를 제출하다,đệ trình đơn xin cấp phép nhập quốc tịch,
-14217,72,서류 심사,thẩm định hồ sơ,
-14218,72,서류 심사를 통과하다,thông qua quá trình kiểm duyệt hồ sơ,
-14219,72,면접 심사,thẩm tra phỏng vấn,
-14220,72,면접 심사를 받다,nhận thẩm tra phỏng vấn,
-14221,72,허가통지서,giấy thông báo chấp thuận,
-14222,72,귀화 허가통지서를 받다,nhận thư (giấy) thông báo chấp thuận nhập quốc tịch,
-14223,72,가족관계등록부를 신청하다,đăng ký khai báo quan hệ gia đình,
-14224,72,포기하다,từ bỏ,
-14225,72,외국 국적을 포기하다,Từ bỏ quốc tịch nước ngoài,
-14226,72,주민등록증을 발급받다,được cấp phát chứng minh thư mới,
-14227,72,반납하다,"hoàn lại, trả lại",
-14228,72,외국인등록증을 반납하다,"Nộp lại, trả lại thẻ cư trú người nước ngoài",
-14229,72,고충,"Tình trạng khó khăn, tình huống phiền phức",
-14230,72,의사소통에 어려움이 있다,gặp khó khăn về giao tiếp,
-14231,72,국적이 없어서 불이익을 당하다,không có quốc tịch nên chịu nhiều bất lợi.,
-14232,72,비자 연장을 해야 하다,Phải gia hạn Visa,
-14233,72,피해를 받다,"gặp (bị) tổn hại, bị thiệt hại",
-14234,72,낯설다,"lạ lẫm, xa lạ",
-14235,72,덕분에,"nhờ vào, nhờ ơn, nhờ sự giúp đỡ",
-14236,72,적응,sự thích ứng,
-14237,72,공무원,"công chức, viên chức",
-14238,72,모국어,"tiếng mẹ đẻ, tiếng bản ngữ",
-14239,72,불편함,"Sự bất tiện, sự khó chịu",
-14240,72,의사소통,"sự trao đổi, sự giao tiếp",
-14241,72,부담스럽다,"đầy gánh nặng, nặng nề",
-14242,72,연장하다,"Gia hạn, kéo dài",
-14243,72,출국한 날,ngày xuất cảnh,
-14244,72,재입국허가,giấy phép tái nhập cảnh,
-14245,72,취득,"Sự có được, sự lấy được, sự đạt được",
-14246,72,이민자,người di cư,
-14247,72,자립하다,tự lập,
+﻿ID,LessonID,Word,vi,en
+14201,72,체류 자격 변경하다,Thay đổi tư cách cư trú,Change of status of residence
+14202,72,체류 자격,Tư cách cư trú,Resident status
+14203,72,변경하다,Thay đổi,Change
+14204,72,심사,"sự kiểm tra, sự thẩm tra, sự điều tra","inspection, investigation, investigation"
+14205,72,거치다,"thông qua, trải qua","through, through"
+14206,72,귀화 시험을 보다,thi kỳ thi quốc tịch,citizenship exam
+14207,72,귀화 시험,kỳ thi nhập quốc tịch,citizenship test
+14208,72,기출문제,Đề thi đợt trước,Previous exam questions
+14209,72,요건 = 필요 조건,"điều kiện, yêu cầu cần thiết",necessary conditions and requirements
+14210,72,요건을 갖추다,thỏa mãn yêu cầu cần thiết,Satisfying necessary requirements
+14211,72,절차를 밟다,"tiến hành các thủ tục (các khâu, trình tự)",conducting procedures (the stages and sequences)
+14212,72,심사에 통과하다,"thông qua sự kiểm tra, thẩm duyệt",through inspection and approval
+14213,72,영주권을 받다,"đạt được, nhận được quyền định cư","gain, get settlement rights"
+14214,72,국적을 취득하다,nhập quốc tịch,naturalization
+14215,72,국적을 변경하다,thay đổi quốc tịch,change of nationality
+14216,72,귀화허가신청서를 제출하다,đệ trình đơn xin cấp phép nhập quốc tịch,Submit a citizenship application
+14217,72,서류 심사,thẩm định hồ sơ,records evaluation
+14218,72,서류 심사를 통과하다,thông qua quá trình kiểm duyệt hồ sơ,through the record censorship process
+14219,72,면접 심사,thẩm tra phỏng vấn,Interview interview
+14220,72,면접 심사를 받다,nhận thẩm tra phỏng vấn,Get interview interview
+14221,72,허가통지서,giấy thông báo chấp thuận,Consent notice
+14222,72,귀화 허가통지서를 받다,nhận thư (giấy) thông báo chấp thuận nhập quốc tịch,receive letter (paper) notification of citizenship approval
+14223,72,가족관계등록부를 신청하다,đăng ký khai báo quan hệ gia đình,register for family relation declaration
+14224,72,포기하다,từ bỏ,give up
+14225,72,외국 국적을 포기하다,Từ bỏ quốc tịch nước ngoài,Abandon foreign nationality
+14226,72,주민등록증을 발급받다,được cấp phát chứng minh thư mới,issued a new identity card
+14227,72,반납하다,"hoàn lại, trả lại","Refund, return"
+14228,72,외국인등록증을 반납하다,"Nộp lại, trả lại thẻ cư trú người nước ngoài",Submit and return alien residence card
+14229,72,고충,"Tình trạng khó khăn, tình huống phiền phức","Difficult situation, troublesome situation"
+14230,72,의사소통에 어려움이 있다,gặp khó khăn về giao tiếp,have trouble communicating
+14231,72,국적이 없어서 불이익을 당하다,không có quốc tịch nên chịu nhiều bất lợi.,no nationality should bear many disadvantages.
+14232,72,비자 연장을 해야 하다,Phải gia hạn Visa,Visa must be extended
+14233,72,피해를 받다,"gặp (bị) tổn hại, bị thiệt hại",to suffer (to suffer) damage
+14234,72,낯설다,"lạ lẫm, xa lạ","strange, strange"
+14235,72,덕분에,"nhờ vào, nhờ ơn, nhờ sự giúp đỡ",Thanks to
+14236,72,적응,sự thích ứng,adaptation
+14237,72,공무원,"công chức, viên chức",Public servants
+14238,72,모국어,"tiếng mẹ đẻ, tiếng bản ngữ","mother tongue, native language"
+14239,72,불편함,"Sự bất tiện, sự khó chịu","The inconvenience, the discomfort"
+14240,72,의사소통,"sự trao đổi, sự giao tiếp","communication, communication"
+14241,72,부담스럽다,"đầy gánh nặng, nặng nề",full of heavy burdens
+14242,72,연장하다,"Gia hạn, kéo dài","Renew, extend"
+14243,72,출국한 날,ngày xuất cảnh,date of exit
+14244,72,재입국허가,giấy phép tái nhập cảnh,re-entry permit
+14245,72,취득,"Sự có được, sự lấy được, sự đạt được","Acquire, acquire, attainment"
+14246,72,이민자,người di cư,immigrant
+14247,72,자립하다,tự lập,independent

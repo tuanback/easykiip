@@ -1,47 +1,47 @@
-ID,LessonID,Word,vi,en
-14401,73,정,tình cảm,
-14402,73,정을 주다,"trao, gửi, tình cảm",
-14403,73,정을 느끼다,"cảm thấy thương tình, cảm thấy thương cảm (cho, đối với ai đó)",
-14404,73,정이 많다,giàu tình cảm,
-14405,73,정이 들다,"có, nảy sinh tình cảm",
-14406,73,정이 떨어지다,mất tình cảm,
-14407,73,정이 없다,không có tình cảm,
-14408,73,정이 넘치다,"chan chứa, ngập tràn tình cảm",
-14409,73,흥,"hứng thú, hứng khởi",
-14410,73,흥을 내다,"truyền cảm hứng, truyền sự hứng thú",
-14411,73,흥이 많다,"nhiều cảm hứng, nhiều hứng thú",
-14412,73,흥이 나다,đánh thức/ khơi gợi cảm hứng,
-14413,73,개방적,tính cởi mở,
-14414,73,폐쇄적,tính khép kín,
-14415,73,진보적,tính cầu tiến,
-14416,73,보수적,"tính bảo thủ, cố hữu",
-14417,73,비관적,tính bi quan,
-14418,73,낙관적,tính lạc quan,
-14419,73,혈연을 중시하다,xem trọng huyết thống,
-14420,73,‘우리’ 의식을 느끼다,cảm nhận ý thức 'chúng tôi',
-14421,73,온정주의가 있다,"có quyền làm cha, quyền bảo vệ che chở",
-14422,73,서열을 중시하다,coi trọng thứ bậc,
-14423,73,체면을 중시하다,xem trọng thể diện,
-14424,73,한국 전통 공연,buổi trình diễn truyền thống Hàn Quốc,
-14425,73,사물놀이,Samulnori,
-14426,73,마당놀이,Matangnori,
-14427,73,어깨춤을 들썩이다,"nhún nhảy vai, lắc lư vai",
-14428,73,민족,dân tộc,
-14429,73,리듬,"giai điệu, nhịp điệu",
-14430,73,배려,sự quan tâm giúp đỡ,
-14431,73,열광시키다,trở nên cuồng nhiệt,
-14432,73,발현되다,được thể hiện (Tính chất hay tinh thần đang được giấu bên trong thể hiện ra ngoài),
-14433,73,뻗어나가다,"lan rộng, vươn ra",
-14434,73,언어의 장벽, rào cản ngôn ngữ,
-14435,73,사고방식,"lối tư duy, phương pháp tư duy",
-14436,73,잠자리,chỗ ngủ,
-14437,73,거절하다,"từ chối, khước từ",
-14438,73,수치스럽다,"hổ thẹn, nhục nhã",
-14439,73,나눔,sự chia sẻ,
-14440,73,독특하다,"đặc sắc, đặc biệt",
-14441,73,일상생활,sinh hoạt đời thường,
-14442,73,베풀다,"tổ chức, thết đãi/ ban tặng, trao cho",
-14443,73,간섭,sự can thiệp,
-14444,73,예로부터,từ xa xưa,
-14445,73,느껴지다,cảm thấy,
-14446,73,섭섭하다,"thất vọng, ê chề, buồn nản, tiếc nuối",
+﻿ID,LessonID,Word,vi,en
+14401,73,정,tình cảm,affection
+14402,73,정을 주다,"trao, gửi, tình cảm","give, send, affection"
+14403,73,정을 느끼다,"cảm thấy thương tình, cảm thấy thương cảm (cho, đối với ai đó)","feel compassionate, feel compassionate (for, towards someone)"
+14404,73,정이 많다,giàu tình cảm,emotional
+14405,73,정이 들다,"có, nảy sinh tình cảm","Yes, feelings arise"
+14406,73,정이 떨어지다,mất tình cảm,loss of feelings
+14407,73,정이 없다,không có tình cảm,no affection
+14408,73,정이 넘치다,"chan chứa, ngập tràn tình cảm","full of, full of affection"
+14409,73,흥,"hứng thú, hứng khởi","excited, excited"
+14410,73,흥을 내다,"truyền cảm hứng, truyền sự hứng thú","inspire, inspire excitement"
+14411,73,흥이 많다,"nhiều cảm hứng, nhiều hứng thú","A lot of inspiration, a lot of excitement"
+14412,73,흥이 나다,đánh thức/ khơi gợi cảm hứng,awaken / inspire
+14413,73,개방적,tính cởi mở,openness
+14414,73,폐쇄적,tính khép kín,closedness
+14415,73,진보적,tính cầu tiến,progressive
+14416,73,보수적,"tính bảo thủ, cố hữu","Conservativeism, inherent"
+14417,73,비관적,tính bi quan,pessimism
+14418,73,낙관적,tính lạc quan,optimism
+14419,73,혈연을 중시하다,xem trọng huyết thống,seriously consider blood
+14420,73,‘우리’ 의식을 느끼다,cảm nhận ý thức 'chúng tôi',feel the 'we' consciousness
+14421,73,온정주의가 있다,"có quyền làm cha, quyền bảo vệ che chở",have the right to be a father and the right to protect and protect
+14422,73,서열을 중시하다,coi trọng thứ bậc,seriously rank
+14423,73,체면을 중시하다,xem trọng thể diện,Watch the surface
+14424,73,한국 전통 공연,buổi trình diễn truyền thống Hàn Quốc,traditional Korean performances
+14425,73,사물놀이,Samulnori,Samulnori
+14426,73,마당놀이,Matangnori,Matangnori
+14427,73,어깨춤을 들썩이다,"nhún nhảy vai, lắc lư vai","shrugged, swayed"
+14428,73,민족,dân tộc,nation
+14429,73,리듬,"giai điệu, nhịp điệu","melody, rhythm"
+14430,73,배려,sự quan tâm giúp đỡ,attention help
+14431,73,열광시키다,trở nên cuồng nhiệt,become crazy
+14432,73,발현되다,được thể hiện (Tính chất hay tinh thần đang được giấu bên trong thể hiện ra ngoài),to be shown (The nature or spirit being hidden inside shows out)
+14433,73,뻗어나가다,"lan rộng, vươn ra",spread out
+14434,73,언어의 장벽, rào cản ngôn ngữ, language barriers
+14435,73,사고방식,"lối tư duy, phương pháp tư duy","way of thinking, method of thinking"
+14436,73,잠자리,chỗ ngủ,sleeping place
+14437,73,거절하다,"từ chối, khước từ","refuse, decline"
+14438,73,수치스럽다,"hổ thẹn, nhục nhã","shame, humiliation"
+14439,73,나눔,sự chia sẻ,sharing
+14440,73,독특하다,"đặc sắc, đặc biệt","special, special"
+14441,73,일상생활,sinh hoạt đời thường,daily life
+14442,73,베풀다,"tổ chức, thết đãi/ ban tặng, trao cho","organize, treat / give, give"
+14443,73,간섭,sự can thiệp,Involvement
+14444,73,예로부터,từ xa xưa,long time ago
+14445,73,느껴지다,cảm thấy,feel
+14446,73,섭섭하다,"thất vọng, ê chề, buồn nản, tiếc nuối","disappointment, frustration, sadness, regret"
