@@ -1,0 +1,89 @@
+인간관계 문제	Vấn đề quan hệ con người
+직장 동료들과의 관계가 서먹하다	Quan hệ với đồng nghiệp nơi làm việc bị ngượng ngùng
+자꾸만 친구에게 서운한 마음이 든다	Cứ không hài lòng với bạn bè
+집안 문제	Vấn đề trong nhà
+고부간의 갈등이 있다. Mâu thuẫn trong quan hệ mẹ chồng nàng dâu
+부부 싸움을 자주 한다	Vợ chồng thường xuyên cãi vã nhau
+진로 문제	Vấn đề đường hướng tương lai
+취업을 할지 대학원에 진학할지 고민이다	Lo lắng về việc sẽ học tiếp cao học và sẽ tìm việc ra sao.
+면접시험에 자꾸 떨어져서 고민이다. Lo lắng vì cứ bị trượt phỏng vấn
+경제적 문제	Vấn đề mang tính kinh tế
+노후 대책이 마련되지 않아서 고민이다. Lo lắng vì không chuẩn bị được kế hoạch khi về già
+아무리 아껴 써도 돈이 모이지 않는다	Dù cho sử dụng tiết kiệm thì tiền cũng không tích cóp được.
+취업 문제	Vấn đề tìm được việc làm
+자꾸 취업에 실패해서 걱정이다	Lo lắng vì cứ thất bại trong tìm việc
+면접시험에 자꾸 떨어져서 고민이다. Lo lắng vì cứ rớt kì thi phỏng vấn
+건강 문제	Vấn đề sức khỏe
+요즘 OO이/가 안 좋아진 것 같아서 걱정이다	Dạo này OO có vẻ như không được khỏe nên lo lắng
+보험 가입을 거절당하다	Bị từ chối tham gia bảo hiểm
+이성 문제	Vấn đề khác giới
+사귀던 이성에게 실연을 당하다. Bị thất tình với người khác giới từng hẹn hò.
+호감이 있었던 이성에게 고백을 했는데 거절을 당하다. Thổ lộ có cảm tình với người khác giới nhưng bị từ chối.
+육아 문제	Vấn đề nuôi dạy trẻ
+직장과 육아를 병행하기가 힘들다. Việc thực hiện song song vừa đi làm vừa nuôi dạy trẻ thì vất vả khó khăn
+학부모 모임에 참여하기가 두렵다. Lo lắng việc tham dự buổi họp phụ huynh.
+고민 과정	Quá trình lo lắng
+고민이 있다/없다/많다	Lo lắng có/ không/ nhiều
+고민이 되다	Trở nên lo lắng
+고민거리가 있다	Có những mối lo/ nỗi lo
+고민이 생기다	Nảy sinh lo lắng
+고민 중이다	Đang lo lắng, đang trong mối lo
+마음고생을 하다	Khổ tâm
+음고생이 심하다	Khổ tâm tột độ
+고민 상담 Tư vấn những lo lắng
+고민을 털어놓다	Thổ lộ/ giải bày nỗi lo
+고민을 나누다	Chia sẻ mối lo lắng
+고민 해결	Giải quyết lo lắng
+고민을 해결하다	Giải quyết nỗi lo lắng
+고민을 덜다	Giảm bớt lo lắng
+불면증	Bệnh mất ngủ, chứng mất ngủ
+어느	Nào, nào đó
+최근	Gần đây
+심각해지다	Trở nên trầm trọng
+겨우	Một cách khó khăn, một cách vất vả
+잠이 들다	Ngủ
+새벽	Bình minh, sáng sớm
+깨다	Tỉnh giấc, thức dậy
+시어머니	Mẹ chồng
+모시다	Phụng dưỡng, đưa đón
+등	Như là
+방식	Phương thức, hình thức
+어른	Người lớn
+싸움	Sự cãi vã
+예민하다	Nhạy cảm
+정신건강의학	Y học sức khỏe tinh thần
+불면 증상	Triệu chứng mất ngủ
+증상	Triệu chứng
+지속되다	Được tiếp diễn, bị tiếp diễn, được liên tục
+수면	Giấc ngủ
+잠자리	Chỗ ngủ
+정해지다	Được quyết định, được quy định
+산책	Việc đi dạo, việc đi tản bộ
+규칙적	Tính quy tắc
+취침	Sự ngủ
+직전	Ngay trước khi
+격렬하다	Mãnh liệt, dữ dội
+피하다	Tránh
+홍차	Hồng trà
+녹차	Trà xanh
+과식	Việc ăn quá nhiều
+이주 외국인	người ngước ngoài nhập cư
+서울글로벌센터	Trung tâm toàn cầu Seoul
+궁금하다	băn khoăn, thắc mắc
+분야	lĩnh vực
+노무	việc làm
+산재	tai nạn lao động
+국민연금	bảo hiểm hưu trí
+출국	sự xuất cảnh
+만기	sự đến hạn, sự mãn hạn
+귀국 비용	chi phí về nước
+상해	Tổn thất, tổn hại
+임금	tiền lương
+체불	sự chậm nộp, sự nộp trễ
+보증	bảo lãnh, bảo đảm
+의료	진료 chữa trị y tế
+금융	tài chính
+인권	nhân quyền
+비즈니스	kinh doanh
+주택임대	nhà cho thuê
+담당관	cán bộ phụ trách, nhân viên phụ trách

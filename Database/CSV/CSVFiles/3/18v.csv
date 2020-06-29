@@ -1,2 +1,67 @@
-ID,LessonID,Word,vi,en
-,,,,
+﻿ID,LessonID,Word,vi,en
+11401,58,소외 계층,"Tầng lớp không được để ý đến trong xã hội; tầng lớp bị bỏ rơi, bơ vơ","Classes are ignored in society; Abandoned class, helpless"
+11402,58,취약 계층,Tầng lớp thấp kém,Low class
+11403,58,소년 소녀 가장,Chủ gia đình là trẻ vị thành niên,The head of household is a minor
+11404,58,결식아동,Trẻ em bị đói ăn,Children are hungry to eat
+11405,58,조손 가정,Gia đình mà ông bà nuôi cháu,The family that grandparents raise their grandchildren
+11406,58,저소득층 가구,Gia đình có thu nhập thấp,Low-income family
+11407,58,독거노인,Người già neo đơn,The elderly are lonely
+11408,58,국민기초생활보장수급자,người được hưởng hỗ trợ bảo đảm đời sống sinh hoạt cơ bản,people who enjoy support to ensure basic life
+11409,58,자선 사업을 하다,Làm việc thiện,Doing good
+11410,58,소외 계층 돕기 물품을 전달하다,Gửi vật phẩm giúp đỡ tầng lớp bị bỏ rơi,Send items to help the abandoned class
+11411,58,모금 운동을 하다,Vận động quyên góp,Mobilize donations
+11412,58,노인 돌봄 종합 서비스를 제공하다,Cung cấp dịch vụ chăm sóc toàn diện cho người cao tuổi,Provide comprehensive care for the elderly
+11413,58,불우 이웃 돕기 봉사 활동을 하다,Làm các hoạt động từ thiện giúp đỡ những người bất hạnh xung quanh ,Do charitable activities to help the unfortunate people around
+11414,58,재능 나눔 봉사 활동에 참여하다,Tham gia các hoạt động từ thiện theo khả năng.,Participate in charitable activities according to ability.
+11415,58,소년 소녀 가장을 후원을 하다,Hỗ trợ các chủ gia đình là trẻ em thanh thiếu niên,Support for young homeowners
+11416,58,무료 급식소에서 봉사를 하다,Làm từ thiện tại các địa điểm bữa ăn tập thể miễn phí,Do charity at the free collective meal venue
+11417,58,불우 이웃 돕기 성금을 모금하다,"Quyên góp gây quỹ giúp đỡ những hàng xóm bất hạnh, người xung quanh kém may mắn","Fundraising to help unfortunate neighbors, less fortunate neighbors"
+11418,58,자원봉사자로 활동하다,Hoạt động với vai trò tình nguyện viên,Acting as a volunteer
+11419,58,참여하다,"Tham dự, tham gia",Join
+11420,58,공부방,"Phòng học, nơi học tập","Classroom, study place"
+11421,58,모금 운동,Vận động quyên góp,Mobilize donations
+11422,58,불우 이웃,"Hàng xóm bất hạnh, người xung quanh kém may mắn","Unhappy neighbors, unlucky people around"
+11423,58,자원봉사자,Tình nguyện viên,Volunteers
+11424,58,예전에,Trước đây,Before
+11425,58,연말,Cuối năm,End of the year
+11426,58,불우 이웃,Người bất hạnh kém may mắn (nói chung),Unhappy unfortunate people (in general)
+11427,58,대기업,Doanh nghiệp lớn,Big business
+11428,58,성금,"Tiền từ thiện, tiền gây quỹ","Charitable money, fundraising money"
+11429,58,전달하다,"Gởi đi, chuyển đi","Send it, send it"
+11430,58,이루어지다,"Được thực hiện, được hình thành","Made, formed"
+11431,58,단체,Tổ chức,Organization
+11432,58,지원,"Chi viện, hỗ trợ",Support and support
+11433,58,물품,Vật phẩm,Items
+11434,58,주기적,"Tính chu kì, tính định kỳ","Calculate periodicity, recurring calculation"
+11435,58,참여,"Sự tham gia, sự tham dự","Participation, participation"
+11436,58,펼치다,"Mở ra, tổ chức ra","Open it, hold it out"
+11437,58,구매하다,Mua hàng,Purchase
+11438,58,자동,Tự động,Automatic
+11439,58,판매,Việc buôn bán,Trafficking
+11440,58,금액,Số tiền,Amount of money
+11441,58,일부,Một phần,A part
+11442,58,이렇듯,Như thế,Such
+11443,58,갖다,"Mang, có","Wear, yes"
+11444,58,더불어,"Cùng nhau, với","Together, with"
+11445,58,살아가다,"Sống, sống tiếp, nuôi sống","Live, live, feed"
+11446,58,주위,"Chu vi, xung quanh","Perimeter, around"
+11447,58,둘러보다,"Nhìn quanh, quan sát xung quanh","Look around, look around"
+11448,58,느끼다,"Cảm thấy, cảm nhận, nhận thấy ","Feel, feel, notice"
+11449,58,이웃사촌 ,anh em láng giềng,neighboring brothers
+11450,58,가리키다,"chỉ, chỉ ra","only, point out"
+11451,58,사촌 형제, anh em họ hàng, cousins
+11452,58,바 ,"điều, cái...","Thing, that ..."
+11453,58,농경 ,"nông canh, việc đồng áng","farming, farming"
+11454,58,해오다 ,làm,do
+11455,58,기뻐하다,"vui mừng, vui sướng","excited, happy"
+11456,58,어느새 ,"thoáng đã, bỗng chốc","Airy, suddenly"
+11457,58,친척 ,họ hàng,relative
+11458,58,만큼,"bằng, như là","equals, as is"
+11459,58,상의하다 ,"thảo luận, bàn bạc","discussion, discussion"
+11460,58,결정하다,quyết định,decision
+11461,58,주거 형태 ,"hình thái nhà ở, hình thái cư trú","Housing morphology, residential morphology"
+11462,58,교류,sự giao lưu,communication
+11463,58,나름대로 ,"tùy vào, tùy thuộc vào",Depends on
+11464,58,존재하다,tồn tại,exist
+11465,58,친밀하다 ,"thân mật, thân thiết","intimate, intimate"
+11466,58,유지되다,được duy trì,be maintained
