@@ -1,40 +1,40 @@
 ﻿ID,LessonID,Word,vi,en
-21601,109,취직하다,"tìm được việc, có được việc làm",
-21602,109,고자,"để, để cho",
-21603,109,실현하다,thực hiện,
-21604,109,실업률,tỷ lệ thất nghiệp,
-21605,109,선진국,"nước phát triển, nước tiên tiến ",
-21606,109,자영업,"công việc tự kinh doanh, công việc tự quản lý",
-21607,109,측면,"phương diện, mặt",
-21608,109,사회보장 제도,chế độ bảo đảm an sinh xã hội,
-21609,109,치열하다,"dữ dội, khốc liệt",
-21610,109,차지하다,"giành, chiếm hữu, chiếm giữ, nắm giữ",
-21611,109,임금,tiền lương,
-21612,109,노력을 기울이다,tập trung nỗ lực,
-21613,109,생활수준,"mức sinh hoạt, mức sống",
-21614,109,열풍,cơn sốt (cách nói ẩn dụ),
-21615,109,줄임말,"cách nói tắt, từ viết tắt",
-21616,109,학벌,"bằng cấp, trình độ học vấn",
-21617,109,학점,"điểm số, xếp loại",
-21618,109,실무,"nghiệp vụ thực tế, công việc nghiệp vụ",
-21619,109,낫다,"khá hơn, tốt hơn",
-21620,109,인력,nhân lực,
-21621,109,인정받다,"được công nhận, được thừa nhận",
-21622,109,지나치다,"quá, thái quá",
-21623,109,객관적,tính khách quan,
-21624,109,지표,"kiêm chỉ nam, tiêu chí, chỉ số",
-21625,109,무시하다,coi thường,
-21626,109,탐색하다,"tìm hiểu, tìm kiếm",
-21627,109,채용하다,tuyển dụng,
-21628,109,눈여겨보다,"để ý, lưu ý",
-21629,109,적합하다,thích hợp,
-21630,109,훨씬,"rất, hơn hẳn",
-21631,109,유리하다,có lợi,
-21632,109,경험을 쌓다,tích lũy kinh nghiệm,
-21633,109,대우,đãi ngộ,
-21634,109,업체,"doanh nghiệp, công ty",
-21635,109,부당한 대우,đối xử bất công,
-21636,109,누리다,hưởng,
-21637,109,관하다,liên quan đến,
-21638,109,살펴보다,xem xét,
-21639,109,고용노동부,Bộ lao động,
+21601,109,취직하다,"tìm được việc, có được việc làm",get a job
+21602,109,고자,"để, để cho","to, let"
+21603,109,실현하다,thực hiện,perform
+21604,109,실업률,tỷ lệ thất nghiệp,unemployment rate
+21605,109,선진국,"nước phát triển, nước tiên tiến ","developed countries, advanced countries"
+21606,109,자영업,"công việc tự kinh doanh, công việc tự quản lý","self-employed, self-managed jobs"
+21607,109,측면,"phương diện, mặt","aspect, face"
+21608,109,사회보장 제도,chế độ bảo đảm an sinh xã hội,social security regimes
+21609,109,치열하다,"dữ dội, khốc liệt","intense, fierce"
+21610,109,차지하다,"giành, chiếm hữu, chiếm giữ, nắm giữ","gain, possess, seize, hold"
+21611,109,임금,tiền lương,salary
+21612,109,노력을 기울이다,tập trung nỗ lực,concentrate efforts
+21613,109,생활수준,"mức sinh hoạt, mức sống",living standard
+21614,109,열풍,cơn sốt (cách nói ẩn dụ),fever (metaphorical way)
+21615,109,줄임말,"cách nói tắt, từ viết tắt","expression, abbreviation"
+21616,109,학벌,"bằng cấp, trình độ học vấn","degree, education level"
+21617,109,학점,"điểm số, xếp loại","score, rank"
+21618,109,실무,"nghiệp vụ thực tế, công việc nghiệp vụ","Practical business, professional work"
+21619,109,낫다,"khá hơn, tốt hơn",better
+21620,109,인력,nhân lực,Human
+21621,109,인정받다,"được công nhận, được thừa nhận",recognized
+21622,109,지나치다,"quá, thái quá",Excessive
+21623,109,객관적,tính khách quan,objectivity
+21624,109,지표,"kiêm chỉ nam, tiêu chí, chỉ số","cum only male, criteria, index"
+21625,109,무시하다,coi thường,despise
+21626,109,탐색하다,"tìm hiểu, tìm kiếm","find out, search"
+21627,109,채용하다,tuyển dụng,recruitment
+21628,109,눈여겨보다,"để ý, lưu ý","Notice, note"
+21629,109,적합하다,thích hợp,suitable
+21630,109,훨씬,"rất, hơn hẳn","very, much better"
+21631,109,유리하다,có lợi,helpful
+21632,109,경험을 쌓다,tích lũy kinh nghiệm,accumulated experience
+21633,109,대우,đãi ngộ,treatment
+21634,109,업체,"doanh nghiệp, công ty",Corporate business
+21635,109,부당한 대우,đối xử bất công,unfair treatment
+21636,109,누리다,hưởng,enjoy
+21637,109,관하다,liên quan đến,Related to
+21638,109,살펴보다,xem xét,consider
+21639,109,고용노동부,Bộ lao động,Ministry of Labor

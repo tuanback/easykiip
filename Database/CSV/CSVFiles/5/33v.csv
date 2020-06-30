@@ -1,55 +1,55 @@
 ﻿ID,LessonID,Word,vi,en
-22401,113,마땅히,"một cách hiển nhiên, một cách xác đáng, một cách thích hợp",
-22402,113,꼽다,"vạch ra, đưa ra",
-22403,113,민법,luật dân sự ,
-22404,113,형법,luật hình sự ,
-22405,113,제시되다,"được đưa ra, được cho thấy (được thể hiện bằng lời nói hay câu viết).",
-22406,113,주장하다,"chủ trương, khẳng định",
-22407,113,사회질서,trật tự xã hội,
-22408,113,형벌,hình phạt,
-22409,113,정해지다,"được quy định, được quyết định ",
-22410,113,어기다,"làm trái, vi phạm",
-22411,113,저지르다,"gây ra, phạm, mắc phải",
-22412,113,죄,tội ,
-22413,113,죄를 짓다,"đắc tội, gây tội, mang tội",
-22414,113,최종,"cuối cùng, sau cùng",
-22415,113,"법관, 판사",thầm phán,
-22416,113,양심,lương tâm,
-22417,113,공정하다,công bằng,
-22418,113,판결하다,"phán quyết, tuyên án",
-22419,113,민사재판,xét xử dân sự,
-22420,113,유무,có hay không,
-22421,113,형사재판,xét xử hình sự,
-22422,113,검찰,"cơ quan kiểm sát, công tố",
-22423,113,거치다,thông qua,
-22424,113,다툼,"sự tranh đấu, sự tranh giành",
-22425,113,억울하다,oan ức,
-22426,113,가리키다,"chỉ, chỉ ra",
-22427,113,불공정,"phi lý, không công bằng",
-22428,113,지방법원,tòa án địa phương ,
-22429,113,고등법원,tòa án cấp cao ,
-22430,113,대법원,tòa án tối cao ,
-22431,113,공정성,tính công bằng,
-22432,113,확보하다,đảm bảo,
-22433,113,단독부,ban hiệp ý,
-22434,113,법집행기관,cơ quan thi hành luật,
-22435,113,나서다,đứng ra,
-22436,113,용의자,kẻ tình nghi,
-22437,113,잡아들이다,bắt giữ,
-22438,113,고소,sự tố cáo,
-22439,113,위반,sự vi phạm ,
-22440,113,판단되다,được phán đoán,
-22441,113,처벌하다,xử phạt ,
-22442,113,진압,"trấn áp, cưỡng chế",
-22443,113,수사,điều tra,
-22444,113,단속,"kiểm soát, trông coi",
-22445,113,방지,"phòng tránh, phòng ngừa",
-22446,113,질서유지,duy trì trật tự,
-22447,113,지구대,trạm cảnh sát ,
-22448,113,집행하다,"thi hành, thực thi",
-22449,113,지휘하다,"chỉ huy, chỉ đạo",
-22450,113,청구하다,yêu cầu,
-22451,113,권한,quyền hạn,
-22452,113,의하다,"dựa vào, theo, bởi",
-22453,113,수행하다,"hộ tống, thi hành, thực thi",
-22454,113,권한을 부여 받다,được trao quyền,
+22401,113,마땅히,"một cách hiển nhiên, một cách xác đáng, một cách thích hợp",Obviously
+22402,113,꼽다,"vạch ra, đưa ra","outlined, launched"
+22403,113,민법,luật dân sự ,civil law
+22404,113,형법,luật hình sự ,criminal law
+22405,113,제시되다,"được đưa ra, được cho thấy (được thể hiện bằng lời nói hay câu viết).","given, shown (expressed in words or sentences)."
+22406,113,주장하다,"chủ trương, khẳng định","advocate, affirmative"
+22407,113,사회질서,trật tự xã hội,Social Order
+22408,113,형벌,hình phạt,penalty
+22409,113,정해지다,"được quy định, được quyết định ","be regulated, decided"
+22410,113,어기다,"làm trái, vi phạm",to violate
+22411,113,저지르다,"gây ra, phạm, mắc phải","cause, commit, suffer"
+22412,113,죄,tội ,sin
+22413,113,죄를 짓다,"đắc tội, gây tội, mang tội","plead guilty, cause sin, bring guilty"
+22414,113,최종,"cuối cùng, sau cùng","last, last"
+22415,113,"법관, 판사",thầm phán,whispered
+22416,113,양심,lương tâm,conscience
+22417,113,공정하다,công bằng,fair
+22418,113,판결하다,"phán quyết, tuyên án",verdict
+22419,113,민사재판,xét xử dân sự,civil trial
+22420,113,유무,có hay không,Yes or no
+22421,113,형사재판,xét xử hình sự,criminal trial
+22422,113,검찰,"cơ quan kiểm sát, công tố",procuracies and prosecutors
+22423,113,거치다,thông qua,through
+22424,113,다툼,"sự tranh đấu, sự tranh giành",fight
+22425,113,억울하다,oan ức,unjustly
+22426,113,가리키다,"chỉ, chỉ ra","only, point out"
+22427,113,불공정,"phi lý, không công bằng","absurd, unfair"
+22428,113,지방법원,tòa án địa phương ,local court
+22429,113,고등법원,tòa án cấp cao ,high court
+22430,113,대법원,tòa án tối cao ,Supreme Court
+22431,113,공정성,tính công bằng,Fair
+22432,113,확보하다,đảm bảo,guaranteed
+22433,113,단독부,ban hiệp ý,compromise
+22434,113,법집행기관,cơ quan thi hành luật,law enforcement
+22435,113,나서다,đứng ra,stand out
+22436,113,용의자,kẻ tình nghi,suspects
+22437,113,잡아들이다,bắt giữ,arrest
+22438,113,고소,sự tố cáo,denunciation
+22439,113,위반,sự vi phạm ,violation
+22440,113,판단되다,được phán đoán,be judged
+22441,113,처벌하다,xử phạt ,penalize
+22442,113,진압,"trấn áp, cưỡng chế","suppression, coercion"
+22443,113,수사,điều tra,investigate
+22444,113,단속,"kiểm soát, trông coi","control, watch"
+22445,113,방지,"phòng tránh, phòng ngừa",prevent
+22446,113,질서유지,duy trì trật tự,maintain order
+22447,113,지구대,trạm cảnh sát ,police station
+22448,113,집행하다,"thi hành, thực thi","execution, enforcement"
+22449,113,지휘하다,"chỉ huy, chỉ đạo","command, direct"
+22450,113,청구하다,yêu cầu,request
+22451,113,권한,quyền hạn,power
+22452,113,의하다,"dựa vào, theo, bởi",based on
+22453,113,수행하다,"hộ tống, thi hành, thực thi","escort, enforcement, enforcement"
+22454,113,권한을 부여 받다,được trao quyền,empowered

@@ -1,44 +1,44 @@
 ﻿ID,LessonID,Word,vi,en
-21201,107,거래하다,giao dịch,
-21202,107,시중은행,ngân hàng thương mại,
-21203,107,맡기다,"gửi, ủy thác ký gởi, giao, giao phó",
-21204,107,설치되다,"được thiết lập, được lắp đặt",
-21205,107,자금,"tiền vốn, tiền quỹ",
-21206,107,광역시,"thành phố trực thuộc trung ương, thành phố lớn",
-21207,107,예금,"sự gửi tiền, tiền gửi",
-21208,107,금리,"lãi, lãi suất",
-21209,107,본인,"chính bản thân, đương sự",
-21210,107,금융,tài chính tiền tệ,
-21211,107,금융 실명제,chế độ giao dịch tài chính bằng tên thật,
-21212,107,처벌을 받다,"Nhận sự trừng phạt, hình phạt.",
-21213,107,현금인출기,máy rút tiền tự động,
-21214,107,송금,sự chuyển tiền,
-21215,107,저축,"sự tiết kiệm, tiền tiết kiệm, quỹ tiết kiệm",
-21216,107,정기,"định kỳ, có thời hạn",
-21217,107,정기적금 ,tiết kiệm kỳ hạn,
-21218,107,정기예금,tiền gửi có kỳ hạn,
-21219,107,금액,số tiền,
-21220,107,횟수,số lần,
-21221,107,원금,"tiền gốc, vốn",
-21222,107,이자,"tiền lời, tiền lãi",
-21223,107,한꺼번에,"một lượt, tất cả cùng một lần",
-21224,107,대체로,nói chung,
-21225,107,짜리,"mệnh giá, loại",
-21226,107,해지하다,hủy,
-21227,107,이익,"lợi ích, lãi",
-21228,107,주식,cổ phần,
-21229,107,채권,"trái phiếu, trái khoán, chứng khoán",
-21230,107,본래,"vốn, căn bản",
-21231,107,돌려받다,"được trả lại, được hoàn lại",
-21232,107,질병,bệnh tật,
-21233,107,기능,"tính năng, kỹ năng",
-21234,107,부실하다,yếu kém,
-21235,107,망하다,"sụp đỗ, tan rã.",
-21236,107,원금과 이자,tiền gốc và tiền lãi,
-21237,107,합치다,gộp lại,
-21238,107,보장하다,bảo đảm,
-21239,107,새마을금고 ,quỹ tiết kiệm 새마을,
-21240,107,업계,"ngành, giới",
-21241,107,자체적,"tính chất tự mình, tính chất tự nó, tự bản thân",
-21242,107,기금,tiền quỹ,
-21243,107,적립하다,"tích lũy, tích trữ",
+21201,107,거래하다,giao dịch,deal
+21202,107,시중은행,ngân hàng thương mại,commercial Bank
+21203,107,맡기다,"gửi, ủy thác ký gửi, giao, giao phó",entrust
+21204,107,설치되다,"được thiết lập, được lắp đặt",is set
+21205,107,자금,"tiền vốn, tiền quỹ","capital money, fund money"
+21206,107,광역시,"thành phố trực thuộc trung ương, thành phố lớn",big city
+21207,107,예금,"sự gửi tiền, tiền gửi",deposit
+21208,107,금리,"lãi, lãi suất",interest rate
+21209,107,본인,"chính bản thân, đương sự",self
+21210,107,금융,tài chính tiền tệ,fiscal and monetary
+21211,107,금융 실명제,chế độ giao dịch tài chính bằng tên thật,Financial transaction mode by real name
+21212,107,처벌을 받다,"Nhận sự trừng phạt, hình phạt.","Get punished, punished."
+21213,107,현금인출기,máy rút tiền tự động,Automatic teller machine
+21214,107,송금,sự chuyển tiền,money transfer
+21215,107,저축,"sự tiết kiệm, tiền tiết kiệm, quỹ tiết kiệm",saving
+21216,107,정기,"định kỳ, có thời hạn",periodic
+21217,107,정기적금 ,tiết kiệm kỳ hạn,term savings
+21218,107,정기예금,tiền gửi có kỳ hạn,term deposits
+21219,107,금액,số tiền,amount of money
+21220,107,횟수,số lần,times
+21221,107,원금,"tiền gốc, vốn",principal
+21222,107,이자,"tiền lời, tiền lãi",profit
+21223,107,한꺼번에,"một lượt, tất cả cùng một lần",all at once
+21224,107,대체로,nói chung,Generally speaking
+21225,107,짜리,"mệnh giá, loại","denominations, categories"
+21226,107,해지하다,hủy,cancel
+21227,107,이익,"lợi ích, lãi","benefits, interest"
+21228,107,주식,cổ phần,share
+21229,107,채권,"trái phiếu, trái khoán, chứng khoán",bonds
+21230,107,본래,"vốn, căn bản",capital
+21231,107,돌려받다,"được trả lại, được hoàn lại",get returned
+21232,107,질병,bệnh tật,diseases
+21233,107,기능,"tính năng, kỹ năng","features, skills"
+21234,107,부실하다,yếu kém,bad
+21235,107,망하다,"sụp đổ, tan rã","collapse, disintegration"
+21236,107,원금과 이자,tiền gốc và tiền lãi,Principal and interest
+21237,107,합치다,gộp lại,combine
+21238,107,보장하다,bảo đảm,guaranteed
+21239,107,새마을금고 ,quỹ tiết kiệm 새마을,saving fund 새마을
+21240,107,업계,"ngành, giới","industry, gender"
+21241,107,자체적,"tính chất tự mình, tính chất tự nó, tự bản thân",itself
+21242,107,기금,tiền quỹ,Cash
+21243,107,적립하다,"tích lũy, tích trữ",accumulation

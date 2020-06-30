@@ -1,62 +1,62 @@
 ﻿ID,LessonID,Word,vi,en
-23401,118,멸망하다,diệt vong,
-23402,118,들어서다,"bước vào, được dựng lên, được kiến tạo",
-23403,118,한강유역,"lưu vực sông Hán, châu thổ sông Hán (Sông Hàn)",
-23404,118,전성기,"thời kỳ đỉnh cao, thời kỳ vàng son",
-23405,118,근초고왕,Cận Tiểu Cổ Vương (-375년).,
-23406,118,이르다,"đến, tới, cho đến",
-23407,118,진출하다,tiến xuất,
-23408,118,금동대향로,lò hương đồng mạ vàng,
-23409,118,향로,lò hương  ,
-23410,118,금제장식,đồ trang trí làm bằng vàng ,
-23411,118,섬세하다,"nắn nót, tinh xảo",
-23412,118,돋보이다,"nổi bậc nổi trội, trông nổi bậc",
-23413,118,광개토대왕,Quang Khai Thổ Đại Vương ,
-23414,118,업적,thành tích ,
-23415,118,광개토대왕릉비,bia tưởng niệm Quang Khai Thổ Đại Vương,
-23416,118,기리다,"tôn vinh, tưởng nhớ",
-23417,118,활쏘기,môn bắn cung,
-23418,118,무용총,tên địa danh nơi tìm được bức bích họa 수렵도,
-23419,118,발견,"sự phát kiến, sự khám phá, sự tìm ra",
-23420,118,벽화,"bức bích họa, bức tranh tường ",
-23421,118,수렵도,(狩獵圖) tranh vẽ về việc săn bắn,
-23422,118,찬란하다,"rực rỡ, vẽ vang",
-23423,118,왜국 (倭國), Uy Quốc (tên một quốc gia cổ đại của Nhật),
-23424,118,태자,thái tử,
-23425,118,경전,sách kinh,
-23426,118,스승,"sư phụ, thầy cô",
-23427,118,인물,nhân vật,
-23428,118,사신,sứ thần ,
-23429,118,모시다,tháp tùng,
-23430,118,능하다,"thạo, giỏi",
-23431,118,오경,ngũ kinh  ,
-23432,118,천문,thiên văn ,
-23433,118,전파하다,truyền bá ,
-23434,118,모양새,diện mạo,
-23435,118,무렵,"khoảng thời kì, vào lúc",
-23436,118,진흥왕,Chấn Hưng Vương,
+23401,118,멸망하다,diệt vong,Eliminated
+23402,118,들어서다,"bước vào, được dựng lên, được kiến tạo","stepped in, erected, created"
+23403,118,한강유역,"lưu vực sông Hán, châu thổ sông Hán (Sông Hàn)","Han River basin, Han river delta (Han River)"
+23404,118,전성기,"thời kỳ đỉnh cao, thời kỳ vàng son","peak period, golden age"
+23405,118,근초고왕,Cận Tiểu Cổ Vương (-375년).,Sub-Ancient King (-375 년).
+23406,118,이르다,"đến, tới, cho đến","come, come, come"
+23407,118,진출하다,tiến xuất,proceed
+23408,118,금동대향로,lò hương đồng mạ vàng,gold-plated copper furnace
+23409,118,향로,lò hương  ,Incense furnace
+23410,118,금제장식,đồ trang trí làm bằng vàng ,ornaments made of gold
+23411,118,섬세하다,"nắn nót, tinh xảo","Leveling, sophisticated"
+23412,118,돋보이다,"nổi bậc nổi trội, trông nổi bậc","outstanding, outstanding"
+23413,118,광개토대왕,Quang Khai Thổ Đại Vương ,광개토대왕
+23414,118,업적,thành tích ,achievements
+23415,118,광개토대왕릉비,bia tưởng niệm Quang Khai Thổ Đại Vương,memorial stele of 광개토대왕
+23416,118,기리다,"tôn vinh, tưởng nhớ","honoring, remembering"
+23417,118,활쏘기,môn bắn cung,archery
+23418,118,무용총,tên địa danh nơi tìm được bức bích họa 수렵도,Name of the place where the mural tìm was found
+23419,118,발견,"sự phát kiến, sự khám phá, sự tìm ra","discovery, discovery, discovery"
+23420,118,벽화,"bức bích họa, bức tranh tường ","frescoes, murals"
+23421,118,수렵도,(狩獵圖) tranh vẽ về việc săn bắn,(狩獵 圖) pictures of hunting
+23422,118,찬란하다,"rực rỡ, vẽ vang","brilliant, painted echoes"
+23423,118,왜국 (倭國), Uy Quốc (tên một quốc gia cổ đại của Nhật), The name of an ancient country of Japan
+23424,118,태자,thái tử,Prince
+23425,118,경전,sách kinh,scriptures
+23426,118,스승,"sư phụ, thầy cô","Teachers, teachers"
+23427,118,인물,nhân vật,figure
+23428,118,사신,sứ thần ,envoy
+23429,118,모시다,tháp tùng,accompany
+23430,118,능하다,"thạo, giỏi","proficient, good"
+23431,118,오경,ngũ kinh  ,contingency
+23432,118,천문,thiên văn ,Astronomy
+23433,118,전파하다,truyền bá ,disseminate
+23434,118,모양새,diện mạo,face
+23435,118,무렵,"khoảng thời kì, vào lúc","time period, at time"
+23436,118,진흥왕,Chấn Hưng Vương,진흥왕
 23437,118,화랑도,tên đội quân thanh thiếu niên ưu tú của Tân La,
-23438,118,길러내다,đào tạo,
-23439,118,상류지역,khu vực thượng lưu,
-23440,118,빼앗다,"giành lấy, tước đoạt, cướp",
-23441,118,발판,bàn đạp ,
+23438,118,길러내다,đào tạo,educate
+23439,118,상류지역,khu vực thượng lưu,upstream area
+23440,118,빼앗다,"giành lấy, tước đoạt, cướp","steal, steal, rob"
+23441,118,발판,bàn đạp ,pedal
 23442,118,진흥왕 순수비,Những bia đá được 진흥왕 nước Tân La dựng lên sau khi mở rộng bờ cõi.,
-23443,118,전쟁을 벌이다,"khơi mào chiến tranh, khởi xướng chiến tranh",
-23444,118,삼다,"lấy làm, dùng làm",
-23445,118,천문대,đài thiên văn,
-23446,118,별자리,chòm sao,
-23447,118,관측하다,"quan trắc, dự đoán ",
-23448,118,장려하다,khuyến khích,
-23449,118,한층,"hơn nữa, hơn một bậc",
-23450,118,흐르다,thời gian trôi qua,
-23451,118,신분 제도,chế độ cấp bậc,
-23452,118,한계,giới hạn,
-23453,118,지배층,tầng lớp cai trị,
-23454,118,사치,sự xa xỉ,
-23455,118,빠지다,"rơi vào, mắc vào",
+23443,118,전쟁을 벌이다,"khơi mào chiến tranh, khởi xướng chiến tranh","start war, start war"
+23444,118,삼다,"lấy làm, dùng làm","Take it, use it"
+23445,118,천문대,đài thiên văn,Observatory
+23446,118,별자리,chòm sao,Constellation
+23447,118,관측하다,"quan trắc, dự đoán ","observation, prediction"
+23448,118,장려하다,khuyến khích,encourage
+23449,118,한층,"hơn nữa, hơn một bậc","more, more than one rank"
+23450,118,흐르다,thời gian trôi qua,time past
+23451,118,신분 제도,chế độ cấp bậc,Hierarchy mode
+23452,118,한계,giới hạn,limit
+23453,118,지배층,tầng lớp cai trị,ruling class
+23454,118,사치,sự xa xỉ,luxury
+23455,118,빠지다,"rơi vào, mắc vào","fall in, hang in"
 23456,118,대조영 (大祚榮),Đại Tộ Vinh - Vị vua đã lập ra nước Bột Hải,
-23457,118,계승하다,kế thừa,
-23458,118,씩씩하다,"hiên ngang, mạnh mẽ",
-23459,118,독창적,"tính sáng tạo, độc đáo",
-23460,118,되찾다,"tìm lại, giành lại",
-23461,118,건국하다,"kiến quốc, lập nước",
+23457,118,계승하다,kế thừa,inheritance
+23458,118,씩씩하다,"hiên ngang, mạnh mẽ","bravado, strong"
+23459,118,독창적,"tính sáng tạo, độc đáo","Creativity, originality"
+23460,118,되찾다,"tìm lại, giành lại",Find it again
+23461,118,건국하다,"kiến quốc, lập nước","build the country, build a country"

@@ -1,30 +1,30 @@
 ﻿ID,LessonID,Word,vi,en
-22001,111,처우,"sự đãi ngộ, sự đối xử",
-22002,111,제정되다,"được ban hành, được quy định",
-22003,111,불합리하다,bất hợp lý,
-22004,111,차별,"sự phân biệt, sự kỳ thị",
-22005,111,체계적,một cách có hệ thống,
-22006,111,명시하다,ghi rõ,
-22007,111,근거,"cơ sở, căn cứ",
-22008,111,침해,sự xâm hại,
-22009,111,의하다,dựa vào,
-22010,111,한도,"giới hạn, hạn độ",
-22011,111,민원,dân sự,
-22012,111,처리하다,xử lý,
-22013,111,고용주가,chủ lao động,
-22014,111,대등하다,ngang bằng,
-22015,111,정보화,thông tin hóa,
-22016,111,단순히,"đơn thuần, chỉ là",
-22017,111,구성원,thành viên,
-22018,111,협의회,"buổi thảo luận, cuộc họp",
-22019,111,입장,"ý kiến, lập trường",
-22020,111,효과적,tính hiệu quả,
-22021,111,마련하다,"chuẩn bị, sắp xếp...",
-22022,111,기여하다,"đóng góp, góp phần",
-22023,111,합동,"phối hợp, kết hợp",
-22024,111,순찰하다,tuần tra,
-22025,111,분쟁,"tranh chấp, xung đột",
-22026,111,실질적,"thiết thực, thực tế",
-22027,111,의사소통,"sự trao đổi, sự giao tiếp, sự hiểu ý nhau",
-22028,111,국경,biên giới,
-22029,111,정착하다,định cư,
+22001,111,처우,"sự đãi ngộ, sự đối xử",treatment
+22002,111,제정되다,"được ban hành, được quy định",to be promulgated
+22003,111,불합리하다,bất hợp lý,illogical
+22004,111,차별,"sự phân biệt, sự kỳ thị",discrimination
+22005,111,체계적,một cách có hệ thống,a systematic way
+22006,111,명시하다,ghi rõ,specify
+22007,111,근거,"cơ sở, căn cứ","base, base"
+22008,111,침해,sự xâm hại,abuse
+22009,111,의하다,dựa vào,based on
+22010,111,한도,"giới hạn, hạn độ","limit, limit"
+22011,111,민원,dân sự,Civil
+22012,111,처리하다,xử lý,handling
+22013,111,고용주가,chủ lao động,employer
+22014,111,대등하다,ngang bằng,equal
+22015,111,정보화,thông tin hóa,information
+22016,111,단순히,"đơn thuần, chỉ là","merely, just"
+22017,111,구성원,thành viên,member
+22018,111,협의회,"buổi thảo luận, cuộc họp","discussion, meeting"
+22019,111,입장,"ý kiến, lập trường","opinion, stance"
+22020,111,효과적,tính hiệu quả,effectiveness
+22021,111,마련하다,"chuẩn bị, sắp xếp...","prepare, arrange ..."
+22022,111,기여하다,"đóng góp, góp phần",contribute
+22023,111,합동,"phối hợp, kết hợp","coordinate, combine"
+22024,111,순찰하다,tuần tra,patrol
+22025,111,분쟁,"tranh chấp, xung đột","disputes, conflicts"
+22026,111,실질적,"thiết thực, thực tế",practical
+22027,111,의사소통,"sự trao đổi, sự giao tiếp, sự hiểu ý nhau",exchange
+22028,111,국경,biên giới,border
+22029,111,정착하다,định cư,settled

@@ -1,51 +1,51 @@
 ﻿ID,LessonID,Word,vi,en
-21401,108,정해지다,được quy định,
-21402,108,정기적,"tính định kì, có tính chất định kì",
-21403,108,정기시장,chợ phiên,
-21404,108,여전히,"vẫn, vẫn còn, vẫn như xưa (giống như trước đây)",
-21405,108,단지,khu,
-21406,108,특정하다,"riêng biệt, cá biệt",
-21407,108,장터,"chợ, khu chợ",
-21408,108,신선하다,tươi,
-21409,108,해당하다,"phù hợp, tương ứng",
-21410,108,상인,"thương nhân, thương lái, nhà buôn",
-21411,108,인심,"nhân tâm, lòng người",
-21412,108,몰리다,đổ xô,
-21413,108,붐비다,"tấp nập, đông nghịt, chật ních",
-21414,108,흥정하다,"mặc cả, trả giá",
-21415,108,공산품,sản phẩm công nghiệp,
-21416,108,한꺼번에,"một lượt, một lần",
-21417,108,정찰제,"giá niêm yết, chế độ bảng giá",
-21418,108,참고하다,tham khảo,
-21419,108,살펴보다,"xem xét, suy xét",
-21420,108,부가가치세,thuế giá trị gia tăng (VAT),
-21421,108,세금,tiền thuế,
-21422,108,세율,thuế suất,
-21423,108,가격표,"bảng giá, tem giá",
-21424,108,덜다,"giảm, khấu trừ",
-21425,108,국세청,tổng cục thuế,
-21426,108,피해를 입다,bị thiệt hại,
-21427,108,정당하다,"thỏa đáng, chính đáng",
-21428,108,교환,đổi hàng,
-21429,108,환불,"trả hàng, hoàn tiền",
-21430,108,보상,việc bồi thường,
-21431,108,권리를 주장하다,đòi quyền lợi,
-21432,108,누리다,"hưởng, được",
-21433,108,상점,"tiệm bán hàng, cửa hàng",
-21434,108,만약,giả sử,
-21435,108,한국소비자원,Tổ chức người tiêu dùng Hàn Quốc,
-21436,108,국번없이,không cần mã vùng,
-21437,108,구제,"sự cứu tế, sự cứu trợ, sự giúp đỡ",
-21438,108,건전하다,"tích cực, lành mạnh",
-21439,108,스스로,"tự mình, tự thân",
-21440,108,살피다,"soi xét, xem xét, suy xét",
-21441,108,생산자,"nhà máy, người sản xuất",
-21442,108,책임을 지다,chịu trách nhiệm,
-21443,108,마련하다,"chuẩn bị, sắp xếp",
-21444,108,어기다,"làm trái, vi phạm",
-21445,108,제기하다,"đề xuất, nêu ra, đưa ra",
-21446,108,사례,"ví dụ cụ thể, ví dụ điển hình",
-21447,108,표시하다,"biểu hiện, biểu thị, biểu lộ",
-21448,108,유통되다,lưu thông,
-21449,108,제조업체,công ty sản xuất,
-21450,108,리콜,(recall) sự thu hồi (sản phẩm),
+21401,108,정해지다,được quy định,be specified
+21402,108,정기적,"tính định kì, có tính chất định kì",recurring
+21403,108,정기시장,chợ phiên,fair
+21404,108,여전히,"vẫn, vẫn còn, vẫn như xưa (giống như trước đây)","still, still the same"
+21405,108,단지,khu,quarters
+21406,108,특정하다,"riêng biệt, cá biệt","separate, distinct"
+21407,108,장터,"chợ, khu chợ",market
+21408,108,신선하다,tươi,fresh
+21409,108,해당하다,"phù hợp, tương ứng","accordingly, respectively"
+21410,108,상인,"thương nhân, thương lái, nhà buôn","traders, traders and traders"
+21411,108,인심,"nhân tâm, lòng người",human mind
+21412,108,몰리다,đổ xô,Flocking
+21413,108,붐비다,"tấp nập, đông nghịt, chật ních","busy, crowded"
+21414,108,흥정하다,"mặc cả, trả giá",bargain
+21415,108,공산품,sản phẩm công nghiệp,product of industry
+21416,108,한꺼번에,"một lượt, một lần",one time
+21417,108,정찰제,"giá niêm yết, chế độ bảng giá",Listed price
+21418,108,참고하다,tham khảo,refer
+21419,108,살펴보다,"xem xét, suy xét",consider
+21420,108,부가가치세,thuế giá trị gia tăng (VAT),Value added tax (VAT)
+21421,108,세금,tiền thuế,tax money
+21422,108,세율,thuế suất,tax
+21423,108,가격표,"bảng giá, tem giá",price list
+21424,108,덜다,"giảm, khấu trừ",reduction
+21425,108,국세청,tổng cục thuế,General Department of Taxation
+21426,108,피해를 입다,bị thiệt hại,damage
+21427,108,정당하다,"thỏa đáng, chính đáng",satisfactory
+21428,108,교환,đổi hàng,exchange
+21429,108,환불,"trả hàng, hoàn tiền","return the goods, refund"
+21430,108,보상,việc bồi thường,compensation
+21431,108,권리를 주장하다,đòi quyền lợi,claim benefits
+21432,108,누리다,"hưởng, được","enjoy, okay"
+21433,108,상점,"tiệm bán hàng, cửa hàng",shop
+21434,108,만약,giả sử,suppose
+21435,108,한국소비자원,Tổ chức người tiêu dùng Hàn Quốc,Korea Consumer Organization
+21436,108,국번없이,không cần mã vùng,No area code needed
+21437,108,구제,"sự cứu tế, sự cứu trợ, sự giúp đỡ",relief
+21438,108,건전하다,"tích cực, lành mạnh","positive, healthy"
+21439,108,스스로,"tự mình, tự thân",myself
+21440,108,살피다,"soi xét, xem xét, suy xét",check
+21441,108,생산자,"nhà máy, người sản xuất","factory, manufacturer"
+21442,108,책임을 지다,chịu trách nhiệm,responsible
+21443,108,마련하다,"chuẩn bị, sắp xếp","prepare, arrange"
+21444,108,어기다,"làm trái, vi phạm",to violate
+21445,108,제기하다,"đề xuất, nêu ra, đưa ra","propose, raise, give"
+21446,108,사례,"ví dụ cụ thể, ví dụ điển hình","Specific examples, typical examples"
+21447,108,표시하다,"biểu hiện, biểu thị, biểu lộ","expression, signify"
+21448,108,유통되다,lưu thông,circulate
+21449,108,제조업체,công ty sản xuất,production company
+21450,108,리콜,(recall) sự thu hồi (sản phẩm),the recall
