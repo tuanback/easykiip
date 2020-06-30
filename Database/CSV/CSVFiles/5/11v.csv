@@ -1,54 +1,53 @@
 ﻿ID,LessonID,Word,vi,en
-18001,91,대학진학률,tỷ lệ học lên đại học,
-18002,91,이루어지다,"được tạo thành, được hình thành, được thực hiên, đạt được",
-18003,91,진학하다,"học lên cao, học tiếp",
-18004,91,마치다,"kết thúc, hoàn thành, chấm dứt, làm xong",
-18005,91,이수,"việc hoàn thành (chương trình học, khóa học, chương trình học)",
-18006,91,졸업 예정자,người dự kiến tốt nghiệp,
-18007,91,논술,"Việc viết bài luật, việc đàm luận",
-18008,91,거치다,"thông qua, đi qua",
-18009,91,경제협력 개발기구,tổ chức hợp tác và phát triển kinh tế ,
-18010,91,최고,"tốt nhất, cao nhất… ",
-18011,91,수준,"trình độ, tiêu chuẩn, mức tiêu chuẩn",
-18012,91,달하다,"đạt, đạt đến, đạt được",
-18013,91,사회적 지위,địa vị xã hội,
-18014,91,상승시키다,"làm tăng lên, nâng lên",
-18015,91,인식되다,được nhận thức,
-18016,91,임금,tiền lương,
-18017,91,영향,sự ảnh hưởng,
-18018,91,전문대,trường cao đẳng nghề,
-18019,91,집계되다,"được tính tổng, được tổng cộng, được thống kê",
-18020,91,학력별,theo học lực,
-18021,91,나타나다,"thể hiện, bộc lộ, phô bày, xuất hiện",
-18022,91,사회적인 지위,địa vị xã hội,
-18023,91,유리하다,có lợi,
-18024,91,경쟁,sự cạnh tranh,
-18025,91,치열하다,"dữ dội, khốc liệt",
-18026,91,벌어지다,"xảy ra, diễn ra, nổ ra (chủ yếu những việc không tốt)",
-18027,91,기꺼이,"vui lòng, hân hoan",
-18028,91,엿,"kẹo kéo, kẹo mạch nha",
-18029,91,찹쌀떡,bánh bột nếp,
-18030,91,붙다,"dính, đỗ, đậu",
-18031,91,찍다,"bấm (lỗ), đâm, xỉa",
-18032,91,풀다,"tháo, cởi, mở",
-18033,91,교육열,"nhiệt huyết giáo dục, sự hiếu học",
-18034,91,우수하다,"ưu tú, vượt trội",
-18035,91,인재,nhân tài,
-18036,91,길러내다,đào tạo,
-18037,91,이바지하다,"cống hiến, đóng góp",
-18038,91,궁극적,tính cuối cùng,
-18039,91,영향을 끼치다,gây ảnh hưởng,
-18040,91,지나치다,"quá, thái quá",
-18041,91,인하다,"do, bởi, tại",
-18042,91,사교육비,tiền học thêm,
-18043,91,과외,"sự dạy thêm, sự học thêm",
-18044,91,사교육,"giáo dục tư, sự dạy tư, sự học tư",
-18045,91,상당하다,"khá nhiều, tương đối, tương đương…",
-18046,91,대학 입시,kì thi tuyển sinh đại học,
-18047,91,더욱,"hơn nữa, càng…",
-18048,91,입시지옥,địa ngục trần gian kỳ thi tuyển sinh,
-18049,91,시달리다,"đau khổ, khổ sở",
-18050,91,조기,"thời kỳ đầu, sớm",
-18051,91,돈을 벌다,kiếm tiền,
-18052,91,열풍,cơn sốt,
-18053,91,증가,sự gia tăng,
+18001,91,대학진학률,tỷ lệ học lên đại học,University Admission Rate
+18002,91,이루어지다,"được tạo thành, được hình thành, được thực hiên, đạt được",come true
+18003,91,진학하다,"học lên cao, học tiếp",It further study
+18004,91,마치다,"kết thúc, hoàn thành, chấm dứt, làm xong",finish
+18005,91,이수,"việc hoàn thành (chương trình học, khóa học, chương trình học)",complete
+18006,91,졸업 예정자,người dự kiến tốt nghiệp,Prospective graduate
+18007,91,논술,"Việc viết bài luật, việc đàm luận",Essay exam
+18008,91,거치다,"thông qua, đi qua",pass through
+18009,91,경제협력 개발기구,tổ chức hợp tác và phát triển kinh tế ,Economic Cooperation and Development Organization
+18010,91,최고,"tốt nhất, cao nhất… ",Best
+18011,91,수준,"trình độ, tiêu chuẩn, mức tiêu chuẩn",level
+18012,91,달하다,"đạt, đạt đến, đạt được",accomplish
+18013,91,사회적 지위,địa vị xã hội,Society position
+18014,91,상승시키다,"làm tăng lên, nâng lên",Ascend
+18015,91,인식되다,được nhận thức,Be recognized
+18016,91,임금,tiền lương,wage
+18017,91,영향,sự ảnh hưởng,effect
+18018,91,전문대,trường cao đẳng nghề,Technical college
+18019,91,집계되다,"được tính tổng, được tổng cộng, được thống kê",Count
+18020,91,학력별,theo học lực,By education
+18021,91,나타나다,"thể hiện, bộc lộ, phô bày, xuất hiện",appear
+18022,91,유리하다,có lợi,It is advantageous
+18023,91,경쟁,sự cạnh tranh,compete
+18024,91,치열하다,"dữ dội, khốc liệt",Fierce
+18025,91,벌어지다,"xảy ra, diễn ra, nổ ra (chủ yếu những việc không tốt)",Happen
+18026,91,기꺼이,"vui lòng, hân hoan",Gladly
+18027,91,엿,"kẹo kéo, kẹo mạch nha",Fucked
+18028,91,찹쌀떡,bánh bột nếp,Glutinous rice cake
+18029,91,붙다,"dính, đỗ, đậu",Stick
+18030,91,찍다,"bấm (lỗ), đâm, xỉa",hew
+18031,91,풀다,"tháo, cởi, mở",solve
+18032,91,교육열,"nhiệt huyết giáo dục, sự hiếu học",Education fever
+18033,91,우수하다,"ưu tú, vượt trội",Excellent
+18034,91,인재,nhân tài,Talent
+18035,91,길러내다,đào tạo,educate
+18036,91,이바지하다,"cống hiến, đóng góp",Contribute
+18037,91,궁극적,tính cuối cùng,Ultimate
+18038,91,영향을 끼치다,gây ảnh hưởng,to affect
+18039,91,지나치다,"quá, thái quá",go too far
+18040,91,인하다,"do, bởi, tại",Because
+18041,91,사교육비,tiền học thêm,Private education expenses
+18042,91,과외,"sự dạy thêm, sự học thêm",Tutoring
+18043,91,사교육,"giáo dục tư, sự dạy tư, sự học tư",Private education
+18044,91,상당하다,"khá nhiều, tương đối, tương đương…",Considerable
+18045,91,대학 입시,kì thi tuyển sinh đại học,College entrance examination
+18046,91,더욱,"hơn nữa, càng…",More
+18047,91,입시지옥,địa ngục trần gian kỳ thi tuyển sinh,Hell
+18048,91,시달리다,"đau khổ, khổ sở",be afflicted with
+18049,91,조기,"thời kỳ đầu, sớm",Early
+18050,91,돈을 벌다,kiếm tiền,Earn money
+18051,91,열풍,cơn sốt,Craze
+18052,91,증가,sự gia tăng,increase

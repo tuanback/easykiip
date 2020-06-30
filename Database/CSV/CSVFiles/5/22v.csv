@@ -1,39 +1,39 @@
 ﻿ID,LessonID,Word,vi,en
-20201,102,권력,quyền lực,
-20202,102,적절하다,"thích hợp, thích đáng",
-20203,102,균형,sự cân bằng,
-20204,102,분립,sự phân lập,
-20205,102,집행하다,"thi hành, thực thi, thực hiện",
-20206,102,살림,đời sống (tình hình kinh tế của gia đình hay quốc gia),
-20207,102,이끌다,"lãnh đạo, dẫn dắt",
-20208,102,선출되다,"được tuyển chọn, được bầu chọn",
-20209,102,중임,sự bổ nhiệm lại,
-20210,102,허용되다,"được chấp thuận, được thừa nhận",
-20211,102,국무총리,thủ tướng chính phủ,
-20212,102,역할,"nhiệm vụ, vai trò",
-20213,102,지명,"sự bổ nhiệm, sự đề cử",
-20214,102,정해지다,"được quyết định, được định",
-20215,102,장관,bộ trưởng,
-20216,102,법질서,trật tự phát luật,
-20217,102,청와대,"Nhà Xanh, dinh tổng thống Hàn Quốc",
-20218,102,머물다,"Dừng chân, nghỉ chân",
-20219,102,궁궐,"Cung điện, cung đình, cung vua",
-20220,102,위치하다,"tọa lạc, ở vị trí",
-20221,102,세우다,"dựng, lập",
-20222,102,어기다,"làm trái, vi phạm",
-20223,102,판단하다,phán đoán,
-20224,102,해석하다,"phân tích, lý giải",
-20225,102,분쟁,tranh chấp,
-20226,102,법원,tòa án,
-20227,102,재판,xét xử,
-20228,102,판결,sự phán quyết,
-20229,102,판결을 내리다,"đưa ra phán quyết, tuyên án",
-20230,102,판사,thẩm phán,
-20231,102,양심,lương tâm,
-20232,102,공정하다,công bằng,
-20233,102,가정법원,tòa án gia đình,
-20234,102,다스리다,"cai trị, thống trị, điều hành",
-20235,102,원칙,nguyên tắc,
-20236,102,법률,"pháp luật, quy định pháp luật",
-20237,102,어긋나다,"lệch, chệch",
-20238,102,권위,"quyền uy, sức mạnh",
+20201,102,권력,quyền lực,powerful
+20202,102,적절하다,"thích hợp, thích đáng",suitable
+20203,102,균형,sự cân bằng,balance
+20204,102,분립,sự phân lập,isolation
+20205,102,집행하다,"thi hành, thực thi, thực hiện",enforce
+20206,102,살림,đời sống (tình hình kinh tế của gia đình hay quốc gia),life (economic situation of the family or country)
+20207,102,이끌다,"lãnh đạo, dẫn dắt",leader
+20208,102,선출되다,"được tuyển chọn, được bầu chọn",is selected
+20209,102,중임,sự bổ nhiệm lại,reappointment
+20210,102,허용되다,"được chấp thuận, được thừa nhận","approved, accepted"
+20211,102,국무총리,thủ tướng chính phủ,Prime Minister
+20212,102,역할,"nhiệm vụ, vai trò","mission, role"
+20213,102,지명,"sự bổ nhiệm, sự đề cử","appointment, nomination"
+20214,102,정해지다,"được quyết định, được định","to be decided, to be determined"
+20215,102,장관,bộ trưởng,Minister
+20216,102,법질서,trật tự pháp luật,law order
+20217,102,청와대,"Nhà Xanh, dinh tổng thống Hàn Quốc","Green House, Korean presidential palace"
+20218,102,머물다,"Dừng chân, nghỉ chân","Stop, take a rest"
+20219,102,궁궐,"Cung điện, cung đình, cung vua","Palace, court, king's palace"
+20220,102,위치하다,"tọa lạc, ở vị trí","located, in position"
+20221,102,세우다,"dựng, lập",create up
+20222,102,어기다,"làm trái, vi phạm",to violate
+20223,102,판단하다,phán đoán,judge
+20224,102,해석하다,"phân tích, lý giải","analysis, explanation"
+20225,102,분쟁,tranh chấp,dispute
+20226,102,법원,tòa án,court
+20227,102,재판,xét xử,judge
+20228,102,판결,sự phán quyết,award
+20229,102,판결을 내리다,"đưa ra phán quyết, tuyên án",make judgments and sentences
+20230,102,판사,thẩm phán,judge
+20231,102,양심,lương tâm,conscience
+20232,102,공정하다,công bằng,fair
+20233,102,가정법원,tòa án gia đình,family court
+20234,102,다스리다,"cai trị, thống trị, điều hành",rule
+20235,102,원칙,nguyên tắc,rule
+20236,102,법률,"pháp luật, quy định pháp luật",laws and regulations
+20237,102,어긋나다,"lệch, chệch",skew
+20238,102,권위,"quyền uy, sức mạnh","authority, power"

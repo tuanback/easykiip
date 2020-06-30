@@ -1,45 +1,45 @@
 ﻿ID,LessonID,Word,vi,en
-19001,96,공동주택,"nhà cộng đồng, nhà chung cư, nhà tập thể",
-19002,96,채,"căn, tòa",
-19003,96,차지하다,"giành, chiếm, nắm giữ, chiếm hữu",
-19004,96,다가구주택,"nhà đa hộ, nhà nhiều hộ gia đình",
-19005,96,소유권,quyền sở hữu,
-19006,96,나머지,phần còn lại,
-19007,96,세를 들다,"thuê, mướn",
-19008,96,연립주택,nhà tập thể,
-19009,96,종종,"thỉnh thoảng, đôi khi",
-19010,96,수백,hàng trăm,
-19011,96,수천,hàng nghìn,
-19012,96,무렵,"khoảng thời kỳ, vào khoảng",
-19013,96,으나,nhưng,
-19014,96,선호하다,"ưa chuộng, ưa thích",
-19015,96,설계,"sự thiết kế, việc lập kế hoạch",
-19016,96,편의시설,tiện nghi,
-19017,96,공공임대주택,nhà cộng đồng cho thuê,
-19018,96,장기전세주택,nhà cho thuê dài hạn theo kiểu Jeonse,
-19019,96,서민,dân thường,
-19020,96,해당되다,"tương ứng, tương xứng",
-19021,96,시세,"thời thế, thời cuộc, thời giá",
-19022,96,자가,nhà riêng,
-19023,96,맡기다,"giao phó, phó thác",
-19024,96,돌려받다,"được hoàn lại, được trả lại",
-19025,96,액수,số tiền,
-19026,96,전입신고,đăng ký cư trú,
-19027,96,확정일자,giấy xác nhận số ngày,
-19028,96,훨씬,"hơn hẳn, rất",
-19029,96,비중,Tỷ trọng,
-19030,96,혼합하다,"pha trộn, trộn lẫn",
-19031,96,방식,phương thức,
-19032,96,공인 중개사,nhà mô giới được pháp luật công nhận,
-19033,96,거래,sự giao dịch,
-19034,96,등기부등본,bản sao công chứng giấy đăng ký,
-19035,96,기록되다,"được lưu giữ, được ghi chép",
-19036,96,대법원,tòa án tối cao,
-19037,96,등기소,"sở đăng ký, nơi đăng ký",
-19038,96,기준,tiêu chuẩn,
-19039,96,방해하다,"gây trở hại, cản trở",
-19040,96,가리키다,"chỉ, chỉ ra",
-19041,96,상대적,tương đối,
-19042,96,차량,lượng xe,
-19043,96,인력,nhân lực,
-19044,96,짐,"hành lý, đồ đạc",
+19001,96,공동주택,"nhà cộng đồng, nhà chung cư, nhà tập thể",Apartment house
+19002,96,채,"căn, tòa",apartment
+19003,96,차지하다,"giành, chiếm, nắm giữ, chiếm hữu",Occupy
+19004,96,다가구주택,"nhà đa hộ, nhà nhiều hộ gia đình",Multi-family house
+19005,96,소유권,quyền sở hữu,ownership
+19006,96,나머지,phần còn lại,Remainder
+19007,96,세를 들다,"thuê, mướn",Rent
+19008,96,연립주택,nhà tập thể,Row House
+19009,96,종종,"thỉnh thoảng, đôi khi",often
+19010,96,수백,hàng trăm,Hundreds
+19011,96,수천,hàng nghìn,Thousands
+19012,96,무렵,"khoảng thời kỳ, vào khoảng",Around
+19013,96,으나,nhưng,But
+19014,96,선호하다,"ưa chuộng, ưa thích",prefer
+19015,96,설계,"sự thiết kế, việc lập kế hoạch",design
+19016,96,편의시설,tiện nghi,Facilities
+19017,96,공공임대주택,nhà cộng đồng cho thuê,Public rental housing
+19018,96,장기전세주택,nhà cho thuê dài hạn theo kiểu Jeonse,Long-term rental housing
+19019,96,서민,dân thường,people
+19020,96,해당되다,"tương ứng, tương xứng",Apply
+19021,96,시세,"thời thế, thời cuộc, thời giá",quote
+19022,96,자가,nhà riêng,self
+19023,96,맡기다,"giao phó, phó thác",entrust
+19024,96,돌려받다,"được hoàn lại, được trả lại",Get back
+19025,96,액수,số tiền,Sum
+19026,96,전입신고,đăng ký cư trú,Report of transference
+19027,96,확정일자,giấy xác nhận số ngày,Confirmation Date
+19028,96,훨씬,"hơn hẳn, rất",more
+19029,96,비중,Tỷ trọng,importance
+19030,96,혼합하다,"pha trộn, trộn lẫn",Mix
+19031,96,방식,phương thức,way
+19032,96,공인 중개사,nhà mô giới được pháp luật công nhận,A certified broker
+19033,96,거래,sự giao dịch,deal
+19034,96,등기부등본,bản sao công chứng giấy đăng ký,Certified copy
+19035,96,기록되다,"được lưu giữ, được ghi chép",Be recorded
+19036,96,대법원,tòa án tối cao,Supreme Court
+19037,96,등기소,"sở đăng ký, nơi đăng ký",Registry
+19038,96,기준,tiêu chuẩn,standard
+19039,96,방해하다,"gây trở hại, cản trở",Hinder
+19040,96,가리키다,"chỉ, chỉ ra",point out
+19041,96,상대적,tương đối,Relative
+19042,96,차량,lượng xe,vehicle
+19043,96,인력,nhân lực,manpower
+19044,96,짐,"hành lý, đồ đạc",load

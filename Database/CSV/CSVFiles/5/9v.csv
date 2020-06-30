@@ -1,46 +1,46 @@
 ﻿ID,LessonID,Word,vi,en
-17601,89,출산,"Sự sinh con, sự sinh đẻ",
-17602,89,보육,"sự nuôi dưỡng, sự nuôi dạy",
-17603,89,장려하다,"khuyến khích, động viên",
-17604,89,국가바우처사업,dự án voucher quốc gia,
-17605,89,국민행복카드,thẻ công dân hạnh phúc,
-17606,89,일부,một phần,
-17607,89,지원한다,"hỗ trợ, chi viện",
-17608,89,별도,"riêng biệt, riêng",
-17609,89,각,"mỗi, từng",
-17610,89,별로,"theo, cá biệt, riêng biệt, riêng lẻ, đặc biệt",
-17611,89,장려금,tiền khuyến khích,
-17612,89,상세하다,"chi tiết, cặn kẽ",
-17613,89,사항,"điều khoản, thông tin",
-17614,89,문의하다,"hỏi, tư vấn",
-17615,89,영아,"trẻ sơ sinh, trẻ nhỏ đang bú mẹ (0 đến 2 tuổi)",
-17616,89,유아,trẻ ít tuổi chưa đi học (3 đến 5 tuổi),
-17617,89,영·유아,trẻ dưới 6 tuổi,
-17618,89,유형,loại hình,
-17619,89,어린이집,"nhà trẻ, trường mầm non (0 đến 5 tuổi)",
-17620,89,유치원,trường mẫu giáo (3 đến 5 tuổi),
-17621,89,취학,sự vào học,
-17622,89,미만,"dưới, chưa đến",
-17623,89,양육수당,phụ cấp nuôi dưỡng,
-17624,89,지급되다,"được chi trả, được cấp",
-17625,89,재산,tài sản,
-17626,89,절차,"trình tự, thủ tục",
-17627,89,제출,"nộp, đệ trình",
-17628,89,수령 ,"lĩnh, lãnh, nhận",
-17629,89,지정하다,chỉ định,
-17630,89,요양기관,cơ quan điều dưỡng ,
-17631,89,담당하다,"đảm đương, đảm trách, đảm nhiệm",
-17632,89,설립하다,"thiết lập, thành lập",
-17633,89,국·공립,quốc lập. công lập,
-17634,89,사립,"dân lập, tư nhân",
-17635,89,민간인,"người dân, dân thường",
-17636,89,교회,"giáo hội, nhà thờ (đạo Tin Lành)",
-17637,89,성당,"thánh đường, nhà thờ (đạo Thiên Chúa Giáo)",
-17638,89,종교,tôn giáo,
-17639,89,세우다,"xây dựng, thành lập",
-17640,89,돌보다,"chăm sóc, săn sóc, trông coi",
-17641,89,운영되다,"được vận hành, được điều hành",
-17642,89,종일 ,cả ngày,
-17643,89,중요성,tính quan trọng,
-17644,89,더욱,"hơn nữa, ngày càng…",
-17645,89,높아지다,trở nên cao hơn,
+17601,89,출산,"Sự sinh con, sự sinh đẻ",delivery
+17602,89,보육,"sự nuôi dưỡng, sự nuôi dạy",Childcare
+17603,89,장려하다,"khuyến khích, động viên",Encourage
+17604,89,국가바우처사업,dự án voucher quốc gia,National voucher business
+17605,89,국민행복카드,thẻ công dân hạnh phúc,National Happiness Card
+17606,89,일부,một phần,part
+17607,89,지원한다,"hỗ trợ, chi viện",Support
+17608,89,별도,"riêng biệt, riêng",Separately
+17609,89,각,"mỗi, từng",bracket
+17610,89,별로,"theo, cá biệt, riêng biệt, riêng lẻ, đặc biệt",not really
+17611,89,장려금,tiền khuyến khích,subsidy
+17612,89,상세하다,"chi tiết, cặn kẽ",Detailed
+17613,89,사항,"điều khoản, thông tin",matters
+17614,89,문의하다,"hỏi, tư vấn",Inquire
+17615,89,영아,"trẻ sơ sinh, trẻ nhỏ đang bú mẹ (0 đến 2 tuổi)",Infant
+17616,89,유아,trẻ ít tuổi chưa đi học (3 đến 5 tuổi),child
+17617,89,영·유아,trẻ dưới 6 tuổi,Infants and toddlers
+17618,89,유형,loại hình,type
+17619,89,어린이집,"nhà trẻ, trường mầm non (0 đến 5 tuổi)",Day care Center
+17620,89,유치원,trường mẫu giáo (3 đến 5 tuổi),kindergarden
+17621,89,취학,sự vào học,Attend school
+17622,89,미만,"dưới, chưa đến",under
+17623,89,양육수당,phụ cấp nuôi dưỡng,Parenting allowance
+17624,89,지급되다,"được chi trả, được cấp",Be paid
+17625,89,재산,tài sản,property
+17626,89,절차,"trình tự, thủ tục",step
+17627,89,제출,"nộp, đệ trình",submission
+17628,89,수령 ,"lĩnh, lãnh, nhận",receipt
+17629,89,지정하다,chỉ định,Designate
+17630,89,요양기관,cơ quan điều dưỡng ,Medical institution
+17631,89,담당하다,"đảm đương, đảm trách, đảm nhiệm",It is responsible for
+17632,89,설립하다,"thiết lập, thành lập",establish
+17633,89,국·공립,quốc lập. công lập,National and public
+17634,89,사립,"dân lập, tư nhân",Private
+17635,89,민간인,"người dân, dân thường",citizen
+17636,89,교회,"giáo hội, nhà thờ (đạo Tin Lành)",church
+17637,89,성당,"thánh đường, nhà thờ (đạo Thiên Chúa Giáo)",Cathedral
+17638,89,종교,tôn giáo,religion
+17639,89,세우다,"xây dựng, thành lập",set up
+17640,89,돌보다,"chăm sóc, săn sóc, trông coi",Take care
+17641,89,운영되다,"được vận hành, được điều hành",Operate
+17642,89,종일 ,cả ngày,all day
+17643,89,중요성,tính quan trọng,importance
+17644,89,더욱,"hơn nữa, ngày càng…",More
+17645,89,높아지다,trở nên cao hơn,Rise

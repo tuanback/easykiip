@@ -1,57 +1,57 @@
 ﻿ID,LessonID,Word,vi,en
-16401,83,일터,Nơi làm việc ,
-16402,83,대략,"Đại khái, vào khoảng ",
-16403,83,은퇴하다,Nghỉ hưu ,
-16404,83,공무원 ,"Công chức, viên chức ",
-16405,83,안정적,Tính ổn định ,
-16406,83,뽑다,"Tuyển chọn, tuyển ra",
-16407,83,비하다,"So với, trái với ...",
-16408,83,인원수,"Đầu người, số người",
-16409,83,경쟁률,"Tỷ lệ chọi, tỷ lệ cạnh tranh ",
-16410,83,봉급,Tiền lương ,
-16411,83,혜택,"Sự đãi ngộ, sự ưu đãi ",
-16412,83,선호하다,"Ưu chuộng, ưa thích ",
-16413,83,다소,Hơn kém ,
-16414,83,규모,Quy mô ,
-16415,83,중소기업,Doanh nghiệp vừa và nhỏ ,
-16416,83,개인적,Tính cá nhân,
-16417,83,년대,"Thập niên, thập kỷ ",
-16418,83,무렵,"Khoảng thời kì, vào lúc ",
-16419,83,대부분,"Đại bộ phận, đại đa số ",
-16420,83,최근 들어 ,Dạo gần đây ,
-16421,83,진학률,Tỷ lệ học lên ,
-16422,83,진출,"Sự thâm nhập, sự tiến vào ",
-16423,83,비율,"Tỷ lệ, phần trăm, tỷ số ",
-16424,83,줄어들다,"Giảm đi, giảm thiểu",
-16425,83,맞벌이 부부 ,Vợ chồng đều đi làm kiếm tiền ,
-16426,83,증가하다,"Tăng, gia tăng",
-16427,83,상당수,Số lượng đáng kể ,
-16428,83,초반,Đầu (Giai đoạn đầu của việc nào đó hoặc khoảng thời gian nhất định). ,
-16429,83,중반,Giữa (Giai đoạn giữa của việc nào đó hoặc khoảng thời gian nhất định.) ,
-16430,83,겪기,"Sự trải qua, trải nghiệm/ sự tiếp nhận, tiếp đón",
-16431,83,각자,"Từng người, mỗi người",
-16432,83,친밀하다,"Thân mật, thân thiết",
-16433,83,한편,"Một mặt, mặt khác",
-16434,83,출신,Sự xuất thân,
-16435,83,끼리,Theo nhóm,
-16436,83,관공서,Cơ quan nhà nước,
-16437,83,멈추다,"Dừng lại, ngưng lại, tạm nghỉ",
-16438,83,적용되다,"Được áp dụng, được vận dụng",
-16439,83,일부 ,"Một phần, một bộ phận",
-16440,83,제외하다,"Trừ ra, loại ra",
-16441,83,영업,Việc kinh doanh,
-16442,83,흔히,"Thông thường, thường hay",
-16443,83,근무,"Sự làm việc, công việc",
-16444,83,마치다,"Kết thúc, chấm dứt, hoàn tất ",
-16445,83,갖다,"Có, sở hữu, tham gia ",
-16446,83,쌓이다,"Chất chồng, tích tụ ",
-16447,83,누군,"Người nào đó, ai đó ",
-16448,83,옮기다,"Di chuyển, dời ",
-16449,83,이야기 나누다,Trò chuyện chia sẻ ,
-16450,83,이어지다,"Tiếp tục, tiếp diễn",
-16451,83,여가,"Thời gian rảnh, thời gian nhàn rỗi",
-16452,83,종교,Tôn giáo ,
-16453,83,초 – 중 – 말,Đầu - giữa - cuối ,
-16454,83,해수욕장,Bãi tắm biển ,
-16455,83,계곡,Thung lũng (khe núi có nước chảy) ,
-16456,83,계절별로,Theo mùa,
+16401,83,일터,Nơi làm việc ,workshop
+16402,83,대략,"Đại khái, vào khoảng ",about
+16403,83,은퇴하다,Nghỉ hưu ,Retire
+16404,83,공무원 ,"Công chức, viên chức ",Official
+16405,83,안정적,Tính ổn định ,stable
+16406,83,뽑다,"Tuyển chọn, tuyển ra",select
+16407,83,비하다,"So với, trái với ...",Compare
+16408,83,인원수,"Đầu người, số người",Number of people
+16409,83,경쟁률,"Tỷ lệ chọi, tỷ lệ cạnh tranh ",Competition
+16410,83,봉급,Tiền lương ,salary
+16411,83,혜택,"Sự đãi ngộ, sự ưu đãi ",Benefits
+16412,83,선호하다,"Ưu chuộng, ưa thích ",prefer
+16413,83,다소,Hơn kém ,a little
+16414,83,규모,Quy mô ,Scale
+16415,83,중소기업,Doanh nghiệp vừa và nhỏ ,Small business
+16416,83,개인적,Tính cá nhân,Personal
+16417,83,년대,"Thập niên, thập kỷ ",Sixties
+16418,83,무렵,"Khoảng thời kì, vào lúc ",Around
+16419,83,대부분,"Đại bộ phận, đại đa số ",mostly
+16420,83,최근 들어 ,Dạo gần đây ,Recently
+16421,83,진학률,Tỷ lệ học lên ,Admission rate
+16422,83,진출,"Sự thâm nhập, sự tiến vào ",debouchment
+16423,83,비율,"Tỷ lệ, phần trăm, tỷ số ",ratio
+16424,83,줄어들다,"Giảm đi, giảm thiểu",Decrease
+16425,83,맞벌이 부부 ,Vợ chồng đều đi làm kiếm tiền ,A working couple
+16426,83,증가하다,"Tăng, gia tăng",Increase
+16427,83,상당수,Số lượng đáng kể ,Many
+16428,83,초반,Đầu (Giai đoạn đầu của việc nào đó hoặc khoảng thời gian nhất định). ,Early
+16429,83,중반,Giữa (Giai đoạn giữa của việc nào đó hoặc khoảng thời gian nhất định.) ,Mid
+16430,83,겪기,"Sự trải qua, trải nghiệm/ sự tiếp nhận, tiếp đón",Suffer
+16431,83,각자,"Từng người, mỗi người",Each
+16432,83,친밀하다,"Thân mật, thân thiết",Intimate
+16433,83,한편,"Một mặt, mặt khác",Meanwhile
+16434,83,출신,Sự xuất thân,Native
+16435,83,끼리,Theo nhóm,Between
+16436,83,관공서,Cơ quan nhà nước,Offices
+16437,83,멈추다,"Dừng lại, ngưng lại, tạm nghỉ",Stop
+16438,83,적용되다,"Được áp dụng, được vận dụng",Apply
+16439,83,일부 ,"Một phần, một bộ phận",part
+16440,83,제외하다,"Trừ ra, loại ra",Except
+16441,83,영업,Việc kinh doanh,sales
+16442,83,흔히,"Thông thường, thường hay",Often
+16443,83,근무,"Sự làm việc, công việc",work
+16444,83,마치다,"Kết thúc, chấm dứt, hoàn tất ",finish
+16445,83,갖다,"Có, sở hữu, tham gia ",have
+16446,83,쌓이다,"Chất chồng, tích tụ ",To stack up
+16447,83,누군,"Người nào đó, ai đó ",Who
+16448,83,옮기다,"Di chuyển, dời ",move
+16449,83,이야기 나누다,Trò chuyện chia sẻ ,Talk
+16450,83,이어지다,"Tiếp tục, tiếp diễn",be connected
+16451,83,여가,"Thời gian rảnh, thời gian nhàn rỗi",Leisure
+16452,83,종교,Tôn giáo ,religion
+16453,83,초 – 중 – 말,Đầu - giữa - cuối ,Begin-Middle-End
+16454,83,해수욕장,Bãi tắm biển ,Beach
+16455,83,계곡,Thung lũng (khe núi có nước chảy) ,Valley
+16456,83,계절별로,Theo mùa,By season

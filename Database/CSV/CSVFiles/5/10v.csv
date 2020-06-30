@@ -1,49 +1,49 @@
 ﻿ID,LessonID,Word,vi,en
-17801,90,구성되다,"được tạo ra, được cấu thành",
-17802,90,운영되다,"được điều hành, được vận hành, hoạt động….",
-17803,90,의무교육,"giáo dục bắt buộc, nghĩa vụ giáo dục",
-17804,90,취학,sự vào học,
-17805,90,통지서,giấy thông báo,
-17806,90,미루다,"dời lại, hoãn lại",
-17807,90,앞당기다,"đổi (lịch hẹn lên sớm hơn), kéo ra trước, kéo đến gần",
-17808,90,구분되다,được phân loại,
-17809,90,교육청,"sở giáo dục, phòng giáo dục",
-17810,90,고려하다,"cân nhắc, suy tính đến",
-17811,90,배정하다,"phân công, ấn định, phân định, bố trí…",
-17812,90,희망자,"người có nguyện vọng, người mong muốn",
-17813,90,추첨 ,"sự bốc thăm, sự rút thăm",
-17814,90,특수목적 중학교,trường trung học cơ sở năng khiểu,
-17816,90,두루,"đồng đều, đều khắp",
-17817,90,중점적,"tính trọng tâm, mang tính trọng tâm",
-17818,90,실시하다,"thực thi, thi hành",
-17819,90,고입선발고사,kỳ thi tuyển sinh vào trường cấp 3,
-17820,90,치르다,trải qua,
-17821,90,진학하다,"học lên cao, học tiếp",
-17822,90,입학시키다,cho nhập học,
-17823,90,임대차 계약서,hợp đồng thuê nhà,
-17824,90,주거사실 확인,xác nhận cư trú,
-17825,90,절차,"trình tự, thủ tục",
-17826,90,거치다,"đi qua, thông qua",
-17827,90,교장,hiệu trưởng,
-17828,90,가정통신문,bảng thông tin nhà trường gởi về gia đình,
-17829,90,기록하다,ghi chép lại,
-17830,90,알림장,sổ liên lạc,
-17831,90,살펴보다,"xem xét, soi xét, suy xét",
-17833,90,학사학위,học vị cử nhân,
-17834,90,특화,"chuyên hóa, ưu tiên phát triển, tập trung mũi nhọn",
-17835,90,출석하다,"có mặt, hiện diện",
-17836,90,성인,"người lớn, người trưởng thành",
-17837,90,장학금,học bổng,
-17838,90,숙소,chỗ trọ,
-17839,90,이루어지다,"được thực hiện, đạt được, được tạo thành",
-17841,90,더욱,"hơn, càng, càng ngày càng",
-17842,90,전문가,chuyên gia,
-17843,90,배출하다,sản sinh ra,
-17844,90,대안학교,"trường đề án, trường cải cách",
-17845,90,입시위주 ,chú trọng thi cử,
-17846,90,보완하다,"bổ sung, bổ khuyết, giải quyết",
-17847,90,존재하다,tồn tại,
-17848,90,"특성화고, 특성화 고등학교",trường chuyên cấp 3,
-17849,90,이르다,đạt đến,
-17850,90,인정받다,được công nhận,
-17851,90,별도,"riêng biệt, riêng",
+17801,90,구성되다,"được tạo ra, được cấu thành",consist of
+17802,90,운영되다,"được điều hành, được vận hành, hoạt động….",Operate
+17803,90,의무교육,"giáo dục bắt buộc, nghĩa vụ giáo dục",Compulsory education
+17804,90,취학,sự vào học,Attend school
+17805,90,통지서,giấy thông báo,Notice
+17806,90,미루다,"dời lại, hoãn lại",Postpone
+17807,90,앞당기다,"đổi (lịch hẹn lên sớm hơn), kéo ra trước, kéo đến gần",Advance
+17808,90,구분되다,được phân loại,To be separated
+17809,90,교육청,"sở giáo dục, phòng giáo dục",School board
+17810,90,고려하다,"cân nhắc, suy tính đến",Consider
+17811,90,배정하다,"phân công, ấn định, phân định, bố trí…",Assign
+17812,90,희망자,"người có nguyện vọng, người mong muốn",Hope
+17813,90,추첨 ,"sự bốc thăm, sự rút thăm",Raffle
+17814,90,특수목적 중학교,trường trung học cơ sở năng khiểu,Special Purpose Middle School
+17816,90,두루,"đồng đều, đều khắp",Throughout
+17817,90,중점적,"tính trọng tâm, mang tính trọng tâm",Focus
+17818,90,실시하다,"thực thi, thi hành",Enforce
+17819,90,고입선발고사,kỳ thi tuyển sinh vào trường cấp 3,High-ranking selection test
+17820,90,치르다,trải qua,pay
+17821,90,진학하다,"học lên cao, học tiếp",It further study
+17822,90,입학시키다,cho nhập học,Enroll
+17823,90,임대차 계약서,hợp đồng thuê nhà,Lease agreement
+17824,90,주거사실 확인,xác nhận cư trú,Check Housing
+17825,90,절차,"trình tự, thủ tục",step
+17826,90,거치다,"đi qua, thông qua",pass through
+17827,90,교장,hiệu trưởng,Principal
+17828,90,가정통신문,bảng thông tin nhà trường gởi về gia đình,Home communication
+17829,90,기록하다,ghi chép lại,Record
+17830,90,알림장,sổ liên lạc,Announcement
+17831,90,살펴보다,"xem xét, soi xét, suy xét",Take a look
+17833,90,학사학위,học vị cử nhân,Bachelor's degree
+17834,90,특화,"chuyên hóa, ưu tiên phát triển, tập trung mũi nhọn",Specialization
+17835,90,출석하다,"có mặt, hiện diện",Attend
+17836,90,성인,"người lớn, người trưởng thành",adult
+17837,90,장학금,học bổng,scholarship
+17838,90,숙소,chỗ trọ,Rooms
+17839,90,이루어지다,"được thực hiện, đạt được, được tạo thành",come true
+17841,90,더욱,"hơn, càng, càng ngày càng",More
+17842,90,전문가,chuyên gia,expert
+17843,90,배출하다,sản sinh ra,Discharge
+17844,90,대안학교,"trường đề án, trường cải cách",Alternative school
+17845,90,입시위주 ,chú trọng thi cử,Focused on entrance examination
+17846,90,보완하다,"bổ sung, bổ khuyết, giải quyết",Redeem
+17847,90,존재하다,tồn tại,Exist
+17848,90,"특성화고, 특성화 고등학교",trường chuyên cấp 3,"Specialized High School, Specialized High School"
+17849,90,이르다,đạt đến,early
+17850,90,인정받다,được công nhận,Affirmed
+17851,90,별도,"riêng biệt, riêng",Separately

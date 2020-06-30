@@ -1,67 +1,67 @@
 ﻿ID,LessonID,Word,vi,en
-16601,84,교통수단,Phương tiện giao thông,
-16602,84,발달하다,Phát triển,
-16603,84,도로상에,Trên đường ,
-16604,84,일정하다,Nhất định ,
-16605,84,간격,Khoảng cách ,
-16606,84,위치하다,Nằm ở vị trí ở ,
-16607,84,목적지,Nơi đến điểm đến ,
-16608,84,주변,Xung quanh ,
-16609,84,전광판,Bảng điện tử ,
-16610,84,편리하다,Tiện lợi,
-16611,84,노선도,Bản đồ tuyến tàu/ xe chạy ,
-16612,84,부근,Phụ cận lân cận ,
-16613,84,노선,Tuyến đường ,
-16614,84,비교적,Tương đối ,
-16615,84,장점,Ưu điểm điểm mạnh,
-16616,84,운행거리,Cự ly di chuyển khoảng cách di chuyển,
-16617,84,승객,Hành khách,
-16618,84,데리다,Đưa đón hộ tống,
-16619,84,정해지다,Được quy định ,
-16620,84,경로,Tuyến đường lộ trình ,
-16621,84,다소,Ít nhiều ,
-16622,84,수록,Cấu trúc càng …càng ,
-16623,84,부과되다,Bị đóng phí bị đóng phạt bị đóng thuế,
-16624,84,모범택시,Taxi cao cấp ,
-16625,84,제공하다,Cung cấp ,
-16626,84,대형택시,Taxi cỡ lớn ,
-16627,84,시외버스,Xe bus ngoại thành ,
-16628,84,고속버스,Xe bus tốc hành ,
-16629,84,고속철,Tàu lửa cao tốc ,
-16630,84,더욱,Hơn nữa càng,
-16631,84,환승제도,chế độ đổi tuyến chế độ đổi tàu xe,
-16632,84,금액,số tiền,
-16633,84,충전하다,nạp tiền nạp vào,
-16634,84,포함하다,bao gồm,
-16635,84,할인받게 되다,được giảm giá,
-16636,84,단말기,thiết bị đầu cuối máy đọc thẻ ,
-16637,84,횟수,số lần,
-16638,84,통신수단,Phương tiện truyền thông ,
-16639,84,멀리 떨어져 있다,Ở cách xa ,
-16640,84,주고받다,Cho và nhận trao đổi ,
-16641,84,는 물론,Không những… mà cả ,
-16642,84,장치,Sự trang bị trang thiết bị ,
-16643,84,연결되다,Được kết nối được liên kết ,
-16644,84,유선 전화,Điện thoại bàn ,
-16645,84,대다수,Đại đa số ,
-16646,84,각자,Mỗi người mỗi cá nhân,
-16647,84,자유롭다,Tự do ,
-16648,84,통신망,Mạng thông tin ,
-16649,84,개별,Riêng biệt riêng lẻ ,
-16650,84,보급되다,Được cung cấp được phổ cập được phổ biến ,
-16651,84,태블릿 PC,Máy tính bảng ,
-16652,84,무선통신,Viễn thông không dây ,
-16653,84,늘어나다,Tăng lên khá lên,
-16654,84,알아내다,tìm hiểu tìm tòi,
-16655,84,범죄,sự phạm tội,
-16656,84,빼가다,lấy đi,
-16657,84,사례,ví dụ cụ thể ví dụ điển hình,
-16658,84,낯설다,lạ lẫm xa lạ lạ mặt,
-16659,84,적히다,được ghi lại bị ghi lại,
-16660,84,접속하다,tiếp xúc kết nối,
-16661,84,유출되다,bị rò rỉ bị tuồn ra,
-16662,84,뱅킹,banking,
-16663,84,보안카드,thẻ bảo an thẻ bảo mật,
-16664,84,자세하다,tỉ mỉ chi tiết,
-16665,84,검찰청,viện kiểm sát,
-16666,84,한국정보보호진흥원,cơ quan an ninh thông tin Hàn Quốc,
+16601,84,교통수단,Phương tiện giao thông,Transportation
+16602,84,발달하다,Phát triển,develop
+16603,84,도로상에,Trên đường ,On the road
+16604,84,일정하다,Nhất định ,Constant
+16605,84,간격,Khoảng cách ,interval
+16606,84,위치하다,Nằm ở vị trí ở ,to be placed
+16607,84,목적지,Nơi đến điểm đến ,destination
+16608,84,주변,Xung quanh ,around
+16609,84,전광판,Bảng điện tử ,Electronic display
+16610,84,편리하다,Tiện lợi,It is convenient
+16611,84,노선도,Bản đồ tuyến tàu/ xe chạy ,Route map
+16612,84,부근,Phụ cận lân cận ,vicinity
+16613,84,노선,Tuyến đường ,route
+16614,84,비교적,Tương đối ,Comparative
+16615,84,장점,Ưu điểm điểm mạnh,Advantages
+16616,84,운행거리,Cự ly di chuyển khoảng cách di chuyển,Operation distance
+16617,84,승객,Hành khách,passenger
+16618,84,데리다,Đưa đón hộ tống,be accompanied
+16619,84,정해지다,Được quy định ,Destine
+16620,84,경로,Tuyến đường lộ trình ,Route
+16621,84,다소,Ít nhiều ,a little
+16622,84,수록,Cấu trúc càng …càng ,Included
+16623,84,부과되다,Bị đóng phí bị đóng phạt bị đóng thuế,Be charged
+16624,84,모범택시,Taxi cao cấp ,Model taxi
+16625,84,제공하다,Cung cấp ,Offer
+16626,84,대형택시,Taxi cỡ lớn ,Large taxi
+16627,84,시외버스,Xe bus ngoại thành ,Intercity bus
+16628,84,고속버스,Xe bus tốc hành ,Express Bus
+16629,84,고속철,Tàu lửa cao tốc ,High speed rail
+16630,84,더욱,Hơn nữa càng,More
+16631,84,환승제도,chế độ đổi tuyến chế độ đổi tàu xe,Transfer system
+16632,84,금액,số tiền,Price
+16633,84,충전하다,nạp tiền nạp vào,charge
+16634,84,포함하다,bao gồm,Comprise
+16635,84,할인받게 되다,được giảm giá,Get a discount
+16636,84,단말기,thiết bị đầu cuối máy đọc thẻ ,terminal
+16637,84,횟수,số lần,Count
+16638,84,통신수단,Phương tiện truyền thông ,Communication
+16639,84,멀리 떨어져 있다,Ở cách xa ,far away
+16640,84,주고받다,Cho và nhận trao đổi ,give and take
+16641,84,는 물론,Không những… mà cả ,Of course
+16642,84,장치,Sự trang bị trang thiết bị ,Device
+16643,84,연결되다,Được kết nối được liên kết ,Connect
+16644,84,유선 전화,Điện thoại bàn ,Wireline
+16645,84,대다수,Đại đa số ,plurality
+16646,84,각자,Mỗi người mỗi cá nhân,Each
+16647,84,자유롭다,Tự do ,free
+16648,84,통신망,Mạng thông tin ,communications network
+16649,84,개별,Riêng biệt riêng lẻ ,Individual
+16650,84,보급되다,Được cung cấp được phổ cập được phổ biến ,Spread
+16651,84,태블릿 PC,Máy tính bảng ,Tablet pc
+16652,84,무선통신,Viễn thông không dây ,Wireless communication
+16653,84,늘어나다,Tăng lên khá lên,increase
+16654,84,알아내다,tìm hiểu tìm tòi,to find out
+16655,84,범죄,sự phạm tội,crime
+16656,84,빼가다,lấy đi,Remove
+16657,84,사례,ví dụ cụ thể ví dụ điển hình,case
+16658,84,낯설다,lạ lẫm xa lạ lạ mặt,strange
+16659,84,적히다,được ghi lại bị ghi lại,Write down
+16660,84,접속하다,tiếp xúc kết nối,access
+16661,84,유출되다,bị rò rỉ bị tuồn ra,Spill
+16662,84,뱅킹,banking,Banking
+16663,84,보안카드,thẻ bảo an thẻ bảo mật,Security card
+16664,84,자세하다,tỉ mỉ chi tiết,Detailed
+16665,84,검찰청,viện kiểm sát,Prosecutors' office
+16666,84,한국정보보호진흥원,cơ quan an ninh thông tin Hàn Quốc,Korea Information Security Agency

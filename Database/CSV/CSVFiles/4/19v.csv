@@ -1,81 +1,81 @@
 ﻿ID,LessonID,Word,vi,en
-15601,79,질서를 지키다,Giữ trật tự ,
-15602,79,규칙을 지키다,tuân thủ quy tắc,
-15603,79,질서를 어기다/ 위반하다,vi phạm trật tự,
-15604,79,규칙을 어기다/ 위반하다,vi phạm quy tắc,
-15605,79,다른 사람에게 피해를 주다,gây thiệt hại cho người khác,
-15606,79,다른 사람 때문에 피해를 입다,bị thiệt hại vì người khác,
-15607,79,공동주택에서,"Ở khu nhà tập thể, khu dân cư",
-15608,79,이웃에게 피해를 주다,"gây tổn hại cho hàng xóm, láng giềng",
-15609,79,층간 소음,tiếng ồn giữa các tầng hoặc giữa các nhà xung quanh,
-15610,79,아이들이 뛰다,"trẻ con nhảy nhót, đùa nghịch",
-15611,79,애완동물을 키우다,nuôi thú cưng,
-15612,79,운전할 때,Khi lái xe,
-15613,79,안전벨트를 매다,Thắt/cài dây an toàn,
-15614,79,음주 운전을 하다,Lái xe sau khi uống rượu bia,
-15615,79,교통법규를 지키다,tuân thủ luật lệ giao thông,
-15616,79,신호를 위반하다,vi phạm tín hiệu (đèn giao thông),
-15617,79,과속을 하다,Chạy quá tốc độ,
-15618,79,범칙금을 내다,Nộp phạt vi phạm luật giao thông,
-15619,79,유아용 카시트에 앉히다,đặt (đứa trẻ) ngồi ở ghế xe ô tô dành cho trẻ em ,
-15620,79,거리에서,Trên đường đi,
-15621,79,오른쪽으로 걷다(우측 보행),Đi bộ phía bên phải,
-15622,79,줄을 서다,xếp hàng,
-15623,79,새치기를 하다,chen ngang vào hàng,
-15624,79,횡단보도로 건너다(무단횡단 하지 않다),Băng qua đường dành cho người đi bộ,
-15625,79,공공장소에서 금연하다,Không (cấm) hút thuốc ở nơi công cộng,
-15626,79,침을 뱉다,Nhổ nước bọt,
-15627,79,무단 횡단 금지,cấm băng ngang qua đường,
-15628,79,쓰레기 무단 투기 금지,cấm vứt rác bừa bãi/,
-15629,79,낙서 금지,Cấm viết/ vẽ bậy,
-15630,79,흡연 금지,Cấm hút thuốc,
-15631,79,출입 금지,"Cấm ra vào, qua lại",
-15632,79,사진 촬영 금지,Cấm chụp ảnh,
-15633,79,운전 중 휴대전화 사용금지,Cấm sử dụng điện thoại trong khi lái xe,
-15634,79,전 좌석 안전벨트 착용,Thắt dây an toàn ở hàng ghế trước,
-15635,79,안전모 착용,Đội mũ bảo hiểm,
-15636,79,괴롭히다,"làm đau buồn, gây đau đớn",
-15637,79,스토킹,"bám đuôi, theo dõi",
-15638,79,범칙금,tiền phạt phạm luật (giao thông),
-15639,79,물다,"trả, đền, đền bù, bồi thường",
-15640,79,물게 되다,bị nộp phạt,
-15641,79,달라지다,"trở nên khác, khác đi, đổi khác",
-15642,79,경범죄,tội nhẹ,
-15643,79,조항,điều khoản,
-15644,79,처벌,"sự xử phạt, hình phạt",
-15645,79,처벌 항목,"điều khoản xử phạt, hạng mục xử phạt",
-15646,79,늘어나다,Tăng lên,
-15647,79,허위,"sự hư cấu, sự xuyên tạc, sự giả dối, sự làm giả",
-15648,79,암표,vé chợ đen,
-15649,79,매매,"việc mua bán, sự mua bán",
-15650,79,등록제,Quy chế đăng ký,
-15651,79,생후,"hậu sinh, sau sinh",
-15652,79,애완견을 기르다,nuôi chó cưng,
-15653,79,관공서,"cơ quan nhà nước, cơ quan công",
-15654,79,지정하다,chỉ định,
-15655,79,대행 기관,cơ quan thi hành,
-15656,79,과태료,"tiền phạt, tiền phạt vi cảnh",
-15657,79,부과되다,"bị bắt phạt, bị bắt đóng phí, bị đánh thuế",
-15658,79,요금 총액,"tổng số tiền chi phí, cước phí",
-15659,79,외부,"ngoài, bên ngoài",
-15660,79,주최하다,"bảo trợ, đỡ đầu ",
-15661,79,독자,Độc giả,
-15662,79,예절,"lễ tiết, nghi thức giao tiếp, lễ nghi phép tắc",
-15663,79,요구하다,yêu cầu,
-15664,79,버릇,"thói quen, lễ phép",
-15665,79,고치다,"Chỉnh sửa, sửa chữa",
-15666,79,진동,"rung, chấn động",
-15667,79,의견,Ý kiến,
-15668,79,놀이터,"sân chơi, khu vui chơi",
-15669,79,애완견,"chó cưng, cún yêu",
-15670,79,목줄을 매다,buộc dây cổ,
-15671,79,배설물,"chất thải, phân",
-15672,79,치우다,"Cất, dọn, thu dọn",
-15673,79,법규,pháp quy,
-15674,79,흔히,"thường, thường hay",
-15675,79,저지르다,"gây ra, tạo ra (lỗi, sai trái), phạm lỗi",
-15676,79,가벼운,nhẹ,
-15677,79,범죄,sự phạm tội,
-15678,79,타인,người khác,
-15679,79,평화롭다,"thanh bình, yên bình",
-15680,79,물론,"sự tất nhiên, sự đương nhiên",
+15601,79,질서를 지키다,Giữ trật tự ,Keep silent
+15602,79,규칙을 지키다,tuân thủ quy tắc,Follow the rules
+15603,79,질서를 어기다/ 위반하다,vi phạm trật tự,violation of order
+15604,79,규칙을 어기다/ 위반하다,vi phạm quy tắc,rule violation
+15605,79,다른 사람에게 피해를 주다,gây thiệt hại cho người khác,causing damage to others
+15606,79,다른 사람 때문에 피해를 입다,bị thiệt hại vì người khác,Damaged for others
+15607,79,공동주택에서,"Ở khu nhà tập thể, khu dân cư",In dormitories and residential areas
+15608,79,이웃에게 피해를 주다,"gây tổn hại cho hàng xóm, láng giềng",causing harm to neighbors and neighbors
+15609,79,층간 소음,tiếng ồn giữa các tầng hoặc giữa các nhà xung quanh,noise between floors or between surrounding houses
+15610,79,아이들이 뛰다,"trẻ con nhảy nhót, đùa nghịch",children dance and play
+15611,79,애완동물을 키우다,nuôi thú cưng,pet
+15612,79,운전할 때,Khi lái xe,When driving
+15613,79,안전벨트를 매다,Thắt/cài dây an toàn,Buckle up / buckle up
+15614,79,음주 운전을 하다,Lái xe sau khi uống rượu bia,Drive after drinking alcohol
+15615,79,교통법규를 지키다,tuân thủ luật lệ giao thông,obey the traffic rules
+15616,79,신호를 위반하다,vi phạm tín hiệu (đèn giao thông),Signal violations (traffic lights)
+15617,79,과속을 하다,Chạy quá tốc độ,Excessive speed
+15618,79,범칙금을 내다,Nộp phạt vi phạm luật giao thông,Fines for violations of traffic laws
+15619,79,유아용 카시트에 앉히다,đặt (đứa trẻ) ngồi ở ghế xe ô tô dành cho trẻ em ,Put (the child) in a car seat for children
+15620,79,거리에서,Trên đường đi,On the road
+15621,79,오른쪽으로 걷다(우측 보행),Đi bộ phía bên phải,Walk to the right
+15622,79,줄을 서다,xếp hàng,lined up
+15623,79,새치기를 하다,chen ngang vào hàng,interrupted
+15624,79,횡단보도로 건너다(무단횡단 하지 않다),Băng qua đường dành cho người đi bộ,Cross the street for pedestrians
+15625,79,공공장소에서 금연하다,Không (cấm) hút thuốc ở nơi công cộng,No (prohibited) smoking in public places
+15626,79,침을 뱉다,Nhổ nước bọt,Spit
+15627,79,무단 횡단 금지,cấm băng ngang qua đường,do not cross the road
+15628,79,쓰레기 무단 투기 금지,cấm vứt rác bừa bãi/,Prohibited the disposal of rubbish
+15629,79,낙서 금지,Cấm viết/ vẽ bậy,Prohibit writing / graffiti
+15630,79,흡연 금지,Cấm hút thuốc,No smoking
+15631,79,출입 금지,"Cấm ra vào, qua lại","Prohibiting entry, back and forth"
+15632,79,사진 촬영 금지,Cấm chụp ảnh,Prohibit taking pictures
+15633,79,운전 중 휴대전화 사용금지,Cấm sử dụng điện thoại trong khi lái xe,Prohibit using the phone while driving
+15634,79,전 좌석 안전벨트 착용,Thắt dây an toàn ở hàng ghế trước,Buckle up in the front row
+15635,79,안전모 착용,Đội mũ bảo hiểm,Wear helmet
+15636,79,괴롭히다,"làm đau buồn, gây đau đớn","hurt, cause pain"
+15637,79,스토킹,"bám đuôi, theo dõi","Stalking, tracking"
+15638,79,범칙금,tiền phạt phạm luật (giao thông),Penalty fine (traffic)
+15639,79,물다,"trả, đền, đền bù, bồi thường","pay, pay, compensate, compensate"
+15640,79,물게 되다,bị nộp phạt,be fined
+15641,79,달라지다,"trở nên khác, khác đi, đổi khác","become different, be different"
+15642,79,경범죄,tội nhẹ,misdemeanor
+15643,79,조항,điều khoản,rules
+15644,79,처벌,"sự xử phạt, hình phạt","punishment, penalty"
+15645,79,처벌 항목,"điều khoản xử phạt, hạng mục xử phạt","sanctioning terms, sanctioning items"
+15646,79,늘어나다,Tăng lên,Increase
+15647,79,허위,"sự hư cấu, sự xuyên tạc, sự giả dối, sự làm giả","fictitiousness, misrepresentation, falsehood, forgery"
+15648,79,암표,vé chợ đen,black market ticket
+15649,79,매매,"việc mua bán, sự mua bán",purchase and sale
+15650,79,등록제,Quy chế đăng ký,Registration Regulation
+15651,79,생후,"hậu sinh, sau sinh","Postpartum, postpartum"
+15652,79,애완견을 기르다,nuôi chó cưng,adopt a pet dog
+15653,79,관공서,"cơ quan nhà nước, cơ quan công","State agencies, public agencies"
+15654,79,지정하다,chỉ định,point
+15655,79,대행 기관,cơ quan thi hành,enforcement agencies
+15656,79,과태료,"tiền phạt, tiền phạt vi cảnh","fine, micro scene fine"
+15657,79,부과되다,"bị bắt phạt, bị bắt đóng phí, bị đánh thuế","arrested, fined, and taxed"
+15658,79,요금 총액,"tổng số tiền chi phí, cước phí",Total amount of expenses and charges
+15659,79,외부,"ngoài, bên ngoài",outside
+15660,79,주최하다,"bảo trợ, đỡ đầu ",patronize
+15661,79,독자,Độc giả,Readers
+15662,79,예절,"lễ tiết, nghi thức giao tiếp, lễ nghi phép tắc","ceremony, etiquette"
+15663,79,요구하다,yêu cầu,request
+15664,79,버릇,"thói quen, lễ phép","habit, politeness"
+15665,79,고치다,"Chỉnh sửa, sửa chữa",Correction
+15666,79,진동,"rung, chấn động",vibration
+15667,79,의견,Ý kiến,Opinion
+15668,79,놀이터,"sân chơi, khu vui chơi","playground, play area"
+15669,79,애완견,"chó cưng, cún yêu","pet dog, puppy"
+15670,79,목줄을 매다,buộc dây cổ,tie the neck
+15671,79,배설물,"chất thải, phân","waste, feces"
+15672,79,치우다,"Cất, dọn, thu dọn","Distilled, tidy"
+15673,79,법규,pháp quy,regulatory
+15674,79,흔히,"thường, thường hay",often
+15675,79,저지르다,"gây ra, tạo ra (lỗi, sai trái), phạm lỗi","cause, create (error, wrong), make a mistake"
+15676,79,가벼운,nhẹ,light
+15677,79,범죄,sự phạm tội,guilt
+15678,79,타인,người khác,others
+15679,79,평화롭다,"thanh bình, yên bình",peaceful and peaceful
+15680,79,물론,"sự tất nhiên, sự đương nhiên",of course
