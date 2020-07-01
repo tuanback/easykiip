@@ -1,32 +1,32 @@
 ﻿ID,LessonID,Word,vi,en
-25601,129,행정기관,cơ quan hành chính,
-25602,129,살림살이,"cuộc sống sinh hoạt, cuộc sống gia đình",
-25603,129,하수도,đường nước thải,
-25604,129,교체,sự thay đổi,
-25605,129,설치,"việc lắp đặt, việc xây dựng",
-25606,129,처리하다,xử lý,
-25607,129,효율적,"tính hiệu suất, tính năng suất ",
-25608,129,부서,"bộ phận, phòng, ban",
-25609,129,포털,cổng thông tin điện tử ,
-25610,129,부처,phòng ban chính phủ,
-25611,129,연령,độ tuổi ,
-25612,129,저렴하다,giá rẻ,
-25613,129,보건,"bảo vệ sức khỏe, chăm sóc sức khỏe",
-25614,129,위생,vệ sinh ,
-25615,129,대여하다,"cho thuê, cho mượn",
-25616,129,답사,việc đi thực tế,
-25617,129,조사하다,"khảo sát, điều tra",
-25618,129,간접적,tính gián tiếp,
-25619,129,훨씬,"hơn hẳn, rất nhiều",
-25620,129,생생하다,"sống động, sinh động ",
-25621,129,인터뷰하다,phỏng vấn,
-25622,129,관찰하다,quan sát,
-25623,129,보충하다,bổ sung,
-25624,129,유의사항,những điều cần lưu ý,
-25625,129,분명히,một cách rõ ràng,
-25626,129,치밀하다,"chi tiết, tỉ mỉ",
-25627,129,답사 보고서 양식,Mẫu báo cáo chuyến đi thực tế,
-25628,129,제작,"chế tác, sản xuất",
-25629,129,홍보,"sự quảng bá, thông tin quảng bá",
-25630,129,담당직원,nhân viên phụ trách,
-25631,129,수첩,sổ tay,
+25601,129,행정기관,cơ quan hành chính,administrative agencies
+25602,129,살림살이,"cuộc sống sinh hoạt, cuộc sống gia đình","daily life, family life"
+25603,129,하수도,đường nước thải,sewage line
+25604,129,교체,sự thay đổi,change
+25605,129,설치,"việc lắp đặt, việc xây dựng","installation, construction"
+25606,129,처리하다,xử lý,handling
+25607,129,효율적,"tính hiệu suất, tính năng suất ","performance, productivity"
+25608,129,부서,"bộ phận, phòng, ban",Department
+25609,129,포털,cổng thông tin điện tử ,Web portal
+25610,129,부처,phòng ban chính phủ,government departments
+25611,129,연령,độ tuổi ,age
+25612,129,저렴하다,giá rẻ,Cheap
+25613,129,보건,"bảo vệ sức khỏe, chăm sóc sức khỏe","health protection, health care"
+25614,129,위생,vệ sinh ,toilet
+25615,129,대여하다,"cho thuê, cho mượn","lease, lend"
+25616,129,답사,việc đi thực tế,field trips
+25617,129,조사하다,"khảo sát, điều tra",survey
+25618,129,간접적,tính gián tiếp,indirect calculation
+25619,129,훨씬,"hơn hẳn, rất nhiều","much, much better"
+25620,129,생생하다,"sống động, sinh động ",lively
+25621,129,인터뷰하다,phỏng vấn,interview
+25622,129,관찰하다,quan sát,observe
+25623,129,보충하다,bổ sung,additional
+25624,129,유의사항,những điều cần lưu ý,things need to notice
+25625,129,분명히,một cách rõ ràng,clearly
+25626,129,치밀하다,"chi tiết, tỉ mỉ","Detailed, meticulous"
+25627,129,답사 보고서 양식,Mẫu báo cáo chuyến đi thực tế,Field trip report form
+25628,129,제작,"chế tác, sản xuất",manipulation and production
+25629,129,홍보,"sự quảng bá, thông tin quảng bá","promotion, promotion information"
+25630,129,담당직원,nhân viên phụ trách,employee in charge
+25631,129,수첩,sổ tay,notebook

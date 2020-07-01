@@ -1,41 +1,41 @@
 ﻿ID,LessonID,Word,vi,en
-25401,128,국회 의사당,tòa nhà quốc hội,
-25402,128,대학로,một khu phố ở Seoul phía bắc sông Hàn,
-25403,128,속하다,"thuộc về, thuộc loại",
-25404,128,철새,chim di trú theo mùa ,
-25405,128,생태적,mang tính sinh thái,
-25406,128,측면,"phương diện, khía cạnh",
-25407,128,모래사장,bãi cát ,
-25408,128,천연,thiên nhiên ,
-25409,128,석회암,đá vôi ,
-25410,128,종유석,thạch nhũ,
-25411,128,석순,măng đá,
-25412,128,어우러지다,hòa hợp,
-25413,128,뽐내다,"khoe, phô trương ",
-25414,128,늪,"bãi lầy, đầm lầy",
-25415,128,자연사,lịch sử tự nhiên ,
-25416,128,유유자적하다,"sống an nhàn, sống thư thả, sống thư thái",
-25417,128,풍요롭다,sung túc,
-25418,128,가르다,"phân định, phân chia",
-25419,128,하천,"sông ngòi, suối ",
-25420,128,덮이다,"bị che, bị phủ",
-25421,128,갇히다,bị nhốt,
-25422,128,복원,"sự khôi phục, sự phục hồi ",
-25423,128,다리,cây cầu,
-25424,128,쉼터,"nơi dừng chân, nơi nghỉ ngơi",
-25425,128,발자취,"dấu vết, dấu tích (cách nói ẩn dụ hàm ý quá trình đã qua trong quá khứ)",
-25426,128,무형 문화제,văn hóa phi vật thể ,
-25427,128,야간개장,mở cửa ban đêm,
-25428,128,마감되다,"được kết thúc, được hoàn thành ",
-25429,128,엑스포,triển lãm quốc tế,
-25430,128,박람회,"hội chợ, hội triển lãm ",
-25431,128,해돋이,"mặt trời mọc, bình minh",
-25432,128,머드,bùn ,
-25433,128,탈춤,múa mặt nạ,
-25434,128,춘향,"Nhân vật nữ chính trong 'Xuân Hương truyện', là con gái của một kỹ nữ nàng đã vượt qua thân phận mình để vươn tới tình yêu với Lee Mong Ryong. 춘향 được vẽ ra như một người phụ nữ giữ vẹn tiết nghĩa.",
-25435,128,꼬막,sò huyết,
-25436,128,갈대,cây sậy ,
-25437,128,해넘이,mặt trời mọc,
-25438,128,해맞이,mặt trời lặn,
-25439,128,조성하다,"tạo dựng, tạo nên",
-25440,128,주간,"tuần, tuần lễ",
+25401,128,국회 의사당,tòa nhà quốc hội,Parliament building
+25402,128,대학로,một khu phố ở Seoul phía bắc sông Hàn,a neighborhood in Seoul north of the Han River
+25403,128,속하다,"thuộc về, thuộc loại",belong to
+25404,128,철새,chim di trú theo mùa ,Birds migrate seasonally
+25405,128,생태적,mang tính sinh thái,ecological
+25406,128,측면,"phương diện, khía cạnh",aspect
+25407,128,모래사장,bãi cát ,sand
+25408,128,천연,thiên nhiên ,nature
+25409,128,석회암,đá vôi ,limestone
+25410,128,종유석,thạch nhũ,rosin
+25411,128,석순,măng đá,stalagmite
+25412,128,어우러지다,hòa hợp,harmony
+25413,128,뽐내다,"khoe, phô trương ",showing off
+25414,128,늪,"bãi lầy, đầm lầy",Swampy
+25415,128,자연사,lịch sử tự nhiên ,natural history
+25416,128,유유자적하다,"sống an nhàn, sống thư thả, sống thư thái",live leisurely
+25417,128,풍요롭다,sung túc,affluence
+25418,128,가르다,"phân định, phân chia","delimitation, division"
+25419,128,하천,"sông ngòi, suối ",rivers and streams
+25420,128,덮이다,"bị che, bị phủ","covered, covered"
+25421,128,갇히다,bị nhốt,locked up
+25422,128,복원,"sự khôi phục, sự phục hồi ",rehabilitation
+25423,128,다리,cây cầu,bridge
+25424,128,쉼터,"nơi dừng chân, nơi nghỉ ngơi","places to stop, places to rest"
+25425,128,발자취,"dấu vết, dấu tích (cách nói ẩn dụ hàm ý quá trình đã qua trong quá khứ)",Mark
+25426,128,무형 문화제,văn hóa phi vật thể ,Intangible cultural
+25427,128,야간개장,mở cửa ban đêm,open at night
+25428,128,마감되다,"được kết thúc, được hoàn thành ","be finished, be completed"
+25429,128,엑스포,triển lãm quốc tế,international exhibition
+25430,128,박람회,"hội chợ, hội triển lãm ","fairs, exhibitions"
+25431,128,해돋이,"mặt trời mọc, bình minh","sunrise, dawn"
+25432,128,머드,bùn ,mud
+25433,128,탈춤,múa mặt nạ,dance mask
+25434,128,춘향,"Nhân vật nữ chính trong 'Xuân Hương truyện', là con gái của một kỹ nữ nàng đã vượt qua thân phận mình để vươn tới tình yêu với Lee Mong Ryong. 춘향 được vẽ ra như một người phụ nữ giữ vẹn tiết nghĩa.",Chunhyang
+25435,128,꼬막,sò huyết,oysters
+25436,128,갈대,cây sậy ,Reed
+25437,128,해넘이,mặt trời mọc,Sunrise
+25438,128,해맞이,mặt trời lặn,sundown
+25439,128,조성하다,"tạo dựng, tạo nên","create, make up"
+25440,128,주간,"tuần, tuần lễ",week

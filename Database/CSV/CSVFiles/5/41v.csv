@@ -1,54 +1,54 @@
 ﻿ID,LessonID,Word,vi,en
-24001,121,침략을 받다,bị xâm lược,
-24002,121,황폐화되다,"bị bỏ hoang, bị bỏ phế",
-24003,121,커다란,"lớn, rất lớn",
-24004,121,개혁하다,"đổi mới, cải cách",
-24005,121,상공업,công thương nghiệp,
-24006,121,유학자,học giả Nho giáo,
-24007,121,실학,phong trào Thực Học,
-24008,121,개선하다,"cải tiến, cải thiện",
-24009,121,문물,sản vật văn hóa ,
-24010,121,도입되다,được đưa vào,
-24011,121,나침반,la bàn,
-24012,121,천리경,một loại kính viễn vọng của phương Tây,
-24013,121,자명종,đồng hồ báo thức,
-24014,121,배외정책,chính sách bài ngoại,
-24015,121,거중기,máy nâng ròng rọc,
-24016,121,다루다,xử lý,
-24017,121,일제 강점기,Thời kỳ Nhật chiếm đóng,
-24018,121,제국,đế quốc,
-24019,121,대한 제국,Đại Hàn Đế Quốc,
-24020,121,개혁,"cải cách, đổi mới",
-24021,121,빼앗기다,"bị tước đoạt, bị giành lấy",
-24022,121,점령하다,"chiếm lĩnh, chiếm đóng",
-24023,121,강압적,"tính độc đoán, tính chuyên chế, tính áp đặt",
-24024,121,식민,thực dân,
-24025,121,억압하다,áp bức,
-24026,121,감옥,"nhà tù, nhà giam",
-24027,121,가두다,"nhôt, giam giữ ",
-24028,121,강제,cưỡng chế,
-24029,121,심지어,"thậm chí, đến nỗi, ngay cả",
-24030,121,위안부,phụ nữ mua vui cho bính lính trong chiến tranh,
-24031,121,끌려가다,"bị giải đi, bị lôi đi",
-24032,121,되찾다,"tìm lại, giành lại",
-24033,121,끊임없이,một cách không ngừng,
-24034,121,계기,"bước ngoặc, dấu mốc",
-24035,121,임시 정부,chính phủ lâm thời ,
-24036,121,사형,"tử hình, hành hình",
-24037,121,간부,"lãnh đạo, cán bộ",
-24038,121,폭탄,bom,
-24039,121,순국하다,"hi sinh, tử quốc",
-24040,121,무장,"sự vũ trang, quân trang",
-24041,121,투쟁,sự đấu tranh,
-24042,121,무장 투쟁을 벌이다,tiến hành đấu tranh vũ trang,
-24043,121,언론,ngôn luận,
-24044,121,핍박,"sức ép, áp lực",
-24045,121,주시경,là một trong những người sáng lập ngôn ngữ học hiện đại của Hàn Quốc. Ông đã cùng các sinh viên của mình giúp chuẩn hóa ngôn ngữ Hàn Quốc.,
-24046,121,잃다,"đánh mất, mất",
-24047,121,건국하다,lập nước,
-24048,121,모금,việc quyên góp ,
-24049,121,지다,nợ,
-24050,121,빚을 갚다,trả nợ,
-24051,121,퍼지다,lan rộng,
-24052,121,침략,sự xâm lược,
-24053,121,맞서다,"đối đầu, chiến đấu",
+24001,121,침략을 받다,bị xâm lược,Invaded
+24002,121,황폐화되다,"bị bỏ hoang, bị bỏ phế",abandoned
+24003,121,커다란,"lớn, rất lớn","big, very big"
+24004,121,개혁하다,"đổi mới, cải cách","innovation, reform"
+24005,121,상공업,công thương nghiệp,industrial and commercial
+24006,121,유학자,học giả Nho giáo,Confucian scholars
+24007,121,실학,phong trào Thực Học,Practical Study
+24008,121,개선하다,"cải tiến, cải thiện",improve
+24009,121,문물,sản vật văn hóa ,cultural products
+24010,121,도입되다,được đưa vào,is included
+24011,121,나침반,la bàn,compass
+24012,121,천리경,một loại kính viễn vọng của phương Tây,a kind of western telescope
+24013,121,자명종,đồng hồ báo thức,alarm clock
+24014,121,배외정책,chính sách bài ngoại,xenophobia policy
+24015,121,거중기,máy nâng ròng rọc,pulley lifting machine
+24016,121,다루다,xử lý,handling
+24017,121,일제 강점기,Thời kỳ Nhật chiếm đóng,The Japanese occupation period
+24018,121,제국,đế quốc,Empire
+24019,121,대한 제국,Đại Hàn Đế Quốc,Korea Empire
+24020,121,개혁,"cải cách, đổi mới","reform, innovation"
+24021,121,빼앗기다,"bị tước đoạt, bị giành lấy",deprived
+24022,121,점령하다,"chiếm lĩnh, chiếm đóng",occupy
+24023,121,강압적,"tính độc đoán, tính chuyên chế, tính áp đặt",domineering
+24024,121,식민,thực dân,colonial
+24025,121,억압하다,áp bức,oppressive
+24026,121,감옥,"nhà tù, nhà giam",jail
+24027,121,가두다,"nhôt, giam giữ ",locked up
+24028,121,강제,cưỡng chế,forced
+24029,121,심지어,"thậm chí, đến nỗi, ngay cả","even, to the point, even"
+24030,121,위안부,phụ nữ mua vui cho bính lính trong chiến tranh,women entertain soldiers during the war
+24031,121,끌려가다,"bị giải đi, bị lôi đi","taken away, dragged away"
+24032,121,되찾다,"tìm lại, giành lại",Find it again
+24033,121,끊임없이,một cách không ngừng,nonstop
+24034,121,계기,"bước ngoặc, dấu mốc","landmark, milestones"
+24035,121,임시 정부,chính phủ lâm thời ,interim government
+24036,121,사형,"tử hình, hành hình","death penalty, execution"
+24037,121,간부,"lãnh đạo, cán bộ",leaders and officials
+24038,121,폭탄,bom,bomb
+24039,121,순국하다,"hi sinh, tử quốc",sacrifice
+24040,121,무장,"sự vũ trang, quân trang","armed, military equipment"
+24041,121,투쟁,sự đấu tranh,struggles
+24042,121,무장 투쟁을 벌이다,tiến hành đấu tranh vũ trang,conducting armed struggles
+24043,121,언론,ngôn luận,speech
+24044,121,핍박,"sức ép, áp lực",pressure
+24045,121,주시경,là một trong những người sáng lập ngôn ngữ học hiện đại của Hàn Quốc. Ông đã cùng các sinh viên của mình giúp chuẩn hóa ngôn ngữ Hàn Quốc.,is one of the founders of modern Korean linguistics. He and his students helped standardize the Korean language.
+24046,121,잃다,"đánh mất, mất",lose
+24047,121,건국하다,lập nước,Be founded
+24048,121,모금,việc quyên góp ,donation
+24049,121,지다,nợ,in debt
+24050,121,빚을 갚다,trả nợ,pay
+24051,121,퍼지다,lan rộng,Spread
+24052,121,침략,sự xâm lược,invasion
+24053,121,맞서다,"đối đầu, chiến đấu","confrontation, fight"

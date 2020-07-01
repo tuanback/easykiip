@@ -1,51 +1,51 @@
 ﻿ID,LessonID,Word,vi,en
-25801,130,충족하다,"thỏa mãn, đáp ứng",
-25802,130,필연적,tính tất yếu ,
-25803,130,한정되다,"có hạn, bị giới hạn",
-25804,130,어촌,"ngư thôn, làng chài",
-25805,130,촌락,"làng quê, thôn xóm",
-25806,130,상대적,tính tương đối,
-25807,130,자연 재해,thiên tai,
-25808,130,복구,"sự phục hồi, sự khắc phục",
-25809,130,이기심,lòng ích kỷ ,
-25810,130,태우다,đốt,
-25811,130,혐오시설,công trình người dân không muốn đưa vào khu họ ở (bãi xử lý rác...),
-25812,130,선호시설,"công trình người dân muốn đưa vào khu họ ở (trường, công viên, ga tàu...)",
-25813,130,타협,sự thỏa hiệp ,
-25814,130,지혜롭다,"thông minh, sáng suốt",
-25815,130,풀어내다,"tháo gỡ, giải tỏa",
-25816,130,님비 (NIMBY = Not In My Backyard),hiện tượng người dân phản đối một dự án công trình nào đó chủ yếu bởi vì nó sẽ được xây dựng gần nơi họ sinh sống,
-25817,130,광역폐기물처리시설,công trình xử lý rác thải quy mô lớn,
-25818,130,논의,việc bàn luận,
-25819,130,험난하다,"hiểm trở, khó khăn, khó nhọc",
-25820,130,차례,lượt ,
-25821,130,견학하다,"đi kiến tập, đi thực tế",
-25822,130,수차례,nhiều lần,
-25823,130,거치다,trải qua,
-25824,130,총회,"cuộc họp, đại hội",
-25825,130,찬성,"sự tán thành, sự đồng tình",
-25826,130,긍정적,tính tích cực,
-25827,130,꼽히다,"được xếp vào, thuộc vào ",
-25828,130,시민단체,đoàn thể thành thị,
-25829,130,언론,ngôn luận,
-25830,130,매체,phương tiện,
-25831,130,여론,dư luận ,
-25832,130,형성하다,hình thành,
-25833,130,공감,sự đồng cảm ,
-25834,130,배려,sự quan tâm giúp đỡ,
-25835,130,떠오르다,nổi lên,
-25836,130,유도하다,dẫn dắt ,
-25837,130,가해자,người gây hại,
-25838,130,타협,thỏa hiệp ,
-25839,130,도달하다,đạt được,
-25840,130,다문화 서포터즈단,tạm dịch là tổ chức hỗ trợ đa văn hóa ,
-25841,130,손잡다,"bắt tay, hợp tác",
-25842,130,벌이다,"bắt đầu, khởi xướng, mở",
-25843,130,결의,"sự quyết tâm, sự cương quyết",
-25844,130,구간,"đoạn, khúc, khu vực ",
-25845,130,리플릿,tờ rơi,
-25846,130,배부,phân phát ,
-25847,130,골목길,hẻm ,
-25848,130,펼치다,"bày ra, mở ra, tổ chức",
-25849,130,창단되다,được sáng lập,
-25850,130,힘쓰다,"cố gắng nỗ lực, cố gắng hết sức",
+25801,130,충족하다,"thỏa mãn, đáp ứng",satisfy
+25802,130,필연적,tính tất yếu ,inevitability
+25803,130,한정되다,"có hạn, bị giới hạn",limited
+25804,130,어촌,"ngư thôn, làng chài","fishermen, fishing villages"
+25805,130,촌락,"làng quê, thôn xóm","village, hamlet"
+25806,130,상대적,tính tương đối,comparative
+25807,130,자연 재해,thiên tai,natural disaster
+25808,130,복구,"sự phục hồi, sự khắc phục","recovery, rectification"
+25809,130,이기심,lòng ích kỷ ,selfishness
+25810,130,태우다,đốt,burning
+25811,130,혐오시설,công trình người dân không muốn đưa vào khu họ ở (bãi xử lý rác...),works people do not want to put into their residential areas (garbage disposal yards ...)
+25812,130,선호시설,"công trình người dân muốn đưa vào khu họ ở (trường, công viên, ga tàu...)","works people want to put in their neighborhoods (schools, parks, train stations ...)"
+25813,130,타협,sự thỏa hiệp ,compromise
+25814,130,지혜롭다,"thông minh, sáng suốt",clever
+25815,130,풀어내다,"tháo gỡ, giải tỏa",disassembly and clearance
+25816,130,님비 (NIMBY = Not In My Backyard),hiện tượng người dân phản đối một dự án công trình nào đó chủ yếu bởi vì nó sẽ được xây dựng gần nơi họ sinh sống,the phenomenon of people opposing a certain construction project mainly because it will be built near where they live
+25817,130,광역폐기물처리시설,công trình xử lý rác thải quy mô lớn,Large-scale waste treatment facilities
+25818,130,논의,việc bàn luận,discussion
+25819,130,험난하다,"hiểm trở, khó khăn, khó nhọc",craggy
+25820,130,차례,lượt ,in turn
+25821,130,견학하다,"đi kiến tập, đi thực tế",go to practice
+25822,130,수차례,nhiều lần,many times
+25823,130,거치다,trải qua,experience
+25824,130,총회,"cuộc họp, đại hội","meetings, congresses"
+25825,130,찬성,"sự tán thành, sự đồng tình",aggree
+25826,130,긍정적,tính tích cực,Positive
+25827,130,꼽히다,"được xếp vào, thuộc vào ","sorted into, belongs to"
+25828,130,시민단체,đoàn thể thành thị,urban unions
+25829,130,언론,ngôn luận,speech
+25830,130,매체,phương tiện,vehicle
+25831,130,여론,dư luận ,Fame
+25832,130,형성하다,hình thành,formed
+25833,130,공감,sự đồng cảm ,empathy
+25834,130,배려,sự quan tâm giúp đỡ,attention help
+25835,130,떠오르다,nổi lên,rise
+25836,130,유도하다,dẫn dắt ,lead
+25837,130,가해자,người gây hại,people harm
+25838,130,타협,thỏa hiệp ,compromise
+25839,130,도달하다,đạt được,gain
+25840,130,다문화 서포터즈단,tạm dịch là tổ chức hỗ trợ đa văn hóa ,Provisional translation is a multicultural support organization
+25841,130,손잡다,"bắt tay, hợp tác","shaking hands, cooperation"
+25842,130,벌이다,"bắt đầu, khởi xướng, mở","start, initiate, open"
+25843,130,결의,"sự quyết tâm, sự cương quyết",determination
+25844,130,구간,"đoạn, khúc, khu vực ","paragraph, segment, area"
+25845,130,리플릿,tờ rơi,leaflets
+25846,130,배부,phân phát ,distribution
+25847,130,골목길,hẻm ,alley
+25848,130,펼치다,"bày ra, mở ra, tổ chức","unfold, open, organize"
+25849,130,창단되다,được sáng lập,was founded
+25850,130,힘쓰다,"cố gắng nỗ lực, cố gắng hết sức",try hard

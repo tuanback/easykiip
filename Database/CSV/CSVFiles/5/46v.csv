@@ -1,50 +1,50 @@
 ﻿ID,LessonID,Word,vi,en
-25001,126,맞닿다,tiếp giáp ,
-25002,126,면서도,‘mặc dù...nhưng’,
-25003,126,철도,"đường sắt, đường ray",
-25004,126,항공편,"đường hàng không, phương tiện hàng không",
-25005,126,고속도,đường cao tốc,
-25006,126,지정되다,"được chỉ định, được công nhận",
-25007,126,피서지,nơi nghỉ mát,
-25008,126,지하광물자원,tài nguyên khoáng sản ngầm,
-25009,126,석탄,than đá,
-25010,126,채굴하다,"khai thác mỏ, khai quật",
-25011,126,광산산업,công nghiệp khoáng sản,
-25012,126,사라지다,biến mất,
-25013,126,버려지다,"bị vứt bỏ, bị bỏ rơi",
-25014,126,폐광,"mỏ hoang, mỏ dừng không khai thác khoáng sản nữa",
-25015,126,보존하다,bảo tồn ,
-25016,126,광부,thợ mỏ,
-25017,126,피서,"sự tránh nóng, sự nghỉ mát ",
-25018,126,펼쳐지다,được trải ra,
-25019,126,이름나다,nổi tiếng,
-25020,126,해돋이,"mặt trời mọc, bình minh ",
-25021,126,거듭나다,đổi mới,
-25022,126,유일하다,duy nhất,
-25023,126,호수,hồ nước ,
-25024,126,철쭉,cây Đỗ Quyên ,
-25025,126,평야,đồng bằng,
-25026,126,논,"ruộng, đồng lúa ",
-25027,126,밭,"vườn, rẫy, cánh đồng",
-25028,126,일조량,lượng ánh nắng mặt trời,
-25029,126,재배되다,"được trồng trọt, được canh tác ",
-25030,126,균형,sự cân bằng,
-25031,126,이전하다,"di dời, chuyển dời",
-25032,126,행정,hành chính ,
-25033,126,행정부처,văn phòng hành chính chính phủ,
-25034,126,총리실,văn phòng thủ tướng,
-25035,126,기획재정부,Bộ Chiến lược và Tài chính,
-25036,126,공정거래위원회,Ủy ban Thương mại Công bằng ,
-25037,126,농림수산식품부,"Bộ thực phẩm, Nông - Lâm nghiệp và Thủy sản",
-25038,126,국토해양부,"Bộ Đất đai, Giao thông và Hàng hải",
-25039,126,환경부,Bộ Môi trường,
-25040,126,문화체육관광부,"Bộ Văn hóa, Thể thao và Du lịch ",
-25041,126,지식경제부,Bộ Kinh tế tri thức Hàn Quốc ,
-25042,126,보건복지부,Bộ Y tế phúc lợi,
-25043,126,국가보훈처,Ban yêu nước và cựu chiến binh,
-25044,126,옮기다,chuyển dời,
-25045,126,중앙행정부처,văn phòng hành chính trung ương,
-25046,126,소속,thuộc về,
-25047,126,마무리하다,hoàn tất,
-25048,126,위상,"vị thế, vị trí",
-25049,126,이바지하다,"cống hiến, đóng góp",
+25001,126,맞닿다,tiếp giáp ,contiguous
+25002,126,면서도,‘mặc dù...nhưng’,'Although ... but'
+25003,126,철도,"đường sắt, đường ray","railroads, rails"
+25004,126,항공편,"đường hàng không, phương tiện hàng không","airway, air transport"
+25005,126,고속도,đường cao tốc,freeway
+25006,126,지정되다,"được chỉ định, được công nhận","specified, recognized"
+25007,126,피서지,nơi nghỉ mát,resort
+25008,126,지하광물자원,tài nguyên khoáng sản ngầm,Underground mineral resources
+25009,126,석탄,than đá,coal
+25010,126,채굴하다,"khai thác mỏ, khai quật","mining, excavation"
+25011,126,광산산업,công nghiệp khoáng sản,mineral industry
+25012,126,사라지다,biến mất,disappear
+25013,126,버려지다,"bị vứt bỏ, bị bỏ rơi","dropped, abandoned"
+25014,126,폐광,"mỏ hoang, mỏ dừng không khai thác khoáng sản nữa","Wild mines, mines no longer exploit minerals"
+25015,126,보존하다,bảo tồn ,conserve
+25016,126,광부,thợ mỏ,miner
+25017,126,피서,"sự tránh nóng, sự nghỉ mát ",heat avoidance
+25018,126,펼쳐지다,được trải ra,be spread out
+25019,126,이름나다,nổi tiếng,popular
+25020,126,해돋이,"mặt trời mọc, bình minh ","sunrise, dawn"
+25021,126,거듭나다,đổi mới,renew
+25022,126,유일하다,duy nhất,only
+25023,126,호수,hồ nước ,Lake
+25024,126,철쭉,cây Đỗ Quyên ,Azalea
+25025,126,평야,đồng bằng,plain; open field
+25026,126,논,"ruộng, đồng lúa ",paddy field; rice field
+25027,126,밭,"vườn, rẫy, cánh đồng",field
+25028,126,일조량,lượng ánh nắng mặt trời,amount of sunshine
+25029,126,재배되다,"được trồng trọt, được canh tác ",cultivated
+25030,126,균형,sự cân bằng,balance
+25031,126,이전하다,"di dời, chuyển dời",to move
+25032,126,행정,hành chính ,administrative
+25033,126,행정부처,văn phòng hành chính chính phủ,Government administrative office
+25034,126,총리실,văn phòng thủ tướng,Prime Minister's office
+25035,126,기획재정부,Bộ Chiến lược và Tài chính,Ministry of Strategy and Finance
+25036,126,공정거래위원회,Ủy ban Thương mại Công bằng ,Fair Trade Commission
+25037,126,농림수산식품부,"Bộ thực phẩm, Nông - Lâm nghiệp và Thủy sản","Ministry of Food, Agriculture - Forestry and Fisheries"
+25038,126,국토해양부,"Bộ Đất đai, Giao thông và Hàng hải","Ministry of Land, Transport and Maritime Affairs"
+25039,126,환경부,Bộ Môi trường,Ministry of Environment
+25040,126,문화체육관광부,"Bộ Văn hóa, Thể thao và Du lịch ","Ministry of Culture, Sports and Tourism"
+25041,126,지식경제부,Bộ Kinh tế tri thức Hàn Quốc ,Korean Ministry of Knowledge Economy
+25042,126,보건복지부,Bộ Y tế phúc lợi,Ministry of Health and Welfare
+25043,126,국가보훈처,Ban yêu nước và cựu chiến binh,Patriotic boards and veterans
+25044,126,옮기다,chuyển dời,transfer
+25045,126,중앙행정부처,văn phòng hành chính trung ương,Central administrative office
+25046,126,소속,thuộc về,belong to
+25047,126,마무리하다,hoàn tất,completed
+25048,126,위상,"vị thế, vị trí",position
+25049,126,이바지하다,"cống hiến, đóng góp",dedication and contribution

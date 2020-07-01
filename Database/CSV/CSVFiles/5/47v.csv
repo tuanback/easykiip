@@ -1,51 +1,51 @@
 ﻿ID,LessonID,Word,vi,en
-25201,127,속하다,thuộc về,
-25202,127,섬유,sợi,
-25203,127,항구,cảng biển,
-25204,127,유리하다,có lợi,
-25205,127,분포하다,"được phân phối, được phân bổ ",
-25206,127,제철소,nhà máy luyện thép,
-25207,127,조선소,xưởng đóng tàu,
-25208,127,촬영,"sự quay phim, chụp ảnh",
-25209,127,치르다,"trải qua, tiếp đón",
-25210,127,세계육상선수권대회,giải vô địch điền kinh thế giới ,
-25211,127,계기,"bước ngoặc, dấu mốc, dịp",
-25212,127,몰리다,đổ xô,
-25213,127,시선,"ánh mắt, cái nhìn",
-25214,127,명실상부하다,đúng như tên gọi ,
-25215,127,상영하다,trình chiếu ,
-25216,127,미개봉영화,phim chưa khởi chiếu,
-25217,127,기름지다,"tốt, màu mỡ, phì nhiêu",
-25218,127,비옥하다,"màu mỡ, phì nhiêu",
-25219,127,펼쳐지다,được trải ra,
-25220,127,벼농사,nghề trồng lúa,
-25221,127,끼다,"nằm sát bên, kế bên",
-25222,127,어업,ngư nghiệp,
-25223,127,커다랗다,"to lớn, khổng lồ",
-25224,127,갯벌,bãi bùn trên biển,
-25225,127,조개,nghêu sò,
-25226,127,양식하다,nuôi trồng,
-25227,127,추진되다,"xúc tiến, đẩy mạnh",
-25228,127,간척,"sự khai hoang, sự mở đất",
-25229,127,만,vịnh ,
-25230,127,개통되다,được khai thông,
-25231,127,접근성,tính tiếp cận ,
-25232,127,유치,sự thu hút,
-25233,127,서킷,đua xe ô tô,
-25234,127,제철,sản xuất thép,
-25235,127,기업체,"doanh nghiệp, công ty",
-25236,127,돌,đá,
-25237,127,타원형,"hình bầu dục, hình trái xoan",
-25238,127,화산섬,đảo núi lửa,
-25239,127,우뚝,"dựng đứng, cao ngất, sừng sững, cao chót vót.",
-25240,127,솟다,"vút lên, chọc trời",
-25241,127,우뚝 솟아 있다,cao chọc trời,
-25242,127,화산활동,hoạt động núi lửa,
-25243,127,화산,núi lửa ,
-25244,127,독특하다,"đặc sắc, đặc biệt",
-25245,127,자랑하다,"khoe khoang, tự hào",
-25246,127,용암동굴,hang động dung nham,
-25247,127,흩어지다,"rãi rác, vươn vãi",
-25248,127,드물다,hiếm có,
-25249,127,오름,ngôn ngữ của Jeju chỉ những núi lửa quy mô nhỏ,
-25250,127,등재되다,"được đăng ký, được đăng tải",
+25201,127,속하다,thuộc về,belong to
+25202,127,섬유,sợi,yarns
+25203,127,항구,cảng biển,seaport
+25204,127,유리하다,có lợi,helpful
+25205,127,분포하다,"được phân phối, được phân bổ ","distributed, allocated"
+25206,127,제철소,nhà máy luyện thép,steel refining factory
+25207,127,조선소,xưởng đóng tàu,shipyard
+25208,127,촬영,"sự quay phim, chụp ảnh","filming, taking pictures"
+25209,127,치르다,"trải qua, tiếp đón","undergo, welcome"
+25210,127,세계육상선수권대회,giải vô địch điền kinh thế giới ,World athletics championships
+25211,127,계기,"bước ngoặt, dấu mốc, dịp","turning point, landmark, occasion"
+25212,127,몰리다,đổ xô,Flocking
+25213,127,시선,"ánh mắt, cái nhìn","eyes, gaze"
+25214,127,명실상부하다,đúng như tên gọi ,As the name suggests
+25215,127,상영하다,trình chiếu ,slideshow
+25216,127,미개봉영화,phim chưa khởi chiếu,Movie not yet released
+25217,127,기름지다,"tốt, màu mỡ, phì nhiêu","Good, fertile"
+25218,127,비옥하다,"màu mỡ, phì nhiêu",fertile
+25219,127,펼쳐지다,được trải ra,be spread out
+25220,127,벼농사,nghề trồng lúa,rice farming
+25221,127,끼다,"nằm sát bên, kế bên","close by, next to"
+25222,127,어업,ngư nghiệp,fishery
+25223,127,커다랗다,"to lớn, khổng lồ",big
+25224,127,갯벌,bãi bùn trên biển,mudflats at sea
+25225,127,조개,nghêu sò,clams
+25226,127,양식하다,nuôi trồng,raise
+25227,127,추진되다,"xúc tiến, đẩy mạnh","promotion, push"
+25228,127,간척,"sự khai hoang, sự mở đất","reclamation, open land"
+25229,127,만,vịnh ,Bay
+25230,127,개통되다,được khai thông,cleared
+25231,127,접근성,tính tiếp cận ,accessibility
+25232,127,유치,sự thu hút,attraction
+25233,127,서킷,đua xe ô tô,Racing cars
+25234,127,제철,sản xuất thép,steel production
+25235,127,기업체,"doanh nghiệp, công ty",Corporate business
+25236,127,돌,đá,rock
+25237,127,타원형,"hình bầu dục, hình trái xoan",Ellipse
+25238,127,화산섬,đảo núi lửa,volcanic island
+25239,127,우뚝,"dựng đứng, cao ngất, sừng sững, cao chót vót.","erect, towering"
+25240,127,솟다,"vút lên, chọc trời","soaring, sky-scraping"
+25241,127,우뚝 솟아 있다,cao chọc trời,high skyscraper
+25242,127,화산활동,hoạt động núi lửa,volcanic activity
+25243,127,화산,núi lửa ,volcano
+25244,127,독특하다,"đặc sắc, đặc biệt","special, special"
+25245,127,자랑하다,"khoe khoang, tự hào","show off, be proud"
+25246,127,용암동굴,hang động dung nham,lava cave
+25247,127,흩어지다,rải rác,scattered
+25248,127,드물다,hiếm có,rare
+25249,127,오름,ngôn ngữ của Jeju chỉ những núi lửa quy mô nhỏ,Jeju's language refers to small-scale volcanoes
+25250,127,등재되다,"được đăng ký, được đăng tải","be registered, be posted"
