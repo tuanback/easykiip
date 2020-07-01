@@ -19,12 +19,8 @@ public class BookDetailVC: NiblessViewController {
   private let viewModel: BookDetailViewModel
   private let navigator: BookDetailNavigator
   
-  private lazy var adUnitID = AdsIdentifier.id(for: .bookDetailItem)
-  private let numAdsToLoad = 4
-  private lazy var adLoader = NativeAdLoader(adUnitID: adUnitID,
-                                             numberOfAdsToLoad: numAdsToLoad,
-                                             viewController: self,
-                                             delegate: self)
+  private lazy var adUnitID = AdsIdentifier.id(for: .onlyImageNativeAds)
+  private var adLoader: NativeAdLoader?
   
   private let disposeBag = DisposeBag()
   
@@ -44,7 +40,6 @@ public class BookDetailVC: NiblessViewController {
   public override func viewDidLoad() {
     super.viewDidLoad()
     observeViewModel()
-    startAdLoader()
   }
   
   public override func viewWillAppear(_ animated: Bool) {
@@ -64,7 +59,7 @@ public class BookDetailVC: NiblessViewController {
     
     viewModel.isLoading
       .observeOn(MainScheduler.asyncInstance)
-      .subscribe(onNext: { [weak self] isLoading in
+      .subscribe(onNext: { isLoading in
         if isLoading {
           SVProgressHUD.show()
         }
@@ -89,10 +84,25 @@ public class BookDetailVC: NiblessViewController {
         }
       })
     .disposed(by: disposeBag)
+    
+    let adUnitID = self.adUnitID
+    
+    viewModel.oNumberOfLessons
+      .subscribe(onNext: { [weak self] count in
+        guard let strongSelf = self else { return }
+        guard count > 0 else { return }
+        let numAdsToLoad = count / 5
+        self?.adLoader = NativeAdLoader(adUnitID: adUnitID,
+                                        numberOfAdsToLoad: numAdsToLoad,
+                                        viewController: strongSelf,
+                                        delegate: strongSelf)
+        self?.startAdLoader()
+      })
+      .disposed(by: disposeBag)
   }
   
   private func startAdLoader() {
-    adLoader.load()
+    adLoader?.load()
   }
 }
 

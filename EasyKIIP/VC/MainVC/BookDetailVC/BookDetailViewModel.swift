@@ -37,6 +37,10 @@ class BookDetailViewModel {
   public var oNavigationTitle = BehaviorRelay<String>(value: "")
   public var itemViewModels: Observable<[BookDetailItemViewModel]>!
   
+  public var oNumberOfLessons: Observable<Int> {
+    return lessons.map { $0.count }
+  }
+  
   private(set) var lessons = BehaviorRelay<[Lesson]>(value: [])
   private(set) var nativeAds = BehaviorRelay<[GADUnifiedNativeAd]>(value: [])
   private(set) var isLoading = BehaviorRelay<Bool>(value: false)

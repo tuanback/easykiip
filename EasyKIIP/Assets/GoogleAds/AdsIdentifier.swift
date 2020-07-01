@@ -9,46 +9,39 @@
 import Foundation
 
 enum AdsType {
-  case bookDetailItem
+  case onlyImageNativeAds
   case rewardVideo
   case interstitial
+  case nativeAds
 }
 
 struct AdsIdentifier {
   
-  private struct App {
-    static let nativeAds = "ca-app-pub-4377015897765379/2266520475"
-    static let rewardAds = "ca-app-pub-4377015897765379/1785626982"
-    static let interstitial = "ca-app-pub-4377015897765379/5506106494"
-  }
-  
-  private struct Test {
-    static let nativeAds = "ca-app-pub-3940256099942544/3986624511"
-    static let rewardAds = "ca-app-pub-3940256099942544/1712485313"
-    static let interstitial = "ca-app-pub-3940256099942544/4411468910"
-  }
+  // For production
+  /*
+  static let onlyImageNativeAds = "ca-app-pub-4377015897765379/3232086939"
+  static let nativeAds = "ca-app-pub-4377015897765379/2266520475"
+  static let rewardAds = "ca-app-pub-4377015897765379/1785626982"
+  static let interstitial = "ca-app-pub-4377015897765379/5506106494"
+  */
+ 
+  // For test
+  static let onlyImageNativeAds = "ca-app-pub-3940256099942544/3986624511"
+  static let nativeAds = "ca-app-pub-3940256099942544/3986624511"
+  static let rewardAds = "ca-app-pub-3940256099942544/1712485313"
+  static let interstitial = "ca-app-pub-3940256099942544/4411468910"
   
   static func id(for type: AdsType) -> String {
     
     switch type {
-    case .bookDetailItem:
-      #if DEBUG
-      return Test.nativeAds
-      #else
-      return App.nativeAds
-      #endif
+    case .onlyImageNativeAds:
+      return onlyImageNativeAds
+    case .nativeAds:
+      return nativeAds
     case .rewardVideo:
-      #if DEBUG
-      return Test.rewardAds
-      #else
-      return App.rewardAds
-      #endif
+      return rewardAds
     case .interstitial:
-      #if DEBUG
-      return Test.interstitial
-      #else
-      return App.interstitial
-      #endif
+      return interstitial
     }
     
   }

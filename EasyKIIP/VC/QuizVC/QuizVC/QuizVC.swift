@@ -32,7 +32,7 @@ class QuizVC: NiblessViewController {
   private var practiceVC: QuizPracticeVC?
   private var practiceVM: QuizPracticeViewModel?
   
-  private lazy var nativeAdUnitID = AdsIdentifier.id(for: .bookDetailItem)
+  private lazy var nativeAdUnitID = AdsIdentifier.id(for: .nativeAds)
   private lazy var adLoader = NativeAdLoader(adUnitID: nativeAdUnitID,
                                              numberOfAdsToLoad: 1,
                                              viewController: self,
