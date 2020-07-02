@@ -157,6 +157,7 @@ public class RealmDataStore: VocabDataStore {
           history.firstLearnDate = time
         }
         history.lastTimeTest = time
+        history.isSynced = false
       }
     }
     else {

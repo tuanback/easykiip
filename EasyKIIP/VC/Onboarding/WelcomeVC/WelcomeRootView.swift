@@ -58,7 +58,7 @@ class WelcomeRootView: NiblessView {
     labelMessage.adjustsFontSizeToFitWidth = true
     
     buttonLogin = UIButton()
-    buttonLogin.titleLabel?.font = UIFont.appFontMedium(ofSize: 20)
+    buttonLogin.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 20)
     buttonLogin.setTitle(Strings.login, for: .normal)
     buttonLogin.backgroundColor = UIColor.white
     buttonLogin.layer.cornerRadius = 8
@@ -73,7 +73,7 @@ class WelcomeRootView: NiblessView {
     labelLoginLater.font = UIFont.appFontRegular(ofSize: 18)
     
     buttonPlayAsGuest = UIButton()
-    buttonPlayAsGuest.titleLabel?.font = UIFont.appFontMedium(ofSize: 18)
+    buttonPlayAsGuest.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 18)
     buttonPlayAsGuest.setTitle(Strings.playAsGuest, for: .normal)
     buttonPlayAsGuest.backgroundColor = UIColor.clear
     buttonPlayAsGuest.setTitleColor(UIColor.white, for: .normal)
@@ -82,7 +82,7 @@ class WelcomeRootView: NiblessView {
     
     addSubview(labelLogo)
     addSubview(labelTitle)
-    addSubview(labelMessage)
+    //addSubview(labelMessage)
     addSubview(buttonLogin)
     
     let stackView = UIStackView(arrangedSubviews: [labelLoginLater,
@@ -96,7 +96,7 @@ class WelcomeRootView: NiblessView {
     
     labelLogo.snp.makeConstraints { (make) in
       make.centerX.equalTo(self)
-      make.top.equalTo(self).offset(60)
+      make.top.equalTo(safeAreaInsets.top).offset(80)
     }
     
     labelTitle.snp.makeConstraints { (make) in
@@ -107,7 +107,7 @@ class WelcomeRootView: NiblessView {
     
     stackView.snp.makeConstraints { (make) in
       make.centerX.equalToSuperview()
-      make.bottom.equalTo(self).offset(-20)
+      make.bottom.equalTo(safeAreaInsets.bottom).offset(-30)
       make.height.equalTo(40)
     }
     
@@ -118,11 +118,13 @@ class WelcomeRootView: NiblessView {
       make.height.equalTo(50)
     }
     
+    /*
     labelMessage.snp.makeConstraints { (make) in
       make.bottom.equalTo(buttonLogin.snp.top).offset(-20)
       make.leading.equalTo(self).offset(20)
       make.trailing.equalTo(self).offset(-20)
     }
+    */
   }
   
 }

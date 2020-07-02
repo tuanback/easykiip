@@ -111,23 +111,27 @@ public class KIIPVocabRepository: VocabRepository {
         }
         
         for vocab in vocabs {
-          var firstTimeLearned: Date?
-          var lastTimeTest: Date?
-          
-          if let ftl = vocab.firstTimeLearned {
-            firstTimeLearned = Date(timeIntervalSince1970: ftl)
+          if let ftl = vocab.firstTimeLearned, let ltt = vocab.lastTimeLearned {
+            let first = Date(timeIntervalSince1970: ftl)
+            let last = Date(timeIntervalSince1970: ltt)
+            
+            self?.dataStore.syncPracticeHistory(
+              vocabID: vocab.id,
+              isMastered: vocab.isMastered,
+              testTaken: vocab.testTaken,
+              correctAnswer: vocab.correctAnswer,
+              firstLearnDate: first,
+              lastTimeTest: last)
           }
-          if let ltt = vocab.lastTimeLearned {
-            lastTimeTest = Date(timeIntervalSince1970: ltt)
+          else {
+            self?.dataStore.syncPracticeHistory(
+              vocabID: vocab.id,
+              isMastered: vocab.isMastered,
+              testTaken: vocab.testTaken,
+              correctAnswer: vocab.correctAnswer,
+              firstLearnDate: nil,
+              lastTimeTest: nil)
           }
-          
-          self?.dataStore.syncPracticeHistory(
-            vocabID: vocab.id,
-            isMastered: vocab.isMastered,
-            testTaken: vocab.testTaken,
-            correctAnswer: vocab.correctAnswer,
-            firstLearnDate: firstTimeLearned,
-            lastTimeTest: lastTimeTest)
         }
         
         let syncedVocabs = strongSelf.dataStore.getListOfVocabs(inLesson: lessonID)

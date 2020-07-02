@@ -208,7 +208,7 @@ extension QuizVC {
     
     viewViewControllerContainer.snp.makeConstraints { (make) in
       make.top.equalTo(buttonClose.snp.bottom).offset(16)
-      make.bottom.equalToSuperview()
+      make.bottom.equalTo(view.safeAreaInsets.bottom).offset(-16)
       make.leading.equalToSuperview().inset(16)
       make.trailing.equalToSuperview().inset(16)
     }

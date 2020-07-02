@@ -58,6 +58,8 @@ class QuizEndRootView: NiblessView {
     buttonContinue.layer.cornerRadius = 10
     buttonContinue.titleLabel?.font = UIFont.appFontMedium(ofSize: 18)
     
+    buttonContinue.addTarget(self, action: #selector(handleCloseButtonClicked(sender:)), for: .touchUpInside)
+    
     viewEndQuiz.addSubview(labelEndQuizText)
     viewEndQuiz.addSubview(buttonContinue)
     
@@ -123,7 +125,7 @@ class QuizEndRootView: NiblessView {
     
     buttonClose.snp.makeConstraints { (make) in
       make.leading.equalToSuperview().inset(16)
-      make.top.equalTo(safeAreaInsets.top).inset(32)
+      make.top.equalTo(safeAreaInsets.top).inset(40)
       make.size.equalTo(44)
     }
     

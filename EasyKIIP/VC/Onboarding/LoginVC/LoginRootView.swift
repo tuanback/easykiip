@@ -39,12 +39,12 @@ class LoginRootView: NiblessView {
     
     labelLogo.text = Strings.logIn
     labelLogo.font = UIFont.appFontDemiBold(ofSize: 40)
-    labelLogo.textColor = UIColor.appRed
+    labelLogo.textColor = UIColor.white
     
-    buttonClose.setImage(UIImage(named: IconName.close), for: .normal)
+    buttonClose.setImage(UIImage(named: IconName.closeWhite), for: .normal)
     buttonClose.addTarget(self, action: #selector(handleCloseButtonClicked(sender:)), for: .touchUpInside)
     
-    backgroundColor = UIColor.appBackground
+    backgroundColor = UIColor.appRed
     
     googleSignInButton.style = .wide
     kakaoSignInButton.addTarget(self, action: #selector(handleKakaoLoginButtonClicked(sender:)), for: .touchUpInside)
@@ -66,7 +66,7 @@ class LoginRootView: NiblessView {
     
     buttonClose.snp.makeConstraints { (make) in
       make.leading.equalToSuperview().inset(16)
-      make.top.equalTo(safeAreaInsets.top).inset(32)
+      make.top.equalTo(safeAreaInsets.top).offset(44)
       make.size.equalTo(44)
     }
     
