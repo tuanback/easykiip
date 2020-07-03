@@ -14,6 +14,10 @@ class InterstitialAdLoader: NSObject {
   private var interstitial: GADInterstitial!
   private let adUnitID: String
   
+  var isReady: Bool {
+    return interstitial.isReady
+  }
+  
   init(adUnitID: String) {
     self.adUnitID = adUnitID
     self.interstitial = GADInterstitial(adUnitID: adUnitID)

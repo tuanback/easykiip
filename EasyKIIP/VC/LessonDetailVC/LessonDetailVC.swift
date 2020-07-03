@@ -149,6 +149,8 @@ class LessonDetailVC: NiblessViewController {
         if passedTime >= 20 {
           shouldPresentAd = true
         }
+      case .payWall:
+        break
       }
     }
     lastOpenedVC = nil
@@ -255,6 +257,32 @@ class LessonDetailVC: NiblessViewController {
     viewModel.oPracticeButtonHidden
       .drive(buttonPractice.rx.isHidden)
       .disposed(by: disposeBag)
+    
+    viewModel.oShowNoInternetAlert
+      .observeOn(MainScheduler.asyncInstance)
+      .subscribe(onNext: { [weak self] _ in
+        guard let strongSelf = self else { return }
+        strongSelf.showNoInternetConnectionAlert()
+      })
+    .disposed(by: disposeBag)
+    
+    viewModel.oShowCannotLoadOffering
+      .observeOn(MainScheduler.asyncInstance)
+      .subscribe(onNext: { [weak self] _ in
+        self?.showCannotLoadOffering()
+      })
+    .disposed(by: disposeBag)
+    
+    InternetStateProvider.shared
+      .oInternetConnectionState
+      .distinctUntilChanged()
+      .subscribe(onNext: { [weak self] isConnected in
+        guard let strongSelf = self else { return }
+        if isConnected && !strongSelf.adLoader.isReady {
+          strongSelf.adLoader.load()
+        }
+      })
+    .disposed(by: disposeBag)
   }
   
   private func setupLearnVocabButton() -> UIButton {
@@ -359,6 +387,30 @@ class LessonDetailVC: NiblessViewController {
     pageViewController.view.snp.makeConstraints { (make) in
       make.edges.equalToSuperview()
     }
+  }
+  
+  private func showNoInternetConnectionAlert() {
+    let alertController = UIAlertController(title: Strings.noInternetConnection, message: Strings.turnOnInternetMessage, preferredStyle: .alert)
+    
+    let okAction = UIAlertAction(title: Strings.cancel, style: .default) { (_) in }
+    let upgradeAction = UIAlertAction(title: Strings.upgradeToPremium, style: .default) { (_) in
+      self.viewModel.handleUpgradeToPremiumButtonClicked()
+    }
+    
+    alertController.addAction(upgradeAction)
+    alertController.addAction(okAction)
+    
+    present(alertController, animated: true, completion: nil)
+  }
+  
+  private func showCannotLoadOffering() {
+    let alertController = UIAlertController(title: Strings.noInternetConnection, message: Strings.turnInternetOnThenTryAgain, preferredStyle: .alert)
+    
+    let okAction = UIAlertAction(title: Strings.ok, style: .default) { (_) in }
+    
+    alertController.addAction(okAction)
+    
+    present(alertController, animated: true, completion: nil)
   }
   
 }

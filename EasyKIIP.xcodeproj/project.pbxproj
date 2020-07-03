@@ -17,6 +17,8 @@
 		17384258247158D700BEFE2F /* LessonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17384257247158D700BEFE2F /* LessonDetailViewModel.swift */; };
 		1738425B24715CB600BEFE2F /* LessonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738425A24715CB600BEFE2F /* LessonDetailVC.swift */; };
 		173E19C02498F62C001C9AA9 /* InterstitialAdLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173E19BF2498F62C001C9AA9 /* InterstitialAdLoader.swift */; };
+		17563DD424AF5F1800285E13 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17563DD324AF5F1800285E13 /* StoreKit.framework */; };
+		17563DD724AF6C7500285E13 /* SwiftPaywall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17563DD624AF6C7500285E13 /* SwiftPaywall.swift */; };
 		1757FC5D2470B8C400E41DA3 /* vocabBundled.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */; };
 		1757FC5E2470B8C400E41DA3 /* vocabBundled.realm in Resources */ = {isa = PBXBuildFile; fileRef = 1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */; };
 		1757FC602470B92E00E41DA3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC5F2470B92E00E41DA3 /* Path.swift */; };
@@ -298,6 +300,8 @@
 		17384257247158D700BEFE2F /* LessonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModel.swift; sourceTree = "<group>"; };
 		1738425A24715CB600BEFE2F /* LessonDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailVC.swift; sourceTree = "<group>"; };
 		173E19BF2498F62C001C9AA9 /* InterstitialAdLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdLoader.swift; sourceTree = "<group>"; };
+		17563DD324AF5F1800285E13 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		17563DD624AF6C7500285E13 /* SwiftPaywall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPaywall.swift; sourceTree = "<group>"; };
 		1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = vocabBundled.realm; path = Database/vocabBundled.realm; sourceTree = SOURCE_ROOT; };
 		1757FC5F2470B92E00E41DA3 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		1766FF92245A5A93008B263D /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
@@ -527,6 +531,7 @@
 			files = (
 				17B70AD2244CF1E500C67334 /* EasyKIIPKit.framework in Frameworks */,
 				177AECA12495F4B800771DF2 /* KakaoOpenSDK.framework in Frameworks */,
+				17563DD424AF5F1800285E13 /* StoreKit.framework in Frameworks */,
 				17B70B6D245580B700C67334 /* UserSession.framework in Frameworks */,
 				805274668FD7FD7D0F7E3428 /* Pods_EasyKIIP.framework in Frameworks */,
 			);
@@ -608,6 +613,7 @@
 		173842562471589200BEFE2F /* LessonDetailVC */ = {
 			isa = PBXGroup;
 			children = (
+				17563DD524AF6C5E00285E13 /* PayWall */,
 				17CBE66F247A076B005D4CFD /* VocabList */,
 				17CBE66B247A0720005D4CFD /* ReadingPart */,
 				17CBE667247A0631005D4CFD /* LearnVocab */,
@@ -615,6 +621,14 @@
 				1738425A24715CB600BEFE2F /* LessonDetailVC.swift */,
 			);
 			path = LessonDetailVC;
+			sourceTree = "<group>";
+		};
+		17563DD524AF6C5E00285E13 /* PayWall */ = {
+			isa = PBXGroup;
+			children = (
+				17563DD624AF6C7500285E13 /* SwiftPaywall.swift */,
+			);
+			path = PayWall;
 			sourceTree = "<group>";
 		};
 		1766FF91245A5A75008B263D /* LaunchVC */ = {
@@ -1055,6 +1069,7 @@
 		17B70AD1244CF1E500C67334 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17563DD324AF5F1800285E13 /* StoreKit.framework */,
 				177AECA02495F4B800771DF2 /* KakaoOpenSDK.framework */,
 				95C39FF132AEDBD39407410F /* Pods_EasyKIIP.framework */,
 				3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */,
@@ -2167,6 +2182,7 @@
 				17D98F87248CB34B0049F5BB /* IconName.swift in Sources */,
 				17F5C097248FB925001ABA43 /* QuizNewWordRootView.swift in Sources */,
 				17F5C09B2490330A001ABA43 /* QuizPracticeRootView.swift in Sources */,
+				17563DD724AF6C7500285E13 /* SwiftPaywall.swift in Sources */,
 				176ADE072460E958006C5D3C /* BookDetailViewModel.swift in Sources */,
 				177AEC69249458F200771DF2 /* QuizEndViewModel.swift in Sources */,
 				17CBE669247A06CC005D4CFD /* LearnVocabListVC.swift in Sources */,

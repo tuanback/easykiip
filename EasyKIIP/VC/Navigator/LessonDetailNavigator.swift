@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import EasyKIIPKit
+import Purchases
 
 class LessonDetailNavigator: Navigator {
   
@@ -16,9 +17,10 @@ class LessonDetailNavigator: Navigator {
     case quizNewWord(bookID: Int, lessonID: Int, vocabs: [Vocab])
     case quizPractice(bookID: Int, lessonID: Int, vocabs: [Vocab])
     case paragraph(readingPart: ReadingPart)
+    case payWall(offering: Purchases.Offering)
   }
   
-  typealias Factory = QuizNewWordVCFactory & QuizPracticeVCFactory & ParagraphVCFactory
+  typealias Factory = QuizNewWordVCFactory & QuizPracticeVCFactory & ParagraphVCFactory & PayWallVCFactory
   
   private let factory: Factory
   init(factory: Factory) {
@@ -55,6 +57,8 @@ class LessonDetailNavigator: Navigator {
       return UINavigationController(rootViewController: vc)
     case .paragraph(let readingPart):
       return factory.makeParagraphVC(readingPart: readingPart)
+    case .payWall(let offering):
+      return factory.makePayWallVC(offering: offering)
     }
   }
   
@@ -70,4 +74,8 @@ protocol QuizPracticeVCFactory {
 
 protocol ParagraphVCFactory {
   func makeParagraphVC(readingPart: ReadingPart) -> ParagraphVC
+}
+
+protocol PayWallVCFactory {
+  func makePayWallVC(offering: Purchases.Offering) -> UIViewController
 }

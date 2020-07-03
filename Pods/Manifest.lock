@@ -323,6 +323,7 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
+  - Purchases (3.4.0)
   - ReachabilitySwift (5.0.0)
   - Realm (4.4.1):
     - Realm/Headers (= 4.4.1)
@@ -365,6 +366,7 @@ DEPENDENCIES:
   - FirebaseFirestoreSwift
   - Google-Mobile-Ads-SDK
   - GoogleSignIn
+  - Purchases (= 3.4.0)
   - ReachabilitySwift
   - Realm
   - RealmSwift
@@ -421,6 +423,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - Purchases
     - ReachabilitySwift
     - Realm
     - RealmSwift
@@ -464,6 +467,7 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  Purchases: b8cac232e403ca51541a425a65992b902cecc044
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Realm: 4eb04d7487bd43c0581256f40b424eafb711deff
   RealmSwift: 3eb8924ff7100df5928c7602f71d0fec51e7c9c5
@@ -479,6 +483,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
 
-PODFILE CHECKSUM: 8910aa6ebab1391a60314ad482f71c2e6e8f3544
+PODFILE CHECKSUM: 4849a2b26bbdf7b863bcacbe70024b808d7bb57e
 
 COCOAPODS: 1.9.2

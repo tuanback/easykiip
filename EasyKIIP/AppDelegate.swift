@@ -13,6 +13,7 @@ import Firebase
 import GoogleMobileAds
 import GoogleSignIn
 import KakaoOpenSDK
+import Purchases
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     InternetStateProvider.shared.startListen()
     configFirebaseAndGoogleSignIn()
+    setupPurchases()
     setupFacebookLogin(application: application, launchOptions: launchOptions)
     injectionContainer = AppDependencyContainer()
     let launchVC = injectionContainer.makeLaunchVC()
@@ -71,5 +73,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //    GIDSignIn.sharedInstance()?.signOut()
     //    try? Auth.auth().signOut()
   }
+  
+  private func setupPurchases() {
+    Purchases.debugLogsEnabled = true
+    Purchases.configure(withAPIKey: "xQAUOzZYRMaqNiXXXTgCRnOugpXEVqJM")
+  }
 }
 
+extension AppDelegate: PurchasesDelegate {
+  func purchases(_ purchases: Purchases, didReceiveUpdated purchaserInfo: Purchases.PurchaserInfo) {
+      // handle any changes to purchaserInfo
+    print(purchaserInfo)
+  }
+}

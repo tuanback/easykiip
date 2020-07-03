@@ -10,6 +10,7 @@ import Foundation
 import EasyKIIPKit
 import RxSwift
 import RxCocoa
+import Purchases
 
 enum LessonDetailChildVC {
   case learnVocab
@@ -91,6 +92,14 @@ class LessonDetailViewModel {
     return rIsLoading.asObservable()
   }
   
+  var oShowNoInternetAlert: Observable<Void> {
+    return rShowNoInternetAlert.asObservable()
+  }
+  
+  var oShowCannotLoadOffering: Observable<Void> {
+    return rShowCannotLoadOffering.asObservable()
+  }
+  
   private let rNavigationEvent = PublishRelay<NavigationEvent<LessonDetailNavigator.Destination>>()
   private let rChildVC = BehaviorRelay<[LessonDetailChildVC]>(value: [])
   private let rVocabs = BehaviorRelay<[Vocab]>(value: [])
@@ -98,6 +107,8 @@ class LessonDetailViewModel {
   private let rNavigagtionTitle = BehaviorRelay<String>(value: "")
   private let rPracticeButtonHidden = BehaviorRelay<Bool>(value: true)
   private let rIsLoading = BehaviorRelay<Bool>(value: false)
+  private let rShowNoInternetAlert = PublishRelay<Void>()
+  private let rShowCannotLoadOffering = PublishRelay<Void>()
   
   private let disposeBag = DisposeBag()
   
@@ -175,16 +186,52 @@ class LessonDetailViewModel {
   }
   
   func handleItemViewModelClicked(viewModel: LearnVocabItemViewModel) {
+    guard isAbleToStartLearning() else {
+      rShowNoInternetAlert.accept(())
+      return
+    }
+    
     rNavigationEvent.accept(.present(destination: .quizNewWord(bookID: bookID, lessonID: lessonID, vocabs: viewModel.vocabs)))
   }
   
   func handleReadingPartItemClicked(viewModel: ReadingPartItemViewModel) {
+    guard isAbleToStartLearning() else {
+      rShowNoInternetAlert.accept(())
+      return
+    }
+    
     rNavigationEvent.accept(.push(destination: .paragraph(readingPart: viewModel.readingPart)))
   }
   
   func handlePracticeButtonClicked() {
+    guard isAbleToStartLearning() else {
+      rShowNoInternetAlert.accept(())
+      return
+    }
+    
     let vocabs = vocabRepository.getListOfLowProficiencyVocab(inLesson: lessonID, upto: 10)
     rNavigationEvent.accept(.present(destination: .quizPractice(bookID: bookID, lessonID: lessonID, vocabs: vocabs)))
+  }
+  
+  func handleUpgradeToPremiumButtonClicked() {
+    Purchases.shared.offerings { [weak self] (offerings, error) in
+      if let _ = error {
+        self?.rShowCannotLoadOffering.accept(())
+        return
+      }
+      if let offerings = offerings, let offering = offerings.current {
+        self?.rNavigationEvent.accept(.present(destination: .payWall(offering: offering)))
+      }
+    }
+  }
+  
+  private func isAbleToStartLearning() -> Bool {
+    // TODO: If paid user or user with internet turn on => Can start learning
+    if InternetStateProvider.isInternetConnected {
+      return true
+    }
+    
+    return false
   }
   
   func handleFinishLearning() {

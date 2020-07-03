@@ -86,6 +86,18 @@ public struct Strings {
   static var practiceMakePerfect: String {
     NSLocalizedString("Practice makes perfect. Practice every day will help your memory better", bundle: Strings.languageBundle, comment: "practice screen")
   }
+  
+  static var noInternetConnection: String {
+    NSLocalizedString("No Internet Connection", bundle: Strings.languageBundle, comment: "")
+  }
+  
+  static var turnOnInternetMessage: String {
+    NSLocalizedString("Please turn the internet on to learn for free or upgrade to Premium user to study offline", bundle: Strings.languageBundle, comment: "")
+  }
+  
+  static var turnInternetOnThenTryAgain: String {
+    NSLocalizedString("Please turn the internet on then try again", bundle: Strings.languageBundle, comment: "")
+  }
 }
 
 // Common
@@ -122,6 +134,9 @@ extension Strings {
   }
   static var account: String {
     NSLocalizedString("Account", bundle: Strings.languageBundle, comment: "")
+  }
+  static var upgradeToPremium: String {
+    NSLocalizedString("Premium Upgrade", bundle: Strings.languageBundle, comment: "")
   }
   
   static var language: String {

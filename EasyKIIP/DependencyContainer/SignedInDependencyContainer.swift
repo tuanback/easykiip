@@ -11,6 +11,7 @@ import Firebase
 import Foundation
 import UIKit
 import UserSession
+import Purchases
 
 public class SignedInDependencyContainer {
   
@@ -117,6 +118,10 @@ public class SignedInDependencyContainer {
     return ParagraphVC(viewModel: viewModel)
   }
   
+  func makePayWallVC(offering: Purchases.Offering) -> UIViewController {
+    return SwiftPaywall(offering: offering, termsOfServiceUrlString: "google.com", privacyPolicyUrlString: "google.com")
+  }
+  
   func makeQuizNewWordVC(bookID: Int, lessonID: Int, vocabs: [Vocab]) -> QuizVC {
    
     let randomVocabs: [Vocab] = vocabRepository.getRandomVocabs(differentFromVocabIDs: vocabs.map { $0.id }, upto: vocabs.count)
@@ -169,3 +174,4 @@ extension SignedInDependencyContainer: LanguageSettingVCFactory { }
 extension SignedInDependencyContainer: LoginVCFactory { }
 
 extension SignedInDependencyContainer: ParagraphVCFactory { }
+extension SignedInDependencyContainer: PayWallVCFactory { }
