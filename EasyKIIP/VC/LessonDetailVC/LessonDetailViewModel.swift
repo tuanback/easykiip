@@ -214,15 +214,7 @@ class LessonDetailViewModel {
   }
   
   func handleUpgradeToPremiumButtonClicked() {
-    Purchases.shared.offerings { [weak self] (offerings, error) in
-      if let _ = error {
-        self?.rShowCannotLoadOffering.accept(())
-        return
-      }
-      if let offerings = offerings, let offering = offerings.current {
-        self?.rNavigationEvent.accept(.present(destination: .payWall(offering: offering)))
-      }
-    }
+    rNavigationEvent.accept(.present(destination: .payWall))
   }
   
   private func isAbleToStartLearning() -> Bool {

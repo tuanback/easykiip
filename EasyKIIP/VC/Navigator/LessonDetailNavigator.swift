@@ -17,7 +17,7 @@ class LessonDetailNavigator: Navigator {
     case quizNewWord(bookID: Int, lessonID: Int, vocabs: [Vocab])
     case quizPractice(bookID: Int, lessonID: Int, vocabs: [Vocab])
     case paragraph(readingPart: ReadingPart)
-    case payWall(offering: Purchases.Offering)
+    case payWall
   }
   
   typealias Factory = QuizNewWordVCFactory & QuizPracticeVCFactory & ParagraphVCFactory & PayWallVCFactory
@@ -57,8 +57,8 @@ class LessonDetailNavigator: Navigator {
       return UINavigationController(rootViewController: vc)
     case .paragraph(let readingPart):
       return factory.makeParagraphVC(readingPart: readingPart)
-    case .payWall(let offering):
-      return factory.makePayWallVC(offering: offering)
+    case .payWall:
+      return factory.makePayWallVC()
     }
   }
   
@@ -77,5 +77,5 @@ protocol ParagraphVCFactory {
 }
 
 protocol PayWallVCFactory {
-  func makePayWallVC(offering: Purchases.Offering) -> UIViewController
+  func makePayWallVC() -> UIViewController
 }

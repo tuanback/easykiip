@@ -53,10 +53,10 @@ class SettingVM {
     sections.removeAll()
     var accountSettinsItems: [SettingItem] = []
     if userSessionRepo.readUserSession() == nil {
-      accountSettinsItems = [.login]
+      accountSettinsItems = [.login, .premiumUpgrade]
     }
     else {
-      accountSettinsItems = [.logOut]
+      accountSettinsItems = [.logOut, .premiumUpgrade]
     }
     
     sections.append(SettingSection(settingSectionItem: .account, settingItems: accountSettinsItems))
@@ -80,6 +80,8 @@ class SettingVM {
       loadSettingItems()
     case .appLanguage:
       rNavigationEvent.accept(.push(destination: .changeLanguage))
+    case .premiumUpgrade:
+      rNavigationEvent.accept(.present(destination: .payWall))
     }
   }
 }

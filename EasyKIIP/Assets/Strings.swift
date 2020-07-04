@@ -145,6 +145,16 @@ extension Strings {
   static var failedToLoadVideo: String {
     NSLocalizedString("Failed to load video. Do you want to try again?", bundle: Strings.languageBundle, comment: "")
   }
+  static var loading: String {
+    NSLocalizedString("LOADING...", bundle: Strings.languageBundle, comment: "")
+  }
+  static var restorePurchases: String {
+    NSLocalizedString("RESTORE PURCHASES", bundle: Strings.languageBundle, comment: "")
+  }
+  static var endOfTrail: String {
+    NSLocalizedString("end of trial", bundle: Strings.languageBundle, comment: "")
+  }
+  
   static var account: String {
     NSLocalizedString("Account", bundle: Strings.languageBundle, comment: "")
   }

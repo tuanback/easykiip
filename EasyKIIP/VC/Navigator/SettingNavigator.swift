@@ -14,9 +14,10 @@ class SettingNavigator: Navigator {
   enum Destination {
     case login(signedInResponder: SignedInResponder?)
     case changeLanguage
+    case payWall
   }
   
-  typealias Factory = LoginVCFactory & LanguageSettingVCFactory
+  typealias Factory = LoginVCFactory & LanguageSettingVCFactory & PayWallVCFactory
   
   private let factory: Factory
   init(factory: Factory) {
@@ -49,6 +50,8 @@ class SettingNavigator: Navigator {
       return factory.makeLoginVC(signedInResponder: signedInResponder)
     case .changeLanguage:
       return factory.makeLanguageSettingVC()
+    case .payWall:
+      return factory.makePayWallVC()
     }
   }
   

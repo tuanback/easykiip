@@ -12,6 +12,7 @@ enum SettingItem {
   
   case login
   case logOut
+  case premiumUpgrade
   case appLanguage
   
   func toString() -> String {
@@ -22,6 +23,8 @@ enum SettingItem {
       return Strings.logOut
     case .appLanguage:
       return Strings.appLanguage
+    case .premiumUpgrade:
+      return Strings.upgradeToPremium
     }
   }
 }

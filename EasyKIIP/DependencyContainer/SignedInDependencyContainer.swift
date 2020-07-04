@@ -118,8 +118,8 @@ public class SignedInDependencyContainer {
     return ParagraphVC(viewModel: viewModel)
   }
   
-  func makePayWallVC(offering: Purchases.Offering) -> UIViewController {
-    return SwiftPaywall(offering: offering, termsOfServiceUrlString: "google.com", privacyPolicyUrlString: "google.com")
+  func makePayWallVC() -> UIViewController {
+    return SwiftPaywall()
   }
   
   func makeQuizNewWordVC(bookID: Int, lessonID: Int, vocabs: [Vocab]) -> QuizVC {

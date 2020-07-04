@@ -43,8 +43,6 @@ class SwiftPaywall: UIViewController {
   public var buyButton : UIButton!
   public var restoreButton : UIButton!
   public var freeTrialLabel : UILabel!
-  public var termsAndConditionsLabel : UILabel!
-  
   
   // Internal variables
   private var scrollView : UIScrollView!
@@ -67,17 +65,14 @@ class SwiftPaywall: UIViewController {
   private var buyButtonLoadingIndicator : UIActivityIndicatorView!
   private var closeButton : CloseButton!
   
-  private var offering: Purchases.Offering
+  private var offering: Purchases.Offering?
   private var defaultBuyButtonText : String?
   private var defaultRestoreButtonText : String?
   
   private var didChangePackage = false
   
   
-  init(offering: Purchases.Offering,
-       termsOfServiceUrlString: String, // Required terms of service url string
-    privacyPolicyUrlString: String, // Required privacy policy url string
-    allowRestore: Bool = true, // Whether your app allows restoring purchases, default is true for most apps
+  init(allowRestore: Bool = true, // Whether your app allows restoring purchases, default is true for most apps
     offeringId: String? = nil, // Offering ID, defaults to the current offering in RevenueCat
     edgeStyle: PayWallEdgeStyle = .round, // Corner radius style, defaults to round
     showDiscountPercentage: Bool = true, // Whether or not to show the discount badge on the products, default to true
@@ -85,9 +80,6 @@ class SwiftPaywall: UIViewController {
     textColor: UIColor = UIColor.white, // Text color, defaults to white
     productSelectedColor: UIColor = UIColor.white, // Selected product cell color, defaults to white
     productDeselectedColor: UIColor = UIColor.black) { // Deselected product cell color, defaults to black
-    self.offering = offering
-    self.termsOfServiceURL = URL(string: termsOfServiceUrlString)
-    self.privacyPolicyURL = URL(string: privacyPolicyUrlString)
     
     self.allowRestore = allowRestore
     self.offeringId = offeringId
@@ -133,6 +125,17 @@ class SwiftPaywall: UIViewController {
           self.close()
         }
       }
+      if let offeringId = self.offeringId {
+        self.offering = offerings?.offering(identifier: offeringId)
+      } else {
+        self.offering = offerings?.current
+      }
+      
+      if self.offering == nil {
+        self.showAlert(title: "Error", message: "No offerings found.") { (action) in
+          self.close()
+        }
+      }
       
       self.offeringLoadingIndicator.stopAnimating()
       self.offeringCollectionView.reloadData()
@@ -146,7 +149,10 @@ class SwiftPaywall: UIViewController {
       return
     }
     
-    let package = offering.availablePackages[indexPath.row]
+    guard let package = offering?.availablePackages[indexPath.row] else {
+        print("No available package")
+        return
+    }
     
     setState(loading: true)
     Purchases.shared.purchasePackage(package) { (trans, info, error, cancelled) in
@@ -199,30 +205,6 @@ class SwiftPaywall: UIViewController {
     dismiss(animated: true, completion: nil)
   }
   
-  @objc private func tapToCs(tap: UITapGestureRecognizer) {
-    guard let text = termsAndConditionsLabel.text else {
-      return
-    }
-    guard let tocRange = termsAndConditionsLabel.text?.range(of: "Terms of Service") else {
-      return
-    }
-    guard let privacyRange = termsAndConditionsLabel.text?.range(of: "Privacy Policy") else {
-      return
-    }
-    
-    if tap.didTapAttributedTextInLabel(label: termsAndConditionsLabel, inRange: NSRange(tocRange, in: text)) {
-      if let url = termsOfServiceURL {
-        let nav = UINavigationController(rootViewController: WebViewController(url: url, title: "Terms of Service", textColor: view.backgroundColor, barColor: textColor))
-        present(nav, animated: true, completion: nil)
-      }
-    } else if tap.didTapAttributedTextInLabel(label: termsAndConditionsLabel, inRange: NSRange(privacyRange, in: text)) {
-      if let url = privacyPolicyURL {
-        let nav = UINavigationController(rootViewController: WebViewController(url: url, title: "Privacy Policy", textColor: view.backgroundColor, barColor: textColor))
-        present(nav, animated: true, completion: nil)
-      }
-    }
-  }
-  
   // Only call this right before purchasing or restoring
   private func setState(loading: Bool) {
     if loading {
@@ -236,7 +218,7 @@ class SwiftPaywall: UIViewController {
       buyButtonLoadingIndicator.startAnimating()
       
       restoreButton.isEnabled = false
-      restoreButton.setTitle("LOADING...", for: .normal)
+      restoreButton.setTitle(Strings.loading, for: .normal)
       
       offeringCollectionView.isUserInteractionEnabled = false
       
@@ -262,9 +244,11 @@ class SwiftPaywall: UIViewController {
   }
   
   private var mostAffordablePackages : [Purchases.Package] {
-    let sorted = offering.availablePackages
-      .filter({$0.packageType != .lifetime && $0.packageType != .custom})
-      .sorted(by: { $1.annualCost() > $0.annualCost() })
+    guard let sorted = offering?.availablePackages
+        .filter({$0.packageType != .lifetime && $0.packageType != .custom})
+        .sorted(by: { $1.annualCost() > $0.annualCost() }) else {
+        return []
+    }
     return sorted
   }
   
@@ -377,7 +361,7 @@ class SwiftPaywall: UIViewController {
     buyButton.addTarget(self, action: #selector(purchaseSelectedPackage), for: .touchUpInside)
     buyButton.translatesAutoresizingMaskIntoConstraints = false
     buyButton.backgroundColor = textColor
-    buyButton.setTitle("Continue", for: .normal)
+    buyButton.setTitle(Strings.continueStr, for: .normal)
     buyButton.setTitleColor(view.backgroundColor, for: .normal)
     buyButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
     
@@ -425,44 +409,11 @@ class SwiftPaywall: UIViewController {
       freeTrialLabel.topAnchor.constraint(equalTo: offeringCollectionView.bottomAnchor)
     ])
     
-    // The Terms & Conditions Label
-    termsAndConditionsLabel = UILabel()
-    let tap = UITapGestureRecognizer(target: self, action: #selector(tapToCs(tap:)))
-    termsAndConditionsLabel.addGestureRecognizer(tap)
-    termsAndConditionsLabel.isUserInteractionEnabled = true
-    termsAndConditionsLabel.numberOfLines = 2
-    termsAndConditionsLabel.minimumScaleFactor = 0.01
-    termsAndConditionsLabel.textAlignment = .center
-    termsAndConditionsLabel.font = UIFont.systemFont(ofSize: 12)
-    termsAndConditionsLabel.textColor = textColor
-    termsAndConditionsLabel.alpha = 0.90
-    
-    
-    let linkAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12)]
-    let firstLine = NSMutableAttributedString(string: "By continuing, you agree to our\n")
-    let termsText = NSAttributedString(string: "Terms of Service", attributes: linkAttributes)
-    let and = NSAttributedString(string: " and ")
-    let privacyText = NSAttributedString(string: "Privacy Policy", attributes: linkAttributes)
-    
-    firstLine.append(termsText)
-    firstLine.append(and)
-    firstLine.append(privacyText)
-    termsAndConditionsLabel.attributedText = firstLine
-    
-    termsAndConditionsLabel.translatesAutoresizingMaskIntoConstraints = false
-    scrollView.addSubview(termsAndConditionsLabel)
-    NSLayoutConstraint.activate([
-      termsAndConditionsLabel.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -16.0),
-      termsAndConditionsLabel.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 16.0),
-      termsAndConditionsLabel.topAnchor.constraint(equalTo: buyButton.bottomAnchor, constant: 42.0),
-      termsAndConditionsLabel.heightAnchor.constraint(equalToConstant: 30.0)
-    ])
-    
     // The restore button
     restoreButton = UIButton()
     restoreButton.addTarget(self, action: #selector(restorePurchases), for: .touchUpInside)
     restoreButton.translatesAutoresizingMaskIntoConstraints = false
-    restoreButton.setTitle("RESTORE PURCHASES", for: .normal)
+    restoreButton.setTitle(Strings.restorePurchases, for: .normal)
     restoreButton.setTitleColor(textColor.withAlphaComponent(0.6), for: .normal)
     restoreButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16.0)
     restoreButton.isHidden = !allowRestore
@@ -471,7 +422,7 @@ class SwiftPaywall: UIViewController {
     NSLayoutConstraint.activate([
       restoreButton.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -20.0),
       restoreButton.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 20.0),
-      restoreButton.topAnchor.constraint(equalTo: termsAndConditionsLabel.bottomAnchor, constant: 35.0),
+      restoreButton.topAnchor.constraint(equalTo: buyButton.bottomAnchor, constant: 35.0),
       restoreButton.heightAnchor.constraint(equalToConstant: 50.0)
     ])
     
@@ -491,11 +442,11 @@ class SwiftPaywall: UIViewController {
 
 extension SwiftPaywall: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return offering.availablePackages.count
+    return offering?.availablePackages.count ?? 0
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let package = offering.availablePackages[indexPath.row]
+    let package = offering?.availablePackages[indexPath.row]
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PackageCell
     cell.setupWith(
       package: package,
@@ -505,7 +456,7 @@ extension SwiftPaywall: UICollectionViewDelegate, UICollectionViewDataSource, UI
       productDeselectedColor: productDeselectedColor)
     
     // Should this package be selected
-    if !didChangePackage && mostAffordablePackages.first?.product.productIdentifier == package.product.productIdentifier {
+    if !didChangePackage && mostAffordablePackages.first?.product.productIdentifier == package?.product.productIdentifier {
       collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
       collectionView.delegate?.collectionView?(collectionView, didSelectItemAt: indexPath)
       cell.isSelected = true
@@ -519,11 +470,11 @@ extension SwiftPaywall: UICollectionViewDelegate, UICollectionViewDataSource, UI
     didChangePackage = true
     
     if #available(iOS 11.2, *) {
-      if let introPrice = offering.availablePackages[indexPath.row].product.introductoryPrice, introPrice.price == 0 {
+      if let introPrice = offering?.availablePackages[indexPath.row].product.introductoryPrice, introPrice.price == 0 {
         
         var trialLength = ""
         var cancelDate : Date?
-        var cancelString = "end of trial"
+        var cancelString = Strings.endOfTrail
         let numUnits = introPrice.subscriptionPeriod.numberOfUnits
         
         switch introPrice.subscriptionPeriod.unit {
@@ -570,7 +521,7 @@ extension SwiftPaywall: UICollectionViewDelegate, UICollectionViewDataSource, UI
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
     
-    let packagesCount = offering.availablePackages.count
+    let packagesCount = offering?.availablePackages.count ?? 0
     
     if CGFloat(packagesCount) < maxItemsPerRow {
       
