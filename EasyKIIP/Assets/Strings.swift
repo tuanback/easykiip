@@ -98,6 +98,19 @@ public struct Strings {
   static var turnInternetOnThenTryAgain: String {
     NSLocalizedString("Please turn the internet on then try again", bundle: Strings.languageBundle, comment: "")
   }
+  
+  static var includes : String {
+    NSLocalizedString("Includes", bundle: Strings.languageBundle, comment: "")
+  }
+  static var freeTrail: String {
+    NSLocalizedString("free trail.", bundle: Strings.languageBundle, comment: "")
+  }
+  static var cancelBefore: String {
+    NSLocalizedString("Cancel before", bundle: Strings.languageBundle, comment: "")
+  }
+  static var nothingWillBeBilled: String {
+    NSLocalizedString(" and nothing will be billed", bundle: Strings.languageBundle, comment: "")
+  }
 }
 
 // Common
@@ -137,6 +150,34 @@ extension Strings {
   }
   static var upgradeToPremium: String {
     NSLocalizedString("Premium Upgrade", bundle: Strings.languageBundle, comment: "")
+  }
+  
+  static var lifeTime: String {
+    NSLocalizedString("LIFETIME", bundle: Strings.languageBundle, comment: "")
+  }
+  static var oneTime: String {
+    NSLocalizedString("ONE TIME", bundle: Strings.languageBundle, comment: "")
+  }
+  static var year: String {
+    NSLocalizedString("YEAR", bundle: Strings.languageBundle, comment: "")
+  }
+  static var months: String {
+    NSLocalizedString("MONTHS", bundle: Strings.languageBundle, comment: "")
+  }
+  static var month: String {
+    NSLocalizedString("MONTH", bundle: Strings.languageBundle, comment: "")
+  }
+  static var week: String {
+    NSLocalizedString("WEEK", bundle: Strings.languageBundle, comment: "")
+  }
+  static var day: String {
+    NSLocalizedString("day", bundle: Strings.languageBundle, comment: "")
+  }
+  static var monthShort: String {
+    NSLocalizedString("mo", bundle: Strings.languageBundle, comment: "")
+  }
+  static var weekShort: String {
+    NSLocalizedString("wk", bundle: Strings.languageBundle, comment: "")
   }
   
   static var language: String {

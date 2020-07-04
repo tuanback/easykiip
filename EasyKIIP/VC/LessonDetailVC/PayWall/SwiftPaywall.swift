@@ -491,7 +491,7 @@ class SwiftPaywall: UIViewController {
 
 extension SwiftPaywall: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return offering.availablePackages.count ?? 0
+    return offering.availablePackages.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -528,17 +528,17 @@ extension SwiftPaywall: UICollectionViewDelegate, UICollectionViewDataSource, UI
         
         switch introPrice.subscriptionPeriod.unit {
         case .day:
-          trialLength = "\(numUnits)-day"
+          trialLength = "\(numUnits)-\(Strings.day.lowercased())"
           cancelDate = Calendar.current.date(byAdding: .day, value: numUnits-1, to: Date())
         case .week:
-          trialLength = "\(numUnits*7)-day"
+          trialLength = "\(numUnits*7)-\(Strings.day.lowercased())"
           cancelDate = Calendar.current.date(byAdding: .day, value: 7*numUnits-1, to: Date())
         case .month:
-          trialLength = "\(numUnits)-month"
+          trialLength = "\(numUnits)-\(Strings.month.lowercased())"
           cancelDate = Calendar.current.date(byAdding: .month, value: numUnits, to: Date())
           cancelDate = Calendar.current.date(byAdding: .day, value: -1, to: cancelDate ?? Date())
         case .year:
-          trialLength = "\(numUnits)-year"
+          trialLength = "\(numUnits)-\(Strings.year.lowercased())"
           cancelDate = Calendar.current.date(byAdding: .year, value: numUnits, to: Date())
           cancelDate = Calendar.current.date(byAdding: .day, value: -1, to: cancelDate ?? Date())
         }
@@ -550,9 +550,9 @@ extension SwiftPaywall: UICollectionViewDelegate, UICollectionViewDataSource, UI
         }
         
         let dateAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14)]
-        let baseText = NSMutableAttributedString(string: "Includes \(trialLength) free trial. Cancel before ")
+        let baseText = NSMutableAttributedString(string: "\(Strings.includes) \(trialLength) \(Strings.freeTrail) \(Strings.cancelBefore) ")
         let cancelAttributedText = NSAttributedString(string: cancelString, attributes: dateAttributes)
-        let and = NSAttributedString(string: " and nothing will be billed.")
+        let and = NSAttributedString(string: Strings.nothingWillBeBilled)
         
         baseText.append(cancelAttributedText)
         baseText.append(and)
@@ -570,7 +570,7 @@ extension SwiftPaywall: UICollectionViewDelegate, UICollectionViewDataSource, UI
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
     
-    let packagesCount = offering.availablePackages.count ?? 0
+    let packagesCount = offering.availablePackages.count
     
     if CGFloat(packagesCount) < maxItemsPerRow {
       
@@ -721,27 +721,27 @@ private class PackageCell : UICollectionViewCell {
     
     switch package.packageType {
     case .lifetime:
-      durationLabel.text = "LIFETIME"
-      monthlyPriceLabel.text = "ONE TIME"
+      durationLabel.text = Strings.lifeTime
+      monthlyPriceLabel.text = Strings.oneTime
       discountLabel.isHidden = true
     case .annual:
-      durationLabel.text = "1\nYEAR"
+      durationLabel.text = "1\n" + Strings.year
       monthlyPriceLabel.text = "\(priceFormatter.string(from: package.product.price.dividing(by: 12.0)) ?? "") / mo"
     case .sixMonth:
-      durationLabel.text = "6\nMONTHS"
+      durationLabel.text = "6\n" + Strings.months
       monthlyPriceLabel.text = "\(priceFormatter.string(from: package.product.price.dividing(by: 6.0)) ?? "") / mo"
     case .threeMonth:
-      durationLabel.text = "3\nMONTHS"
+      durationLabel.text = "3\n" + Strings.months
       monthlyPriceLabel.text = "\(priceFormatter.string(from: package.product.price.dividing(by: 3.0)) ?? "") / mo"
     case .twoMonth:
-      durationLabel.text = "2\nMONTHS"
-      monthlyPriceLabel.text = "\(priceFormatter.string(from: package.product.price.dividing(by: 2.0)) ?? "") / mo"
+      durationLabel.text = "2\n" + Strings.months
+      monthlyPriceLabel.text = "\(priceFormatter.string(from: package.product.price.dividing(by: 2.0)) ?? "") / \(Strings.monthShort)"
     case .monthly:
-      durationLabel.text = "1\nMONTH"
-      monthlyPriceLabel.text = "\(package.localizedPriceString) / mo"
+      durationLabel.text = "1\n" + Strings.month
+      monthlyPriceLabel.text = "\(package.localizedPriceString) / \(Strings.monthShort)"
     case .weekly:
-      durationLabel.text = "1\nWEEK"
-      monthlyPriceLabel.text = "\(package.localizedPriceString) / wk"
+      durationLabel.text = "1\n" + Strings.week
+      monthlyPriceLabel.text = "\(package.localizedPriceString) / \(Strings.weekShort)"
     case .custom, .unknown:
       durationLabel.text = package.identifier.uppercased()
       discountLabel.isHidden = true
