@@ -27,6 +27,11 @@ public class LoginViewModel {
   }
   private var rDismiss = PublishRelay<Void>()
   
+  var oIsLoading: Observable<Bool> {
+    return rIsLoading.asObservable()
+  }
+  private var rIsLoading = PublishRelay<Bool>()
+  
   private var authState: AuthState?
   private let disposeBag = DisposeBag()
   
@@ -37,6 +42,7 @@ public class LoginViewModel {
   }
   
   func login(with credential: AuthCredential, provider: Provider) {
+    rIsLoading.accept(true)
     guard let userSessionRepository = self.userSessionRepository as? FirebaseUserSessionRepository else {
       return
     }
@@ -48,27 +54,28 @@ public class LoginViewModel {
     observerble
       .subscribe(
         onNext: { [weak self] state in
-        self?.authState = state
-        switch state {
-        case .waitingForDisplayName(let displayName):
-          self?.textInput.accept("Select factor to sign in\n\(displayName)")
-        case .waitingForVerificationCode(let displayName):
-          self?.textInput.accept("Verification code for \(displayName)")
-        case .success(_):
-          if let responder = self?.signedInResponder {
-            responder.signedIn()
+          self?.authState = state
+          switch state {
+          case .waitingForDisplayName(let displayName):
+            self?.textInput.accept("Select factor to sign in\n\(displayName)")
+          case .waitingForVerificationCode(let displayName):
+            self?.textInput.accept("Verification code for \(displayName)")
+          case .success(_):
+            if let responder = self?.signedInResponder {
+              responder.signedIn()
+            }
+            else {
+              self?.rDismiss.accept(())
+            }
+          default:
+            break
           }
-          else {
-            self?.rDismiss.accept(())
-          }
-        default:
-          break
-        }
-      },
+          self?.rIsLoading.accept(false)
+        },
         onError: { [weak self] error in
           self?.errorMessage.accept(error.localizedDescription)
       })
-    .disposed(by: disposeBag)
+      .disposed(by: disposeBag)
   }
   
   func handleUserTextInputResult(isOK: Bool, text: String) {
@@ -107,5 +114,4 @@ public class LoginViewModel {
   func handleCloseButtonClicked() {
     rDismiss.accept(())
   }
-  
 }

@@ -12,6 +12,7 @@ import RxCocoa
 import RxSwift
 import Firebase
 import GoogleSignIn
+import SVProgressHUD
 
 private var isMFAEnabled = false
 
@@ -61,6 +62,18 @@ public class LoginVC: NiblessViewController {
       .observeOn(MainScheduler.asyncInstance)
       .subscribe(onNext: { [weak self] _ in
         self?.dismiss(animated: true, completion: nil)
+      })
+      .disposed(by: disposeBag)
+    
+    viewModel.oIsLoading
+      .observeOn(MainScheduler.asyncInstance)
+      .subscribe(onNext: { isLoading in
+        if isLoading {
+          SVProgressHUD.show()
+        }
+        else {
+          SVProgressHUD.dismiss()
+        }
       })
       .disposed(by: disposeBag)
   }
