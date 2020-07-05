@@ -67,15 +67,15 @@ class LoginRootView: NiblessView {
     addSubview(buttonClose)
     addSubview(svButtonContainer)
     
+    svButtonContainer.addArrangedSubview(googleSignInButton)
+    svButtonContainer.addArrangedSubview(faceBookLoginButton)
+    //svButtonContainer.addArrangedSubview(kakaoSignInButton)
     if #available(iOS 13.0, *) {
       svButtonContainer.addArrangedSubview(siwaButton)
       siwaButton.addTarget(self, action: #selector(appleSignInTapped), for: .touchDown)
     } else {
       // Fallback on earlier versions
     }
-    svButtonContainer.addArrangedSubview(googleSignInButton)
-    //svButtonContainer.addArrangedSubview(faceBookLoginButton)
-    //svButtonContainer.addArrangedSubview(kakaoSignInButton)
     
     buttonClose.snp.makeConstraints { (make) in
       make.leading.equalToSuperview().inset(16)
@@ -91,9 +91,9 @@ class LoginRootView: NiblessView {
     svButtonContainer.snp.makeConstraints { (make) in
       make.center.equalToSuperview()
       if #available(iOS 13.0, *) {
-        make.height.equalTo(116)
+        make.height.equalTo(182)
       } else {
-        make.height.equalTo(50)
+        make.height.equalTo(116)
       }
       make.width.equalTo(self).multipliedBy(0.8)
     }

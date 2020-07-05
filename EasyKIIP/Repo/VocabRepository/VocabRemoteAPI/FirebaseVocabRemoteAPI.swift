@@ -29,9 +29,17 @@ class FirebaseVocabRemoteAPI: VocabRemoteAPI {
   private var bookDict: [Int: FirestoreDocument] = [:]
   private var lessonDict: [Int: FirestoreDocument] = [:]
   
+  private var lastUserID: String = ""
+  
   init() { }
   
   func loadLessonData(userID: String, bookID: Int, completion: @escaping ([FirebaseLesson]) -> ()) {
+    
+    if lastUserID != userID {
+      bookDict.removeAll()
+      lessonDict.removeAll()
+      lastUserID = userID
+    }
     
     // Check if the firestore document is already existed
     if let fireStoreDocument = bookDict[bookID],

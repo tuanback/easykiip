@@ -58,9 +58,12 @@ public class LoginViewModel {
           switch state {
           case .waitingForDisplayName(let displayName):
             self?.textInput.accept("Select factor to sign in\n\(displayName)")
+            self?.rIsLoading.accept(false)
           case .waitingForVerificationCode(let displayName):
             self?.textInput.accept("Verification code for \(displayName)")
+            self?.rIsLoading.accept(false)
           case .success(_):
+            self?.rIsLoading.accept(false)
             if let responder = self?.signedInResponder {
               responder.signedIn()
             }
@@ -70,7 +73,6 @@ public class LoginViewModel {
           default:
             break
           }
-          self?.rIsLoading.accept(false)
         },
         onError: { [weak self] error in
           self?.errorMessage.accept(error.localizedDescription)
