@@ -136,6 +136,34 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
     return authState!.asObservable()
   }
   
+  public func signIn(withCustomToken token: String) -> Observable<AuthState> {
+    let isMFAEnabled = false
+    authState = BehaviorSubject<AuthState>(value: .authenticating)
+    
+    Auth.auth().signIn(withCustomToken: token) { [weak self] (authResult, error) in
+      if let error = error {
+        let authError = error as NSError
+        if (isMFAEnabled && authError.code == AuthErrorCode.secondFactorRequired.rawValue) {
+          // The user is a multi-factor user. Second factor challenge is required.
+          let resolver = authError.userInfo[AuthErrorUserInfoMultiFactorResolverKey] as! MultiFactorResolver
+          var displayNameString = ""
+          for tmpFactorInfo in (resolver.hints) {
+            displayNameString += tmpFactorInfo.displayName ?? ""
+            displayNameString += " "
+          }
+          self?.authState?.onNext(.waitingForDisplayName(displayName: displayNameString))
+        } else {
+          self?.authState?.onError(error)
+          return
+        }
+        // ...
+        return
+      }
+    }
+    
+    return authState!.asObservable()
+  }
+  
   public func handleUserSelectFactorToLogIn(name: String) {
     guard let state = try? authState?.value(),
       case AuthState.waitingForDisplayName = state else {
