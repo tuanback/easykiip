@@ -302,6 +302,7 @@
 		173E19BF2498F62C001C9AA9 /* InterstitialAdLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdLoader.swift; sourceTree = "<group>"; };
 		17563DD324AF5F1800285E13 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		17563DD624AF6C7500285E13 /* SwiftPaywall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPaywall.swift; sourceTree = "<group>"; };
+		17563DD824B1B72900285E13 /* Easy KIIPDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Easy KIIPDebug.entitlements"; sourceTree = "<group>"; };
 		1757FC5C2470B8C400E41DA3 /* vocabBundled.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = vocabBundled.realm; path = Database/vocabBundled.realm; sourceTree = SOURCE_ROOT; };
 		1757FC5F2470B92E00E41DA3 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		1766FF92245A5A93008B263D /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
@@ -1013,6 +1014,7 @@
 		17B70A84244C180200C67334 /* EasyKIIP */ = {
 			isa = PBXGroup;
 			children = (
+				17563DD824B1B72900285E13 /* Easy KIIPDebug.entitlements */,
 				17E7F18024681AF2008667FB /* Repo */,
 				1766FFC9245A9FF6008B263D /* Assets */,
 				1766FF9F245A5D9A008B263D /* Reuseable */,
@@ -2520,6 +2522,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "EasyKIIP/Easy KIIPDebug.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CW3DR8XJT7;
 				FRAMEWORK_SEARCH_PATHS = (

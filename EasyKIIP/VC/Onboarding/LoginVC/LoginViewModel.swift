@@ -41,7 +41,10 @@ public class LoginViewModel {
       return
     }
     let observerble = userSessionRepository.signIn(with: credential, provider: provider)
-    
+    handleLoginEvent(observerble: observerble)
+  }
+  
+  private func handleLoginEvent(observerble: Observable<AuthState>) {
     observerble
       .subscribe(
         onNext: { [weak self] state in
