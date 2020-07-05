@@ -27,4 +27,5 @@ public protocol UserSessionRepository {
   func signUp(newAccount: NewAccount) -> Observable<UserSession>
   func signIn(email: String, password: String) -> Observable<UserSession>
   func signOut()
+  func isUserSubscribed() -> Bool
 }

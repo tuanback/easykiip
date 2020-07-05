@@ -13,6 +13,7 @@ import GoogleSignIn
 import Firebase
 import RxCocoa
 import FBSDKLoginKit
+import Purchases
 
 public class FirebaseUserSessionRepository: UserSessionRepository {
   
@@ -33,11 +34,25 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
     Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
       guard let strongSelf = self else { return }
       guard let user = user else {
-        print("Not signed in")
+        Purchases.shared.reset({ (info, error) in
+          print("User signed out")
+        })
         return
       }
       
+      Purchases.shared.identify(user.uid, { (info, error) in
+        if let e = error {
+          print("Sign in error: \(e.localizedDescription)")
+        } else {
+          print("User \(user.uid) signed in")
+        }
+      })
+      
       let userSession = strongSelf.makeUserSession(from: user)
+      
+      Purchases.shared.setEmail(user.email)
+      Purchases.shared.setDisplayName(user.displayName)
+      
       strongSelf.saveUserSession(userSession: userSession)
       strongSelf.authState?.onNext(.success(userSession: userSession))
       strongSelf.authState?.onCompleted()
@@ -53,6 +68,27 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
     let remoteSession = RemoteUserSession(token: user.refreshToken ?? "")
     let userSession = UserSession(profile: profile, remoteSession: remoteSession)
     return userSession
+  }
+  
+  public func isUserSubscribed() -> Bool {
+    let dispatchGroup = DispatchGroup()
+    dispatchGroup.enter()
+    
+    var isSubscribed = false
+    
+    Purchases.shared.purchaserInfo { (purchaseInfo, error) in
+      guard error == nil else {
+        print(error!)
+        return
+      }
+      
+      if let pi = purchaseInfo, !pi.entitlements.active.isEmpty {
+        isSubscribed = true
+      }
+    }
+    
+    let _ = dispatchGroup.wait(timeout: .now() + 0.5)
+    return isSubscribed
   }
   
   public func readUserSession() -> UserSession? {
@@ -100,7 +136,7 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
   public func handleUserSelectFactorToLogIn(name: String) {
     guard let state = try? authState?.value(),
       case AuthState.waitingForDisplayName = state else {
-      return
+        return
     }
     guard let resolver = self.resolver else { return }
     
@@ -123,7 +159,7 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
   public func handleUserSelectedVerificationCode(_ code: String) {
     guard let state = try? authState?.value(),
       case AuthState.waitingForVerificationCode = state else {
-      return
+        return
     }
     
     guard let resolver = self.resolver,

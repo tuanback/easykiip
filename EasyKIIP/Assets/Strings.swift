@@ -219,6 +219,21 @@ extension Strings {
   static var english = "English"
 }
 
+extension Strings {
+  static var benefit_unlockEverything: String {
+    NSLocalizedString("Unlock Everything", bundle: Strings.languageBundle, comment: "")
+  }
+  static var benefit_learnOffline: String {
+    NSLocalizedString("✓ Learn offline", bundle: Strings.languageBundle, comment: "")
+  }
+  static var benefit_noAds: String {
+    NSLocalizedString("✓ No advertisement", bundle: Strings.languageBundle, comment: "")
+  }
+  static var benefit_synchronizeBetweenMultipleDevices: String {
+    NSLocalizedString("✓ Learn and synchronize learning history on multiple devices", bundle: Strings.languageBundle, comment: "")
+  }
+}
+
 // Errors
 extension Strings {
   

@@ -6,8 +6,9 @@
 //  Copyright © 2019 RevenueCat. All rights reserved.
 //
 
-import UIKit
 import Purchases
+import SnapKit
+import UIKit
 
 enum PayWallEdgeStyle : String {
   case square
@@ -37,15 +38,15 @@ class SwiftPaywall: UIViewController {
   private var allowRestore : Bool
   
   // Views to optionally customize
-  public var headerView : UIView!
-  public var titleLabel : UILabel!
+  public var headerView: UIView!
+  public var titleLabel: UILabel!
   public var subtitleLabel : UILabel!
   public var buyButton : UIButton!
   public var restoreButton : UIButton!
   public var freeTrialLabel : UILabel!
   
   // Internal variables
-  private var scrollView : UIScrollView!
+  private var stackViewContainer : UIStackView!
   private var offeringCollectionView : UICollectionView!
   private let maxItemsPerRow : CGFloat = 3
   private let aspectRatio : CGFloat = 1.3
@@ -57,7 +58,7 @@ class SwiftPaywall: UIViewController {
   // This determines the cell size
   private var widthPerPackage : CGFloat {
     let paddingSpace = sectionInsets.left * (maxItemsPerRow + 1)
-    let availableWidth = view.frame.width - paddingSpace
+    let availableWidth = view.frame.width - paddingSpace - 32
     return availableWidth / maxItemsPerRow
   }
   
@@ -90,7 +91,7 @@ class SwiftPaywall: UIViewController {
     self.productDeselectedColor = productDeselectedColor
     
     super.init(nibName: nil, bundle: nil)
-    view.backgroundColor = backgroundColor
+    view.backgroundColor = UIColor.appRed
     
     buildSubviews()
     loadOfferings()
@@ -258,42 +259,32 @@ class SwiftPaywall: UIViewController {
     self.present(alert, animated: true, completion: nil)
   }
   
-  override func viewDidLayoutSubviews() {
-    // this computes the size of the scrollview to the bottom of the lowest subview + buffer
-    scrollView.contentSize = CGSize(width: view.frame.width, height: restoreButton.frame.maxY+30)
-  }
-  
   private func buildSubviews() {
     
     // The scrollView
-    scrollView = UIScrollView()
-    scrollView.translatesAutoresizingMaskIntoConstraints = false
-    scrollView.showsVerticalScrollIndicator = false
-    if #available(iOS 11.0, *) {
-      scrollView.contentInsetAdjustmentBehavior = .never
-    } else {
-      automaticallyAdjustsScrollViewInsets = false
+    stackViewContainer = UIStackView()
+    stackViewContainer.alignment = .fill
+    stackViewContainer.distribution = .fill
+    stackViewContainer.axis = .vertical
+    stackViewContainer.spacing = 16
+    stackViewContainer.translatesAutoresizingMaskIntoConstraints = false
+    
+    view.addSubview(stackViewContainer)
+    
+    stackViewContainer.snp.makeConstraints { (make) in
+      make.top.equalTo(view.safeAreaLayoutGuide)
+      make.bottom.equalTo(view.safeAreaLayoutGuide)
+      make.leading.equalTo(view.safeAreaLayoutGuide).inset(16)
+      make.trailing.equalTo(view.safeAreaLayoutGuide).inset(16)
     }
-    view.addSubview(scrollView)
-    NSLayoutConstraint.activate([
-      scrollView.rightAnchor.constraint(equalTo: view.rightAnchor),
-      scrollView.leftAnchor.constraint(equalTo: view.leftAnchor),
-      scrollView.topAnchor.constraint(equalTo: view.topAnchor),
-      scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-    ])
     
     // The header is a UIView for customization
     headerView = UIView()
-    headerView.translatesAutoresizingMaskIntoConstraints = false
-    scrollView.addSubview(headerView)
-    NSLayoutConstraint.activate([
-      headerView.rightAnchor.constraint(equalTo: scrollView.rightAnchor),
-      headerView.leftAnchor.constraint(equalTo: scrollView.leftAnchor),
-      headerView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-      headerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.25),
-      headerView.widthAnchor.constraint(equalTo: view.widthAnchor)
-    ])
+    stackViewContainer.addArrangedSubview(headerView)
     
+    headerView.snp.makeConstraints { (make) in
+      make.height.equalTo(stackViewContainer).multipliedBy(0.15)
+    }
     
     // The title label
     titleLabel = UILabel()
@@ -302,14 +293,36 @@ class SwiftPaywall: UIViewController {
     titleLabel.textAlignment = .center
     titleLabel.font = UIFont.boldSystemFont(ofSize: 26)
     titleLabel.textColor = textColor
-    titleLabel.translatesAutoresizingMaskIntoConstraints = false
-    scrollView.addSubview(titleLabel)
-    NSLayoutConstraint.activate([
-      titleLabel.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -16.0),
-      titleLabel.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 16.0),
-      titleLabel.bottomAnchor.constraint(equalTo: headerView.bottomAnchor),
-      titleLabel.heightAnchor.constraint(equalToConstant: 44.0)
-    ])
+    titleLabel.text = Strings.benefit_unlockEverything
+    headerView.addSubview(titleLabel)
+    
+    titleLabel.snp.makeConstraints { (make) in
+      make.leading.equalToSuperview()
+      make.trailing.equalToSuperview()
+      make.bottom.equalToSuperview().inset(16)
+      make.height.equalTo(44)
+    }
+    
+    let paragraph = NSMutableParagraphStyle()
+    paragraph.alignment = .left
+    paragraph.lineSpacing = 8
+    let textAttributes = [NSAttributedString.Key.font: UIFont.appFontDemiBold(ofSize: 16),
+                          NSAttributedString.Key.paragraphStyle: paragraph]
+    let baseText = Strings.benefit_synchronizeBetweenMultipleDevices + "\n" + Strings.benefit_learnOffline + "\n" + Strings.benefit_noAds
+    let benefitStr = NSAttributedString(string: baseText, attributes: textAttributes)
+    
+    subtitleLabel = UILabel()
+    subtitleLabel.numberOfLines = 0
+    subtitleLabel.minimumScaleFactor = 0.01
+    subtitleLabel.textAlignment = .left
+    subtitleLabel.textColor = textColor
+    subtitleLabel.alpha = 0.90
+    subtitleLabel.attributedText = benefitStr
+    stackViewContainer.addArrangedSubview(subtitleLabel)
+    
+    subtitleLabel.snp.makeConstraints { (make) in
+      make.height.equalTo(120)
+    }
     
     // The offering container
     let layout = UICollectionViewFlowLayout()
@@ -321,40 +334,34 @@ class SwiftPaywall: UIViewController {
     offeringCollectionView.register(PackageCell.self, forCellWithReuseIdentifier: "cell")
     offeringCollectionView.translatesAutoresizingMaskIntoConstraints = false
     offeringCollectionView.backgroundColor = .clear
-    scrollView.addSubview(offeringCollectionView)
-    NSLayoutConstraint.activate([
-      offeringCollectionView.leftAnchor.constraint(equalTo: scrollView.leftAnchor),
-      offeringCollectionView.rightAnchor.constraint(equalTo: scrollView.rightAnchor),
-      offeringCollectionView.heightAnchor.constraint(equalToConstant: view.frame.width/maxItemsPerRow*aspectRatio + sectionInsets.top*2),
-      offeringCollectionView.centerYAnchor.constraint(equalTo: scrollView.topAnchor, constant: view.frame.height/2)
-    ])
+    stackViewContainer.addArrangedSubview(offeringCollectionView)
+    
+    offeringCollectionView.snp.makeConstraints { (make) in
+      make.leading.equalToSuperview()
+      make.trailing.equalToSuperview()
+      make.height.equalTo(view.frame.width/maxItemsPerRow*aspectRatio + sectionInsets.top*2)
+    }
     
     // The offerings loading indicator
     offeringLoadingIndicator = UIActivityIndicatorView(style: .gray)
     offeringLoadingIndicator.hidesWhenStopped = true
     offeringLoadingIndicator.translatesAutoresizingMaskIntoConstraints = false
     offeringCollectionView.addSubview(offeringLoadingIndicator)
-    NSLayoutConstraint.activate([
-      offeringLoadingIndicator.centerXAnchor.constraint(equalTo: offeringCollectionView.centerXAnchor),
-      offeringLoadingIndicator.centerYAnchor.constraint(equalTo: offeringCollectionView.centerYAnchor)
-    ])
     
-    // The subtitle label
-    subtitleLabel = UILabel()
-    subtitleLabel.numberOfLines = 2
-    subtitleLabel.minimumScaleFactor = 0.01
-    subtitleLabel.textAlignment = .center
-    subtitleLabel.font = UIFont.boldSystemFont(ofSize: 14)
-    subtitleLabel.textColor = textColor
-    subtitleLabel.alpha = 0.90
-    subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
-    scrollView.addSubview(subtitleLabel)
-    NSLayoutConstraint.activate([
-      subtitleLabel.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -16.0),
-      subtitleLabel.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 16.0),
-      subtitleLabel.bottomAnchor.constraint(equalTo: offeringCollectionView.topAnchor),
-      subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 6.0)
-    ])
+    offeringLoadingIndicator.snp.makeConstraints { (make) in
+      make.center.equalToSuperview()
+    }
+    
+    // The free trial text label
+    freeTrialLabel = UILabel()
+    freeTrialLabel.numberOfLines = 2
+    freeTrialLabel.minimumScaleFactor = 0.01
+    freeTrialLabel.textAlignment = .center
+    freeTrialLabel.font = UIFont.systemFont(ofSize: 14)
+    freeTrialLabel.textColor = textColor
+    freeTrialLabel.alpha = 0.90
+    freeTrialLabel.translatesAutoresizingMaskIntoConstraints = false
+    stackViewContainer.addArrangedSubview(freeTrialLabel)
     
     // The buy button
     buyButton = UIButton()
@@ -374,40 +381,21 @@ class SwiftPaywall: UIViewController {
       break
     }
     
-    scrollView.addSubview(buyButton)
-    NSLayoutConstraint.activate([
-      buyButton.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -20.0),
-      buyButton.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 20.0),
-      buyButton.bottomAnchor.constraint(equalTo: scrollView.topAnchor, constant: view.frame.height-64),
-      buyButton.heightAnchor.constraint(equalToConstant: 50.0)
-    ])
+    stackViewContainer.addArrangedSubview(buyButton)
+    
+    buyButton.snp.makeConstraints { (make) in
+      make.height.equalTo(50)
+    }
     
     // The buy button loading indicator
     buyButtonLoadingIndicator = UIActivityIndicatorView(style: .gray)
     buyButtonLoadingIndicator.hidesWhenStopped = true
     buyButtonLoadingIndicator.translatesAutoresizingMaskIntoConstraints = false
     buyButton.addSubview(buyButtonLoadingIndicator)
-    NSLayoutConstraint.activate([
-      buyButtonLoadingIndicator.centerXAnchor.constraint(equalTo: buyButton.centerXAnchor),
-      buyButtonLoadingIndicator.centerYAnchor.constraint(equalTo: buyButton.centerYAnchor)
-    ])
     
-    // The free trial text label
-    freeTrialLabel = UILabel()
-    freeTrialLabel.numberOfLines = 2
-    freeTrialLabel.minimumScaleFactor = 0.01
-    freeTrialLabel.textAlignment = .center
-    freeTrialLabel.font = UIFont.systemFont(ofSize: 14)
-    freeTrialLabel.textColor = textColor
-    freeTrialLabel.alpha = 0.90
-    freeTrialLabel.translatesAutoresizingMaskIntoConstraints = false
-    scrollView.addSubview(freeTrialLabel)
-    NSLayoutConstraint.activate([
-      freeTrialLabel.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -16.0),
-      freeTrialLabel.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 16.0),
-      freeTrialLabel.bottomAnchor.constraint(equalTo: buyButton.topAnchor, constant: -4.0),
-      freeTrialLabel.topAnchor.constraint(equalTo: offeringCollectionView.bottomAnchor)
-    ])
+    buyButtonLoadingIndicator.snp.makeConstraints { (make) in
+      make.center.equalToSuperview()
+    }
     
     // The restore button
     restoreButton = UIButton()
@@ -418,25 +406,24 @@ class SwiftPaywall: UIViewController {
     restoreButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16.0)
     restoreButton.isHidden = !allowRestore
     
-    scrollView.addSubview(restoreButton)
-    NSLayoutConstraint.activate([
-      restoreButton.rightAnchor.constraint(equalTo: scrollView.rightAnchor, constant: -20.0),
-      restoreButton.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 20.0),
-      restoreButton.topAnchor.constraint(equalTo: buyButton.bottomAnchor, constant: 35.0),
-      restoreButton.heightAnchor.constraint(equalToConstant: 50.0)
-    ])
+    stackViewContainer.addArrangedSubview(restoreButton)
+    
+    restoreButton.snp.makeConstraints { (make) in
+      make.height.equalTo(50)
+    }
     
     // The close button
     closeButton = CloseButton(backgroundColor: productDeselectedColor, textColor: textColor)
     closeButton.translatesAutoresizingMaskIntoConstraints = false
     closeButton.addTarget(self, action: #selector(close), for: .touchUpInside)
-    scrollView.addSubview(closeButton)
-    NSLayoutConstraint.activate([
-      closeButton.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 20.0),
-      closeButton.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 30.0),
-      closeButton.widthAnchor.constraint(equalToConstant: 30.0),
-      closeButton.heightAnchor.constraint(equalToConstant: 30.0)
-    ])
+    view.addSubview(closeButton)
+    
+    closeButton.snp.makeConstraints { (make) in
+      make.top.equalTo(view.safeAreaLayoutGuide).inset(16)
+      make.leading.equalTo(view.safeAreaLayoutGuide).inset(16)
+      make.height.equalTo(40)
+      make.width.equalTo(40)
+    }
   }
 }
 

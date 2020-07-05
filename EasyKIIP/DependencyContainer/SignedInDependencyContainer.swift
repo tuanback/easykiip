@@ -108,7 +108,8 @@ public class SignedInDependencyContainer {
   func makeLessonDetailVC(bookID: Int, lessonID: Int) -> LessonDetailVC {
     let viewModel = LessonDetailViewModel(bookID: bookID,
                                           lessonID: lessonID,
-                                          vocabRepository: vocabRepository)
+                                          vocabRepository: vocabRepository,
+                                          userSessionRepo: userSessionRepository)
     let navigator = LessonDetailNavigator(factory: self)
     return LessonDetailVC(viewModel: viewModel, navigator: navigator)
   }

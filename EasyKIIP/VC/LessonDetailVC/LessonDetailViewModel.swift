@@ -11,6 +11,7 @@ import EasyKIIPKit
 import RxSwift
 import RxCocoa
 import Purchases
+import UserSession
 
 enum LessonDetailChildVC {
   case learnVocab
@@ -115,11 +116,15 @@ class LessonDetailViewModel {
   let bookID: Int
   let lessonID: Int
   let vocabRepository: VocabRepository
+  let userSessionRepository: UserSessionRepository
   
-  init(bookID: Int, lessonID: Int, vocabRepository: VocabRepository) {
+  init(bookID: Int, lessonID: Int,
+       vocabRepository: VocabRepository,
+       userSessionRepo: UserSessionRepository) {
     self.bookID = bookID
     self.lessonID = lessonID
     self.vocabRepository = vocabRepository
+    self.userSessionRepository = userSessionRepo
     getVocabs()
   }
   
@@ -219,6 +224,10 @@ class LessonDetailViewModel {
   
   private func isAbleToStartLearning() -> Bool {
     // TODO: If paid user or user with internet turn on => Can start learning
+    if userSessionRepository.isUserSubscribed() {
+      return true
+    }
+    
     if InternetStateProvider.isInternetConnected {
       return true
     }

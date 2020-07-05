@@ -52,4 +52,8 @@ public class KIIPUserSessionRepository: UserSessionRepository {
   public func signOut() {
     return dataStore.delete()
   }
+  
+  public func isUserSubscribed() -> Bool {
+    return false
+  }
 }

@@ -83,22 +83,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CFA10997-D871-4475-906D-05172E8CDA16"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "UserSession/UserSessionRepository/DataLayer/Repository/KIIPUserSessionRepository.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "signOut()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "2D5672D8-BF59-4873-9CFE-9BC6C14815C5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -115,16 +99,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F3E7584C-012C-4CDB-8B4D-9342EB721DD3"
+            uuid = "AD6F5451-F64B-40EE-A673-737FC86E0989"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EasyKIIP/AppDelegate.swift"
+            filePath = "EasyKIIP/VC/LessonDetailVC/PayWall/SwiftPaywall.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "purchases(_:didReceiveUpdated:)"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "purchaseSelectedPackage()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB8A3576-5210-480B-BCCF-C22D8C0ADD1B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EasyKIIP/VC/LessonDetailVC/PayWall/SwiftPaywall.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "restorePurchases()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

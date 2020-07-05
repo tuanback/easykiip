@@ -53,10 +53,14 @@ class SettingVM {
     sections.removeAll()
     var accountSettinsItems: [SettingItem] = []
     if userSessionRepo.readUserSession() == nil {
-      accountSettinsItems = [.login, .premiumUpgrade]
+      accountSettinsItems = [.login]
     }
     else {
-      accountSettinsItems = [.logOut, .premiumUpgrade]
+      accountSettinsItems = [.logOut]
+    }
+    
+    if !userSessionRepo.isUserSubscribed() {
+      accountSettinsItems.append(.premiumUpgrade)
     }
     
     sections.append(SettingSection(settingSectionItem: .account, settingItems: accountSettinsItems))
