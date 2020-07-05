@@ -95,4 +95,8 @@ public class MainViewModel {
   func handleSearchBarTextInput(_ searchText: String) -> [Vocab] {
     return vocabRepository.searchVocab(keyword: searchText)
   }
+  
+  func shouldLoadAds() -> Bool {
+    return !userSessionRepository.isUserSubscribed()
+  }
 }

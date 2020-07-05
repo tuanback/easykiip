@@ -46,16 +46,16 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
         } else {
           print("User \(user.uid) signed in")
         }
+        
+        let userSession = strongSelf.makeUserSession(from: user)
+        
+        Purchases.shared.setEmail(user.email)
+        Purchases.shared.setDisplayName(user.displayName)
+        
+        strongSelf.saveUserSession(userSession: userSession)
+        strongSelf.authState?.onNext(.success(userSession: userSession))
+        strongSelf.authState?.onCompleted()
       })
-      
-      let userSession = strongSelf.makeUserSession(from: user)
-      
-      Purchases.shared.setEmail(user.email)
-      Purchases.shared.setDisplayName(user.displayName)
-      
-      strongSelf.saveUserSession(userSession: userSession)
-      strongSelf.authState?.onNext(.success(userSession: userSession))
-      strongSelf.authState?.onCompleted()
     }
   }
   

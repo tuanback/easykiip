@@ -67,7 +67,7 @@ class LoginRootView: NiblessView {
     buttonClose.snp.makeConstraints { (make) in
       make.leading.equalToSuperview().inset(16)
       make.top.equalTo(safeAreaInsets.top).offset(44)
-      make.size.equalTo(44)
+      make.size.equalTo(40)
     }
     
     labelLogo.snp.makeConstraints { (make) in

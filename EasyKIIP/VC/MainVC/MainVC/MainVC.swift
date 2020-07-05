@@ -10,6 +10,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 import EasyKIIPKit
+import Firebase
+import SnapKit
 
 class MainVC: NiblessViewController {
   
@@ -24,6 +26,7 @@ class MainVC: NiblessViewController {
   private lazy var searchVocabListVM = SearchVocabListViewModel(vocabs: [])
   private lazy var searchVocabListVC = SearchVocabListVC(viewModel: searchVocabListVM)
     
+  private lazy var bannerView = GADBannerView(adSize: kGADAdSizeBanner)
   
   init(viewModel: MainViewModel,
        navigator: MainNavigator) {
@@ -34,12 +37,32 @@ class MainVC: NiblessViewController {
   
   override func loadView() {
     view = MainRootView(viewModel: viewModel)
+    setupBannerLayout()
+  }
+  
+  private func setupBannerLayout() {
+    if viewModel.shouldLoadAds() {
+      view.addSubview(bannerView)
+      bannerView.snp.makeConstraints { (make) in
+        make.bottom.equalTo(view.safeAreaLayoutGuide)
+        make.centerX.equalToSuperview()
+      }
+    }
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setupNavBar()
     observeViewModel()
+    loadAds()
+  }
+  
+  private func loadAds() {
+    if viewModel.shouldLoadAds() {
+      bannerView.adUnitID = AdsIdentifier.id(for: .banner)
+      bannerView.rootViewController = self
+      bannerView.load(GADRequest())
+    }
   }
   
   override func viewWillAppear(_ animated: Bool) {

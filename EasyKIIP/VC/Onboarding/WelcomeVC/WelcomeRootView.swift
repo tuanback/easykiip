@@ -60,20 +60,20 @@ class WelcomeRootView: NiblessView {
     buttonLogin = UIButton()
     buttonLogin.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 20)
     buttonLogin.setTitle(Strings.login, for: .normal)
+    buttonLogin.setTitleColor(UIColor.appRed, for: .normal)
     buttonLogin.backgroundColor = UIColor.white
     buttonLogin.layer.cornerRadius = 8
     buttonLogin.layer.masksToBounds = true
-    buttonLogin.setTitleColor(UIColor.black, for: .normal)
     
     buttonLogin.rx.action = viewModel.loginAction
     
     labelLoginLater = UILabel()
     labelLoginLater.text = Strings.loginLater
     labelLoginLater.textColor = UIColor(hexString: "F0F0F0")
-    labelLoginLater.font = UIFont.appFontRegular(ofSize: 18)
+    labelLoginLater.font = UIFont.appFontRegular(ofSize: 22)
     
     buttonPlayAsGuest = UIButton()
-    buttonPlayAsGuest.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 18)
+    buttonPlayAsGuest.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 22)
     buttonPlayAsGuest.setTitle(Strings.playAsGuest, for: .normal)
     buttonPlayAsGuest.backgroundColor = UIColor.clear
     buttonPlayAsGuest.setTitleColor(UIColor.white, for: .normal)
@@ -82,7 +82,7 @@ class WelcomeRootView: NiblessView {
     
     addSubview(labelLogo)
     addSubview(labelTitle)
-    //addSubview(labelMessage)
+    addSubview(labelMessage)
     addSubview(buttonLogin)
     
     let stackView = UIStackView(arrangedSubviews: [labelLoginLater,
@@ -107,7 +107,7 @@ class WelcomeRootView: NiblessView {
     
     stackView.snp.makeConstraints { (make) in
       make.centerX.equalToSuperview()
-      make.bottom.equalTo(safeAreaInsets.bottom).offset(-30)
+      make.bottom.equalTo(safeAreaInsets.bottom).offset(-60)
       make.height.equalTo(40)
     }
     
@@ -118,13 +118,11 @@ class WelcomeRootView: NiblessView {
       make.height.equalTo(50)
     }
     
-    /*
     labelMessage.snp.makeConstraints { (make) in
-      make.bottom.equalTo(buttonLogin.snp.top).offset(-20)
+      make.top.equalTo(labelTitle.snp.bottom).offset(8)
       make.leading.equalTo(self).offset(20)
       make.trailing.equalTo(self).offset(-20)
     }
-    */
   }
   
 }
