@@ -75,6 +75,9 @@ class LessonDetailVC: NiblessViewController {
     buttonPractice.setImage(UIImage(named: IconName.buttonPractice), for: .normal)
     buttonPractice.backgroundColor = UIColor.appRed
     buttonPractice.layer.cornerRadius = 30
+    buttonPractice.layer.shadowColor = UIColor.appShadowColor.cgColor
+    buttonPractice.layer.shadowRadius = 3
+    buttonPractice.layer.shadowOffset = CGSize(width: 0, height: 0)
     buttonPractice.addTarget(self, action: #selector(didButtonPracticeClicked(sender:)), for: .touchUpInside)
     
     view.addSubview(viewButtonContainer)

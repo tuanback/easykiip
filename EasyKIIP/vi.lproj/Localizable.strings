@@ -1,4 +1,16 @@
 /* No comment provided by engineer. */
+" and nothing will be billed" = " và bạn sẽ không mất phí.";
+
+/* No comment provided by engineer. */
+"✓ Learn and synchronize learning history on multiple devices" = "✓ Học và đồng bộ lịch sử học trên nhiều thiết bị";
+
+/* No comment provided by engineer. */
+"✓ Learn offline" = "✓ Học ngay cả khi ngoại tuyến";
+
+/* No comment provided by engineer. */
+"✓ No advertisement" = "✓ Không bị gián đoạn bởi quảng cáo";
+
+/* No comment provided by engineer. */
 "10 minutes per day, that's all you need" = "10 phút mỗi ngày, đó là tất cả những gì bạn cần";
 
 /* No comment provided by engineer. */
@@ -14,10 +26,16 @@
 "Cancel" = "Huỷ";
 
 /* No comment provided by engineer. */
+"Cancel before" = "Huỷ trước ngày";
+
+/* No comment provided by engineer. */
 "Continue" = "Tiếp tục";
 
 /* No comment provided by engineer. */
 "d ago" = "ngày trước";
+
+/* No comment provided by engineer. */
+"day" = "ngày";
 
 /* No comment provided by engineer. */
 "Done" = "Xong";
@@ -29,13 +47,22 @@
 "Easy KIIP" = "Easy KIIP";
 
 /* No comment provided by engineer. */
+"end of trial" = "hết hạn dùng thử";
+
+/* No comment provided by engineer. */
 "Failed" = "Thất bại";
 
 /* No comment provided by engineer. */
 "Failed to load video. Do you want to try again?" = "Không thể tải video. Bạn có muốn thử lại không?";
 
 /* No comment provided by engineer. */
+"free trail." = "dùng thử";
+
+/* No comment provided by engineer. */
 "Heart are refilled" = "Tim đã đầy lại rồi";
+
+/* No comment provided by engineer. */
+"Includes" = "Bao gồm";
 
 /* practice screen */
 "Knew" = "Đã biết";
@@ -53,6 +80,12 @@
 "Learn As Guest" = "Học ngay";
 
 /* No comment provided by engineer. */
+"LIFETIME" = "MÃI MÃI";
+
+/* No comment provided by engineer. */
+"LOADING..." = "Đang tải...";
+
+/* No comment provided by engineer. */
 "Log In" = "Đăng nhập";
 
 /* No comment provided by engineer. */
@@ -68,10 +101,25 @@
 "Login later? " = "Đăng nhập sau?";
 
 /* No comment provided by engineer. */
+"mo" = "tháng";
+
+/* No comment provided by engineer. */
+"MONTH" = "THÁNG";
+
+/* No comment provided by engineer. */
+"MONTHS" = "THÁNG";
+
+/* No comment provided by engineer. */
+"No Internet Connection" = "Không có kết nối mạng";
+
+/* No comment provided by engineer. */
 "Nothing needs more practice" = "Tuyệt vời, bạn đã học tất cả rồi";
 
 /* No comment provided by engineer. */
 "Okay" = "Ok";
+
+/* No comment provided by engineer. */
+"ONE TIME" = "MỘT LẦN";
 
 /* No comment provided by engineer. */
 "Out of heart" = "Hết tim rồi";
@@ -79,11 +127,23 @@
 /* No comment provided by engineer. */
 "Paragraph" = "Bài đọc";
 
+/* No comment provided by engineer. */
+"Please turn the internet on then try again" = "Vui lòng kết nối mạng rồi thử lại";
+
+/* No comment provided by engineer. */
+"Please turn the internet on to learn for free or upgrade to Premium user to study offline" = "Vui lòng kết nối đến internet để học miễn phí hoặc nâng cấp lên người dùng cao cấp để học không cần kết nối mạng";
+
 /* practice screen */
 "Practice makes perfect. Practice every day will help your memory better" = "Học mỗi ngày giúp bạn ghi nhớ tốt hơn. Cố lên bạn nhé 🎉";
 
 /* No comment provided by engineer. */
+"Premium Upgrade" = "Nâng cấp lên người dùng cao cấp";
+
+/* No comment provided by engineer. */
 "Quit" = "Thoát";
+
+/* No comment provided by engineer. */
+"RESTORE PURCHASES" = "KHÔI PHỤC MUA";
 
 /* No comment provided by engineer. */
 "Retry" = "Thử lại";
@@ -101,10 +161,22 @@
 "Today" = "Hôm nay";
 
 /* No comment provided by engineer. */
+"Unlock Everything" = "Mở khoá mọi thứ";
+
+/* No comment provided by engineer. */
 "Vocabulary" = "Từ vựng";
 
 /* No comment provided by engineer. */
 "Watch" = "Xem";
+
+/* No comment provided by engineer. */
+"WEEK" = "TUẦN";
+
+/* No comment provided by engineer. */
+"wk" = "tuần";
+
+/* No comment provided by engineer. */
+"YEAR" = "NĂM";
 
 /* No comment provided by engineer. */
 "Yesterday" = "Hôm qua";
