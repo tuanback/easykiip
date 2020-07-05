@@ -65,13 +65,7 @@ class SettingRootView: NiblessView {
     }
     
     dataSource.titleForFooterInSection = { dataSource, index in
-      let sectionType = dataSource.sectionModels[index].sectionType
-      switch sectionType {
-      case .account:
-        return Strings.accountExplaination
-      case .language:
-        return ""
-      }
+      return dataSource.sectionModels[index].footer
     }
     
     viewModel.oSections

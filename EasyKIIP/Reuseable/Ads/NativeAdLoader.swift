@@ -16,6 +16,8 @@ protocol NativeAdLoaderDelegate: class {
 
 class NativeAdLoader: NSObject {
   
+  var isAdsReceived: Bool = false
+  
   private let adUnitID: String
   private let numberOfAds: Int
   private weak var viewController: UIViewController?
@@ -57,6 +59,7 @@ extension NativeAdLoader: GADUnifiedNativeAdLoaderDelegate {
   
   public func adLoader(_ adLoader: GADAdLoader, didReceive nativeAd: GADUnifiedNativeAd) {
     print("Received native ad: \(nativeAd)")
+    isAdsReceived = true
     nativeAds.append(nativeAd)
   }
   

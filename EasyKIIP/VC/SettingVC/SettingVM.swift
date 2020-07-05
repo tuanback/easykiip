@@ -17,6 +17,7 @@ struct TableViewSection {
   var header: String
   var sectionType: SettingSectionItem
   var items: [SettingItem]
+  var footer: String
 }
 
 extension TableViewSection: SectionModelType {
@@ -51,15 +52,18 @@ class SettingVM {
   
   func loadSettingItems() {
     sections.removeAll()
+    let isSubscribedUser = userSessionRepo.isUserSubscribed()
+    let isUserLoggedIn = (userSessionRepo.readUserSession() != nil)
     var accountSettinsItems: [SettingItem] = []
-    if userSessionRepo.readUserSession() == nil {
-      accountSettinsItems = [.login]
-    }
-    else {
+    
+    if isUserLoggedIn {
       accountSettinsItems = [.logOut]
     }
+    else {
+      accountSettinsItems = [.login]
+    }
     
-    if !userSessionRepo.isUserSubscribed() {
+    if !isSubscribedUser {
       accountSettinsItems.append(.premiumUpgrade)
     }
     
@@ -67,9 +71,22 @@ class SettingVM {
     sections.append(SettingSection(settingSectionItem: .language, settingItems: [.appLanguage]))
     
     let tableViewSections: [TableViewSection] = sections.map {
+      
+      var footer = ""
+      
+      switch $0.settingSectionItem {
+      case .account:
+        if isSubscribedUser && !isUserLoggedIn {
+          footer = Strings.accountExplaination
+        }
+      default:
+        break
+      }
+      
       return TableViewSection(header: $0.settingSectionItem.toString(),
                               sectionType: $0.settingSectionItem,
-                              items: $0.settingItems)
+                              items: $0.settingItems,
+                              footer: footer)
     }
     
     rSections.accept(tableViewSections)

@@ -341,12 +341,13 @@ public class RealmDataStore: VocabDataStore {
     let historyRealm = historyRealmProvider.realm
     
     //Lesson history is existed and synced
-    if let lessonHistory = historyRealm.object(ofType: RealmLessonHistory.self, forPrimaryKey: lessonID),
-      let historyLastTimeSynced = lessonHistory.lastTimeSynced.value {
+    if let lessonHistory = historyRealm.object(ofType: RealmLessonHistory.self, forPrimaryKey: lessonID) {
       
       // If local last time synced > server last time synced => No need to update other fields
-      if historyLastTimeSynced >= lastTimeSynced {
-        return
+      if let historyLastTimeSynced = lessonHistory.lastTimeSynced.value {
+        if historyLastTimeSynced >= lastTimeSynced {
+          return
+        }
       }
       
       // Otherwise update local history with the data from server
@@ -362,6 +363,7 @@ public class RealmDataStore: VocabDataStore {
       
       return
     }
+    
     if let lesson = getLesson(by: lessonID) {
       var lastLearned: Date?
       if let time = lastTimeLearned {

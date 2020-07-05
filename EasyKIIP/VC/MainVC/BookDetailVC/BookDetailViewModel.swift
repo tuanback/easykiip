@@ -31,6 +31,7 @@ class BookDetailViewModel {
   
   private let bookID: Int
   private let vocabRepository: VocabRepository
+  private let isPaidUser: Bool
   
   public var oNavigation = PublishRelay<NavigationEvent<BookDetailNavigator.Destination>>()
   
@@ -47,8 +48,9 @@ class BookDetailViewModel {
   
   private var disposeBag = DisposeBag()
   
-  init(bookID: Int, bookName: String, vocabRepository: VocabRepository) {
+  init(bookID: Int, bookName: String, vocabRepository: VocabRepository, isPaidUser: Bool) {
     self.bookID = bookID
+    self.isPaidUser = isPaidUser
     self.vocabRepository = vocabRepository
     var name = bookName
     if bookName.contains("\n") {
@@ -70,6 +72,10 @@ class BookDetailViewModel {
     }
     
     oNavigation.accept(.push(destination: .lessonDetail(bookID: bookID, lessonID: lesson.id)))
+  }
+  
+  func shouldLoadAds() -> Bool {
+    return !isPaidUser
   }
   
   private func initLessons() {
@@ -118,6 +124,12 @@ class BookDetailViewModel {
   
   func addNativeAds(ads: [GADUnifiedNativeAd]) {
     nativeAds.accept(ads)
+  }
+  
+  func handleFinishLearning() {
+    for lesson in lessons.value {
+      vocabRepository.saveLessonPracticeHistory(inBook: bookID, lessonID: lesson.id)
+    }
   }
   
   private func convertToLessonItemViewModels(lessons: [Lesson]) -> [LessonItemViewModel] {

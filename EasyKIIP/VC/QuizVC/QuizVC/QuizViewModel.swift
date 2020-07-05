@@ -87,8 +87,10 @@ class QuizViewModel {
   private var endQuizAd: GADUnifiedNativeAd?
   
   private let quizEngine: QuizEngine
+  private let isPaidUser: Bool
   
-  init(quizEngine: QuizEngine) {
+  init(quizEngine: QuizEngine, isPaidUser: Bool) {
+    self.isPaidUser = isPaidUser
     self.quizEngine = quizEngine
     self.quizEngine.delegate = self
     self.startQuizEngine()
@@ -185,6 +187,10 @@ class QuizViewModel {
     
     let alertWithAction = AlertWithAction(title: Strings.failed, message: Strings.failedToLoadVideo, actions: [quitAction, retryAction] )
     rAlerts.accept(alertWithAction)
+  }
+  
+  func shouldLoadAds() -> Bool {
+    return !isPaidUser
   }
 }
 

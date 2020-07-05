@@ -116,15 +116,15 @@ class LessonDetailViewModel {
   let bookID: Int
   let lessonID: Int
   let vocabRepository: VocabRepository
-  let userSessionRepository: UserSessionRepository
+  let isPaidUser: Bool
   
   init(bookID: Int, lessonID: Int,
        vocabRepository: VocabRepository,
-       userSessionRepo: UserSessionRepository) {
+       isPaidUser: Bool) {
     self.bookID = bookID
     self.lessonID = lessonID
     self.vocabRepository = vocabRepository
-    self.userSessionRepository = userSessionRepo
+    self.isPaidUser = isPaidUser
     getVocabs()
   }
   
@@ -222,9 +222,13 @@ class LessonDetailViewModel {
     rNavigationEvent.accept(.present(destination: .payWall))
   }
   
+  func sholdLoadAds() -> Bool {
+    return !isPaidUser
+  }
+  
   private func isAbleToStartLearning() -> Bool {
     // TODO: If paid user or user with internet turn on => Can start learning
-    if userSessionRepository.isUserSubscribed() {
+    if isPaidUser {
       return true
     }
     

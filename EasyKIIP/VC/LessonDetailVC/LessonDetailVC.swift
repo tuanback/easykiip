@@ -57,15 +57,12 @@ class LessonDetailVC: NiblessViewController {
     view = UIView()
     view.backgroundColor = UIColor.appBackground
     setupViews()
-    adLoader.load()
+    loadAds()
   }
   
-  override func didMove(toParent parent: UIViewController?) {
-    super.didMove(toParent: parent)
-    
-    if parent == nil {
-      // Save practice history When the view controller is removed from navigation controller
-      viewModel.handleFinishLearning()
+  private func loadAds() {
+    if viewModel.sholdLoadAds() {
+      adLoader.load()
     }
   }
   
@@ -183,7 +180,7 @@ class LessonDetailVC: NiblessViewController {
     
     viewModel.oIsLoading
       .observeOn(MainScheduler.asyncInstance)
-      .subscribe(onNext: { [weak self] isLoading in
+      .subscribe(onNext: { isLoading in
         if isLoading {
           SVProgressHUD.show()
         }
@@ -275,11 +272,12 @@ class LessonDetailVC: NiblessViewController {
     
     InternetStateProvider.shared
       .oInternetConnectionState
+      .skip(1)
       .distinctUntilChanged()
       .subscribe(onNext: { [weak self] isConnected in
         guard let strongSelf = self else { return }
         if isConnected && !strongSelf.adLoader.isReady {
-          strongSelf.adLoader.load()
+          strongSelf.loadAds()
         }
       })
     .disposed(by: disposeBag)

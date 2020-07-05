@@ -65,9 +65,15 @@ class QuizVC: NiblessViewController {
     super.viewDidLoad()
     
     hideNavBar()
-    adLoader.load()
-    rewardAdLoader.load()
+    loadAds()
     observeViewModel()
+  }
+  
+  private func loadAds() {
+    if viewModel.shouldLoadAds() {
+      adLoader.load()
+      rewardAdLoader.load()
+    }
   }
   
   override func viewWillAppear(_ animated: Bool) {

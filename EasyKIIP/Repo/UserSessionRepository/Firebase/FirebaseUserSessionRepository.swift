@@ -77,6 +77,9 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
     var isSubscribed = false
     
     Purchases.shared.purchaserInfo { (purchaseInfo, error) in
+      defer {
+        dispatchGroup.leave()
+      }
       guard error == nil else {
         print(error!)
         return

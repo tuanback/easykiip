@@ -21,6 +21,7 @@ public class BookDetailVC: NiblessViewController {
   
   private lazy var adUnitID = AdsIdentifier.id(for: .onlyImageNativeAds)
   private var adLoader: NativeAdLoader?
+  private var numAdsToLoad: Int = 4
   
   private let disposeBag = DisposeBag()
   
@@ -53,6 +54,12 @@ public class BookDetailVC: NiblessViewController {
   }
   
   private func observeViewModel() {
+    UIApplication.shared.rx.applicationDidEnterBackground
+    .subscribe(onNext: { [weak self] _ in
+      self?.viewModel.handleFinishLearning()
+    })
+    .disposed(by: disposeBag)
+    
     viewModel.oNavigationTitle
       .bind(to: navigationItem.rx.title)
       .disposed(by: disposeBag)
@@ -85,20 +92,37 @@ public class BookDetailVC: NiblessViewController {
       })
     .disposed(by: disposeBag)
     
-    let adUnitID = self.adUnitID
-    
     viewModel.oNumberOfLessons
       .subscribe(onNext: { [weak self] count in
-        guard let strongSelf = self else { return }
         guard count > 0 else { return }
         let numAdsToLoad = count / 5
-        self?.adLoader = NativeAdLoader(adUnitID: adUnitID,
-                                        numberOfAdsToLoad: numAdsToLoad,
-                                        viewController: strongSelf,
-                                        delegate: strongSelf)
-        self?.startAdLoader()
+        self?.numAdsToLoad = numAdsToLoad
+        self?.initAndStartAdLoader(numberOfItems: numAdsToLoad)
       })
       .disposed(by: disposeBag)
+    
+    InternetStateProvider
+    .shared
+    .oInternetConnectionState
+    .skip(1)
+    .distinctUntilChanged()
+      .subscribe(onNext: { [weak self] isConnected in
+        guard let strongSelf = self, let adLoader = strongSelf.adLoader else { return }
+        if isConnected, !adLoader.isAdsReceived {
+          self?.initAndStartAdLoader(numberOfItems: strongSelf.numAdsToLoad)
+        }
+      })
+    .disposed(by: disposeBag)
+  }
+  
+  private func initAndStartAdLoader(numberOfItems: Int) {
+    guard viewModel.shouldLoadAds() else { return }
+    
+    adLoader = NativeAdLoader(adUnitID: adUnitID,
+                              numberOfAdsToLoad: numberOfItems,
+                              viewController: self,
+                              delegate: self)
+    startAdLoader()
   }
   
   private func startAdLoader() {

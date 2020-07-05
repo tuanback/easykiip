@@ -74,7 +74,7 @@ public class SignedInDependencyContainer {
   func makeBookDetailVC(bookID: Int, bookName: String) -> BookDetailVC {
     
     func makeViewModel(bookID: Int, bookName: String) -> BookDetailViewModel {
-      return BookDetailViewModel(bookID: bookID, bookName: bookName, vocabRepository: vocabRepository)
+      return BookDetailViewModel(bookID: bookID, bookName: bookName, vocabRepository: vocabRepository, isPaidUser: userSessionRepository.isUserSubscribed())
     }
     
     let navigator = BookDetailNavigator(factory: self)
@@ -109,7 +109,7 @@ public class SignedInDependencyContainer {
     let viewModel = LessonDetailViewModel(bookID: bookID,
                                           lessonID: lessonID,
                                           vocabRepository: vocabRepository,
-                                          userSessionRepo: userSessionRepository)
+                                          isPaidUser: userSessionRepository.isUserSubscribed())
     let navigator = LessonDetailNavigator(factory: self)
     return LessonDetailVC(viewModel: viewModel, navigator: navigator)
   }
@@ -139,13 +139,16 @@ public class SignedInDependencyContainer {
     
     let questionMaker = PracticeQuestionMaker(createQuestionVocabs: vocabs, randomVocabs: randomVocabs, languageCode: AppSetting.languageCode)
     
-    let vc = makeQuizVC(bookID: bookID, lessonID: lessonID, vocabs: vocabs, questionMaker: questionMaker, numberOfHeart: 3)
+    let numberOfHear: Int? = userSessionRepository.isUserSubscribed() ? nil : 3
+    
+    let vc = makeQuizVC(bookID: bookID, lessonID: lessonID, vocabs: vocabs, questionMaker: questionMaker, numberOfHeart: numberOfHear)
     return vc
   }
   
   private func makeQuizVC(bookID: Int, lessonID: Int, vocabs: [Vocab], questionMaker: QuestionMaker, numberOfHeart: Int?) -> QuizVC {
     let quizEngine = KIIPQuizEngine(bookID: bookID, lessonID: lessonID, vocabs: vocabs, numberOfHeart: numberOfHeart, questionMaker: questionMaker, vocabRepository: vocabRepository)
-    let viewModel = QuizViewModel(quizEngine: quizEngine)
+    let viewModel = QuizViewModel(quizEngine: quizEngine,
+                                  isPaidUser: userSessionRepository.isUserSubscribed())
     
     let navigator = QuizNavigator(factory: self)
     return QuizVC(viewModel: viewModel, navigator: navigator)

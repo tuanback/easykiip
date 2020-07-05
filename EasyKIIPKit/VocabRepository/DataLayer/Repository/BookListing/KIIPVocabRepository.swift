@@ -14,15 +14,19 @@ import UserSession
 
 public class KIIPVocabRepository: VocabRepository {
   
-  private var userSessionRepo: UserSessionRepository?
+  private var userSessionRepo: UserSessionRepository
   private let remoteAPI: VocabRemoteAPI
   private let dataStore: VocabDataStore
   
   private var userID: String? {
-    return userSessionRepo?.readUserSession()?.profile.id
+    return userSessionRepo.readUserSession()?.profile.id
   }
   
-  public init(userSessionRepo: UserSessionRepository?, remoteAPI: VocabRemoteAPI, dataStore: VocabDataStore) {
+  private var isPaidUser: Bool {
+    return userSessionRepo.isUserSubscribed()
+  }
+  
+  public init(userSessionRepo: UserSessionRepository, remoteAPI: VocabRemoteAPI, dataStore: VocabDataStore) {
     self.userSessionRepo = userSessionRepo
     self.remoteAPI = remoteAPI
     self.dataStore = dataStore
@@ -35,12 +39,13 @@ public class KIIPVocabRepository: VocabRepository {
   public func getListOfLesson(inBook id: Int) -> Observable<[Lesson]> {
     // Need to queries from auth remote then merge together
     let userID = self.userID
+    let isPaidUser = self.isPaidUser
     let dataStoreLessons = dataStore.getListOfLesson(inBook: id)
     
     return Observable<[Lesson]>.deferred { [weak self] in
       return Observable.create { (observer) -> Disposable in
         
-        guard let uID = userID else {
+        guard isPaidUser, let uID = userID else {
           observer.onNext(dataStoreLessons)
           return Disposables.create()
         }
@@ -85,7 +90,7 @@ public class KIIPVocabRepository: VocabRepository {
     // Need to queries from auth remote then merge together
     let dataStoreVocabs = dataStore.getListOfVocabs(inLesson: lessonID)
     
-    guard let userID = userID else {
+    guard isPaidUser, let userID = userID else {
       return .just(dataStoreVocabs)
     }
     
@@ -226,7 +231,7 @@ public class KIIPVocabRepository: VocabRepository {
   }
   
   public func saveLessonPracticeHistory(inBook id: Int, lessonID: Int) {
-    guard let userID = userID else { return }
+    guard self.isPaidUser, let userID = userID else { return }
     guard let updatedLesson = dataStore.getLesson(by: lessonID) else { return }
     
     let vocabs = dataStore.getNotSyncedVocabsInLesson(lessonID: lessonID)

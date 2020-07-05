@@ -99,33 +99,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AD6F5451-F64B-40EE-A673-737FC86E0989"
+            uuid = "1F698843-9090-407B-BF0B-AD2AFCBF32F5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EasyKIIP/VC/LessonDetailVC/PayWall/SwiftPaywall.swift"
+            filePath = "EasyKIIP/Repo/UserSessionRepository/Firebase/FirebaseUserSessionRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "purchaseSelectedPackage()"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "listenForUserLoggedIn()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "BB8A3576-5210-480B-BCCF-C22D8C0ADD1B"
+            uuid = "D09468DA-4D9B-4D61-B7C4-57650D52A041"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EasyKIIP/VC/LessonDetailVC/PayWall/SwiftPaywall.swift"
+            filePath = "EasyKIIP/Repo/UserSessionRepository/Firebase/FirebaseUserSessionRepository.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
-            landmarkName = "restorePurchases()"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "listenForUserLoggedIn()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D09468DA-4D9B-4D61-B7C4-57650D52A041 - 5af7f3dc984fb1d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRAuth, Swift.Optional&lt;__C.FIRUser&gt;) -&gt; () in Easy_KIIP.FirebaseUserSessionRepository.(listenForUserLoggedIn in _A780A34B6C8788E9BB2E41A1D5311581)() -&gt; ()"
+                  moduleName = "Easy KIIP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tuan/0.Projects/easykiip/EasyKIIP/Repo/UserSessionRepository/Firebase/FirebaseUserSessionRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "520">
+               </Location>
+               <Location
+                  uuid = "D09468DA-4D9B-4D61-B7C4-57650D52A041 - c6c450c6cd538459"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;__C.RCPurchaserInfo&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (__C.FIRAuth, Swift.Optional&lt;__C.FIRUser&gt;) -&gt; () in Easy_KIIP.FirebaseUserSessionRepository.(listenForUserLoggedIn in _A780A34B6C8788E9BB2E41A1D5311581)() -&gt; ()"
+                  moduleName = "Easy KIIP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tuan/0.Projects/easykiip/EasyKIIP/Repo/UserSessionRepository/Firebase/FirebaseUserSessionRepository.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "220">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
