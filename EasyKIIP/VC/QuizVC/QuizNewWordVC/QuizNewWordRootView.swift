@@ -13,7 +13,6 @@ import RxCocoa
 
 class QuizNewWordRootView: NiblessView {
   
-  private let stackViewLabelContainer = UIStackView()
   private let labelWord = UILabel()
   private let labelMeaning = UILabel()
   private let stackViewButtonContainer = UIStackView()
@@ -33,13 +32,9 @@ class QuizNewWordRootView: NiblessView {
   
   private func setupViews() {
     
-    addSubview(stackViewLabelContainer)
+    addSubview(labelWord)
+    addSubview(labelMeaning)
     addSubview(stackViewButtonContainer)
-  
-    stackViewLabelContainer.axis = .vertical
-    stackViewLabelContainer.alignment = .fill
-    stackViewLabelContainer.distribution = .fillEqually
-    stackViewLabelContainer.spacing = 8
     
     labelWord.font = UIFont.appFontDemiBold(ofSize: 30)
     labelWord.numberOfLines = 0
@@ -53,13 +48,10 @@ class QuizNewWordRootView: NiblessView {
     labelMeaning.textAlignment = .center
     labelMeaning.minimumScaleFactor = 0.3
     
-    stackViewLabelContainer.addArrangedSubview(labelWord)
-    stackViewLabelContainer.addArrangedSubview(labelMeaning)
-    
     stackViewButtonContainer.axis = .horizontal
     stackViewButtonContainer.alignment = .fill
     stackViewButtonContainer.distribution = .fillEqually
-    stackViewButtonContainer.spacing = 8
+    stackViewButtonContainer.spacing = 32
     
     buttonLearn.backgroundColor = UIColor.appRed
     buttonLearn.setTitleColor(UIColor.white, for: .normal)
@@ -85,11 +77,17 @@ class QuizNewWordRootView: NiblessView {
       make.bottom.equalToSuperview().inset(50)
     }
     
-    stackViewLabelContainer.snp.makeConstraints { (make) in
+    labelWord.snp.makeConstraints { (make) in
+      make.width.equalToSuperview().multipliedBy(0.8)
+      make.centerY.equalToSuperview().offset(-80)
+      make.centerX.equalToSuperview()
+    }
+    
+    labelMeaning.snp.makeConstraints { (make) in
       make.width.equalToSuperview().multipliedBy(0.8)
       make.centerX.equalToSuperview()
-      make.top.equalToSuperview()
-      make.bottom.equalTo(stackViewButtonContainer.snp.top).offset(-16)
+      make.top.equalTo(labelWord.snp.bottom).offset(16)
+      make.bottom.lessThanOrEqualTo(stackViewButtonContainer.snp.top).offset(-16)
     }
     
     bindViewModel()
