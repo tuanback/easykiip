@@ -33,8 +33,8 @@ class SwiftPaywall: UIViewController {
   private var showDiscountPercentage : Bool
   private var edgeStyle : PayWallEdgeStyle
   private var offeringId : String?
-  private var termsOfServiceURL : URL?
-  private var privacyPolicyURL : URL?
+  private var termsOfServiceURL = URL(string: "https://tuanback.github.io/ezkiip/terms.html")
+  private var privacyPolicyURL = URL(string: "https://tuanback.github.io/ezkiip/privacy.html")
   private var allowRestore : Bool
   
   // Views to optionally customize
@@ -44,6 +44,7 @@ class SwiftPaywall: UIViewController {
   public var buyButton : UIButton!
   public var restoreButton : UIButton!
   public var freeTrialLabel : UILabel!
+  public var termsAndConditionsLabel : UILabel!
   
   // Internal variables
   private var stackViewContainer : UIStackView!
@@ -151,8 +152,8 @@ class SwiftPaywall: UIViewController {
     }
     
     guard let package = offering?.availablePackages[indexPath.row] else {
-        print("No available package")
-        return
+      print("No available package")
+      return
     }
     
     setState(loading: true)
@@ -165,7 +166,7 @@ class SwiftPaywall: UIViewController {
           purchaseFailedHandler(self, info, error, cancelled)
         } else {
           if !cancelled {
-            self.showAlert(title: "Error", message: error.localizedDescription)
+            self.showAlert(title: Strings.failed, message: error.localizedDescription)
           }
         }
       } else  {
@@ -204,6 +205,30 @@ class SwiftPaywall: UIViewController {
   
   @objc private func close() {
     dismiss(animated: true, completion: nil)
+  }
+  
+  @objc private func tapToCs(tap: UITapGestureRecognizer) {
+    guard let text = termsAndConditionsLabel.text else {
+      return
+    }
+    guard let tocRange = termsAndConditionsLabel.text?.range(of: Strings.termsOfService) else {
+      return
+    }
+    guard let privacyRange = termsAndConditionsLabel.text?.range(of: Strings.privacyPolicy) else {
+      return
+    }
+    
+    if tap.didTapAttributedTextInLabel(label: termsAndConditionsLabel, inRange: NSRange(tocRange, in: text)) {
+      if let url = termsOfServiceURL {
+        let nav = UINavigationController(rootViewController: WebViewController(url: url, title: Strings.termsOfService, textColor: view.backgroundColor, barColor: textColor))
+        present(nav, animated: true, completion: nil)
+      }
+    } else if tap.didTapAttributedTextInLabel(label: termsAndConditionsLabel, inRange: NSRange(privacyRange, in: text)) {
+      if let url = privacyPolicyURL {
+        let nav = UINavigationController(rootViewController: WebViewController(url: url, title: Strings.privacyPolicy, textColor: view.backgroundColor, barColor: textColor))
+        present(nav, animated: true, completion: nil)
+      }
+    }
   }
   
   // Only call this right before purchasing or restoring
@@ -246,8 +271,8 @@ class SwiftPaywall: UIViewController {
   
   private var mostAffordablePackages : [Purchases.Package] {
     guard let sorted = offering?.availablePackages
-        .filter({$0.packageType != .lifetime && $0.packageType != .custom})
-        .sorted(by: { $1.annualCost() > $0.annualCost() }) else {
+      .filter({$0.packageType != .lifetime && $0.packageType != .custom})
+      .sorted(by: { $1.annualCost() > $0.annualCost() }) else {
         return []
     }
     return sorted
@@ -255,7 +280,7 @@ class SwiftPaywall: UIViewController {
   
   private func showAlert(title: String?, message: String?, handler: ((UIAlertAction) -> Void)? = nil) {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: handler))
+    alert.addAction(UIAlertAction(title: Strings.ok, style: .default, handler: handler))
     self.present(alert, animated: true, completion: nil)
   }
   
@@ -410,6 +435,37 @@ class SwiftPaywall: UIViewController {
     
     restoreButton.snp.makeConstraints { (make) in
       make.height.equalTo(50)
+    }
+    
+    // The Terms & Conditions Label
+    termsAndConditionsLabel = UILabel()
+    let tap = UITapGestureRecognizer(target: self, action: #selector(tapToCs(tap:)))
+    termsAndConditionsLabel.addGestureRecognizer(tap)
+    termsAndConditionsLabel.isUserInteractionEnabled = true
+    termsAndConditionsLabel.numberOfLines = 2
+    termsAndConditionsLabel.minimumScaleFactor = 0.01
+    termsAndConditionsLabel.textAlignment = .center
+    termsAndConditionsLabel.font = UIFont.systemFont(ofSize: 12)
+    termsAndConditionsLabel.textColor = textColor
+    termsAndConditionsLabel.alpha = 0.90
+    
+
+    let linkAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 12)]
+    let termsAndPrivacyStr = NSMutableAttributedString(string: "")
+    let termsText = NSAttributedString(string: Strings.termsOfService, attributes: linkAttributes)
+    let and = NSAttributedString(string: " \(Strings.and) ")
+    let privacyText = NSAttributedString(string: Strings.privacyPolicy, attributes: linkAttributes)
+    
+    termsAndPrivacyStr.append(termsText)
+    termsAndPrivacyStr.append(and)
+    termsAndPrivacyStr.append(privacyText)
+    termsAndConditionsLabel.attributedText = termsAndPrivacyStr
+    
+    termsAndConditionsLabel.translatesAutoresizingMaskIntoConstraints = false
+    stackViewContainer.addArrangedSubview(termsAndConditionsLabel)
+    
+    termsAndConditionsLabel.snp.makeConstraints { (make) in
+      make.height.equalTo(30)
     }
     
     // The close button

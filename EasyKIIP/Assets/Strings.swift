@@ -151,6 +151,15 @@ extension Strings {
   static var restorePurchases: String {
     NSLocalizedString("RESTORE PURCHASES", bundle: Strings.languageBundle, comment: "")
   }
+  static var termsOfService: String {
+    NSLocalizedString("Terms of Service", bundle: Strings.languageBundle, comment: "")
+  }
+  static var privacyPolicy: String {
+    NSLocalizedString("Privacy Policy", bundle: Strings.languageBundle, comment: "")
+  }
+  static var and: String {
+    NSLocalizedString("and", bundle: Strings.languageBundle, comment: "")
+  }
   static var endOfTrail: String {
     NSLocalizedString("end of trial", bundle: Strings.languageBundle, comment: "")
   }
