@@ -8,6 +8,7 @@
 
 import Foundation
 import UserSession
+import Purchases
 
 class AppDependencyContainer {
   
@@ -21,6 +22,15 @@ class AppDependencyContainer {
     let dataStore = makeUserSessionDataStore()
     
     self.userSessionRepository = FirebaseUserSessionRepository(dataStore: dataStore)
+    if let profile = self.userSessionRepository.readUserSession()?.profile {
+      Purchases.shared.identify(profile.id) { (info, error) in
+        if let e = error {
+          print("Sign in error: \(e.localizedDescription)")
+        } else {
+          print("User \(profile.id) signed in")
+        }
+      }
+    }
   }
   
   func makeLaunchVC() -> LaunchVC {

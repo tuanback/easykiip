@@ -77,6 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   private func setupPurchases() {
     Purchases.debugLogsEnabled = true
     Purchases.configure(withAPIKey: "xQAUOzZYRMaqNiXXXTgCRnOugpXEVqJM")
+    Purchases.shared.delegate = self
   }
 }
 

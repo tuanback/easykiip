@@ -9,6 +9,7 @@
 import Purchases
 import SnapKit
 import UIKit
+import SVProgressHUD
 
 enum PayWallEdgeStyle : String {
   case square
@@ -41,7 +42,6 @@ class SwiftPaywall: UIViewController {
   public var headerView: UIView!
   public var titleLabel: UILabel!
   public var subtitleLabel : UILabel!
-  public var buyButton : UIButton!
   public var restoreButton : UIButton!
   public var freeTrialLabel : UILabel!
   public var termsAndConditionsLabel : UILabel!
@@ -49,22 +49,12 @@ class SwiftPaywall: UIViewController {
   // Internal variables
   private var stackViewContainer : UIStackView!
   private var offeringCollectionView : UICollectionView!
-  private let maxItemsPerRow : CGFloat = 3
-  private let aspectRatio : CGFloat = 1.3
-  private let sectionInsets = UIEdgeInsets(top: 12.0,
-                                           left: 12.0,
-                                           bottom: 12.0,
-                                           right: 12.0)
-  
-  // This determines the cell size
-  private var widthPerPackage : CGFloat {
-    let paddingSpace = sectionInsets.left * (maxItemsPerRow + 1)
-    let availableWidth = view.frame.width - paddingSpace - 32
-    return availableWidth / maxItemsPerRow
-  }
+  private let sectionInsets = UIEdgeInsets(top: 8.0,
+                                           left: 8.0,
+                                           bottom: 16.0,
+                                           right: 8.0)
   
   private var offeringLoadingIndicator : UIActivityIndicatorView!
-  private var buyButtonLoadingIndicator : UIActivityIndicatorView!
   private var closeButton : CloseButton!
   
   private var offering: Purchases.Offering?
@@ -73,6 +63,9 @@ class SwiftPaywall: UIViewController {
   
   private var didChangePackage = false
   
+  private lazy var didPurchasePackageSelected: (Purchases.Package) -> () = { [weak self] package in
+    self?.purchaseSelectedPackage(package: package)
+  }
   
   init(allowRestore: Bool = true, // Whether your app allows restoring purchases, default is true for most apps
     offeringId: String? = nil, // Offering ID, defaults to the current offering in RevenueCat
@@ -118,7 +111,7 @@ class SwiftPaywall: UIViewController {
   private func loadOfferings() {
     
     offeringLoadingIndicator.startAnimating()
-    buyButton.isEnabled = false
+    SVProgressHUD.show()
     
     Purchases.shared.offerings { (offerings, error) in
       
@@ -134,27 +127,25 @@ class SwiftPaywall: UIViewController {
       }
       
       if self.offering == nil {
-        self.showAlert(title: "Error", message: "No offerings found.") { (action) in
+        self.showAlert(title: Strings.error, message: Strings.noOfferingsFound) { (action) in
           self.close()
+        }
+      }
+      
+      if let numberOfPackages = self.offering?.availablePackages.count,
+        numberOfPackages > 0 {
+        self.offeringCollectionView.snp.remakeConstraints { (make) in
+          make.height.equalTo(64 * numberOfPackages + Int(self.sectionInsets.bottom) * (numberOfPackages - 1))
         }
       }
       
       self.offeringLoadingIndicator.stopAnimating()
       self.offeringCollectionView.reloadData()
-      self.buyButton.isEnabled = true
+      SVProgressHUD.dismiss()
     }
   }
   
-  @objc private func purchaseSelectedPackage() {
-    guard let indexPath = offeringCollectionView.indexPathsForSelectedItems?.first else {
-      print("No package selected")
-      return
-    }
-    
-    guard let package = offering?.availablePackages[indexPath.row] else {
-      print("No available package")
-      return
-    }
+  private func purchaseSelectedPackage(package: Purchases.Package) {
     
     setState(loading: true)
     Purchases.shared.purchasePackage(package) { (trans, info, error, cancelled) in
@@ -236,12 +227,9 @@ class SwiftPaywall: UIViewController {
     if loading {
       
       // This is to preserve the current button text after loading is shown
-      defaultBuyButtonText = buyButton.titleLabel?.text
       defaultRestoreButtonText = restoreButton.titleLabel?.text
       
-      buyButton.isEnabled = false
-      buyButton.setTitle("", for: .normal)
-      buyButtonLoadingIndicator.startAnimating()
+      SVProgressHUD.show()
       
       restoreButton.isEnabled = false
       restoreButton.setTitle(Strings.loading, for: .normal)
@@ -250,9 +238,7 @@ class SwiftPaywall: UIViewController {
       
       closeButton.isHidden = true
     } else {
-      buyButton.isEnabled = true
-      buyButton.setTitle(defaultBuyButtonText, for: .normal)
-      buyButtonLoadingIndicator.stopAnimating()
+      SVProgressHUD.dismiss()
       
       restoreButton.isEnabled = true
       restoreButton.setTitle(defaultRestoreButtonText, for: .normal)
@@ -266,7 +252,7 @@ class SwiftPaywall: UIViewController {
   private func shouldShowDiscount(package: Purchases.Package?) -> (Bool, Purchases.Package?) {
     return (showDiscountPercentage == true
       && mostAffordablePackages.count > 1
-      && mostAffordablePackages.first?.product.productIdentifier == package?.product.productIdentifier, mostAffordablePackages.last)
+      && mostAffordablePackages.last?.product.productIdentifier != package?.product.productIdentifier, mostAffordablePackages.last)
   }
   
   private var mostAffordablePackages : [Purchases.Package] {
@@ -361,12 +347,6 @@ class SwiftPaywall: UIViewController {
     offeringCollectionView.backgroundColor = .clear
     stackViewContainer.addArrangedSubview(offeringCollectionView)
     
-    offeringCollectionView.snp.makeConstraints { (make) in
-      make.leading.equalToSuperview()
-      make.trailing.equalToSuperview()
-      make.height.equalTo(view.frame.width/maxItemsPerRow*aspectRatio + sectionInsets.top*2)
-    }
-    
     // The offerings loading indicator
     offeringLoadingIndicator = UIActivityIndicatorView(style: .gray)
     offeringLoadingIndicator.hidesWhenStopped = true
@@ -387,40 +367,6 @@ class SwiftPaywall: UIViewController {
     freeTrialLabel.alpha = 0.90
     freeTrialLabel.translatesAutoresizingMaskIntoConstraints = false
     stackViewContainer.addArrangedSubview(freeTrialLabel)
-    
-    // The buy button
-    buyButton = UIButton()
-    buyButton.addTarget(self, action: #selector(purchaseSelectedPackage), for: .touchUpInside)
-    buyButton.translatesAutoresizingMaskIntoConstraints = false
-    buyButton.backgroundColor = textColor
-    buyButton.setTitle(Strings.continueStr, for: .normal)
-    buyButton.setTitleColor(view.backgroundColor, for: .normal)
-    buyButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-    
-    switch edgeStyle {
-    case .round:
-      buyButton.layer.cornerRadius = 25
-    case .soft:
-      buyButton.layer.cornerRadius = 8
-    case .square:
-      break
-    }
-    
-    stackViewContainer.addArrangedSubview(buyButton)
-    
-    buyButton.snp.makeConstraints { (make) in
-      make.height.equalTo(50)
-    }
-    
-    // The buy button loading indicator
-    buyButtonLoadingIndicator = UIActivityIndicatorView(style: .gray)
-    buyButtonLoadingIndicator.hidesWhenStopped = true
-    buyButtonLoadingIndicator.translatesAutoresizingMaskIntoConstraints = false
-    buyButton.addSubview(buyButtonLoadingIndicator)
-    
-    buyButtonLoadingIndicator.snp.makeConstraints { (make) in
-      make.center.equalToSuperview()
-    }
     
     // The restore button
     restoreButton = UIButton()
@@ -491,12 +437,12 @@ extension SwiftPaywall: UICollectionViewDelegate, UICollectionViewDataSource, UI
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let package = offering?.availablePackages[indexPath.row]
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PackageCell
+    
+    cell.didPurchasePackageSelected = self.didPurchasePackageSelected
+    
     cell.setupWith(
       package: package,
-      discount: shouldShowDiscount(package: package),
-      edgeStyle: edgeStyle,
-      productSelectedColor: productSelectedColor,
-      productDeselectedColor: productDeselectedColor)
+      discount: shouldShowDiscount(package: package))
     
     // Should this package be selected
     if !didChangePackage && mostAffordablePackages.first?.product.productIdentifier == package?.product.productIdentifier {
@@ -559,31 +505,14 @@ extension SwiftPaywall: UICollectionViewDelegate, UICollectionViewDataSource, UI
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: widthPerPackage, height: widthPerPackage*aspectRatio)
-  }
-  
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    
-    let packagesCount = offering?.availablePackages.count ?? 0
-    
-    if CGFloat(packagesCount) < maxItemsPerRow {
-      
-      let totalCellWidth = widthPerPackage * CGFloat(packagesCount)
-      let totalSpacingWidth = sectionInsets.left * CGFloat(packagesCount - 1)
-      
-      let leftInset = (collectionView.frame.width - (totalCellWidth + totalSpacingWidth)) / 2
-      
-      return UIEdgeInsets(
-        top: sectionInsets.top,
-        left: leftInset,
-        bottom: sectionInsets.bottom,
-        right: leftInset)
-    } else {
-      return sectionInsets
-    }
+    return CGSize(width: collectionView.frame.width, height: 64)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    return sectionInsets.bottom
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
     return sectionInsets.left
   }
   
@@ -591,156 +520,92 @@ extension SwiftPaywall: UICollectionViewDelegate, UICollectionViewDataSource, UI
 
 private class PackageCell : UICollectionViewCell {
   
-  let containerView: UIView = {
-    let view = UIView()
-    view.translatesAutoresizingMaskIntoConstraints = false
-    view.backgroundColor = .clear
-    view.layer.masksToBounds = true
-    view.clipsToBounds = true
-    return view
+  var didPurchasePackageSelected: ((Purchases.Package) -> ())?
+  
+  let buyButton: UIButton = {
+    let button = UIButton()
+    button.backgroundColor = UIColor.white
+    button.setTitleColor(UIColor.darkText, for: .normal)
+    button.layer.cornerRadius = 5
+    button.titleLabel?.font = UIFont.appFontMedium(ofSize: 20)
+    return button
   }()
   
   let discountLabel: UILabel = {
     let label = UILabel()
-    label.textColor = .white
-    label.backgroundColor = UIColor(red: 0.165, green: 0.663, blue: 0.545, alpha: 1.00)
     label.font = UIFont.boldSystemFont(ofSize: 12)
     label.numberOfLines = 1
     label.minimumScaleFactor = 0.1
     label.textAlignment = .center
     label.translatesAutoresizingMaskIntoConstraints = false
-    return label
-  }()
-  
-  let durationLabel: UILabel = {
-    let label = UILabel()
-    label.font = UIFont.boldSystemFont(ofSize: 16)
-    label.numberOfLines = 2
-    label.textAlignment = .center
-    label.minimumScaleFactor = 0.1
-    label.translatesAutoresizingMaskIntoConstraints = false
-    return label
-  }()
-  
-  let priceLabel: UILabel = {
-    let label = UILabel()
-    label.font = UIFont.boldSystemFont(ofSize: 18)
-    label.numberOfLines = 1
-    label.textAlignment = .center
-    label.translatesAutoresizingMaskIntoConstraints = false
-    return label
-  }()
-  
-  let monthlyPriceLabel: UILabel = {
-    let label = UILabel()
-    label.font = UIFont.boldSystemFont(ofSize: 14)
-    label.numberOfLines = 1
-    label.textAlignment = .center
-    label.translatesAutoresizingMaskIntoConstraints = false
+    label.textColor = UIColor.white
     return label
   }()
   
   let discountFormatter = NumberFormatter()
   let priceFormatter = NumberFormatter()
-  var highlightColor : UIColor?
-  var secondaryColor : UIColor?
+  
+  private var package: Purchases.Package?
   
   override init(frame: CGRect) {
     super.init(frame: frame)
     buildSubviews()
   }
   
-  override var isSelected: Bool {
-    didSet {
-      setHighlighted(self.isSelected)
-    }
-  }
-  
-  func setHighlighted( _ highlighted: Bool) {
-    if highlighted {
-      containerView.backgroundColor = highlightColor
-      durationLabel.textColor = secondaryColor?.withAlphaComponent(0.6)
-      priceLabel.textColor = secondaryColor?.withAlphaComponent(0.9)
-      monthlyPriceLabel.textColor = secondaryColor?.withAlphaComponent(0.7)
-    } else {
-      containerView.backgroundColor = secondaryColor?.withAlphaComponent(0.1)
-      durationLabel.textColor = highlightColor?.withAlphaComponent(0.5)
-      priceLabel.textColor = highlightColor?.withAlphaComponent(0.5)
-      monthlyPriceLabel.textColor = highlightColor?.withAlphaComponent(0.5)
-    }
-  }
-  
   func setupWith(
     package: Purchases.Package?,
-    discount: (Bool, Purchases.Package?),
-    edgeStyle: PayWallEdgeStyle = .round,
-    productSelectedColor: UIColor? = nil,
-    productDeselectedColor: UIColor? = nil) {
+    discount: (Bool, Purchases.Package?)) {
     
     guard let package = package else {
-      durationLabel.text = nil
       discountLabel.isHidden = true
-      priceLabel.text = nil
-      monthlyPriceLabel.text = nil
       return
     }
     
-    self.highlightColor = productSelectedColor
-    self.secondaryColor = productDeselectedColor
-    
-    switch edgeStyle {
-    case .round:
-      containerView.layer.cornerRadius = 12
-    case .soft:
-      containerView.layer.cornerRadius = 8
-    case .square:
-      break
-    }
-    
-    containerView.backgroundColor = secondaryColor?.withAlphaComponent(0.1)
-    durationLabel.backgroundColor = secondaryColor?.withAlphaComponent(0.08)
-    setHighlighted(isSelected)
+    self.package = package
     
     discountLabel.isHidden = !discount.0
+    var priceLabelText = ""
+    var discountText = ""
+    var monthlyPriceText = ""
     
     if discount.0, let discount = discount.1 {
       discountFormatter.numberStyle = .percent
-      discountLabel.text = "SAVE \(discountFormatter.string(from: discountBetween(highest: discount, current: package)) ?? "")"
+      discountText = "\(Strings.save) \(discountFormatter.string(from: discountBetween(highest: discount, current: package)) ?? "")"
     }
     
     priceFormatter.numberStyle = .currency
     priceFormatter.locale = package.product.priceLocale
     
-    priceLabel.text = package.localizedPriceString
-    
     switch package.packageType {
     case .lifetime:
-      durationLabel.text = Strings.lifeTime
-      monthlyPriceLabel.text = Strings.oneTime
+      priceLabelText = package.localizedPriceString + " / " + Strings.lifeTime
       discountLabel.isHidden = true
     case .annual:
-      durationLabel.text = "1\n" + Strings.year
-      monthlyPriceLabel.text = "\(priceFormatter.string(from: package.product.price.dividing(by: 12.0)) ?? "") / mo"
+      priceLabelText = package.localizedPriceString + " / " + "1 " + Strings.year
+      monthlyPriceText = "\(priceFormatter.string(from: package.product.price.dividing(by: 12.0)) ?? "") / \(Strings.monthShort)"
     case .sixMonth:
-      durationLabel.text = "6\n" + Strings.months
-      monthlyPriceLabel.text = "\(priceFormatter.string(from: package.product.price.dividing(by: 6.0)) ?? "") / mo"
+      priceLabelText = package.localizedPriceString + " / " + "6 " + Strings.months
+      monthlyPriceText = "\(priceFormatter.string(from: package.product.price.dividing(by: 6.0)) ?? "") / \(Strings.monthShort)"
     case .threeMonth:
-      durationLabel.text = "3\n" + Strings.months
-      monthlyPriceLabel.text = "\(priceFormatter.string(from: package.product.price.dividing(by: 3.0)) ?? "") / mo"
+      priceLabelText = package.localizedPriceString + " / " + "3 " + Strings.months
+      monthlyPriceText = "\(priceFormatter.string(from: package.product.price.dividing(by: 3.0)) ?? "") / \(Strings.monthShort)"
     case .twoMonth:
-      durationLabel.text = "2\n" + Strings.months
-      monthlyPriceLabel.text = "\(priceFormatter.string(from: package.product.price.dividing(by: 2.0)) ?? "") / \(Strings.monthShort)"
+      priceLabelText = package.localizedPriceString + " / " + "2 " + Strings.months
+      monthlyPriceText = "\(priceFormatter.string(from: package.product.price.dividing(by: 2.0)) ?? "") / \(Strings.monthShort)"
     case .monthly:
-      durationLabel.text = "1\n" + Strings.month
-      monthlyPriceLabel.text = "\(package.localizedPriceString) / \(Strings.monthShort)"
+      priceLabelText = package.localizedPriceString + " / " + "1 " + Strings.month
+      monthlyPriceText = "\(package.localizedPriceString) / \(Strings.monthShort)"
     case .weekly:
-      durationLabel.text = "1\n" + Strings.week
-      monthlyPriceLabel.text = "\(package.localizedPriceString) / \(Strings.weekShort)"
+      priceLabelText = package.localizedPriceString + " / " + "1 " + Strings.week
+      monthlyPriceText = "\(package.localizedPriceString) / \(Strings.weekShort)"
     case .custom, .unknown:
-      durationLabel.text = package.identifier.uppercased()
+      priceLabelText = package.localizedPriceString + " / " + package.identifier.uppercased()
       discountLabel.isHidden = true
-      monthlyPriceLabel.text = nil
     }
+    
+    let discount = "(\(monthlyPriceText), \(discountText))"
+    buyButton.setTitle(priceLabelText, for: .normal)
+    discountLabel.text = discount
   }
   
   func discountBetween(highest: Purchases.Package, current: Purchases.Package) -> NSNumber {
@@ -784,51 +649,33 @@ private class PackageCell : UICollectionViewCell {
   }
   
   func buildSubviews() {
-    addSubview(containerView)
-    NSLayoutConstraint.activate([
-      containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-      containerView.topAnchor.constraint(equalTo: self.topAnchor),
-      containerView.leftAnchor.constraint(equalTo: self.leftAnchor),
-      containerView.rightAnchor.constraint(equalTo: self.rightAnchor)
-    ])
-    
-    containerView.addSubview(durationLabel)
-    NSLayoutConstraint.activate([
-      durationLabel.heightAnchor.constraint(equalTo: containerView.heightAnchor, multiplier: 0.5),
-      durationLabel.topAnchor.constraint(equalTo: containerView.topAnchor),
-      durationLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor),
-      durationLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor),
-    ])
-    
-    containerView.addSubview(priceLabel)
-    NSLayoutConstraint.activate([
-      priceLabel.topAnchor.constraint(equalTo: durationLabel.bottomAnchor, constant: 8),
-      priceLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor),
-      priceLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor),
-      priceLabel.heightAnchor.constraint(equalTo: containerView.heightAnchor, multiplier: 0.20)
-    ])
-    
-    containerView.addSubview(monthlyPriceLabel)
-    NSLayoutConstraint.activate([
-      monthlyPriceLabel.topAnchor.constraint(equalTo: priceLabel.bottomAnchor),
-      monthlyPriceLabel.leftAnchor.constraint(equalTo: containerView.leftAnchor),
-      monthlyPriceLabel.rightAnchor.constraint(equalTo: containerView.rightAnchor),
-      monthlyPriceLabel.heightAnchor.constraint(equalToConstant: 17.0)
-    ])
-    
+    addSubview(buyButton)
     addSubview(discountLabel)
-    discountLabel.layer.cornerRadius = 10
-    discountLabel.clipsToBounds = true
-    NSLayoutConstraint.activate([
-      discountLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
-      discountLabel.heightAnchor.constraint(equalToConstant: 20),
-      discountLabel.centerYAnchor.constraint(equalTo: self.topAnchor),
-      discountLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor)
-    ])
+    
+    discountLabel.snp.makeConstraints { (make) in
+      make.height.equalTo(20)
+      make.leading.equalToSuperview()
+      make.trailing.equalToSuperview()
+      make.bottom.equalToSuperview()
+    }
+    
+    buyButton.snp.makeConstraints { (make) in
+      make.top.equalToSuperview()
+      make.leading.equalToSuperview()
+      make.trailing.equalToSuperview()
+      make.bottom.equalTo(discountLabel.snp.top)
+    }
+    
+    buyButton.addTarget(self, action: #selector(handlePurchaseButtonClicked(button:)), for: .touchUpInside)
   }
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  @objc func handlePurchaseButtonClicked(button: UIButton) {
+    guard let package = self.package else { return }
+    didPurchasePackageSelected?(package)
   }
 }
 

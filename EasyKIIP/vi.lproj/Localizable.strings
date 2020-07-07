@@ -17,6 +17,9 @@
 "Account" = "Tài khoản";
 
 /* No comment provided by engineer. */
+"and" = "và";
+
+/* No comment provided by engineer. */
 "App Language" = "Ngôn ngữ ứng dụng";
 
 /* No comment provided by engineer. */
@@ -50,6 +53,9 @@
 "end of trial" = "hết hạn dùng thử";
 
 /* No comment provided by engineer. */
+"Error" = "Lỗi";
+
+/* No comment provided by engineer. */
 "Failed" = "Thất bại";
 
 /* No comment provided by engineer. */
@@ -80,7 +86,7 @@
 "Learn As Guest" = "Học ngay";
 
 /* No comment provided by engineer. */
-"LIFETIME" = "MÃI MÃI";
+"LifeTime" = "Trọn đời";
 
 /* No comment provided by engineer. */
 "LOADING..." = "Đang tải...";
@@ -104,13 +110,16 @@
 "mo" = "tháng";
 
 /* No comment provided by engineer. */
-"MONTH" = "THÁNG";
+"Month" = "Tháng";
 
 /* No comment provided by engineer. */
-"MONTHS" = "THÁNG";
+"Months" = "Tháng";
 
 /* No comment provided by engineer. */
 "No Internet Connection" = "Không có kết nối mạng";
+
+/* No comment provided by engineer. */
+"No offerings found." = "Không tải được gói";
 
 /* No comment provided by engineer. */
 "Nothing needs more practice" = "Tuyệt vời, bạn đã học tất cả rồi";
@@ -119,7 +128,7 @@
 "Okay" = "Ok";
 
 /* No comment provided by engineer. */
-"ONE TIME" = "MỘT LẦN";
+"One Time" = "Một lần";
 
 /* No comment provided by engineer. */
 "Out of heart" = "Hết tim rồi";
@@ -140,6 +149,9 @@
 "Premium Upgrade" = "Nâng cấp lên người dùng cao cấp";
 
 /* No comment provided by engineer. */
+"Privacy Policy" = "Quyền riêng tư";
+
+/* No comment provided by engineer. */
 "Quit" = "Thoát";
 
 /* No comment provided by engineer. */
@@ -149,10 +161,16 @@
 "Retry" = "Thử lại";
 
 /* No comment provided by engineer. */
+"Save" = "Tiết kiệm";
+
+/* No comment provided by engineer. */
 "Search vocab or translation" = "Tìm kiếm từ vựng và nghĩa";
 
 /* No comment provided by engineer. */
 "Settings" = "Cài đặt";
+
+/* No comment provided by engineer. */
+"Terms of Service" = "Điều khoản dịch vụ";
 
 /* practice screen */
 "This advertisement helps you to learn for free" = "Quảng cáo này giúp bạn có thể học miễn phí";
@@ -170,13 +188,13 @@
 "Watch" = "Xem";
 
 /* No comment provided by engineer. */
-"WEEK" = "TUẦN";
+"Week" = "Tuần";
 
 /* No comment provided by engineer. */
 "wk" = "tuần";
 
 /* No comment provided by engineer. */
-"YEAR" = "NĂM";
+"Year" = "Năm";
 
 /* No comment provided by engineer. */
 "Yesterday" = "Hôm qua";

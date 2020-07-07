@@ -43,14 +43,16 @@
 			</array>
 		</dict>
 	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>FacebookAppID</key>
 	<string>182915953149818</string>
 	<key>FacebookDisplayName</key>
 	<string>Easy KIIP</string>
-	<key>CFBundleVersion</key>
-	<string>1</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-4377015897765379~4150447784</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>KAKAO_APP_KEY</key>
 	<string>21f9186831863bbfdfceb83edcf84d95</string>
 	<key>LSApplicationQueriesSchemes</key>
@@ -86,8 +88,6 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>ITSAppUsesNonExemptEncryption</key>
-	<false/>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

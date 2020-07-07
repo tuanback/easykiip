@@ -145,6 +145,9 @@ extension Strings {
   static var failedToLoadVideo: String {
     NSLocalizedString("Failed to load video. Do you want to try again?", bundle: Strings.languageBundle, comment: "")
   }
+  static var error: String {
+    NSLocalizedString("Error", bundle: Strings.languageBundle, comment: "")
+  }
   static var loading: String {
     NSLocalizedString("LOADING...", bundle: Strings.languageBundle, comment: "")
   }
@@ -160,6 +163,12 @@ extension Strings {
   static var and: String {
     NSLocalizedString("and", bundle: Strings.languageBundle, comment: "")
   }
+  static var save: String {
+    NSLocalizedString("Save", bundle: Strings.languageBundle, comment: "")
+  }
+  static var noOfferingsFound: String {
+    NSLocalizedString("No offerings found.", bundle: Strings.languageBundle, comment: "")
+  }
   static var endOfTrail: String {
     NSLocalizedString("end of trial", bundle: Strings.languageBundle, comment: "")
   }
@@ -172,22 +181,22 @@ extension Strings {
   }
   
   static var lifeTime: String {
-    NSLocalizedString("LIFETIME", bundle: Strings.languageBundle, comment: "")
+    NSLocalizedString("LifeTime", bundle: Strings.languageBundle, comment: "")
   }
   static var oneTime: String {
-    NSLocalizedString("ONE TIME", bundle: Strings.languageBundle, comment: "")
+    NSLocalizedString("One Time", bundle: Strings.languageBundle, comment: "")
   }
   static var year: String {
-    NSLocalizedString("YEAR", bundle: Strings.languageBundle, comment: "")
+    NSLocalizedString("Year", bundle: Strings.languageBundle, comment: "")
   }
   static var months: String {
-    NSLocalizedString("MONTHS", bundle: Strings.languageBundle, comment: "")
+    NSLocalizedString("Months", bundle: Strings.languageBundle, comment: "")
   }
   static var month: String {
-    NSLocalizedString("MONTH", bundle: Strings.languageBundle, comment: "")
+    NSLocalizedString("Month", bundle: Strings.languageBundle, comment: "")
   }
   static var week: String {
-    NSLocalizedString("WEEK", bundle: Strings.languageBundle, comment: "")
+    NSLocalizedString("Week", bundle: Strings.languageBundle, comment: "")
   }
   static var day: String {
     NSLocalizedString("day", bundle: Strings.languageBundle, comment: "")
