@@ -1,9 +1,9 @@
 ﻿ID,LessonID,Word,vi,en
 12001,61,결혼,Kết hôn,Get married
 12002,61,연애하다,"hẹn hò, yêu đương","dating, love"
-12003,61,연애 결혼,kết hôn dựa trên sự yêu đương,Marriage is based on love
-12004,61,선을 보다,"dạm ngõ, coi mắt, đám hỏi","brooding, watching the eyes, the questions"
-12005,61,약혼하다,"ước hôn, đính hôn","betrothal, engagement"
+12003,61,연애 결혼,kết hôn dựa trên sự yêu đương,Marriage based on love
+12004,61,선을 보다,"dạm ngõ, coi mắt, đám hỏi",see each other with a view to marriage
+12005,61,약혼하다,"ước hôn, đính hôn",engage
 12006,61,중매 결혼,kết hôn do mai mối,marriage by matchmaking
 12007,61,결혼하다,"kết hôn, cưới",get married
 12008,61,이혼하다,ly hôn,divorce
@@ -11,11 +11,11 @@
 12010,61,사회자,người dẫn chương trình,MC
 12011,61,신부,cô dâu,bride
 12012,61,신랑,chú rể,groom
-12013,61,하객,quan khách chúc mừng,greeted by the guests
+12013,61,하객,quan khách chúc mừng,guests
 12014,61,청혼하다,cầu hôn,propose
 12015,61,상견례를 하다,gặp mặt hai bên,meet the two sides
 12016,61,결혼 날짜를 잡다,định ngày cưới,set wedding date
-12017,61,결혼식장을 잡다,định nơi cưới,where to get married
+12017,61,결혼식장을 잡다,định nơi cưới,decide the weeding hall
 12018,61,예단/예물을 준비하다,chuẩn bị quà cưới,Prepare wedding gifts
 12019,61,예단,quà cưới của cô dâu cho gia đình nhà chồng,Wedding gifts for the bride's family
 12020,61,예물,quà cưới của cô dâu và chú rể dành cho nhau,Wedding gifts of the bride and groom for each other
@@ -55,13 +55,13 @@
 12054,61,수탉,con gà trống,rooster
 12055,61,이러하다,như thế này,like this
 12056,61,예를 듣다,"cho ví dụ, chẳng hạn như, ví dụ như","for example, such as, eg"
-12057,61,나타내다,"biểu thị, thể hiện, chứng tỏ","show, show, prove"
+12057,61,나타내다,"biểu thị, thể hiện, chứng tỏ","show, prove"
 12058,61,상징하다,tượng trưng,represent
 12059,61,족두리,"Chokturi, mũ vành của phụ nữ đội trong các nghi thức lễ.","Chokturi, women's headwear worn during rituals."
 12060,61,붉은색,màu đỏ đậm,dark red
-12061,61,막다,"giúp che chở, bảo vệ, ngăn chặn","Help protect, protect, prevent"
-12062,61,믿다,"tin, tin tưởng","believe, believe"
-12063,61,볼,"gò má, má","cheekbones, cheeks"
+12061,61,막다,"giúp che chở, bảo vệ, ngăn chặn","block, protect, prevent"
+12062,61,믿다,"tin, tin tưởng",believe
+12063,61,볼,"gò má, má",cheeks
 12064,61,연지,phấn son màu hồng,pink lipstick
 12065,61,이마,trán,forehead
 12066,61,곤지,vết son đỏ trên trán cô dâu.,Red lipstick marks on the bride's forehead.
