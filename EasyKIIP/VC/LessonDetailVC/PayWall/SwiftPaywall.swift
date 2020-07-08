@@ -284,7 +284,7 @@ class SwiftPaywall: UIViewController {
     
     stackViewContainer.snp.makeConstraints { (make) in
       make.top.equalTo(view.safeAreaLayoutGuide)
-      make.bottom.equalTo(view.safeAreaLayoutGuide)
+      make.bottom.equalTo(view.safeAreaLayoutGuide).inset(16)
       make.leading.equalTo(view.safeAreaLayoutGuide).inset(16)
       make.trailing.equalTo(view.safeAreaLayoutGuide).inset(16)
     }

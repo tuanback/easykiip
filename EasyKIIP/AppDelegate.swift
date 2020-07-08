@@ -61,6 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
     GADMobileAds.sharedInstance().start(completionHandler: nil)
     
+    /*
     KOSession.shared()?.logoutAndClose(completionHandler: { (success, error) in
       if let err = error {
         print(err)
@@ -69,6 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Logout succeeded")
       }
     })
+    */
     // Sign out for testing
     //    GIDSignIn.sharedInstance()?.signOut()
     //    try? Auth.auth().signOut()

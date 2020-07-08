@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
-import AVFoundation
 
 class QuizPracticeRootView: NiblessView {
   
@@ -21,8 +20,6 @@ class QuizPracticeRootView: NiblessView {
   private let disposeBag = DisposeBag()
   
   private let viewModel: QuizPracticeViewModel
-  
-  private var player: AVAudioPlayer?
   
   init(viewModel: QuizPracticeViewModel,
        frame: CGRect = .zero) {
@@ -111,14 +108,6 @@ class QuizPracticeRootView: NiblessView {
       })
       .disposed(by: disposeBag)
     
-    viewModel.oPlaySound
-      .observeOn(MainScheduler.asyncInstance)
-      .subscribe(onNext: { [weak self] sound in
-        let url = sound.url
-        self?.playSound(url: url)
-      })
-      .disposed(by: disposeBag)
-    
     viewModel.oCorrectViewHidden
       .observeOn(MainScheduler.asyncInstance)
       .subscribe(onNext: { [weak self] isHidden in
@@ -126,22 +115,6 @@ class QuizPracticeRootView: NiblessView {
         
       })
       .disposed(by: disposeBag)
-  }
-  
-  func playSound(url: URL) {
-    do {
-      try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-      try AVAudioSession.sharedInstance().setActive(true)
-      
-      player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
-      
-      guard let player = player else { return }
-      
-      player.play()
-      
-    } catch let error {
-      print(error.localizedDescription)
-    }
   }
   
   private func createOptionButton(option: String, status: QuizOptionStatus) -> UIButton {

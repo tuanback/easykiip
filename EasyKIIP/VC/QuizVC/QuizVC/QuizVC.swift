@@ -6,6 +6,7 @@
 //  Copyright © 2020 Real Life Swift. All rights reserved.
 //
 
+import AVFoundation
 import Foundation
 import UIKit
 import Firebase
@@ -42,6 +43,7 @@ class QuizVC: NiblessViewController {
   private lazy var rewardAdLoader = RewardAdLoader(adUnitID: rewardAdUnitID,
                                                    delegate: self)
   
+  private var player: AVAudioPlayer?
   private var didShowVideoAds = false
   
   init(viewModel: QuizViewModel,
@@ -112,6 +114,14 @@ class QuizVC: NiblessViewController {
             strongSelf.pageViewController
               .setViewControllers([strongSelf.practiceVC!], direction: .forward,
                                   animated: true, completion: nil)
+            
+            vm.oPlaySound
+              .observeOn(MainScheduler.asyncInstance)
+              .subscribe(onNext: { [weak self] sound in
+                let url = sound.url
+                self?.playSound(url: url)
+              })
+              .disposed(by: strongSelf.disposeBag)
           }
         }
       })
@@ -181,6 +191,22 @@ class QuizVC: NiblessViewController {
     }
     
     present(alertMessage, animated: true, completion: nil)
+  }
+  
+  func playSound(url: URL) {
+    do {
+      try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+      try AVAudioSession.sharedInstance().setActive(true)
+      
+      player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
+      
+      guard let player = player else { return }
+      
+      player.play()
+      
+    } catch let error {
+      print(error.localizedDescription)
+    }
   }
 }
 

@@ -180,7 +180,7 @@ public class RealmDataStore: VocabDataStore {
         }
       }
       else if let lesson = getRealmLesson(of: vocab.id) {
-        let lessonHistory = RealmLessonHistory(lessonID: lesson.index,
+        let lessonHistory = RealmLessonHistory(lessonID: lesson.id,
                                                numberOfVocabs: lesson.vocabs.count,
                                                isSynced: false,
                                                lastTimeSynced: nil,
