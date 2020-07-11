@@ -9,18 +9,26 @@
 import Foundation
 import Firebase
 
+protocol InterstitialAdLoaderDelegate: class {
+  func interstitialAdLoaderDidClose()
+  func interstitialAdLoaderDidReceiveAd()
+}
+
 class InterstitialAdLoader: NSObject {
   
   private var interstitial: GADInterstitial!
   private let adUnitID: String
   
+  private weak var delegate: InterstitialAdLoaderDelegate?
+  
   var isReady: Bool {
     return interstitial.isReady
   }
   
-  init(adUnitID: String) {
+  init(adUnitID: String, delegate: InterstitialAdLoaderDelegate?) {
     self.adUnitID = adUnitID
     self.interstitial = GADInterstitial(adUnitID: adUnitID)
+    self.delegate = delegate
     super.init()
     self.interstitial.delegate = self
   }
@@ -46,5 +54,10 @@ extension InterstitialAdLoader: GADInterstitialDelegate {
     self.interstitial = GADInterstitial(adUnitID: adUnitID)
     self.interstitial.delegate = self
     load()
+    self.delegate?.interstitialAdLoaderDidClose()
+  }
+  
+  func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+    self.delegate?.interstitialAdLoaderDidReceiveAd()
   }
 }

@@ -37,10 +37,12 @@ class QuizEndViewModel {
   private var rDismiss = PublishRelay<Void>()
   
   private var ad: GADUnifiedNativeAd?
+  private let isPaidUser: Bool
   
-  init(ad: GADUnifiedNativeAd?) {
+  init(ad: GADUnifiedNativeAd?, isPaidUser: Bool) {
     self.ad = ad
     self.rAd = BehaviorRelay<GADUnifiedNativeAd?>(value: ad)
+    self.isPaidUser = isPaidUser
     
     if ad != nil {
       rAdViewHidden.accept(false)
@@ -50,6 +52,17 @@ class QuizEndViewModel {
   
   func handleCloseButtonClicked() {
     rDismiss.accept(())
+  }
+  
+  func sholdLoadAds() -> Bool {
+    return !isPaidUser
+  }
+  
+  func shouldShowIntertitialAd() -> Bool {
+    if isPaidUser {
+      return false
+    }
+    return (ad == nil)
   }
   
 }

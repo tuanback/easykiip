@@ -34,14 +34,16 @@ class QuizVC: NiblessViewController {
   private var practiceVM: QuizPracticeViewModel?
   
   private lazy var nativeAdUnitID = AdsIdentifier.id(for: .nativeAds)
-  private lazy var adLoader = NativeAdLoader(adUnitID: nativeAdUnitID,
-                                             numberOfAdsToLoad: 1,
-                                             viewController: self,
-                                             delegate: self)
+  private lazy var nativeAdLoader = NativeAdLoader(adUnitID: nativeAdUnitID,
+                                                   numberOfAdsToLoad: 1,
+                                                   viewController: self,
+                                                   delegate: self)
   
   private lazy var rewardAdUnitID = AdsIdentifier.id(for: .rewardVideo)
   private lazy var rewardAdLoader = RewardAdLoader(adUnitID: rewardAdUnitID,
                                                    delegate: self)
+  
+  private lazy var rewardInterstitialAdLoader = InterstitialAdLoader(adUnitID: AdsIdentifier.id(for: .interstitial), delegate: self)
   
   private var player: AVAudioPlayer?
   private var didShowVideoAds = false
@@ -73,8 +75,9 @@ class QuizVC: NiblessViewController {
   
   private func loadAds() {
     if viewModel.shouldLoadAds() {
-      adLoader.load()
+      nativeAdLoader.load()
       rewardAdLoader.load()
+      rewardInterstitialAdLoader.load()
     }
   }
   
@@ -157,26 +160,30 @@ class QuizVC: NiblessViewController {
         case .present(let destination):
           switch destination {
           case .showVideoAds:
-            if let present = self?.rewardAdLoader.present(viewController: strongSelf),
-              !present {
-              strongSelf.viewModel.handleCannotPresentVideo()
-            }
+            self?.showVideoAds()
           default:
             self?.navigator.navigate(from: strongSelf, to: destination, type: .present)
           }
         case .push(let destination):
           switch destination {
           case .showVideoAds:
-            if let present = self?.rewardAdLoader.present(viewController: strongSelf),
-              !present {
-              strongSelf.viewModel.handleCannotPresentVideo()
-            }
+            self?.showVideoAds()
           default:
             self?.navigator.navigate(from: strongSelf, to: destination, type: .push)
           }
         }
       })
       .disposed(by: disposeBag)
+  }
+  
+  private func showVideoAds() {
+    let present = rewardAdLoader.present(viewController: self)
+    if !present {
+      let presentInterstitial = rewardInterstitialAdLoader.present(viewController: self)
+      if !presentInterstitial {
+        self.viewModel.handleCannotPresentVideo()
+      }
+    }
   }
   
   private func showAlertMessage(alert: AlertWithAction) {
@@ -295,7 +302,6 @@ extension QuizVC: RewardAdLoaderDelegate {
   func rewardAdLoader(userDidEarn reward: GADAdReward) {
     viewModel.handleVideoAdsWatchingFinished()
     didShowVideoAds = true
-    
   }
   
   func showHeartFilledToastIfNeeded() {
@@ -303,5 +309,16 @@ extension QuizVC: RewardAdLoaderDelegate {
       view.makeToast(Strings.heartsAreRefilled, duration: 1.5, position: .bottom)
       didShowVideoAds = false
     }
+  }
+}
+
+extension QuizVC: InterstitialAdLoaderDelegate {
+  func interstitialAdLoaderDidClose() {
+    viewModel.handleVideoAdsWatchingFinished()
+    didShowVideoAds = true
+  }
+  
+  func interstitialAdLoaderDidReceiveAd() {
+    
   }
 }

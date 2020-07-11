@@ -15,6 +15,9 @@ class QuizEndVC: NiblessViewController {
   private let viewModel: QuizEndViewModel
   
   private let disposeBag = DisposeBag()
+  private var didShowInterstitialAd = false
+  
+  private lazy var adLoader = InterstitialAdLoader(adUnitID: AdsIdentifier.id(for: .interstitial), delegate: self)
   
   init(viewModel: QuizEndViewModel) {
     self.viewModel = viewModel
@@ -24,6 +27,13 @@ class QuizEndVC: NiblessViewController {
   override func loadView() {
     view = QuizEndRootView(viewModel: viewModel)
     observeViewModel()
+    loadAds()
+  }
+  
+  private func loadAds() {
+    if viewModel.sholdLoadAds() {
+      adLoader.load()
+    }
   }
   
   private func observeViewModel() {
@@ -34,4 +44,14 @@ class QuizEndVC: NiblessViewController {
       .disposed(by: disposeBag)
   }
   
+}
+
+extension QuizEndVC: InterstitialAdLoaderDelegate {
+  func interstitialAdLoaderDidClose() {}
+  
+  func interstitialAdLoaderDidReceiveAd() {
+    guard !didShowInterstitialAd && viewModel.shouldShowIntertitialAd() else { return }
+    didShowInterstitialAd = true
+    adLoader.present(viewController: self)
+  }
 }

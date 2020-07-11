@@ -44,7 +44,7 @@ class LessonDetailVC: NiblessViewController {
   private var shouldPresentAd = false
   private var isVCJustEntering = true
   
-  private lazy var adLoader = InterstitialAdLoader(adUnitID: AdsIdentifier.id(for: .interstitial))
+  private lazy var adLoader = InterstitialAdLoader(adUnitID: AdsIdentifier.id(for: .interstitial), delegate: nil)
   
   init(viewModel: LessonDetailViewModel,
        navigator: LessonDetailNavigator) {
