@@ -80,7 +80,7 @@ class BookDetailCVC: UICollectionViewCell {
     
     labelLessonKorean = UILabel()
     labelLessonKorean.numberOfLines = 0
-    labelLessonKorean.font = UIFont.appFontRegular(ofSize: 16)
+    labelLessonKorean.font = UIFont.appFontRegular(ofSize: 20)
     labelLessonKorean.textColor = UIColor.appLabelBlack
     labelLessonKorean.textAlignment = .left
     labelLessonKorean.adjustsFontSizeToFitWidth = true
@@ -88,7 +88,7 @@ class BookDetailCVC: UICollectionViewCell {
     
     labelLessonTranslation = UILabel()
     labelLessonTranslation.numberOfLines = 0
-    labelLessonTranslation.font = UIFont.appFontRegular(ofSize: 14)
+    labelLessonTranslation.font = UIFont.appFontRegular(ofSize: 16)
     labelLessonTranslation.textColor = UIColor.appSecondaryLabel
     labelLessonTranslation.textAlignment = .left
     labelLessonTranslation.adjustsFontSizeToFitWidth = true
@@ -140,9 +140,10 @@ class BookDetailCVC: UICollectionViewCell {
     }
     
     viewUnitIndicatorContainer.snp.makeConstraints { (make) in
-      make.center.equalToSuperview()
-      make.width.equalToSuperview()
-      make.height.equalTo(viewUnitIndicatorContainer.snp.width)
+      make.top.equalToSuperview()
+      make.leading.equalToSuperview()
+      make.trailing.equalToSuperview()
+      make.bottom.equalToSuperview()
     }
     
     labelUnitIndicator.snp.makeConstraints { (make) in

@@ -105,8 +105,10 @@ class BookDetailViewModel {
         var i = 0
         var j = 0
         
+        let adsPosition: [Int] = [3, 8, 14, 20]
+        
         while i < lessons.count {
-          if i > 0 && (i + 1) % 5 == 0 && j < ads.count {
+          if i > 0 && adsPosition.contains(i + 1) && j < ads.count {
             results.append(.item(viewModel: lessonsItemVM[i]))
             results.append(.ads(viewModel: ads[j]))
             j += 1
@@ -120,6 +122,10 @@ class BookDetailViewModel {
         
         return results
     }
+  }
+  
+  func handleSearchBarTextInput(_ searchText: String) -> [Vocab] {
+    return vocabRepository.searchVocab(keyword: searchText)
   }
   
   func addNativeAds(ads: [GADUnifiedNativeAd]) {

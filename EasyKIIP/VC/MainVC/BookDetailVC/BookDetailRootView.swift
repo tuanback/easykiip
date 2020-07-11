@@ -92,7 +92,7 @@ extension BookDetailRootView: UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let width = collectionView.frame.width
-    let height: CGFloat = 145
+    let height: CGFloat = 160
     return CGSize(width: width, height: height)
   }
   

@@ -102,7 +102,7 @@ class LessonDetailVC: NiblessViewController {
       make.top.equalTo(view.safeAreaLayoutGuide)
       make.leading.equalTo(view.safeAreaLayoutGuide)
       make.trailing.equalTo(view.safeAreaLayoutGuide)
-      make.height.equalTo(40)
+      make.height.equalTo(50)
     }
     
     separator.snp.makeConstraints { (make) in
@@ -289,7 +289,7 @@ class LessonDetailVC: NiblessViewController {
   private func setupLearnVocabButton() -> UIButton {
     buttonLearn = UIButton()
     buttonLearn?.setTitle(Strings.learn, for: .normal)
-    buttonLearn?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
+    buttonLearn?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 18)
     buttonLearn?.addTarget(self, action: #selector(handleButtonLearnClicked(_:)), for: .touchUpInside)
     buttonLearn?.setTitleColor(UIColor.appLabelBlack, for: .normal)
     return buttonLearn!
@@ -315,7 +315,7 @@ class LessonDetailVC: NiblessViewController {
   private func setupParagraphButton() -> UIButton {
     buttonReading = UIButton()
     buttonReading?.setTitle(Strings.paragraph, for: .normal)
-    buttonReading?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
+    buttonReading?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 18)
     buttonReading?.addTarget(self, action: #selector(handleButtonParagraphClicked(_:)), for: .touchUpInside)
     buttonReading?.setTitleColor(UIColor.appLabelBlack, for: .normal)
     return buttonReading!
@@ -337,7 +337,7 @@ class LessonDetailVC: NiblessViewController {
   private func setupVocabularyButton() -> UIButton {
     buttonVocabList = UIButton()
     buttonVocabList?.setTitle(Strings.vocabulary, for: .normal)
-    buttonVocabList?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
+    buttonVocabList?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 18)
     buttonVocabList?.setTitleColor(UIColor.appLabelBlack, for: .normal)
     buttonVocabList?.addTarget(self, action: #selector(handleButtonVocabularClicked), for: .touchUpInside)
     return buttonVocabList!

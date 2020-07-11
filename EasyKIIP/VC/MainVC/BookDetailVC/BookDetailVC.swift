@@ -25,6 +25,9 @@ public class BookDetailVC: NiblessViewController {
   
   private let disposeBag = DisposeBag()
   
+  private lazy var searchVocabListVM = SearchVocabListViewModel(vocabs: [])
+  private lazy var searchVocabListVC = SearchVocabListVC(viewModel: searchVocabListVM)
+  
   private var isVCJustEntering = true
   
   init(viewModel: BookDetailViewModel,
@@ -40,6 +43,7 @@ public class BookDetailVC: NiblessViewController {
   
   public override func viewDidLoad() {
     super.viewDidLoad()
+    setupNavBar()
     observeViewModel()
   }
   
@@ -51,6 +55,23 @@ public class BookDetailVC: NiblessViewController {
     else {
       viewModel.reload()
     }
+  }
+  
+  func setupNavBar() {
+    let searchController = UISearchController(searchResultsController: searchVocabListVC)
+    searchController.searchBar.placeholder = Strings.searchVocabOrTranslation
+    navigationItem.searchController = searchController
+    
+    searchController.searchBar.rx.text
+      .orEmpty
+      .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
+      .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
+      .subscribe(onNext: { [weak self] string in
+        if let vocabs = self?.viewModel.handleSearchBarTextInput(string) {
+          self?.searchVocabListVM.setVocabs(vocabs)
+        }
+      })
+      .disposed(by: disposeBag)
   }
   
   private func observeViewModel() {

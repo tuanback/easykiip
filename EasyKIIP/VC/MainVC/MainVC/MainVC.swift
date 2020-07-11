@@ -80,7 +80,6 @@ class MainVC: NiblessViewController {
     navigationItem.title = "KIIP"
     
     let searchController = UISearchController(searchResultsController: searchVocabListVC)
-    searchController.searchResultsUpdater = self
     searchController.searchBar.placeholder = Strings.searchVocabOrTranslation
     navigationItem.searchController = searchController
     
@@ -92,6 +91,17 @@ class MainVC: NiblessViewController {
      titleView.textColor = UIColor.appLabelColor
      navigationItem.titleView = titleView
      */
+    
+    searchController.searchBar.rx.text
+      .orEmpty
+      .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
+      .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
+      .subscribe(onNext: { [weak self] string in
+        if let vocabs = self?.viewModel.handleSearchBarTextInput(string) {
+          self?.searchVocabListVM.setVocabs(vocabs)
+        }
+      })
+      .disposed(by: disposeBag)
   }
   
   private func setupMenuButton() {
@@ -152,14 +162,4 @@ class MainVC: NiblessViewController {
       .disposed(by: disposeBag)
   }
   
-}
-
-extension MainVC: UISearchResultsUpdating {
-  func updateSearchResults(for searchController: UISearchController) {
-    let searchBar = searchController.searchBar
-    if let text = searchBar.text {
-      let vocabs = viewModel.handleSearchBarTextInput(text)
-      searchVocabListVM.setVocabs(vocabs)
-    }
-  }
 }

@@ -78,7 +78,7 @@ extension MainRootView: UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     let width = (collectionView.frame.width - 16) / 2
-    let height = width * 4 / 3
+    let height = width * 3 / 2
     return CGSize(width: width, height: height)
   }
   

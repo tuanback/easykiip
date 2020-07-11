@@ -222,6 +222,10 @@ class LessonDetailViewModel {
     rNavigationEvent.accept(.present(destination: .payWall))
   }
   
+  func handleSearchBarTextInput(_ searchText: String) -> [Vocab] {
+    return vocabRepository.searchVocab(keyword: searchText)
+  }
+  
   func sholdLoadAds() -> Bool {
     return !isPaidUser
   }

@@ -51,11 +51,11 @@ class SearchVocabListRootView: NiblessView {
     viewModel.oListOfVocabsItemViewModels
       .bind(to: tableView.rx.items(cellIdentifier: cellIdentifier)) { row, element, cell in
         
-        cell.textLabel?.font = UIFont.appFontMedium(ofSize: 16)
+        cell.textLabel?.font = UIFont.appFontMedium(ofSize: 20)
         cell.textLabel?.text = element.word
         cell.detailTextLabel?.text = element.wordTranslation
         cell.detailTextLabel?.numberOfLines = 0
-        cell.detailTextLabel?.font = UIFont.appFontRegular(ofSize: 13)
+        cell.detailTextLabel?.font = UIFont.appFontRegular(ofSize: 18)
     }
     .disposed(by: disposeBag)
     

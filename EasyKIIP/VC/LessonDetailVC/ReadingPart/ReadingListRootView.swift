@@ -51,11 +51,11 @@ class ReadingListRootView: NiblessView {
     
     viewModel.oReadingPartItemViewModels
       .bind(to: tableView.rx.items(cellIdentifier: cellIdentifier)) { row, element, cell in
-        cell.textLabel?.font = UIFont.appFontMedium(ofSize: 16)
+        cell.textLabel?.font = UIFont.appFontMedium(ofSize: 20)
         cell.textLabel?.text = element.scriptName
         cell.detailTextLabel?.text = element.scriptNameTranslation
         cell.detailTextLabel?.numberOfLines = 0
-        cell.detailTextLabel?.font = UIFont.appFontRegular(ofSize: 13)
+        cell.detailTextLabel?.font = UIFont.appFontRegular(ofSize: 18)
         cell.accessoryType = .disclosureIndicator
     }
     .disposed(by: disposeBag)

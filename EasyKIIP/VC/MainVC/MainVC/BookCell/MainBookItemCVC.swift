@@ -43,7 +43,7 @@ class MainBookItemCVC: UICollectionViewCell {
     containerView.addSubview(imageView)
     
     labelBookName = UILabel()
-    labelBookName.font = UIFont.appFontMedium(ofSize: 15)
+    labelBookName.font = UIFont.appFontDemiBold(ofSize: 20)
     labelBookName.numberOfLines = 2
     labelBookName.adjustsFontSizeToFitWidth = true
     labelBookName.minimumScaleFactor = 0.5
