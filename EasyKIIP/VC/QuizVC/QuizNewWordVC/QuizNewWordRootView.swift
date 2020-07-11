@@ -13,6 +13,7 @@ import RxCocoa
 
 class QuizNewWordRootView: NiblessView {
   
+  private let buttonSpeak = UIButton()
   private let labelWord = UILabel()
   private let labelMeaning = UILabel()
   private let stackViewButtonContainer = UIStackView()
@@ -22,6 +23,7 @@ class QuizNewWordRootView: NiblessView {
   private let disposeBag = DisposeBag()
   
   private let viewModel: QuizNewWordViewModel
+  private var speechSynthesizer = SpeechSynthesizer()
   
   init(viewModel: QuizNewWordViewModel,
        frame: CGRect = .zero) {
@@ -32,9 +34,13 @@ class QuizNewWordRootView: NiblessView {
   
   private func setupViews() {
     
+    addSubview(buttonSpeak)
     addSubview(labelWord)
     addSubview(labelMeaning)
     addSubview(stackViewButtonContainer)
+    
+    buttonSpeak.setImage(UIImage(named: IconName.speaker), for: .normal)
+    buttonSpeak.addTarget(self, action: #selector(didSpeakButtonClicked(sender:)), for: .touchUpInside)
     
     labelWord.font = UIFont.appFontDemiBold(ofSize: 30)
     labelWord.numberOfLines = 0
@@ -73,21 +79,26 @@ class QuizNewWordRootView: NiblessView {
     stackViewButtonContainer.snp.makeConstraints { (make) in
       make.width.equalToSuperview().multipliedBy(0.8)
       make.centerX.equalToSuperview()
-      make.height.equalTo(44)
+      make.height.equalTo(50)
       make.bottom.equalToSuperview().inset(50)
     }
     
     labelWord.snp.makeConstraints { (make) in
       make.width.equalToSuperview().multipliedBy(0.8)
-      make.centerY.equalToSuperview().offset(-80)
+      make.centerY.equalToSuperview().offset(-120)
       make.centerX.equalToSuperview()
+    }
+    
+    buttonSpeak.snp.makeConstraints { (make) in
+      make.centerX.equalToSuperview()
+      make.bottom.equalTo(stackViewButtonContainer.snp.top).offset(-48)
     }
     
     labelMeaning.snp.makeConstraints { (make) in
       make.width.equalToSuperview().multipliedBy(0.8)
       make.centerX.equalToSuperview()
       make.top.equalTo(labelWord.snp.bottom).offset(16)
-      make.bottom.lessThanOrEqualTo(stackViewButtonContainer.snp.top).offset(-16)
+      make.bottom.lessThanOrEqualTo(buttonSpeak.snp.top).offset(-16)
     }
     
     bindViewModel()
@@ -101,6 +112,17 @@ class QuizNewWordRootView: NiblessView {
     viewModel.oMeaning
       .drive(labelMeaning.rx.text)
       .disposed(by: disposeBag)
+    
+    viewModel.oSpeak
+      .observeOn(MainScheduler.asyncInstance)
+      .subscribe(onNext: { [weak self] word in
+        self?.speechSynthesizer.speak(word: word)
+      })
+    .disposed(by: disposeBag)
+  }
+  
+  @objc private func didSpeakButtonClicked(sender: UIButton) {
+    viewModel.handleViewDidAppear()
   }
   
   @objc private func didLearnButtonClicked(sender: UIButton) {

@@ -30,7 +30,8 @@ class RewardAdLoader: NSObject {
   }
   
   func load() {
-    adLoader.load(GADRequest()) { (error) in
+    let request = GADRequest()
+    adLoader.load(request) { (error) in
       print("Reward based video ad received")
       if let err = error {
         print(err)

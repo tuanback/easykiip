@@ -21,8 +21,13 @@ class QuizNewWordViewModel {
     return rMeaning.asDriver()
   }
   
+  var oSpeak: Observable<String> {
+    return rSpeak.asObservable()
+  }
+  
   private let rWord: BehaviorRelay<String>
   private let rMeaning: BehaviorRelay<String>
+  private let rSpeak = PublishRelay<String>()
   private let question: NewWordQuestion
   private let answerHandler: NewWordQuestionAnswerHandler
   
@@ -31,6 +36,10 @@ class QuizNewWordViewModel {
     self.rWord = BehaviorRelay<String>(value: question.word)
     self.rMeaning = BehaviorRelay<String>(value: question.meaning)
     self.answerHandler = answerHandler
+  }
+  
+  func handleViewDidAppear() {
+    rSpeak.accept(rWord.value)
   }
   
   func handleAnswer() {

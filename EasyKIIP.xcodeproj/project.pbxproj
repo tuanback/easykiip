@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170F2CCA24B98C2F00D52D0E /* SpeedSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F2CC924B98C2F00D52D0E /* SpeedSynthesizer.swift */; };
 		17328475248CC26F00103B5A /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */; };
 		17328476248CC27100103B5A /* BookDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */; };
 		17328477248CC27400103B5A /* LessonDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */; };
@@ -293,6 +294,7 @@
 		0DF5FC3C60A9BB6B51A6EF38 /* Pods-UserSessionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UserSessionTests.release.xcconfig"; path = "Target Support Files/Pods-UserSessionTests/Pods-UserSessionTests.release.xcconfig"; sourceTree = "<group>"; };
 		10354E400E6A62457F3A3874 /* Pods_UserSession_UserSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSession_UserSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		170F2CC924B98C2F00D52D0E /* SpeedSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedSynthesizer.swift; sourceTree = "<group>"; };
 		17328479248CD96800103B5A /* QuizNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizNavigator.swift; sourceTree = "<group>"; };
 		1732847B248D124900103B5A /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModelTests.swift; sourceTree = "<group>"; };
@@ -584,6 +586,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		170F2CC724B98C0300D52D0E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				170F2CC824B98C1000D52D0E /* SpeechSynthesizer */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		170F2CC824B98C1000D52D0E /* SpeechSynthesizer */ = {
+			isa = PBXGroup;
+			children = (
+				170F2CC924B98C2F00D52D0E /* SpeedSynthesizer.swift */,
+			);
+			path = SpeechSynthesizer;
+			sourceTree = "<group>";
+		};
 		1714C40424979324003A795F /* ParagraphVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1014,20 +1032,21 @@
 		17B70A84244C180200C67334 /* EasyKIIP */ = {
 			isa = PBXGroup;
 			children = (
-				17563DD824B1B72900285E13 /* Easy KIIPDebug.entitlements */,
-				17E7F18024681AF2008667FB /* Repo */,
-				1766FFC9245A9FF6008B263D /* Assets */,
-				1766FF9F245A5D9A008B263D /* Reuseable */,
-				1766FF9E245A5D8F008B263D /* VC */,
-				1766FF98245A5CAE008B263D /* DependencyContainer */,
-				1766FFF1245BD993008B263D /* GoogleService-Info.plist */,
 				17B70A85244C180200C67334 /* AppDelegate.swift */,
+				1766FFC9245A9FF6008B263D /* Assets */,
 				17B70A8E244C180500C67334 /* Assets.xcassets */,
-				17B70A90244C180500C67334 /* LaunchScreen.storyboard */,
+				170F2CC724B98C0300D52D0E /* Controller */,
+				1766FF98245A5CAE008B263D /* DependencyContainer */,
+				17563DD824B1B72900285E13 /* Easy KIIPDebug.entitlements */,
+				17A8A2F5246C990B00794C64 /* EasyKIIP-Bridging-Header.h */,
+				1766FFF1245BD993008B263D /* GoogleService-Info.plist */,
 				17B70A93244C180500C67334 /* Info.plist */,
 				177AEC982495AC1B00771DF2 /* InfoPlist.strings */,
+				17B70A90244C180500C67334 /* LaunchScreen.storyboard */,
 				1766FFCF245AB037008B263D /* Localizable.strings */,
-				17A8A2F5246C990B00794C64 /* EasyKIIP-Bridging-Header.h */,
+				17E7F18024681AF2008667FB /* Repo */,
+				1766FF9F245A5D9A008B263D /* Reuseable */,
+				1766FF9E245A5D8F008B263D /* VC */,
 			);
 			path = EasyKIIP;
 			sourceTree = "<group>";
@@ -2119,6 +2138,7 @@
 				17F5C099249032BB001ABA43 /* QuizPracticeVC.swift in Sources */,
 				17FBF6EC245BEBCA00A65233 /* NiblessNavigationController.swift in Sources */,
 				177AEC6424944FA800771DF2 /* NativeAdLoader.swift in Sources */,
+				170F2CCA24B98C2F00D52D0E /* SpeedSynthesizer.swift in Sources */,
 				1771C7192497A5F600983897 /* ParagraphViewRootView.swift in Sources */,
 				17F57F992478A9FE00F26EF4 /* Navigator.swift in Sources */,
 				17F30EE7246AD1C6008040BE /* AdsIdentifier.swift in Sources */,

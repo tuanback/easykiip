@@ -46,7 +46,8 @@ class NativeAdLoader: NSObject {
   }
   
   func load() {
-    adLoader.load(GADRequest())
+    let request = GADRequest()
+    adLoader.load(request)
   }
   
 }

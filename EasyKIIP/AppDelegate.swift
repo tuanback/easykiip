@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     FirebaseApp.configure()
     GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
     GADMobileAds.sharedInstance().start(completionHandler: nil)
-    
+    GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = ["5a4772fcac483006f3baf49a1fa75a28"]
     /*
     KOSession.shared()?.logoutAndClose(completionHandler: { (success, error) in
       if let err = error {

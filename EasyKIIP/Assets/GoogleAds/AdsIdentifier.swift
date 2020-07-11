@@ -19,21 +19,21 @@ enum AdsType {
 struct AdsIdentifier {
   
   // For production
-  /*
   static let onlyImageNativeAds = "ca-app-pub-4377015897765379/2266520475"
   static let nativeAds = "ca-app-pub-4377015897765379/3232086939"
   static let rewardAds = "ca-app-pub-4377015897765379/1785626982"
   static let interstitial = "ca-app-pub-4377015897765379/5506106494"
   static let banner = "ca-app-pub-4377015897765379/7531097042"
-  */
   
+  /*
   // For test
   static let onlyImageNativeAds = "ca-app-pub-3940256099942544/3986624511"
   static let nativeAds = "ca-app-pub-3940256099942544/3986624511"
   static let rewardAds = "ca-app-pub-3940256099942544/1712485313"
   static let interstitial = "ca-app-pub-3940256099942544/4411468910"
   static let banner = "ca-app-pub-3940256099942544/2934735716"
-  
+  */
+ 
   static func id(for type: AdsType) -> String {
     
     switch type {

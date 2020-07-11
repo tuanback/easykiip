@@ -61,7 +61,8 @@ class MainVC: NiblessViewController {
     if viewModel.shouldLoadAds() {
       bannerView.adUnitID = AdsIdentifier.id(for: .banner)
       bannerView.rootViewController = self
-      bannerView.load(GADRequest())
+      let request = GADRequest()
+      bannerView.load(request)
     }
   }
   

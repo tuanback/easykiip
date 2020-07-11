@@ -146,7 +146,7 @@ class LessonDetailVC: NiblessViewController {
         guard let startTime = startOpeningAnotherVCTime else { break }
         let currentTime = Date().timeIntervalSince1970
         let passedTime = currentTime - startTime
-        if passedTime >= 15 {
+        if passedTime >= 10 {
           shouldPresentAd = true
         }
       case .payWall:

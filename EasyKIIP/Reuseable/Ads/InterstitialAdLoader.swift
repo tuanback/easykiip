@@ -26,7 +26,8 @@ class InterstitialAdLoader: NSObject {
   }
   
   func load() {
-    interstitial.load(GADRequest())
+    let request = GADRequest()
+    interstitial.load(request)
   }
   
   @discardableResult
