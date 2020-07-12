@@ -78,7 +78,7 @@ class DBCreation {
             
             let vocabPath = csvFolder + "\(bookID)/\(lessonIndex)v.csv"
             let readingPath = csvFolder + "\(bookID)/\(lessonIndex)r.csv"
-            let grammarPath = csvFolder + "\(bookID)/\(lessonIndex)r.csv"
+            let grammarPath = csvFolder + "\(bookID)/\(lessonIndex)g.csv"
             
             guard let vocabFileContent = openCSV(filePath: vocabPath) else {
               continue
