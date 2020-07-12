@@ -170,8 +170,8 @@ class LessonDetailViewModel {
       var childVCs: [LessonDetailChildVC] = []
       
       if vocabs.count > 0 {
-        childVCs.append(.listOfVocabs)
         childVCs.append(.learnVocab)
+        childVCs.append(.listOfVocabs)
       }
       
       if readingParts.count > 0 {
