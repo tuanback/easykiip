@@ -99,4 +99,12 @@ public class MainViewModel {
   func shouldLoadAds() -> Bool {
     return !userSessionRepository.isUserSubscribed()
   }
+  
+  func handleFinishLearning() {
+    for book in books {
+      for lesson in book.lessons {
+        vocabRepository.saveLessonPracticeHistory(inBook: book.id, lessonID: lesson.id)
+      }
+    }
+  }
 }

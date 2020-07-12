@@ -29,6 +29,12 @@ class QuizEndViewModel {
     return rDismiss.asObservable()
   }
   
+  var oNavigationEvent: Observable<NavigationEvent<QuizEndNavigator.Destination>> {
+    return rNavigationEvent.asObservable()
+  }
+  
+  private let rNavigationEvent = PublishRelay<NavigationEvent<QuizEndNavigator.Destination>>()
+  
   private var rAdViewHidden = BehaviorRelay<Bool>(value: true)
   private var rEndViewHidden = BehaviorRelay<Bool>(value: false)
   
@@ -63,6 +69,14 @@ class QuizEndViewModel {
       return false
     }
     return (ad == nil)
+  }
+  
+  func isPremiumUser() -> Bool {
+    return isPaidUser
+  }
+  
+  func handleUpgradeToPremiumButtonClicked() {
+    rNavigationEvent.accept(.push(destination: .payWall))
   }
   
 }

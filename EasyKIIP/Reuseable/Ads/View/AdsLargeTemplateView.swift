@@ -92,7 +92,7 @@ class AdsLargeTemplateView: GADUnifiedNativeAdView {
     let callToActionView = UIButton()
     callToActionView.backgroundColor = UIColor.appRed
     callToActionView.setTitleColor(UIColor.white, for: .normal)
-    callToActionView.titleLabel?.font = UIFont.appFontMedium(ofSize: 14)
+    callToActionView.titleLabel?.font = UIFont.appFontMedium(ofSize: 16)
     callToActionView.layer.cornerRadius = 5
     self.callToActionView = callToActionView
     

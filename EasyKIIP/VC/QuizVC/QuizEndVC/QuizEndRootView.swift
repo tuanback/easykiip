@@ -25,6 +25,8 @@ class QuizEndRootView: NiblessView {
   private lazy var buttonClose = UIButton()
   private lazy var adView = AdsLargeTemplateView()
   private lazy var labelAdExplaination = UILabel()
+  private let buttonUpgradeToPremium1 = UIButton()
+  private let buttonUpgradeToPremium2 = UIButton()
   
   private let disposeBag = DisposeBag()
   
@@ -60,8 +62,19 @@ class QuizEndRootView: NiblessView {
     
     buttonContinue.addTarget(self, action: #selector(handleCloseButtonClicked(sender:)), for: .touchUpInside)
     
+    buttonUpgradeToPremium1.backgroundColor = UIColor.appRed
+    buttonUpgradeToPremium1.setTitle(Strings.upgradeToPremium, for: .normal)
+    buttonUpgradeToPremium1.setTitleColor(UIColor.white, for: .normal)
+    buttonUpgradeToPremium1.layer.cornerRadius = 10
+    buttonUpgradeToPremium1.titleLabel?.font = UIFont.appFontMedium(ofSize: 16)
+    
+    buttonUpgradeToPremium1.addTarget(self, action: #selector(handleUpgradeToPremiumButtonClicked(sender:)), for: .touchUpInside)
+    
     viewEndQuiz.addSubview(labelEndQuizText)
     viewEndQuiz.addSubview(buttonContinue)
+    if !viewModel.isPremiumUser() {
+      viewEndQuiz.addSubview(buttonUpgradeToPremium1)
+    }
     
     viewEndQuiz.snp.makeConstraints { (make) in
       make.edges.equalToSuperview()
@@ -71,15 +84,32 @@ class QuizEndRootView: NiblessView {
       make.edges.equalToSuperview()
     }
     
-    buttonContinue.snp.makeConstraints { (make) in
-      make.bottom.equalTo(safeAreaInsets.bottom).inset(32)
-      make.height.equalTo(60)
-      make.leading.equalToSuperview().inset(32)
-      make.trailing.equalToSuperview().inset(32)
+    if !viewModel.isPremiumUser() {
+      buttonUpgradeToPremium1.snp.makeConstraints { (make) in
+        make.bottom.equalTo(safeAreaLayoutGuide).inset(32)
+        make.height.equalTo(60)
+        make.leading.equalToSuperview().inset(32)
+        make.trailing.equalToSuperview().inset(32)
+      }
+      
+      buttonContinue.snp.makeConstraints { (make) in
+        make.bottom.equalTo(buttonUpgradeToPremium1.snp.top).offset(-16)
+        make.height.equalTo(60)
+        make.leading.equalToSuperview().inset(32)
+        make.trailing.equalToSuperview().inset(32)
+      }
+    }
+    else {
+      buttonContinue.snp.makeConstraints { (make) in
+        make.bottom.equalTo(safeAreaLayoutGuide).inset(32)
+        make.height.equalTo(60)
+        make.leading.equalToSuperview().inset(32)
+        make.trailing.equalToSuperview().inset(32)
+      }
     }
     
     labelEndQuizText.snp.makeConstraints { (make) in
-      make.top.equalTo(safeAreaInsets.top).inset(32)
+      make.top.equalTo(safeAreaLayoutGuide).inset(32)
       make.bottom.equalTo(buttonContinue.snp.top).inset(16)
       make.leading.equalToSuperview().inset(32)
       make.trailing.equalToSuperview().inset(32)
@@ -115,6 +145,14 @@ class QuizEndRootView: NiblessView {
     labelAdExplaination.textAlignment =  .center
     labelAdExplaination.numberOfLines = 0
     
+    buttonUpgradeToPremium2.backgroundColor = UIColor.appRed
+    buttonUpgradeToPremium2.setTitle(Strings.upgradeToPremium, for: .normal)
+    buttonUpgradeToPremium2.setTitleColor(UIColor.white, for: .normal)
+    buttonUpgradeToPremium2.layer.cornerRadius = 8
+    buttonUpgradeToPremium2.titleLabel?.font = UIFont.appFontMedium(ofSize: 16)
+    
+    buttonUpgradeToPremium2.addTarget(self, action: #selector(handleUpgradeToPremiumButtonClicked(sender:)), for: .touchUpInside)
+    
     let viewSeparator = UIView()
     viewSeparator.backgroundColor = UIColor.appSystemGray3
     
@@ -122,6 +160,9 @@ class QuizEndRootView: NiblessView {
     viewAdContainer.addSubview(labelAdExplaination)
     viewAdContainer.addSubview(viewSeparator)
     viewAdContainer.addSubview(adView)
+    if !viewModel.isPremiumUser() {
+      viewAdContainer.addSubview(buttonUpgradeToPremium2)
+    }
     
     buttonClose.snp.makeConstraints { (make) in
       make.leading.equalToSuperview().inset(16)
@@ -143,11 +184,28 @@ class QuizEndRootView: NiblessView {
       make.top.equalTo(labelAdExplaination.snp.bottom).offset(8)
     }
     
-    adView.snp.makeConstraints { (make) in
-      make.top.equalTo(viewSeparator.snp.bottom).offset(16)
-      make.bottom.equalTo(safeAreaInsets.bottom).inset(16)
-      make.leading.equalToSuperview().inset(16)
-      make.trailing.equalToSuperview().inset(16)
+    if !viewModel.isPremiumUser() {
+      buttonUpgradeToPremium2.snp.makeConstraints { (make) in
+        make.bottom.equalTo(safeAreaLayoutGuide).inset(32)
+        make.height.equalTo(60)
+        make.leading.equalToSuperview().inset(16)
+        make.trailing.equalToSuperview().inset(16)
+      }
+      
+      adView.snp.makeConstraints { (make) in
+        make.top.equalTo(viewSeparator.snp.bottom).offset(16)
+        make.bottom.equalTo(buttonUpgradeToPremium2.snp.top).offset(-8)
+        make.leading.equalToSuperview().inset(16)
+        make.trailing.equalToSuperview().inset(16)
+      }
+    }
+    else {
+      adView.snp.makeConstraints { (make) in
+        make.top.equalTo(viewSeparator.snp.bottom).offset(16)
+        make.bottom.equalTo(safeAreaLayoutGuide).inset(16)
+        make.leading.equalToSuperview().inset(16)
+        make.trailing.equalToSuperview().inset(16)
+      }
     }
     
     adView.nativeAd = ad
@@ -155,6 +213,10 @@ class QuizEndRootView: NiblessView {
   
   @objc private func handleCloseButtonClicked(sender: UIButton) {
     viewModel.handleCloseButtonClicked()
+  }
+  
+  @objc private func handleUpgradeToPremiumButtonClicked(sender: UIButton) {
+    viewModel.handleUpgradeToPremiumButtonClicked()
   }
   
 }

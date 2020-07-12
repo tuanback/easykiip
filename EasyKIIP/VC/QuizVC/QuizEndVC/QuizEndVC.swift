@@ -13,14 +13,16 @@ import UIKit
 class QuizEndVC: NiblessViewController {
   
   private let viewModel: QuizEndViewModel
+  private let navigator: QuizEndNavigator
   
   private let disposeBag = DisposeBag()
   private var didShowInterstitialAd = false
   
   private lazy var adLoader = InterstitialAdLoader(adUnitID: AdsIdentifier.id(for: .interstitial), delegate: self)
   
-  init(viewModel: QuizEndViewModel) {
+  init(viewModel: QuizEndViewModel, navigator: QuizEndNavigator) {
     self.viewModel = viewModel
+    self.navigator = navigator
     super.init()
   }
   
@@ -42,6 +44,22 @@ class QuizEndVC: NiblessViewController {
         self?.dismiss(animated: true, completion: nil)
       })
       .disposed(by: disposeBag)
+    
+    viewModel.oNavigationEvent
+      .subscribe(onNext: { [weak self] event in
+        guard let strongSelf = self else { return }
+        switch event {
+        case .dismiss:
+          self?.dismiss(animated: true, completion: nil)
+        case .pop:
+          self?.navigationController?.popViewController(animated: true)
+        case .present(let destination):
+          self?.navigator.navigate(from: strongSelf, to: destination, type: .present)
+        case .push(let destination):
+          self?.navigator.navigate(from: strongSelf, to: destination, type: .push)
+        }
+      })
+    .disposed(by: disposeBag)
   }
   
 }

@@ -163,7 +163,8 @@ public class SignedInDependencyContainer {
   func makeEndQuizVC(ad: GADUnifiedNativeAd?) -> QuizEndVC {
     let viewModel = QuizEndViewModel(ad: ad,
                                      isPaidUser: userSessionRepository.isUserSubscribed())
-    return QuizEndVC(viewModel: viewModel)
+    let navigator = QuizEndNavigator(factory: self)
+    return QuizEndVC(viewModel: viewModel, navigator: navigator)
   }
   
   func makeVideoAdsVC() -> UIViewController {

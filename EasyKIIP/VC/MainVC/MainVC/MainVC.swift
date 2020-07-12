@@ -123,6 +123,12 @@ class MainVC: NiblessViewController {
   }
   
   private func observeViewModel() {
+    // Save practice history if the app move to background
+    UIApplication.shared.rx.applicationDidEnterBackground
+      .subscribe(onNext: { [weak self] _ in
+        self?.viewModel.handleFinishLearning()
+      })
+      .disposed(by: disposeBag)
     
     viewModel.oAvatarURL
       .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
