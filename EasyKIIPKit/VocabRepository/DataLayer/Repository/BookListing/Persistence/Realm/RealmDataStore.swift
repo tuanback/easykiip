@@ -35,7 +35,14 @@ public struct RealmProvider {
   }
   
   private static let historyConfig = Realm.Configuration(
-    fileURL: try! Path.inDocuments("practiceHistory.realm")
+    fileURL: try! Path.inDocuments("practiceHistory.realm"),
+    schemaVersion: 1,
+    migrationBlock: { migration, oldSchemaVersion in
+      // We haven’t migrated anything yet, so oldSchemaVersion == 0
+      if (oldSchemaVersion < 1) {
+        // 2010-07-12 Version 1: Add Grammar
+      }
+  }
   )
 }
 
