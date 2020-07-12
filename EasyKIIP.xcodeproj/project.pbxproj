@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		170F2CCA24B98C2F00D52D0E /* SpeedSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F2CC924B98C2F00D52D0E /* SpeedSynthesizer.swift */; };
+		170F2CCC24BAF95000D52D0E /* Grammar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F2CCB24BAF95000D52D0E /* Grammar.swift */; };
 		17328475248CC26F00103B5A /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */; };
 		17328476248CC27100103B5A /* BookDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */; };
 		17328477248CC27400103B5A /* LessonDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */; };
@@ -295,6 +296,7 @@
 		10354E400E6A62457F3A3874 /* Pods_UserSession_UserSessionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UserSession_UserSessionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		170F2CC924B98C2F00D52D0E /* SpeedSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedSynthesizer.swift; sourceTree = "<group>"; };
+		170F2CCB24BAF95000D52D0E /* Grammar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grammar.swift; sourceTree = "<group>"; };
 		17328479248CD96800103B5A /* QuizNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizNavigator.swift; sourceTree = "<group>"; };
 		1732847B248D124900103B5A /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModelTests.swift; sourceTree = "<group>"; };
@@ -1167,6 +1169,7 @@
 				17B70B02244DC7F800C67334 /* Vocab.swift */,
 				17B70B142451C0F900C67334 /* ReadingPart.swift */,
 				17B70B1C245308EC00C67334 /* Lesson.swift */,
+				170F2CCB24BAF95000D52D0E /* Grammar.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -2264,6 +2267,7 @@
 				17B70AF0244CF57100C67334 /* Book.swift in Sources */,
 				17D98F85248B88020049F5BB /* PracticeQuestionMaker.swift in Sources */,
 				17D98F7D248B596A0049F5BB /* KIIPQuizEngine.swift in Sources */,
+				170F2CCC24BAF95000D52D0E /* Grammar.swift in Sources */,
 				17B70B2A2453CB0200C67334 /* VocabDataStore.swift in Sources */,
 				17B70B1D245308EC00C67334 /* Lesson.swift in Sources */,
 				17E7F17324662D1A008667FB /* RealmModel.swift in Sources */,

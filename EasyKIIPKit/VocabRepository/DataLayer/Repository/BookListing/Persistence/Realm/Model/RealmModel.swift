@@ -59,6 +59,7 @@ class RealmLesson: Object {
   let translations = List<RealmTranslation>()
   let readingParts = List<RealmReadingPart>()
   let vocabs = List<RealmVocab>()
+  let grammars = List<RealmGrammar>()
   
   override class func primaryKey() -> String? {
     return "id"
@@ -67,13 +68,15 @@ class RealmLesson: Object {
   convenience init(id: Int, name: String, index: Int,
                    translations: [RealmTranslation],
                    readingParts: [RealmReadingPart],
-                   vocabs: [RealmVocab]) {
+                   vocabs: [RealmVocab],
+                   grammars: [RealmGrammar]) {
     self.init()
     self.id = id
     self.name = name
     self.index = index
     self.translations.append(objectsIn: translations)
     self.readingParts.append(objectsIn: readingParts)
+    self.grammars.append(objectsIn: grammars)
     self.vocabs.append(objectsIn: vocabs)
   }
   
@@ -81,7 +84,8 @@ class RealmLesson: Object {
     let trans = convertListTranslationToDict(translations)
     let vocabs: [Vocab] = self.vocabs.map { $0.toVocab() }
     let readingPart: [ReadingPart] = self.readingParts.map { $0.toReadingPart() }
-    return Lesson(id: id, name: name, index: index, translations: trans, vocabs: vocabs, readingParts: readingPart)
+    let grammars: [Grammar] = self.grammars.map { $0.toGrammar() }
+    return Lesson(id: id, name: name, index: index, translations: trans, vocabs: vocabs, readingParts: readingPart, grammars: grammars)
   }
 }
 
@@ -123,6 +127,37 @@ class RealmReadingPart: Object {
     let nameTrans = convertListTranslationToDict(scriptNameTranslations)
     let scriptTrans = convertListTranslationToDict(scriptTranslations)
     return ReadingPart(scriptName: scriptName, script: script, scriptNameTranslation: nameTrans, scriptTranslation: scriptTrans)
+  }
+}
+
+class RealmGrammar: Object {
+  @objc dynamic var name: String = ""
+  @objc dynamic var example: String = ""
+  @objc dynamic var similarGrammar: String?
+  
+  let explainationTranslations = List<RealmTranslation>()
+  let exampleTranslations = List<RealmTranslation>()
+  
+  convenience init(name: String,
+                   example: String,
+                   similarGrammar: String?,
+                   explainationTranslations: [RealmTranslation],
+                   exampleTranslations: [RealmTranslation]) {
+    self.init()
+    self.name = name
+    self.example = example
+    self.similarGrammar = similarGrammar
+    self.explainationTranslations.append(objectsIn: explainationTranslations)
+    self.exampleTranslations.append(objectsIn: exampleTranslations)
+  }
+  
+  func toGrammar() -> Grammar {
+    let explainations = convertListTranslationToDict(explainationTranslations)
+    let examples = convertListTranslationToDict(exampleTranslations)
+    return Grammar(name: name, example: example,
+                   similarGrammar: similarGrammar,
+                   exampleTranslations: examples,
+                   explainationTranslations: explainations)
   }
 }
 

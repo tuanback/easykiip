@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170F2CCE24BB006800D52D0E /* Grammar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F2CCD24BB006800D52D0E /* Grammar.swift */; };
 		1757FC2B24701DB700E41DA3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC2A24701DB700E41DA3 /* main.swift */; };
 		1757FC3324701E5300E41DA3 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC3224701E5300E41DA3 /* RealmModel.swift */; };
 		1757FC3E24701E8F00E41DA3 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1757FC3624701E8F00E41DA3 /* Lesson.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		170F2CCD24BB006800D52D0E /* Grammar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grammar.swift; sourceTree = "<group>"; };
 		1757FC2724701DB700E41DA3 /* DBCreation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DBCreation; sourceTree = BUILT_PRODUCTS_DIR; };
 		1757FC2A24701DB700E41DA3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1757FC3224701E5300E41DA3 /* RealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		1757FC3524701E8F00E41DA3 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				170F2CCD24BB006800D52D0E /* Grammar.swift */,
 				1757FC3624701E8F00E41DA3 /* Lesson.swift */,
 				1757FC3724701E8F00E41DA3 /* LanguageCode.swift */,
 				1757FC3824701E8F00E41DA3 /* Book.swift */,
@@ -293,6 +296,7 @@
 				1757FC4324701E8F00E41DA3 /* Vocab.swift in Sources */,
 				1757FC5B2470A51F00E41DA3 /* CSVReader.swift in Sources */,
 				1757FC572470A51F00E41DA3 /* Legacy.swift in Sources */,
+				170F2CCE24BB006800D52D0E /* Grammar.swift in Sources */,
 				1757FC592470A51F00E41DA3 /* Endian.swift in Sources */,
 				1757FC552470A51F00E41DA3 /* CSVWriter.swift in Sources */,
 				1757FC5A2470A51F00E41DA3 /* CSVRowDecoder.swift in Sources */,

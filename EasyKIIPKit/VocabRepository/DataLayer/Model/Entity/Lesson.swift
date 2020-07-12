@@ -16,6 +16,7 @@ public class Lesson {
   public private(set) var translations: [LanguageCode: String]
   public private(set) var readingParts: [ReadingPart]
   public private(set) var vocabs: [Vocab]
+  public private(set) var grammars: [Grammar]
   
   public private(set) var proficiency: UInt8
   
@@ -27,6 +28,7 @@ public class Lesson {
               translations: [LanguageCode: String],
               vocabs: [Vocab],
               readingParts: [ReadingPart],
+              grammars: [Grammar],
               proficiency: UInt8? = nil) {
     self.id = id
     self.name = name
@@ -34,6 +36,7 @@ public class Lesson {
     self.translations = translations
     self.vocabs = vocabs
     self.readingParts = readingParts
+    self.grammars = grammars
     if let proficiency = proficiency {
       self.proficiency = proficiency
     }
@@ -62,6 +65,10 @@ public class Lesson {
  
   func setVocabs(_ vocabs: [Vocab]) {
     self.vocabs = vocabs
+  }
+  
+  func setGrammars(_ grammars: [Grammar]) {
+    self.grammars = grammars
   }
   
 }

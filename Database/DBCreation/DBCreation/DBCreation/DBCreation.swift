@@ -78,6 +78,7 @@ class DBCreation {
             
             let vocabPath = csvFolder + "\(bookID)/\(lessonIndex)v.csv"
             let readingPath = csvFolder + "\(bookID)/\(lessonIndex)r.csv"
+            let grammarPath = csvFolder + "\(bookID)/\(lessonIndex)r.csv"
             
             guard let vocabFileContent = openCSV(filePath: vocabPath) else {
               continue
@@ -96,7 +97,7 @@ class DBCreation {
                                      name: lessonName,
                                      index: Int(lessonIndex)!,
                                      translations: lessonNameTranslation,
-                                     readingParts: [], vocabs: [])
+                                     readingParts: [], vocabs: [], grammars: [])
             
             do {
               let vocabCSV = try CSVReader(string: vocabFileContent, hasHeaderRow: true)
@@ -154,6 +155,46 @@ class DBCreation {
                   let readingPart = RealmReadingPart(scriptName: scriptName, script: script, scriptNameTranslations: nameTrans, scriptTranslations: trans)
                   
                   lesson.readingParts.append(readingPart)
+                }
+              }
+            }
+            
+            if let grammarFileContent = openCSV(filePath: grammarPath) {
+              do {
+                let grammarCSV = try CSVReader(string: grammarFileContent, hasHeaderRow: true)
+                while let fields = grammarCSV.next() {
+                  //Name  Example  Similar  Explaination_vi  Example_vi  Explaination_en  Example_en
+                  guard fields.count >= 7 else { continue }
+                  let name = fields[0]
+                  let example = fields[1]
+                  let similar = fields[2]
+                  let explaination_vi = fields[3]
+                  let example_vi = fields[4]
+                  let explaination_en = fields[5]
+                  let example_en = fields[6]
+
+                  var exampleTrans: [RealmTranslation] = []
+                  var explainationTrans: [RealmTranslation] = []
+                  
+                  if !explaination_vi.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                    explainationTrans.append(RealmTranslation(languageCode: LanguageCode.vi.rawValue, translation: explaination_vi))
+                  }
+                  
+                  if !explaination_en.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                    explainationTrans.append(RealmTranslation(languageCode: LanguageCode.en.rawValue, translation: explaination_en))
+                  }
+                  
+                  if !example_vi.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                    exampleTrans.append(RealmTranslation(languageCode: LanguageCode.vi.rawValue, translation: example_vi))
+                  }
+                  
+                  if !example_en.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                    exampleTrans.append(RealmTranslation(languageCode: LanguageCode.en.rawValue, translation: example_en))
+                  }
+                  
+                  let grammar = RealmGrammar(name: name, example: example, similarGrammar: similar, explainationTranslations: explainationTrans, exampleTranslations: exampleTrans)
+                  
+                  lesson.grammars.append(grammar)
                 }
               }
             }
