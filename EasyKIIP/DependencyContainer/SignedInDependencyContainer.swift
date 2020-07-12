@@ -115,7 +115,8 @@ public class SignedInDependencyContainer {
   }
   
   func makeParagraphVC(readingPart: ReadingPart) -> ParagraphVC {
-    let viewModel = ParagraphViewModel(readingPart: readingPart)
+    let viewModel = ParagraphViewModel(readingPart: readingPart,
+                                       vocabRepository: vocabRepository)
     return ParagraphVC(viewModel: viewModel)
   }
   

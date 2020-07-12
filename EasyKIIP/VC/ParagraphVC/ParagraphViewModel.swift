@@ -25,9 +25,11 @@ class ParagraphViewModel {
   private let rScripts: BehaviorRelay<[Script]>
   
   private let readingPart: ReadingPart
+  private let vocabRepository: VocabRepository
   
-  init(readingPart: ReadingPart) {
+  init(readingPart: ReadingPart, vocabRepository: VocabRepository) {
     self.readingPart = readingPart
+    self.vocabRepository = vocabRepository
     
     var scripts = [Script]()
     let koreanScript = Script(name: readingPart.scriptName,
@@ -42,6 +44,10 @@ class ParagraphViewModel {
     }
     
     rScripts = BehaviorRelay<[Script]>(value: scripts)
+  }
+  
+  func handleSearchBarTextInput(_ searchText: String) -> [Vocab] {
+    return vocabRepository.searchVocab(keyword: searchText)
   }
   
 }

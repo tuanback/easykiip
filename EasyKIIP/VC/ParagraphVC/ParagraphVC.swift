@@ -20,12 +20,17 @@ class ParagraphVC: NiblessViewController {
   private let buttonKorean = UIButton()
   private let buttonTranslation = UIButton()
   
+  private lazy var searchController = UISearchController(searchResultsController: searchVocabListVC)
+  
   private let pageViewController = UIPageViewController(transitionStyle: .scroll,
                                                         navigationOrientation: .horizontal,
                                                         options: nil)
   private var viewControllers: [UIViewController] = []
   private var currentVCIndex = 0
   private let disposeBag = DisposeBag()
+  
+  private lazy var searchVocabListVM = SearchVocabListViewModel(vocabs: [])
+  private lazy var searchVocabListVC = SearchVocabListVC(viewModel: searchVocabListVM)
   
   private let viewModel: ParagraphViewModel
   
@@ -109,6 +114,30 @@ class ParagraphVC: NiblessViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     observeViewModel()
+    setupNavBar()
+  }
+  
+  func setupNavBar() {
+    let searchBarItem = UIBarButtonItem(image: UIImage(named: IconName.search), style: .plain, target: self, action: #selector(openSearchController(sender:)))
+    navigationItem.rightBarButtonItem = searchBarItem
+    
+    searchController.searchBar.placeholder = Strings.searchVocabOrTranslation
+    searchController.hidesNavigationBarDuringPresentation = false
+    
+    searchController.searchBar.rx.text
+    .orEmpty
+    .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
+    .distinctUntilChanged() // If they didn't occur, check if the new value is the same as old.
+    .subscribe(onNext: { [weak self] string in
+      if let vocabs = self?.viewModel.handleSearchBarTextInput(string) {
+        self?.searchVocabListVM.setVocabs(vocabs)
+      }
+    })
+    .disposed(by: disposeBag)
+  }
+  
+  @objc private func openSearchController(sender: UIBarButtonItem) {
+    present(searchController, animated: true, completion: nil)
   }
   
   private func observeViewModel() {
