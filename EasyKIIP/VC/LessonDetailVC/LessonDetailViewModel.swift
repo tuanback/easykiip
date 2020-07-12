@@ -17,6 +17,7 @@ enum LessonDetailChildVC {
   case learnVocab
   case readingPart
   case listOfVocabs
+  case grammar
 }
 
 struct LearnVocabItemViewModel {
@@ -40,6 +41,11 @@ struct VocabListItemViewModel: Equatable {
   let id: Int
   let word: String
   let wordTranslation: String
+}
+
+struct GrammarListItemViewModel: Equatable {
+  let id: Int
+  let name: String
 }
 
 class LessonDetailViewModel {
@@ -81,6 +87,14 @@ class LessonDetailViewModel {
     }
   }
   
+  var oGrammarItemViewModels: Observable<[GrammarListItemViewModel]> {
+    return rGrammars.map { grammars in
+      return grammars.enumerated().map { item -> GrammarListItemViewModel in
+        return GrammarListItemViewModel(id: item.offset, name: item.element.name)
+      }
+    }
+  }
+  
   var oNavigationEvent: Observable<NavigationEvent<LessonDetailNavigator.Destination>> {
     return rNavigationEvent.asObservable()
   }
@@ -105,6 +119,7 @@ class LessonDetailViewModel {
   private let rChildVC = BehaviorRelay<[LessonDetailChildVC]>(value: [])
   private let rVocabs = BehaviorRelay<[Vocab]>(value: [])
   private let rReadingParts = BehaviorRelay<[ReadingPart]>(value: [])
+  private let rGrammars = BehaviorRelay<[Grammar]>(value: [])
   private let rNavigagtionTitle = BehaviorRelay<String>(value: "")
   private let rPracticeButtonHidden = BehaviorRelay<Bool>(value: true)
   private let rIsLoading = BehaviorRelay<Bool>(value: false)
@@ -148,17 +163,26 @@ class LessonDetailViewModel {
       let readingParts = lesson.readingParts.filter { (readingPart) -> Bool in
         readingPart.scriptTranslation[languageCode] != nil
       }
+      let grammars = lesson.grammars.filter { (grammar) -> Bool in
+        grammar.explainationTranslations[languageCode] != nil && grammar.exampleTranslations[languageCode] != nil
+      }
       
-      if vocabs.count > 0 && readingParts.count > 0 {
-        return [.learnVocab, .readingPart, .listOfVocabs]
+      var childVCs: [LessonDetailChildVC] = []
+      
+      if vocabs.count > 0 {
+        childVCs.append(.listOfVocabs)
+        childVCs.append(.learnVocab)
       }
-      else if vocabs.count > 0 {
-        return [.learnVocab, .listOfVocabs]
+      
+      if readingParts.count > 0 {
+        childVCs.append(.readingPart)
       }
-      else if readingParts.count > 0 {
-        return [.readingPart]
+        
+      if grammars.count > 0 {
+        childVCs.append(.grammar)
       }
-      return []
+        
+      return childVCs
     }
     .bind(to: rChildVC)
     .disposed(by: disposeBag)
@@ -179,6 +203,12 @@ class LessonDetailViewModel {
       return $0.readingParts
     }
     .bind(to: rReadingParts)
+    .disposed(by: disposeBag)
+    
+    observable.map {
+      return $0.grammars
+    }
+    .bind(to: rGrammars)
     .disposed(by: disposeBag)
     
     observable.map { [weak self] _ -> Bool in
@@ -206,6 +236,16 @@ class LessonDetailViewModel {
     }
     
     rNavigationEvent.accept(.push(destination: .paragraph(readingPart: viewModel.readingPart)))
+  }
+  
+  func handleGrammarItemClicked(viewModel: GrammarListItemViewModel) {
+    guard isAbleToStartLearning() else {
+      rShowNoInternetAlert.accept(())
+      return
+    }
+    
+    let grammar = rGrammars.value[viewModel.id]
+    rNavigationEvent.accept(.push(destination: .grammarDetail(grammar: grammar)))
   }
   
   func handlePracticeButtonClicked() {

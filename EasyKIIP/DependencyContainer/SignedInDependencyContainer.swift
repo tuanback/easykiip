@@ -123,6 +123,11 @@ public class SignedInDependencyContainer {
     return SwiftPaywall()
   }
   
+  func makeGrammarDetailVC(grammar: Grammar) -> GrammarDetailVC {
+    let viewModel = GrammarDetailViewModel(grammar: grammar)
+    return GrammarDetailVC(viewModel: viewModel)
+  }
+  
   func makeQuizNewWordVC(bookID: Int, lessonID: Int, vocabs: [Vocab]) -> QuizVC {
    
     let randomVocabs: [Vocab] = vocabRepository.getRandomVocabs(differentFromVocabIDs: vocabs.map { $0.id }, upto: vocabs.count)
@@ -180,3 +185,4 @@ extension SignedInDependencyContainer: LoginVCFactory { }
 
 extension SignedInDependencyContainer: ParagraphVCFactory { }
 extension SignedInDependencyContainer: PayWallVCFactory { }
+extension SignedInDependencyContainer: GrammarDetailVCFactory { }

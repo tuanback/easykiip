@@ -99,6 +99,8 @@ extension MainNavVC {
       return false
     case is ParagraphVC:
       return true
+    case is GrammarDetailVC:
+      return true
     default:
       assertionFailure("Encountered unexpected child view controller type in OnboardingViewController")
       return nil

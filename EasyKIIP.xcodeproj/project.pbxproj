@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		170F2CCA24B98C2F00D52D0E /* SpeedSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F2CC924B98C2F00D52D0E /* SpeedSynthesizer.swift */; };
 		170F2CCC24BAF95000D52D0E /* Grammar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F2CCB24BAF95000D52D0E /* Grammar.swift */; };
+		170F2CD424BB103800D52D0E /* GrammarListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F2CD224BB103800D52D0E /* GrammarListVC.swift */; };
+		170F2CD524BB103800D52D0E /* GrammarListRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F2CD324BB103800D52D0E /* GrammarListRootView.swift */; };
+		170F2CD724BB1D6800D52D0E /* GrammarDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F2CD624BB1D6800D52D0E /* GrammarDetailVC.swift */; };
+		170F2CD924BB1DA400D52D0E /* GrammarDetailRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F2CD824BB1DA400D52D0E /* GrammarDetailRootView.swift */; };
+		170F2CDC24BB1E3B00D52D0E /* GrammarDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170F2CDB24BB1E3B00D52D0E /* GrammarDetailViewModel.swift */; };
 		17328475248CC26F00103B5A /* MainViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954AA9245D052B00C8CC95 /* MainViewModelTests.swift */; };
 		17328476248CC27100103B5A /* BookDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17954ABC245EA9CE00C8CC95 /* BookDetailViewModelTests.swift */; };
 		17328477248CC27400103B5A /* LessonDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */; };
@@ -297,6 +302,11 @@
 		12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		170F2CC924B98C2F00D52D0E /* SpeedSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedSynthesizer.swift; sourceTree = "<group>"; };
 		170F2CCB24BAF95000D52D0E /* Grammar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grammar.swift; sourceTree = "<group>"; };
+		170F2CD224BB103800D52D0E /* GrammarListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrammarListVC.swift; sourceTree = "<group>"; };
+		170F2CD324BB103800D52D0E /* GrammarListRootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrammarListRootView.swift; sourceTree = "<group>"; };
+		170F2CD624BB1D6800D52D0E /* GrammarDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarDetailVC.swift; sourceTree = "<group>"; };
+		170F2CD824BB1DA400D52D0E /* GrammarDetailRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarDetailRootView.swift; sourceTree = "<group>"; };
+		170F2CDB24BB1E3B00D52D0E /* GrammarDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarDetailViewModel.swift; sourceTree = "<group>"; };
 		17328479248CD96800103B5A /* QuizNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizNavigator.swift; sourceTree = "<group>"; };
 		1732847B248D124900103B5A /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
 		1738424B2470CF3500BEFE2F /* LessonDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewModelTests.swift; sourceTree = "<group>"; };
@@ -604,6 +614,26 @@
 			path = SpeechSynthesizer;
 			sourceTree = "<group>";
 		};
+		170F2CD124BB103800D52D0E /* Grammar */ = {
+			isa = PBXGroup;
+			children = (
+				170F2CD224BB103800D52D0E /* GrammarListVC.swift */,
+				170F2CD324BB103800D52D0E /* GrammarListRootView.swift */,
+				170F2CDA24BB1E2500D52D0E /* GrammarDetail */,
+			);
+			path = Grammar;
+			sourceTree = "<group>";
+		};
+		170F2CDA24BB1E2500D52D0E /* GrammarDetail */ = {
+			isa = PBXGroup;
+			children = (
+				170F2CD624BB1D6800D52D0E /* GrammarDetailVC.swift */,
+				170F2CD824BB1DA400D52D0E /* GrammarDetailRootView.swift */,
+				170F2CDB24BB1E3B00D52D0E /* GrammarDetailViewModel.swift */,
+			);
+			path = GrammarDetail;
+			sourceTree = "<group>";
+		};
 		1714C40424979324003A795F /* ParagraphVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -634,6 +664,7 @@
 		173842562471589200BEFE2F /* LessonDetailVC */ = {
 			isa = PBXGroup;
 			children = (
+				170F2CD124BB103800D52D0E /* Grammar */,
 				17563DD524AF6C5E00285E13 /* PayWall */,
 				17CBE66F247A076B005D4CFD /* VocabList */,
 				17CBE66B247A0720005D4CFD /* ReadingPart */,
@@ -2127,6 +2158,7 @@
 				17D98F8C248CB4390049F5BB /* QuizViewModel.swift in Sources */,
 				17F30EEF246B5608008040BE /* BookDetailCVC.swift in Sources */,
 				17FBF6E6245BEBC000A65233 /* Navigation.swift in Sources */,
+				170F2CD524BB103800D52D0E /* GrammarListRootView.swift in Sources */,
 				17FBF70B245BEC0300A65233 /* LoginVC.swift in Sources */,
 				17E7F18224681B12008667FB /* FirestoreKey.swift in Sources */,
 				17FBF6FC245BEBEA00A65233 /* WelcomeViewModel.swift in Sources */,
@@ -2151,6 +2183,7 @@
 				17FBF714245BEC1300A65233 /* LaunchViewModel.swift in Sources */,
 				17FBF709245BEBFF00A65233 /* LoginRootView.swift in Sources */,
 				17F5C095248FB8CB001ABA43 /* QuizNewWordVC.swift in Sources */,
+				170F2CD424BB103800D52D0E /* GrammarListVC.swift in Sources */,
 				17CBE684247AB133005D4CFD /* SelectLanguageRootView.swift in Sources */,
 				17CBE677247A1A47005D4CFD /* ReadingListRootView.swift in Sources */,
 				17954AB2245D3F6000C8CC95 /* MainBookItemCVC.swift in Sources */,
@@ -2178,9 +2211,11 @@
 				17FBF6E0245BEBB600A65233 /* UIFront_Extension.swift in Sources */,
 				17954A8A245CFC9D00C8CC95 /* MainNavVC.swift in Sources */,
 				1771C7172497A59000983897 /* ParagraphViewVC.swift in Sources */,
+				170F2CD924BB1DA400D52D0E /* GrammarDetailRootView.swift in Sources */,
 				177AEC8E2495A3E500771DF2 /* ChangeLanguageViewModel.swift in Sources */,
 				17CBE6652479FE0F005D4CFD /* BookDetailNavigator.swift in Sources */,
 				177AEC832494F53200771DF2 /* SettingItem.swift in Sources */,
+				170F2CD724BB1D6800D52D0E /* GrammarDetailVC.swift in Sources */,
 				17FBF6EF245BEBCF00A65233 /* NiblessViewController.swift in Sources */,
 				17FBF717245BEC1800A65233 /* LaunchRootView.swift in Sources */,
 				1771C71B2497A85100983897 /* ParagraphVC.swift in Sources */,
@@ -2219,6 +2254,7 @@
 				17F30EE3246ACBAC008040BE /* BookDetailRootView.swift in Sources */,
 				17E7F17E24681664008667FB /* FirebaseVocabRemoteAPI.swift in Sources */,
 				17FBF6F8245BEBE100A65233 /* MainVC.swift in Sources */,
+				170F2CDC24BB1E3B00D52D0E /* GrammarDetailViewModel.swift in Sources */,
 				17CBE674247A19CE005D4CFD /* LearnVocabListRootView.swift in Sources */,
 				1771C7132497963F00983897 /* ParagraphViewModel.swift in Sources */,
 				17FBF702245BEBF200A65233 /* WelcomeVC.swift in Sources */,

@@ -76,6 +76,18 @@ public struct Strings {
   static var vocabulary: String {
     NSLocalizedString("Vocabulary", bundle: Strings.languageBundle, comment: "")
   }
+  static var grammar: String {
+    NSLocalizedString("Grammar", bundle: Strings.languageBundle, comment: "")
+  }
+  static var usage: String {
+    NSLocalizedString("Usage", bundle: Strings.languageBundle, comment: "Cách sử dụng")
+  }
+  static var example: String {
+    NSLocalizedString("Example", bundle: Strings.languageBundle, comment: "Ví dụ")
+  }
+  static var sameMeaningGrammar: String {
+    NSLocalizedString("Same Meaning Grammar", bundle: Strings.languageBundle, comment: "")
+  }
   static var knew: String {
     NSLocalizedString("Knew", bundle: Strings.languageBundle, comment: "practice screen")
   }

@@ -18,9 +18,10 @@ class LessonDetailNavigator: Navigator {
     case quizPractice(bookID: Int, lessonID: Int, vocabs: [Vocab])
     case paragraph(readingPart: ReadingPart)
     case payWall
+    case grammarDetail(grammar: Grammar)
   }
   
-  typealias Factory = QuizNewWordVCFactory & QuizPracticeVCFactory & ParagraphVCFactory & PayWallVCFactory
+  typealias Factory = QuizNewWordVCFactory & QuizPracticeVCFactory & ParagraphVCFactory & PayWallVCFactory & GrammarDetailVCFactory
   
   private let factory: Factory
   init(factory: Factory) {
@@ -59,6 +60,8 @@ class LessonDetailNavigator: Navigator {
       return factory.makeParagraphVC(readingPart: readingPart)
     case .payWall:
       return factory.makePayWallVC()
+    case .grammarDetail(let grammar):
+      return factory.makeGrammarDetailVC(grammar: grammar)
     }
   }
   
@@ -78,4 +81,8 @@ protocol ParagraphVCFactory {
 
 protocol PayWallVCFactory {
   func makePayWallVC() -> UIViewController
+}
+
+protocol GrammarDetailVCFactory {
+  func makeGrammarDetailVC(grammar: Grammar) -> GrammarDetailVC
 }

@@ -55,6 +55,9 @@
 /* No comment provided by engineer. */
 "Error" = "Lỗi";
 
+/* Ví dụ */
+"Example" = "Ví dụ";
+
 /* No comment provided by engineer. */
 "Failed" = "Thất bại";
 
@@ -63,6 +66,9 @@
 
 /* No comment provided by engineer. */
 "free trail." = "dùng thử";
+
+/* No comment provided by engineer. */
+"Grammar" = "Ngữ Pháp";
 
 /* No comment provided by engineer. */
 "Heart are refilled" = "Tim đã đầy lại rồi";
@@ -161,6 +167,9 @@
 "Retry" = "Thử lại";
 
 /* No comment provided by engineer. */
+"Same Meaning Grammar" = "Cấu trúc cùng nghĩa";
+
+/* No comment provided by engineer. */
 "Save" = "Tiết kiệm";
 
 /* No comment provided by engineer. */
@@ -181,8 +190,11 @@
 /* No comment provided by engineer. */
 "Unlock Everything" = "Mở khoá mọi thứ";
 
+/* Cách sử dụng */
+"Usage" = "Cách sử dụng";
+
 /* No comment provided by engineer. */
-"Vocabulary" = "Từ vựng";
+"Vocabulary" = "Từ Vựng";
 
 /* No comment provided by engineer. */
 "Watch" = "Xem";

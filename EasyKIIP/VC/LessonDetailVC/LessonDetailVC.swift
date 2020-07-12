@@ -24,6 +24,7 @@ class LessonDetailVC: NiblessViewController {
   private var buttonLearn: UIButton?
   private var buttonReading: UIButton?
   private var buttonVocabList: UIButton?
+  private var buttonGrammar: UIButton?
   
   private let pageViewController = UIPageViewController(transitionStyle: .scroll,
                                                 navigationOrientation: .horizontal,
@@ -32,7 +33,10 @@ class LessonDetailVC: NiblessViewController {
   private var learnListVC: LearnVocabListVC?
   private var readingListVC: ReadingListVC?
   private var vocabListVC: VocabListVC?
+  private var grammarListVC: GrammarListVC?
   private var currentVCIndex = 0
+  
+  private var numberOfChildVC = 1
   
   private let disposeBag = DisposeBag()
   
@@ -151,6 +155,13 @@ class LessonDetailVC: NiblessViewController {
         }
       case .payWall:
         break
+      case .grammarDetail(_):
+        guard let startTime = startOpeningAnotherVCTime else { break }
+        let currentTime = Date().timeIntervalSince1970
+        let passedTime = currentTime - startTime
+        if passedTime >= 10 {
+          shouldPresentAd = true
+        }
       }
     }
     lastOpenedVC = nil
@@ -203,6 +214,8 @@ class LessonDetailVC: NiblessViewController {
           $0.removeFromSuperview()
         }
         
+        strongSelf.numberOfChildVC = childVCs.count
+        
         for childVC in childVCs {
           switch childVC {
           case .learnVocab:
@@ -222,6 +235,12 @@ class LessonDetailVC: NiblessViewController {
             strongSelf.vocabListVC = vc
             strongSelf.viewControllers.append(vc)
             let button = strongSelf.setupVocabularyButton()
+            strongSelf.stackViewButtonContainer.addArrangedSubview(button)
+          case .grammar:
+            let vc = GrammarListVC(viewModel: strongSelf.viewModel)
+            strongSelf.grammarListVC = vc
+            strongSelf.viewControllers.append(vc)
+            let button = strongSelf.setupGammarButton()
             strongSelf.stackViewButtonContainer.addArrangedSubview(button)
           }
         }
@@ -289,7 +308,7 @@ class LessonDetailVC: NiblessViewController {
   private func setupLearnVocabButton() -> UIButton {
     buttonLearn = UIButton()
     buttonLearn?.setTitle(Strings.learn, for: .normal)
-    buttonLearn?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 18)
+    buttonLearn?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
     buttonLearn?.addTarget(self, action: #selector(handleButtonLearnClicked(_:)), for: .touchUpInside)
     buttonLearn?.setTitleColor(UIColor.appLabelBlack, for: .normal)
     return buttonLearn!
@@ -315,7 +334,7 @@ class LessonDetailVC: NiblessViewController {
   private func setupParagraphButton() -> UIButton {
     buttonReading = UIButton()
     buttonReading?.setTitle(Strings.paragraph, for: .normal)
-    buttonReading?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 18)
+    buttonReading?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
     buttonReading?.addTarget(self, action: #selector(handleButtonParagraphClicked(_:)), for: .touchUpInside)
     buttonReading?.setTitleColor(UIColor.appLabelBlack, for: .normal)
     return buttonReading!
@@ -337,7 +356,7 @@ class LessonDetailVC: NiblessViewController {
   private func setupVocabularyButton() -> UIButton {
     buttonVocabList = UIButton()
     buttonVocabList?.setTitle(Strings.vocabulary, for: .normal)
-    buttonVocabList?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 18)
+    buttonVocabList?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
     buttonVocabList?.setTitleColor(UIColor.appLabelBlack, for: .normal)
     buttonVocabList?.addTarget(self, action: #selector(handleButtonVocabularClicked), for: .touchUpInside)
     return buttonVocabList!
@@ -345,6 +364,28 @@ class LessonDetailVC: NiblessViewController {
   
   @objc func handleButtonVocabularClicked(_ sender: UIButton) {
     guard let vc = vocabListVC,
+      let index = indexOfViewController(vc),
+      index != currentVCIndex else {
+      return
+    }
+    
+    let direction: UIPageViewController.NavigationDirection = currentVCIndex < index ? .forward : .reverse
+    currentVCIndex = index
+    pageViewController.setViewControllers([vc], direction: direction, animated: true, completion: nil)
+    updateIndicatorView(view: sender)
+  }
+  
+  private func setupGammarButton() -> UIButton {
+    buttonGrammar = UIButton()
+    buttonGrammar?.setTitle(Strings.grammar, for: .normal)
+    buttonGrammar?.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
+    buttonGrammar?.setTitleColor(UIColor.appLabelBlack, for: .normal)
+    buttonGrammar?.addTarget(self, action: #selector(handleButtonGrammarClicked), for: .touchUpInside)
+    return buttonGrammar!
+  }
+  
+  @objc func handleButtonGrammarClicked(_ sender: UIButton) {
+    guard let vc = grammarListVC,
       let index = indexOfViewController(vc),
       index != currentVCIndex else {
       return
@@ -434,12 +475,12 @@ extension LessonDetailVC: UIPageViewControllerDataSource, UIPageViewControllerDe
   }
   
   func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-    guard completed else { return }
+    guard completed, numberOfChildVC > 0 else { return }
     
     if let vc = pageViewController.viewControllers?.first,
       let index = indexOfViewController(vc) {
       currentVCIndex = index
-      let width = self.view.frame.width / 3
+      let width = self.view.frame.width / CGFloat(numberOfChildVC)
       let leading = width * CGFloat(index)
       updateIndicatorView(leading: leading, width: width)
       print(index)

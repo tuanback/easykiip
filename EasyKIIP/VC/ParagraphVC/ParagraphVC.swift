@@ -88,7 +88,7 @@ class ParagraphVC: NiblessViewController {
       make.top.equalTo(view.safeAreaLayoutGuide)
       make.leading.equalTo(view.safeAreaLayoutGuide)
       make.trailing.equalTo(view.safeAreaLayoutGuide)
-      make.height.equalTo(40)
+      make.height.equalTo(50)
     }
     
     separator.snp.makeConstraints { (make) in
