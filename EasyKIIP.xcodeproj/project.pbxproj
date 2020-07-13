@@ -351,6 +351,7 @@
 		1766FFED245BADA2008B263D /* WelcomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewModel.swift; sourceTree = "<group>"; };
 		1766FFEF245BB0CB008B263D /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		1766FFF1245BD993008B263D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		17686BDD24BC842700C75616 /* Easy KIIP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Easy KIIP.entitlements"; sourceTree = "<group>"; };
 		176ADE062460E958006C5D3C /* BookDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewModel.swift; sourceTree = "<group>"; };
 		176ADE0A24620C07006C5D3C /* RealmDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataStoreTests.swift; sourceTree = "<group>"; };
 		176ADE0D24620EAB006C5D3C /* RealmProviderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProviderExtensions.swift; sourceTree = "<group>"; };
@@ -1067,6 +1068,7 @@
 		17B70A84244C180200C67334 /* EasyKIIP */ = {
 			isa = PBXGroup;
 			children = (
+				17686BDD24BC842700C75616 /* Easy KIIP.entitlements */,
 				17B70A85244C180200C67334 /* AppDelegate.swift */,
 				1766FFC9245A9FF6008B263D /* Assets */,
 				17B70A8E244C180500C67334 /* Assets.xcassets */,
@@ -2588,7 +2590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "EasyKIIP/Easy KIIPDebug.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = CW3DR8XJT7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2615,8 +2617,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "EasyKIIP/Easy KIIP.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = CW3DR8XJT7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
