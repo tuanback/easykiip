@@ -72,7 +72,7 @@ class LoginRootView: NiblessView {
     //svButtonContainer.addArrangedSubview(kakaoSignInButton)
     if #available(iOS 13.0, *) {
       svButtonContainer.addArrangedSubview(siwaButton)
-      siwaButton.addTarget(self, action: #selector(appleSignInTapped), for: .touchDown)
+      siwaButton.addTarget(self, action: #selector(appleSignInTapped), for: .touchUpInside)
     } else {
       // Fallback on earlier versions
     }
@@ -107,10 +107,9 @@ class LoginRootView: NiblessView {
     viewModel.kakaoLogin()
   }
   
+  @available(iOS 13.0, *)
   @objc func appleSignInTapped() {
-    if #available(iOS 13.0, *) {
-      appleLogin()
-    }
+    appleLogin()
   }
   
   @available(iOS 13.0, *)
@@ -203,9 +202,8 @@ extension LoginRootView: ASAuthorizationControllerPresentationContextProviding {
   }
 }
 
-@available(iOS 13.0, *)
 extension LoginRootView: ASAuthorizationControllerDelegate {
-
+  @available(iOS 13.0, *)
   func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
     if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
       guard let nonce = currentNonce else {
@@ -227,6 +225,7 @@ extension LoginRootView: ASAuthorizationControllerDelegate {
     }
   }
 
+  @available(iOS 13.0, *)
   func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
     // Handle error.
     print("Sign in with Apple errored: \(error)")

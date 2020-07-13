@@ -156,11 +156,15 @@ class QuizEndRootView: NiblessView {
     let viewSeparator = UIView()
     viewSeparator.backgroundColor = UIColor.appSystemGray3
     
+    let viewBottomSeparator = UIView()
+    viewBottomSeparator.backgroundColor = UIColor.appSystemGray3
+    
     viewAdContainer.addSubview(buttonClose)
     viewAdContainer.addSubview(labelAdExplaination)
     viewAdContainer.addSubview(viewSeparator)
     viewAdContainer.addSubview(adView)
     if !viewModel.isPremiumUser() {
+      viewAdContainer.addSubview(viewBottomSeparator)
       viewAdContainer.addSubview(buttonUpgradeToPremium2)
     }
     
@@ -192,9 +196,16 @@ class QuizEndRootView: NiblessView {
         make.trailing.equalToSuperview().inset(16)
       }
       
+      viewBottomSeparator.snp.makeConstraints { (make) in
+        make.height.equalTo(0.5)
+        make.bottom.equalTo(buttonUpgradeToPremium2.snp.top).offset(-16)
+        make.leading.equalToSuperview()
+        make.trailing.equalToSuperview()
+      }
+      
       adView.snp.makeConstraints { (make) in
         make.top.equalTo(viewSeparator.snp.bottom).offset(16)
-        make.bottom.equalTo(buttonUpgradeToPremium2.snp.top).offset(-8)
+        make.bottom.equalTo(viewBottomSeparator.snp.top).offset(-6)
         make.leading.equalToSuperview().inset(16)
         make.trailing.equalToSuperview().inset(16)
       }

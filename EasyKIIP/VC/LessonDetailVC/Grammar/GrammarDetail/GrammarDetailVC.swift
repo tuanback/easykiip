@@ -20,4 +20,9 @@ class GrammarDetailVC: NiblessViewController {
   override func loadView() {
     view = GrammarDetailRootView(viewModel: viewModel)
   }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    navigationItem.title = Strings.grammar
+  }
 }

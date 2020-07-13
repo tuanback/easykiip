@@ -47,6 +47,8 @@ class ParagraphVC: NiblessViewController {
   
   private func setupViews() {
     
+    navigationItem.title = Strings.paragraph
+    
     buttonKorean.setTitle(Strings.korean, for: .normal)
     buttonKorean.titleLabel?.font = UIFont.appFontDemiBold(ofSize: 16)
     buttonKorean.setTitleColor(UIColor.appLabelBlack, for: .normal)
