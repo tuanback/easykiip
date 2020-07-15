@@ -108,6 +108,8 @@ public class KIIPQuizEngine: QuizEngine {
       }
     }
     
+    // Because current question has been deleted
+    mCurrentQuestion -= 1
     routeToNextQuestion()
   }
   

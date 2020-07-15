@@ -19,6 +19,9 @@ public class Vocab {
   public var lastTimeTest: Date? {
     return practiceHistory.lastTimeTest
   }
+  public var isMastered: Bool {
+    return practiceHistory.isMastered
+  }
   
   public init(id: Int, word: String, translations: [LanguageCode: String]) {
     self.id = id

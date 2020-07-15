@@ -358,7 +358,7 @@ struct ToDetailViewModelConverter {
   private static func convertVocabsToLearnVocabItemVMs(index: Int, vocabs: [Vocab]) -> LearnVocabItemViewModel {
     var proficiency: UInt8 = 0
     
-    let learnedVocabs = vocabs.filter({ $0.lastTimeTest != nil })
+    let learnedVocabs = vocabs.filter({ $0.lastTimeTest != nil || $0.isMastered })
     if learnedVocabs.count == vocabs.count {
       proficiency = calculateProficiency(vocabs: vocabs)
     }
