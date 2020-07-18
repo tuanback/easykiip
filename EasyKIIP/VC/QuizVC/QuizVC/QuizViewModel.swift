@@ -11,6 +11,7 @@ import EasyKIIPKit
 import Firebase
 import RxSwift
 import RxCocoa
+import SwiftRater
 
 struct ErrorAction {
   let title: String
@@ -242,6 +243,7 @@ extension QuizViewModel: QuizEngineDelegate {
   }
   
   func quizEngineDidCompleted() {
+    SwiftRater.incrementSignificantUsageCount()
     rNavigationEvent.accept(.push(destination: .endQuiz(ad: endQuizAd)))
   }
   
