@@ -236,6 +236,15 @@ extension Strings {
   static var korean: String {
     NSLocalizedString("Korean", bundle: Strings.languageBundle, comment: "")
   }
+  static var update: String {
+    NSLocalizedString("Update", bundle: Strings.languageBundle, comment: "")
+  }
+  static var later: String {
+    NSLocalizedString("Later", bundle: Strings.languageBundle, comment: "")
+  }
+  static var newVersionIsAvailableMsg: String {
+    NSLocalizedString("A new version is avaiable. Do you want to update?", bundle: Strings.languageBundle, comment: "")
+  }
   
   static var accountExplaination: String {
     NSLocalizedString("Log in to save and synchronize your learning progress between multiple devices", bundle: Strings.languageBundle, comment: "")
