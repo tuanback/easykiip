@@ -54,7 +54,9 @@ class SettingRootView: NiblessView {
         case .vi:
           cell.detailTextLabel?.text = Strings.vietnamese
         }
-      default:
+      case .contactUs, .rateUs:
+        cell.accessoryType = .disclosureIndicator
+      case .login, .logOut, .premiumUpgrade:
         break
       }
       return cell
@@ -78,6 +80,12 @@ class SettingRootView: NiblessView {
         self?.viewModel.handleSettingItemClicked(item: item)
       })
       .disposed(by: disposeBag)
+    
+    tableView.rx.itemSelected
+      .subscribe(onNext: { [weak self] indexPath in
+        self?.tableView.deselectRow(at: indexPath, animated: true)
+      })
+    .disposed(by: disposeBag)
   }
   
 }

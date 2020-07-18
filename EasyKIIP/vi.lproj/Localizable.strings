@@ -14,6 +14,9 @@
 "10 minutes per day, that's all you need" = "10 phút mỗi ngày, đó là tất cả những gì bạn cần";
 
 /* No comment provided by engineer. */
+"A new version is avaiable. Do you want to update?" = "Có một phiên bản mới, hãy cập nhật để tận hưởng những tính năng mới nhất.";
+
+/* No comment provided by engineer. */
 "Account" = "Tài khoản";
 
 /* No comment provided by engineer. */
@@ -30,6 +33,9 @@
 
 /* No comment provided by engineer. */
 "Cancel before" = "Huỷ trước ngày";
+
+/* No comment provided by engineer. */
+"Contact Us" = "Liên hệ chúng tôi";
 
 /* No comment provided by engineer. */
 "Continue" = "Tiếp tục";
@@ -65,6 +71,9 @@
 "Failed to load video. Do you want to try again?" = "Không thể tải video. Bạn có muốn thử lại không?";
 
 /* No comment provided by engineer. */
+"Feed Back" = "Phản Hồi";
+
+/* No comment provided by engineer. */
 "free trail." = "dùng thử";
 
 /* No comment provided by engineer. */
@@ -84,6 +93,9 @@
 
 /* No comment provided by engineer. */
 "Language" = "Ngôn ngữ";
+
+/* No comment provided by engineer. */
+"Later" = "Lần sau";
 
 /* No comment provided by engineer. */
 "Learn" = "Học Từ";
@@ -161,6 +173,9 @@
 "Quit" = "Thoát";
 
 /* No comment provided by engineer. */
+"Rate Us" = "Đánh giá ứng dụng";
+
+/* No comment provided by engineer. */
 "RESTORE PURCHASES" = "KHÔI PHỤC MUA";
 
 /* No comment provided by engineer. */
@@ -179,6 +194,9 @@
 "Settings" = "Cài đặt";
 
 /* No comment provided by engineer. */
+"Support" = "Hỗ trợ";
+
+/* No comment provided by engineer. */
 "Terms of Service" = "Điều khoản dịch vụ";
 
 /* practice screen */
@@ -189,6 +207,9 @@
 
 /* No comment provided by engineer. */
 "Unlock Everything" = "Mở khoá mọi thứ";
+
+/* No comment provided by engineer. */
+"Update" = "Cập Nhật";
 
 /* Cách sử dụng */
 "Usage" = "Cách sử dụng";

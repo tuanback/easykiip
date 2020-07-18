@@ -12,6 +12,7 @@ import RxCocoa
 import UserSession
 import UIKit
 import RxDataSources
+import StoreKit
 
 struct TableViewSection {
   var header: String
@@ -34,14 +35,17 @@ class SettingVM {
   var oSections: Observable<[TableViewSection]> {
     return rSections.asObservable()
   }
-  
   private var rSections = BehaviorRelay<[TableViewSection]>(value: [])
   
   var oNavigation: Observable<NavigationEvent<SettingNavigator.Destination>> {
     return rNavigationEvent.asObservable()
   }
-  
   private var rNavigationEvent = PublishRelay<NavigationEvent<SettingNavigator.Destination>>()
+  
+  var oSendMail: Observable<Void> {
+    return rSendEmail.asObservable()
+  }
+  var rSendEmail = PublishRelay<Void>()
   
   private var sections: [SettingSection] = []
   private let userSessionRepo: UserSessionRepository
@@ -69,6 +73,7 @@ class SettingVM {
     
     sections.append(SettingSection(settingSectionItem: .account, settingItems: accountSettinsItems))
     sections.append(SettingSection(settingSectionItem: .language, settingItems: [.appLanguage]))
+    sections.append(SettingSection(settingSectionItem: .support, settingItems: [.rateUs, .contactUs]))
     
     let tableViewSections: [TableViewSection] = sections.map {
       
@@ -103,6 +108,10 @@ class SettingVM {
       rNavigationEvent.accept(.push(destination: .changeLanguage))
     case .premiumUpgrade:
       rNavigationEvent.accept(.present(destination: .payWall))
+    case .contactUs:
+      rSendEmail.accept(())
+    case .rateUs:
+      SKStoreReviewController.requestReview()
     }
   }
 }

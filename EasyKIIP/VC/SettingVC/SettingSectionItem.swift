@@ -11,6 +11,7 @@ import Foundation
 enum SettingSectionItem {
   case account
   case language
+  case support
   
   func toString() -> String {
     switch self {
@@ -18,6 +19,8 @@ enum SettingSectionItem {
       return Strings.account
     case .language:
       return Strings.language
+    case .support:
+      return Strings.support
     }
   }
 }
