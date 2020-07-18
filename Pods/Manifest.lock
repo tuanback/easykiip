@@ -355,6 +355,7 @@ PODS:
   - SnapKit (5.0.1)
   - SVProgressHUD (2.2.5)
   - SwiftDate (6.1.0)
+  - SwiftRater (1.8.0)
 
 DEPENDENCIES:
   - Action
@@ -380,6 +381,7 @@ DEPENDENCIES:
   - SnapKit
   - SVProgressHUD
   - SwiftDate
+  - SwiftRater
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -432,6 +434,7 @@ SPEC REPOS:
     - RxDataSources
     - SnapKit
     - SVProgressHUD
+    - SwiftRater
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
@@ -482,7 +485,8 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
+  SwiftRater: 6094fa6e9b3866ff8beca0a871b4b5f9ab896a6d
 
-PODFILE CHECKSUM: 4849a2b26bbdf7b863bcacbe70024b808d7bb57e
+PODFILE CHECKSUM: a82e5a052e85585cf31a2bea0698640e51988d03
 
 COCOAPODS: 1.9.2

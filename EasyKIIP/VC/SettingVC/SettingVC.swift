@@ -15,8 +15,10 @@ class SettingVC: NiblessViewController {
   
   private var viewModel: SettingVM
   private var navigator: SettingNavigator
-  
+
   private let disposeBag = DisposeBag()
+
+  private lazy var emailSender = EmailSender()
   
   init(viewModel: SettingVM, navigator: SettingNavigator) {
     self.viewModel = viewModel
@@ -67,6 +69,13 @@ class SettingVC: NiblessViewController {
       }
     })
     .disposed(by: disposeBag)
+    
+    viewModel.oSendMail
+      .subscribe(onNext: { [weak self] _ in
+        guard let strongSelf = self else { return }
+        strongSelf.emailSender.sendEmail(parentController: strongSelf, subject: Strings.feedBack, content: nil)
+      })
+      .disposed(by: disposeBag)
   }
   
 }

@@ -14,6 +14,7 @@ import GoogleMobileAds
 import GoogleSignIn
 import KakaoOpenSDK
 import Purchases
+import SwiftRater
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     InternetStateProvider.shared.startListen()
     configFirebaseAndGoogleSignIn()
     setupPurchases()
+    setupSwiftRater()
     setupFacebookLogin(application: application, launchOptions: launchOptions)
     injectionContainer = AppDependencyContainer()
     let launchVC = injectionContainer.makeLaunchVC()
@@ -83,6 +85,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     Purchases.debugLogsEnabled = true
     Purchases.configure(withAPIKey: "xQAUOzZYRMaqNiXXXTgCRnOugpXEVqJM")
     Purchases.shared.delegate = self
+  }
+  
+  private func setupSwiftRater() {
+    SwiftRater.daysUntilPrompt = 7
+    SwiftRater.usesUntilPrompt = 10
+    SwiftRater.significantUsesUntilPrompt = 3
+    SwiftRater.daysBeforeReminding = 1
+    SwiftRater.appLaunched()
   }
 }
 

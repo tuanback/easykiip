@@ -27,6 +27,7 @@ class MainVC: NiblessViewController {
   private lazy var searchVocabListVC = SearchVocabListVC(viewModel: searchVocabListVM)
     
   private lazy var bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+  private lazy var updateChecker = UpdateChecker()
   
   init(viewModel: MainViewModel,
        navigator: MainNavigator) {
@@ -55,6 +56,7 @@ class MainVC: NiblessViewController {
     setupNavBar()
     observeViewModel()
     loadAds()
+    checkForUpdate()
   }
   
   private func loadAds() {
@@ -70,6 +72,15 @@ class MainVC: NiblessViewController {
     super.viewWillAppear(animated)
     viewModel.reload()
     setupMenuButton()
+  }
+  
+  private func checkForUpdate() {
+    updateChecker.isUpdateAvailable { [weak self] (isAvailable) in
+      guard let strongSelf = self else { return }
+      if isAvailable {
+        strongSelf.updateChecker.showUpdatePopUp(target: strongSelf)
+      }
+    }
   }
   
   deinit {

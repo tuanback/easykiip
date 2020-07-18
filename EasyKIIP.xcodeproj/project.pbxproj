@@ -228,6 +228,8 @@
 		17FBF72F245C392E00A65233 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF72D245C392E00A65233 /* AuthError.swift */; };
 		17FBF735245CE6D900A65233 /* FirebaseUserSessionDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */; };
 		17FBF738245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */; };
+		17FD52AD24C2836A00661FDD /* UpdateChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD52AC24C2836A00661FDD /* UpdateChecker.swift */; };
+		17FD52AF24C28B3600661FDD /* EmailSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FD52AE24C28B3600661FDD /* EmailSender.swift */; };
 		1A35051ADF5C1C7F0B2197C2 /* Pods_EasyKIIPKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E9D5475301CDB39AD34F461 /* Pods_EasyKIIPKit.framework */; };
 		78F5A67A5A3AA31A192C291F /* Pods_EasyKIIPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12EC41BD6EA39F7602771F9C /* Pods_EasyKIIPTests.framework */; };
 		7C79AB75996A3895FF7DA653 /* Pods_UserSession_UserSessionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10354E400E6A62457F3A3874 /* Pods_UserSession_UserSessionTests.framework */; };
@@ -513,6 +515,8 @@
 		17FBF729245C18FF00A65233 /* FirebaseUserSessionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionRepository.swift; sourceTree = "<group>"; };
 		17FBF72D245C392E00A65233 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		17FBF730245C411C00A65233 /* FirebaseUserSessionDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserSessionDataStore.swift; sourceTree = "<group>"; };
+		17FD52AC24C2836A00661FDD /* UpdateChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateChecker.swift; sourceTree = "<group>"; };
+		17FD52AE24C28B3600661FDD /* EmailSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSender.swift; sourceTree = "<group>"; };
 		2F167FF918FE580D7167655F /* Pods_EasyKIIP_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIP_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F73EEDCDEA8E5784229A606 /* Pods-EasyKIIP_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyKIIP_iOS.release.xcconfig"; path = "Target Support Files/Pods-EasyKIIP_iOS/Pods-EasyKIIP_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		30F3EFD1CF8ECF9E61614281 /* Pods_EasyKIIP_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyKIIP_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -920,6 +924,8 @@
 			isa = PBXGroup;
 			children = (
 				177AECA42496205400771DF2 /* InternetStateProvider.swift */,
+				17FD52AC24C2836A00661FDD /* UpdateChecker.swift */,
+				17FD52AE24C28B3600661FDD /* EmailSender.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -2179,6 +2185,7 @@
 				17FBF6EC245BEBCA00A65233 /* NiblessNavigationController.swift in Sources */,
 				177AEC6424944FA800771DF2 /* NativeAdLoader.swift in Sources */,
 				170F2CCA24B98C2F00D52D0E /* SpeedSynthesizer.swift in Sources */,
+				17FD52AD24C2836A00661FDD /* UpdateChecker.swift in Sources */,
 				1771C7192497A5F600983897 /* ParagraphViewRootView.swift in Sources */,
 				17F57F992478A9FE00F26EF4 /* Navigator.swift in Sources */,
 				17F30EE7246AD1C6008040BE /* AdsIdentifier.swift in Sources */,
@@ -2211,6 +2218,7 @@
 				17FBF6DA245BEBA200A65233 /* AppSetting.swift in Sources */,
 				17F57FA32478B40800F26EF4 /* MainNavConNavigator.swift in Sources */,
 				177AEC782494A44100771DF2 /* Toast.swift in Sources */,
+				17FD52AF24C28B3600661FDD /* EmailSender.swift in Sources */,
 				179E7B3B24A224550090F1A2 /* SearchVocabListViewModel.swift in Sources */,
 				17FBF738245CE6E100A65233 /* FirebaseUserSessionRepository.swift in Sources */,
 				17954A8C245CFCD300C8CC95 /* MainNavViewModel.swift in Sources */,
@@ -2602,7 +2610,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.ios.easykiip;
 				PRODUCT_NAME = "Easy KIIP";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/EasyKIIP/EasyKIIP-Bridging-Header.h";
@@ -2631,7 +2639,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.ios.easykiip;
 				PRODUCT_NAME = "Easy KIIP";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/EasyKIIP/EasyKIIP-Bridging-Header.h";

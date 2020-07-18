@@ -8,6 +8,7 @@
 
 import Foundation
 import RxSwift
+import SwiftRater
 import UIKit
 
 class QuizEndVC: NiblessViewController {
@@ -30,6 +31,11 @@ class QuizEndVC: NiblessViewController {
     view = QuizEndRootView(viewModel: viewModel)
     observeViewModel()
     loadAds()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    SwiftRater.check()
   }
   
   private func loadAds() {

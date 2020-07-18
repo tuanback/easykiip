@@ -219,9 +219,20 @@ extension Strings {
   static var weekShort: String {
     NSLocalizedString("wk", bundle: Strings.languageBundle, comment: "")
   }
-  
   static var language: String {
     NSLocalizedString("Language", bundle: Strings.languageBundle, comment: "")
+  }
+  static var support: String {
+    NSLocalizedString("Support", bundle: Strings.languageBundle, comment: "")
+  }
+  static var contactUs: String {
+    NSLocalizedString("Contact Us", bundle: Strings.languageBundle, comment: "")
+  }
+  static var rateUs: String {
+    NSLocalizedString("Rate Us", bundle: Strings.languageBundle, comment: "")
+  }
+  static var feedBack: String {
+    NSLocalizedString("Feed Back", bundle: Strings.languageBundle, comment: "")
   }
   
   static var logIn: String {
@@ -235,6 +246,15 @@ extension Strings {
   }
   static var korean: String {
     NSLocalizedString("Korean", bundle: Strings.languageBundle, comment: "")
+  }
+  static var update: String {
+    NSLocalizedString("Update", bundle: Strings.languageBundle, comment: "")
+  }
+  static var later: String {
+    NSLocalizedString("Later", bundle: Strings.languageBundle, comment: "")
+  }
+  static var newVersionIsAvailableMsg: String {
+    NSLocalizedString("A new version is avaiable. Do you want to update?", bundle: Strings.languageBundle, comment: "")
   }
   
   static var accountExplaination: String {
