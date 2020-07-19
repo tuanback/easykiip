@@ -111,7 +111,20 @@ class SettingVM {
     case .contactUs:
       rSendEmail.accept(())
     case .rateUs:
-      SKStoreReviewController.requestReview()
+      rateApp()
+    }
+  }
+  
+  private func rateApp(appId: String = "id1521739580") {
+    openUrl("itms-apps://itunes.apple.com/app/" + appId)
+  }
+  
+  private func openUrl(_ urlString:String) {
+    let url = URL(string: urlString)!
+    if #available(iOS 10.0, *) {
+      UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    } else {
+      UIApplication.shared.openURL(url)
     }
   }
 }
