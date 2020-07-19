@@ -80,10 +80,6 @@ class DBCreation {
             let readingPath = csvFolder + "\(bookID)/\(lessonIndex)r.csv"
             let grammarPath = csvFolder + "\(bookID)/\(lessonIndex)g.csv"
             
-            guard let vocabFileContent = openCSV(filePath: vocabPath) else {
-              continue
-            }
-            
             var lessonNameTranslation: [RealmTranslation] = []
             if !lessonNameVi.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
               lessonNameTranslation.append(RealmTranslation(languageCode: LanguageCode.vi.rawValue, translation: lessonNameVi))
@@ -100,27 +96,29 @@ class DBCreation {
                                      readingParts: [], vocabs: [], grammars: [])
             
             do {
-              let vocabCSV = try CSVReader(string: vocabFileContent, hasHeaderRow: true)
-              while let vocabFields = vocabCSV.next() {
-                //ID  LessonID  Word  vi  en
-                let vocabID = vocabFields[0]
-                let word = vocabFields[2]
-                let vi = vocabFields[3]
-                let en = vocabFields[4]
-                
-                guard let id = Int(vocabID) else { continue }
+              if let vocabFileContent = openCSV(filePath: vocabPath) {
+                let vocabCSV = try CSVReader(string: vocabFileContent, hasHeaderRow: true)
+                while let vocabFields = vocabCSV.next() {
+                  //ID  LessonID  Word  vi  en
+                  let vocabID = vocabFields[0]
+                  let word = vocabFields[2]
+                  let vi = vocabFields[3]
+                  let en = vocabFields[4]
+                  
+                  guard let id = Int(vocabID) else { continue }
 
-                var vocabTranslation: [RealmTranslation] = []
-                if !vi.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                  vocabTranslation.append(RealmTranslation(languageCode: LanguageCode.vi.rawValue, translation: vi))
+                  var vocabTranslation: [RealmTranslation] = []
+                  if !vi.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                    vocabTranslation.append(RealmTranslation(languageCode: LanguageCode.vi.rawValue, translation: vi))
+                  }
+                  
+                  if !en.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                    vocabTranslation.append(RealmTranslation(languageCode: LanguageCode.en.rawValue, translation: en))
+                  }
+                  
+                  let vocab = RealmVocab(id: id, word: word, translations: vocabTranslation)
+                  lesson.vocabs.append(vocab)
                 }
-                
-                if !en.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-                  vocabTranslation.append(RealmTranslation(languageCode: LanguageCode.en.rawValue, translation: en))
-                }
-                
-                let vocab = RealmVocab(id: id, word: word, translations: vocabTranslation)
-                lesson.vocabs.append(vocab)
               }
             }
             catch {
