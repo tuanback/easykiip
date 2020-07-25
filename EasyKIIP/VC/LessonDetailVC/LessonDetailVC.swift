@@ -174,6 +174,7 @@ class LessonDetailVC: NiblessViewController {
   }
   
   private func presentAdIfNeeded() {
+    guard !viewModel.isPaidUser() else { return }
     if shouldPresentAd {
       shouldPresentAd = false
       adLoader.present(viewController: self)

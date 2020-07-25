@@ -192,6 +192,14 @@ extension Strings {
     NSLocalizedString("Premium Upgrade", bundle: Strings.languageBundle, comment: "")
   }
   
+  static var restoreUnsuccessful: String {
+    NSLocalizedString("Restore Unsuccessful", bundle: Strings.languageBundle, comment: "")
+  }
+  
+  static var noPriorPurchasesFound: String {
+    NSLocalizedString("No prior purchases found for your account.", bundle: Strings.languageBundle, comment: "")
+  }
+  
   static var lifeTime: String {
     NSLocalizedString("LifeTime", bundle: Strings.languageBundle, comment: "")
   }

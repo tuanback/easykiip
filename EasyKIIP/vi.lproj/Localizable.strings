@@ -140,6 +140,9 @@
 "No offerings found." = "Không tải được gói";
 
 /* No comment provided by engineer. */
+"No prior purchases found for your account." = "Không tìm thấy thông tin nâng cấp trước đây cho tài khoản của bạn. Xin vui lòng kiểm tra lại";
+
+/* No comment provided by engineer. */
 "Nothing needs more practice" = "Tuyệt vời, bạn đã học tất cả rồi";
 
 /* No comment provided by engineer. */
@@ -177,6 +180,9 @@
 
 /* No comment provided by engineer. */
 "RESTORE PURCHASES" = "KHÔI PHỤC MUA";
+
+/* No comment provided by engineer. */
+"Restore Unsuccessful" = "Khôi phục không thành công";
 
 /* No comment provided by engineer. */
 "Retry" = "Thử lại";

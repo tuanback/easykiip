@@ -159,6 +159,9 @@ class SwiftPaywall: UIViewController {
           if !cancelled {
             self.showAlert(title: Strings.failed, message: error.localizedDescription)
           }
+          else {
+            self.restorePurchases()
+          }
         }
       } else  {
         if let purchaseCompletedHandler = self.delegate?.purchaseCompleted {
@@ -180,11 +183,11 @@ class SwiftPaywall: UIViewController {
         purchaseRestoredHandler(self, info, error)
       } else {
         if let error = error {
-          self.showAlert(title: "Error", message: error.localizedDescription)
+          self.showAlert(title: Strings.error, message: error.localizedDescription)
         } else {
           if let purchaserInfo = info {
             if purchaserInfo.entitlements.active.isEmpty {
-              self.showAlert(title: "Restore Unsuccessful", message: "No prior purchases found for your account.")
+              self.showAlert(title: Strings.restoreUnsuccessful, message: Strings.noPriorPurchasesFound)
             } else {
               self.close()
             }

@@ -270,6 +270,10 @@ class LessonDetailViewModel {
     return !userSessionRepository.isUserSubscribed()
   }
   
+  func isPaidUser() -> Bool {
+    return userSessionRepository.isUserSubscribed()
+  }
+  
   private func isAbleToStartLearning() -> Bool {
     // TODO: If paid user or user with internet turn on => Can start learning
     if userSessionRepository.isUserSubscribed() {
