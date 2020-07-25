@@ -34,9 +34,6 @@ public class FirebaseUserSessionRepository: UserSessionRepository {
     Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
       guard let strongSelf = self else { return }
       guard let user = user else {
-        Purchases.shared.reset({ (info, error) in
-          print("User signed out")
-        })
         return
       }
       

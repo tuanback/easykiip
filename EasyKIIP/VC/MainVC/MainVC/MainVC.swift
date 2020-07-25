@@ -72,6 +72,13 @@ class MainVC: NiblessViewController {
     super.viewWillAppear(animated)
     viewModel.reload()
     setupMenuButton()
+    removeBannerIfNeeded()
+  }
+  
+  private func removeBannerIfNeeded() {
+    if !viewModel.shouldLoadAds() {
+      bannerView.removeFromSuperview()
+    }
   }
   
   private func checkForUpdate() {

@@ -128,18 +128,18 @@ class LessonDetailViewModel {
   
   private let disposeBag = DisposeBag()
   
-  let bookID: Int
-  let lessonID: Int
-  let vocabRepository: VocabRepository
-  let isPaidUser: Bool
+  private let bookID: Int
+  private let lessonID: Int
+  private let vocabRepository: VocabRepository
+  private let userSessionRepository: UserSessionRepository
   
   init(bookID: Int, lessonID: Int,
        vocabRepository: VocabRepository,
-       isPaidUser: Bool) {
+       userSessionRepository: UserSessionRepository) {
     self.bookID = bookID
     self.lessonID = lessonID
     self.vocabRepository = vocabRepository
-    self.isPaidUser = isPaidUser
+    self.userSessionRepository = userSessionRepository
     getVocabs()
   }
   
@@ -267,12 +267,12 @@ class LessonDetailViewModel {
   }
   
   func sholdLoadAds() -> Bool {
-    return !isPaidUser
+    return !userSessionRepository.isUserSubscribed()
   }
   
   private func isAbleToStartLearning() -> Bool {
     // TODO: If paid user or user with internet turn on => Can start learning
-    if isPaidUser {
+    if userSessionRepository.isUserSubscribed() {
       return true
     }
     

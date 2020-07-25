@@ -12,6 +12,7 @@ import RxCocoa
 import EasyKIIPKit
 import SwiftDate
 import GoogleMobileAds
+import UserSession
 
 enum BookDetailItemViewModel {
   case item(viewModel: LessonItemViewModel)
@@ -31,7 +32,7 @@ class BookDetailViewModel {
   
   private let bookID: Int
   private let vocabRepository: VocabRepository
-  private let isPaidUser: Bool
+  private let userSessionRepository: UserSessionRepository
   
   public var oNavigation = PublishRelay<NavigationEvent<BookDetailNavigator.Destination>>()
   
@@ -48,10 +49,12 @@ class BookDetailViewModel {
   
   private var disposeBag = DisposeBag()
   
-  init(bookID: Int, bookName: String, vocabRepository: VocabRepository, isPaidUser: Bool) {
+  init(bookID: Int, bookName: String,
+       vocabRepository: VocabRepository,
+       userSessionRepository: UserSessionRepository) {
     self.bookID = bookID
-    self.isPaidUser = isPaidUser
     self.vocabRepository = vocabRepository
+    self.userSessionRepository = userSessionRepository
     var name = bookName
     if bookName.contains("\n") {
       name = String(bookName.split(separator: "\n").last ?? "")
@@ -75,10 +78,14 @@ class BookDetailViewModel {
   }
   
   func shouldLoadAds() -> Bool {
-    return !isPaidUser
+    return !userSessionRepository.isUserSubscribed()
   }
   
   private func initLessons() {
+    if userSessionRepository.isUserSubscribed() {
+      nativeAds.accept([])
+    }
+    
     self.isLoading.accept(true)
     
     let observable = self.vocabRepository.getListOfLesson(inBook: bookID).share(replay: 1, scope: .whileConnected)

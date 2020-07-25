@@ -74,7 +74,9 @@ public class SignedInDependencyContainer {
   func makeBookDetailVC(bookID: Int, bookName: String) -> BookDetailVC {
     
     func makeViewModel(bookID: Int, bookName: String) -> BookDetailViewModel {
-      return BookDetailViewModel(bookID: bookID, bookName: bookName, vocabRepository: vocabRepository, isPaidUser: userSessionRepository.isUserSubscribed())
+      return BookDetailViewModel(bookID: bookID, bookName: bookName,
+                                 vocabRepository: vocabRepository,
+                                 userSessionRepository: userSessionRepository)
     }
     
     let navigator = BookDetailNavigator(factory: self)
@@ -109,7 +111,7 @@ public class SignedInDependencyContainer {
     let viewModel = LessonDetailViewModel(bookID: bookID,
                                           lessonID: lessonID,
                                           vocabRepository: vocabRepository,
-                                          isPaidUser: userSessionRepository.isUserSubscribed())
+                                          userSessionRepository: userSessionRepository)
     let navigator = LessonDetailNavigator(factory: self)
     return LessonDetailVC(viewModel: viewModel, navigator: navigator)
   }
