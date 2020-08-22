@@ -6,6 +6,8 @@
 //  Copyright © 2020 Real Life Swift. All rights reserved.
 //
 
+import AdSupport
+import AppTrackingTransparency
 import UIKit
 import RxSwift
 import RxCocoa
@@ -25,7 +27,7 @@ class MainVC: NiblessViewController {
   
   private lazy var searchVocabListVM = SearchVocabListViewModel(vocabs: [])
   private lazy var searchVocabListVC = SearchVocabListVC(viewModel: searchVocabListVM)
-    
+  
   private lazy var bannerView = GADBannerView(adSize: kGADAdSizeBanner)
   private lazy var updateChecker = UpdateChecker()
   
@@ -55,7 +57,6 @@ class MainVC: NiblessViewController {
     super.viewDidLoad()
     setupNavBar()
     observeViewModel()
-    loadAds()
     checkForUpdate()
   }
   
@@ -79,6 +80,38 @@ class MainVC: NiblessViewController {
     if !viewModel.shouldLoadAds() {
       bannerView.removeFromSuperview()
     }
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    showPopUpToAskUserForAllowingTracking()
+  }
+  
+  private func showPopUpToAskUserForAllowingTracking() {
+    if #available(iOS 14, *) {
+      if ATTrackingManager.trackingAuthorizationStatus == .notDetermined {
+        presentAlert(title: Strings.pleaseTapAllowTrackingOnTheNextScreen,
+                     message: Strings.allowTrackingExplaination,
+                     cancelActionText: Strings.notNow,
+                     confirmActionText: Strings.later) {
+          self.requestIDFA()
+        }
+      }
+    } else {
+      loadAds()
+    }
+  }
+  
+  @available(iOS 14, *)
+  private func requestIDFA() {
+    ATTrackingManager.requestTrackingAuthorization(completionHandler: { [weak self] status in
+      switch status {
+      case .authorized:
+        self?.loadAds()
+      default:
+        break
+      }
+    })
   }
   
   private func checkForUpdate() {
@@ -152,8 +185,8 @@ class MainVC: NiblessViewController {
       .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
       .subscribe(onNext: { [weak self] url in
         if let url = url,
-          let data = try? Data(contentsOf: url),
-          let image = UIImage(data: data) {
+           let data = try? Data(contentsOf: url),
+           let image = UIImage(data: data) {
           let resizeImage = Common.resizeImage(image, newHeight: 30)
           self?.imageSettingButton = resizeImage
           DispatchQueue.main.async {

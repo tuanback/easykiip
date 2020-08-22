@@ -20,6 +20,9 @@
 "Account" = "Tài khoản";
 
 /* No comment provided by engineer. */
+"Allow" = "Cho phép";
+
+/* No comment provided by engineer. */
 "and" = "và";
 
 /* No comment provided by engineer. */
@@ -143,6 +146,9 @@
 "No prior purchases found for your account." = "Không tìm thấy thông tin nâng cấp trước đây cho tài khoản của bạn. Xin vui lòng kiểm tra lại";
 
 /* No comment provided by engineer. */
+"Not now" = "Không phải bây giờ";
+
+/* No comment provided by engineer. */
 "Nothing needs more practice" = "Tuyệt vời, bạn đã học tất cả rồi";
 
 /* No comment provided by engineer. */
@@ -156,6 +162,9 @@
 
 /* No comment provided by engineer. */
 "Paragraph" = "Bài đọc";
+
+/* No comment provided by engineer. */
+"Please tap 'Allow Tracking on the next screen" = "Vui lòng chọn 'Cho phép' ở thông báo sau đây";
 
 /* No comment provided by engineer. */
 "Please turn the internet on then try again" = "Vui lòng kết nối mạng rồi thử lại";
@@ -207,6 +216,9 @@
 
 /* practice screen */
 "This advertisement helps you to learn for free" = "Quảng cáo này giúp bạn có thể học miễn phí";
+
+/* No comment provided by engineer. */
+"This lets us show you personalized ads which keeps EasyKIIP free for you" = "Điều này cho phép chúng tôi hiển thị quảng cáo được cá nhân hoá, điều này giúp bạn sử dụng EasyKIIP miễn phí";
 
 /* No comment provided by engineer. */
 "Today" = "Hôm nay";

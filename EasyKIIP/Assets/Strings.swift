@@ -273,6 +273,21 @@ extension Strings {
     NSLocalizedString("Search vocab or translation", bundle: Strings.languageBundle, comment: "")
   }
   
+  static var pleaseTapAllowTrackingOnTheNextScreen: String {
+    NSLocalizedString("Please tap 'Allow Tracking on the next screen", bundle: Strings.languageBundle, comment: "")
+  }
+  
+  static var allowTrackingExplaination: String {
+    NSLocalizedString("This lets us show you personalized ads which keeps EasyKIIP free for you", bundle: Strings.languageBundle, comment: "")
+  }
+  
+  static var notNow: String {
+    NSLocalizedString("Not now", bundle: Strings.languageBundle, comment: "")
+  }
+  static var allow: String {
+    NSLocalizedString("Allow", bundle: Strings.languageBundle, comment: "")
+  }
+  
   static var vietnamese = "Tiếng Việt"
   static var english = "English"
 }
