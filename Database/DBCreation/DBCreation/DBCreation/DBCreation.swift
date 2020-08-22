@@ -12,9 +12,9 @@ import RealmSwift
 class DBCreation {
   
   // Company Mac
-  //let projectFolder = "/Users/tuan/0.Projects/easykiip/"
+  let projectFolder = "/Users/tuan/0.Projects/easykiip/"
   // My Mac
-  let projectFolder = "/Users/tuan/0.Apps/EasyKIIP/"
+  //let projectFolder = "/Users/tuan/0.Apps/EasyKIIP/"
   lazy var csvFolder = projectFolder + "Database/CSV/CSVFiles/"
   lazy var bookFilePath = csvFolder + "book.csv"
   lazy var realmFilePath = projectFolder + "Database/vocabBundled.realm"

@@ -1,9 +1,9 @@
 PODS:
-  - Realm (4.4.1):
-    - Realm/Headers (= 4.4.1)
-  - Realm/Headers (4.4.1)
-  - RealmSwift (4.4.1):
-    - Realm (= 4.4.1)
+  - Realm (5.3.5):
+    - Realm/Headers (= 5.3.5)
+  - Realm/Headers (5.3.5)
+  - RealmSwift (5.3.5):
+    - Realm (= 5.3.5)
   - SwiftDate (6.1.0)
 
 DEPENDENCIES:
@@ -17,10 +17,10 @@ SPEC REPOS:
     - SwiftDate
 
 SPEC CHECKSUMS:
-  Realm: 4eb04d7487bd43c0581256f40b424eafb711deff
-  RealmSwift: 3eb8924ff7100df5928c7602f71d0fec51e7c9c5
+  Realm: 2b52fcc86fc0ed3d75a56ac0eb1e73c4f1a60e16
+  RealmSwift: a6ea2ea561039fc3833c08dec81371a9a3bb5ca6
   SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
 
 PODFILE CHECKSUM: ebcfdaac5690db13207ea79540dc789a880fc074
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3
