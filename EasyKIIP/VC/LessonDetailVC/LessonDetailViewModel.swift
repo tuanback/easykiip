@@ -213,7 +213,7 @@ class LessonDetailViewModel {
     
     observable.map { [weak self] _ -> Bool in
       guard let strongSelf = self else { return true }
-      let vocabs = strongSelf.vocabRepository.getListOfLowProficiencyVocab(inLesson: strongSelf.lessonID, upto: 10)
+      let vocabs = strongSelf.vocabRepository.getListOfLowProficiencyVocab(inLesson: strongSelf.lessonID, upto: 8)
       return vocabs.count == 0
     }
     .bind(to: rPracticeButtonHidden)
@@ -254,7 +254,7 @@ class LessonDetailViewModel {
       return
     }
     
-    let vocabs = vocabRepository.getListOfLowProficiencyVocab(inLesson: lessonID, upto: 10)
+    let vocabs = vocabRepository.getListOfLowProficiencyVocab(inLesson: lessonID, upto: 8)
     rNavigationEvent.accept(.present(destination: .quizPractice(bookID: bookID, lessonID: lessonID, vocabs: vocabs)))
   }
   

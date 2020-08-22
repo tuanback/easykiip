@@ -20,6 +20,7 @@ class QuizPracticeRootView: NiblessView {
   private let disposeBag = DisposeBag()
   
   private let viewModel: QuizPracticeViewModel
+  private var speechSynthesizer = SpeechSynthesizer()
   
   init(viewModel: QuizPracticeViewModel,
        frame: CGRect = .zero) {
@@ -115,6 +116,13 @@ class QuizPracticeRootView: NiblessView {
         
       })
       .disposed(by: disposeBag)
+    
+    viewModel.oSpeak
+      .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+      .subscribe(onNext: { [weak self] word in
+        self?.speechSynthesizer.speak(word: word)
+      })
+    .disposed(by: disposeBag)
   }
   
   private func createOptionButton(option: String, status: QuizOptionStatus) -> UIButton {

@@ -43,10 +43,15 @@ class QuizPracticeViewModel {
     return rPlaySound.asObservable()
   }
   
+  var oSpeak: Observable<String> {
+    return rSpeak.asObservable()
+  }
+  
   private let rQuestion: BehaviorRelay<String>
   private let rOption: BehaviorRelay<[String: QuizOptionStatus]>
   private let rCorrectViewHidden = BehaviorRelay<Bool>(value: true)
   private let rPlaySound = PublishRelay<Sound>()
+  private let rSpeak = PublishRelay<String>()
   
   private var question: PracticeQuestion
   private let answerHandler: PracticeQuestionAnswerHandler
@@ -57,6 +62,12 @@ class QuizPracticeViewModel {
     self.rQuestion = BehaviorRelay<String>(value: quizItemViewModel.questionText)
     self.rOption = BehaviorRelay<[String: QuizOptionStatus]>(value: quizItemViewModel.optionsDic)
     self.answerHandler = answerHandler
+  }
+  
+  func handleQuestionDidAppear() {
+    if question.isQuestionKorean {
+      rSpeak.accept(rQuestion.value)
+    }
   }
   
   func updateViewModel(quizItemViewModel: QuizItemPracticeViewModel) {
@@ -75,6 +86,10 @@ class QuizPracticeViewModel {
     }) {
       rPlaySound.accept(.wrong)
       return
+    }
+    
+    if quizItemViewModel.optionsDic.filter({ $0.value != .notSelected }).count == 0 {
+      handleQuestionDidAppear()
     }
   }
   

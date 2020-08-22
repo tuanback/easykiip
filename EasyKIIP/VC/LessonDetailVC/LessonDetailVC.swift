@@ -179,6 +179,9 @@ class LessonDetailVC: NiblessViewController {
       shouldPresentAd = false
       adLoader.present(viewController: self)
     }
+    else {
+      loadAds()
+    }
   }
   
   private func observeViewModel() {

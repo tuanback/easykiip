@@ -35,7 +35,9 @@ public class PracticeQuestionMaker: QuestionMaker {
     
     for vocab in createQuestionVocabs {
       guard vocab.practiceHistory.isLearned &&
-        !vocab.practiceHistory.isMastered else { continue }
+        !vocab.practiceHistory.isMastered else {
+        continue
+      }
       
       let differentVocabs = getDifferentVocabs(numberOfDiffrentVocab: numberOfOptions - 1,
                                                vocab: vocab, allVocabs: allVocabs)
@@ -148,6 +150,7 @@ public class PracticeQuestionMaker: QuestionMaker {
     
     let practiceQuestion = PracticeQuestion(vocabID: vocab.id,
                                             question: vocab.word,
+                                            isQuestionKorean: true,
                                             options: options,
                                             answer: answer)
     let question = Question.practice(practiceQuestion)
@@ -175,6 +178,7 @@ public class PracticeQuestionMaker: QuestionMaker {
     
     let practiceQuestion = PracticeQuestion(vocabID: vocab.id,
                                             question: questionStr,
+                                            isQuestionKorean: false,
                                             options: options,
                                             answer: vocab.word)
     let question = Question.practice(practiceQuestion)

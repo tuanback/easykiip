@@ -114,7 +114,7 @@ class QuizNewWordRootView: NiblessView {
       .disposed(by: disposeBag)
     
     viewModel.oSpeak
-      .observeOn(MainScheduler.asyncInstance)
+      .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
       .subscribe(onNext: { [weak self] word in
         self?.speechSynthesizer.speak(word: word)
       })

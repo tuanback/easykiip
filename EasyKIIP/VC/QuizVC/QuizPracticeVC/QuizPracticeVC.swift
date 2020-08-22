@@ -22,4 +22,9 @@ class QuizPracticeVC: NiblessViewController {
     view = QuizPracticeRootView(viewModel: viewModel)
   }
   
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    viewModel.handleQuestionDidAppear()
+  }
+  
 }

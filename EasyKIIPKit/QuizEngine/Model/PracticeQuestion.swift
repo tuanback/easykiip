@@ -11,12 +11,18 @@ import Foundation
 public struct PracticeQuestion: Equatable, Hashable {
   public let vocabID: Int
   public let question: String
+  public let isQuestionKorean: Bool
   public let options: [String]
   public let answer: String
   
-  public init(vocabID: Int, question: String, options: [String], answer: String) {
+  public init(vocabID: Int,
+              question: String,
+              isQuestionKorean: Bool,
+              options: [String],
+              answer: String) {
     self.vocabID = vocabID
     self.question = question
+    self.isQuestionKorean = isQuestionKorean
     self.options = options
     self.answer = answer
   }

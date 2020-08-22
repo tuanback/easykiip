@@ -104,6 +104,14 @@ class QuizVC: NiblessViewController {
           strongSelf.pageViewController
             .setViewControllers([strongSelf.newWordVC!], direction: .forward,
                                 animated: true, completion: nil)
+          
+          vm.oPlaySound
+            .observeOn(MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] sound in
+              let url = sound.url
+              self?.playSound(url: url)
+            })
+            .disposed(by: strongSelf.disposeBag)
         case .practice(let viewModel):
           // NOTE: If current vc is practive vc => reuse
           if let _ = strongSelf.practiceVC,

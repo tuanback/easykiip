@@ -25,9 +25,14 @@ class QuizNewWordViewModel {
     return rSpeak.asObservable()
   }
   
+  var oPlaySound: Observable<Sound> {
+    return rPlaySound.asObservable()
+  }
+  
   private let rWord: BehaviorRelay<String>
   private let rMeaning: BehaviorRelay<String>
   private let rSpeak = PublishRelay<String>()
+  private let rPlaySound = PublishRelay<Sound>()
   private let question: NewWordQuestion
   private let answerHandler: NewWordQuestionAnswerHandler
   
@@ -43,10 +48,12 @@ class QuizNewWordViewModel {
   }
   
   func handleAnswer() {
+    rPlaySound.accept(.correct)
     answerHandler.handleAnswer(for: question)
   }
   
   func markAsMastered() {
+    rPlaySound.accept(.correct)
     answerHandler.markAsMastered(for: question)
   }
   

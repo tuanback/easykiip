@@ -185,6 +185,7 @@ public class NewWordQuestionMaker: QuestionMaker {
     
     let practiceQuestion = PracticeQuestion(vocabID: vocab.id,
                                             question: vocab.word,
+                                            isQuestionKorean: true,
                                             options: options,
                                             answer: answer)
     let question = Question.practice(practiceQuestion)
@@ -212,6 +213,7 @@ public class NewWordQuestionMaker: QuestionMaker {
     
     let practiceQuestion = PracticeQuestion(vocabID: vocab.id,
                                             question: questionStr,
+                                            isQuestionKorean: false,
                                             options: options,
                                             answer: vocab.word)
     let question = Question.practice(practiceQuestion)
