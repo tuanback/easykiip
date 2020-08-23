@@ -47,6 +47,11 @@ class SettingVM {
   }
   var rSendEmail = PublishRelay<Void>()
   
+  var oPlayHowToUseVideo: Observable<Void> {
+    return rPlayHowToUseVideo.asObservable()
+  }
+  var rPlayHowToUseVideo = PublishRelay<Void>()
+  
   private var sections: [SettingSection] = []
   private let userSessionRepo: UserSessionRepository
   
@@ -73,7 +78,7 @@ class SettingVM {
     
     sections.append(SettingSection(settingSectionItem: .account, settingItems: accountSettinsItems))
     sections.append(SettingSection(settingSectionItem: .language, settingItems: [.appLanguage]))
-    sections.append(SettingSection(settingSectionItem: .support, settingItems: [.rateUs, .contactUs]))
+    sections.append(SettingSection(settingSectionItem: .support, settingItems: [.howToUse, .rateUs, .contactUs]))
     
     let tableViewSections: [TableViewSection] = sections.map {
       
@@ -108,6 +113,8 @@ class SettingVM {
       rNavigationEvent.accept(.push(destination: .changeLanguage))
     case .premiumUpgrade:
       rNavigationEvent.accept(.present(destination: .payWall))
+    case .howToUse:
+      rPlayHowToUseVideo.accept(())
     case .contactUs:
       rSendEmail.accept(())
     case .rateUs:

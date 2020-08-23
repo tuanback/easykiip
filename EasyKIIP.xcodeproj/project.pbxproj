@@ -156,6 +156,8 @@
 		17CBE67D247AA301005D4CFD /* SelectLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE67C247AA301005D4CFD /* SelectLanguageVC.swift */; };
 		17CBE680247AAC2F005D4CFD /* AppValuesStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE67F247AAC2F005D4CFD /* AppValuesStorage.swift */; };
 		17CBE684247AB133005D4CFD /* SelectLanguageRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CBE683247AB133005D4CFD /* SelectLanguageRootView.swift */; };
+		17D06F5A24F241E700AA464C /* vi.mov in Resources */ = {isa = PBXBuildFile; fileRef = 17D06F5924F241E700AA464C /* vi.mov */; };
+		17D06F5C24F2420400AA464C /* en.mov in Resources */ = {isa = PBXBuildFile; fileRef = 17D06F5B24F2420400AA464C /* en.mov */; };
 		17D98F70248B58CD0049F5BB /* QuizEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D98F6F248B58CD0049F5BB /* QuizEngine.swift */; };
 		17D98F72248B58ED0049F5BB /* QuizEngineDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D98F71248B58ED0049F5BB /* QuizEngineDelegate.swift */; };
 		17D98F74248B59030049F5BB /* QuestionMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D98F73248B59030049F5BB /* QuestionMaker.swift */; };
@@ -470,6 +472,8 @@
 		17CBE67C247AA301005D4CFD /* SelectLanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageVC.swift; sourceTree = "<group>"; };
 		17CBE67F247AAC2F005D4CFD /* AppValuesStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppValuesStorage.swift; sourceTree = "<group>"; };
 		17CBE683247AB133005D4CFD /* SelectLanguageRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageRootView.swift; sourceTree = "<group>"; };
+		17D06F5924F241E700AA464C /* vi.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = vi.mov; sourceTree = "<group>"; };
+		17D06F5B24F2420400AA464C /* en.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = en.mov; sourceTree = "<group>"; };
 		17D98F6F248B58CD0049F5BB /* QuizEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEngine.swift; sourceTree = "<group>"; };
 		17D98F71248B58ED0049F5BB /* QuizEngineDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizEngineDelegate.swift; sourceTree = "<group>"; };
 		17D98F73248B59030049F5BB /* QuestionMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionMaker.swift; sourceTree = "<group>"; };
@@ -802,6 +806,7 @@
 		1766FFC9245A9FF6008B263D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				17D06F5824F241DE00AA464C /* Videos */,
 				17F5C09C249112AB001ABA43 /* Music */,
 				17F30EE5246AD1A9008040BE /* GoogleAds */,
 				1766FFCA245AA51C008B263D /* Strings.swift */,
@@ -1448,6 +1453,15 @@
 			path = SelectLanguage;
 			sourceTree = "<group>";
 		};
+		17D06F5824F241DE00AA464C /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				17D06F5924F241E700AA464C /* vi.mov */,
+				17D06F5B24F2420400AA464C /* en.mov */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
 		17D98F75248B591A0049F5BB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1867,6 +1881,8 @@
 				17FBF726245BEC3400A65233 /* Localizable.strings in Resources */,
 				17B70A8F244C180500C67334 /* Assets.xcassets in Resources */,
 				17F5C09E249112B8001ABA43 /* correct.wav in Resources */,
+				17D06F5C24F2420400AA464C /* en.mov in Resources */,
+				17D06F5A24F241E700AA464C /* vi.mov in Resources */,
 				17F5C0A0249112BE001ABA43 /* incorrect.wav in Resources */,
 				1766FFF2245BD993008B263D /* GoogleService-Info.plist in Resources */,
 			);
@@ -2610,7 +2626,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.ios.easykiip;
 				PRODUCT_NAME = "Easy KIIP";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/EasyKIIP/EasyKIIP-Bridging-Header.h";
@@ -2639,7 +2655,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.5;
+				MARKETING_VERSION = 1.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tuando.ios.easykiip;
 				PRODUCT_NAME = "Easy KIIP";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/EasyKIIP/EasyKIIP-Bridging-Header.h";

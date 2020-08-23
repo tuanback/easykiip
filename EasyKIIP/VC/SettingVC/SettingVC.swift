@@ -6,6 +6,7 @@
 //  Copyright © 2020 Real Life Swift. All rights reserved.
 //
 
+import AVKit
 import Foundation
 import RxSwift
 import RxCocoa
@@ -76,6 +77,35 @@ class SettingVC: NiblessViewController {
         strongSelf.emailSender.sendEmail(parentController: strongSelf, subject: Strings.feedBack, content: nil)
       })
       .disposed(by: disposeBag)
+    
+    viewModel.oPlayHowToUseVideo
+      .subscribe(onNext: { [weak self] _ in
+        self?.playHowToUseVideoIfNotShowed()
+      })
+      .disposed(by: disposeBag)
+  }
+  
+  private func playHowToUseVideoIfNotShowed() {
+    switch AppSetting.languageCode {
+    case .en:
+      guard let url = Bundle.main.url(forResource: "en", withExtension: "mov") else { return }
+      playVideo(url: url)
+    case .vi:
+      guard let url = Bundle.main.url(forResource: "vi", withExtension: "mov") else { return }
+      playVideo(url: url)
+    }
+  }
+  
+  private func playVideo(url: URL) {
+    try? AVAudioSession.sharedInstance().setCategory(.playback, options: [.defaultToSpeaker, .allowBluetooth, .allowBluetoothA2DP])
+    let player = AVPlayer(url: url)
+    player.volume = 0.5
+    let vc = AVPlayerViewController()
+    vc.player = player
+    
+    present(vc, animated: true, completion: {
+      player.play()
+    })
   }
   
 }

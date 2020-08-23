@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Override point for customization after application launch.
     
     UINavigationBar.appearance().tintColor = .appRed
-    
+    setHowToUseAppIfNeeded()
     InternetStateProvider.shared.startListen()
     configFirebaseAndGoogleSignIn()
     setupPurchases()
@@ -39,6 +39,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window?.rootViewController = launchVC
     
     return true
+  }
+  
+  private func setHowToUseAppIfNeeded() {
+    if AppValuesStorage.isNotFirstTimeLaunched {
+      AppValuesStorage.isHowToUseTheAppShowed = true
+    }
+      
   }
   
   private func setupFacebookLogin(application: UIApplication, launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {

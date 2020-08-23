@@ -14,6 +14,7 @@ enum SettingItem {
   case logOut
   case premiumUpgrade
   case appLanguage
+  case howToUse
   case contactUs
   case rateUs
   
@@ -27,6 +28,8 @@ enum SettingItem {
       return Strings.appLanguage
     case .premiumUpgrade:
       return Strings.upgradeToPremium
+    case .howToUse:
+      return Strings.howToUse
     case .contactUs:
       return Strings.contactUs
     case .rateUs:

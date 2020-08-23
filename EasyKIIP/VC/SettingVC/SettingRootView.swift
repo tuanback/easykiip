@@ -54,7 +54,7 @@ class SettingRootView: NiblessView {
         case .vi:
           cell.detailTextLabel?.text = Strings.vietnamese
         }
-      case .contactUs, .rateUs:
+      case .howToUse, .contactUs, .rateUs:
         cell.accessoryType = .disclosureIndicator
       case .login, .logOut, .premiumUpgrade:
         break

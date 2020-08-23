@@ -31,4 +31,14 @@ struct AppValuesStorage {
     }
   }
   
+  static var isHowToUseTheAppShowed: Bool {
+    get {
+      return UserDefaults.standard.bool(forKey: "AppValuesStorage_isHowToUseTheAppShowed")
+    }
+    
+    set {
+      UserDefaults.standard.set(newValue, forKey: "AppValuesStorage_isHowToUseTheAppShowed")
+    }
+  }
+  
 }

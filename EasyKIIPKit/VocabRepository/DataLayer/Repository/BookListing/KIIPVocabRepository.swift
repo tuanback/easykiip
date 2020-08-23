@@ -161,7 +161,7 @@ public class KIIPVocabRepository: VocabRepository {
   public func getListOfLowProficiencyVocab(inBook id: Int, upto numberOfVocabs: Int) -> [Vocab] {
     var vocabs = dataStore.getListOfLesson(inBook: id)
       .flatMap { dataStore.getListOfVocabs(inLesson: $0.id) }
-    vocabs = vocabs.filter { $0.practiceHistory.isLearned }
+    vocabs = vocabs.filter { $0.practiceHistory.isLearned && !$0.practiceHistory.isMastered }.shuffled()
     vocabs.sort { $0.proficiency < $1.proficiency }
     let numberOfElement = min(numberOfVocabs, vocabs.count)
     return Array(vocabs.prefix(upTo: numberOfElement))
@@ -169,7 +169,7 @@ public class KIIPVocabRepository: VocabRepository {
   
   public func getListOfLowProficiencyVocab(inLesson id: Int, upto numberOfVocabs: Int) -> [Vocab] {
     var vocabs = dataStore.getListOfVocabs(inLesson: id)
-    vocabs = vocabs.filter { $0.practiceHistory.isLearned && !$0.practiceHistory.isMastered }
+    vocabs = vocabs.filter { $0.practiceHistory.isLearned && !$0.practiceHistory.isMastered }.shuffled()
     vocabs.sort { $0.proficiency < $1.proficiency }
     let numberOfElement = min(numberOfVocabs, vocabs.count)
     return Array(vocabs.prefix(upTo: numberOfElement))

@@ -8,6 +8,7 @@
 
 import AdSupport
 import AppTrackingTransparency
+import AVKit
 import UIKit
 import RxSwift
 import RxCocoa
@@ -85,6 +86,34 @@ class MainVC: NiblessViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     showPopUpToAskUserForAllowingTracking()
+    playHowToUseVideoIfNotShowed()
+  }
+  
+  private func playHowToUseVideoIfNotShowed() {
+    if !AppValuesStorage.isHowToUseTheAppShowed {
+      switch AppSetting.languageCode {
+      case .en:
+        guard let url = Bundle.main.url(forResource: "en", withExtension: "mov") else { return }
+        playVideo(url: url)
+        AppValuesStorage.isHowToUseTheAppShowed = true
+      case .vi:
+        guard let url = Bundle.main.url(forResource: "vi", withExtension: "mov") else { return }
+        playVideo(url: url)
+        AppValuesStorage.isHowToUseTheAppShowed = true
+      }
+    }
+  }
+  
+  private func playVideo(url: URL) {
+    try? AVAudioSession.sharedInstance().setCategory(.playback, options: [.defaultToSpeaker, .allowBluetooth, .allowBluetoothA2DP])
+    let player = AVPlayer(url: url)
+    player.volume = 0.5
+    let vc = AVPlayerViewController()
+    vc.player = player
+    
+    present(vc, animated: true, completion: {
+      player.play()
+    })
   }
   
   private func showPopUpToAskUserForAllowingTracking() {

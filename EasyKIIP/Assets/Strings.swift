@@ -265,6 +265,10 @@ extension Strings {
     NSLocalizedString("A new version is avaiable. Do you want to update?", bundle: Strings.languageBundle, comment: "")
   }
   
+  static var howToUse: String {
+    NSLocalizedString("How to use?", bundle: Strings.languageBundle, comment: "")
+  }
+  
   static var accountExplaination: String {
     NSLocalizedString("Log in to save and synchronize your learning progress between multiple devices", bundle: Strings.languageBundle, comment: "")
   }
