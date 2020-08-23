@@ -6,8 +6,8 @@
 //  Copyright © 2020 Real Life Swift. All rights reserved.
 //
 
-import AdSupport
-import AppTrackingTransparency
+//import AdSupport
+//import AppTrackingTransparency
 import AVKit
 import UIKit
 import RxSwift
@@ -117,6 +117,8 @@ class MainVC: NiblessViewController {
   }
   
   private func showPopUpToAskUserForAllowingTracking() {
+    loadAds()
+    /*
     if #available(iOS 14, *) {
       if ATTrackingManager.trackingAuthorizationStatus == .notDetermined {
         presentAlert(title: Strings.pleaseTapAllowTrackingOnTheNextScreen,
@@ -129,8 +131,10 @@ class MainVC: NiblessViewController {
     } else {
       loadAds()
     }
+    */
   }
   
+  /*
   @available(iOS 14, *)
   private func requestIDFA() {
     ATTrackingManager.requestTrackingAuthorization(completionHandler: { [weak self] status in
@@ -142,6 +146,7 @@ class MainVC: NiblessViewController {
       }
     })
   }
+  */
   
   private func checkForUpdate() {
     updateChecker.isUpdateAvailable { [weak self] (isAvailable) in
