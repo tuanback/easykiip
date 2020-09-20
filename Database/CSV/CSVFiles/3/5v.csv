@@ -6,7 +6,7 @@
 8805,45,단독 주택,Nhà riêng,Home
 8806,45,하숙집,Nhà trọ (trả 1 số tiền nhất định và được ăn ở),Accommodation (pay a certain amount and board and board accommodation)
 8807,45,기숙사,Ký túc xá,Dormitory
-8808,45,자택 = (우리집),nhà riêng,home
+8808,45,자택 = (우리집),nhà riêng,House
 8809,45,전세,thuê nhà kiểu thế chấp,mortgage type
 8810,45,월세,Thuê nhà trả tiền theo tháng,Rent pay monthly
 8811,45,집의 구조,Cấu trúc nhà,House structure
@@ -20,15 +20,15 @@
 8819,45,창고,Nhà kho,Storehouse
 8820,45,대문,Cửa lớn,Large door
 8821,45,담,Hàng rào,Fence
-8822,45,주변 환경이 좋다,Môi trường xung quanh tốt,Good surroundings
+8822,45,주변 환경이 좋다,Môi trường xung quanh tốt,Good surrounding environment
 8823,45,교육 환경이 좋다,Môi trường giáo dục tốt,Good educational environment
-8824,45,(학교)가 가깝다,Gần trường học,Near a school
-8825,45,근처에 (학원)이 많다,Có nhiều trung tâm học/ học viện ở gần,There are many learning centers / institutions nearby
+8824,45,(학교)가 가깝다,Gần trường học,Near schools
+8825,45,근처에 (학원)이 많다,Có nhiều trung tâm học/ học viện ở gần,Many learning centers / institutions nearby
 8826,45,공기가 맑다,Không khí trong lành,Clean Air
-8827,45,전망이 좋다,có quang cảnh/ view đẹp; có tầm nhìn/ triển vọng tốt,have nice view / view; have good vision / prospects
+8827,45,전망이 좋다,có quang cảnh/ view đẹp; có tầm nhìn/ triển vọng tốt,have nice view/vision
 8828,45,조용하다,Yên tĩnh,quiet
 8829,45,편의 시설이 많다,Nhiều công trình tiện ích,Many utility works
-8830,45,시장과 대형마트가 있다,Có chợ và siêu thị lớn,There are large markets and supermarkets
+8830,45,시장과 대형마트가 있다,Có chợ và siêu thị lớn,Large markets and supermarkets
 8831,45,교통이 편리하다,Giao thông tiện lợi,Convenient transportation
 8832,45,(버스 정류소)에서 걸어서 5분이다,Cách trạm xe bus 5 phút đi bộ,5 minute walk from the bus stop
 8833,45,"관리비, 전기 시설, 난방 등을 확인하다","Kiểm tra chi phí quản lý, hệ thống điện, sưởi ấm…","Check management costs, electrical systems, heating ..."
@@ -38,16 +38,16 @@
 8837,45,이삿짐센터를 부르다,Gọi trung tâm chuyển nhà,Call center to move
 8838,45,이사하다,Chuyển nhà,Moving house
 8839,45,잔금을 치르다/주다,Trả phần tiền còn lại,Pay the rest
-8840,45,중개 수수료를 주다,Trả phí mô giới,Pay for gender
+8840,45,중개 수수료를 주다,Trả phí mô giới,Give brokerage fees
 8841,45,욕실,Phòng tắm,Bathroom
-8842,45,시세,"Giá cả thị trường, thời giá","Market price, time price"
+8842,45,시세,"Giá cả thị trường, thời giá",Market price
 8843,45,보증금,tiền đặt cọc,deposits
-8844,45,입주하다,"vào ở, đến ở","come in, come in"
-8845,45,초,đầu,head
+8844,45,입주하다,"vào ở, đến ở",come in
+8845,45,초,đầu,Early of month
 8846,45,11월 초에,đầu tháng 11,early November
 8847,45, 전셋집,nhà thuê kiểu thế chấp,mortgage houses
 8848,45,남향,hướng nam,South
-8849,45,이따,"lát nữa, chốc nữa","Later, later"
+8849,45,이따,"lát nữa, chốc nữa",Later
 8850,45,가격,Giá cả,Price
 8851,45,원하다,Muốn,Want
 8852,45,조건,Điều kiện,Condition
@@ -55,22 +55,22 @@
 8854,45,우선,Trước tiên,First
 8855,45,주변,Xung quanh,Around
 8856,45,환경,Môi trường,Environment
-8857,45,햇빛,"Ánh nắng, ánh mặt trời","Sunshine, sunshine"
-8858,45,곰팡이,"Nấm mốc, mốc meo","Mold, mold"
+8857,45,햇빛,"Ánh nắng, ánh mặt trời",Sunshine
+8858,45,곰팡이,"Nấm mốc, mốc meo",Mold
 8859,45,난방,Sưởi,Heating
 8860,45,수도,Đường ống nước,Water pipes
 8861,45,전기,Điện,electricity
 8862,45,시설,"Công trình, trang thiết bị, cơ sở vật chất","Works, equipment, facilities"
 8863,45,주방,Nhà bếp,Kitchen
-8864,45,다용도실,"Phòng đa năng, phòng đa dụng (Phòng ở nhà hoặc ở công ty được sử dụng vào nhiều mục đích).","Multi-purpose room, multi-purpose room (Room at home or at company used for many purposes)."
-8865,45,상태,"Trạng thái, hiện trạng","Status, status quo"
+8864,45,다용도실,"Phòng đa năng, phòng đa dụng (Phòng ở nhà hoặc ở công ty được sử dụng vào nhiều mục đích).",Multi-purpose room
+8865,45,상태,"Trạng thái, hiện trạng",Status
 8866,45,자녀,Con cái,Children
 8867,45,경우,"Trường hợp, hoàn cảnh","Case, circumstances"
-8868,45,거리,"Khoảng cách, cự ly","Distance, distance"
-8869,45,등기부,Sổ đăng ký (bất động sản),Register (real estate)
+8868,45,거리,"Khoảng cách, cự ly",Distance
+8869,45,등기부,Sổ đăng ký (bất động sản),Register Notebook (real estate)
 8870,45,등본,Bản sao,Copy
 8871,45,실제,Thực tế,Reality
-8872,45,소유자,"Người sở hữu, chủ sở hữu","The owner, the owner"
+8872,45,소유자,"Người sở hữu, chủ sở hữu",The owner
 8873,45,빚,Món nợ,Debt
 8874,45,마루,sàn gỗ,wood floor
 8875,45,대청,đại sảnh,Hall
@@ -78,24 +78,22 @@
 8877,45,온돌,Hệ thống sưởi sàn,Floor heating
 8878,45,한옥,nhà Hanok (nhà truyền thống Hàn Quốc),Hanoks (traditional Korean houses)
 8879,45,사계절,4 mùa,4 seasons
-8880,45,뚜렷하다,"rõ ràng, rõ rệt","clear, clear"
+8880,45,뚜렷하다,"rõ ràng, rõ rệt",clear
 8881,45,에어컨,máy điều hòa,air conditional
 8882,45,보일러,hệ thống sưởi và cung cấp nước nóng,heating and hot water supply
 8883,45,이기다,"chiến thắng, chế ngự","victory, tame"
 8884,45,온돌,hệ thống sưởi sàn,Floor heating
 8885,45,설치하다,"thiết lập, lắp đặt","set up, install"
 8886,45,바닥,"đáy, mặt bằng, mặt phẳng","bottom, ground, plane"
-8887,45,띄우다,"cách ra, bỏ cách quãng","spacing out, spacing out"
-8888,45,깔다,"trải, phủ","cover, cover"
+8887,45,띄우다,"cách ra, bỏ cách quãng",spacing out
+8888,45,깔다,"trải, phủ",cover
 8889,45,나무판,tấm ván gỗ,wooden planks
-8890,45,고유,"đặc trưng vốn có, cái vốn có","inherent characteristics, inherent"
+8890,45,고유,"đặc trưng vốn có, cái vốn có",inherent
 8891,45,아궁이,"bếp lò, lò sưởi (lỗ hở được tạo ra để đun nấu hoặc để sưởi ấm căn phòng)","stoves, fireplaces (openings made for cooking or heating a room)"
-8892,45,불기운,hơi lửa,fire
+8892,45,불기운,hơi lửa,Hot air
 8893,45,방바닥,nền nhà,floor
 8894,45,굴뚝,ống khói,chimney
-8895,45,지붕,"mái nhà, nóc nhà","the roof, the roof of the house"
-8896,45,재료,"vật liệu, chất liệu","material, material"
-8897,45,초가집,"nhà lá, nhà tranh","Leaf houses, cottages"
-8898,45,기와집 ,nhà mái ngói,House roof
-,,,,
-,,,,
+8895,45,지붕,"mái nhà, nóc nhà",the roof
+8896,45,재료,"vật liệu, chất liệu",material
+8897,45,초가집,"nhà lá, nhà tranh",Thatched house
+8898,45,기와집 ,nhà mái ngói,Tiled house
