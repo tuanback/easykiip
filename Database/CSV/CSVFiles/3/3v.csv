@@ -21,7 +21,7 @@
 8420,43,여권번호,Số hộ chiếu,Passport
 8421,43,발행관청,Cơ quan phát hành,Issuing agency
 8422,43,출생신고서,Tờ khai sinh,Birth certificate
-8423,43,가족관계증명서,Giấy chứng nhận quan hệ gia đình,Certificate of family ties
+8423,43,가족관계증명서,Giấy chứng nhận quan hệ gia đình,Certificate of family relationship
 8424,43,통장잔고증명서,Giấy chứng minh số dư tài khoản,Proof of account balance
 8425,43,혼인신고서,Tờ khai đăng ký kết hôn,Marriage registration statement
 8426,43,개명신고서,Tờ khai thay đổi danh tính (đổi tên),Identity change declaration (name change)
@@ -41,8 +41,8 @@
 8440,43,구직상담을 받다,Nhận tư vấn tìm việc,Get job search advice
 8441,43,"컴퓨터, 태권도를 배우다","Học máy tính, taekwondo","Computer learning, taekwondo"
 8442,43,보건소,Trung tâm y tế công cộng,Public health center
-8443,43,건강검진을 하다,Khám sức khỏe,Physical examination
-8444,43,예방접종을 하다,Tiêm ngừa,Shots
+8443,43,건강검진을 하다,Khám sức khỏe,Heath Check
+8444,43,예방접종을 하다,Tiêm ngừa,Get vaccinated
 8445,43,도로교통공단,Cơ quan giao thông đường bộ,Road traffic agency
 8446,43,운전면허를 따다,Lấy bằng lái xe,Get a driver's license
 8447,43,운전면허증을 신청하다,Đăng ký bằng lái xe,Register a driver's license
@@ -52,5 +52,5 @@
 8451,43,범칙금,tiền phạt do vi phạm luật,Penalty for breaking the law
 8452,43,부과되다,"bị phạt, bị đánh thuế","fined, taxed"
 8453,43,영주자격," tư cách cư trú dài hạn, tư cách cư trú vĩnh viễn"," long-term residence status, permanent residence status"
-8454,43,사실,"sự thật, thật ra","truth, truth"
+8454,43,사실,"sự thật, thật ra",truth
 8455,43,제한되다,bị hạn chế,is limited
