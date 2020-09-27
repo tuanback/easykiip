@@ -27,8 +27,11 @@ class SpeechSynthesizer: NSObject {
   
   private func configAudioSession() {
     let audioSession = AVAudioSession.sharedInstance()
-    try? audioSession.setActive(false)
-    try? audioSession.setCategory(.playback)
+    
+    try? audioSession.setActive(true)
+    if audioSession.category != .playback {
+      try? audioSession.setCategory(.playback)
+    }
   }
   
 }

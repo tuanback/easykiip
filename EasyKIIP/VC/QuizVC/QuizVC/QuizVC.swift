@@ -210,7 +210,11 @@ class QuizVC: NiblessViewController {
   
   func playSound(url: URL) {
     do {
-      try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+      player?.stop()
+      let audioSession = AVAudioSession.sharedInstance()
+      if audioSession.category != .playback && audioSession.mode != .default {
+        try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+      }
       try AVAudioSession.sharedInstance().setActive(true)
       
       player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.wav.rawValue)
