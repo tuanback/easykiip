@@ -6,8 +6,8 @@
 //  Copyright © 2020 Real Life Swift. All rights reserved.
 //
 
-//import AdSupport
-//import AppTrackingTransparency
+import AdSupport
+import AppTrackingTransparency
 import AVKit
 import UIKit
 import RxSwift
@@ -86,7 +86,6 @@ class MainVC: NiblessViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
     showPopUpToAskUserForAllowingTracking()
-    playHowToUseVideoIfNotShowed()
   }
   
   private func playHowToUseVideoIfNotShowed() {
@@ -117,36 +116,23 @@ class MainVC: NiblessViewController {
   }
   
   private func showPopUpToAskUserForAllowingTracking() {
-    loadAds()
-    /*
     if #available(iOS 14, *) {
       if ATTrackingManager.trackingAuthorizationStatus == .notDetermined {
-        presentAlert(title: Strings.pleaseTapAllowTrackingOnTheNextScreen,
-                     message: Strings.allowTrackingExplaination,
-                     cancelActionText: Strings.notNow,
-                     confirmActionText: Strings.later) {
-          self.requestIDFA()
-        }
+        self.requestIDFA()
+        return
       }
-    } else {
-      loadAds()
     }
-    */
+    playHowToUseVideoIfNotShowed()
+    loadAds()
   }
   
-  /*
   @available(iOS 14, *)
   private func requestIDFA() {
     ATTrackingManager.requestTrackingAuthorization(completionHandler: { [weak self] status in
-      switch status {
-      case .authorized:
-        self?.loadAds()
-      default:
-        break
-      }
+      self?.playHowToUseVideoIfNotShowed()
+      self?.loadAds()
     })
   }
-  */
   
   private func checkForUpdate() {
     updateChecker.isUpdateAvailable { [weak self] (isAvailable) in

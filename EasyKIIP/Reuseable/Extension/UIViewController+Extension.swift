@@ -34,16 +34,16 @@ extension UIViewController {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     alert.view.tintColor = UIColor.appRed
     
-    if let cancelTitle = cancelActionText {
-      let cancelAction = UIAlertAction(title: cancelTitle, style: .cancel, handler: nil)
-      alert.addAction((cancelAction))
-    }
-    
     let alertAction = UIAlertAction(title: confirmActionText, style: .default, handler: { action in
       completion?()
     })
     
     alert.addAction(alertAction)
+    
+    if let cancelTitle = cancelActionText {
+      let cancelAction = UIAlertAction(title: cancelTitle, style: .cancel, handler: nil)
+      alert.addAction((cancelAction))
+    }
     
     present(alert, animated: true, completion: nil)
   }
