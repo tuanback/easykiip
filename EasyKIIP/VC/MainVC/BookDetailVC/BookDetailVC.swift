@@ -61,6 +61,7 @@ public class BookDetailVC: NiblessViewController {
     let searchController = UISearchController(searchResultsController: searchVocabListVC)
     searchController.searchBar.placeholder = Strings.searchVocabOrTranslation
     navigationItem.searchController = searchController
+    navigationItem.hidesSearchBarWhenScrolling = false
     
     searchController.searchBar.rx.text
       .orEmpty
