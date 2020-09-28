@@ -88,20 +88,22 @@ class MainVC: NiblessViewController {
     showPopUpToAskUserForAllowingTracking()
   }
   
-  private func playHowToUseVideoIfNotShowed() {
-    if !AppValuesStorage.isHowToUseTheAppShowed {
-      switch AppSetting.languageCode {
-      case .en:
-        guard let url = Bundle.main.url(forResource: "en", withExtension: "mov") else { return }
-        playVideo(url: url)
-        AppValuesStorage.isHowToUseTheAppShowed = true
-      case .vi:
-        guard let url = Bundle.main.url(forResource: "vi", withExtension: "mov") else { return }
-        playVideo(url: url)
-        AppValuesStorage.isHowToUseTheAppShowed = true
-      }
+    private func playHowToUseVideoIfNotShowed() {
+        DispatchQueue.main.async {
+            if !AppValuesStorage.isHowToUseTheAppShowed {
+                switch AppSetting.languageCode {
+                case .en:
+                    guard let url = Bundle.main.url(forResource: "en", withExtension: "mov") else { return }
+                    self.playVideo(url: url)
+                    AppValuesStorage.isHowToUseTheAppShowed = true
+                case .vi:
+                    guard let url = Bundle.main.url(forResource: "vi", withExtension: "mov") else { return }
+                    self.playVideo(url: url)
+                    AppValuesStorage.isHowToUseTheAppShowed = true
+                }
+            }
+        }
     }
-  }
   
   private func playVideo(url: URL) {
     try? AVAudioSession.sharedInstance().setCategory(.playback, options: [.defaultToSpeaker, .allowBluetooth, .allowBluetoothA2DP])
